@@ -1,0 +1,86 @@
+Quadruplet,TrajectoryCluster,Archetype,ExpectancyFamily,Count,ConditionalProbability,FinalTransition,MeanNextRunLength,ImmediateFailurePct,DirectionalContinuationPct,UnresolvedCount,DirectionalCount,DegradingCount,BalanceCount,StateChanges,EndsDirectional,EndsDegrading,EndsBalance,EndsUnresolved,PersistentUnresolved,PersistentDirectional,PersistentDegrading,PersistentBalance,UnresolvedToDirectional,DirectionalToDegrading,BalanceUnresolvedLoop,DegradingUnresolvedLoop
+Unresolved->Unresolved->Unresolved->Unresolved,4,Pure Unresolved Compression Equilibrium,Mixed,186,89.42,Unresolved->Unresolved,0.0,0.0,0.0,4,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0
+Balance->Unresolved->Unresolved->Unresolved,2,Stable Compression Basin,RotationalChurn,14,87.5,Unresolved->Unresolved,0.0,0.0,0.0,3,0,0,1,1,0,0,0,1,0,0,0,0,0,0,1,0
+Unresolved->Balance->Unresolved->Unresolved,2,Stable Compression Basin,RotationalChurn,10,83.33,Unresolved->Unresolved,0.0,0.0,0.0,3,0,0,1,2,0,0,0,1,0,0,0,0,0,0,1,0
+Unresolved->Unresolved->Balance->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,10,66.67,Balance->Unresolved,7.26,21.05,0.0,3,0,0,1,2,0,0,0,1,0,0,0,0,0,0,1,0
+Unresolved->Unresolved->Unresolved->Balance,1,Unstable Rotational Balance,ImmediateFailure,10,4.81,Unresolved->Balance,1.63,63.16,0.0,3,0,0,1,1,0,0,1,0,0,0,0,0,0,0,1,0
+Degrading->Degrading->Degrading->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,9,64.29,Degrading->Degrading,0.0,0.0,0.0,0,0,4,0,0,0,1,0,0,0,0,1,0,0,0,0,0
+Directional->Directional->Directional->Directional,3,Directional Continuation / Sponsor Release,Mixed,8,66.67,Directional->Directional,0.0,0.0,0.0,0,4,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0
+Degrading->Unresolved->Unresolved->Unresolved,2,Stable Compression Basin,DegradationCycle,7,58.33,Unresolved->Unresolved,0.0,0.0,0.0,3,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,1
+Unresolved->Unresolved->Unresolved->Directional,3,Directional Continuation / Sponsor Release,DirectionalContinuation,6,2.88,Unresolved->Directional,3.13,25.0,75.0,3,1,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0
+Unresolved->Degrading->Unresolved->Unresolved,2,Stable Compression Basin,DegradationCycle,5,83.33,Unresolved->Unresolved,0.0,0.0,0.0,3,0,1,0,2,0,0,0,1,0,0,0,0,0,0,0,1
+Balance->Balance->Unresolved->Unresolved,2,Stable Compression Basin,RotationalChurn,5,83.33,Unresolved->Unresolved,0.0,0.0,0.0,2,0,0,2,1,0,0,0,1,0,0,0,0,0,0,1,0
+Unresolved->Balance->Balance->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,5,71.43,Balance->Unresolved,7.26,21.05,0.0,2,0,0,2,2,0,0,0,1,0,0,0,0,0,0,1,0
+Unresolved->Unresolved->Directional->Directional,3,Directional Continuation / Sponsor Release,Mixed,5,71.43,Directional->Directional,0.0,0.0,0.0,2,2,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0
+Unresolved->Unresolved->Balance->Balance,1,Unstable Rotational Balance,RotationalChurn,5,33.33,Balance->Balance,0.0,0.0,0.0,2,0,0,2,1,0,0,1,0,0,0,0,0,0,0,1,0
+Unresolved->Unresolved->Unresolved->Degrading,0,Sponsor Exhaustion Collapse,ImmediateFailure,5,2.4,Unresolved->Degrading,1.82,63.64,0.0,3,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,1
+Degrading->Degrading->Unresolved->Unresolved,2,Stable Compression Basin,DegradationCycle,4,66.67,Unresolved->Unresolved,0.0,0.0,0.0,2,0,2,0,1,0,0,0,1,0,0,0,0,0,0,0,1
+Unresolved->Unresolved->Degrading->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,4,57.14,Degrading->Unresolved,5.53,29.41,0.0,3,0,1,0,2,0,0,0,1,0,0,0,0,0,0,0,1
+Directional->Degrading->Degrading->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,3,100.0,Degrading->Degrading,0.0,0.0,0.0,0,1,3,0,1,0,1,0,0,0,0,0,0,0,1,0,0
+Balance->Balance->Balance->Balance,1,Unstable Rotational Balance,RotationalChurn,3,60.0,Balance->Balance,0.0,0.0,0.0,0,0,0,4,0,0,0,1,0,0,0,0,1,0,0,0,0
+Unresolved->Directional->Directional->Degrading,0,Sponsor Exhaustion Collapse,ImmediateFailure,3,50.0,Directional->Degrading,2.2,70.0,0.0,1,2,1,0,2,0,1,0,0,0,0,0,0,1,1,0,0
+Unresolved->Directional->Directional->Directional,3,Directional Continuation / Sponsor Release,Mixed,3,50.0,Directional->Directional,0.0,0.0,0.0,1,3,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0
+Directional->Directional->Directional->Degrading,0,Sponsor Exhaustion Collapse,ImmediateFailure,3,25.0,Directional->Degrading,2.2,70.0,0.0,0,3,1,0,1,0,1,0,0,0,0,0,0,0,1,0,0
+Degrading->Unresolved->Unresolved->Balance,1,Unstable Rotational Balance,ImmediateFailure,3,25.0,Unresolved->Balance,1.63,63.16,0.0,2,0,1,1,2,0,0,1,0,0,0,0,0,0,0,1,1
+Degrading->Degrading->Degrading->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,3,21.43,Degrading->Unresolved,5.53,29.41,0.0,1,0,3,0,1,0,0,0,1,0,0,0,0,0,0,0,1
+Unknown->Unknown->Unknown->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,2,100.0,Unknown->Unresolved,20.5,0.0,0.0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0
+Unknown->Unknown->Unresolved->Unresolved,2,Stable Compression Basin,Mixed,2,100.0,Unresolved->Unresolved,0.0,0.0,0.0,2,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0
+Unknown->Unresolved->Unresolved->Unresolved,2,Stable Compression Basin,Mixed,2,100.0,Unresolved->Unresolved,0.0,0.0,0.0,3,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0
+Balance->Degrading->Degrading->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,2,100.0,Degrading->Unresolved,5.53,29.41,0.0,1,0,2,1,2,0,0,0,1,0,0,0,0,0,0,0,1
+Degrading->Balance->Degrading->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,2,66.67,Degrading->Degrading,0.0,0.0,0.0,0,0,3,1,2,0,1,0,0,0,0,0,0,0,0,0,0
+Balance->Unresolved->Balance->Balance,1,Unstable Rotational Balance,RotationalChurn,2,66.67,Balance->Balance,0.0,0.0,0.0,1,0,0,3,2,0,0,1,0,0,0,0,0,0,0,1,0
+Degrading->Unresolved->Degrading->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,2,66.67,Degrading->Unresolved,5.53,29.41,0.0,2,0,2,0,3,0,0,0,1,0,0,0,0,0,0,0,1
+Unresolved->Degrading->Degrading->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,2,50.0,Degrading->Degrading,0.0,0.0,0.0,1,0,3,0,1,0,1,0,0,0,0,0,0,0,0,0,1
+Directional->Degrading->Unresolved->Unresolved,2,Stable Compression Basin,DegradationCycle,2,50.0,Unresolved->Unresolved,0.0,0.0,0.0,2,1,1,0,2,0,0,0,1,0,0,0,0,0,1,0,1
+Directional->Directional->Degrading->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,2,33.33,Degrading->Degrading,0.0,0.0,0.0,0,2,2,0,1,0,1,0,0,0,0,0,0,0,1,0,0
+Directional->Directional->Degrading->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,2,33.33,Degrading->Unresolved,5.53,29.41,0.0,1,2,1,0,2,0,0,0,1,0,0,0,0,0,1,0,1
+Unresolved->Unresolved->Directional->Degrading,0,Sponsor Exhaustion Collapse,ImmediateFailure,2,28.57,Directional->Degrading,2.2,70.0,0.0,2,1,1,0,2,0,1,0,0,0,0,0,0,1,1,0,0
+Unresolved->Unresolved->Degrading->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,2,28.57,Degrading->Degrading,0.0,0.0,0.0,2,0,2,0,1,0,1,0,0,0,0,0,0,0,0,0,1
+Unresolved->Balance->Balance->Balance,1,Unstable Rotational Balance,RotationalChurn,2,28.57,Balance->Balance,0.0,0.0,0.0,1,0,0,3,1,0,0,1,0,0,0,0,0,0,0,1,0
+Degrading->Unresolved->Unresolved->Degrading,0,Sponsor Exhaustion Collapse,ImmediateFailure,2,16.67,Unresolved->Degrading,1.82,63.64,0.0,2,0,2,0,2,0,1,0,0,0,0,0,0,0,0,0,1
+Unresolved->Balance->Unresolved->Balance,1,Unstable Rotational Balance,ImmediateFailure,2,16.67,Unresolved->Balance,1.63,63.16,0.0,2,0,0,2,3,0,0,1,0,0,0,0,0,0,0,1,0
+Balance->Unresolved->Unresolved->Balance,1,Unstable Rotational Balance,ImmediateFailure,2,12.5,Unresolved->Balance,1.63,63.16,0.0,2,0,0,2,2,0,0,1,0,0,0,0,0,0,0,1,0
+Directional->Unresolved->Unresolved->Directional,3,Directional Continuation / Sponsor Release,DirectionalContinuation,1,100.0,Unresolved->Directional,3.13,25.0,75.0,2,2,0,0,2,1,0,0,0,0,0,0,0,1,0,0,0
+Unresolved->Degrading->Directional->Degrading,0,Sponsor Exhaustion Collapse,ImmediateFailure,1,100.0,Directional->Degrading,2.2,70.0,0.0,1,1,2,0,3,0,1,0,0,0,0,0,0,0,1,0,1
+Balance->Unresolved->Degrading->Degrading,0,Sponsor Exhaustion Collapse,RotationalChurn,1,100.0,Degrading->Degrading,0.0,0.0,0.0,1,0,2,1,2,0,1,0,0,0,0,0,0,0,0,1,1
+Balance->Degrading->Balance->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,1,100.0,Balance->Degrading,1.5,50.0,0.0,0,0,2,2,3,0,1,0,0,0,0,0,0,0,0,0,0
+Directional->Degrading->Directional->Degrading,0,Sponsor Exhaustion Collapse,ImmediateFailure,1,100.0,Directional->Degrading,2.2,70.0,0.0,0,2,2,0,3,0,1,0,0,0,0,0,0,0,1,0,0
+Balance->Balance->Degrading->Balance,1,Unstable Rotational Balance,ImmediateFailure,1,100.0,Degrading->Balance,1.0,100.0,0.0,0,0,1,3,2,0,0,1,0,0,0,0,0,0,0,0,0
+Unresolved->Unresolved->Unknown->Unknown,2,Stable Compression Basin,Mixed,1,100.0,Unknown->Unknown,0.0,0.0,0.0,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Unresolved->Unknown->Unknown->Unknown,2,Stable Compression Basin,Mixed,1,100.0,Unknown->Unknown,0.0,0.0,0.0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Degrading->Unresolved->Balance->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,1,100.0,Balance->Unresolved,7.26,21.05,0.0,2,0,1,1,3,0,0,0,1,0,0,0,0,0,0,1,1
+Balance->Degrading->Unresolved->Unresolved,2,Stable Compression Basin,DegradationCycle,1,100.0,Unresolved->Unresolved,0.0,0.0,0.0,2,0,1,1,2,0,0,0,1,0,0,0,0,0,0,0,1
+Directional->Directional->Unresolved->Unresolved,2,Stable Compression Basin,Mixed,1,100.0,Unresolved->Unresolved,0.0,0.0,0.0,2,2,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0
+Degrading->Unresolved->Directional->Directional,3,Directional Continuation / Sponsor Release,DegradationCycle,1,100.0,Directional->Directional,0.0,0.0,0.0,1,2,1,0,2,1,0,0,0,0,0,0,0,1,0,0,1
+Degrading->Degrading->Directional->Directional,3,Directional Continuation / Sponsor Release,Mixed,1,100.0,Directional->Directional,0.0,0.0,0.0,0,2,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+Degrading->Directional->Directional->Directional,3,Directional Continuation / Sponsor Release,Mixed,1,100.0,Directional->Directional,0.0,0.0,0.0,0,3,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+Directional->Degrading->Balance->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,1,50.0,Balance->Degrading,1.5,50.0,0.0,0,1,2,1,3,0,1,0,0,0,0,0,0,0,1,0,0
+Unresolved->Directional->Degrading->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,1,50.0,Degrading->Degrading,0.0,0.0,0.0,1,1,2,0,2,0,1,0,0,0,0,0,0,1,1,0,0
+Degrading->Degrading->Balance->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,1,50.0,Balance->Degrading,1.5,50.0,0.0,0,0,3,1,2,0,1,0,0,0,0,0,0,0,0,0,0
+Degrading->Balance->Unresolved->Balance,1,Unstable Rotational Balance,ImmediateFailure,1,50.0,Unresolved->Balance,1.63,63.16,0.0,1,0,1,2,3,0,0,1,0,0,0,0,0,0,0,1,0
+Degrading->Directional->Degrading->Balance,1,Unstable Rotational Balance,ImmediateFailure,1,50.0,Degrading->Balance,1.0,100.0,0.0,0,1,2,1,3,0,0,1,0,0,0,0,0,0,1,0,0
+Unresolved->Directional->Degrading->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,1,50.0,Degrading->Unresolved,5.53,29.41,0.0,2,1,1,0,3,0,0,0,1,0,0,0,0,1,1,0,1
+Degrading->Directional->Degrading->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,1,50.0,Degrading->Unresolved,5.53,29.41,0.0,1,1,2,0,3,0,0,0,1,0,0,0,0,0,1,0,1
+Degrading->Degrading->Balance->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,1,50.0,Balance->Unresolved,7.26,21.05,0.0,1,0,2,1,2,0,0,0,1,0,0,0,0,0,0,1,0
+Directional->Degrading->Balance->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,1,50.0,Balance->Unresolved,7.26,21.05,0.0,1,1,1,1,3,0,0,0,1,0,0,0,0,0,1,1,0
+Degrading->Balance->Unresolved->Unresolved,2,Stable Compression Basin,RotationalChurn,1,50.0,Unresolved->Unresolved,0.0,0.0,0.0,2,0,1,1,2,0,0,0,1,0,0,0,0,0,0,1,0
+Degrading->Unresolved->Degrading->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,1,33.33,Degrading->Degrading,0.0,0.0,0.0,1,0,3,0,2,0,1,0,0,0,0,0,0,0,0,0,1
+Balance->Unresolved->Balance->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,1,33.33,Balance->Unresolved,7.26,21.05,0.0,2,0,0,2,3,0,0,0,1,0,0,0,0,0,0,1,0
+Degrading->Balance->Degrading->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,1,33.33,Degrading->Unresolved,5.53,29.41,0.0,1,0,2,1,3,0,0,0,1,0,0,0,0,0,0,0,1
+Directional->Degrading->Unresolved->Directional,3,Directional Continuation / Sponsor Release,DirectionalContinuation,1,25.0,Unresolved->Directional,3.13,25.0,75.0,1,2,1,0,3,1,0,0,0,0,0,0,0,1,1,0,1
+Directional->Degrading->Unresolved->Degrading,0,Sponsor Exhaustion Collapse,ImmediateFailure,1,25.0,Unresolved->Degrading,1.82,63.64,0.0,1,1,2,0,3,0,1,0,0,0,0,0,0,0,1,0,1
+Unresolved->Degrading->Degrading->Balance,1,Unstable Rotational Balance,ImmediateFailure,1,25.0,Degrading->Balance,1.0,100.0,0.0,1,0,2,1,2,0,0,1,0,0,0,0,0,0,0,0,1
+Unresolved->Degrading->Degrading->Unresolved,2,Stable Compression Basin,PersistentNonDirectional,1,25.0,Degrading->Unresolved,5.53,29.41,0.0,2,0,2,0,2,0,0,0,1,0,0,0,0,0,0,0,1
+Balance->Balance->Balance->Degrading,0,Sponsor Exhaustion Collapse,DegradationCycle,1,20.0,Balance->Degrading,1.5,50.0,0.0,0,0,1,3,1,0,1,0,0,0,0,0,0,0,0,0,0
+Balance->Balance->Balance->Unresolved,1,Unstable Rotational Balance,PersistentNonDirectional,1,20.0,Balance->Unresolved,7.26,21.05,0.0,1,0,0,3,1,0,0,0,1,0,0,0,0,0,0,1,0
+Directional->Directional->Degrading->Directional,3,Directional Continuation / Sponsor Release,ImmediateFailure,1,16.67,Degrading->Directional,1.67,66.67,33.33,0,3,1,0,2,1,0,0,0,0,0,0,0,0,1,0,0
+Balance->Balance->Unresolved->Degrading,0,Sponsor Exhaustion Collapse,ImmediateFailure,1,16.67,Unresolved->Degrading,1.82,63.64,0.0,1,0,1,2,2,0,1,0,0,0,0,0,0,0,0,1,1
+Degrading->Degrading->Unresolved->Degrading,0,Sponsor Exhaustion Collapse,ImmediateFailure,1,16.67,Unresolved->Degrading,1.82,63.64,0.0,1,0,3,0,2,0,1,0,0,0,0,0,0,0,0,0,1
+Unresolved->Degrading->Unresolved->Degrading,0,Sponsor Exhaustion Collapse,ImmediateFailure,1,16.67,Unresolved->Degrading,1.82,63.64,0.0,2,0,2,0,3,0,1,0,0,0,0,0,0,0,0,0,1
+Directional->Directional->Degrading->Balance,1,Unstable Rotational Balance,ImmediateFailure,1,16.67,Degrading->Balance,1.0,100.0,0.0,0,2,1,1,2,0,0,1,0,0,0,0,0,0,1,0,0
+Degrading->Degrading->Unresolved->Balance,1,Unstable Rotational Balance,ImmediateFailure,1,16.67,Unresolved->Balance,1.63,63.16,0.0,1,0,2,1,2,0,0,1,0,0,0,0,0,0,0,1,1
+Unresolved->Unresolved->Degrading->Directional,3,Directional Continuation / Sponsor Release,ImmediateFailure,1,14.29,Degrading->Directional,1.67,66.67,33.33,2,1,1,0,2,1,0,0,0,0,0,0,0,0,0,0,1
+Directional->Directional->Directional->Unresolved,2,Stable Compression Basin,Mixed,1,8.33,Directional->Unresolved,2.0,0.0,0.0,1,3,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0
+Degrading->Degrading->Degrading->Directional,3,Directional Continuation / Sponsor Release,ImmediateFailure,1,7.14,Degrading->Directional,1.67,66.67,33.33,0,1,3,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+Degrading->Degrading->Degrading->Balance,1,Unstable Rotational Balance,ImmediateFailure,1,7.14,Degrading->Balance,1.0,100.0,0.0,0,0,3,1,1,0,0,1,0,0,0,0,0,0,0,0,0
+Unresolved->Unresolved->Unresolved->Unknown,2,Stable Compression Basin,Mixed,1,0.48,Unresolved->Unknown,3.0,0.0,0.0,3,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
