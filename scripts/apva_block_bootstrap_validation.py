@@ -354,7 +354,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: Optional[list[str]] = None) -> int:
-    args = build_parser().parse_args(argv)
+    args = build_parser().parse_known_args(argv)[0]
     outdir = Path(args.outdir)
     outdir.mkdir(parents=True, exist_ok=True)
 
@@ -401,4 +401,4 @@ def main(argv: Optional[list[str]] = None) -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main([])
