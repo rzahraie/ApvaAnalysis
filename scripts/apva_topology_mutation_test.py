@@ -9,15 +9,18 @@ scanning the full dataframe.
 from __future__ import annotations
 
 import argparse
-import math
 from pathlib import Path
 from typing import Optional
 
 import numpy as np
 import pandas as pd
 
-
-INDEX_INSTRUMENTS = {"ES", "NQ"}
+from apva_analysis_utils import (
+    INDEX_INSTRUMENTS,
+    apply_normalized_policy as apply_policy,
+    mark_target_entries,
+    summarize,
+)
 
 BASE_PATH = [
     "RotationalPressure",
@@ -26,37 +29,6 @@ BASE_PATH = [
     "CompressionPressure",
     "CompressionPressure",
 ]
-
-
-def tstat(s: pd.Series) -> float:
-    x = pd.to_numeric(s, errors="coerce").dropna().to_numpy(float)
-    if len(x) < 2:
-        return float("nan")
-    sd = np.std(x, ddof=1)
-    return float(np.mean(x) / (sd / math.sqrt(len(x)))) if sd > 0 else float("nan")
-
-
-def summarize(s: pd.Series) -> dict:
-    x = pd.to_numeric(s, errors="coerce").dropna()
-    wins = x[x > 0]
-    losses = x[x < 0]
-    gw = wins.sum()
-    gl = -losses.sum()
-
-    return {
-        "Count": int(len(x)),
-        "Mean": float(x.mean()) if len(x) else np.nan,
-        "Median": float(x.median()) if len(x) else np.nan,
-        "TStat": tstat(x),
-        "WinRate": float((x > 0).mean()) if len(x) else np.nan,
-        "ProfitFactor": float(gw / gl) if gl > 0 else float("inf"),
-        "Min": float(x.min()) if len(x) else np.nan,
-        "Q25": float(x.quantile(0.25)) if len(x) else np.nan,
-        "Q75": float(x.quantile(0.75)) if len(x) else np.nan,
-        "Q90": float(x.quantile(0.90)) if len(x) else np.nan,
-        "Max": float(x.max()) if len(x) else np.nan,
-        "Sum": float(x.sum()) if len(x) else np.nan,
-    }
 
 
 def prepare_df(path: str, max_lookback: int) -> pd.DataFrame:
@@ -159,22 +131,15 @@ def make_mutations() -> list[dict]:
 
 
 def find_state_entries(df: pd.DataFrame, args) -> pd.DataFrame:
-    state = (
-        df["Instrument"].astype(str).str.upper().isin(INDEX_INSTRUMENTS)
-        & df["HorizonBars"].eq(args.horizon)
-        & df["DominantPressure"].astype(str).eq(args.pressure)
-        & df["RollingEntropy"].between(args.entropy_min, args.entropy_max, inclusive="both")
-        & df["RollingDirectionalPresence"].eq(args.directional_presence)
+    df = mark_target_entries(
+        df,
+        instruments=INDEX_INSTRUMENTS,
+        horizon=args.horizon,
+        pressure=args.pressure,
+        entropy_min=args.entropy_min,
+        entropy_max=args.entropy_max,
+        directional_presence=args.directional_presence,
     )
-
-    df["InTargetState"] = state
-    prev = (
-        df.groupby(["Instrument", "File"])["InTargetState"]
-        .shift(1)
-        .astype("boolean")
-        .fillna(False)
-    )
-    df["TargetEntry"] = df["InTargetState"] & ~prev
 
     entries = df.loc[df["TargetEntry"]].copy().reset_index(drop=True)
     if entries.empty:
@@ -209,14 +174,6 @@ def mutation_mask(entries: pd.DataFrame, mutation: dict) -> pd.Series:
         )
 
     raise ValueError(f"Unknown mutation mode: {mutation['Mode']}")
-
-
-def apply_policy(entries: pd.DataFrame, disaster_stop: float) -> pd.DataFrame:
-    out = entries.copy()
-    stopped = out["DirectionalNormalizedMAE"] <= -abs(disaster_stop)
-    out["NormalizedPolicyOutcome"] = out["SignedNormalizedReturn"].where(~stopped, -abs(disaster_stop))
-    out["DisasterStopped"] = stopped
-    return out
 
 
 def evaluate_mutations(entries: pd.DataFrame, args) -> tuple[pd.DataFrame, pd.DataFrame]:

@@ -1,0 +1,45 @@
+Metric,Value
+base_count,1672
+base_mean,0.1042941036632138
+base_median,0.0
+base_tstat,2.3636456825620913
+base_profit_factor,1.1859906524704262
+base_win_rate,0.4988038277511962
+base_instrument_positive_fraction,1.0
+base_week_positive_fraction,0.625
+base_instrument_week_positive_fraction,0.5333333333333333
+minimum_candidate_count,50
+preferred_candidate_count,100
+predictor_fields_excluded_as_leaky,"SignedReturn,RawReturn,NormalizedReturn,SignedNormalizedReturn,FutureClose,DirectionalMFE,DirectionalMAE,DirectionalNormalizedMFE,DirectionalNormalizedMAE,DirectionalHit"
+safe_entry_fields,"RollingEntropy,RollingDirectionalPresence,RollingVelocity,DominantPressureValue,DominantPressure,ResolvedArchetype,MacroState,Instrument,File,Time,BarIndex,HorizonBars"
+pressure_triplet_definition,prior[-2] > prior[-1] > entry
+best_1d_status,eligible_candidate
+best_1d_feature,PriorPressureSeq
+best_1d_gatetype,category
+best_1d_gate,CompressionPressure > CompressionPressure > RotationalPressure > RotationalPressure > RotationalPressure
+best_1d_count,129
+best_1d_mean,0.23417026873001132
+best_1d_median,0.1689800844900422
+best_1d_tstat,1.409083242788659
+best_1d_profitfactor,1.4367415846345741
+best_1d_winrate,0.5348837209302325
+best_1d_es_count,20
+best_1d_nq_count,109
+best_1d_instrumentpositivefraction,1.0
+best_1d_weekpositivefraction,0.75
+best_1d_instrumentweekpositivefraction,0.6666666666666666
+best_2d_status,eligible_candidate
+best_2d_feature,PriorCompressionFraction x PriorLast_RollingDirectionalPresence
+best_2d_gatetype,interaction
+best_2d_gate,0.4 x Q1
+best_2d_count,131
+best_2d_mean,0.2245575093639092
+best_2d_median,0.1689800844900422
+best_2d_tstat,1.3695015764632774
+best_2d_profitfactor,1.418497128672755
+best_2d_winrate,0.5343511450381679
+best_2d_es_count,22
+best_2d_nq_count,109
+best_2d_instrumentpositivefraction,1.0
+best_2d_weekpositivefraction,0.75
+best_2d_instrumentweekpositivefraction,0.6666666666666666
