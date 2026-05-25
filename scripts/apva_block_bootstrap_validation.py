@@ -414,4 +414,9 @@ def main(argv: Optional[list[str]] = None) -> int:
 
 
 if __name__ == "__main__":
-    main([])
+    main([ "--input", "tables",
+    "--instrument", "ES",
+    "--horizon", "5",
+    "--pressure", "CompressionPressure",
+    "--archetype", "",
+    "--outdir", "outputs/block_bootstrap_es_pressure_only"])
