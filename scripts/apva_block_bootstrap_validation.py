@@ -186,9 +186,22 @@ def load_candidate_frames(args: argparse.Namespace) -> tuple[pd.DataFrame, pd.Da
         if args.horizon is not None and horizon_col:
             h = pd.to_numeric(work[horizon_col], errors="coerce")
             mask &= h.eq(float(args.horizon))
-        if args.archetype and archetype_col:
-            mask &= work[archetype_col].astype(str).str.strip().eq(args.archetype)
-        if args.pressure and pressure_col:
+        if (
+            args.archetype is not None
+            and str(args.archetype).strip() != ""
+            and archetype_col
+        ):
+            mask &= (
+                work[archetype_col]
+                .astype(str)
+                .str.strip()
+                .eq(args.archetype)
+            )
+        if (
+            args.pressure is not None
+            and str(args.pressure).strip() != ""
+            and pressure_col
+        ):
             mask &= work[pressure_col].astype(str).str.strip().eq(args.pressure)
 
         chosen = work.loc[mask].copy()
