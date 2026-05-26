@@ -1,0 +1,23 @@
+Column,Requirement,Present,SourceOrFormula
+Instrument,Required,True,Raw state-log field or pipeline key
+File,Required,True,Raw state-log field or pipeline key
+BarIndex,Required,True,Raw state-log field or pipeline key
+Time,Required,True,Raw state-log field or pipeline key
+Open,Required,True,Raw state-log field or pipeline key
+High,Required,True,Raw state-log field or pipeline key
+Low,Required,True,Raw state-log field or pipeline key
+Close,Required,True,Raw state-log field or pipeline key
+HorizonBars,Required,True,Raw state-log field or pipeline key
+DominantPressure,Required,True,Notebook cell 35 pressure maximum
+RollingDirectionalPresence,Required,True,Notebook cell 35 recent quadruplet directional fraction
+RollingEntropy,Required,True,Notebook cell 35 entropy of rolling resolved archetypes
+SignedNormalizedReturn,Required,True,Notebook cell 40 SignedReturn / ATR14
+DirectionalNormalizedMAE,Required,True,Notebook cell 40 DirectionalMAE / ATR14
+DominantPressureValue,OptionalDesired,True,Notebook cell 35 selected pressure value
+SignedReturn,OptionalDesired,True,Notebook cell 40 directional forward outcome
+RawReturn,OptionalDesired,True,Notebook cell 40 directional forward outcome
+NormalizedReturn,OptionalDesired,True,Notebook cell 40 RawReturn / ATR14
+DirectionalMFE,OptionalDesired,True,Notebook cell 40 directional forward outcome
+DirectionalMAE,OptionalDesired,True,Notebook cell 40 directional forward outcome
+DirectionalNormalizedMFE,OptionalDesired,True,Notebook cell 40 directional forward outcome
+FutureClose,OptionalDesired,True,Notebook cell 40 directional forward outcome

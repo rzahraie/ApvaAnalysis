@@ -1,0 +1,15 @@
+Metric,Value
+pipeline_source,apva_phase01_exploration.ipynb cells 35 and 40
+transformation_status,recovered notebook formula extraction
+input_files,"data/Validation/6E/xApvaV01StateLog_6E.csv,data/Validation/ES/xApvaV01StateLog_ES.csv,data/Validation/NQ/xApvaV01StateLog_NQ.csv"
+input_file_count,3
+output_path,outputs/build_forward_return_dataset/canonical_reconstruction/apva_forward_signed_return_dataset_rebuilt.csv
+output_rows,55806
+instruments,"6E,ES,NQ"
+horizons,"5,10,20"
+session_filter,all
+normalization_mode,"ATR14 from pressure-timeline rows, matching notebook cell 40"
+dominant_pressure_mapping,MacroState quadruplet archetype resolution plus notebook v2 pressure formulas
+raw_score_fields_used_for_pressure,none
+compare_to,tables/apva_forward_signed_return_dataset_v1.csv
+compare_exact_equivalence,False

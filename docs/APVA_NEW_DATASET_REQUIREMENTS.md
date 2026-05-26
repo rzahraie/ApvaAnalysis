@@ -86,6 +86,62 @@ For a genuinely new validation dataset:
 Do not present prior analysis summaries, selected-entry outputs, or annotated
 copies of the existing primary dataset as independent validation data.
 
+## How To Build Canonical Forward-Return Dataset From Raw NT8 xApvaV01 Exports
+
+The canonical build path has been recovered from
+`apva_phase01_exploration.ipynb`, cells 35 and 40, and extracted into:
+
+```text
+scripts/apva_build_forward_return_dataset.py
+```
+
+Required raw NT8 state-log fields:
+
+- `Instrument`
+- `BarIndex`
+- `Time`
+- `Open`, `High`, `Low`, `Close`
+- `MacroState`
+- `ActiveDirection`
+
+The raw score fields such as `DominanceScore`, `DegradationScore`,
+`BalanceScore`, `TransitionScore`, and `AmbiguityScore` are not the direct
+source of `DominantPressure` in the recovered pipeline. The recovered process:
+
+1. Builds rolling `MacroState` quadruplets.
+2. Resolves each quadruplet using `tables/apva_online_archetype_lookup.csv`,
+   including the notebook's soft-resolution fallback for unknown paths.
+3. Computes `RollingEntropy`, `RollingDirectionalPresence`, the four pressure
+   values, `DominantPressure`, and `DominantPressureValue` using the recovered
+   v2 pressure formulas.
+4. Computes forward outcomes from OHLC and `ActiveDirection`.
+5. Normalizes returns and excursions with the `ATR14` method used in the
+   notebook.
+
+For a new ES/NQ export placed beneath `data/Validation/`, run:
+
+```powershell
+python scripts/apva_build_forward_return_dataset.py `
+  --inputs "data/Validation/ES/xApvaV01StateLog_ES_NEW.csv" "data/Validation/NQ/xApvaV01StateLog_NQ_NEW.csv" `
+  --out "tables/apva_forward_signed_return_dataset_generated.csv" `
+  --horizons 5
+```
+
+To reproduce-check the historical canonical build using the historical raw
+files and all original horizons:
+
+```powershell
+python scripts/apva_build_forward_return_dataset.py `
+  --inputs "data/Validation/ES/xApvaV01StateLog_ES.csv" "data/Validation/NQ/xApvaV01StateLog_NQ.csv" "data/Validation/6E/xApvaV01StateLog_6E.csv" `
+  --out "tables/apva_forward_signed_return_dataset_generated.csv" `
+  --horizons 5 10 20 `
+  --compare-to "tables/apva_forward_signed_return_dataset_v1.csv"
+```
+
+Use `--session-filter RTH` or `--session-filter ETH` only when filtering is
+intended before feature construction. The canonical notebook run used all
+rows supplied in each source state log.
+
 ## Run Readiness Check
 
 For new files saved under `tables/`:
