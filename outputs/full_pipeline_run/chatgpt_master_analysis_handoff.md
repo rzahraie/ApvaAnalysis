@@ -8,21 +8,22 @@ No candidate definitions or validation thresholds were changed.
 ## Raw Discovery
 
 - Raw root: `data/Validation`
-- Selected raw build input files after validation/fallback handling: `10`
-- ES/NQ regimes processed: `062021, 092020, 092022, 092024, 122022`
+- Selected raw build input files after validation/fallback handling: `12`
+- ES/NQ regimes processed: `062021, 062023, 092020, 092022, 092024, 122022`
 
 | Regime | ES File | NQ File | Pair Status | Built | Readiness | Fixed Validation Included |
 | --- | --- | --- | --- | --- | --- | --- |
 | 062021 | `data/Validation/ES/xApvaV01StateLog_ES062021.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ062021.csv` | PAIRED | True | READY | True |
+| 062023 | `data/Validation/ES/xApvaV01StateLog_ES062023.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ062023.csv` | PAIRED | True | READY | True |
 | 092020 | `data/Validation/ES/xApvaV01StateLog_ES092020.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ092020.csv` | PAIRED | True | READY | True |
 | 092022 | `data/Validation/ES/xApvaV01StateLog_ES092022.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ092022.csv` | PAIRED | True | READY | True |
-| 092024 | `data/Validation/ES/xApvaV01StateLog_ES092024_CLEAN.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ092024.csv` | PAIRED | True | READY | True |
+| 092024 | `data/Validation/ES/xApvaV01StateLog_ES092024.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ092024.csv` | PAIRED | True | NOT_READY | True |
 | 122022 | `data/Validation/ES/xApvaV01StateLog_ES122022.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ122022.csv` | PAIRED | True | READY | True |
 
 ## Excluded Or Skipped Inputs
 
 - `data/Validation/ES/xApvaV01StateLog_ES.csv`: state-log filename does not exactly match <instrument><six-digit-regime>.csv.
-- `data/Validation/ES/xApvaV01StateLog_ES092024.csv`: exact dated file failed embedded repeated-header validation.
+- `data/Validation/ES/xApvaV01StateLog_ES092024_CLEAN.csv`: state-log filename does not exactly match <instrument><six-digit-regime>.csv.
 - `data/Validation/NQ/xApvaV01StateLog_NQ.csv`: state-log filename does not exactly match <instrument><six-digit-regime>.csv.
 
 ## Readiness Candidate Coverage By Built Regime
@@ -36,6 +37,10 @@ Fixed validation below excludes any row without an evaluable policy outcome.
 | 062021 | `CCRRR` | 6 | 2 | 4 |
 | 062021 | `PriorSlope_DominantPressureValue_Q3` | 66 | 37 | 29 |
 | 062021 | `RRCCC` | 14 | 9 | 5 |
+| 062023 | `Base_ES_NQ` | 213 | 111 | 102 |
+| 062023 | `CCRRR` | 3 | 0 | 3 |
+| 062023 | `PriorSlope_DominantPressureValue_Q3` | 36 | 17 | 19 |
+| 062023 | `RRCCC` | 9 | 4 | 5 |
 | 092020 | `Base_ES_NQ` | 350 | 190 | 160 |
 | 092020 | `CCRRR` | 3 | 3 | 0 |
 | 092020 | `PriorSlope_DominantPressureValue_Q3` | 61 | 33 | 28 |
@@ -44,10 +49,10 @@ Fixed validation below excludes any row without an evaluable policy outcome.
 | 092022 | `CCRRR` | 4 | 2 | 2 |
 | 092022 | `PriorSlope_DominantPressureValue_Q3` | 70 | 32 | 38 |
 | 092022 | `RRCCC` | 20 | 11 | 9 |
-| 092024 | `Base_ES_NQ` | 407 | 211 | 196 |
+| 092024 | `Base_ES_NQ` | 461 | 265 | 196 |
 | 092024 | `CCRRR` | 5 | 3 | 2 |
-| 092024 | `PriorSlope_DominantPressureValue_Q3` | 82 | 40 | 42 |
-| 092024 | `RRCCC` | 9 | 7 | 2 |
+| 092024 | `PriorSlope_DominantPressureValue_Q3` | 75 | 33 | 42 |
+| 092024 | `RRCCC` | 4 | 2 | 2 |
 | 122022 | `Base_ES_NQ` | 364 | 199 | 165 |
 | 122022 | `CCRRR` | 4 | 2 | 2 |
 | 122022 | `PriorSlope_DominantPressureValue_Q3` | 69 | 33 | 36 |
@@ -57,29 +62,29 @@ Fixed validation below excludes any row without an evaluable policy outcome.
 
 | Mode | Candidate | Count | ES | NQ | Mean | PF | Status |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| Reference | `CCRRR` | 153 | 32 | 121 | 0.259343 | 1.483105 | pass |
-| Reference | `PriorSlope_DominantPressureValue_Q3` | 786 | 270 | 516 | 0.283492 | 1.546585 | pass |
-| Reference | `RRCCC` | 329 | 82 | 247 | 0.169848 | 1.309488 | fail |
-| Spacing_10 | `CCRRR` | 132 | 31 | 101 | 0.246829 | 1.466127 | pass |
-| Spacing_10 | `PriorSlope_DominantPressureValue_Q3` | 603 | 215 | 388 | 0.301114 | 1.587281 | pass |
-| Spacing_10 | `RRCCC` | 272 | 75 | 197 | 0.152284 | 1.274159 | fail |
-| Spacing_20 | `CCRRR` | 115 | 30 | 85 | 0.256307 | 1.468832 | fail |
-| Spacing_20 | `PriorSlope_DominantPressureValue_Q3` | 541 | 194 | 347 | 0.289879 | 1.572659 | pass |
-| Spacing_20 | `RRCCC` | 235 | 70 | 165 | 0.094903 | 1.166829 | fail |
+| Reference | `CCRRR` | 156 | 32 | 124 | 0.239110 | 1.438511 | pass |
+| Reference | `PriorSlope_DominantPressureValue_Q3` | 815 | 280 | 535 | 0.286783 | 1.555612 | pass |
+| Reference | `RRCCC` | 333 | 81 | 252 | 0.185956 | 1.344206 | fail |
+| Spacing_10 | `CCRRR` | 135 | 31 | 104 | 0.223728 | 1.414723 | pass |
+| Spacing_10 | `PriorSlope_DominantPressureValue_Q3` | 632 | 226 | 406 | 0.318444 | 1.627908 | pass |
+| Spacing_10 | `RRCCC` | 276 | 74 | 202 | 0.171973 | 1.315524 | fail |
+| Spacing_20 | `CCRRR` | 118 | 30 | 88 | 0.229636 | 1.411817 | fail |
+| Spacing_20 | `PriorSlope_DominantPressureValue_Q3` | 570 | 206 | 364 | 0.316494 | 1.632377 | pass |
+| Spacing_20 | `RRCCC` | 239 | 69 | 170 | 0.118599 | 1.213078 | fail |
 
 ## Cross-Era Robustness Ranking
 
 | Rank | Candidate | Score | Concentration Penalty |
 | ---: | --- | ---: | ---: |
-| 1 | `PriorSlope_DominantPressureValue_Q3` | 2.539091 | 0.383986 |
-| 2 | `CCRRR` | 1.487722 | 0.678945 |
-| 3 | `RRCCC` | 0.268562 | 0.769899 |
+| 1 | `PriorSlope_DominantPressureValue_Q3` | 2.567260 | 0.366073 |
+| 2 | `CCRRR` | 1.335173 | 0.661164 |
+| 3 | `RRCCC` | 0.451991 | 0.719437 |
 
 ## Consistency Checks
 
-- `RRCCC` Reference pooled count: extended validation `329`, cross-era ranking `329`, handoff `329`: `PASS`.
-- `CCRRR` Reference pooled count: extended validation `153`, cross-era ranking `153`, handoff `153`: `PASS`.
-- `PriorSlope_DominantPressureValue_Q3` Reference pooled count: extended validation `786`, cross-era ranking `786`, handoff `786`: `PASS`.
+- `RRCCC` Reference pooled count: extended validation `333`, cross-era ranking `333`, handoff `333`: `PASS`.
+- `CCRRR` Reference pooled count: extended validation `156`, cross-era ranking `156`, handoff `156`: `PASS`.
+- `PriorSlope_DominantPressureValue_Q3` Reference pooled count: extended validation `815`, cross-era ranking `815`, handoff `815`: `PASS`.
 - Fixed-validation evaluated-entry checks: `PASS` (no missing policy outcomes and pooled ES/NQ counts reconcile to evaluated counts).
 
 ## Next Data Collection Target

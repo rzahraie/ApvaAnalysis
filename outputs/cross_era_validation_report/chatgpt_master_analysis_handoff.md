@@ -8,6 +8,7 @@ No candidate rules, thresholds, or topology definitions were changed.
 ## Included Datasets
 
 - `tables/apva_forward_signed_return_dataset_es_nq_062021_generated.csv`
+- `tables/apva_forward_signed_return_dataset_es_nq_062023_generated.csv`
 - `tables/apva_forward_signed_return_dataset_es_nq_092020_generated.csv`
 - `tables/apva_forward_signed_return_dataset_es_nq_092022_generated.csv`
 - `tables/apva_forward_signed_return_dataset_es_nq_092024_generated.csv`
@@ -17,9 +18,9 @@ No candidate rules, thresholds, or topology definitions were changed.
 
 ## Reference Count Check
 
-- `RRCCC` Reference pooled count: `329`
-- `CCRRR` Reference pooled count: `153`
-- `PriorSlope_DominantPressureValue_Q3` Reference pooled count: `786`
+- `RRCCC` Reference pooled count: `333`
+- `CCRRR` Reference pooled count: `156`
+- `PriorSlope_DominantPressureValue_Q3` Reference pooled count: `815`
 
 These counts are written from `extended_scorecard.csv` and verified against
 `robustness_rankings.csv` by the full-pipeline consistency check.
@@ -28,23 +29,23 @@ These counts are written from `extended_scorecard.csv` and verified against
 
 | Mode | Candidate | Count | ES | NQ | Mean | PF | Status |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| Reference | `CCRRR` | 153 | 32 | 121 | 0.259343 | 1.483105 | pass |
-| Reference | `PriorSlope_DominantPressureValue_Q3` | 786 | 270 | 516 | 0.283492 | 1.546585 | pass |
-| Reference | `RRCCC` | 329 | 82 | 247 | 0.169848 | 1.309488 | fail |
-| Spacing_10 | `CCRRR` | 132 | 31 | 101 | 0.246829 | 1.466127 | pass |
-| Spacing_10 | `PriorSlope_DominantPressureValue_Q3` | 603 | 215 | 388 | 0.301114 | 1.587281 | pass |
-| Spacing_10 | `RRCCC` | 272 | 75 | 197 | 0.152284 | 1.274159 | fail |
-| Spacing_20 | `CCRRR` | 115 | 30 | 85 | 0.256307 | 1.468832 | fail |
-| Spacing_20 | `PriorSlope_DominantPressureValue_Q3` | 541 | 194 | 347 | 0.289879 | 1.572659 | pass |
-| Spacing_20 | `RRCCC` | 235 | 70 | 165 | 0.094903 | 1.166829 | fail |
+| Reference | `CCRRR` | 156 | 32 | 124 | 0.239110 | 1.438511 | pass |
+| Reference | `PriorSlope_DominantPressureValue_Q3` | 815 | 280 | 535 | 0.286783 | 1.555612 | pass |
+| Reference | `RRCCC` | 333 | 81 | 252 | 0.185956 | 1.344206 | fail |
+| Spacing_10 | `CCRRR` | 135 | 31 | 104 | 0.223728 | 1.414723 | pass |
+| Spacing_10 | `PriorSlope_DominantPressureValue_Q3` | 632 | 226 | 406 | 0.318444 | 1.627908 | pass |
+| Spacing_10 | `RRCCC` | 276 | 74 | 202 | 0.171973 | 1.315524 | fail |
+| Spacing_20 | `CCRRR` | 118 | 30 | 88 | 0.229636 | 1.411817 | fail |
+| Spacing_20 | `PriorSlope_DominantPressureValue_Q3` | 570 | 206 | 364 | 0.316494 | 1.632377 | pass |
+| Spacing_20 | `RRCCC` | 239 | 69 | 170 | 0.118599 | 1.213078 | fail |
 
 ## Cross-Era Robustness Ranking
 
 | Rank | Candidate | Score | Spacing Survival | Regime Survival | Concentration Penalty |
 | ---: | --- | ---: | ---: | ---: | ---: |
-| 1 | `PriorSlope_DominantPressureValue_Q3` | 2.539091 | 1.000000 | 1.000000 | 0.383986 |
-| 2 | `CCRRR` | 1.487722 | 0.666667 | 0.833333 | 0.678945 |
-| 3 | `RRCCC` | 0.268562 | 0.000000 | 0.500000 | 0.769899 |
+| 1 | `PriorSlope_DominantPressureValue_Q3` | 2.567260 | 1.000000 | 1.000000 | 0.366073 |
+| 2 | `CCRRR` | 1.335173 | 0.666667 | 0.714286 | 0.661164 |
+| 3 | `RRCCC` | 0.451991 | 0.000000 | 0.571429 | 0.719437 |
 
 ## Interpretation Boundary
 
