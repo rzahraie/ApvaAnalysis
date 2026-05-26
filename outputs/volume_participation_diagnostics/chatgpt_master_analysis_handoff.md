@@ -9,51 +9,51 @@ No candidate rule or validation threshold was changed.
 
 Explicit volume fields are present in the inventoried source files.
 
-Accordingly, this report cannot test direct traded-volume behavior. It evaluates available state-participation proxies only. Textual event labels such as `PeakVolume`, where present, are not a numeric volume measurement.
+Direct volume fields are available for a subset of evaluated rows: `36` Reference PriorSlope entries from regimes `2023` and instruments `ES, NQ`. Volume results below apply only to this volume-available subset; all-data state results continue to use every available era.
 
 ## Available Participation Proxies
 
 - Numeric proxies: `DominantPressureValue`, `PriorSlope_DominantPressureValue`, `RollingEntropy`, `RollingDirectionalPresence`, `SponsorConfidence`, `DominanceScore`, `DegradationScore`, `BalanceScore`, `TransitionScore`, `AmbiguityScore`.
 - Categorical proxies: `MacroState`, `SponsorState`, `SequencePhase`.
+- Direct volume fields: `Volume`, `VolumeSMA`, `RelativeVolume`, `VolumeZScore`, `BarDirection`, `SignedVolume`, `UpVolume`, `DownVolume`, `FlatVolume`, `UpDownVolumeDelta`.
+- Spyder proxy fields: `SpyderDominantVolume`, `SpyderNonDominantVolume`, `SpyderDominantVolumeShare`, `SpyderNonDominantVolumeShare`, `SpyderNonDominantColor`, `SpyderSplitMethod`.
 
 ## Pressure-State Interpretation
 
-The frozen rule itself selects positive prior pressure-value slopes, so PriorSlope Q3 corresponds to rising pressure-state participation by construction. In Reference mode its slope spans `0.004718` to `0.055052` with median `0.034936`.
+The frozen rule itself selects positive prior pressure-value slopes, so PriorSlope Q3 corresponds to rising pressure-state participation by construction. In Reference mode its slope spans `0.004718` to `0.055052` with median `0.034454`.
 
-Among available continuous proxies, `PriorSlope_DominantPressureValue` has the largest absolute Spearman association with PriorSlope membership within Reference base entries (`0.227`), as expected because it defines the frozen candidate. Excluding that definitional field, the largest membership association is `BalanceScore` at only `-0.060`.
+Among available continuous proxies, `PriorSlope_DominantPressureValue` has the largest absolute Spearman association with PriorSlope membership within Reference base entries (`0.235`), as expected because it defines the frozen candidate. Excluding that definitional field, the largest membership association is `RollingEntropy` at only `0.082`.
 
 ## Entropy And State Context
 
-PriorSlope Q3 Reference entries have RollingEntropy mean `1.163` and median `1.295`; Reference base entries outside PriorSlope Q3 have entropy mean `1.138`. The difference (`0.025`) is modestly higher for PriorSlope Q3. Because the frozen base state already bounds entropy, this report treats entropy as context rather than an independent explanation.
+PriorSlope Q3 Reference entries have RollingEntropy mean `1.169` and median `1.295`; Reference base entries outside PriorSlope Q3 have entropy mean `1.136`. The difference (`0.033`) is modestly higher for PriorSlope Q3. Because the frozen base state already bounds entropy, this report treats entropy as context rather than an independent explanation.
 
-The most common MacroState is `Unresolved` with `762` of `786` Reference entries (`0.969`). The most common SponsorState is `Unresolved` (`0.491` share), and the most common SequencePhase is `B2B` (`0.358` share).
+The most common MacroState is `Unresolved` with `791` of `815` Reference entries (`0.971`). The most common SponsorState is `Unresolved` (`0.502` share), and the most common SequencePhase is `B2B` (`0.367` share).
 
 The candidate is strongly situated in `Unresolved` MacroState, but no specific SponsorState or SequencePhase dominates a majority beyond the stated shares. No categorical state should be treated as a replacement rule from this diagnostic report.
 
 ## ES, NQ, And Regimes
 
-Both instruments remain positive in Reference mode: ES mean `0.524` on `270` entries and NQ mean `0.158` on `516` entries.
+Both instruments remain positive in Reference mode: ES mean `0.496` on `280` entries and NQ mean `0.177` on `535` entries.
 
-Across Reference regime/instrument cells, `11` of `11` have positive means. See `prior_slope_q3_by_regime_instrument.csv` for the sparse-cell detail.
+Across Reference regime/instrument cells, `13` of `13` have positive means. See `prior_slope_q3_by_regime_instrument.csv` for the sparse-cell detail.
+
+## Volume-Available Subset
+
+Within Reference base entries where explicit volume is available, PriorSlope Q3 has mean `RelativeVolume` `1.005` versus `1.026` outside PriorSlope Q3; it is therefore `lower` in this subset.
+
+Mean `VolumeZScore` is `-0.071` for PriorSlope Q3 versus `-0.145` outside it; it is `higher` in this subset.
+
+`SignedVolume` has Spearman `0.111` with membership and `0.047` with outcome. `UpDownVolumeDelta` has Spearman `0.111` with membership and `0.047` with outcome. These describe direction-sensitive volume behavior; they are not candidate conditions.
+
+`SpyderDominantVolumeShare` has Spearman `-0.031` with membership and `0.050` with outcome. `SpyderNonDominantVolumeShare` has Spearman `0.031` with membership and `-0.050` with outcome. These shares are price-geometry weighted split-volume proxies, not bid/ask volume.
+
+Instrument and regime splits are provided in `prior_slope_q3_volume_summary.csv`, `prior_slope_q3_spyder_split_summary.csv`, and `prior_slope_q3_volume_correlations.csv`. Within the available regime: ES RelativeVolume delta `0.140`; ES VolumeZScore delta `0.383`; NQ RelativeVolume delta `-0.197`; NQ VolumeZScore delta `-0.220`. Because explicit volume currently appears only in one regime, cross-regime consistency cannot yet be established; ES/NQ comparisons within that available regime are descriptive only.
 
 ## Participation-State Versus Outcome Artifact
 
-PriorSlope Q3 is defined only from an ex-ante pressure-state slope and is not constructed from return or excursion outcomes. Within Reference PriorSlope entries, the strongest numeric-proxy association with outcome is `DominantPressureValue` with Spearman `0.052`. The available data support describing the candidate as a pressure-state participation proxy, but do not establish a direct volume phenomenon because volume is absent.
+PriorSlope Q3 is defined only from an ex-ante pressure-state slope and is not constructed from return or excursion outcomes. Within Reference PriorSlope entries, the strongest numeric-proxy association with outcome is `DominantPressureValue` with Spearman `0.049` across all-data state proxies. The new volume tables provide direct-volume diagnostics only for the available subset and do not establish a new rule or threshold.
 
-## Required Future NT8 Export Fields For Direct Volume Analysis
+## Coverage Boundary
 
-Add these row-level fields to future raw exports while keeping stable `Instrument`, `File`, `BarIndex`, and `Time` keys:
-
-- `Volume`
-- `VolumeSMA` or another clearly specified rolling volume mean
-- `RelativeVolume`
-- `VolumeZScore`
-- `BarDirection`
-- `SignedVolume`
-- `DirectionalVolumeImbalance`
-- `UpDownVolume` proxy, if available
-- ATR-normalized volume or participation measures, if implemented with documented formulas
-
-## Next Fixed Validation Target
-
-Export a new paired ES/NQ regime with the unchanged state fields plus explicit volume columns above, then rerun the existing full pipeline and this diagnostic report. The purpose is direct participation measurement under the frozen candidate, not candidate modification.
+Continue exporting the explicit volume and Spyder split fields for additional paired ES/NQ regimes, then rerun the unchanged pipeline. The purpose is to expand direct-volume coverage under the frozen candidate, not to tune or replace it.

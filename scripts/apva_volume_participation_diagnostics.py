@@ -37,6 +37,31 @@ NUMERIC_PROXIES = [
     "AmbiguityScore",
 ]
 CATEGORICAL_PROXIES = ["MacroState", "SponsorState", "SequencePhase"]
+VOLUME_NUMERIC_FIELDS = [
+    "Volume",
+    "VolumeSMA",
+    "RelativeVolume",
+    "VolumeZScore",
+    "SignedVolume",
+    "UpVolume",
+    "DownVolume",
+    "FlatVolume",
+    "UpDownVolumeDelta",
+]
+SPYDER_NUMERIC_FIELDS = [
+    "SpyderDominantVolume",
+    "SpyderNonDominantVolume",
+    "SpyderDominantVolumeShare",
+    "SpyderNonDominantVolumeShare",
+]
+VOLUME_CATEGORICAL_FIELDS = ["BarDirection"]
+SPYDER_CATEGORICAL_FIELDS = ["SpyderNonDominantColor", "SpyderSplitMethod"]
+EXPLICIT_VOLUME_FIELDS = (
+    VOLUME_NUMERIC_FIELDS
+    + SPYDER_NUMERIC_FIELDS
+    + VOLUME_CATEGORICAL_FIELDS
+    + SPYDER_CATEGORICAL_FIELDS
+)
 RAW_ENRICHMENT_FIELDS = [
     "SponsorState",
     "SponsorConfidence",
@@ -46,16 +71,7 @@ RAW_ENRICHMENT_FIELDS = [
     "BalanceScore",
     "TransitionScore",
     "AmbiguityScore",
-]
-EXPLICIT_VOLUME_FIELDS = [
-    "Volume",
-    "VolumeSMA",
-    "RelativeVolume",
-    "VolumeZScore",
-    "SignedVolume",
-    "DirectionalVolumeImbalance",
-    "UpDownVolume",
-]
+] + EXPLICIT_VOLUME_FIELDS
 FULL_PIPELINE_STATUS = "outputs/full_pipeline_run/full_pipeline_regime_status.csv"
 FULL_PIPELINE_INVENTORY = "outputs/full_pipeline_run/full_pipeline_inventory.csv"
 
@@ -239,11 +255,17 @@ def enrich_entries(entries: pd.DataFrame, raw_fields: pd.DataFrame) -> pd.DataFr
         if field in out.columns:
             out = out.drop(columns=[field])
     out = out.merge(raw_fields, on=RAW_JOIN_KEY, how="left", validate="many_to_one")
+    for field in EXPLICIT_VOLUME_FIELDS:
+        if field not in out.columns:
+            out[field] = np.nan
     requested_raw = [column for column in RAW_ENRICHMENT_FIELDS if column in raw_fields.columns]
     if requested_raw and out["RawSourcePath"].isna().any():
         missing = out.loc[out["RawSourcePath"].isna(), RAW_JOIN_KEY].drop_duplicates().head(5)
         raise RuntimeError(f"Raw state enrichment did not match evaluated entries: {missing.to_dict('records')}")
-    return annotate_regime(as_numeric(out, NUMERIC_PROXIES + ["NormalizedPolicyOutcome"]))
+    return annotate_regime(as_numeric(
+        out,
+        NUMERIC_PROXIES + VOLUME_NUMERIC_FIELDS + SPYDER_NUMERIC_FIELDS + ["NormalizedPolicyOutcome"],
+    ))
 
 
 def evaluated_base_comparison(extended: pd.DataFrame, prior: pd.DataFrame, raw_fields: pd.DataFrame) -> pd.DataFrame:
@@ -298,6 +320,66 @@ def numeric_proxy_summary(base: pd.DataFrame, available: list[str]) -> pd.DataFr
     return pd.DataFrame(rows)
 
 
+def numeric_subset_summary(frame: pd.DataFrame, fields: list[str]) -> pd.DataFrame:
+    rows: list[dict[str, object]] = []
+    breakdowns = [
+        ("AllAvailableRows", []),
+        ("ByInstrument", ["Instrument"]),
+        ("ByRegimeInstrument", ["Regime", "Instrument"]),
+    ]
+    for mode in VALIDATION_MODES:
+        mode_frame = frame.loc[frame["ValidationMode"].eq(mode)]
+        for breakdown, dimensions in breakdowns:
+            groups = [((), mode_frame)] if not dimensions else mode_frame.groupby(dimensions, dropna=False, sort=True)
+            for keys, group in groups:
+                keys = keys if isinstance(keys, tuple) else (keys,)
+                dimensions_values = dict(zip(dimensions, keys))
+                for cohort in ["PriorSlope_Q3", "Base_NotPriorSlope_Q3"]:
+                    cohort_group = group.loc[group["Cohort"].eq(cohort)]
+                    for field in fields:
+                        values = pd.to_numeric(cohort_group[field], errors="coerce").dropna()
+                        rows.append({
+                            "DataScope": "VolumeAvailableSubset",
+                            "Breakdown": breakdown,
+                            "ValidationMode": mode,
+                            "Regime": dimensions_values.get("Regime", "All"),
+                            "Instrument": dimensions_values.get("Instrument", "All"),
+                            "Cohort": cohort,
+                            "Field": field,
+                            "Count": int(len(cohort_group)),
+                            "AvailableCount": int(len(values)),
+                            "Mean": float(values.mean()) if len(values) else np.nan,
+                            "Median": float(values.median()) if len(values) else np.nan,
+                            "Std": float(values.std(ddof=1)) if len(values) > 1 else np.nan,
+                            "Q25": float(values.quantile(0.25)) if len(values) else np.nan,
+                            "Q75": float(values.quantile(0.75)) if len(values) else np.nan,
+                            "PositiveFraction": float((values > 0).mean()) if len(values) else np.nan,
+                        })
+    return pd.DataFrame(rows)
+
+
+def categorical_subset_summary(frame: pd.DataFrame, fields: list[str]) -> pd.DataFrame:
+    rows: list[dict[str, object]] = []
+    for mode in VALIDATION_MODES:
+        mode_frame = frame.loc[frame["ValidationMode"].eq(mode)]
+        for field in fields:
+            for (cohort, value), group in mode_frame.groupby(["Cohort", field], dropna=False, sort=True):
+                rows.append({
+                    "DataScope": "VolumeAvailableSubset",
+                    "Breakdown": "Category",
+                    "ValidationMode": mode,
+                    "Regime": "All",
+                    "Instrument": "All",
+                    "Cohort": cohort,
+                    "Field": field,
+                    "Category": value,
+                    "Count": int(len(group)),
+                    "MeanOutcome": float(pd.to_numeric(group["NormalizedPolicyOutcome"], errors="coerce").mean()),
+                    "EntryShareWithinCohort": float(len(group) / len(mode_frame.loc[mode_frame["Cohort"].eq(cohort)])),
+                })
+    return pd.DataFrame(rows)
+
+
 def correlation(left: pd.Series, right: pd.Series, method: str) -> tuple[int, float]:
     data = pd.DataFrame({"x": pd.to_numeric(left, errors="coerce"), "y": pd.to_numeric(right, errors="coerce")}).dropna()
     if len(data) < 3 or data["x"].nunique() < 2 or data["y"].nunique() < 2:
@@ -336,6 +418,49 @@ def proxy_correlations(base: pd.DataFrame, prior: pd.DataFrame, available: list[
                     "ValidationMode": mode,
                     "Instrument": instrument,
                     "Proxy": proxy,
+                    "Count": n,
+                    "PearsonCorrelation": pearson,
+                    "SpearmanCorrelation": spearman,
+                })
+    return pd.DataFrame(rows)
+
+
+def volume_correlations(base: pd.DataFrame, prior: pd.DataFrame, available: list[str]) -> pd.DataFrame:
+    rows: list[dict[str, object]] = []
+    reference_base = base.loc[base["ValidationMode"].eq("Reference")].copy()
+    reference_base["IsPriorSlope_Q3"] = reference_base["Cohort"].eq("PriorSlope_Q3").astype(int)
+    for instrument in ["All", "ES", "NQ"]:
+        group = reference_base if instrument == "All" else reference_base.loc[reference_base["Instrument"].eq(instrument)]
+        for field in available:
+            n, pearson = correlation(group[field], group["IsPriorSlope_Q3"], "pearson")
+            _, spearman = correlation(group[field], group["IsPriorSlope_Q3"], "spearman")
+            rows.append({
+                "DataScope": "VolumeAvailableSubset",
+                "Analysis": "CandidateMembershipWithinReferenceBase",
+                "ValidationMode": "Reference",
+                "Regime": "All",
+                "Instrument": instrument,
+                "Field": field,
+                "Count": n,
+                "PearsonCorrelation": pearson,
+                "SpearmanCorrelation": spearman,
+            })
+    for mode in VALIDATION_MODES:
+        mode_prior = prior.loc[prior["ValidationMode"].eq(mode)]
+        groupings = [("All", "All", mode_prior)]
+        groupings.extend(("All", instrument, group) for instrument, group in mode_prior.groupby("Instrument", sort=True))
+        groupings.extend((regime, instrument, group) for (regime, instrument), group in mode_prior.groupby(["Regime", "Instrument"], sort=True))
+        for regime, instrument, group in groupings:
+            for field in available:
+                n, pearson = correlation(group[field], group["NormalizedPolicyOutcome"], "pearson")
+                _, spearman = correlation(group[field], group["NormalizedPolicyOutcome"], "spearman")
+                rows.append({
+                    "DataScope": "VolumeAvailableSubset",
+                    "Analysis": "OutcomeWithinPriorSlope_Q3",
+                    "ValidationMode": mode,
+                    "Regime": regime,
+                    "Instrument": instrument,
+                    "Field": field,
                     "Count": n,
                     "PearsonCorrelation": pearson,
                     "SpearmanCorrelation": spearman,
@@ -423,6 +548,33 @@ def md(value: object) -> str:
     return str(value).replace("|", "\\|")
 
 
+def subset_mean(summary: pd.DataFrame, field: str, cohort: str) -> float:
+    matches = summary.loc[
+        summary["Breakdown"].eq("AllAvailableRows")
+        & summary["ValidationMode"].eq("Reference")
+        & summary["Cohort"].eq(cohort)
+        & summary["Field"].eq(field),
+        "Mean",
+    ]
+    return float(matches.iloc[0]) if not matches.empty else np.nan
+
+
+def subset_correlation(
+    correlations: pd.DataFrame,
+    analysis: str,
+    field: str,
+) -> float:
+    matches = correlations.loc[
+        correlations["Analysis"].eq(analysis)
+        & correlations["ValidationMode"].eq("Reference")
+        & correlations["Regime"].eq("All")
+        & correlations["Instrument"].eq("All")
+        & correlations["Field"].eq(field),
+        "SpearmanCorrelation",
+    ]
+    return float(matches.iloc[0]) if not matches.empty else np.nan
+
+
 def write_handoff(
     path: Path,
     prior: pd.DataFrame,
@@ -433,11 +585,17 @@ def write_handoff(
     regime_instrument: pd.DataFrame,
     correlations: pd.DataFrame,
     explicit_volume_present: bool,
+    volume_summary: pd.DataFrame,
+    spyder_summary: pd.DataFrame,
+    volume_corr: pd.DataFrame,
 ) -> None:
     ref = prior.loc[prior["ValidationMode"].eq("Reference")]
     slope = ref["PriorSlope_DominantPressureValue"]
-    proxy_names = proxy_summary["Proxy"].drop_duplicates().tolist()
-    member_corr = correlations.loc[correlations["Analysis"].eq("CandidateMembershipWithinReferenceBase")].copy()
+    proxy_names = [proxy for proxy in proxy_summary["Proxy"].drop_duplicates().tolist() if proxy in NUMERIC_PROXIES]
+    member_corr = correlations.loc[
+        correlations["Analysis"].eq("CandidateMembershipWithinReferenceBase")
+        & correlations["Proxy"].isin(NUMERIC_PROXIES)
+    ].copy()
     member_corr["AbsSpearman"] = member_corr["SpearmanCorrelation"].abs()
     best = member_corr.sort_values("AbsSpearman", ascending=False).iloc[0]
     best_nondef = member_corr.loc[
@@ -447,6 +605,7 @@ def write_handoff(
         correlations["Analysis"].eq("OutcomeWithinPriorSlope_Q3")
         & correlations["ValidationMode"].eq("Reference")
         & correlations["Instrument"].eq("All")
+        & correlations["Proxy"].isin(NUMERIC_PROXIES)
     ].copy()
     within_outcome["AbsSpearman"] = within_outcome["SpearmanCorrelation"].abs()
     best_outcome = within_outcome.sort_values("AbsSpearman", ascending=False).iloc[0]
@@ -464,6 +623,34 @@ def write_handoff(
     nonprior_entropy = float(reference_proxy.loc[
         reference_proxy["Cohort"].eq("Base_NotPriorSlope_Q3") & reference_proxy["Proxy"].eq("RollingEntropy"), "Mean"
     ].iloc[0])
+    volume_ref = prior.loc[prior["ValidationMode"].eq("Reference") & prior["RelativeVolume"].notna()]
+    volume_regimes = sorted(volume_ref["RegimeCode"].dropna().astype(str).unique())
+    volume_instruments = sorted(volume_ref["Instrument"].dropna().astype(str).unique())
+    relative_prior = subset_mean(volume_summary, "RelativeVolume", "PriorSlope_Q3")
+    relative_other = subset_mean(volume_summary, "RelativeVolume", "Base_NotPriorSlope_Q3")
+    z_prior = subset_mean(volume_summary, "VolumeZScore", "PriorSlope_Q3")
+    z_other = subset_mean(volume_summary, "VolumeZScore", "Base_NotPriorSlope_Q3")
+    signed_membership = subset_correlation(volume_corr, "CandidateMembershipWithinReferenceBase", "SignedVolume")
+    signed_outcome = subset_correlation(volume_corr, "OutcomeWithinPriorSlope_Q3", "SignedVolume")
+    delta_membership = subset_correlation(volume_corr, "CandidateMembershipWithinReferenceBase", "UpDownVolumeDelta")
+    delta_outcome = subset_correlation(volume_corr, "OutcomeWithinPriorSlope_Q3", "UpDownVolumeDelta")
+    dom_share_membership = subset_correlation(volume_corr, "CandidateMembershipWithinReferenceBase", "SpyderDominantVolumeShare")
+    dom_share_outcome = subset_correlation(volume_corr, "OutcomeWithinPriorSlope_Q3", "SpyderDominantVolumeShare")
+    nondom_share_membership = subset_correlation(volume_corr, "CandidateMembershipWithinReferenceBase", "SpyderNonDominantVolumeShare")
+    nondom_share_outcome = subset_correlation(volume_corr, "OutcomeWithinPriorSlope_Q3", "SpyderNonDominantVolumeShare")
+    reference_by_instrument = volume_summary.loc[
+        volume_summary["Breakdown"].eq("ByInstrument")
+        & volume_summary["ValidationMode"].eq("Reference")
+        & volume_summary["Field"].isin(["RelativeVolume", "VolumeZScore"])
+    ].pivot_table(index=["Instrument", "Field"], columns="Cohort", values="Mean")
+    direction_notes: list[str] = []
+    for instrument in volume_instruments:
+        for field in ["RelativeVolume", "VolumeZScore"]:
+            key = (instrument, field)
+            if key in reference_by_instrument.index:
+                row = reference_by_instrument.loc[key]
+                delta = row.get("PriorSlope_Q3", np.nan) - row.get("Base_NotPriorSlope_Q3", np.nan)
+                direction_notes.append(f"{instrument} {field} delta `{fmt(delta)}`")
     lines = [
         "# Volume And Participation Diagnostic Handoff",
         "",
@@ -480,13 +667,16 @@ def write_handoff(
             else "No explicit raw volume field or derived volume column is present in the current canonical datasets or raw NT8 state-log exports."
         ),
         "",
-        "Accordingly, this report cannot test direct traded-volume behavior. It evaluates available state-participation proxies only. "
-        "Textual event labels such as `PeakVolume`, where present, are not a numeric volume measurement.",
+        f"Direct volume fields are available for a subset of evaluated rows: `{len(volume_ref)}` Reference PriorSlope entries "
+        f"from regimes `{', '.join(volume_regimes) or 'none'}` and instruments `{', '.join(volume_instruments) or 'none'}`. "
+        "Volume results below apply only to this volume-available subset; all-data state results continue to use every available era.",
         "",
         "## Available Participation Proxies",
         "",
         "- Numeric proxies: `" + "`, `".join(proxy_names) + "`.",
         "- Categorical proxies: `MacroState`, `SponsorState`, `SequencePhase`.",
+        "- Direct volume fields: `Volume`, `VolumeSMA`, `RelativeVolume`, `VolumeZScore`, `BarDirection`, `SignedVolume`, `UpVolume`, `DownVolume`, `FlatVolume`, `UpDownVolumeDelta`.",
+        "- Spyder proxy fields: `SpyderDominantVolume`, `SpyderNonDominantVolume`, `SpyderDominantVolumeShare`, `SpyderNonDominantVolumeShare`, `SpyderNonDominantColor`, `SpyderSplitMethod`.",
         "",
         "## Pressure-State Interpretation",
         "",
@@ -521,31 +711,40 @@ def write_handoff(
         f"Across Reference regime/instrument cells, `{positive_ri}` of `{total_ri}` have positive means. "
         "See `prior_slope_q3_by_regime_instrument.csv` for the sparse-cell detail.",
         "",
+        "## Volume-Available Subset",
+        "",
+        f"Within Reference base entries where explicit volume is available, PriorSlope Q3 has mean `RelativeVolume` `{fmt(relative_prior)}` "
+        f"versus `{fmt(relative_other)}` outside PriorSlope Q3; it is therefore "
+        f"`{'higher' if relative_prior > relative_other else 'lower'}` in this subset.",
+        "",
+        f"Mean `VolumeZScore` is `{fmt(z_prior)}` for PriorSlope Q3 versus `{fmt(z_other)}` outside it; it is "
+        f"`{'higher' if z_prior > z_other else 'lower'}` in this subset.",
+        "",
+        f"`SignedVolume` has Spearman `{fmt(signed_membership)}` with membership and `{fmt(signed_outcome)}` with outcome. "
+        f"`UpDownVolumeDelta` has Spearman `{fmt(delta_membership)}` with membership and `{fmt(delta_outcome)}` with outcome. "
+        "These describe direction-sensitive volume behavior; they are not candidate conditions.",
+        "",
+        f"`SpyderDominantVolumeShare` has Spearman `{fmt(dom_share_membership)}` with membership and `{fmt(dom_share_outcome)}` with outcome. "
+        f"`SpyderNonDominantVolumeShare` has Spearman `{fmt(nondom_share_membership)}` with membership and `{fmt(nondom_share_outcome)}` with outcome. "
+        "These shares are price-geometry weighted split-volume proxies, not bid/ask volume.",
+        "",
+        "Instrument and regime splits are provided in `prior_slope_q3_volume_summary.csv`, `prior_slope_q3_spyder_split_summary.csv`, "
+        "and `prior_slope_q3_volume_correlations.csv`. "
+        + ("Within the available regime: " + "; ".join(direction_notes) + ". " if direction_notes else "")
+        + "Because explicit volume currently appears only in one regime, cross-regime consistency cannot yet be established; "
+        "ES/NQ comparisons within that available regime are descriptive only.",
+        "",
         "## Participation-State Versus Outcome Artifact",
         "",
         "PriorSlope Q3 is defined only from an ex-ante pressure-state slope and is not constructed from return or excursion outcomes. "
         f"Within Reference PriorSlope entries, the strongest numeric-proxy association with outcome is `{best_outcome['Proxy']}` "
-        f"with Spearman `{fmt(best_outcome['SpearmanCorrelation'])}`. The available data support describing the candidate "
-        "as a pressure-state participation proxy, but do not establish a direct volume phenomenon because volume is absent.",
+        f"with Spearman `{fmt(best_outcome['SpearmanCorrelation'])}` across all-data state proxies. The new volume tables provide "
+        "direct-volume diagnostics only for the available subset and do not establish a new rule or threshold.",
         "",
-        "## Required Future NT8 Export Fields For Direct Volume Analysis",
+        "## Coverage Boundary",
         "",
-        "Add these row-level fields to future raw exports while keeping stable `Instrument`, `File`, `BarIndex`, and `Time` keys:",
-        "",
-        "- `Volume`",
-        "- `VolumeSMA` or another clearly specified rolling volume mean",
-        "- `RelativeVolume`",
-        "- `VolumeZScore`",
-        "- `BarDirection`",
-        "- `SignedVolume`",
-        "- `DirectionalVolumeImbalance`",
-        "- `UpDownVolume` proxy, if available",
-        "- ATR-normalized volume or participation measures, if implemented with documented formulas",
-        "",
-        "## Next Fixed Validation Target",
-        "",
-        "Export a new paired ES/NQ regime with the unchanged state fields plus explicit volume columns above, then rerun the existing full pipeline and this diagnostic report. "
-        "The purpose is direct participation measurement under the frozen candidate, not candidate modification.",
+        "Continue exporting the explicit volume and Spyder split fields for additional paired ES/NQ regimes, then rerun the unchanged pipeline. "
+        "The purpose is to expand direct-volume coverage under the frozen candidate, not to tune or replace it.",
         "",
     ]
     path.write_text("\n".join(lines), encoding="utf-8")
@@ -563,7 +762,9 @@ def main(argv: Optional[list[str]] = None) -> int:
     args = parser.parse_args(argv)
     workspace = Path.cwd()
     extended = read_csv(workspace / args.extended_entries)
-    prior_source = read_csv(workspace / args.prior_entries)
+    prior_source = extended.loc[extended["Candidate"].eq(CANDIDATE)].copy()
+    if prior_source.empty:
+        prior_source = read_csv(workspace / args.prior_entries)
     canonical_paths = sorted(workspace.glob(args.canonical_glob))
     raw_root = workspace / args.raw_root
     raw_paths = sorted(raw_root.rglob("xApvaV01StateLog*.csv"))
@@ -585,13 +786,45 @@ def main(argv: Optional[list[str]] = None) -> int:
     raw_fields, duplicate_keys = load_raw_state_fields(raw_sources, workspace)
     prior = enrich_entries(prior_source, raw_fields)
     base = evaluated_base_comparison(extended, prior, raw_fields)
-    available_numeric = [proxy for proxy in NUMERIC_PROXIES if proxy in prior.columns and prior[proxy].notna().any()]
+    available_numeric = [
+        proxy for proxy in NUMERIC_PROXIES + VOLUME_NUMERIC_FIELDS + SPYDER_NUMERIC_FIELDS
+        if proxy in prior.columns and prior[proxy].notna().any()
+    ]
     proxy_summary = numeric_proxy_summary(base, available_numeric)
     macro = group_outcomes(prior, ["ValidationMode", "MacroState"])
     sponsor = group_outcomes(prior, ["ValidationMode", "SponsorState"])
     sequence = group_outcomes(prior, ["ValidationMode", "SequencePhase"])
     regime_instrument = group_outcomes(prior, ["ValidationMode", "Regime", "Instrument"])
     correlations = proxy_correlations(base, prior, available_numeric)
+    volume_base = base.loc[base["RelativeVolume"].notna()].copy()
+    volume_prior = prior.loc[prior["RelativeVolume"].notna()].copy()
+    available_volume = [field for field in VOLUME_NUMERIC_FIELDS if volume_prior[field].notna().any()]
+    available_spyder = [field for field in SPYDER_NUMERIC_FIELDS if volume_prior[field].notna().any()]
+    volume_summary = pd.concat(
+        [
+            numeric_subset_summary(volume_base, available_volume),
+            categorical_subset_summary(volume_base, [
+                field for field in VOLUME_CATEGORICAL_FIELDS if volume_base[field].notna().any()
+            ]),
+        ],
+        ignore_index=True,
+        sort=False,
+    )
+    spyder_summary = pd.concat(
+        [
+            numeric_subset_summary(volume_base, available_spyder),
+            categorical_subset_summary(volume_base, [
+                field for field in SPYDER_CATEGORICAL_FIELDS if volume_base[field].notna().any()
+            ]),
+        ],
+        ignore_index=True,
+        sort=False,
+    )
+    volume_corr = volume_correlations(
+        volume_base,
+        volume_prior,
+        available_volume + available_spyder,
+    )
     output_scorecard = scorecard(
         prior, proxy_summary, macro, sponsor, sequence, regime_instrument,
         correlations, explicit_volume_present, inventory,
@@ -606,11 +839,15 @@ def main(argv: Optional[list[str]] = None) -> int:
     sequence.to_csv(outdir / "prior_slope_q3_by_sequencephase.csv", index=False)
     regime_instrument.to_csv(outdir / "prior_slope_q3_by_regime_instrument.csv", index=False)
     correlations.to_csv(outdir / "prior_slope_q3_proxy_correlation.csv", index=False)
+    volume_summary.to_csv(outdir / "prior_slope_q3_volume_summary.csv", index=False)
+    spyder_summary.to_csv(outdir / "prior_slope_q3_spyder_split_summary.csv", index=False)
+    volume_corr.to_csv(outdir / "prior_slope_q3_volume_correlations.csv", index=False)
     output_scorecard.to_csv(outdir / "volume_participation_scorecard.csv", index=False)
     write_handoff(
         outdir / "chatgpt_master_analysis_handoff.md",
         prior, proxy_summary, macro, sponsor, sequence, regime_instrument,
-        correlations, explicit_volume_present,
+        correlations, explicit_volume_present, volume_summary, spyder_summary,
+        volume_corr,
     )
     print("APVA volume/participation diagnostic report complete")
     print(output_scorecard.loc[output_scorecard["Metric"].isin([
