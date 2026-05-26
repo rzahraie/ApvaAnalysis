@@ -8,17 +8,20 @@ No candidate definitions or validation thresholds were changed.
 ## Raw Discovery
 
 - Raw root: `data/Validation`
-- Selected raw build input files after validation/fallback handling: `12`
-- ES/NQ regimes processed: `062021, 062023, 092020, 092022, 092024, 122022`
+- Selected raw build input files after validation/fallback handling: `18`
+- ES/NQ regimes processed: `062019, 062021, 062023, 092020, 092022, 092024, 122017, 122022, 122023`
 
 | Regime | ES File | NQ File | Pair Status | Built | Readiness | Fixed Validation Included |
 | --- | --- | --- | --- | --- | --- | --- |
+| 062019 | `data/Validation/Temp/xApvaV01StateLog_ES062019.csv` | `data/Validation/Temp/xApvaV01StateLog_NQ062019.csv` | PAIRED | True | READY | True |
 | 062021 | `data/Validation/ES/xApvaV01StateLog_ES062021.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ062021.csv` | PAIRED | True | READY | True |
 | 062023 | `data/Validation/ES/xApvaV01StateLog_ES062023.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ062023.csv` | PAIRED | True | READY | True |
 | 092020 | `data/Validation/ES/xApvaV01StateLog_ES092020.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ092020.csv` | PAIRED | True | READY | True |
 | 092022 | `data/Validation/ES/xApvaV01StateLog_ES092022.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ092022.csv` | PAIRED | True | READY | True |
 | 092024 | `data/Validation/ES/xApvaV01StateLog_ES092024.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ092024.csv` | PAIRED | True | NOT_READY | True |
+| 122017 | `data/Validation/ES/xApvaV01StateLog_ES122017.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ122017.csv` | PAIRED | True | READY | True |
 | 122022 | `data/Validation/ES/xApvaV01StateLog_ES122022.csv` | `data/Validation/NQ/xApvaV01StateLog_NQ122022.csv` | PAIRED | True | READY | True |
+| 122023 | `data/Validation/Temp/xApvaV01StateLog_ES122023.csv` | `data/Validation/Temp/xApvaV01StateLog_NQ122023.csv` | PAIRED | True | READY | True |
 
 ## Excluded Or Skipped Inputs
 
@@ -33,6 +36,10 @@ Fixed validation below excludes any row without an evaluable policy outcome.
 
 | Regime | Candidate | Count | ES | NQ |
 | --- | --- | ---: | ---: | ---: |
+| 062019 | `Base_ES_NQ` | 351 | 172 | 179 |
+| 062019 | `CCRRR` | 7 | 3 | 4 |
+| 062019 | `PriorSlope_DominantPressureValue_Q3` | 81 | 45 | 36 |
+| 062019 | `RRCCC` | 17 | 9 | 8 |
 | 062021 | `Base_ES_NQ` | 388 | 216 | 172 |
 | 062021 | `CCRRR` | 6 | 2 | 4 |
 | 062021 | `PriorSlope_DominantPressureValue_Q3` | 66 | 37 | 29 |
@@ -53,38 +60,46 @@ Fixed validation below excludes any row without an evaluable policy outcome.
 | 092024 | `CCRRR` | 5 | 3 | 2 |
 | 092024 | `PriorSlope_DominantPressureValue_Q3` | 75 | 33 | 42 |
 | 092024 | `RRCCC` | 4 | 2 | 2 |
+| 122017 | `Base_ES_NQ` | 935 | 250 | 685 |
+| 122017 | `CCRRR` | 19 | 6 | 13 |
+| 122017 | `PriorSlope_DominantPressureValue_Q3` | 180 | 43 | 137 |
+| 122017 | `RRCCC` | 47 | 11 | 36 |
 | 122022 | `Base_ES_NQ` | 364 | 199 | 165 |
 | 122022 | `CCRRR` | 4 | 2 | 2 |
 | 122022 | `PriorSlope_DominantPressureValue_Q3` | 69 | 33 | 36 |
 | 122022 | `RRCCC` | 16 | 3 | 13 |
+| 122023 | `Base_ES_NQ` | 421 | 218 | 203 |
+| 122023 | `CCRRR` | 7 | 4 | 3 |
+| 122023 | `PriorSlope_DominantPressureValue_Q3` | 81 | 39 | 42 |
+| 122023 | `RRCCC` | 22 | 10 | 12 |
 
 ## Pooled Fixed Validation
 
 | Mode | Candidate | Count | ES | NQ | Mean | PF | Status |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| Reference | `CCRRR` | 156 | 32 | 124 | 0.239110 | 1.438511 | pass |
-| Reference | `PriorSlope_DominantPressureValue_Q3` | 815 | 280 | 535 | 0.286783 | 1.555612 | pass |
-| Reference | `RRCCC` | 333 | 81 | 252 | 0.185956 | 1.344206 | fail |
-| Spacing_10 | `CCRRR` | 135 | 31 | 104 | 0.223728 | 1.414723 | pass |
-| Spacing_10 | `PriorSlope_DominantPressureValue_Q3` | 632 | 226 | 406 | 0.318444 | 1.627908 | pass |
-| Spacing_10 | `RRCCC` | 276 | 74 | 202 | 0.171973 | 1.315524 | fail |
-| Spacing_20 | `CCRRR` | 118 | 30 | 88 | 0.229636 | 1.411817 | fail |
-| Spacing_20 | `PriorSlope_DominantPressureValue_Q3` | 570 | 206 | 364 | 0.316494 | 1.632377 | pass |
-| Spacing_20 | `RRCCC` | 239 | 69 | 170 | 0.118599 | 1.213078 | fail |
+| Reference | `CCRRR` | 189 | 45 | 144 | 0.198542 | 1.354244 | fail |
+| Reference | `PriorSlope_DominantPressureValue_Q3` | 1157 | 407 | 750 | 0.169018 | 1.307396 | fail |
+| Reference | `RRCCC` | 419 | 111 | 308 | 0.118575 | 1.209552 | fail |
+| Spacing_10 | `CCRRR` | 168 | 44 | 124 | 0.181110 | 1.324749 | fail |
+| Spacing_10 | `PriorSlope_DominantPressureValue_Q3` | 938 | 339 | 599 | 0.175393 | 1.320296 | pass |
+| Spacing_10 | `RRCCC` | 362 | 104 | 258 | 0.097305 | 1.169657 | fail |
+| Spacing_20 | `CCRRR` | 150 | 43 | 107 | 0.179887 | 1.311353 | fail |
+| Spacing_20 | `PriorSlope_DominantPressureValue_Q3` | 853 | 310 | 543 | 0.171161 | 1.313799 | fail |
+| Spacing_20 | `RRCCC` | 324 | 99 | 225 | 0.055880 | 1.096192 | fail |
 
 ## Cross-Era Robustness Ranking
 
 | Rank | Candidate | Score | Concentration Penalty |
 | ---: | --- | ---: | ---: |
-| 1 | `PriorSlope_DominantPressureValue_Q3` | 2.567260 | 0.366073 |
-| 2 | `CCRRR` | 1.335173 | 0.661164 |
-| 3 | `RRCCC` | 0.451991 | 0.719437 |
+| 1 | `PriorSlope_DominantPressureValue_Q3` | 1.407035 | 0.354870 |
+| 2 | `CCRRR` | 0.632851 | 0.560132 |
+| 3 | `RRCCC` | 0.342838 | 0.625416 |
 
 ## Consistency Checks
 
-- `RRCCC` Reference pooled count: extended validation `333`, cross-era ranking `333`, handoff `333`: `PASS`.
-- `CCRRR` Reference pooled count: extended validation `156`, cross-era ranking `156`, handoff `156`: `PASS`.
-- `PriorSlope_DominantPressureValue_Q3` Reference pooled count: extended validation `815`, cross-era ranking `815`, handoff `815`: `PASS`.
+- `RRCCC` Reference pooled count: extended validation `419`, cross-era ranking `419`, handoff `419`: `PASS`.
+- `CCRRR` Reference pooled count: extended validation `189`, cross-era ranking `189`, handoff `189`: `PASS`.
+- `PriorSlope_DominantPressureValue_Q3` Reference pooled count: extended validation `1157`, cross-era ranking `1157`, handoff `1157`: `PASS`.
 - Fixed-validation evaluated-entry checks: `PASS` (no missing policy outcomes and pooled ES/NQ counts reconcile to evaluated counts).
 
 ## Next Data Collection Target
