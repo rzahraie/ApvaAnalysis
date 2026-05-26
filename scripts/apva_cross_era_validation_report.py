@@ -52,6 +52,7 @@ SUMMARY_COLUMNS = [
     "ValidationPass",
     "ValidationStatus",
 ]
+OPTIONAL_AGGREGATION_COLUMNS = ["Sum", "GrossWin", "GrossLoss"]
 
 
 def infer_regime(dataset: str) -> tuple[str, str]:
@@ -106,7 +107,8 @@ def regime_summary(dataset_summary: pd.DataFrame) -> pd.DataFrame:
     missing = [column for column in SUMMARY_COLUMNS if column not in annotated]
     if missing:
         raise RuntimeError(f"Dataset candidate summary is missing columns: {missing}")
-    return annotated[SUMMARY_COLUMNS].sort_values(
+    optional = [column for column in OPTIONAL_AGGREGATION_COLUMNS if column in annotated]
+    return annotated[SUMMARY_COLUMNS + optional].sort_values(
         ["RegimeCode", "Dataset", "ValidationMode", "Candidate"]
     ).reset_index(drop=True)
 
@@ -192,10 +194,10 @@ def candidate_stability(
 ) -> pd.DataFrame:
     instrument_dataset = annotate_regime(instruments.loc[instruments["Scope"].eq("Dataset")])
     pooled = numeric(pooled, ["Mean", "ProfitFactor"])
+    regime_reference = reference_regime_candidate_aggregation(regimes)
     rows = []
     for candidate in FROZEN_CANDIDATES:
-        candidate_regimes = regimes.loc[regimes["Candidate"].eq(candidate)].copy()
-        reference = candidate_regimes.loc[candidate_regimes["ValidationMode"].eq("Reference")]
+        reference = regime_reference.loc[regime_reference["Candidate"].eq(candidate)].copy()
         reference_inst = instrument_dataset.loc[
             instrument_dataset["Candidate"].eq(candidate)
             & instrument_dataset["ValidationMode"].eq("Reference")
@@ -248,6 +250,48 @@ def robustness_rankings(stability: pd.DataFrame) -> pd.DataFrame:
         ascending=False, method="min"
     ).astype(int)
     return ranking.sort_values(["RobustnessRank", "Candidate"]).reset_index(drop=True)
+
+
+def reference_regime_candidate_aggregation(regimes: pd.DataFrame) -> pd.DataFrame:
+    """Aggregate repeated Reference-era labels for descriptive diagnostics."""
+    ref = regimes.loc[
+        regimes["Candidate"].isin(FROZEN_CANDIDATES)
+        & regimes["ValidationMode"].eq("Reference")
+    ].copy()
+    rows = []
+    for (regime, candidate), group in ref.groupby(["Regime", "Candidate"], sort=True):
+        counts = pd.to_numeric(group["Count"], errors="coerce").fillna(0.0)
+        sums = pd.to_numeric(group.get("Sum", pd.Series(index=group.index, dtype=float)), errors="coerce")
+        means = pd.to_numeric(group["Mean"], errors="coerce")
+        if sums.notna().any():
+            total_sum = float(sums.sum())
+        else:
+            total_sum = float((means * counts).sum())
+        total_count = float(counts.sum())
+        if {"GrossWin", "GrossLoss"}.issubset(group.columns):
+            gross_win = float(pd.to_numeric(group["GrossWin"], errors="coerce").sum())
+            gross_loss = float(pd.to_numeric(group["GrossLoss"], errors="coerce").sum())
+            weighted_pf = gross_win / abs(gross_loss) if gross_loss != 0 else (np.inf if gross_win > 0 else np.nan)
+            pf_method = "recomputed from summed GrossWin and GrossLoss"
+        else:
+            pfs = pd.to_numeric(group["ProfitFactor"], errors="coerce")
+            finite = pfs.notna()
+            weighted_pf = (
+                float(np.average(pfs.loc[finite], weights=counts.loc[finite]))
+                if finite.any() and counts.loc[finite].sum() > 0 else np.nan
+            )
+            pf_method = "count-weighted average of available dataset PF values"
+        rows.append({
+            "Regime": regime,
+            "Candidate": candidate,
+            "DatasetCount": int(group["Dataset"].nunique()),
+            "Count": int(total_count),
+            "Sum": total_sum,
+            "Mean": total_sum / total_count if total_count > 0 else np.nan,
+            "ProfitFactor": weighted_pf,
+            "ProfitFactorAggregation": pf_method,
+        })
+    return pd.DataFrame(rows)
 
 
 def svg_bar_chart(
@@ -337,10 +381,7 @@ def write_charts(
     charts_dir: Path,
 ) -> None:
     charts_dir.mkdir(parents=True, exist_ok=True)
-    ref = regimes.loc[
-        regimes["Candidate"].isin(FROZEN_CANDIDATES)
-        & regimes["ValidationMode"].eq("Reference")
-    ]
+    ref = reference_regime_candidate_aggregation(regimes)
     mean_plot = ref.pivot(index="Regime", columns="Candidate", values="Mean")
     svg_bar_chart(
         mean_plot,

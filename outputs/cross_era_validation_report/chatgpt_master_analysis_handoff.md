@@ -2,9 +2,25 @@
 
 ## Prompt For ChatGPT Master Analysis
 
-Interpret this output as a descriptive diagnostic layer over already frozen
-validation candidates. No candidate search, threshold tuning, new grammar,
-machine learning, or nonlinear interaction modeling was performed.
+Interpret this report as descriptive diagnostics over already frozen validation
+candidates. No candidate search, threshold tuning, new grammar, machine
+learning, or nonlinear interaction modeling was performed.
+
+## Fix Applied
+
+Multiple datasets now share a regime label: `092022` and `122022` both map
+to `2022 | tightening / bear trend`. The chart failure was repaired by
+aggregating repeated `Regime` / `Candidate` Reference rows before pivoting:
+
+- `Count` is summed.
+- `Sum` is summed where provided and `Mean` is computed from total `Sum` and
+  total `Count` (equivalent to a count-weighted mean).
+- `ProfitFactor` is weighted by `Count`, because gross-win/gross-loss
+  aggregates are not supplied in the report input summaries.
+
+The same era-level aggregation is used for regime-stability diagnostics.
+`regime_candidate_summary.csv` remains dataset-level so the two 2022 source
+files remain separately auditable.
 
 ## Inputs And Outputs
 
@@ -12,11 +28,16 @@ Input directory:
 
 - `outputs/fixed_candidate_extended_validation/`
 
-Report script:
+Included source datasets:
 
-- `scripts/apva_cross_era_validation_report.py`
+- `tables/apva_forward_signed_return_dataset_es_nq_092020_generated.csv`
+- `tables/apva_forward_signed_return_dataset_es_nq_092022_generated.csv`
+- `tables/apva_forward_signed_return_dataset_es_nq_092024_generated.csv`
+- `tables/apva_forward_signed_return_dataset_es_nq_122022_generated.csv`
+- `tables/apva_forward_signed_return_dataset_generated.csv`
+- `tables/apva_forward_signed_return_dataset_v1.csv`
 
-Generated outputs:
+Report outputs:
 
 - `regime_candidate_summary.csv`
 - `regime_block_summary.csv`
@@ -35,7 +56,7 @@ Generated outputs:
 - `CCRRR`
 - `PriorSlope_DominantPressureValue_Q3`
 
-Validation modes inherited unchanged from extended validation:
+Validation modes inherited unchanged:
 
 - `Reference`
 - `Spacing_10`
@@ -43,19 +64,20 @@ Validation modes inherited unchanged from extended validation:
 
 ## Regime Parsing
 
-The report parses year tags generally from dataset filenames and assigns
-descriptive labels for observed named eras:
+The report parses date/year tags from filenames and supplies descriptive labels
+for observed eras. The six included datasets resolve to five era labels
+because both 2022 datasets belong to the same named era.
 
 | Source Dataset Pattern | Regime Label |
 | --- | --- |
 | `092020` | `2020 | COVID / crisis` |
-| `092022` | `2022 | tightening / bear trend` |
+| `092022`, `122022` | `2022 | tightening / bear trend` |
 | `092024` | `2024 | modern mixed regime` |
 | `_v1` | `canonical | original regime` |
 | `generated` without year | `generated | legacy generated regime` |
 
-Unknown future year tags are retained as `<year> | observed regime` rather
-than silently classified into an existing narrative label.
+Unknown future year tags remain `<year> | observed regime` rather than being
+silently assigned to an existing narrative category.
 
 ## Pooled Validation Status
 
@@ -69,13 +91,20 @@ Pooled metrics:
 
 | Mode | Candidate | Count | ES | NQ | Mean | PF | Positive Block Fraction | Max Block Contribution |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Reference | `CCRRR` | 143 | 28 | 115 | 0.323743 | 1.643983 | 0.800000 | 0.200350 |
-| Reference | `PriorSlope_DominantPressureValue_Q3` | 652 | 200 | 452 | 0.303854 | 1.602780 | 0.723404 | 0.184744 |
-| Reference | `RRCCC` | 299 | 70 | 229 | 0.225569 | 1.422987 | 0.580645 | 0.387559 |
-| Spacing 10 | `CCRRR` | 122 | 27 | 95 | 0.321289 | 1.657088 | 0.800000 | 0.193578 |
-| Spacing 10 | `PriorSlope_DominantPressureValue_Q3` | 481 | 152 | 329 | 0.314969 | 1.635319 | 0.723404 | 0.230249 |
-| Spacing 20 | `CCRRR` | 105 | 26 | 79 | 0.343725 | 1.685825 | 0.800000 | 0.330177 |
-| Spacing 20 | `PriorSlope_DominantPressureValue_Q3` | 431 | 136 | 295 | 0.305349 | 1.624936 | 0.638298 | 0.265056 |
+| Reference | `CCRRR` | 147 | 30 | 117 | 0.286299 | 1.540333 | 0.695652 | 0.220388 |
+| Reference | `PriorSlope_DominantPressureValue_Q3` | 720 | 233 | 488 | 0.283870 | 1.541638 | 0.690909 | 0.179073 |
+| Reference | `RRCCC` | 315 | 73 | 242 | 0.192702 | 1.356176 | 0.512821 | 0.430618 |
+| Spacing 10 | `CCRRR` | 126 | 29 | 97 | 0.277683 | 1.532923 | 0.695652 | 0.216867 |
+| Spacing 10 | `PriorSlope_DominantPressureValue_Q3` | 543 | 182 | 362 | 0.295241 | 1.567647 | 0.690909 | 0.217588 |
+| Spacing 10 | `RRCCC` | 258 | 66 | 192 | 0.179234 | 1.328068 | 0.512821 | 0.453683 |
+| Spacing 20 | `CCRRR` | 109 | 28 | 81 | 0.292494 | 1.543832 | 0.695652 | 0.373769 |
+| Spacing 20 | `PriorSlope_DominantPressureValue_Q3` | 486 | 163 | 324 | 0.289174 | 1.565544 | 0.618182 | 0.248208 |
+| Spacing 20 | `RRCCC` | 222 | 62 | 160 | 0.124868 | 1.224367 | 0.512821 | 0.698935 |
+
+The inherited pooled extended-validation summary reports one more ES/NQ
+instrument row than total rows for `PriorSlope_Q3` in each mode. This report
+preserves those upstream metrics; the discrepancy should be audited in the
+extended validator separately from this chart fix.
 
 ## Transparent Ranking Formula
 
@@ -93,102 +122,92 @@ Where:
 
 - `spacing_survival_score` is the fraction of the three pooled spacing modes
   passed.
-- `regime_survival_score` is the fraction of Reference regime summaries with
+- `regime_survival_score` is the fraction of aggregated Reference regimes with
   positive mean outcome.
 - `instrument_sign_consistency` is the dominant sign fraction across
   Reference regime/instrument summaries.
 - `concentration_penalty` is the maximum absolute net contribution share from
   one Reference regime.
 
-This is not an optimized score.
-Spacing-mode contribution shares are comparative configuration diagnostics;
-the spacing modes reuse observations and are not additive samples.
+This score is not optimized. Spacing modes reuse observations and are not
+additive samples.
 
 ## Robustness Ranking
 
 | Rank | Candidate | Score | Spacing Survival | Positive Regime Fraction | Concentration Penalty |
 | ---: | --- | ---: | ---: | ---: | ---: |
-| 1 | `PriorSlope_DominantPressureValue_Q3` | 2.568116 | 1.000000 | 1.000000 | 0.431884 |
-| 2 | `CCRRR` | 2.222494 | 1.000000 | 1.000000 | 0.652506 |
-| 3 | `RRCCC` | 0.727499 | 0.000000 | 0.800000 | 0.850279 |
+| 1 | `PriorSlope_DominantPressureValue_Q3` | 2.490465 | 1.000000 | 1.000000 | 0.418626 |
+| 2 | `CCRRR` | 1.982232 | 1.000000 | 1.000000 | 0.717768 |
+| 3 | `RRCCC` | 0.420830 | 0.000000 | 0.600000 | 0.815534 |
 
-## Candidate Interpretation
+## Required Interpretive Answers
 
-### Most Regime-Stable Candidate
+### Which Candidate Is Most Regime-Stable?
 
-`PriorSlope_DominantPressureValue_Q3` is most regime-stable under this
-descriptive ranking:
+`PriorSlope_DominantPressureValue_Q3` ranks first. It passes all three pooled
+modes, remains positive across all five aggregated era labels, and has lower
+era concentration than `CCRRR`.
 
-- It passes Reference, Spacing 10, and Spacing 20 pooled validation.
-- It has a positive mean in all five regime labels.
-- Its maximum Reference regime contribution share is `43.19%`, lower than
-  `CCRRR` at `65.25%`.
-- It has substantially more observations than `CCRRR`.
+### Which Candidate Is Most Concentration-Sensitive?
+
+`RRCCC` is most concentration-sensitive: `81.55%` of its absolute Reference
+net contribution comes from the canonical original regime, and it fails all
+three pooled validation modes.
 
 ### Does CCRRR Remain Strongest After 2022 Inclusion?
 
-`CCRRR` remains a leading passing fixed candidate and has the higher pooled
-mean and profit factor across each spacing mode. However, it no longer ranks
-first when regime concentration and sample breadth are included in the
-descriptive robustness score; `PriorSlope_Q3` ranks first.
+`CCRRR` still passes `Reference`, `Spacing_10`, and `Spacing_20`, but it does
+not lead this concentration-aware descriptive ranking. The added `122022`
+sample offsets much of the favorable `092022` CCRRR result; the combined 2022
+CCRRR contribution is still slightly positive, but it is based on only eight
+Reference rows.
 
 ### Does PriorSlope Become Stronger Than CCRRR Under Broader Regime Diversity?
 
-On cross-era diversification diagnostics, yes: `PriorSlope_Q3` has lower
-regime concentration, lower regime-to-regime mean variance, and much larger
-sample support. On pooled raw mean and PF, `CCRRR` remains slightly higher.
-These are distinct descriptive findings rather than a changed candidate rule.
+Under the declared robustness ranking, yes. `PriorSlope_Q3` has much larger
+sample support and materially lower regime concentration. Their pooled
+Reference mean and PF are very close; this finding concerns diversification
+and support, not a changed rule.
 
 ### Is RRCCC Fundamentally Episodic?
 
-The evidence is consistent with episodic behavior, but does not prove a
-fundamental characterization:
-
-- `RRCCC` fails every pooled spacing mode.
-- `85.03%` of its absolute Reference net contribution is from the canonical
-  original regime.
-- Its 2020 regime mean is negative.
-- Its Spacing 20 block concentration fails the prior validation requirement.
+The diagnostics remain consistent with episodic behavior, without proving
+that characterization: `RRCCC` fails every pooled mode and is dominated by
+its canonical-regime contribution.
 
 ### Are Pooled Results Dominated By One Regime?
 
-- `PriorSlope_Q3`: no single regime exceeds half of absolute Reference net
-  contribution; canonical accounts for `43.19%`, 2022 for `25.52%`, and
-  2020 for `17.37%`.
-- `CCRRR`: materially concentrated; canonical accounts for `65.25%`.
-- `RRCCC`: strongly concentrated; canonical accounts for `85.03%`.
+- `PriorSlope_Q3` is comparatively diversified: canonical accounts for
+  `41.86%` of absolute Reference net contribution.
+- `CCRRR` is materially concentrated: canonical accounts for `71.78%`.
+- `RRCCC` is strongly concentrated: canonical accounts for `81.55%`.
 
 ### Which Spacing Mode Appears Most Reliable?
 
-No mode separates the two surviving candidates: both `CCRRR` and
-`PriorSlope_Q3` pass all three pooled modes. `Spacing_20` is the most
-dependence-reduced stress view and both still pass it; `RRCCC` does not.
+No spacing mode separates the two surviving candidates: `CCRRR` and
+`PriorSlope_Q3` pass all three modes. `Spacing_20` is the strictest included
+dependence-reduction view, and both pass it; `RRCCC` does not.
 
 ### Is ES Still Underrepresented?
 
-Yes, especially for `CCRRR`:
+Yes, particularly for `CCRRR`:
 
-- `CCRRR` Reference: ES `28` of `143` rows (`19.6%`).
-- `CCRRR` Spacing 20: ES `26` of `105` rows (`24.8%`).
-- `PriorSlope_Q3` Reference: ES `200` of `652` rows (`30.7%`).
+- `CCRRR` Reference: ES `30` of `147` rows (`20.4%`).
+- `CCRRR` Spacing 20: ES `28` of `109` rows (`25.7%`).
+- `PriorSlope_Q3` Reference: ES `233` of `720` rows (`32.4%`).
 
 ### Biggest Remaining Statistical Weakness
 
-The largest weakness is sparse regime-level support for `CCRRR` outside the
-canonical original dataset. Its Reference counts in the new named regimes are
-only `3` in 2020, `4` in 2022, and `5` in 2024, with another `2` in the
-legacy generated regime. Its pooled pass therefore remains provisional and
-depends heavily on the original regime despite surviving spacing reduction.
+`CCRRR` remains sparse outside the canonical dataset and concentrated in that
+era. The two 2022 sources also disagree directionally for CCRRR while jointly
+providing only eight Reference occurrences. More fixed-rule observations,
+especially ES occurrences outside the canonical period, remain necessary.
 
 ## Conservative Conclusion
 
-After 2022 inclusion and regime decomposition:
-
-- `CCRRR` still passes all pooled validation modes and remains strong on
-  pooled mean/PF.
-- `PriorSlope_DominantPressureValue_Q3` also passes all pooled modes and is
-  better diversified across regimes under the declared diagnostic ranking.
-- `RRCCC` remains the most concentration-sensitive candidate.
-
-The next evidence need is additional fixed-rule observations, especially ES
-rows and non-canonical `CCRRR` occurrences, not new candidate development.
+With the additional 2022 dataset incorporated, `CCRRR` remains a passing
+provisional fixed candidate under all three validation modes, while
+`PriorSlope_DominantPressureValue_Q3` ranks first on the declared descriptive
+robustness measure because it is less concentrated and far better supported.
+`RRCCC` remains the most concentration-sensitive candidate. No candidate rule
+or validation threshold was changed.
