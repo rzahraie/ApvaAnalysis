@@ -145,6 +145,9 @@ def build_entries(paths: list[Path], workspace: Path, args: argparse.Namespace) 
     frames = []
     for path in paths:
         base = build_base_entries(prepare_df(str(path)), args)
+        base = base.loc[base["NormalizedPolicyOutcome"].notna()].copy()
+        if base.empty:
+            continue
         frozen = candidate_entries(base)
         frozen.insert(0, "Dataset", path.relative_to(workspace).as_posix())
         frames.append(apply_validation_modes(frozen))
