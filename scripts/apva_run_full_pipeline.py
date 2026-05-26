@@ -631,6 +631,14 @@ def run_pipeline(args: argparse.Namespace) -> int:
                 workspace,
                 True,
             )
+        execute_step(
+            step_log,
+            "VolumeParticipationDiagnostics",
+            "",
+            [sys.executable, "-B", str(workspace / "scripts/apva_volume_participation_diagnostics.py")],
+            workspace,
+            True,
+        )
         print("Dry run complete; no pipeline artifacts were written.")
         return 0
     if not args.skip_fixed_validation:
@@ -687,7 +695,6 @@ def run_pipeline(args: argparse.Namespace) -> int:
     candidate_counts = readiness_rows(runnable, workspace)
     write_csv(inventory.to_dict("records"), outdir / "full_pipeline_inventory.csv")
     write_csv(regime_rows, outdir / "full_pipeline_regime_status.csv")
-    write_csv(step_log, outdir / "full_pipeline_step_log.csv")
     full_consistency.to_csv(outdir / "full_pipeline_consistency_check.csv", index=False)
     write_final_handoff(
         outdir / "chatgpt_master_analysis_handoff.md",
@@ -700,6 +707,15 @@ def run_pipeline(args: argparse.Namespace) -> int:
         consistency,
         workspace,
     )
+    execute_step(
+        step_log,
+        "VolumeParticipationDiagnostics",
+        "",
+        [sys.executable, "-B", str(workspace / "scripts/apva_volume_participation_diagnostics.py")],
+        workspace,
+        False,
+    )
+    write_csv(step_log, outdir / "full_pipeline_step_log.csv")
     print("APVA full pipeline completed successfully.")
     print(pd.DataFrame(regime_rows)[["Regime", "PairStatus", "Built", "ReadinessStatus", "IncludedInFixedValidation"]].to_string(index=False))
     print()

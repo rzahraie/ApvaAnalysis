@@ -9,6 +9,7 @@ thresholds, or evaluate new rules.
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 from typing import Optional
 
@@ -55,6 +56,8 @@ EXPLICIT_VOLUME_FIELDS = [
     "DirectionalVolumeImbalance",
     "UpDownVolume",
 ]
+FULL_PIPELINE_STATUS = "outputs/full_pipeline_run/full_pipeline_regime_status.csv"
+FULL_PIPELINE_INVENTORY = "outputs/full_pipeline_run/full_pipeline_inventory.csv"
 
 
 def read_csv(path: Path) -> pd.DataFrame:
@@ -117,9 +120,84 @@ def source_inventory(
     return pd.DataFrame(rows), explicit_volume_present
 
 
-def load_raw_state_fields(raw_paths: list[Path], workspace: Path) -> pd.DataFrame:
-    frames: list[pd.DataFrame] = []
+def is_true(value: object) -> bool:
+    return str(value).strip().lower() in {"true", "1", "yes"}
+
+
+def resolve_source_path(value: str, workspace: Path) -> Path:
+    path = Path(value)
+    return path if path.is_absolute() else workspace / path
+
+
+def selected_raw_sources(
+    referenced: pd.DataFrame,
+    raw_paths: list[Path],
+    status_path: Path,
+    inventory_path: Path,
+    workspace: Path,
+) -> list[tuple[Path, str]]:
+    direct_paths: dict[str, list[Path]] = {}
     for path in raw_paths:
+        direct_paths.setdefault(path.name, []).append(path)
+
+    status = read_csv(status_path) if status_path.exists() else pd.DataFrame()
+    status_by_dataset = (
+        status.loc[status["PairStatus"].isin(["PAIRED", "SINGLE_INSTRUMENT_ALLOWED"])]
+        .set_index("DatasetPath")
+        if not status.empty
+        else pd.DataFrame()
+    )
+    selected_inventory_paths: set[Path] = set()
+    selected_inventory_sources: dict[tuple[str, str], Path] = {}
+    if inventory_path.exists():
+        inventory = read_csv(inventory_path)
+        for _, row in inventory.loc[inventory["Selected"].map(is_true)].iterrows():
+            if not str(row["RawFile"]).strip():
+                continue
+            selected_path = resolve_source_path(str(row["RawFile"]), workspace)
+            selected_inventory_paths.add(selected_path.resolve())
+            selected_inventory_sources[(str(row["Instrument"]).upper(), str(row["Regime"]))] = selected_path
+
+    sources: list[tuple[Path, str]] = []
+    requested = referenced[["Dataset", "Instrument", "File"]].drop_duplicates()
+    for _, row in requested.sort_values(["Dataset", "Instrument", "File"]).iterrows():
+        dataset = str(row["Dataset"])
+        instrument = str(row["Instrument"]).upper()
+        join_file = str(row["File"])
+        source_path: Optional[Path] = None
+        if not status_by_dataset.empty and dataset in status_by_dataset.index:
+            status_row = status_by_dataset.loc[dataset]
+            if isinstance(status_row, pd.DataFrame):
+                status_row = status_row.iloc[0]
+            source_value = status_row.get(f"{instrument}File", "")
+            if pd.notna(source_value) and str(source_value).strip():
+                source_path = resolve_source_path(str(source_value), workspace)
+        if source_path is None:
+            regime_match = re.search(r"(?:^|_)(\d{6})(?:_|$)", Path(dataset).stem)
+            if regime_match:
+                source_path = selected_inventory_sources.get((instrument, regime_match.group(1)))
+        if source_path is None:
+            candidates = sorted(direct_paths.get(join_file, []))
+            if len(candidates) == 1:
+                source_path = candidates[0]
+            elif len(candidates) > 1:
+                preferred = [path for path in candidates if path.resolve() in selected_inventory_paths]
+                source_path = sorted(preferred or candidates)[0]
+        if source_path is None or not source_path.exists():
+            raise RuntimeError(
+                f"Raw enrichment source is missing for evaluated identity: "
+                f"{dataset}, {instrument}, {join_file}"
+            )
+        sources.append((source_path, join_file))
+    return sorted(set(sources), key=lambda source: (display_path(source[0], workspace), source[1]))
+
+
+def load_raw_state_fields(
+    raw_sources: list[tuple[Path, str]],
+    workspace: Path,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    frames: list[pd.DataFrame] = []
+    for path, join_file in raw_sources:
         raw = pd.read_csv(path)
         required = {"Instrument", "BarIndex"}
         if not required.issubset(raw.columns):
@@ -128,18 +206,29 @@ def load_raw_state_fields(raw_paths: list[Path], workspace: Path) -> pd.DataFram
         raw = raw.loc[raw["BarIndex"].notna()].copy()
         raw["BarIndex"] = raw["BarIndex"].astype(int)
         raw["Instrument"] = raw["Instrument"].astype(str).str.upper()
-        raw["File"] = path.name
+        raw["File"] = join_file
         raw["RawSourcePath"] = display_path(path, workspace)
+        raw["RawSourceRowNumber"] = raw.index + 2
         available = [column for column in RAW_ENRICHMENT_FIELDS if column in raw.columns]
-        frames.append(raw[RAW_JOIN_KEY + ["RawSourcePath"] + available])
+        frames.append(raw[RAW_JOIN_KEY + ["RawSourcePath", "RawSourceRowNumber"] + available])
     if not frames:
-        return pd.DataFrame(columns=RAW_JOIN_KEY + ["RawSourcePath"] + RAW_ENRICHMENT_FIELDS)
+        empty = pd.DataFrame(columns=RAW_JOIN_KEY + ["RawSourcePath"] + RAW_ENRICHMENT_FIELDS)
+        return empty, pd.DataFrame(columns=RAW_JOIN_KEY + ["RawSourcePath", "RawSourceRowNumber"])
     joined = pd.concat(frames, ignore_index=True)
     duplicate_keys = joined.duplicated(RAW_JOIN_KEY, keep=False)
-    if duplicate_keys.any():
-        duplicate = joined.loc[duplicate_keys, RAW_JOIN_KEY].head(1).to_dict("records")[0]
-        raise RuntimeError(f"Ambiguous raw-state join keys encountered: {duplicate}")
-    return as_numeric(joined, [column for column in RAW_ENRICHMENT_FIELDS if column not in CATEGORICAL_PROXIES])
+    duplicates = joined.loc[duplicate_keys].sort_values(
+        RAW_JOIN_KEY + ["RawSourcePath", "RawSourceRowNumber"],
+        kind="stable",
+    )
+    deduplicated = joined.sort_values(
+        RAW_JOIN_KEY + ["RawSourcePath", "RawSourceRowNumber"],
+        kind="stable",
+    ).drop_duplicates(RAW_JOIN_KEY, keep="first")
+    deduplicated = deduplicated.drop(columns=["RawSourceRowNumber"])
+    return (
+        as_numeric(deduplicated, [column for column in RAW_ENRICHMENT_FIELDS if column not in CATEGORICAL_PROXIES]),
+        duplicates,
+    )
 
 
 def enrich_entries(entries: pd.DataFrame, raw_fields: pd.DataFrame) -> pd.DataFrame:
@@ -468,6 +557,8 @@ def main(argv: Optional[list[str]] = None) -> int:
     parser.add_argument("--prior-entries", default="outputs/prior_slope_q3_diagnostics/prior_slope_q3_entries.csv")
     parser.add_argument("--canonical-glob", default="tables/apva_forward_signed_return_dataset*.csv")
     parser.add_argument("--raw-root", default="data/Validation")
+    parser.add_argument("--full-pipeline-status", default=FULL_PIPELINE_STATUS)
+    parser.add_argument("--full-pipeline-inventory", default=FULL_PIPELINE_INVENTORY)
     parser.add_argument("--outdir", default="outputs/volume_participation_diagnostics")
     args = parser.parse_args(argv)
     workspace = Path.cwd()
@@ -478,15 +569,20 @@ def main(argv: Optional[list[str]] = None) -> int:
     raw_paths = sorted(raw_root.rglob("xApvaV01StateLog*.csv"))
     if not canonical_paths or not raw_paths:
         raise RuntimeError("Canonical dataset or raw-state-log inventory is empty.")
-    inventory, explicit_volume_present = source_inventory(canonical_paths, raw_paths, workspace)
-    referenced_files = set(extended["File"].dropna().astype(str)).union(
-        prior_source["File"].dropna().astype(str)
+    referenced = pd.concat([extended, prior_source], ignore_index=True)
+    raw_sources = selected_raw_sources(
+        referenced,
+        raw_paths,
+        workspace / args.full_pipeline_status,
+        workspace / args.full_pipeline_inventory,
+        workspace,
     )
-    raw_join_paths = [path for path in raw_paths if path.name in referenced_files]
-    missing_raw_files = referenced_files - {path.name for path in raw_join_paths}
-    if missing_raw_files:
-        raise RuntimeError(f"Raw enrichment source files are missing: {sorted(missing_raw_files)}")
-    raw_fields = load_raw_state_fields(raw_join_paths, workspace)
+    inventory, explicit_volume_present = source_inventory(
+        canonical_paths,
+        sorted({path for path, _ in raw_sources}),
+        workspace,
+    )
+    raw_fields, duplicate_keys = load_raw_state_fields(raw_sources, workspace)
     prior = enrich_entries(prior_source, raw_fields)
     base = evaluated_base_comparison(extended, prior, raw_fields)
     available_numeric = [proxy for proxy in NUMERIC_PROXIES if proxy in prior.columns and prior[proxy].notna().any()]
@@ -502,6 +598,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     )
     outdir = workspace / args.outdir
     outdir.mkdir(parents=True, exist_ok=True)
+    duplicate_keys.to_csv(outdir / "raw_join_duplicate_keys.csv", index=False)
     inventory.to_csv(outdir / "volume_participation_feature_inventory.csv", index=False)
     proxy_summary.to_csv(outdir / "prior_slope_q3_state_proxy_summary.csv", index=False)
     macro.to_csv(outdir / "prior_slope_q3_by_macrostate.csv", index=False)
