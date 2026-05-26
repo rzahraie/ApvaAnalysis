@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set REGIME=092022
+set REGIME=122022
 set ESRAW=data\validation\ES\xApvaV01StateLog_ES%REGIME%.csv
 set NQRAW=data\validation\NQ\xApvaV01StateLog_NQ%REGIME%.csv
 set OUTCSV=tables\apva_forward_signed_return_dataset_es_nq_%REGIME%_generated.csv
