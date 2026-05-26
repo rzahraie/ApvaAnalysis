@@ -86,6 +86,31 @@ For a genuinely new validation dataset:
 Do not present prior analysis summaries, selected-entry outputs, or annotated
 copies of the existing primary dataset as independent validation data.
 
+## Recommended Future Explicit Volume Fields
+
+The current NT8 state-log and canonical dataset exports do not include a raw
+volume column. To permit direct volume/participation diagnostics for frozen
+candidates, future row-level raw exports should add these optional fields:
+
+- `Volume`: actual bar volume.
+- `VolumeSMA` or a clearly specified rolling volume mean and window.
+- `RelativeVolume`: bar volume relative to the documented rolling mean.
+- `VolumeZScore`: standardized volume with documented lookback.
+- `BarDirection`: consistent signed or categorical bar direction definition.
+- `SignedVolume`: volume signed by the documented direction convention.
+- `DirectionalVolumeImbalance`: documented buy/sell or directional imbalance
+  proxy, if available.
+- `UpDownVolume` proxy: only if the platform/export source supplies it or the
+  calculation is fully documented.
+- ATR-normalized volume/participation measures: only if implemented with a
+  named formula and stable lookback.
+
+These columns are optional explanatory diagnostics. They must not change a
+frozen candidate definition or validation threshold without a separate,
+explicitly scoped research decision. Preserve `Instrument`, `File`,
+`BarIndex`, and `Time` keys so volume fields can be joined to row-level
+forward outcomes without ambiguity.
+
 ## How To Build Canonical Forward-Return Dataset From Raw NT8 xApvaV01 Exports
 
 The canonical build path has been recovered from
