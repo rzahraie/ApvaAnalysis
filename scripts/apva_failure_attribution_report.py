@@ -84,6 +84,7 @@ def enrich_entries(entries: pd.DataFrame) -> pd.DataFrame:
     out = numeric(entries, [OUTCOME])
     out = out.loc[out["Candidate"].isin(FROZEN_CANDIDATES)].copy()
     out["DatasetCode"] = out["Dataset"].map(dataset_code)
+    out["RegimeCode"] = out["DatasetCode"]
     out["RegimeYear"] = out["DatasetCode"].map(regime_year)
     out["DatasetType"] = out["DatasetCode"].map(dataset_type)
     return out
@@ -136,7 +137,8 @@ def aggregate_rows(
         rows.append(row)
     out = pd.DataFrame(rows)
     totals_by = total_groups or [column for column in groups if column not in {
-        "Dataset", "DatasetCode", "DatasetType", "RegimeYear", "Instrument",
+        "Dataset", "DatasetCode", "DatasetType", "RegimeCode", "RegimeYear",
+        "AttributionScope", "Instrument",
         "TimeBlock", "RegimeWeek", "VolumeCoverageGroup", "ExplicitVolumeAvailable"
     }]
     if not out.empty and totals_by:
@@ -226,16 +228,24 @@ def candidate_dataset_attribution(
 
 
 def candidate_regime_attribution(entries: pd.DataFrame) -> pd.DataFrame:
-    result = aggregate_rows(
+    dataset_regimes = aggregate_rows(
+        entries, ["Candidate", "ValidationMode", "RegimeCode", "RegimeYear"],
+        ["Candidate", "ValidationMode"],
+    )
+    dataset_regimes.insert(2, "AttributionScope", "DatasetRegime")
+    year_regimes = aggregate_rows(
         entries, ["Candidate", "ValidationMode", "RegimeYear"], ["Candidate", "ValidationMode"]
     )
+    year_regimes.insert(2, "AttributionScope", "YearAggregate")
+    year_regimes.insert(3, "RegimeCode", year_regimes["RegimeYear"])
+    result = pd.concat([dataset_regimes, year_regimes], ignore_index=True, sort=False)
     result["ContributionRankBestToWorst"] = result.groupby(
-        ["Candidate", "ValidationMode"]
+        ["Candidate", "ValidationMode", "AttributionScope"]
     )["SumContribution"].rank(ascending=False, method="min").astype(int)
     result["ContributionStatus"] = np.where(result["SumContribution"] < 0, "Negative", "Positive")
     result["PassFailApplicability"] = "Descriptive contribution only"
     return result.sort_values(
-        ["Candidate", "ValidationMode", "ContributionRankBestToWorst"]
+        ["Candidate", "ValidationMode", "AttributionScope", "ContributionRankBestToWorst"]
     ).reset_index(drop=True)
 
 
@@ -266,16 +276,24 @@ def candidate_instrument_attribution(entries: pd.DataFrame) -> pd.DataFrame:
 
 
 def candidate_cell_attribution(entries: pd.DataFrame) -> pd.DataFrame:
-    out = aggregate_rows(
+    dataset_cells = aggregate_rows(
+        entries, ["Candidate", "ValidationMode", "RegimeCode", "RegimeYear", "Instrument"],
+        ["Candidate", "ValidationMode"],
+    )
+    dataset_cells.insert(2, "AttributionScope", "DatasetRegime")
+    year_cells = aggregate_rows(
         entries, ["Candidate", "ValidationMode", "RegimeYear", "Instrument"],
         ["Candidate", "ValidationMode"],
     )
+    year_cells.insert(2, "AttributionScope", "YearAggregate")
+    year_cells.insert(3, "RegimeCode", year_cells["RegimeYear"])
+    out = pd.concat([dataset_cells, year_cells], ignore_index=True, sort=False)
     out["NegativeCell"] = out["SumContribution"] < 0
     out["ContributionRankBestToWorst"] = out.groupby(
-        ["Candidate", "ValidationMode"]
+        ["Candidate", "ValidationMode", "AttributionScope"]
     )["SumContribution"].rank(ascending=False, method="min").astype(int)
     return out.sort_values(
-        ["Candidate", "ValidationMode", "ContributionRankBestToWorst", "Instrument"]
+        ["Candidate", "ValidationMode", "AttributionScope", "ContributionRankBestToWorst", "Instrument"]
     ).reset_index(drop=True)
 
 
@@ -379,9 +397,17 @@ def volume_attribution(entries: pd.DataFrame) -> pd.DataFrame:
         ["Candidate", "ValidationMode"],
     )
     split.insert(2, "Breakdown", "ByInstrument")
-    out = pd.concat([overall, split], ignore_index=True, sort=False)
+    datasets = aggregate_rows(
+        slope,
+        ["Candidate", "ValidationMode", "VolumeCoverageGroup", "ExplicitVolumeAvailable",
+         "DatasetCode", "RegimeYear"],
+        ["Candidate", "ValidationMode"],
+    )
+    datasets.insert(2, "Breakdown", "ByDataset")
+    datasets["Instrument"] = "All"
+    out = pd.concat([overall, split, datasets], ignore_index=True, sort=False)
     return out.sort_values(
-        ["ValidationMode", "VolumeCoverageGroup", "Breakdown", "Instrument"]
+        ["ValidationMode", "VolumeCoverageGroup", "Breakdown", "DatasetCode", "Instrument"]
     ).reset_index(drop=True)
 
 
@@ -397,6 +423,7 @@ def failure_scorecard(
               for candidate in FROZEN_CANDIDATES for mode in VALIDATION_MODES]
     ref_cells = cells.loc[
         cells["Candidate"].eq(PRIOR_SLOPE) & cells["ValidationMode"].eq("Reference")
+        & cells["AttributionScope"].eq("YearAggregate")
     ]
     neg_cells = ref_cells.loc[ref_cells["NegativeCell"]]
     slope_blocks = blocks.loc[
@@ -406,6 +433,7 @@ def failure_scorecard(
         datasets["Candidate"].eq(PRIOR_SLOPE) & datasets["ValidationMode"].eq("Reference")
     ]
     worst_ds = slope_ds.sort_values("SumContribution").iloc[0]
+    new_ds = slope_ds.loc[slope_ds["DatasetCode"].eq("032024")].iloc[0]
     vol_ref = volume.loc[
         volume["ValidationMode"].eq("Reference") & volume["Breakdown"].eq("AllInstruments")
     ]
@@ -424,6 +452,9 @@ def failure_scorecard(
         {"Metric": "prior_slope_reference_block_count", "Value": int(len(slope_blocks))},
         {"Metric": "prior_slope_worst_reference_dataset", "Value": worst_ds["DatasetCode"]},
         {"Metric": "prior_slope_worst_reference_dataset_sum", "Value": worst_ds["SumContribution"]},
+        {"Metric": "prior_slope_032024_reference_count", "Value": new_ds["Count"]},
+        {"Metric": "prior_slope_032024_reference_mean", "Value": new_ds["Mean"]},
+        {"Metric": "prior_slope_032024_reference_sum", "Value": new_ds["SumContribution"]},
         {"Metric": "prior_slope_volume_enabled_reference_count", "Value": vol["Count"]},
         {"Metric": "prior_slope_volume_enabled_reference_mean", "Value": vol["Mean"]},
         {"Metric": "prior_slope_volume_enabled_reference_sum", "Value": vol["SumContribution"]},
@@ -463,6 +494,7 @@ def write_handoff(
     negative = cells.loc[
         cells["Candidate"].eq(PRIOR_SLOPE)
         & cells["ValidationMode"].eq("Reference")
+        & cells["AttributionScope"].eq("YearAggregate")
         & cells["NegativeCell"]
     ].sort_values("SumContribution")
     ref_ds = datasets.loc[
@@ -470,6 +502,7 @@ def write_handoff(
     ].sort_values("SumContribution")
     ref_reg = regimes.loc[
         regimes["Candidate"].eq(PRIOR_SLOPE) & regimes["ValidationMode"].eq("Reference")
+        & regimes["AttributionScope"].eq("DatasetRegime")
     ].sort_values("SumContribution")
     slope_blocks = blocks.loc[
         blocks["Candidate"].eq(PRIOR_SLOPE) & blocks["ValidationMode"].eq("Reference")
@@ -479,6 +512,19 @@ def write_handoff(
     ]
     vol = volume_ref.loc[volume_ref["VolumeCoverageGroup"].eq("VolumeEnabled")].iloc[0]
     legacy = volume_ref.loc[volume_ref["VolumeCoverageGroup"].eq("LegacyOrNoExplicitVolume")].iloc[0]
+    new_ds = ref_ds.loc[ref_ds["DatasetCode"].eq("032024")].iloc[0]
+    dataset_cells = cells.loc[
+        cells["Candidate"].eq(PRIOR_SLOPE)
+        & cells["ValidationMode"].eq("Reference")
+        & cells["AttributionScope"].eq("DatasetRegime")
+        & cells["RegimeCode"].eq("032024")
+    ]
+    new_es = dataset_cells.loc[dataset_cells["Instrument"].eq("ES")].iloc[0]
+    new_nq = dataset_cells.loc[dataset_cells["Instrument"].eq("NQ")].iloc[0]
+    ref = pooled[(PRIOR_SLOPE, "Reference")]
+    pre_count = int(ref["Count"] - new_ds["Count"])
+    pre_sum = ref["Mean"] * ref["Count"] - new_ds["SumContribution"]
+    pre_mean = pre_sum / pre_count
     lines = [
         "# APVA Frozen Candidate Failure Attribution Handoff",
         "",
@@ -499,6 +545,28 @@ def write_handoff(
         f"`{pooled[('CCRRR', 'Reference')]['FailedCriteria']}`.",
         f"- `RRCCC` fails all modes. Reference failure criteria: "
         f"`{pooled[('RRCCC', 'Reference')]['FailedCriteria']}`.",
+        "",
+        "## 032024 Synchronization Answers",
+        "",
+        f"1. Adding `032024` did not materially worsen PriorSlope_Q3: it contributed "
+        f"`+{fmt(new_ds['SumContribution'])}` on `{int(new_ds['Count'])}` Reference rows. "
+        f"It diluted the pooled mean from `{fmt(pre_mean)}` to `{fmt(ref['Mean'])}` because "
+        f"its own mean is lower (`{fmt(new_ds['Mean'])}`), but it did not change the failure reason.",
+        f"2. The single largest negative dataset remains `{ref_ds.iloc[0]['DatasetCode']}` "
+        f"with contribution `{fmt(ref_ds.iloc[0]['SumContribution'])}`.",
+        "3. The four negative year-aggregate regime/instrument cells are unchanged after `032024`; "
+        "`032024` does not add a new negative year-aggregate cell.",
+        f"4. Within `032024`, ES hurt PriorSlope (`{fmt(new_es['SumContribution'])}` sum, "
+        f"mean `{fmt(new_es['Mean'])}`), NQ helped (`+{fmt(new_nq['SumContribution'])}` sum, "
+        f"mean `{fmt(new_nq['Mean'])}`), and pooled PriorSlope helped (`+{fmt(new_ds['SumContribution'])}`).",
+        f"5. Yes. PriorSlope still fails Reference and Spacing_20 only because "
+        f"`{pooled[(PRIOR_SLOPE, 'Reference')]['FailedCriteria']}` fails.",
+        "6. Yes. `Spacing_10` remains the only passing mode for PriorSlope_Q3.",
+        f"7. Yes. Volume-enabled Reference rows remain weaker (mean `{fmt(vol['Mean'])}`, "
+        f"sum `{fmt(vol['SumContribution'])}`) than legacy/no-explicit-volume rows "
+        f"(mean `{fmt(legacy['Mean'])}`, sum `{fmt(legacy['SumContribution'])}`).",
+        f"8. `032024` behaves more like the positive-participation `062023` dataset than the "
+        f"negative `122023` dataset: its pooled contribution is positive (`+{fmt(new_ds['SumContribution'])}`).",
         "",
         "## What Broke PriorSlope_Q3?",
         "",
@@ -527,7 +595,7 @@ def write_handoff(
         )
     lines.extend([
         "",
-        f"Thirteen of `{len(cells.loc[cells['Candidate'].eq(PRIOR_SLOPE) & cells['ValidationMode'].eq('Reference')])}` "
+        f"Thirteen of `{len(cells.loc[cells['Candidate'].eq(PRIOR_SLOPE) & cells['ValidationMode'].eq('Reference') & cells['AttributionScope'].eq('YearAggregate')])}` "
         "Reference regime/instrument cells remain positive; degradation is concentrated in the four cells above.",
         "",
         "## Dataset Attribution",
@@ -557,7 +625,7 @@ def write_handoff(
         f"{fmt(legacy.ProfitFactor)} | {fmt(legacy.SumContribution)} |",
         "",
         "The explicit-volume group is weaker than the legacy/no-explicit-volume group in the current "
-        "Reference sample, but the weakness is not uniform: `062023` contributes positively while "
+        "Reference sample, but the weakness is not uniform: `032024` and `062023` contribute positively while "
         "`062019`, `122017`, and especially `122023` contribute negatively. The honest attribution is "
         "broader regime diversity revealing fragility, not volume fields themselves causing degradation.",
         "",
@@ -649,6 +717,7 @@ def main() -> int:
     prior_failure_cells = cells.loc[
         cells["Candidate"].eq(PRIOR_SLOPE)
         & cells["ValidationMode"].eq("Reference")
+        & cells["AttributionScope"].eq("YearAggregate")
         & cells["NegativeCell"]
     ].copy()
     report_score = failure_scorecard(entries, score, cells, blocks, datasets, volume)
