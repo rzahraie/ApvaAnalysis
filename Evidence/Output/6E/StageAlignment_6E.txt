@@ -1,0 +1,326 @@
+APVA Stage + Alignment Interaction Study v0.1
+=============================================
+Input: Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_OPEN_apva_bar_evidence_v01.csv
+Total rows: 35151
+SequenceStage logic reuses APVA_PostBreakoutOOE_10.py.
+Alignment logic reuses APVA_BreakoutAlignment_09.py.
+This is not true PVA OOE.
+Each source-specific segment-bar observation is counted; overlapping segments may include the same bar.
+SequenceStage progression is direction-aware, so Stage and Alignment are descriptive interacting factors.
+Ranked comparisons require both sides Count >= 30.
+
+Diagnostics
+===========
+Total stage-alignment observations: 28132
+Stage0 observations: 2892
+Stage1 observations: 8398
+Stage2 observations: 6778
+Stage3 observations: 3853
+Stage4 observations: 6211
+Aligned observations: 13926
+Opposed observations: 14206
+
+Stage x Alignment Counts
+========================
+Stage       Aligned    Opposed
+Stage0           9       2883
+Stage1        6518       1880
+Stage2        3035       3743
+Stage3         769       3084
+Stage4        3595       2616
+
+Event Counts by Stage x Alignment
+=================================
+Event                        S0A     S0O     S1A     S1O     S2A     S2O     S3A     S3O     S4A     S4O
+AllBars                        9    2883    6518    1880    3035    3743     769    3084    3595    2616
+DissipationAny                 0    1381    3213    1160    1504    1289     522    1785    1611    1318
+DissipationContained           0     627    1217     617     712     529     284     672     668     620
+DissipationAccepted            0     603    1768     543     709     487     238    1053     745     579
+ParticipationPeak              0     532    1496       0     698    1483       0     304     738     499
+ParticipationClimactic         0     212     645       0     358     571       0     109     349     230
+PeakContained                  0     155     363       0     239     527       0      62     281     159
+PeakAccepted                   0     266     997       0     344     740       0     224     363     258
+ClimacticContained             0      63     116       0     112     198       0      21      91      75
+ClimacticAccepted              0     115     502       0     216     318       0      86     233     127
+
+Event x Stage x Alignment DRFwd5 Table
+=====================================
+Event                      Stage Alignment    Count   MeanDRFwd5       Median  ContRate5  FailRate5  FlatRate5
+AllBars                   Stage0 Aligned         9     0.000161     0.000200    66.67%    11.11%    22.22%
+AllBars                   Stage0 Opposed      2883     0.000018     0.000000    46.27%    47.80%     5.93%
+AllBars                   Stage1 Aligned      6518    -0.000025     0.000000    44.72%    49.43%     5.85%
+AllBars                   Stage1 Opposed      1880     0.000003     0.000000    46.65%    48.19%     5.16%
+AllBars                   Stage2 Aligned      3035    -0.000011     0.000000    46.29%    49.29%     4.42%
+AllBars                   Stage2 Opposed      3743    -0.000017     0.000000    46.33%    48.44%     5.24%
+AllBars                   Stage3 Aligned       769     0.000035     0.000000    49.80%    45.25%     4.94%
+AllBars                   Stage3 Opposed      3084    -0.000048    -0.000050    43.35%    51.46%     5.19%
+AllBars                   Stage4 Aligned      3595     0.000032     0.000050    50.24%    45.51%     4.26%
+AllBars                   Stage4 Opposed      2616    -0.000028     0.000000    45.26%    49.81%     4.93%
+DissipationAny            Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+DissipationAny            Stage0 Opposed      1381     0.000019     0.000000    45.91%    48.30%     5.79%
+DissipationAny            Stage1 Aligned      3213    -0.000015     0.000000    46.03%    48.27%     5.70%
+DissipationAny            Stage1 Opposed      1160    -0.000009     0.000000    46.72%    48.36%     4.91%
+DissipationAny            Stage2 Aligned      1504    -0.000007     0.000000    48.14%    47.81%     4.06%
+DissipationAny            Stage2 Opposed      1289    -0.000030     0.000000    45.23%    48.88%     5.90%
+DissipationAny            Stage3 Aligned       522     0.000021     0.000025    50.00%    44.83%     5.17%
+DissipationAny            Stage3 Opposed      1785    -0.000043    -0.000050    43.81%    51.65%     4.54%
+DissipationAny            Stage4 Aligned      1611     0.000030     0.000050    51.52%    45.31%     3.17%
+DissipationAny            Stage4 Opposed      1318    -0.000022     0.000000    46.74%    48.86%     4.40%
+DissipationContained      Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+DissipationContained      Stage0 Opposed       627     0.000041     0.000000    46.09%    47.85%     6.06%
+DissipationContained      Stage1 Aligned      1217    -0.000011     0.000000    47.33%    47.33%     5.34%
+DissipationContained      Stage1 Opposed       617    -0.000006     0.000000    47.33%    48.46%     4.21%
+DissipationContained      Stage2 Aligned       712    -0.000019     0.000000    47.33%    47.61%     5.06%
+DissipationContained      Stage2 Opposed       529    -0.000029    -0.000050    44.61%    50.85%     4.54%
+DissipationContained      Stage3 Aligned       284     0.000050     0.000075    54.93%    39.79%     5.28%
+DissipationContained      Stage3 Opposed       672    -0.000061    -0.000050    44.64%    50.60%     4.76%
+DissipationContained      Stage4 Aligned       668     0.000055     0.000050    52.10%    45.66%     2.25%
+DissipationContained      Stage4 Opposed       620    -0.000033     0.000000    45.32%    49.84%     4.84%
+DissipationAccepted       Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+DissipationAccepted       Stage0 Opposed       603     0.000009     0.000000    45.11%    49.42%     5.47%
+DissipationAccepted       Stage1 Aligned      1768    -0.000015     0.000000    45.53%    48.59%     5.88%
+DissipationAccepted       Stage1 Opposed       543    -0.000011     0.000000    46.04%    48.25%     5.71%
+DissipationAccepted       Stage2 Aligned       709     0.000006     0.000000    49.08%    47.81%     3.10%
+DissipationAccepted       Stage2 Opposed       487    -0.000027     0.000000    46.41%    46.00%     7.60%
+DissipationAccepted       Stage3 Aligned       238    -0.000013    -0.000050    44.12%    50.84%     5.04%
+DissipationAccepted       Stage3 Opposed      1053    -0.000032    -0.000050    43.02%    52.61%     4.37%
+DissipationAccepted       Stage4 Aligned       745     0.000006     0.000050    51.81%    44.70%     3.49%
+DissipationAccepted       Stage4 Opposed       579    -0.000012     0.000000    47.67%    48.36%     3.97%
+ParticipationPeak         Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationPeak         Stage0 Opposed       532     0.000075     0.000000    49.06%    46.62%     4.32%
+ParticipationPeak         Stage1 Aligned      1496    -0.000043    -0.000050    42.38%    50.33%     7.29%
+ParticipationPeak         Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationPeak         Stage2 Aligned       698    -0.000007    -0.000050    44.56%    51.43%     4.01%
+ParticipationPeak         Stage2 Opposed      1483    -0.000032     0.000000    45.38%    49.22%     5.39%
+ParticipationPeak         Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationPeak         Stage3 Opposed       304    -0.000048    -0.000050    45.07%    52.30%     2.63%
+ParticipationPeak         Stage4 Aligned       738     0.000027     0.000050    51.63%    44.31%     4.07%
+ParticipationPeak         Stage4 Opposed       499    -0.000061    -0.000050    45.09%    51.10%     3.81%
+ParticipationClimactic    Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationClimactic    Stage0 Opposed       212     0.000077     0.000000    49.53%    44.81%     5.66%
+ParticipationClimactic    Stage1 Aligned       645    -0.000064    -0.000050    42.64%    54.73%     2.64%
+ParticipationClimactic    Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationClimactic    Stage2 Aligned       358     0.000017    -0.000050    46.37%    50.28%     3.35%
+ParticipationClimactic    Stage2 Opposed       571    -0.000057    -0.000050    45.01%    50.09%     4.90%
+ParticipationClimactic    Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationClimactic    Stage3 Opposed       109    -0.000189    -0.000150    35.78%    55.96%     8.26%
+ParticipationClimactic    Stage4 Aligned       349     0.000039     0.000050    52.44%    44.13%     3.44%
+ParticipationClimactic    Stage4 Opposed       230    -0.000017    -0.000050    43.48%    52.17%     4.35%
+PeakContained             Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakContained             Stage0 Opposed       155     0.000020    -0.000100    41.94%    56.13%     1.94%
+PeakContained             Stage1 Aligned       363     0.000015     0.000000    44.35%    47.66%     7.99%
+PeakContained             Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakContained             Stage2 Aligned       239    -0.000047    -0.000050    43.10%    51.46%     5.44%
+PeakContained             Stage2 Opposed       527    -0.000029     0.000000    46.87%    48.96%     4.17%
+PeakContained             Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakContained             Stage3 Opposed        62    -0.000018    -0.000050    45.16%    53.23%     1.61%
+PeakContained             Stage4 Aligned       281     0.000043     0.000050    52.67%    43.42%     3.91%
+PeakContained             Stage4 Opposed       159    -0.000125    -0.000050    42.77%    52.83%     4.40%
+PeakAccepted              Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakAccepted              Stage0 Opposed       266     0.000114     0.000000    49.62%    43.23%     7.14%
+PeakAccepted              Stage1 Aligned       997    -0.000063    -0.000050    41.42%    51.25%     7.32%
+PeakAccepted              Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakAccepted              Stage2 Aligned       344     0.000036     0.000000    47.38%    49.42%     3.20%
+PeakAccepted              Stage2 Opposed       740    -0.000037     0.000000    45.41%    48.38%     6.22%
+PeakAccepted              Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakAccepted              Stage3 Opposed       224    -0.000068    -0.000050    43.75%    53.12%     3.12%
+PeakAccepted              Stage4 Aligned       363     0.000024     0.000050    52.07%    44.63%     3.31%
+PeakAccepted              Stage4 Opposed       258    -0.000032     0.000000    48.45%    47.67%     3.88%
+ClimacticContained        Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticContained        Stage0 Opposed        63    -0.000094    -0.000050    41.27%    52.38%     6.35%
+ClimacticContained        Stage1 Aligned       116     0.000079     0.000000    47.41%    44.83%     7.76%
+ClimacticContained        Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticContained        Stage2 Aligned       112     0.000100     0.000050    50.89%    46.43%     2.68%
+ClimacticContained        Stage2 Opposed       198    -0.000019     0.000000    44.95%    48.99%     6.06%
+ClimacticContained        Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticContained        Stage3 Opposed        21    -0.000302    -0.000200    28.57%    66.67%     4.76%
+ClimacticContained        Stage4 Aligned        91     0.000157     0.000150    57.14%    37.36%     5.49%
+ClimacticContained        Stage4 Opposed        75     0.000018    -0.000050    46.67%    52.00%     1.33%
+ClimacticAccepted         Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticAccepted         Stage0 Opposed       115     0.000192     0.000100    53.04%    40.87%     6.09%
+ClimacticAccepted         Stage1 Aligned       502    -0.000076    -0.000100    42.63%    55.78%     1.59%
+ClimacticAccepted         Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticAccepted         Stage2 Aligned       216    -0.000025    -0.000050    43.06%    52.78%     4.17%
+ClimacticAccepted         Stage2 Opposed       318    -0.000078    -0.000050    43.71%    51.89%     4.40%
+ClimacticAccepted         Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticAccepted         Stage3 Opposed        86    -0.000144    -0.000100    37.21%    53.49%     9.30%
+ClimacticAccepted         Stage4 Aligned       233    -0.000046     0.000000    49.79%    47.64%     2.58%
+ClimacticAccepted         Stage4 Opposed       127     0.000016     0.000000    44.88%    48.82%     6.30%
+
+Stage4 Aligned vs Stage4 Opposed
+================================
+Event                    LeftCount   LeftMean5  LeftCont5 RightCount  RightMean5  RightCont5  DeltaMean5 DeltaCont5
+AllBars                       3595    0.000032    50.24%       2616   -0.000028     45.26%    0.000060     4.98%
+DissipationAny                1611    0.000030    51.52%       1318   -0.000022     46.74%    0.000052     4.78%
+DissipationContained           668    0.000055    52.10%        620   -0.000033     45.32%    0.000089     6.77%
+DissipationAccepted            745    0.000006    51.81%        579   -0.000012     47.67%    0.000017     4.14%
+ParticipationPeak              738    0.000027    51.63%        499   -0.000061     45.09%    0.000088     6.54%
+ParticipationClimactic         349    0.000039    52.44%        230   -0.000017     43.48%    0.000057     8.96%
+PeakContained                  281    0.000043    52.67%        159   -0.000125     42.77%    0.000168     9.90%
+PeakAccepted                   363    0.000024    52.07%        258   -0.000032     48.45%    0.000055     3.62%
+ClimacticContained              91    0.000157    57.14%         75    0.000018     46.67%    0.000139    10.48%
+ClimacticAccepted              233   -0.000046    49.79%        127    0.000016     44.88%   -0.000061     4.90%
+
+Immature Aligned vs Immature Opposed
+====================================
+Event                    LeftCount   LeftMean5  LeftCont5 RightCount  RightMean5  RightCont5  DeltaMean5 DeltaCont5
+AllBars                       6527   -0.000025    44.75%       4763    0.000013     46.42%   -0.000037    -1.67%
+DissipationAny                3213   -0.000015    46.03%       2541    0.000007     46.28%   -0.000021    -0.25%
+DissipationContained          1217   -0.000011    47.33%       1244    0.000017     46.70%   -0.000028     0.63%
+DissipationAccepted           1768   -0.000015    45.53%       1146   -0.000001     45.55%   -0.000014    -0.02%
+ParticipationPeak             1496   -0.000043    42.38%        532    0.000075     49.06%   -0.000118    -6.68%
+ParticipationClimactic         645   -0.000064    42.64%        212    0.000077     49.53%   -0.000141    -6.89%
+PeakContained                  363    0.000015    44.35%        155    0.000020     41.94%   -0.000005     2.42%
+PeakAccepted                   997   -0.000063    41.42%        266    0.000114     49.62%   -0.000178    -8.20%
+ClimacticContained             116    0.000079    47.41%         63   -0.000094     41.27%    0.000173     6.14%
+ClimacticAccepted              502   -0.000076    42.63%        115    0.000192     53.04%   -0.000268   -10.41%
+
+Aligned Mature vs Aligned Immature
+==================================
+Event                    LeftCount   LeftMean5  LeftCont5 RightCount  RightMean5  RightCont5  DeltaMean5 DeltaCont5
+AllBars                       3595    0.000032    50.24%       6527   -0.000025     44.75%    0.000056     5.48%
+DissipationAny                1611    0.000030    51.52%       3213   -0.000015     46.03%    0.000044     5.49%
+DissipationContained           668    0.000055    52.10%       1217   -0.000011     47.33%    0.000066     4.77%
+DissipationAccepted            745    0.000006    51.81%       1768   -0.000015     45.53%    0.000020     6.28%
+ParticipationPeak              738    0.000027    51.63%       1496   -0.000043     42.38%    0.000070     9.25%
+ParticipationClimactic         349    0.000039    52.44%        645   -0.000064     42.64%    0.000103     9.80%
+PeakContained                  281    0.000043    52.67%        363    0.000015     44.35%    0.000028     8.32%
+PeakAccepted                   363    0.000024    52.07%        997   -0.000063     41.42%    0.000087    10.64%
+ClimacticContained              91    0.000157    57.14%        116    0.000079     47.41%    0.000078     9.73%
+ClimacticAccepted              233   -0.000046    49.79%        502   -0.000076     42.63%    0.000030     7.16%
+
+Opposed Mature vs Opposed Immature
+==================================
+Event                    LeftCount   LeftMean5  LeftCont5 RightCount  RightMean5  RightCont5  DeltaMean5 DeltaCont5
+AllBars                       2616   -0.000028    45.26%       4763    0.000013     46.42%   -0.000041    -1.16%
+DissipationAny                1318   -0.000022    46.74%       2541    0.000007     46.28%   -0.000029     0.46%
+DissipationContained           620   -0.000033    45.32%       1244    0.000017     46.70%   -0.000051    -1.38%
+DissipationAccepted            579   -0.000012    47.67%       1146   -0.000001     45.55%   -0.000011     2.12%
+ParticipationPeak              499   -0.000061    45.09%        532    0.000075     49.06%   -0.000136    -3.97%
+ParticipationClimactic         230   -0.000017    43.48%        212    0.000077     49.53%   -0.000094    -6.05%
+PeakContained                  159   -0.000125    42.77%        155    0.000020     41.94%   -0.000145     0.83%
+PeakAccepted                   258   -0.000032    48.45%        266    0.000114     49.62%   -0.000146    -1.17%
+ClimacticContained              75    0.000018    46.67%         63   -0.000094     41.27%    0.000112     5.40%
+ClimacticAccepted              127    0.000016    44.88%        115    0.000192     53.04%   -0.000176    -8.16%
+
+Top 25 Mature Aligned Events by MeanDRFwd5
+==========================================
+Rank Event                    LeftCount RightCount   LeftMean5  RightMean5  DeltaMean5 DeltaCont5
+   1 ClimacticContained              91         75    0.000157    0.000018    0.000139    10.48%
+   2 DissipationContained           668        620    0.000055   -0.000033    0.000089     6.77%
+   3 PeakContained                  281        159    0.000043   -0.000125    0.000168     9.90%
+   4 ParticipationClimactic         349        230    0.000039   -0.000017    0.000057     8.96%
+   5 AllBars                       3595       2616    0.000032   -0.000028    0.000060     4.98%
+   6 DissipationAny                1611       1318    0.000030   -0.000022    0.000052     4.78%
+   7 ParticipationPeak              738        499    0.000027   -0.000061    0.000088     6.54%
+   8 PeakAccepted                   363        258    0.000024   -0.000032    0.000055     3.62%
+   9 DissipationAccepted            745        579    0.000006   -0.000012    0.000017     4.14%
+  10 ClimacticAccepted              233        127   -0.000046    0.000016   -0.000061     4.90%
+
+Top 25 Mature Opposed Events by MeanDRFwd5
+==========================================
+Rank Event                    LeftCount RightCount   LeftMean5  RightMean5  DeltaMean5 DeltaCont5
+   1 ClimacticContained              91         75    0.000157    0.000018    0.000139    10.48%
+   2 ClimacticAccepted              233        127   -0.000046    0.000016   -0.000061     4.90%
+   3 DissipationAccepted            745        579    0.000006   -0.000012    0.000017     4.14%
+   4 ParticipationClimactic         349        230    0.000039   -0.000017    0.000057     8.96%
+   5 DissipationAny                1611       1318    0.000030   -0.000022    0.000052     4.78%
+   6 AllBars                       3595       2616    0.000032   -0.000028    0.000060     4.98%
+   7 PeakAccepted                   363        258    0.000024   -0.000032    0.000055     3.62%
+   8 DissipationContained           668        620    0.000055   -0.000033    0.000089     6.77%
+   9 ParticipationPeak              738        499    0.000027   -0.000061    0.000088     6.54%
+  10 PeakContained                  281        159    0.000043   -0.000125    0.000168     9.90%
+
+Largest Alignment Advantages inside Mature
+==========================================
+Rank Event                    LeftCount RightCount   LeftMean5  RightMean5  DeltaMean5 DeltaCont5
+   1 ClimacticContained              91         75    0.000157    0.000018    0.000139    10.48%
+   2 PeakContained                  281        159    0.000043   -0.000125    0.000168     9.90%
+   3 ParticipationClimactic         349        230    0.000039   -0.000017    0.000057     8.96%
+   4 DissipationContained           668        620    0.000055   -0.000033    0.000089     6.77%
+   5 ParticipationPeak              738        499    0.000027   -0.000061    0.000088     6.54%
+   6 AllBars                       3595       2616    0.000032   -0.000028    0.000060     4.98%
+   7 ClimacticAccepted              233        127   -0.000046    0.000016   -0.000061     4.90%
+   8 DissipationAny                1611       1318    0.000030   -0.000022    0.000052     4.78%
+   9 DissipationAccepted            745        579    0.000006   -0.000012    0.000017     4.14%
+  10 PeakAccepted                   363        258    0.000024   -0.000032    0.000055     3.62%
+
+Largest Alignment Advantages inside Immature
+============================================
+Rank Event                    LeftCount RightCount   LeftMean5  RightMean5  DeltaMean5 DeltaCont5
+   1 ClimacticContained             116         63    0.000079   -0.000094    0.000173     6.14%
+   2 PeakContained                  363        155    0.000015    0.000020   -0.000005     2.42%
+   3 DissipationContained          1217       1244   -0.000011    0.000017   -0.000028     0.63%
+   4 DissipationAccepted           1768       1146   -0.000015   -0.000001   -0.000014    -0.02%
+   5 DissipationAny                3213       2541   -0.000015    0.000007   -0.000021    -0.25%
+   6 AllBars                       6527       4763   -0.000025    0.000013   -0.000037    -1.67%
+   7 ParticipationPeak             1496        532   -0.000043    0.000075   -0.000118    -6.68%
+   8 ParticipationClimactic         645        212   -0.000064    0.000077   -0.000141    -6.89%
+   9 PeakAccepted                   997        266   -0.000063    0.000114   -0.000178    -8.20%
+  10 ClimacticAccepted              502        115   -0.000076    0.000192   -0.000268   -10.41%
+
+Largest Maturity Improvements for Aligned Events
+================================================
+Rank Event                    LeftCount RightCount   LeftMean5  RightMean5  DeltaMean5 DeltaCont5
+   1 PeakAccepted                   363        997    0.000024   -0.000063    0.000087    10.64%
+   2 ParticipationClimactic         349        645    0.000039   -0.000064    0.000103     9.80%
+   3 ClimacticContained              91        116    0.000157    0.000079    0.000078     9.73%
+   4 ParticipationPeak              738       1496    0.000027   -0.000043    0.000070     9.25%
+   5 PeakContained                  281        363    0.000043    0.000015    0.000028     8.32%
+   6 ClimacticAccepted              233        502   -0.000046   -0.000076    0.000030     7.16%
+   7 DissipationAccepted            745       1768    0.000006   -0.000015    0.000020     6.28%
+   8 DissipationAny                1611       3213    0.000030   -0.000015    0.000044     5.49%
+   9 AllBars                       3595       6527    0.000032   -0.000025    0.000056     5.48%
+  10 DissipationContained           668       1217    0.000055   -0.000011    0.000066     4.77%
+
+Largest Maturity Improvements for Opposed Events
+================================================
+Rank Event                    LeftCount RightCount   LeftMean5  RightMean5  DeltaMean5 DeltaCont5
+   1 ClimacticContained              75         63    0.000018   -0.000094    0.000112     5.40%
+   2 DissipationAccepted            579       1146   -0.000012   -0.000001   -0.000011     2.12%
+   3 PeakContained                  159        155   -0.000125    0.000020   -0.000145     0.83%
+   4 DissipationAny                1318       2541   -0.000022    0.000007   -0.000029     0.46%
+   5 AllBars                       2616       4763   -0.000028    0.000013   -0.000041    -1.16%
+   6 PeakAccepted                   258        266   -0.000032    0.000114   -0.000146    -1.17%
+   7 DissipationContained           620       1244   -0.000033    0.000017   -0.000051    -1.38%
+   8 ParticipationPeak              499        532   -0.000061    0.000075   -0.000136    -3.97%
+   9 ParticipationClimactic         230        212   -0.000017    0.000077   -0.000094    -6.05%
+  10 ClimacticAccepted              127        115    0.000016    0.000192   -0.000176    -8.16%
+
+Largest Maturity Deteriorations for Aligned Events
+==================================================
+Rank Event                    LeftCount RightCount   LeftMean5  RightMean5  DeltaMean5 DeltaCont5
+   1 DissipationContained           668       1217    0.000055   -0.000011    0.000066     4.77%
+   2 AllBars                       3595       6527    0.000032   -0.000025    0.000056     5.48%
+   3 DissipationAny                1611       3213    0.000030   -0.000015    0.000044     5.49%
+   4 DissipationAccepted            745       1768    0.000006   -0.000015    0.000020     6.28%
+   5 ClimacticAccepted              233        502   -0.000046   -0.000076    0.000030     7.16%
+   6 PeakContained                  281        363    0.000043    0.000015    0.000028     8.32%
+   7 ParticipationPeak              738       1496    0.000027   -0.000043    0.000070     9.25%
+   8 ClimacticContained              91        116    0.000157    0.000079    0.000078     9.73%
+   9 ParticipationClimactic         349        645    0.000039   -0.000064    0.000103     9.80%
+  10 PeakAccepted                   363        997    0.000024   -0.000063    0.000087    10.64%
+
+Largest Maturity Deteriorations for Opposed Events
+==================================================
+Rank Event                    LeftCount RightCount   LeftMean5  RightMean5  DeltaMean5 DeltaCont5
+   1 ClimacticAccepted              127        115    0.000016    0.000192   -0.000176    -8.16%
+   2 ParticipationClimactic         230        212   -0.000017    0.000077   -0.000094    -6.05%
+   3 ParticipationPeak              499        532   -0.000061    0.000075   -0.000136    -3.97%
+   4 DissipationContained           620       1244   -0.000033    0.000017   -0.000051    -1.38%
+   5 PeakAccepted                   258        266   -0.000032    0.000114   -0.000146    -1.17%
+   6 AllBars                       2616       4763   -0.000028    0.000013   -0.000041    -1.16%
+   7 DissipationAny                1318       2541   -0.000022    0.000007   -0.000029     0.46%
+   8 PeakContained                  159        155   -0.000125    0.000020   -0.000145     0.83%
+   9 DissipationAccepted            579       1146   -0.000012   -0.000001   -0.000011     2.12%
+  10 ClimacticContained              75         63    0.000018   -0.000094    0.000112     5.40%
+
+Research Notes
+==============
+- Mean aligned-minus-opposed DeltaContinuationRate5: Stage4=6.51%; Immature=-2.49%.
+- PeakContained alignment advantage: Stage4=9.90%; Immature=2.42%.
+- DissipationContained Stage4 alignment advantage=6.77%; Aligned Mature-minus-Immature advantage=4.77%.
+- Mean Stage4 alignment advantage: climactic-named events=8.11%; other events=5.82%.
+- Strongest mature continuation combination by MeanDRFwd5: ClimacticContained Mature Aligned (0.000157, n=91).
+- Strongest mature failure combination by MeanDRFwd5: PeakContained Mature Opposed (-0.000125, n=159).
+- Comparison entries skipped from ranked tables because one side has Count < 30: 0.
