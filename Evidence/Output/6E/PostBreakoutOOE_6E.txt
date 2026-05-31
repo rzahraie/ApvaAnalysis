@@ -1,0 +1,359 @@
+APVA Post-Breakout OOE Reset Study v0.1
+======================================
+Input: Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_OPEN_apva_bar_evidence_v01.csv
+Total rows: 35151
+OOE proxy: crude ordered VolumePolarity + ParticipationState sequence only.
+This is not true PVA OOE.
+Segments begin on the first bar after an accepted breakout.
+Segments end at the next accepted breakout, after 20 bars, or at end of data.
+Same-bar IB/SYM and lateral breakouts create parallel source-specific segments.
+DRFwd > 0: continuation of terminal event-bar polarity
+DRFwd < 0: failure of terminal event-bar polarity
+Ranked comparisons require incomplete and complete DRFwd5 Count >= 30.
+
+Diagnostics
+===========
+Successful IB/SYM breakouts:    1191
+Successful lateral breakouts:   1990
+Post-breakout segments:         3181
+Post-breakout segment bars:     32387
+Bars reaching SequenceStage 4:  21.27%
+Average bars to SequenceStage 4:     10.91
+
+Incomplete vs Complete OOE-Proxy Comparisons
+============================================
+Event                    Type     Dir   Alignment IncCount    IncMean5  IncCont5  IncFail5 CmpCount    CmpMean5  CmpCont5  CmpFail5  DeltaMean5 DeltaCont5
+AllBars                  IBSYM    Up    Aligned      1529   -0.000035   41.73%   52.06%      496    0.000028   48.59%   46.98%    0.000063     6.86%
+AllBars                  IBSYM    Up    Opposed      1866   -0.000006   46.25%   48.45%      376   -0.000027   43.35%   50.53%   -0.000020    -2.90%
+AllBars                  IBSYM    Down  Aligned      1652   -0.000014   47.46%   46.79%      543   -0.000020   49.36%   46.04%   -0.000007     1.90%
+AllBars                  IBSYM    Down  Opposed      1868    0.000005   44.65%   49.09%      394    0.000001   48.22%   46.45%   -0.000003     3.58%
+AllBars                  Lateral  Up    Aligned      3548   -0.000012   45.80%   49.10%     1363    0.000030   48.13%   47.40%    0.000042     2.33%
+AllBars                  Lateral  Up    Opposed      3888   -0.000020   46.60%   48.48%     1045   -0.000025   44.69%   50.62%   -0.000005    -1.92%
+AllBars                  Lateral  Down  Aligned      3602   -0.000014   46.14%   48.75%     1193    0.000058   53.73%   42.50%    0.000072     7.59%
+AllBars                  Lateral  Down  Opposed      3968   -0.000018   44.68%   49.85%      801   -0.000048   45.44%   50.06%   -0.000030     0.76%
+DissipationAny           IBSYM    Up    Aligned       745   -0.000026   42.28%   51.81%      213    0.000053   52.11%   45.07%    0.000079     9.83%
+DissipationAny           IBSYM    Up    Opposed       915   -0.000015   46.12%   49.29%      205   -0.000016   44.88%   49.76%   -0.000000    -1.24%
+DissipationAny           IBSYM    Down  Aligned       805   -0.000007   49.32%   44.97%      256   -0.000014   50.78%   43.75%   -0.000007     1.46%
+DissipationAny           IBSYM    Down  Opposed       866    0.000013   45.03%   48.73%      190    0.000034   53.16%   43.16%    0.000021     8.12%
+DissipationAny           Lateral  Up    Aligned      1812   -0.000004   47.19%   48.18%      607    0.000014   48.93%   48.76%    0.000018     1.74%
+DissipationAny           Lateral  Up    Opposed      1913   -0.000038   45.58%   49.92%      531   -0.000034   44.63%   51.04%    0.000004    -0.95%
+DissipationAny           Lateral  Down  Aligned      1877   -0.000008   47.79%   47.04%      535    0.000059   54.58%   42.24%    0.000067     6.79%
+DissipationAny           Lateral  Down  Opposed      1921   -0.000013   44.61%   49.56%      392   -0.000038   47.45%   48.21%   -0.000025     2.84%
+DissipationContained     IBSYM    Up    Aligned       316    0.000022   45.57%   46.52%       85    0.000114   58.82%   38.82%    0.000092    13.25%
+DissipationContained     IBSYM    Up    Opposed       400   -0.000007   48.00%   48.25%       97   -0.000027   41.24%   52.58%   -0.000020    -6.76%
+DissipationContained     IBSYM    Down  Aligned       327   -0.000026   50.76%   44.34%      115    0.000020   46.09%   47.83%    0.000046    -4.68%
+DissipationContained     IBSYM    Down  Opposed       381    0.000014   44.62%   49.61%       86    0.000071   53.49%   41.86%    0.000057     8.87%
+DissipationContained     Lateral  Up    Aligned       777    0.000024   48.26%   46.07%      259    0.000026   48.26%   50.97%    0.000002     0.00%
+DissipationContained     Lateral  Up    Opposed       821   -0.000013   47.50%   48.11%      257   -0.000065   42.02%   53.70%   -0.000052    -5.48%
+DissipationContained     Lateral  Down  Aligned       793   -0.000037   48.42%   47.67%      209    0.000087   57.42%   40.67%    0.000124     8.99%
+DissipationContained     Lateral  Down  Opposed       843   -0.000032   43.30%   51.13%      180   -0.000042   48.33%   46.67%   -0.000010     5.04%
+ParticipationPeak        IBSYM    Up    Aligned       344   -0.000037   40.12%   52.03%      120    0.000105   54.17%   40.83%    0.000142    14.05%
+ParticipationPeak        IBSYM    Up    Opposed       360    0.000020   48.61%   45.56%       64    0.000002   48.44%   46.88%   -0.000018    -0.17%
+ParticipationPeak        IBSYM    Down  Aligned       313   -0.000031   42.49%   51.44%      110   -0.000089   49.09%   45.45%   -0.000058     6.60%
+ParticipationPeak        IBSYM    Down  Opposed       364   -0.000008   44.23%   49.45%       87   -0.000071   39.08%   55.17%   -0.000063    -5.15%
+ParticipationPeak        Lateral  Up    Aligned       761   -0.000022   43.63%   50.85%      263    0.000060   50.57%   44.87%    0.000082     6.94%
+ParticipationPeak        Lateral  Up    Opposed       785   -0.000026   47.13%   49.43%      200   -0.000019   48.50%   48.00%    0.000006     1.37%
+ParticipationPeak        Lateral  Down  Aligned       776   -0.000038   44.07%   49.61%      245    0.000006   52.65%   44.90%    0.000044     8.58%
+ParticipationPeak        Lateral  Down  Opposed       810   -0.000008   45.06%   50.00%      148   -0.000140   42.57%   54.73%   -0.000132    -2.49%
+ParticipationClimactic   IBSYM    Up    Aligned       111   -0.000117   37.84%   58.56%       32   -0.000025   43.75%   50.00%    0.000092     5.91%
+ParticipationClimactic   IBSYM    Up    Opposed       127    0.000070   49.61%   44.09%       30    0.000002   53.33%   46.67%   -0.000069     3.73%
+ParticipationClimactic   IBSYM    Down  Aligned       137   -0.000061   45.26%   52.55%       46   -0.000196   47.83%   52.17%   -0.000135     2.57%
+ParticipationClimactic   IBSYM    Down  Opposed       114   -0.000020   45.61%   49.12%       23    0.000209   47.83%   43.48%    0.000228     2.21%
+ParticipationClimactic   Lateral  Up    Aligned       369   -0.000024   42.55%   53.66%      147    0.000114   53.74%   40.82%    0.000138    11.19%
+ParticipationClimactic   Lateral  Up    Opposed       330   -0.000060   45.15%   49.39%      110   -0.000140   37.27%   59.09%   -0.000080    -7.88%
+ParticipationClimactic   Lateral  Down  Aligned       386   -0.000014   46.63%   51.30%      124    0.000054   54.84%   43.55%    0.000068     8.21%
+ParticipationClimactic   Lateral  Down  Opposed       321   -0.000074   42.68%   52.02%       67    0.000098   47.76%   46.27%    0.000172     5.08%
+PeakContained            IBSYM    Up    Aligned       101    0.000067   50.50%   42.57%       53    0.000184   62.26%   33.96%    0.000117    11.77%
+PeakContained            IBSYM    Up    Opposed       107   -0.000022   42.99%   51.40%       22   -0.000055   50.00%   45.45%   -0.000032     7.01%
+PeakContained            IBSYM    Down  Aligned        90   -0.000002   41.11%   51.11%       37   -0.000035   45.95%   45.95%   -0.000033     4.83%
+PeakContained            IBSYM    Down  Opposed       123   -0.000051   47.15%   49.59%       22    0.000116   40.91%   50.00%    0.000167    -6.25%
+PeakContained            Lateral  Up    Aligned       215   -0.000016   40.93%   51.63%       99    0.000051   50.51%   45.45%    0.000067     9.57%
+PeakContained            Lateral  Up    Opposed       245   -0.000042   44.49%   52.24%       72   -0.000206   41.67%   54.17%   -0.000164    -2.82%
+PeakContained            Lateral  Down  Aligned       196   -0.000045   44.90%   48.98%       92   -0.000016   52.17%   45.65%    0.000030     7.28%
+PeakContained            Lateral  Down  Opposed       269    0.000021   47.21%   49.81%       43   -0.000149   41.86%   55.81%   -0.000170    -5.35%
+ClimacticContained       IBSYM    Up    Aligned        24   -0.000058   37.50%   54.17%       11   -0.000027   45.45%   45.45%    0.000031     7.95%
+ClimacticContained       IBSYM    Up    Opposed        39   -0.000033   43.59%   48.72%        7    0.000100   57.14%   42.86%    0.000133    13.55%
+ClimacticContained       IBSYM    Down  Aligned        39    0.000135   56.41%   35.90%       15    0.000100   60.00%   40.00%   -0.000035     3.59%
+ClimacticContained       IBSYM    Down  Opposed        33    0.000024   48.48%   42.42%        8    0.000119   37.50%   50.00%    0.000095   -10.98%
+ClimacticContained       Lateral  Up    Aligned        73    0.000155   50.68%   43.84%       31    0.000142   58.06%   32.26%   -0.000013     7.38%
+ClimacticContained       Lateral  Up    Opposed        97   -0.000110   45.36%   50.52%       38   -0.000147   36.84%   63.16%   -0.000037    -8.52%
+ClimacticContained       Lateral  Down  Aligned        92    0.000056   47.83%   48.91%       34    0.000256   58.82%   38.24%    0.000200    11.00%
+ClimacticContained       Lateral  Down  Opposed       113   -0.000043   38.94%   54.87%       22    0.000241   63.64%   36.36%    0.000284    24.70%
+
+Sequence Stage DRFwd5 Report
+============================
+Event                    Stage    Count   MeanDRFwd5  ContRate5  FailRate5
+AllBars                      0     2892     0.000019    46.33%    47.68%
+AllBars                      1     8398    -0.000018    45.15%    49.15%
+AllBars                      2     6778    -0.000014    46.31%    48.82%
+AllBars                      3     3853    -0.000032    44.64%    50.22%
+AllBars                      4     6211     0.000006    48.14%    47.32%
+DissipationAny               0     1381     0.000019    45.91%    48.30%
+DissipationAny               1     4373    -0.000013    46.22%    48.30%
+DissipationAny               2     2793    -0.000018    46.80%    48.30%
+DissipationAny               3     2307    -0.000029    45.21%    50.11%
+DissipationAny               4     2929     0.000006    49.37%    46.91%
+DissipationContained         0      627     0.000041    46.09%    47.85%
+DissipationContained         1     1834    -0.000009    47.33%    47.71%
+DissipationContained         2     1241    -0.000023    46.17%    48.99%
+DissipationContained         3      956    -0.000028    47.70%    47.38%
+DissipationContained         4     1288     0.000013    48.84%    47.67%
+ParticipationPeak            0      532     0.000075    49.06%    46.62%
+ParticipationPeak            1     1496    -0.000043    42.38%    50.33%
+ParticipationPeak            2     2181    -0.000024    45.12%    49.93%
+ParticipationPeak            3      304    -0.000048    45.07%    52.30%
+ParticipationPeak            4     1237    -0.000008    48.99%    47.05%
+ParticipationClimactic       0      212     0.000077    49.53%    44.81%
+ParticipationClimactic       1      645    -0.000064    42.64%    54.73%
+ParticipationClimactic       2      929    -0.000029    45.53%    50.16%
+ParticipationClimactic       3      109    -0.000189    35.78%    55.96%
+ParticipationClimactic       4      579     0.000017    48.88%    47.32%
+PeakContained                0      155     0.000020    41.94%    56.13%
+PeakContained                1      363     0.000015    44.35%    47.66%
+PeakContained                2      766    -0.000035    45.69%    49.74%
+PeakContained                3       62    -0.000018    45.16%    53.23%
+PeakContained                4      440    -0.000018    49.09%    46.82%
+ClimacticContained           0       63    -0.000094    41.27%    52.38%
+ClimacticContained           1      116     0.000079    47.41%    44.83%
+ClimacticContained           2      310     0.000024    47.10%    48.06%
+ClimacticContained           3       21    -0.000302    28.57%    66.67%
+ClimacticContained           4      166     0.000094    52.41%    43.98%
+
+Bars-Since-Breakout DRFwd5 Report
+=================================
+Event                    Bucket    Count   MeanDRFwd5  ContRate5  FailRate5
+AllBars                  1          2618     0.000008    46.64%    47.40%
+AllBars                  2-3        5009    -0.000009    45.94%    48.43%
+AllBars                  4-5        4346    -0.000023    43.93%    50.64%
+AllBars                  6-10       7961    -0.000018    46.26%    48.71%
+AllBars                  11-20      8198    -0.000002    47.17%    48.11%
+DissipationAny           1          1317     0.000008    45.86%    47.68%
+DissipationAny           2-3        2458     0.000000    46.91%    47.36%
+DissipationAny           4-5        2115    -0.000033    42.65%    52.06%
+DissipationAny           6-10       3799    -0.000016    47.70%    47.72%
+DissipationAny           11-20      4094    -0.000002    48.36%    47.68%
+DissipationContained     1           556     0.000060    46.40%    46.22%
+DissipationContained     2-3        1076    -0.000005    47.77%    47.68%
+DissipationContained     4-5         893    -0.000054    41.88%    52.86%
+DissipationContained     6-10       1672    -0.000001    48.80%    46.71%
+DissipationContained     11-20      1749    -0.000005    48.77%    47.28%
+ParticipationPeak        1           571     0.000034    48.51%    46.23%
+ParticipationPeak        2-3        1067     0.000009    45.64%    47.61%
+ParticipationPeak        4-5         925    -0.000055    39.46%    53.73%
+ParticipationPeak        6-10       1567    -0.000026    47.48%    47.42%
+ParticipationPeak        11-20      1620    -0.000023    46.23%    50.56%
+ParticipationClimactic   1           296     0.000003    47.97%    49.66%
+ParticipationClimactic   2-3         400    -0.000063    43.75%    51.75%
+ParticipationClimactic   4-5         345    -0.000003    44.64%    52.46%
+ParticipationClimactic   6-10        651    -0.000046    44.09%    50.69%
+ParticipationClimactic   11-20       782    -0.000009    46.93%    49.10%
+PeakContained            1           155     0.000055    47.10%    49.03%
+PeakContained            2-3         315     0.000058    49.21%    46.67%
+PeakContained            4-5         276    -0.000088    34.42%    57.61%
+PeakContained            6-10        512     0.000004    49.02%    45.90%
+PeakContained            11-20       528    -0.000060    46.59%    49.81%
+ClimacticContained       1            52    -0.000084    38.46%    57.69%
+ClimacticContained       2-3         113    -0.000030    45.13%    45.13%
+ClimacticContained       4-5          90     0.000013    46.67%    48.89%
+ClimacticContained       6-10        212     0.000053    46.70%    47.64%
+ClimacticContained       11-20       209     0.000072    51.67%    45.45%
+
+Incomplete vs Complete Horizon Appendix
+=======================================
+Event                    State      Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+AllBars                  Incomplete DRFwd1     21921    -0.000009     0.000000    42.62%    45.89%    11.49%
+AllBars                  Incomplete DRFwd3     21921    -0.000012     0.000000    44.93%    48.15%     6.92%
+AllBars                  Incomplete DRFwd5     21921    -0.000015     0.000000    45.58%    49.04%     5.38%
+AllBars                  Incomplete DRFwd10    21921    -0.000021     0.000000    46.88%    49.20%     3.92%
+AllBars                  Incomplete DRFwd20    21917    -0.000029     0.000000    48.38%    49.10%     2.52%
+AllBars                  Complete   DRFwd1      6211    -0.000004     0.000000    43.62%    46.02%    10.37%
+AllBars                  Complete   DRFwd3      6211     0.000002     0.000000    46.88%    47.30%     5.81%
+AllBars                  Complete   DRFwd5      6211     0.000006     0.000000    48.14%    47.32%     4.54%
+AllBars                  Complete   DRFwd10     6206     0.000014     0.000000    49.05%    47.68%     3.27%
+AllBars                  Complete   DRFwd20     6200     0.000011     0.000000    49.53%    48.34%     2.13%
+DissipationAny           Incomplete DRFwd1     10854    -0.000012     0.000000    43.26%    46.42%    10.33%
+DissipationAny           Incomplete DRFwd3     10854    -0.000012     0.000000    45.46%    47.83%     6.71%
+DissipationAny           Incomplete DRFwd5     10854    -0.000014     0.000000    46.11%    48.68%     5.21%
+DissipationAny           Incomplete DRFwd10    10854    -0.000022     0.000000    47.13%    49.10%     3.77%
+DissipationAny           Incomplete DRFwd20    10853    -0.000036     0.000000    48.70%    48.96%     2.34%
+DissipationAny           Complete   DRFwd1      2929    -0.000008     0.000000    43.39%    46.67%     9.94%
+DissipationAny           Complete   DRFwd3      2929    -0.000002     0.000000    47.29%    47.12%     5.60%
+DissipationAny           Complete   DRFwd5      2929     0.000006     0.000000    49.37%    46.91%     3.72%
+DissipationAny           Complete   DRFwd10     2927     0.000018     0.000000    49.54%    47.49%     2.97%
+DissipationAny           Complete   DRFwd20     2926     0.000002     0.000000    49.83%    48.39%     1.78%
+DissipationContained     Incomplete DRFwd1      4658    -0.000007     0.000000    44.25%    46.35%     9.40%
+DissipationContained     Incomplete DRFwd3      4658    -0.000004     0.000000    47.29%    46.97%     5.73%
+DissipationContained     Incomplete DRFwd5      4658    -0.000010     0.000000    46.93%    48.00%     5.07%
+DissipationContained     Incomplete DRFwd10     4658    -0.000003     0.000000    47.68%    48.82%     3.50%
+DissipationContained     Incomplete DRFwd20     4658    -0.000026     0.000000    49.72%    47.72%     2.55%
+DissipationContained     Complete   DRFwd1      1288    -0.000002     0.000000    45.34%    43.48%    11.18%
+DissipationContained     Complete   DRFwd3      1288     0.000020     0.000000    48.37%    45.73%     5.90%
+DissipationContained     Complete   DRFwd5      1288     0.000013     0.000000    48.84%    47.67%     3.49%
+DissipationContained     Complete   DRFwd10     1288     0.000043     0.000050    50.78%    46.51%     2.72%
+DissipationContained     Complete   DRFwd20     1288     0.000017     0.000050    50.08%    47.90%     2.02%
+ParticipationPeak        Incomplete DRFwd1      4513    -0.000004     0.000000    43.56%    45.03%    11.41%
+ParticipationPeak        Incomplete DRFwd3      4513    -0.000008     0.000000    43.56%    48.88%     7.56%
+ParticipationPeak        Incomplete DRFwd5      4513    -0.000020     0.000000    44.67%    49.83%     5.50%
+ParticipationPeak        Incomplete DRFwd10     4513    -0.000014    -0.000050    45.78%    50.59%     3.63%
+ParticipationPeak        Incomplete DRFwd20     4512    -0.000023     0.000000    47.45%    49.67%     2.88%
+ParticipationPeak        Complete   DRFwd1      1237     0.000008     0.000000    45.43%    45.03%     9.54%
+ParticipationPeak        Complete   DRFwd3      1237     0.000007     0.000000    47.29%    46.81%     5.90%
+ParticipationPeak        Complete   DRFwd5      1237    -0.000008     0.000000    48.99%    47.05%     3.96%
+ParticipationPeak        Complete   DRFwd10     1234     0.000008     0.000000    49.03%    48.14%     2.84%
+ParticipationPeak        Complete   DRFwd20     1233    -0.000039     0.000000    48.34%    49.72%     1.95%
+ParticipationClimactic   Incomplete DRFwd1      1895    -0.000015     0.000000    44.43%    47.97%     7.60%
+ParticipationClimactic   Incomplete DRFwd3      1895    -0.000037    -0.000050    44.49%    50.34%     5.17%
+ParticipationClimactic   Incomplete DRFwd5      1895    -0.000038    -0.000050    44.43%    51.45%     4.12%
+ParticipationClimactic   Incomplete DRFwd10     1895    -0.000067    -0.000050    44.80%    52.08%     3.11%
+ParticipationClimactic   Incomplete DRFwd20     1895    -0.000070     0.000000    48.13%    49.71%     2.16%
+ParticipationClimactic   Complete   DRFwd1       579     0.000013     0.000000    45.60%    47.50%     6.91%
+ParticipationClimactic   Complete   DRFwd3       579    -0.000025     0.000000    44.91%    49.40%     5.70%
+ParticipationClimactic   Complete   DRFwd5       579     0.000017     0.000000    48.88%    47.32%     3.80%
+ParticipationClimactic   Complete   DRFwd10      579     0.000014    -0.000050    44.91%    52.68%     2.42%
+ParticipationClimactic   Complete   DRFwd20      579    -0.000029     0.000000    47.84%    49.91%     2.25%
+PeakContained            Incomplete DRFwd1      1346    -0.000005     0.000000    45.02%    44.80%    10.18%
+PeakContained            Incomplete DRFwd3      1346    -0.000000     0.000000    44.06%    48.07%     7.88%
+PeakContained            Incomplete DRFwd5      1346    -0.000014    -0.000050    44.87%    50.07%     5.05%
+PeakContained            Incomplete DRFwd10     1346    -0.000009     0.000000    47.25%    49.48%     3.27%
+PeakContained            Incomplete DRFwd20     1345    -0.000042    -0.000050    47.21%    50.11%     2.68%
+PeakContained            Complete   DRFwd1       440     0.000007     0.000000    45.91%    43.64%    10.45%
+PeakContained            Complete   DRFwd3       440    -0.000008     0.000000    48.18%    46.59%     5.23%
+PeakContained            Complete   DRFwd5       440    -0.000018     0.000000    49.09%    46.82%     4.09%
+PeakContained            Complete   DRFwd10      440     0.000010     0.000000    49.55%    46.14%     4.32%
+PeakContained            Complete   DRFwd20      440    -0.000014     0.000075    51.14%    46.36%     2.50%
+ClimacticContained       Incomplete DRFwd1       510     0.000037     0.000050    50.59%    40.78%     8.63%
+ClimacticContained       Incomplete DRFwd3       510     0.000008     0.000000    47.45%    47.45%     5.10%
+ClimacticContained       Incomplete DRFwd5       510     0.000008     0.000000    45.69%    48.63%     5.69%
+ClimacticContained       Incomplete DRFwd10      510    -0.000070    -0.000100    43.92%    54.31%     1.76%
+ClimacticContained       Incomplete DRFwd20      510    -0.000011     0.000050    51.37%    46.08%     2.55%
+ClimacticContained       Complete   DRFwd1       166     0.000050     0.000000    48.19%    43.37%     8.43%
+ClimacticContained       Complete   DRFwd3       166     0.000053     0.000000    45.18%    47.59%     7.23%
+ClimacticContained       Complete   DRFwd5       166     0.000094     0.000075    52.41%    43.98%     3.61%
+ClimacticContained       Complete   DRFwd10      166    -0.000042    -0.000100    43.37%    53.01%     3.61%
+ClimacticContained       Complete   DRFwd20      166    -0.000164    -0.000050    44.58%    52.41%     3.01%
+
+Largest Improvements after CompleteSequenceFormed
+=================================================
+Rank Event                    Type     Dir   Alignment    Count   MeanDRFwd5  ContRate5  FailRate5 DeltaCont5
+   1 ParticipationPeak        IBSYM    Up    Aligned       120     0.000105    54.17%    40.83%    14.05%
+   2 DissipationContained     IBSYM    Up    Aligned        85     0.000114    58.82%    38.82%    13.25%
+   3 PeakContained            IBSYM    Up    Aligned        53     0.000184    62.26%    33.96%    11.77%
+   4 ParticipationClimactic   Lateral  Up    Aligned       147     0.000114    53.74%    40.82%    11.19%
+   5 ClimacticContained       Lateral  Down  Aligned        34     0.000256    58.82%    38.24%    11.00%
+   6 DissipationAny           IBSYM    Up    Aligned       213     0.000053    52.11%    45.07%     9.83%
+   7 PeakContained            Lateral  Up    Aligned        99     0.000051    50.51%    45.45%     9.57%
+   8 DissipationContained     Lateral  Down  Aligned       209     0.000087    57.42%    40.67%     8.99%
+   9 DissipationContained     IBSYM    Down  Opposed        86     0.000071    53.49%    41.86%     8.87%
+  10 ParticipationPeak        Lateral  Down  Aligned       245     0.000006    52.65%    44.90%     8.58%
+  11 ParticipationClimactic   Lateral  Down  Aligned       124     0.000054    54.84%    43.55%     8.21%
+  12 DissipationAny           IBSYM    Down  Opposed       190     0.000034    53.16%    43.16%     8.12%
+  13 AllBars                  Lateral  Down  Aligned      1193     0.000058    53.73%    42.50%     7.59%
+  14 ClimacticContained       Lateral  Up    Aligned        31     0.000142    58.06%    32.26%     7.38%
+  15 PeakContained            Lateral  Down  Aligned        92    -0.000016    52.17%    45.65%     7.28%
+  16 ParticipationPeak        Lateral  Up    Aligned       263     0.000060    50.57%    44.87%     6.94%
+  17 AllBars                  IBSYM    Up    Aligned       496     0.000028    48.59%    46.98%     6.86%
+  18 DissipationAny           Lateral  Down  Aligned       535     0.000059    54.58%    42.24%     6.79%
+  19 ParticipationPeak        IBSYM    Down  Aligned       110    -0.000089    49.09%    45.45%     6.60%
+  20 ParticipationClimactic   IBSYM    Up    Aligned        32    -0.000025    43.75%    50.00%     5.91%
+  21 ParticipationClimactic   Lateral  Down  Opposed        67     0.000098    47.76%    46.27%     5.08%
+  22 DissipationContained     Lateral  Down  Opposed       180    -0.000042    48.33%    46.67%     5.04%
+  23 PeakContained            IBSYM    Down  Aligned        37    -0.000035    45.95%    45.95%     4.83%
+  24 ParticipationClimactic   IBSYM    Up    Opposed        30     0.000002    53.33%    46.67%     3.73%
+  25 AllBars                  IBSYM    Down  Opposed       394     0.000001    48.22%    46.45%     3.58%
+
+Largest Deteriorations after CompleteSequenceFormed
+===================================================
+Rank Event                    Type     Dir   Alignment    Count   MeanDRFwd5  ContRate5  FailRate5 DeltaCont5
+   1 ClimacticContained       Lateral  Up    Opposed        38    -0.000147    36.84%    63.16%    -8.52%
+   2 ParticipationClimactic   Lateral  Up    Opposed       110    -0.000140    37.27%    59.09%    -7.88%
+   3 DissipationContained     IBSYM    Up    Opposed        97    -0.000027    41.24%    52.58%    -6.76%
+   4 DissipationContained     Lateral  Up    Opposed       257    -0.000065    42.02%    53.70%    -5.48%
+   5 PeakContained            Lateral  Down  Opposed        43    -0.000149    41.86%    55.81%    -5.35%
+   6 ParticipationPeak        IBSYM    Down  Opposed        87    -0.000071    39.08%    55.17%    -5.15%
+   7 DissipationContained     IBSYM    Down  Aligned       115     0.000020    46.09%    47.83%    -4.68%
+   8 AllBars                  IBSYM    Up    Opposed       376    -0.000027    43.35%    50.53%    -2.90%
+   9 PeakContained            Lateral  Up    Opposed        72    -0.000206    41.67%    54.17%    -2.82%
+  10 ParticipationPeak        Lateral  Down  Opposed       148    -0.000140    42.57%    54.73%    -2.49%
+  11 AllBars                  Lateral  Up    Opposed      1045    -0.000025    44.69%    50.62%    -1.92%
+  12 DissipationAny           IBSYM    Up    Opposed       205    -0.000016    44.88%    49.76%    -1.24%
+  13 DissipationAny           Lateral  Up    Opposed       531    -0.000034    44.63%    51.04%    -0.95%
+  14 ParticipationPeak        IBSYM    Up    Opposed        64     0.000002    48.44%    46.88%    -0.17%
+  15 DissipationContained     Lateral  Up    Aligned       259     0.000026    48.26%    50.97%     0.00%
+  16 AllBars                  Lateral  Down  Opposed       801    -0.000048    45.44%    50.06%     0.76%
+  17 ParticipationPeak        Lateral  Up    Opposed       200    -0.000019    48.50%    48.00%     1.37%
+  18 DissipationAny           IBSYM    Down  Aligned       256    -0.000014    50.78%    43.75%     1.46%
+  19 DissipationAny           Lateral  Up    Aligned       607     0.000014    48.93%    48.76%     1.74%
+  20 AllBars                  IBSYM    Down  Aligned       543    -0.000020    49.36%    46.04%     1.90%
+  21 AllBars                  Lateral  Up    Aligned      1363     0.000030    48.13%    47.40%     2.33%
+  22 ParticipationClimactic   IBSYM    Down  Aligned        46    -0.000196    47.83%    52.17%     2.57%
+  23 DissipationAny           Lateral  Down  Opposed       392    -0.000038    47.45%    48.21%     2.84%
+  24 AllBars                  IBSYM    Down  Opposed       394     0.000001    48.22%    46.45%     3.58%
+  25 ParticipationClimactic   IBSYM    Up    Opposed        30     0.000002    53.33%    46.67%     3.73%
+
+Worst Incomplete-Sequence Contexts
+==================================
+Rank Event                    Type     Dir   Alignment    Count   MeanDRFwd5  ContRate5  FailRate5 DeltaCont5
+   1 ParticipationClimactic   IBSYM    Up    Aligned       111    -0.000117    37.84%    58.56%     5.91%
+   2 ClimacticContained       Lateral  Up    Opposed        97    -0.000110    45.36%    50.52%    -8.52%
+   3 ParticipationClimactic   Lateral  Down  Opposed       321    -0.000074    42.68%    52.02%     5.08%
+   4 ParticipationClimactic   IBSYM    Down  Aligned       137    -0.000061    45.26%    52.55%     2.57%
+   5 ParticipationClimactic   Lateral  Up    Opposed       330    -0.000060    45.15%    49.39%    -7.88%
+   6 PeakContained            Lateral  Down  Aligned       196    -0.000045    44.90%    48.98%     7.28%
+   7 PeakContained            Lateral  Up    Opposed       245    -0.000042    44.49%    52.24%    -2.82%
+   8 DissipationAny           Lateral  Up    Opposed      1913    -0.000038    45.58%    49.92%    -0.95%
+   9 ParticipationPeak        Lateral  Down  Aligned       776    -0.000038    44.07%    49.61%     8.58%
+  10 DissipationContained     Lateral  Down  Aligned       793    -0.000037    48.42%    47.67%     8.99%
+  11 ParticipationPeak        IBSYM    Up    Aligned       344    -0.000037    40.12%    52.03%    14.05%
+  12 AllBars                  IBSYM    Up    Aligned      1529    -0.000035    41.73%    52.06%     6.86%
+  13 DissipationContained     Lateral  Down  Opposed       843    -0.000032    43.30%    51.13%     5.04%
+  14 ParticipationPeak        IBSYM    Down  Aligned       313    -0.000031    42.49%    51.44%     6.60%
+  15 DissipationAny           IBSYM    Up    Aligned       745    -0.000026    42.28%    51.81%     9.83%
+  16 ParticipationPeak        Lateral  Up    Opposed       785    -0.000026    47.13%    49.43%     1.37%
+  17 DissipationContained     IBSYM    Down  Aligned       327    -0.000026    50.76%    44.34%    -4.68%
+  18 ParticipationClimactic   Lateral  Up    Aligned       369    -0.000024    42.55%    53.66%    11.19%
+  19 ParticipationPeak        Lateral  Up    Aligned       761    -0.000022    43.63%    50.85%     6.94%
+  20 AllBars                  Lateral  Up    Opposed      3888    -0.000020    46.60%    48.48%    -1.92%
+  21 AllBars                  Lateral  Down  Opposed      3968    -0.000018    44.68%    49.85%     0.76%
+  22 PeakContained            Lateral  Up    Aligned       215    -0.000016    40.93%    51.63%     9.57%
+  23 DissipationAny           IBSYM    Up    Opposed       915    -0.000015    46.12%    49.29%    -1.24%
+  24 ParticipationClimactic   Lateral  Down  Aligned       386    -0.000014    46.63%    51.30%     8.21%
+  25 AllBars                  IBSYM    Down  Aligned      1652    -0.000014    47.46%    46.79%     1.90%
+
+Best Complete-Sequence Contexts
+===============================
+Rank Event                    Type     Dir   Alignment    Count   MeanDRFwd5  ContRate5  FailRate5 DeltaCont5
+   1 ClimacticContained       Lateral  Down  Aligned        34     0.000256    58.82%    38.24%    11.00%
+   2 PeakContained            IBSYM    Up    Aligned        53     0.000184    62.26%    33.96%    11.77%
+   3 ClimacticContained       Lateral  Up    Aligned        31     0.000142    58.06%    32.26%     7.38%
+   4 DissipationContained     IBSYM    Up    Aligned        85     0.000114    58.82%    38.82%    13.25%
+   5 ParticipationClimactic   Lateral  Up    Aligned       147     0.000114    53.74%    40.82%    11.19%
+   6 ParticipationPeak        IBSYM    Up    Aligned       120     0.000105    54.17%    40.83%    14.05%
+   7 ParticipationClimactic   Lateral  Down  Opposed        67     0.000098    47.76%    46.27%     5.08%
+   8 DissipationContained     Lateral  Down  Aligned       209     0.000087    57.42%    40.67%     8.99%
+   9 DissipationContained     IBSYM    Down  Opposed        86     0.000071    53.49%    41.86%     8.87%
+  10 ParticipationPeak        Lateral  Up    Aligned       263     0.000060    50.57%    44.87%     6.94%
+  11 DissipationAny           Lateral  Down  Aligned       535     0.000059    54.58%    42.24%     6.79%
+  12 AllBars                  Lateral  Down  Aligned      1193     0.000058    53.73%    42.50%     7.59%
+  13 ParticipationClimactic   Lateral  Down  Aligned       124     0.000054    54.84%    43.55%     8.21%
+  14 DissipationAny           IBSYM    Up    Aligned       213     0.000053    52.11%    45.07%     9.83%
+  15 PeakContained            Lateral  Up    Aligned        99     0.000051    50.51%    45.45%     9.57%
+  16 DissipationAny           IBSYM    Down  Opposed       190     0.000034    53.16%    43.16%     8.12%
+  17 AllBars                  Lateral  Up    Aligned      1363     0.000030    48.13%    47.40%     2.33%
+  18 AllBars                  IBSYM    Up    Aligned       496     0.000028    48.59%    46.98%     6.86%
+  19 DissipationContained     Lateral  Up    Aligned       259     0.000026    48.26%    50.97%     0.00%
+  20 DissipationContained     IBSYM    Down  Aligned       115     0.000020    46.09%    47.83%    -4.68%
+  21 DissipationAny           Lateral  Up    Aligned       607     0.000014    48.93%    48.76%     1.74%
+  22 ParticipationPeak        Lateral  Down  Aligned       245     0.000006    52.65%    44.90%     8.58%
+  23 ParticipationPeak        IBSYM    Up    Opposed        64     0.000002    48.44%    46.88%    -0.17%
+  24 ParticipationClimactic   IBSYM    Up    Opposed        30     0.000002    53.33%    46.67%     3.73%
+  25 AllBars                  IBSYM    Down  Opposed       394     0.000001    48.22%    46.45%     3.58%
+
+Research Notes
+==============
+- Mean complete-minus-incomplete DeltaContinuationRate5 across all comparisons: 3.60%.
+- Mean delta for IB/SYM comparisons: 3.55%; for lateral comparisons: 3.64%.
+- Mean delta after breakout up: 3.42%; after breakout down: 3.77%.
+- Mean delta for aligned comparisons: 6.55%; for opposed comparisons: 0.64%.
+- Largest improvement after complete OOE proxy: ParticipationPeak, IBSYM, Up, Aligned (14.05%).
+- Largest deterioration after complete OOE proxy: ClimacticContained, Lateral, Up, Opposed (-8.52%).
+- Comparisons skipped from ranked tables because incomplete or complete Count < 30: 8.
