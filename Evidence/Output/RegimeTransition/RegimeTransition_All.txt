@@ -1,0 +1,115 @@
+APVA Regime Transition Study v0.1 - Cross-Instrument Aggregate
+==============================================================
+Input instruments: 6E, NQ, CL
+Ranked replication minimum: Count >= 30 in at least two instruments.
+No stage model or OOE model is used.
+
+Cross-Instrument Transition Table
+=================================
+Transition                           Inst  GE30   Count_6E   Cont_6E     Mean_6E   Count_NQ   Cont_NQ     Mean_NQ   Count_CL   Cont_CL     Mean_CL PosMean PosCont NegMean NegCont  MeanCont   MeanMean5
+Falling -> Rising                       3     3       6200   46.31%   -0.000006        416   46.88%   -6.587740        518   50.58%   -0.049479       0       1       3       2   47.92%   -2.212408
+Rising -> Peak                          3     3       1309   47.29%    0.000006         62   45.16%   -5.318548         99   41.41%   -0.334646       1       0       2       3   44.62%   -1.884396
+Peak -> Falling                         3     3       3187   46.31%   -0.000011        158   48.73%   -5.606013        267   50.19%   -0.103521       0       1       3       2   48.41%   -1.903181
+Peak -> Climactic                       3     2        739   41.54%   -0.000062         21   47.62%   -5.785714         54   42.59%    0.222222       1       0       1       2   42.07%    0.111080
+Climactic -> Falling                    3     2       1013   44.32%   -0.000045         23   39.13%   -4.304348         58   46.55%   -0.126897       0       0       2       2   45.44%   -0.063471
+Contained -> Accepted                   3     3       5118   45.41%   -0.000029        360   48.61%   -2.779861        466   48.50%   -0.038326       0       0       3       3   47.51%   -0.939405
+Accepted -> Contained                   3     3       4230   46.67%   -0.000019        352   49.15%    1.789773        418   49.28%    0.047967       2       0       1       3   48.37%    0.612574
+CompressionOn -> ExpansionOn            3     3      10098   45.85%   -0.000018        574   47.74%   -6.081882        847   51.00%    0.052479       1       1       2       2   48.20%   -2.009807
+ExpansionOn -> CompressionOn            3     3       9119   45.84%   -0.000015        543   55.62%    3.500000        806   50.37%    0.001191       2       2       1       1   50.61%    1.167059
+CompressionOff -> CompressionOn         3     3       7507   46.64%   -0.000015        484   51.65%    2.545971        674   48.52%   -0.008976       1       1       2       2   48.94%    0.845660
+ExpansionOff -> ExpansionOn             3     3       9802   46.60%   -0.000005        573   46.60%   -5.980366        803   48.19%    0.011469       1       0       2       3   47.13%   -1.989634
+CompressionOn -> CompressionOff         3     3       8949   45.80%   -0.000021        487   47.84%   -5.153491        699   49.21%    0.005351       1       0       2       3   47.62%   -1.716054
+ExpansionOn -> ExpansionOff             3     3       8881   46.28%   -0.000013        569   55.01%    2.384886        783   49.04%   -0.011916       1       1       2       2   50.11%    0.790986
+DissipationOff -> DissipationOn         3     3       7674   45.88%   -0.000018        467   50.32%   -3.672377        669   49.93%   -0.010688       0       1       3       2   48.71%   -1.227694
+DissipationOn -> DissipationOff         3     3       7758   45.93%   -0.000012        469   48.83%   -2.754797        677   47.56%   -0.067445       0       0       3       3   47.44%   -0.940751
+DissipationOn -> ExpansionOn            3     3       8349   46.78%   -0.000013        580   45.34%   -7.054310        698   47.71%    0.009685       1       0       2       3   46.61%   -2.348213
+DissipationOff -> ExpansionOn           3     3       8305   45.57%   -0.000013        404   46.53%   -7.162748        697   49.93%   -0.013042       0       0       3       3   47.35%   -2.391934
+CompressionOn -> DissipationOn          3     3       7878   46.60%   -0.000009        517   48.94%   -5.451161        649   49.31%    0.010462       1       0       2       3   48.28%   -1.813569
+Contained -> ExpansionOn                3     3       5488   45.37%   -0.000025        388   48.71%   -5.085052        522   50.38%    0.060019       1       1       2       2   48.16%   -1.675019
+Accepted -> ExpansionOn                 3     3       6643   46.67%   -0.000006        425   43.53%   -8.265294        559   45.26%   -0.094150       0       0       3       3   45.15%   -2.786483
+Peak -> ExpansionOn                     3     3       3114   45.22%   -0.000024        124   40.32%  -16.725806        226   50.88%    0.018142       1       1       2       2   45.47%   -5.569230
+Falling -> ExpansionOn                  3     3       7775   46.02%   -0.000013        535   46.92%   -5.953271        710   49.01%   -0.009761       0       0       3       3   47.32%   -1.987681
+Rising -> ExpansionOn                   3     3       4186   47.78%    0.000010        237   45.15%   -5.968354        350   48.57%    0.022314       2       0       1       3   47.17%   -1.982010
+
+Most Replicated Positive Transitions
+====================================
+Rank Transition                            Valid  PosCont  NegCont   MeanCont    MeanMean5
+   1 ExpansionOn -> CompressionOn              3        2        1    50.61%     1.167059
+   2 ExpansionOn -> ExpansionOff               3        1        2    50.11%     0.790986
+   3 CompressionOff -> CompressionOn           3        1        2    48.94%     0.845660
+   4 DissipationOff -> DissipationOn           3        1        2    48.71%    -1.227694
+   5 Peak -> Falling                           3        1        2    48.41%    -1.903181
+   6 CompressionOn -> ExpansionOn              3        1        2    48.20%    -2.009807
+   7 Contained -> ExpansionOn                  3        1        2    48.16%    -1.675019
+   8 Falling -> Rising                         3        1        2    47.92%    -2.212408
+   9 Peak -> ExpansionOn                       3        1        2    45.47%    -5.569230
+  10 Accepted -> Contained                     3        0        3    48.37%     0.612574
+  11 CompressionOn -> DissipationOn            3        0        3    48.28%    -1.813569
+  12 CompressionOn -> CompressionOff           3        0        3    47.62%    -1.716054
+  13 Contained -> Accepted                     3        0        3    47.51%    -0.939405
+  14 DissipationOn -> DissipationOff           3        0        3    47.44%    -0.940751
+  15 DissipationOff -> ExpansionOn             3        0        3    47.35%    -2.391934
+  16 Falling -> ExpansionOn                    3        0        3    47.32%    -1.987681
+  17 Rising -> ExpansionOn                     3        0        3    47.17%    -1.982010
+  18 ExpansionOff -> ExpansionOn               3        0        3    47.13%    -1.989634
+  19 DissipationOn -> ExpansionOn              3        0        3    46.61%    -2.348213
+  20 Climactic -> Falling                      2        0        2    45.44%    -0.063471
+  21 Accepted -> ExpansionOn                   3        0        3    45.15%    -2.786483
+  22 Rising -> Peak                            3        0        3    44.62%    -1.884396
+  23 Peak -> Climactic                         2        0        2    42.07%     0.111080
+
+Most Replicated Negative Transitions
+====================================
+Rank Transition                            Valid  PosCont  NegCont   MeanCont    MeanMean5
+   1 Rising -> Peak                            3        0        3    44.62%    -1.884396
+   2 Accepted -> ExpansionOn                   3        0        3    45.15%    -2.786483
+   3 DissipationOn -> ExpansionOn              3        0        3    46.61%    -2.348213
+   4 ExpansionOff -> ExpansionOn               3        0        3    47.13%    -1.989634
+   5 Rising -> ExpansionOn                     3        0        3    47.17%    -1.982010
+   6 Falling -> ExpansionOn                    3        0        3    47.32%    -1.987681
+   7 DissipationOff -> ExpansionOn             3        0        3    47.35%    -2.391934
+   8 DissipationOn -> DissipationOff           3        0        3    47.44%    -0.940751
+   9 Contained -> Accepted                     3        0        3    47.51%    -0.939405
+  10 CompressionOn -> CompressionOff           3        0        3    47.62%    -1.716054
+  11 CompressionOn -> DissipationOn            3        0        3    48.28%    -1.813569
+  12 Accepted -> Contained                     3        0        3    48.37%     0.612574
+  13 Peak -> Climactic                         2        0        2    42.07%     0.111080
+  14 Climactic -> Falling                      2        0        2    45.44%    -0.063471
+  15 Peak -> ExpansionOn                       3        1        2    45.47%    -5.569230
+  16 Falling -> Rising                         3        1        2    47.92%    -2.212408
+  17 Contained -> ExpansionOn                  3        1        2    48.16%    -1.675019
+  18 CompressionOn -> ExpansionOn              3        1        2    48.20%    -2.009807
+  19 Peak -> Falling                           3        1        2    48.41%    -1.903181
+  20 DissipationOff -> DissipationOn           3        1        2    48.71%    -1.227694
+  21 CompressionOff -> CompressionOn           3        1        2    48.94%     0.845660
+  22 ExpansionOn -> ExpansionOff               3        1        2    50.11%     0.790986
+  23 ExpansionOn -> CompressionOn              3        2        1    50.61%     1.167059
+
+Most Stable Positive Transitions
+================================
+Rank Transition                            Valid  PosCont  NegCont   MeanCont    MeanMean5
+
+Most Stable Negative Transitions
+================================
+Rank Transition                            Valid  PosCont  NegCont   MeanCont    MeanMean5
+   1 Rising -> Peak                            3        0        3    44.62%    -1.884396
+   2 Accepted -> ExpansionOn                   3        0        3    45.15%    -2.786483
+   3 DissipationOn -> ExpansionOn              3        0        3    46.61%    -2.348213
+   4 ExpansionOff -> ExpansionOn               3        0        3    47.13%    -1.989634
+   5 Rising -> ExpansionOn                     3        0        3    47.17%    -1.982010
+   6 Falling -> ExpansionOn                    3        0        3    47.32%    -1.987681
+   7 DissipationOff -> ExpansionOn             3        0        3    47.35%    -2.391934
+   8 DissipationOn -> DissipationOff           3        0        3    47.44%    -0.940751
+   9 Contained -> Accepted                     3        0        3    47.51%    -0.939405
+  10 CompressionOn -> CompressionOff           3        0        3    47.62%    -1.716054
+  11 CompressionOn -> DissipationOn            3        0        3    48.28%    -1.813569
+  12 Accepted -> Contained                     3        0        3    48.37%     0.612574
+
+Cross-Instrument Research Notes
+===============================
+- Transitions replicating positively in at least two valid instruments: ExpansionOn -> CompressionOn.
+- Transitions replicating negatively in at least two valid instruments: Falling -> Rising, Rising -> Peak, Peak -> Falling, Peak -> Climactic, Climactic -> Falling, Contained -> Accepted, Accepted -> Contained, CompressionOn -> ExpansionOn, CompressionOff -> CompressionOn, ExpansionOff -> ExpansionOn, CompressionOn -> CompressionOff, ExpansionOn -> ExpansionOff, DissipationOff -> DissipationOn, DissipationOn -> DissipationOff, DissipationOn -> ExpansionOn, DissipationOff -> ExpansionOn, CompressionOn -> DissipationOn, Contained -> ExpansionOn, Accepted -> ExpansionOn, Peak -> ExpansionOn, Falling -> ExpansionOn, Rising -> ExpansionOn.
+- DissipationOn -> ExpansionOn: valid instruments=3, positive continuation instruments=0, negative continuation instruments=3, MeanContRateAcrossValid=46.61%.
+- CompressionOn -> ExpansionOn: valid instruments=3, positive continuation instruments=1, negative continuation instruments=2, MeanContRateAcrossValid=48.20%.
+- Contained -> Accepted: valid instruments=3, positive continuation instruments=0, negative continuation instruments=3, MeanContRateAcrossValid=47.51%.
+- Stability versus single evidence events is not computed in this transition-only report.

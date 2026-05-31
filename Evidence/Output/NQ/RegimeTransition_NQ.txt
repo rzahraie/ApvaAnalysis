@@ -1,0 +1,356 @@
+APVA Regime Transition Study v0.1 - NQ
+======================================
+Instrument: NQ
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\NQ\NQ_5 Minute_apva_bar_evidence_v01.csv
+Total rows: 1930
+Valid polarity rows: 1921
+Total studied transition observations: 8825
+Transitions compare prior-bar source state to current-bar target state.
+CompressionOn -> ExpansionOn is recorded once although it appears in two requested categories.
+
+Transition Consequence Table
+============================
+Transition                              Count   MeanDRFwd5   MedianDRFwd5  ContRate5  FailRate5  FlatRate5
+Falling -> Rising                         416    -6.587740      -2.500000    46.88%    52.64%     0.48%
+Rising -> Peak                             62    -5.318548      -5.375000    45.16%    54.84%     0.00%
+Peak -> Falling                           158    -5.606013      -0.375000    48.73%    50.63%     0.63%
+Peak -> Climactic                          21    -5.785714      -1.000000    47.62%    52.38%     0.00%
+Climactic -> Falling                       23    -4.304348      -4.750000    39.13%    60.87%     0.00%
+Contained -> Accepted                     360    -2.779861      -0.500000    48.61%    50.56%     0.83%
+Accepted -> Contained                     352     1.789773      -0.500000    49.15%    50.57%     0.28%
+CompressionOn -> ExpansionOn              574    -6.081882      -1.875000    47.74%    51.74%     0.52%
+ExpansionOn -> CompressionOn              543     3.500000       6.000000    55.62%    44.20%     0.18%
+CompressionOff -> CompressionOn           484     2.545971       2.125000    51.65%    48.14%     0.21%
+ExpansionOff -> ExpansionOn               573    -5.980366      -2.500000    46.60%    52.88%     0.52%
+CompressionOn -> CompressionOff           487    -5.153491      -1.250000    47.84%    51.54%     0.62%
+ExpansionOn -> ExpansionOff               569     2.384886       5.500000    55.01%    44.82%     0.18%
+DissipationOff -> DissipationOn           467    -3.672377       0.500000    50.32%    49.25%     0.43%
+DissipationOn -> DissipationOff           469    -2.754797      -1.500000    48.83%    50.75%     0.43%
+DissipationOn -> ExpansionOn              580    -7.054310      -4.250000    45.34%    53.97%     0.69%
+DissipationOff -> ExpansionOn             404    -7.162748      -3.875000    46.53%    53.22%     0.25%
+CompressionOn -> DissipationOn            517    -5.451161      -1.000000    48.94%    50.87%     0.19%
+Contained -> ExpansionOn                  388    -5.085052      -1.000000    48.71%    50.52%     0.77%
+Accepted -> ExpansionOn                   425    -8.265294      -7.000000    43.53%    56.00%     0.47%
+Peak -> ExpansionOn                       124   -16.725806     -11.500000    40.32%    58.87%     0.81%
+Falling -> ExpansionOn                    535    -5.953271      -2.750000    46.92%    52.71%     0.37%
+Rising -> ExpansionOn                     237    -5.968354      -5.750000    45.15%    54.43%     0.42%
+
+All-Horizon Appendix
+====================
+
+Falling -> Rising
+-----------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       417    -1.089329     1.500000    53.72%    45.80%     0.48%
+DRFwd3       416    -4.362380    -2.375000    47.60%    51.68%     0.72%
+DRFwd5       416    -6.587740    -2.500000    46.88%    52.64%     0.48%
+DRFwd10      415    -8.231928    -1.500000    48.43%    51.57%     0.00%
+DRFwd20      413   -14.407990    -2.250000    47.46%    52.06%     0.48%
+
+Rising -> Peak
+--------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1        62     0.213710    -0.250000    48.39%    51.61%     0.00%
+DRFwd3        62    -4.254032    -2.500000    46.77%    51.61%     1.61%
+DRFwd5        62    -5.318548    -5.375000    45.16%    54.84%     0.00%
+DRFwd10       62    -1.971774    -1.000000    46.77%    53.23%     0.00%
+DRFwd20       61     9.745902     3.500000    50.82%    49.18%     0.00%
+
+Peak -> Falling
+---------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       158     1.387658     2.125000    51.90%    46.84%     1.27%
+DRFwd3       158     0.197785     0.875000    52.53%    47.47%     0.00%
+DRFwd5       158    -5.606013    -0.375000    48.73%    50.63%     0.63%
+DRFwd10      158    -5.219937    -7.750000    44.30%    55.70%     0.00%
+DRFwd20      158    -8.000000    -5.250000    48.73%    51.27%     0.00%
+
+Peak -> Climactic
+-----------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1        21    -8.357143    -6.250000    47.62%    52.38%     0.00%
+DRFwd3        21    -6.011905    -0.750000    42.86%    57.14%     0.00%
+DRFwd5        21    -5.785714    -1.000000    47.62%    52.38%     0.00%
+DRFwd10       21    -2.964286     7.750000    52.38%    47.62%     0.00%
+DRFwd20       20    37.825000     8.750000    50.00%    50.00%     0.00%
+
+Climactic -> Falling
+--------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1        23    -1.934783     5.000000    69.57%    30.43%     0.00%
+DRFwd3        23     4.500000     6.750000    60.87%    39.13%     0.00%
+DRFwd5        23    -4.304348    -4.750000    39.13%    60.87%     0.00%
+DRFwd10       22   -15.500000    15.125000    59.09%    40.91%     0.00%
+DRFwd20       22   -10.897727    12.125000    54.55%    45.45%     0.00%
+
+Contained -> Accepted
+---------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       361    -2.477147    -0.250000    49.58%    50.14%     0.28%
+DRFwd3       360    -3.572222    -1.000000    48.06%    51.67%     0.28%
+DRFwd5       360    -2.779861    -0.500000    48.61%    50.56%     0.83%
+DRFwd10      359    -1.843315     5.750000    54.04%    45.96%     0.00%
+DRFwd20      357    -1.887955     2.750000    50.98%    48.74%     0.28%
+
+Accepted -> Contained
+---------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       352     1.201705     2.250000    54.55%    45.17%     0.28%
+DRFwd3       352     0.673295     1.375000    51.42%    47.73%     0.85%
+DRFwd5       352     1.789773    -0.500000    49.15%    50.57%     0.28%
+DRFwd10      352     6.824574     4.000000    53.69%    46.31%     0.00%
+DRFwd20      350     9.702857     0.375000    50.57%    48.86%     0.57%
+
+CompressionOn -> ExpansionOn
+----------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       575    -1.275652     1.250000    52.87%    46.78%     0.35%
+DRFwd3       574    -3.004791    -0.375000    49.30%    50.17%     0.52%
+DRFwd5       574    -6.081882    -1.875000    47.74%    51.74%     0.52%
+DRFwd10      572    -7.224213    -1.375000    49.30%    50.70%     0.00%
+DRFwd20      568    -7.819982    -2.750000    48.06%    51.58%     0.35%
+
+ExpansionOn -> CompressionOn
+----------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       544     2.136949     2.375000    54.23%    45.22%     0.55%
+DRFwd3       544     3.246783     3.125000    54.23%    44.85%     0.92%
+DRFwd5       543     3.500000     6.000000    55.62%    44.20%     0.18%
+DRFwd10      542     1.832103     8.250000    53.32%    46.49%     0.18%
+DRFwd20      538    -0.423327    -1.000000    48.88%    50.74%     0.37%
+
+CompressionOff -> CompressionOn
+-------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       484     0.868285     1.250000    53.51%    45.87%     0.62%
+DRFwd3       484     1.739153     1.500000    52.48%    46.69%     0.83%
+DRFwd5       484     2.545971     2.125000    51.65%    48.14%     0.21%
+DRFwd10      483     2.688923     5.750000    53.21%    46.58%     0.21%
+DRFwd20      481     0.588358    -2.750000    48.02%    51.56%     0.42%
+
+ExpansionOff -> ExpansionOn
+---------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       574    -1.699913     1.500000    53.31%    46.52%     0.17%
+DRFwd3       573    -3.057592    -0.500000    49.21%    50.26%     0.52%
+DRFwd5       573    -5.980366    -2.500000    46.60%    52.88%     0.52%
+DRFwd10      571    -4.760946    -1.500000    49.04%    50.96%     0.00%
+DRFwd20      567    -6.835097    -1.000000    48.68%    50.79%     0.53%
+
+CompressionOn -> CompressionOff
+-------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       488    -1.549693     1.250000    51.84%    47.95%     0.20%
+DRFwd3       487    -3.440965    -1.000000    48.67%    50.92%     0.41%
+DRFwd5       487    -5.153491    -1.250000    47.84%    51.54%     0.62%
+DRFwd10      486    -4.527778     1.250000    51.03%    48.97%     0.00%
+DRFwd20      484    -5.689050    -1.500000    48.97%    50.83%     0.21%
+
+ExpansionOn -> ExpansionOff
+---------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       571     2.387478     2.500000    54.47%    44.66%     0.88%
+DRFwd3       570     1.547368     2.750000    53.33%    45.61%     1.05%
+DRFwd5       569     2.384886     5.500000    55.01%    44.82%     0.18%
+DRFwd10      568     2.400088     6.750000    52.99%    46.83%     0.18%
+DRFwd20      564     3.175089     0.625000    50.53%    49.11%     0.35%
+
+DissipationOff -> DissipationOn
+-------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       469     1.248401     2.000000    54.16%    45.42%     0.43%
+DRFwd3       468    -1.105769     4.250000    54.49%    44.44%     1.07%
+DRFwd5       467    -3.672377     0.500000    50.32%    49.25%     0.43%
+DRFwd10      466     0.112124     4.625000    51.50%    48.28%     0.21%
+DRFwd20      462     0.795455    -1.375000    48.48%    51.08%     0.43%
+
+DissipationOn -> DissipationOff
+-------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       470    -0.310106     0.625000    51.06%    48.30%     0.64%
+DRFwd3       469    -2.979211    -0.750000    48.19%    51.39%     0.43%
+DRFwd5       469    -2.754797    -1.500000    48.83%    50.75%     0.43%
+DRFwd10      467     1.630621     3.250000    52.68%    47.32%     0.00%
+DRFwd20      463    -4.554536    -0.500000    49.24%    50.32%     0.43%
+
+DissipationOn -> ExpansionOn
+----------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       581    -1.832186     0.250000    50.43%    49.23%     0.34%
+DRFwd3       580    -5.133190    -2.375000    47.41%    52.24%     0.34%
+DRFwd5       580    -7.054310    -4.250000    45.34%    53.97%     0.69%
+DRFwd10      579    -2.410190    -1.250000    49.57%    50.43%     0.00%
+DRFwd20      575    -4.297826     0.250000    50.26%    49.22%     0.52%
+
+DissipationOff -> ExpansionOn
+-----------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       404    -0.215965     1.750000    53.71%    46.29%     0.00%
+DRFwd3       404    -1.897277    -0.500000    49.26%    50.25%     0.50%
+DRFwd5       404    -7.162748    -3.875000    46.53%    53.22%     0.25%
+DRFwd10      403   -10.710298    -1.500000    48.39%    51.36%     0.25%
+DRFwd20      401   -10.072319    -7.000000    46.13%    53.87%     0.00%
+
+CompressionOn -> DissipationOn
+------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       518    -0.629826     0.250000    50.19%    49.81%     0.00%
+DRFwd3       518    -3.674710    -0.125000    49.81%    50.00%     0.19%
+DRFwd5       517    -5.451161    -1.000000    48.94%    50.87%     0.19%
+DRFwd10      515    -4.665534    -1.500000    49.13%    50.87%     0.00%
+DRFwd20      513    -6.220760    -3.500000    48.15%    51.66%     0.19%
+
+Contained -> ExpansionOn
+------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       389    -1.758355     0.750000    51.16%    48.33%     0.51%
+DRFwd3       388    -3.428479     0.250000    50.00%    49.48%     0.52%
+DRFwd5       388    -5.085052    -1.000000    48.71%    50.52%     0.77%
+DRFwd10      387    -4.586563     1.250000    51.16%    48.84%     0.00%
+DRFwd20      383    -6.767624    -0.250000    49.35%    50.13%     0.52%
+
+Accepted -> ExpansionOn
+-----------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       425    -0.808824     0.250000    50.12%    49.88%     0.00%
+DRFwd3       425    -4.907647    -3.250000    46.35%    53.41%     0.24%
+DRFwd5       425    -8.265294    -7.000000    43.53%    56.00%     0.47%
+DRFwd10      425    -3.433529    -1.750000    48.47%    51.29%     0.24%
+DRFwd20      423    -4.514184    -1.000000    49.41%    50.35%     0.24%
+
+Peak -> ExpansionOn
+-------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       124     1.717742     3.125000    55.65%    44.35%     0.00%
+DRFwd3       124    -4.925403    -0.625000    48.39%    50.81%     0.81%
+DRFwd5       124   -16.725806   -11.500000    40.32%    58.87%     0.81%
+DRFwd10      124   -10.840726    -6.125000    45.97%    54.03%     0.00%
+DRFwd20      122    -5.077869    -6.250000    50.00%    50.00%     0.00%
+
+Falling -> ExpansionOn
+----------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       536    -1.422575     1.500000    53.17%    46.46%     0.37%
+DRFwd3       535    -3.850935    -1.000000    48.79%    50.65%     0.56%
+DRFwd5       535    -5.953271    -2.750000    46.92%    52.71%     0.37%
+DRFwd10      533    -5.169794    -0.750000    49.53%    50.47%     0.00%
+DRFwd20      531   -10.766478    -2.250000    48.02%    51.41%     0.56%
+
+Rising -> ExpansionOn
+---------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       237    -0.835443    -0.750000    48.52%    51.48%     0.00%
+DRFwd3       237    -3.469409    -3.000000    45.57%    54.43%     0.00%
+DRFwd5       237    -5.968354    -5.750000    45.15%    54.43%     0.42%
+DRFwd10      237    -5.561181    -3.750000    47.26%    52.32%     0.42%
+DRFwd20      236    -6.011653    -6.500000    46.61%    53.39%     0.00%
+
+Top 25 Transitions by MeanDRFwd5
+================================
+Rank Transition                              Count   MeanDRFwd5  ContRate5  FailRate5
+   1 ExpansionOn -> CompressionOn              543     3.500000    55.62%    44.20%
+   2 CompressionOff -> CompressionOn           484     2.545971    51.65%    48.14%
+   3 ExpansionOn -> ExpansionOff               569     2.384886    55.01%    44.82%
+   4 Accepted -> Contained                     352     1.789773    49.15%    50.57%
+   5 DissipationOn -> DissipationOff           469    -2.754797    48.83%    50.75%
+   6 Contained -> Accepted                     360    -2.779861    48.61%    50.56%
+   7 DissipationOff -> DissipationOn           467    -3.672377    50.32%    49.25%
+   8 Contained -> ExpansionOn                  388    -5.085052    48.71%    50.52%
+   9 CompressionOn -> CompressionOff           487    -5.153491    47.84%    51.54%
+  10 Rising -> Peak                             62    -5.318548    45.16%    54.84%
+  11 CompressionOn -> DissipationOn            517    -5.451161    48.94%    50.87%
+  12 Peak -> Falling                           158    -5.606013    48.73%    50.63%
+  13 Falling -> ExpansionOn                    535    -5.953271    46.92%    52.71%
+  14 Rising -> ExpansionOn                     237    -5.968354    45.15%    54.43%
+  15 ExpansionOff -> ExpansionOn               573    -5.980366    46.60%    52.88%
+  16 CompressionOn -> ExpansionOn              574    -6.081882    47.74%    51.74%
+  17 Falling -> Rising                         416    -6.587740    46.88%    52.64%
+  18 DissipationOn -> ExpansionOn              580    -7.054310    45.34%    53.97%
+  19 DissipationOff -> ExpansionOn             404    -7.162748    46.53%    53.22%
+  20 Accepted -> ExpansionOn                   425    -8.265294    43.53%    56.00%
+  21 Peak -> ExpansionOn                       124   -16.725806    40.32%    58.87%
+
+Bottom 25 Transitions by MeanDRFwd5
+===================================
+Rank Transition                              Count   MeanDRFwd5  ContRate5  FailRate5
+   1 Peak -> ExpansionOn                       124   -16.725806    40.32%    58.87%
+   2 Accepted -> ExpansionOn                   425    -8.265294    43.53%    56.00%
+   3 DissipationOff -> ExpansionOn             404    -7.162748    46.53%    53.22%
+   4 DissipationOn -> ExpansionOn              580    -7.054310    45.34%    53.97%
+   5 Falling -> Rising                         416    -6.587740    46.88%    52.64%
+   6 CompressionOn -> ExpansionOn              574    -6.081882    47.74%    51.74%
+   7 ExpansionOff -> ExpansionOn               573    -5.980366    46.60%    52.88%
+   8 Rising -> ExpansionOn                     237    -5.968354    45.15%    54.43%
+   9 Falling -> ExpansionOn                    535    -5.953271    46.92%    52.71%
+  10 Peak -> Falling                           158    -5.606013    48.73%    50.63%
+  11 CompressionOn -> DissipationOn            517    -5.451161    48.94%    50.87%
+  12 Rising -> Peak                             62    -5.318548    45.16%    54.84%
+  13 CompressionOn -> CompressionOff           487    -5.153491    47.84%    51.54%
+  14 Contained -> ExpansionOn                  388    -5.085052    48.71%    50.52%
+  15 DissipationOff -> DissipationOn           467    -3.672377    50.32%    49.25%
+  16 Contained -> Accepted                     360    -2.779861    48.61%    50.56%
+  17 DissipationOn -> DissipationOff           469    -2.754797    48.83%    50.75%
+  18 Accepted -> Contained                     352     1.789773    49.15%    50.57%
+  19 ExpansionOn -> ExpansionOff               569     2.384886    55.01%    44.82%
+  20 CompressionOff -> CompressionOn           484     2.545971    51.65%    48.14%
+  21 ExpansionOn -> CompressionOn              543     3.500000    55.62%    44.20%
+
+Top 25 Transitions by ContinuationRate5
+=======================================
+Rank Transition                              Count   MeanDRFwd5  ContRate5  FailRate5
+   1 ExpansionOn -> CompressionOn              543     3.500000    55.62%    44.20%
+   2 ExpansionOn -> ExpansionOff               569     2.384886    55.01%    44.82%
+   3 CompressionOff -> CompressionOn           484     2.545971    51.65%    48.14%
+   4 DissipationOff -> DissipationOn           467    -3.672377    50.32%    49.25%
+   5 Accepted -> Contained                     352     1.789773    49.15%    50.57%
+   6 CompressionOn -> DissipationOn            517    -5.451161    48.94%    50.87%
+   7 DissipationOn -> DissipationOff           469    -2.754797    48.83%    50.75%
+   8 Peak -> Falling                           158    -5.606013    48.73%    50.63%
+   9 Contained -> ExpansionOn                  388    -5.085052    48.71%    50.52%
+  10 Contained -> Accepted                     360    -2.779861    48.61%    50.56%
+  11 CompressionOn -> CompressionOff           487    -5.153491    47.84%    51.54%
+  12 CompressionOn -> ExpansionOn              574    -6.081882    47.74%    51.74%
+  13 Falling -> ExpansionOn                    535    -5.953271    46.92%    52.71%
+  14 Falling -> Rising                         416    -6.587740    46.88%    52.64%
+  15 ExpansionOff -> ExpansionOn               573    -5.980366    46.60%    52.88%
+  16 DissipationOff -> ExpansionOn             404    -7.162748    46.53%    53.22%
+  17 DissipationOn -> ExpansionOn              580    -7.054310    45.34%    53.97%
+  18 Rising -> Peak                             62    -5.318548    45.16%    54.84%
+  19 Rising -> ExpansionOn                     237    -5.968354    45.15%    54.43%
+  20 Accepted -> ExpansionOn                   425    -8.265294    43.53%    56.00%
+  21 Peak -> ExpansionOn                       124   -16.725806    40.32%    58.87%
+
+Top 25 Transitions by FailureRate5
+==================================
+Rank Transition                              Count   MeanDRFwd5  ContRate5  FailRate5
+   1 Peak -> ExpansionOn                       124   -16.725806    40.32%    58.87%
+   2 Accepted -> ExpansionOn                   425    -8.265294    43.53%    56.00%
+   3 Rising -> Peak                             62    -5.318548    45.16%    54.84%
+   4 Rising -> ExpansionOn                     237    -5.968354    45.15%    54.43%
+   5 DissipationOn -> ExpansionOn              580    -7.054310    45.34%    53.97%
+   6 DissipationOff -> ExpansionOn             404    -7.162748    46.53%    53.22%
+   7 ExpansionOff -> ExpansionOn               573    -5.980366    46.60%    52.88%
+   8 Falling -> ExpansionOn                    535    -5.953271    46.92%    52.71%
+   9 Falling -> Rising                         416    -6.587740    46.88%    52.64%
+  10 CompressionOn -> ExpansionOn              574    -6.081882    47.74%    51.74%
+  11 CompressionOn -> CompressionOff           487    -5.153491    47.84%    51.54%
+  12 CompressionOn -> DissipationOn            517    -5.451161    48.94%    50.87%
+  13 DissipationOn -> DissipationOff           469    -2.754797    48.83%    50.75%
+  14 Peak -> Falling                           158    -5.606013    48.73%    50.63%
+  15 Accepted -> Contained                     352     1.789773    49.15%    50.57%
+  16 Contained -> Accepted                     360    -2.779861    48.61%    50.56%
+  17 Contained -> ExpansionOn                  388    -5.085052    48.71%    50.52%
+  18 DissipationOff -> DissipationOn           467    -3.672377    50.32%    49.25%
+  19 CompressionOff -> CompressionOn           484     2.545971    51.65%    48.14%
+  20 ExpansionOn -> ExpansionOff               569     2.384886    55.01%    44.82%
+  21 ExpansionOn -> CompressionOn              543     3.500000    55.62%    44.20%
+
+Research Notes
+==============
+- Strongest positive MeanDRFwd5: ExpansionOn -> CompressionOn (3.500000, n=543).
+- Strongest negative MeanDRFwd5: Peak -> ExpansionOn (-16.725806, n=124).
+- DissipationOn -> ExpansionOn: MeanDRFwd5=-7.054310, ContinuationRate5=45.34%, n=580.
+- CompressionOn -> ExpansionOn: MeanDRFwd5=-6.081882, ContinuationRate5=47.74%, n=574.
+- Contained -> Accepted: MeanDRFwd5=-2.779861, ContinuationRate5=48.61%, n=360.
+- Falling -> Rising: MeanDRFwd5=-6.587740, ContinuationRate5=46.88%, n=416.
+- Transitions skipped from ranked tables because Count < 30: 2.
