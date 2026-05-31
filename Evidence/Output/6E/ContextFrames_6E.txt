@@ -1,0 +1,978 @@
+APVA Context Frames Study v0.1
+==============================
+Input: Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_OPEN_apva_bar_evidence_v01.csv
+Total rows: 35151
+Valid Black/Red polarity rows: 31014
+DRFwd > 0: continuation of terminal event-bar polarity
+DRFwd < 0: failure of terminal event-bar polarity
+Ranked-table minimum DRFwd5 samples: 30
+
+Frame Membership Counts
+=======================
+CompressionFrame                   5572
+ExpansionFrame                     3089
+DirectionalPersistenceFrame        1086
+AlternatingFrame                   2876
+NoNamedFrame                      24024
+
+Inside-Frame Direction-Relative Consequences
+============================================
+
+Frame: CompressionFrame
+-----------------------
+
+Event: AllBars
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      4373    -0.000008       0.000000       1865     1960      548    42.65%    44.82%    12.53%
+DRFwd3      4372     0.000002       0.000000       2057     2014      301    47.05%    46.07%     6.88%
+DRFwd5      4371    -0.000003       0.000000       2062     2070      239    47.17%    47.36%     5.47%
+DRFwd10     4371    -0.000022       0.000000       2052     2143      176    46.95%    49.03%     4.03%
+DRFwd20     4370    -0.000010       0.000000       2137     2125      108    48.90%    48.63%     2.47%
+
+Event: DissipationAny
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      1962    -0.000012       0.000000        854      910      198    43.53%    46.38%    10.09%
+DRFwd3      1961     0.000016       0.000000        935      898      128    47.68%    45.79%     6.53%
+DRFwd5      1961     0.000007       0.000000        955      916       90    48.70%    46.71%     4.59%
+DRFwd10     1961    -0.000011       0.000000        918      971       72    46.81%    49.52%     3.67%
+DRFwd20     1961     0.000011       0.000000        965      950       46    49.21%    48.44%     2.35%
+
+Event: DissipationContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      1619    -0.000003       0.000000        723      724      172    44.66%    44.72%    10.62%
+DRFwd3      1618     0.000022       0.000000        789      730       99    48.76%    45.12%     6.12%
+DRFwd5      1618     0.000005       0.000000        786      757       75    48.58%    46.79%     4.64%
+DRFwd10     1618    -0.000007       0.000000        750      807       61    46.35%    49.88%     3.77%
+DRFwd20     1618     0.000007       0.000000        789      791       38    48.76%    48.89%     2.35%
+
+Event: DissipationAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1        40    -0.000055      -0.000075         14       26        0    35.00%    65.00%     0.00%
+DRFwd3        40     0.000093       0.000100         22       14        4    55.00%    35.00%    10.00%
+DRFwd5        40     0.000098       0.000025         20       20        0    50.00%    50.00%     0.00%
+DRFwd10       40     0.000044       0.000175         22       14        4    55.00%    35.00%    10.00%
+DRFwd20       40     0.000303       0.000425         26       13        1    65.00%    32.50%     2.50%
+
+Event: ParticipationPeak
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       580    -0.000023       0.000000        267      253       60    46.03%    43.62%    10.34%
+DRFwd3       580    -0.000012       0.000000        265      268       47    45.69%    46.21%     8.10%
+DRFwd5       580    -0.000052      -0.000025        261      290       29    45.00%    50.00%     5.00%
+DRFwd10      580    -0.000050      -0.000050        256      306       18    44.14%    52.76%     3.10%
+DRFwd20      580    -0.000043       0.000000        281      282       17    48.45%    48.62%     2.93%
+
+Event: ParticipationClimactic
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       166    -0.000025       0.000000         72       75       19    43.37%    45.18%    11.45%
+DRFwd3       166    -0.000066      -0.000050         75       85        6    45.18%    51.20%     3.61%
+DRFwd5       166    -0.000033      -0.000050         74       84        8    44.58%    50.60%     4.82%
+DRFwd10      166    -0.000095      -0.000075         72       89        5    43.37%    53.61%     3.01%
+DRFwd20      166    -0.000024       0.000050         85       76        5    51.20%    45.78%     3.01%
+
+Event: PeakContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       442    -0.000029       0.000000        204      192       46    46.15%    43.44%    10.41%
+DRFwd3       442    -0.000041       0.000000        197      207       38    44.57%    46.83%     8.60%
+DRFwd5       442    -0.000082      -0.000050        190      230       22    42.99%    52.04%     4.98%
+DRFwd10      442    -0.000075      -0.000050        192      233       17    43.44%    52.71%     3.85%
+DRFwd20      442    -0.000073      -0.000025        209      221       12    47.29%    50.00%     2.71%
+
+Event: PeakAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1         7     0.000043      -0.000050          3        4        0    42.86%    57.14%     0.00%
+DRFwd3         7     0.000143       0.000100          4        3        0    57.14%    42.86%     0.00%
+DRFwd5         7     0.000143      -0.000150          3        4        0    42.86%    57.14%     0.00%
+DRFwd10        7     0.000264       0.000200          5        2        0    71.43%    28.57%     0.00%
+DRFwd20        7     0.000307       0.000400          6        1        0    85.71%    14.29%     0.00%
+
+Event: ClimacticContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       145    -0.000016       0.000000         62       65       18    42.76%    44.83%    12.41%
+DRFwd3       145    -0.000066      -0.000050         63       76        6    43.45%    52.41%     4.14%
+DRFwd5       145    -0.000024       0.000000         66       72        7    45.52%    49.66%     4.83%
+DRFwd10      145    -0.000116      -0.000050         62       78        5    42.76%    53.79%     3.45%
+DRFwd20      145    -0.000041       0.000050         74       66        5    51.03%    45.52%     3.45%
+
+Event: ClimacticAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1         0     0.000000       0.000000          0        0        0     0.00%     0.00%     0.00%
+DRFwd3         0     0.000000       0.000000          0        0        0     0.00%     0.00%     0.00%
+DRFwd5         0     0.000000       0.000000          0        0        0     0.00%     0.00%     0.00%
+DRFwd10        0     0.000000       0.000000          0        0        0     0.00%     0.00%     0.00%
+DRFwd20        0     0.000000       0.000000          0        0        0     0.00%     0.00%     0.00%
+
+Frame: ExpansionFrame
+---------------------
+
+Event: AllBars
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      2947    -0.000007       0.000000       1331     1347      269    45.16%    45.71%     9.13%
+DRFwd3      2947    -0.000030       0.000000       1326     1448      173    44.99%    49.13%     5.87%
+DRFwd5      2947    -0.000043      -0.000050       1316     1500      131    44.66%    50.90%     4.45%
+DRFwd10     2943    -0.000062      -0.000050       1303     1538      102    44.27%    52.26%     3.47%
+DRFwd20     2938    -0.000054      -0.000050       1375     1502       61    46.80%    51.12%     2.08%
+
+Event: DissipationAny
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      1479    -0.000015       0.000000        676      678      125    45.71%    45.84%     8.45%
+DRFwd3      1479    -0.000023       0.000000        656      724       99    44.35%    48.95%     6.69%
+DRFwd5      1479    -0.000039      -0.000050        662      761       56    44.76%    51.45%     3.79%
+DRFwd10     1477    -0.000085      -0.000100        650      785       42    44.01%    53.15%     2.84%
+DRFwd20     1476    -0.000072      -0.000050        689      757       30    46.68%    51.29%     2.03%
+
+Event: DissipationContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       568    -0.000014       0.000000        260      262       46    45.77%    46.13%     8.10%
+DRFwd3       568    -0.000015       0.000000        261      274       33    45.95%    48.24%     5.81%
+DRFwd5       568    -0.000024      -0.000050        263      286       19    46.30%    50.35%     3.35%
+DRFwd10      568    -0.000065      -0.000050        253      300       15    44.54%    52.82%     2.64%
+DRFwd20      568    -0.000048       0.000000        277      279       12    48.77%    49.12%     2.11%
+
+Event: DissipationAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       859    -0.000018       0.000000        386      400       73    44.94%    46.57%     8.50%
+DRFwd3       859    -0.000027       0.000000        376      424       59    43.77%    49.36%     6.87%
+DRFwd5       859    -0.000048      -0.000050        376      448       35    43.77%    52.15%     4.07%
+DRFwd10      857    -0.000096      -0.000100        375      457       25    43.76%    53.33%     2.92%
+DRFwd20      856    -0.000079      -0.000100        389      451       16    45.44%    52.69%     1.87%
+
+Event: ParticipationPeak
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      1144    -0.000008       0.000000        507      523      114    44.32%    45.72%     9.97%
+DRFwd3      1144    -0.000026       0.000000        505      567       72    44.14%    49.56%     6.29%
+DRFwd5      1144    -0.000047      -0.000050        498      587       59    43.53%    51.31%     5.16%
+DRFwd10     1141    -0.000095      -0.000100        494      609       38    43.30%    53.37%     3.33%
+DRFwd20     1140    -0.000046      -0.000050        544      574       22    47.72%    50.35%     1.93%
+
+Event: ParticipationClimactic
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       775    -0.000007       0.000000        360      361       54    46.45%    46.58%     6.97%
+DRFwd3       775    -0.000059      -0.000050        350      391       34    45.16%    50.45%     4.39%
+DRFwd5       775    -0.000071      -0.000050        334      403       38    43.10%    52.00%     4.90%
+DRFwd10      775    -0.000061      -0.000100        334      413       28    43.10%    53.29%     3.61%
+DRFwd20      775    -0.000126      -0.000100        350      410       15    45.16%    52.90%     1.94%
+
+Event: PeakContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       336    -0.000022       0.000000        154      146       36    45.83%    43.45%    10.71%
+DRFwd3       336    -0.000041      -0.000050        145      173       18    43.15%    51.49%     5.36%
+DRFwd5       336    -0.000070      -0.000050        147      175       14    43.75%    52.08%     4.17%
+DRFwd10      336    -0.000118      -0.000100        149      178        9    44.35%    52.98%     2.68%
+DRFwd20      336    -0.000089      -0.000050        158      169        9    47.02%    50.30%     2.68%
+
+Event: PeakAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       653    -0.000003       0.000000        287      306       60    43.95%    46.86%     9.19%
+DRFwd3       653    -0.000019       0.000000        291      320       42    44.56%    49.00%     6.43%
+DRFwd5       653    -0.000032      -0.000050        287      330       36    43.95%    50.54%     5.51%
+DRFwd10      651    -0.000089      -0.000100        276      352       23    42.40%    54.07%     3.53%
+DRFwd20      650    -0.000032      -0.000050        314      326       10    48.31%    50.15%     1.54%
+
+Event: ClimacticContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       209     0.000072       0.000050        107       83       19    51.20%    39.71%     9.09%
+DRFwd3       209     0.000051       0.000000        103       96       10    49.28%    45.93%     4.78%
+DRFwd5       209    -0.000017      -0.000100         89      109       11    42.58%    52.15%     5.26%
+DRFwd10      209    -0.000051      -0.000100         86      117        6    41.15%    55.98%     2.87%
+DRFwd20      209    -0.000110      -0.000100         94      113        2    44.98%    54.07%     0.96%
+
+Event: ClimacticAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       497    -0.000033      -0.000050        222      250       25    44.67%    50.30%     5.03%
+DRFwd3       497    -0.000102      -0.000050        217      261       19    43.66%    52.52%     3.82%
+DRFwd5       497    -0.000083      -0.000050        212      259       26    42.66%    52.11%     5.23%
+DRFwd10      497    -0.000059      -0.000100        219      258       20    44.06%    51.91%     4.02%
+DRFwd20      497    -0.000089      -0.000100        231      256       10    46.48%    51.51%     2.01%
+
+Frame: DirectionalPersistenceFrame
+----------------------------------
+
+Event: AllBars
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      1086    -0.000032      -0.000050        441      548       97    40.61%    50.46%     8.93%
+DRFwd3      1086    -0.000072      -0.000050        442      588       56    40.70%    54.14%     5.16%
+DRFwd5      1086    -0.000090      -0.000050        445      587       54    40.98%    54.05%     4.97%
+DRFwd10     1086    -0.000098      -0.000050        491      559       36    45.21%    51.47%     3.31%
+DRFwd20     1086    -0.000159      -0.000100        491      582       13    45.21%    53.59%     1.20%
+
+Event: DissipationAny
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       557    -0.000041      -0.000050        223      287       47    40.04%    51.53%     8.44%
+DRFwd3       557    -0.000090      -0.000050        214      313       30    38.42%    56.19%     5.39%
+DRFwd5       557    -0.000104      -0.000050        227      303       27    40.75%    54.40%     4.85%
+DRFwd10      557    -0.000131      -0.000050        242      298       17    43.45%    53.50%     3.05%
+DRFwd20      557    -0.000171      -0.000100        253      297        7    45.42%    53.32%     1.26%
+
+Event: DissipationContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       156    -0.000075      -0.000100         59       89        8    37.82%    57.05%     5.13%
+DRFwd3       156    -0.000115      -0.000150         56       91        9    35.90%    58.33%     5.77%
+DRFwd5       156    -0.000144      -0.000100         59       89        8    37.82%    57.05%     5.13%
+DRFwd10      156    -0.000177      -0.000100         58       91        7    37.18%    58.33%     4.49%
+DRFwd20      156    -0.000273      -0.000075         71       80        5    45.51%    51.28%     3.21%
+
+Event: DissipationAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       386    -0.000026       0.000000        159      191       36    41.19%    49.48%     9.33%
+DRFwd3       386    -0.000079      -0.000050        154      211       21    39.90%    54.66%     5.44%
+DRFwd5       386    -0.000088      -0.000050        162      205       19    41.97%    53.11%     4.92%
+DRFwd10      386    -0.000104      -0.000050        179      198        9    46.37%    51.30%     2.33%
+DRFwd20      386    -0.000129      -0.000100        175      209        2    45.34%    54.15%     0.52%
+
+Event: ParticipationPeak
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       292    -0.000021       0.000000        120      145       27    41.10%    49.66%     9.25%
+DRFwd3       292    -0.000046      -0.000050        129      150       13    44.18%    51.37%     4.45%
+DRFwd5       292    -0.000091      -0.000050        127      151       14    43.49%    51.71%     4.79%
+DRFwd10      292    -0.000108      -0.000050        132      150       10    45.21%    51.37%     3.42%
+DRFwd20      292    -0.000156      -0.000100        134      157        1    45.89%    53.77%     0.34%
+
+Event: ParticipationClimactic
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       188    -0.000037      -0.000050         78       99       11    41.49%    52.66%     5.85%
+DRFwd3       188    -0.000107      -0.000100         75      105        8    39.89%    55.85%     4.26%
+DRFwd5       188    -0.000136      -0.000125         68      111        9    36.17%    59.04%     4.79%
+DRFwd10      188    -0.000054      -0.000125         80      105        3    42.55%    55.85%     1.60%
+DRFwd20      188    -0.000268      -0.000250         80      106        2    42.55%    56.38%     1.06%
+
+Event: PeakContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1        57     0.000010       0.000050         29       26        2    50.88%    45.61%     3.51%
+DRFwd3        57     0.000045       0.000100         30       26        1    52.63%    45.61%     1.75%
+DRFwd5        57    -0.000044       0.000000         25       28        4    43.86%    49.12%     7.02%
+DRFwd10       57    -0.000052      -0.000050         26       29        2    45.61%    50.88%     3.51%
+DRFwd20       57    -0.000234      -0.000350         24       32        1    42.11%    56.14%     1.75%
+
+Event: PeakAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       215    -0.000029      -0.000050         82      111       22    38.14%    51.63%    10.23%
+DRFwd3       215    -0.000064      -0.000050         90      113       12    41.86%    52.56%     5.58%
+DRFwd5       215    -0.000097      -0.000050         94      111       10    43.72%    51.63%     4.65%
+DRFwd10      215    -0.000100      -0.000050        100      108        7    46.51%    50.23%     3.26%
+DRFwd20      215    -0.000126      -0.000050        103      112        0    47.91%    52.09%     0.00%
+
+Event: ClimacticContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1        28     0.000079       0.000050         15       13        0    53.57%    46.43%     0.00%
+DRFwd3        28    -0.000088      -0.000200          9       17        2    32.14%    60.71%     7.14%
+DRFwd5        28    -0.000166      -0.000100         11       16        1    39.29%    57.14%     3.57%
+DRFwd10       28    -0.000091      -0.000125         11       17        0    39.29%    60.71%     0.00%
+DRFwd20       28    -0.000261      -0.000125         12       15        1    42.86%    53.57%     3.57%
+
+Event: ClimacticAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       154    -0.000061      -0.000100         60       84       10    38.96%    54.55%     6.49%
+DRFwd3       154    -0.000121      -0.000100         63       86        5    40.91%    55.84%     3.25%
+DRFwd5       154    -0.000137      -0.000150         54       92        8    35.06%    59.74%     5.19%
+DRFwd10      154    -0.000049      -0.000125         66       85        3    42.86%    55.19%     1.95%
+DRFwd20      154    -0.000275      -0.000300         65       88        1    42.21%    57.14%     0.65%
+
+Frame: AlternatingFrame
+-----------------------
+
+Event: AllBars
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      2876    -0.000011       0.000000       1254     1344      278    43.60%    46.73%     9.67%
+DRFwd3      2876    -0.000005       0.000000       1323     1369      184    46.00%    47.60%     6.40%
+DRFwd5      2876    -0.000008       0.000000       1364     1385      127    47.43%    48.16%     4.42%
+DRFwd10     2875    -0.000012       0.000000       1381     1402       92    48.03%    48.77%     3.20%
+DRFwd20     2875    -0.000019       0.000000       1400     1399       76    48.70%    48.66%     2.64%
+
+Event: DissipationAny
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      1329    -0.000007       0.000000        596      608      125    44.85%    45.75%     9.41%
+DRFwd3      1329    -0.000002       0.000000        612      632       85    46.05%    47.55%     6.40%
+DRFwd5      1329    -0.000003       0.000000        655      627       47    49.29%    47.18%     3.54%
+DRFwd10     1329    -0.000009       0.000000        644      646       39    48.46%    48.61%     2.93%
+DRFwd20     1329    -0.000048       0.000000        646      662       21    48.61%    49.81%     1.58%
+
+Event: DissipationContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       840     0.000000       0.000000        393      363       84    46.79%    43.21%    10.00%
+DRFwd3       840     0.000016       0.000000        409      382       49    48.69%    45.48%     5.83%
+DRFwd5       840     0.000019       0.000050        433      381       26    51.55%    45.36%     3.10%
+DRFwd10      840     0.000005       0.000050        423      394       23    50.36%    46.90%     2.74%
+DRFwd20      840    -0.000048       0.000000        411      415       14    48.93%    49.40%     1.67%
+
+Event: DissipationAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       312    -0.000011       0.000000        131      153       28    41.99%    49.04%     8.97%
+DRFwd3       312    -0.000010      -0.000050        132      157       23    42.31%    50.32%     7.37%
+DRFwd5       312    -0.000025       0.000000        149      152       11    47.76%    48.72%     3.53%
+DRFwd10      312    -0.000017       0.000000        148      154       10    47.44%    49.36%     3.21%
+DRFwd20      312    -0.000011      -0.000050        150      159        3    48.08%    50.96%     0.96%
+
+Event: ParticipationPeak
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       500    -0.000015       0.000000        218      237       45    43.60%    47.40%     9.00%
+DRFwd3       500     0.000005       0.000000        221      235       44    44.20%    47.00%     8.80%
+DRFwd5       500    -0.000029       0.000000        232      246       22    46.40%    49.20%     4.40%
+DRFwd10      499    -0.000006       0.000000        246      239       14    49.30%    47.90%     2.81%
+DRFwd20      499    -0.000010       0.000050        251      230       18    50.30%    46.09%     3.61%
+
+Event: ParticipationClimactic
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       223    -0.000041      -0.000050         92      119       12    41.26%    53.36%     5.38%
+DRFwd3       223    -0.000065       0.000000        104      111        8    46.64%    49.78%     3.59%
+DRFwd5       223    -0.000038      -0.000100         96      117       10    43.05%    52.47%     4.48%
+DRFwd10      223     0.000007      -0.000100         99      122        2    44.39%    54.71%     0.90%
+DRFwd20      223     0.000016       0.000050        116      102        5    52.02%    45.74%     2.24%
+
+Event: PeakContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       249    -0.000013       0.000000        109      116       24    43.78%    46.59%     9.64%
+DRFwd3       249     0.000015       0.000000        120      110       19    48.19%    44.18%     7.63%
+DRFwd5       249    -0.000001       0.000000        123      117        9    49.40%    46.99%     3.61%
+DRFwd10      249     0.000014       0.000050        131      113        5    52.61%    45.38%     2.01%
+DRFwd20      249    -0.000027       0.000100        133      112        4    53.41%    44.98%     1.61%
+
+Event: PeakAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       161    -0.000029       0.000000         70       80       11    43.48%    49.69%     6.83%
+DRFwd3       161    -0.000008       0.000000         62       78       21    38.51%    48.45%    13.04%
+DRFwd5       161    -0.000081      -0.000050         67       85        9    41.61%    52.80%     5.59%
+DRFwd10      161    -0.000094      -0.000100         66       88        7    40.99%    54.66%     4.35%
+DRFwd20      161    -0.000067      -0.000050         71       83        7    44.10%    51.55%     4.35%
+
+Event: ClimacticContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1        94    -0.000022      -0.000050         39       50        5    41.49%    53.19%     5.32%
+DRFwd3        94     0.000032       0.000100         54       38        2    57.45%    40.43%     2.13%
+DRFwd5        94     0.000062       0.000000         43       46        5    45.74%    48.94%     5.32%
+DRFwd10       94     0.000125       0.000025         47       46        1    50.00%    48.94%     1.06%
+DRFwd20       94     0.000190       0.000225         54       38        2    57.45%    40.43%     2.13%
+
+Event: ClimacticAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1        95    -0.000068      -0.000100         37       53        5    38.95%    55.79%     5.26%
+DRFwd3        95    -0.000164      -0.000100         38       52        5    40.00%    54.74%     5.26%
+DRFwd5        95    -0.000119      -0.000150         38       53        4    40.00%    55.79%     4.21%
+DRFwd10       95    -0.000040      -0.000150         41       53        1    43.16%    55.79%     1.05%
+DRFwd20       95     0.000034       0.000100         51       41        3    53.68%    43.16%     3.16%
+
+Frame: NoNamedFrame
+-------------------
+
+Event: AllBars
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1     21207    -0.000008       0.000000       9108     9753     2346    42.95%    45.99%    11.06%
+DRFwd3     21206    -0.000010       0.000000       9612    10231     1363    45.33%    48.25%     6.43%
+DRFwd5     21206    -0.000008       0.000000       9830    10279     1097    46.35%    48.47%     5.17%
+DRFwd10    21205    -0.000009       0.000000      10147    10309      749    47.85%    48.62%     3.53%
+DRFwd20    21201    -0.000012       0.000000      10380    10320      501    48.96%    48.68%     2.36%
+
+Event: DissipationAny
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1     10473    -0.000011       0.000000       4498     4875     1100    42.95%    46.55%    10.50%
+DRFwd3     10472    -0.000012       0.000000       4793     5018      661    45.77%    47.92%     6.31%
+DRFwd5     10472    -0.000013       0.000000       4869     5083      520    46.50%    48.54%     4.97%
+DRFwd10    10472    -0.000011       0.000000       5055     5059      358    48.27%    48.31%     3.42%
+DRFwd20    10471    -0.000024       0.000000       5162     5075      234    49.30%    48.47%     2.23%
+
+Event: DissipationContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      3595    -0.000013       0.000000       1569     1665      361    43.64%    46.31%    10.04%
+DRFwd3      3595    -0.000010       0.000000       1654     1728      213    46.01%    48.07%     5.92%
+DRFwd5      3595    -0.000020       0.000000       1664     1743      188    46.29%    48.48%     5.23%
+DRFwd10     3595    -0.000003       0.000000       1748     1739      108    48.62%    48.37%     3.00%
+DRFwd20     3595    -0.000030       0.000000       1777     1734       84    49.43%    48.23%     2.34%
+
+Event: DissipationAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      6180    -0.000011       0.000000       2626     2884      670    42.49%    46.67%    10.84%
+DRFwd3      6179    -0.000013       0.000000       2824     2950      405    45.70%    47.74%     6.55%
+DRFwd5      6179    -0.000008       0.000000       2881     3000      298    46.63%    48.55%     4.82%
+DRFwd10     6179    -0.000016       0.000000       2972     2985      222    48.10%    48.31%     3.59%
+DRFwd20     6178    -0.000028       0.000000       3039     3002      137    49.19%    48.59%     2.22%
+
+Event: ParticipationPeak
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      3937    -0.000004       0.000000       1718     1784      435    43.64%    45.31%    11.05%
+DRFwd3      3937    -0.000002       0.000000       1766     1909      262    44.86%    48.49%     6.65%
+DRFwd5      3937    -0.000007       0.000000       1843     1901      193    46.81%    48.29%     4.90%
+DRFwd10     3937     0.000009       0.000000       1868     1933      136    47.45%    49.10%     3.45%
+DRFwd20     3936    -0.000014       0.000000       1889     1941      106    47.99%    49.31%     2.69%
+
+Event: ParticipationClimactic
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      1577    -0.000008       0.000000        710      739      128    45.02%    46.86%     8.12%
+DRFwd3      1577    -0.000019      -0.000050        714      789       74    45.28%    50.03%     4.69%
+DRFwd5      1577    -0.000006      -0.000050        722      792       63    45.78%    50.22%     3.99%
+DRFwd10     1577    -0.000033      -0.000050        740      797       40    46.92%    50.54%     2.54%
+DRFwd20     1577    -0.000029       0.000000        774      770       33    49.08%    48.83%     2.09%
+
+Event: PeakContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       893    -0.000000       0.000000        411      398       84    46.02%    44.57%     9.41%
+DRFwd3       893     0.000001       0.000000        395      434       64    44.23%    48.60%     7.17%
+DRFwd5       893    -0.000007       0.000000        409      437       47    45.80%    48.94%     5.26%
+DRFwd10      893     0.000018       0.000000        417      441       35    46.70%    49.38%     3.92%
+DRFwd20      892    -0.000009       0.000000        433      437       22    48.54%    48.99%     2.47%
+
+Event: PeakAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      2624    -0.000007       0.000000       1115     1201      308    42.49%    45.77%    11.74%
+DRFwd3      2624    -0.000002       0.000000       1181     1278      165    45.01%    48.70%     6.29%
+DRFwd5      2624    -0.000007       0.000000       1243     1249      132    47.37%    47.60%     5.03%
+DRFwd10     2624     0.000007       0.000000       1248     1289       87    47.56%    49.12%     3.32%
+DRFwd20     2624    -0.000015       0.000000       1258     1290       76    47.94%    49.16%     2.90%
+
+Event: ClimacticContained
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1       313     0.000001       0.000000        152      134       27    48.56%    42.81%     8.63%
+DRFwd3       313    -0.000014       0.000000        141      155       17    45.05%    49.52%     5.43%
+DRFwd5       313     0.000016       0.000000        144      151       18    46.01%    48.24%     5.75%
+DRFwd10      313    -0.000112      -0.000100        140      167        6    44.73%    53.35%     1.92%
+DRFwd20      313    -0.000090       0.000000        154      151        8    49.20%    48.24%     2.56%
+
+Event: ClimacticAccepted
+Horizon     Count    MeanDRFwd    MedianDRFwd   Continue     Fail     Flat   ContRate   FailRate   FlatRate
+DRFwd1      1163    -0.000015       0.000000        509      561       93    43.77%    48.24%     8.00%
+DRFwd3      1163    -0.000021      -0.000050        525      584       54    45.14%    50.21%     4.64%
+DRFwd5      1163    -0.000010      -0.000050        535      586       42    46.00%    50.39%     3.61%
+DRFwd10     1163    -0.000006       0.000000        556      574       33    47.81%    49.36%     2.84%
+DRFwd20     1163    -0.000001       0.000000        577      564       22    49.61%    48.50%     1.89%
+
+Inside-Frame vs Outside-Frame Comparisons
+=========================================
+
+Frame: CompressionFrame
+-----------------------
+
+Event: AllBars
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      4373    -0.000008    42.65%     26640    -0.000009    43.16%     0.000001    -0.52%
+DRFwd3      4372     0.000002    47.05%     26639    -0.000013    45.20%     0.000015     1.85%
+DRFwd5      4371    -0.000003    47.17%     26639    -0.000013    46.14%     0.000010     1.03%
+DRFwd10     4371    -0.000022    46.95%     26634    -0.000016    47.45%    -0.000006    -0.50%
+DRFwd20     4370    -0.000010    48.90%     26625    -0.000019    48.69%     0.000009     0.21%
+
+Event: DissipationAny
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      1962    -0.000012    43.53%     13151    -0.000011    43.46%    -0.000001     0.06%
+DRFwd3      1961     0.000016    47.68%     13150    -0.000014    45.48%     0.000031     2.20%
+DRFwd5      1961     0.000007    48.70%     13150    -0.000016    46.40%     0.000022     2.30%
+DRFwd10     1961    -0.000011    46.81%     13148    -0.000019    47.83%     0.000008    -1.02%
+DRFwd20     1961     0.000011    49.21%     13146    -0.000032    48.90%     0.000044     0.30%
+
+Event: DissipationContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      1619    -0.000003    44.66%      4657    -0.000011    44.49%     0.000008     0.17%
+DRFwd3      1618     0.000022    48.76%      4657    -0.000008    46.27%     0.000030     2.49%
+DRFwd5      1618     0.000005    48.58%      4657    -0.000014    46.92%     0.000020     1.66%
+DRFwd10     1618    -0.000007    46.35%      4657    -0.000005    48.42%    -0.000002    -2.07%
+DRFwd20     1618     0.000007    48.76%      4657    -0.000032    49.43%     0.000039    -0.67%
+
+Event: DissipationAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1        40    -0.000055    35.00%      7631    -0.000011    42.73%    -0.000044    -7.73%
+DRFwd3        40     0.000093    55.00%      7630    -0.000017    45.11%     0.000109     9.89%
+DRFwd5        40     0.000098    50.00%      7630    -0.000016    46.20%     0.000113     3.80%
+DRFwd10       40     0.000044    55.00%      7628    -0.000027    47.57%     0.000071     7.43%
+DRFwd20       40     0.000303    65.00%      7626    -0.000036    48.60%     0.000338    16.40%
+
+Event: ParticipationPeak
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       580    -0.000023    46.03%      5537    -0.000006    43.58%    -0.000018     2.45%
+DRFwd3       580    -0.000012    45.69%      5537    -0.000009    44.59%    -0.000003     1.10%
+DRFwd5       580    -0.000052    45.00%      5537    -0.000018    46.11%    -0.000034    -1.11%
+DRFwd10      580    -0.000050    44.14%      5534    -0.000016    46.62%    -0.000035    -2.48%
+DRFwd20      580    -0.000043    48.45%      5532    -0.000024    47.94%    -0.000019     0.51%
+
+Event: ParticipationClimactic
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       166    -0.000025    43.37%      2579    -0.000008    45.41%    -0.000017    -2.03%
+DRFwd3       166    -0.000066    45.18%      2579    -0.000032    45.37%    -0.000033    -0.19%
+DRFwd5       166    -0.000033    44.58%      2579    -0.000027    44.86%    -0.000006    -0.28%
+DRFwd10      166    -0.000095    43.37%      2579    -0.000030    45.87%    -0.000065    -2.50%
+DRFwd20      166    -0.000024    51.20%      2579    -0.000048    48.43%     0.000024     2.78%
+
+Event: PeakContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       442    -0.000029    46.15%      1333    -0.000003    45.99%    -0.000026     0.17%
+DRFwd3       442    -0.000041    44.57%      1333    -0.000005    45.09%    -0.000036    -0.52%
+DRFwd5       442    -0.000082    42.99%      1333    -0.000014    46.66%    -0.000068    -3.68%
+DRFwd10      442    -0.000075    43.44%      1333    -0.000011    47.11%    -0.000064    -3.67%
+DRFwd20      442    -0.000073    47.29%      1332    -0.000036    48.72%    -0.000037    -1.44%
+
+Event: PeakAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1         7     0.000043    42.86%      3578    -0.000008    42.45%     0.000051     0.40%
+DRFwd3         7     0.000143    57.14%      3578    -0.000010    44.33%     0.000153    12.82%
+DRFwd5         7     0.000143    42.86%      3578    -0.000020    46.20%     0.000163    -3.34%
+DRFwd10        7     0.000264    71.43%      3576    -0.000017    46.25%     0.000281    25.18%
+DRFwd20        7     0.000307    85.71%      3575    -0.000023    47.78%     0.000330    37.94%
+
+Event: ClimacticContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       145    -0.000016    42.76%       555     0.000037    49.73%    -0.000053    -6.97%
+DRFwd3       145    -0.000066    43.45%       555     0.000020    47.57%    -0.000085    -4.12%
+DRFwd5       145    -0.000024    45.52%       555     0.000016    45.41%    -0.000041     0.11%
+DRFwd10      145    -0.000116    42.76%       555    -0.000048    44.68%    -0.000067    -1.93%
+DRFwd20      145    -0.000041    51.03%       555    -0.000053    49.19%     0.000012     1.85%
+
+Event: ClimacticAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1         0     0.000000     0.00%      1832    -0.000022    43.83%     0.000022   -43.83%
+DRFwd3         0     0.000000     0.00%      1832    -0.000048    44.65%     0.000048   -44.65%
+DRFwd5         0     0.000000     0.00%      1832    -0.000035    44.71%     0.000035   -44.71%
+DRFwd10        0     0.000000     0.00%      1832    -0.000017    46.56%     0.000017   -46.56%
+DRFwd20        0     0.000000     0.00%      1832    -0.000022    49.07%     0.000022   -49.07%
+
+Frame: ExpansionFrame
+---------------------
+
+Event: AllBars
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      2947    -0.000007    45.16%     28066    -0.000009    42.87%     0.000002     2.29%
+DRFwd3      2947    -0.000030    44.99%     28064    -0.000009    45.51%    -0.000022    -0.52%
+DRFwd5      2947    -0.000043    44.66%     28063    -0.000009    46.46%    -0.000034    -1.80%
+DRFwd10     2943    -0.000062    44.27%     28062    -0.000012    47.71%    -0.000050    -3.43%
+DRFwd20     2938    -0.000054    46.80%     28057    -0.000014    48.92%    -0.000040    -2.12%
+
+Event: DissipationAny
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      1479    -0.000015    45.71%     13634    -0.000011    43.23%    -0.000005     2.48%
+DRFwd3      1479    -0.000023    44.35%     13632    -0.000009    45.91%    -0.000015    -1.56%
+DRFwd5      1479    -0.000039    44.76%     13632    -0.000010    46.90%    -0.000029    -2.14%
+DRFwd10     1477    -0.000085    44.01%     13632    -0.000011    48.10%    -0.000074    -4.09%
+DRFwd20     1476    -0.000072    46.68%     13631    -0.000022    49.19%    -0.000050    -2.51%
+
+Event: DissipationContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       568    -0.000014    45.77%      5708    -0.000008    44.41%    -0.000005     1.36%
+DRFwd3       568    -0.000015    45.95%      5707     0.000002    47.01%    -0.000017    -1.06%
+DRFwd5       568    -0.000024    46.30%      5707    -0.000008    47.45%    -0.000016    -1.15%
+DRFwd10      568    -0.000065    44.54%      5707     0.000001    48.22%    -0.000065    -3.68%
+DRFwd20      568    -0.000048    48.77%      5707    -0.000020    49.31%    -0.000028    -0.54%
+
+Event: DissipationAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       859    -0.000018    44.94%      6812    -0.000011    42.41%    -0.000007     2.53%
+DRFwd3       859    -0.000027    43.77%      6811    -0.000015    45.34%    -0.000013    -1.57%
+DRFwd5       859    -0.000048    43.77%      6811    -0.000011    46.53%    -0.000037    -2.76%
+DRFwd10      857    -0.000096    43.76%      6811    -0.000018    48.10%    -0.000079    -4.34%
+DRFwd20      856    -0.000079    45.44%      6810    -0.000029    49.09%    -0.000051    -3.65%
+
+Event: ParticipationPeak
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      1144    -0.000008    44.32%      4973    -0.000007    43.70%    -0.000001     0.62%
+DRFwd3      1144    -0.000026    44.14%      4973    -0.000006    44.82%    -0.000020    -0.68%
+DRFwd5      1144    -0.000047    43.53%      4973    -0.000015    46.57%    -0.000033    -3.04%
+DRFwd10     1141    -0.000095    43.30%      4973    -0.000001    47.09%    -0.000093    -3.80%
+DRFwd20     1140    -0.000046    47.72%      4972    -0.000021    48.05%    -0.000025    -0.33%
+
+Event: ParticipationClimactic
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       775    -0.000007    46.45%      1970    -0.000009    44.82%     0.000003     1.63%
+DRFwd3       775    -0.000059    45.16%      1970    -0.000025    45.43%    -0.000034    -0.27%
+DRFwd5       775    -0.000071    43.10%      1970    -0.000011    45.53%    -0.000061    -2.44%
+DRFwd10      775    -0.000061    43.10%      1970    -0.000023    46.75%    -0.000037    -3.65%
+DRFwd20      775    -0.000126    45.16%      1970    -0.000015    49.95%    -0.000111    -4.79%
+
+Event: PeakContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       336    -0.000022    45.83%      1439    -0.000007    46.07%    -0.000015    -0.24%
+DRFwd3       336    -0.000041    43.15%      1439    -0.000008    45.38%    -0.000033    -2.22%
+DRFwd5       336    -0.000070    43.75%      1439    -0.000021    46.21%    -0.000049    -2.46%
+DRFwd10      336    -0.000118    44.35%      1439    -0.000006    46.63%    -0.000113    -2.28%
+DRFwd20      336    -0.000089    47.02%      1438    -0.000035    48.68%    -0.000055    -1.65%
+
+Event: PeakAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       653    -0.000003    43.95%      2932    -0.000009    42.12%     0.000006     1.83%
+DRFwd3       653    -0.000019    44.56%      2932    -0.000008    44.30%    -0.000011     0.26%
+DRFwd5       653    -0.000032    43.95%      2932    -0.000017    46.69%    -0.000015    -2.74%
+DRFwd10      651    -0.000089    42.40%      2932    -0.000000    47.17%    -0.000089    -4.77%
+DRFwd20      650    -0.000032    48.31%      2932    -0.000020    47.75%    -0.000012     0.56%
+
+Event: ClimacticContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       209     0.000072    51.20%       491     0.000007    47.05%     0.000065     4.15%
+DRFwd3       209     0.000051    49.28%       491    -0.000019    45.62%     0.000069     3.66%
+DRFwd5       209    -0.000017    42.58%       491     0.000018    46.64%    -0.000035    -4.06%
+DRFwd10      209    -0.000051    41.15%       491    -0.000067    45.62%     0.000016    -4.47%
+DRFwd20      209    -0.000110    44.98%       491    -0.000025    51.53%    -0.000085    -6.55%
+
+Event: ClimacticAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       497    -0.000033    44.67%      1335    -0.000018    43.52%    -0.000015     1.15%
+DRFwd3       497    -0.000102    43.66%      1335    -0.000027    45.02%    -0.000075    -1.36%
+DRFwd5       497    -0.000083    42.66%      1335    -0.000017    45.47%    -0.000066    -2.81%
+DRFwd10      497    -0.000059    44.06%      1335    -0.000001    47.49%    -0.000059    -3.43%
+DRFwd20      497    -0.000089    46.48%      1335     0.000003    50.04%    -0.000092    -3.56%
+
+Frame: DirectionalPersistenceFrame
+----------------------------------
+
+Event: AllBars
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      1086    -0.000032    40.61%     29927    -0.000008    43.18%    -0.000024    -2.57%
+DRFwd3      1086    -0.000072    40.70%     29925    -0.000008    45.63%    -0.000063    -4.93%
+DRFwd5      1086    -0.000090    40.98%     29924    -0.000009    46.48%    -0.000080    -5.51%
+DRFwd10     1086    -0.000098    45.21%     29919    -0.000014    47.46%    -0.000084    -2.25%
+DRFwd20     1086    -0.000159    45.21%     29909    -0.000012    48.84%    -0.000147    -3.63%
+
+Event: DissipationAny
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       557    -0.000041    40.04%     14556    -0.000010    43.60%    -0.000031    -3.57%
+DRFwd3       557    -0.000090    38.42%     14554    -0.000007    46.04%    -0.000083    -7.62%
+DRFwd5       557    -0.000104    40.75%     14554    -0.000009    46.92%    -0.000094    -6.17%
+DRFwd10      557    -0.000131    43.45%     14552    -0.000014    47.86%    -0.000117    -4.42%
+DRFwd20      557    -0.000171    45.42%     14550    -0.000021    49.08%    -0.000150    -3.66%
+
+Event: DissipationContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       156    -0.000075    37.82%      6120    -0.000007    44.71%    -0.000068    -6.89%
+DRFwd3       156    -0.000115    35.90%      6119     0.000003    47.20%    -0.000118   -11.30%
+DRFwd5       156    -0.000144    37.82%      6119    -0.000006    47.59%    -0.000139    -9.77%
+DRFwd10      156    -0.000177    37.18%      6119    -0.000001    48.16%    -0.000176   -10.98%
+DRFwd20      156    -0.000273    45.51%      6119    -0.000016    49.35%    -0.000257    -3.84%
+
+Event: DissipationAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       386    -0.000026    41.19%      7285    -0.000011    42.77%    -0.000015    -1.58%
+DRFwd3       386    -0.000079    39.90%      7284    -0.000013    45.44%    -0.000067    -5.55%
+DRFwd5       386    -0.000088    41.97%      7284    -0.000011    46.44%    -0.000077    -4.48%
+DRFwd10      386    -0.000104    46.37%      7282    -0.000023    47.68%    -0.000082    -1.31%
+DRFwd20      386    -0.000129    45.34%      7280    -0.000029    48.86%    -0.000100    -3.52%
+
+Event: ParticipationPeak
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       292    -0.000021    41.10%      5825    -0.000007    43.95%    -0.000014    -2.85%
+DRFwd3       292    -0.000046    44.18%      5825    -0.000008    44.72%    -0.000039    -0.54%
+DRFwd5       292    -0.000091    43.49%      5825    -0.000017    46.13%    -0.000073    -2.64%
+DRFwd10      292    -0.000108    45.21%      5822    -0.000014    46.44%    -0.000093    -1.24%
+DRFwd20      292    -0.000156    45.89%      5820    -0.000019    48.09%    -0.000137    -2.20%
+
+Event: ParticipationClimactic
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       188    -0.000037    41.49%      2557    -0.000007    45.56%    -0.000030    -4.07%
+DRFwd3       188    -0.000107    39.89%      2557    -0.000029    45.76%    -0.000078    -5.86%
+DRFwd5       188    -0.000136    36.17%      2557    -0.000020    45.48%    -0.000117    -9.31%
+DRFwd10      188    -0.000054    42.55%      2557    -0.000032    45.95%    -0.000022    -3.40%
+DRFwd20      188    -0.000268    42.55%      2557    -0.000030    49.04%    -0.000238    -6.49%
+
+Event: PeakContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1        57     0.000010    50.88%      1718    -0.000010    45.87%     0.000020     5.01%
+DRFwd3        57     0.000045    52.63%      1718    -0.000016    44.70%     0.000061     7.93%
+DRFwd5        57    -0.000044    43.86%      1718    -0.000030    45.81%    -0.000014    -1.95%
+DRFwd10       57    -0.000052    45.61%      1718    -0.000026    46.22%    -0.000025    -0.60%
+DRFwd20       57    -0.000234    42.11%      1717    -0.000039    48.57%    -0.000195    -6.47%
+
+Event: PeakAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       215    -0.000029    38.14%      3370    -0.000006    42.73%    -0.000022    -4.59%
+DRFwd3       215    -0.000064    41.86%      3370    -0.000006    44.51%    -0.000058    -2.65%
+DRFwd5       215    -0.000097    43.72%      3370    -0.000014    46.35%    -0.000082    -2.63%
+DRFwd10      215    -0.000100    46.51%      3368    -0.000011    46.29%    -0.000088     0.22%
+DRFwd20      215    -0.000126    47.91%      3367    -0.000015    47.85%    -0.000110     0.06%
+
+Event: ClimacticContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1        28     0.000079    53.57%       672     0.000024    48.07%     0.000055     5.51%
+DRFwd3        28    -0.000088    32.14%       672     0.000006    47.32%    -0.000093   -15.18%
+DRFwd5        28    -0.000166    39.29%       672     0.000015    45.68%    -0.000181    -6.40%
+DRFwd10       28    -0.000091    39.29%       672    -0.000061    44.49%    -0.000030    -5.21%
+DRFwd20       28    -0.000261    42.86%       672    -0.000042    49.85%    -0.000219    -6.99%
+
+Event: ClimacticAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       154    -0.000061    38.96%      1678    -0.000018    44.28%    -0.000043    -5.32%
+DRFwd3       154    -0.000121    40.91%      1678    -0.000041    44.99%    -0.000081    -4.08%
+DRFwd5       154    -0.000137    35.06%      1678    -0.000026    45.59%    -0.000112   -10.53%
+DRFwd10      154    -0.000049    42.86%      1678    -0.000014    46.90%    -0.000035    -4.04%
+DRFwd20      154    -0.000275    42.21%      1678     0.000001    49.70%    -0.000276    -7.49%
+
+Frame: AlternatingFrame
+-----------------------
+
+Event: AllBars
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      2876    -0.000011    43.60%     28137    -0.000008    43.04%    -0.000003     0.56%
+DRFwd3      2876    -0.000005    46.00%     28135    -0.000011    45.41%     0.000007     0.60%
+DRFwd5      2876    -0.000008    47.43%     28134    -0.000012    46.17%     0.000005     1.26%
+DRFwd10     2875    -0.000012    48.03%     28130    -0.000017    47.31%     0.000005     0.72%
+DRFwd20     2875    -0.000019    48.70%     28120    -0.000017    48.72%    -0.000001    -0.02%
+
+Event: DissipationAny
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      1329    -0.000007    44.85%     13784    -0.000011    43.34%     0.000004     1.51%
+DRFwd3      1329    -0.000002    46.05%     13782    -0.000011    45.73%     0.000008     0.32%
+DRFwd5      1329    -0.000003    49.29%     13782    -0.000014    46.44%     0.000011     2.84%
+DRFwd10     1329    -0.000009    48.46%     13780    -0.000019    47.63%     0.000010     0.83%
+DRFwd20     1329    -0.000048    48.61%     13778    -0.000025    48.98%    -0.000024    -0.37%
+
+Event: DissipationContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       840     0.000000    46.79%      5436    -0.000010    44.19%     0.000010     2.60%
+DRFwd3       840     0.000016    48.69%      5435    -0.000002    46.64%     0.000018     2.05%
+DRFwd5       840     0.000019    51.55%      5435    -0.000013    46.70%     0.000032     4.85%
+DRFwd10      840     0.000005    50.36%      5435    -0.000007    47.51%     0.000011     2.85%
+DRFwd20      840    -0.000048    48.93%      5435    -0.000018    49.31%    -0.000030    -0.38%
+
+Event: DissipationAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       312    -0.000011    41.99%      7359    -0.000012    42.72%     0.000001    -0.74%
+DRFwd3       312    -0.000010    42.31%      7358    -0.000016    45.28%     0.000006    -2.98%
+DRFwd5       312    -0.000025    47.76%      7358    -0.000015    46.15%    -0.000010     1.60%
+DRFwd10      312    -0.000017    47.44%      7356    -0.000027    47.62%     0.000011    -0.19%
+DRFwd20      312    -0.000011    48.08%      7354    -0.000035    48.71%     0.000024    -0.63%
+
+Event: ParticipationPeak
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       500    -0.000015    43.60%      5617    -0.000006    43.83%    -0.000009    -0.23%
+DRFwd3       500     0.000005    44.20%      5617    -0.000011    44.74%     0.000016    -0.54%
+DRFwd5       500    -0.000029    46.40%      5617    -0.000020    45.97%    -0.000009     0.43%
+DRFwd10      499    -0.000006    49.30%      5615    -0.000020    46.13%     0.000014     3.17%
+DRFwd20      499    -0.000010    50.30%      5613    -0.000027    47.78%     0.000017     2.52%
+
+Event: ParticipationClimactic
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       223    -0.000041    41.26%      2522    -0.000006    45.64%    -0.000035    -4.38%
+DRFwd3       223    -0.000065    46.64%      2522    -0.000032    45.24%    -0.000033     1.39%
+DRFwd5       223    -0.000038    43.05%      2522    -0.000027    45.00%    -0.000011    -1.95%
+DRFwd10      223     0.000007    44.39%      2522    -0.000037    45.84%     0.000044    -1.44%
+DRFwd20      223     0.000016    52.02%      2522    -0.000052    48.30%     0.000068     3.72%
+
+Event: PeakContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       249    -0.000013    43.78%      1526    -0.000009    46.40%    -0.000005    -2.62%
+DRFwd3       249     0.000015    48.19%      1526    -0.000019    44.43%     0.000034     3.76%
+DRFwd5       249    -0.000001    49.40%      1526    -0.000035    45.15%     0.000034     4.25%
+DRFwd10      249     0.000014    52.61%      1526    -0.000034    45.15%     0.000048     7.46%
+DRFwd20      249    -0.000027    53.41%      1525    -0.000048    47.54%     0.000022     5.87%
+
+Event: PeakAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       161    -0.000029    43.48%      3424    -0.000007    42.41%    -0.000022     1.07%
+DRFwd3       161    -0.000008    38.51%      3424    -0.000010    44.63%     0.000002    -6.12%
+DRFwd5       161    -0.000081    41.61%      3424    -0.000017    46.41%    -0.000065    -4.79%
+DRFwd10      161    -0.000094    40.99%      3422    -0.000013    46.55%    -0.000081    -5.56%
+DRFwd20      161    -0.000067    44.10%      3421    -0.000020    48.03%    -0.000047    -3.93%
+
+Event: ClimacticContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1        94    -0.000022    41.49%       606     0.000033    49.34%    -0.000056    -7.85%
+DRFwd3        94     0.000032    57.45%       606    -0.000003    45.05%     0.000035    12.40%
+DRFwd5        94     0.000062    45.74%       606    -0.000001    45.38%     0.000063     0.37%
+DRFwd10       94     0.000125    50.00%       606    -0.000091    43.40%     0.000216     6.60%
+DRFwd20       94     0.000190    57.45%       606    -0.000088    48.35%     0.000279     9.10%
+
+Event: ClimacticAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1        95    -0.000068    38.95%      1737    -0.000019    44.10%    -0.000049    -5.15%
+DRFwd3        95    -0.000164    40.00%      1737    -0.000041    44.91%    -0.000122    -4.91%
+DRFwd5        95    -0.000119    40.00%      1737    -0.000030    44.96%    -0.000089    -4.96%
+DRFwd10       95    -0.000040    43.16%      1737    -0.000015    46.75%    -0.000025    -3.59%
+DRFwd20       95     0.000034    53.68%      1737    -0.000025    48.82%     0.000059     4.86%
+
+Frame: NoNamedFrame
+-------------------
+
+Event: AllBars
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1     21207    -0.000008    42.95%      9806    -0.000009    43.40%     0.000001    -0.45%
+DRFwd3     21206    -0.000010    45.33%      9805    -0.000013    45.75%     0.000003    -0.43%
+DRFwd5     21206    -0.000008    46.35%      9804    -0.000019    46.14%     0.000011     0.21%
+DRFwd10    21205    -0.000009    47.85%      9800    -0.000032    46.36%     0.000023     1.49%
+DRFwd20    21201    -0.000012    48.96%      9794    -0.000029    48.19%     0.000017     0.77%
+
+Event: DissipationAny
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1     10473    -0.000011    42.95%      4640    -0.000011    44.66%    -0.000000    -1.71%
+DRFwd3     10472    -0.000012    45.77%      4639    -0.000006    45.74%    -0.000006     0.03%
+DRFwd5     10472    -0.000013    46.50%      4639    -0.000013    47.14%    -0.000000    -0.65%
+DRFwd10    10472    -0.000011    48.27%      4637    -0.000035    46.41%     0.000025     1.86%
+DRFwd20    10471    -0.000024    49.30%      4636    -0.000033    48.14%     0.000009     1.15%
+
+Event: DissipationContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      3595    -0.000013    43.64%      2681    -0.000003    45.73%    -0.000009    -2.09%
+DRFwd3      3595    -0.000010    46.01%      2680     0.000014    48.13%    -0.000024    -2.13%
+DRFwd5      3595    -0.000020    46.29%      2680     0.000006    48.77%    -0.000026    -2.48%
+DRFwd10     3595    -0.000003    48.62%      2680    -0.000009    46.90%     0.000006     1.72%
+DRFwd20     3595    -0.000030    49.43%      2680    -0.000013    49.03%    -0.000017     0.40%
+
+Event: DissipationAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      6180    -0.000011    42.49%      1491    -0.000015    43.53%     0.000004    -1.04%
+DRFwd3      6179    -0.000013    45.70%      1491    -0.000029    42.92%     0.000017     2.78%
+DRFwd5      6179    -0.000008    46.63%      1491    -0.000044    44.53%     0.000036     2.09%
+DRFwd10     6179    -0.000016    48.10%      1489    -0.000072    45.60%     0.000057     2.50%
+DRFwd20     6178    -0.000028    49.19%      1488    -0.000062    46.57%     0.000034     2.62%
+
+Event: ParticipationPeak
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      3937    -0.000004    43.64%      2180    -0.000012    44.13%     0.000008    -0.49%
+DRFwd3      3937    -0.000002    44.86%      2180    -0.000022    44.40%     0.000020     0.45%
+DRFwd5      3937    -0.000007    46.81%      2180    -0.000046    44.54%     0.000039     2.27%
+DRFwd10     3937     0.000009    47.45%      2177    -0.000069    44.46%     0.000078     2.98%
+DRFwd20     3936    -0.000014    47.99%      2176    -0.000048    47.98%     0.000034     0.01%
+
+Event: ParticipationClimactic
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      1577    -0.000008    45.02%      1168    -0.000010    45.63%     0.000002    -0.61%
+DRFwd3      1577    -0.000019    45.28%      1168    -0.000055    45.46%     0.000035    -0.19%
+DRFwd5      1577    -0.000006    45.78%      1168    -0.000056    43.58%     0.000050     2.20%
+DRFwd10     1577    -0.000033    46.92%      1168    -0.000034    44.09%     0.000001     2.83%
+DRFwd20     1577    -0.000029    49.08%      1168    -0.000071    47.95%     0.000043     1.14%
+
+Event: PeakContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       893    -0.000000    46.02%       882    -0.000019    46.03%     0.000019    -0.01%
+DRFwd3       893     0.000001    44.23%       882    -0.000029    45.69%     0.000030    -1.46%
+DRFwd5       893    -0.000007    45.80%       882    -0.000054    45.69%     0.000047     0.11%
+DRFwd10      893     0.000018    46.70%       882    -0.000073    45.69%     0.000091     1.00%
+DRFwd20      892    -0.000009    48.54%       882    -0.000081    48.19%     0.000072     0.36%
+
+Event: PeakAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      2624    -0.000007    42.49%       961    -0.000011    42.35%     0.000004     0.14%
+DRFwd3      2624    -0.000002    45.01%       961    -0.000029    42.56%     0.000026     2.45%
+DRFwd5      2624    -0.000007    47.37%       961    -0.000054    42.98%     0.000047     4.39%
+DRFwd10     2624     0.000007    47.56%       959    -0.000082    42.86%     0.000089     4.70%
+DRFwd20     2624    -0.000015    47.94%       958    -0.000040    47.60%     0.000025     0.34%
+
+Event: ClimacticContained
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1       313     0.000001    48.56%       387     0.000046    48.06%    -0.000045     0.50%
+DRFwd3       313    -0.000014    45.05%       387     0.000015    48.06%    -0.000028    -3.01%
+DRFwd5       313     0.000016    46.01%       387     0.000001    44.96%     0.000015     1.05%
+DRFwd10      313    -0.000112    44.73%       387    -0.000022    43.93%    -0.000089     0.80%
+DRFwd20      313    -0.000090    49.20%       387    -0.000019    49.87%    -0.000071    -0.67%
+
+Event: ClimacticAccepted
+Horizon   InCount       InMean     InCont  OutCount      OutMean    OutCont    DeltaMean  DeltaCont
+DRFwd1      1163    -0.000015    43.77%       669    -0.000034    43.95%     0.000019    -0.18%
+DRFwd3      1163    -0.000021    45.14%       669    -0.000093    43.80%     0.000072     1.35%
+DRFwd5      1163    -0.000010    46.00%       669    -0.000079    42.45%     0.000069     3.55%
+DRFwd10     1163    -0.000006    47.81%       669    -0.000036    44.39%     0.000030     3.41%
+DRFwd20     1163    -0.000001    49.61%       669    -0.000059    48.13%     0.000058     1.48%
+
+Top 25 Combinations by Highest MeanDRFwd5
+=========================================
+Rank Event                    Frame                             Count   MeanDRFwd5       Median   ContRate   FailRate
+   1 DissipationAccepted      CompressionFrame                     40     0.000098     0.000025    50.00%    50.00%
+   2 ClimacticContained       AlternatingFrame                     94     0.000062     0.000000    45.74%    48.94%
+   3 DissipationContained     AlternatingFrame                    840     0.000019     0.000050    51.55%    45.36%
+   4 ClimacticContained       NoNamedFrame                        313     0.000016     0.000000    46.01%    48.24%
+   5 DissipationAny           CompressionFrame                   1961     0.000007     0.000000    48.70%    46.71%
+   6 DissipationContained     CompressionFrame                   1618     0.000005     0.000000    48.58%    46.79%
+   7 PeakContained            AlternatingFrame                    249    -0.000001     0.000000    49.40%    46.99%
+   8 AllBars                  CompressionFrame                   4371    -0.000003     0.000000    47.17%    47.36%
+   9 DissipationAny           AlternatingFrame                   1329    -0.000003     0.000000    49.29%    47.18%
+  10 ParticipationClimactic   NoNamedFrame                       1577    -0.000006    -0.000050    45.78%    50.22%
+  11 ParticipationPeak        NoNamedFrame                       3937    -0.000007     0.000000    46.81%    48.29%
+  12 PeakAccepted             NoNamedFrame                       2624    -0.000007     0.000000    47.37%    47.60%
+  13 PeakContained            NoNamedFrame                        893    -0.000007     0.000000    45.80%    48.94%
+  14 AllBars                  AlternatingFrame                   2876    -0.000008     0.000000    47.43%    48.16%
+  15 DissipationAccepted      NoNamedFrame                       6179    -0.000008     0.000000    46.63%    48.55%
+  16 AllBars                  NoNamedFrame                      21206    -0.000008     0.000000    46.35%    48.47%
+  17 ClimacticAccepted        NoNamedFrame                       1163    -0.000010    -0.000050    46.00%    50.39%
+  18 DissipationAny           NoNamedFrame                      10472    -0.000013     0.000000    46.50%    48.54%
+  19 ClimacticContained       ExpansionFrame                      209    -0.000017    -0.000100    42.58%    52.15%
+  20 DissipationContained     NoNamedFrame                       3595    -0.000020     0.000000    46.29%    48.48%
+  21 DissipationContained     ExpansionFrame                      568    -0.000024    -0.000050    46.30%    50.35%
+  22 ClimacticContained       CompressionFrame                    145    -0.000024     0.000000    45.52%    49.66%
+  23 DissipationAccepted      AlternatingFrame                    312    -0.000025     0.000000    47.76%    48.72%
+  24 ParticipationPeak        AlternatingFrame                    500    -0.000029     0.000000    46.40%    49.20%
+  25 PeakAccepted             ExpansionFrame                      653    -0.000032    -0.000050    43.95%    50.54%
+
+Top 25 Combinations by Lowest MeanDRFwd5
+========================================
+Rank Event                    Frame                             Count   MeanDRFwd5       Median   ContRate   FailRate
+   1 DissipationContained     DirectionalPersistenceFrame         156    -0.000144    -0.000100    37.82%    57.05%
+   2 ClimacticAccepted        DirectionalPersistenceFrame         154    -0.000137    -0.000150    35.06%    59.74%
+   3 ParticipationClimactic   DirectionalPersistenceFrame         188    -0.000136    -0.000125    36.17%    59.04%
+   4 ClimacticAccepted        AlternatingFrame                     95    -0.000119    -0.000150    40.00%    55.79%
+   5 DissipationAny           DirectionalPersistenceFrame         557    -0.000104    -0.000050    40.75%    54.40%
+   6 PeakAccepted             DirectionalPersistenceFrame         215    -0.000097    -0.000050    43.72%    51.63%
+   7 ParticipationPeak        DirectionalPersistenceFrame         292    -0.000091    -0.000050    43.49%    51.71%
+   8 AllBars                  DirectionalPersistenceFrame        1086    -0.000090    -0.000050    40.98%    54.05%
+   9 DissipationAccepted      DirectionalPersistenceFrame         386    -0.000088    -0.000050    41.97%    53.11%
+  10 ClimacticAccepted        ExpansionFrame                      497    -0.000083    -0.000050    42.66%    52.11%
+  11 PeakContained            CompressionFrame                    442    -0.000082    -0.000050    42.99%    52.04%
+  12 PeakAccepted             AlternatingFrame                    161    -0.000081    -0.000050    41.61%    52.80%
+  13 ParticipationClimactic   ExpansionFrame                      775    -0.000071    -0.000050    43.10%    52.00%
+  14 PeakContained            ExpansionFrame                      336    -0.000070    -0.000050    43.75%    52.08%
+  15 ParticipationPeak        CompressionFrame                    580    -0.000052    -0.000025    45.00%    50.00%
+  16 DissipationAccepted      ExpansionFrame                      859    -0.000048    -0.000050    43.77%    52.15%
+  17 ParticipationPeak        ExpansionFrame                     1144    -0.000047    -0.000050    43.53%    51.31%
+  18 PeakContained            DirectionalPersistenceFrame          57    -0.000044     0.000000    43.86%    49.12%
+  19 AllBars                  ExpansionFrame                     2947    -0.000043    -0.000050    44.66%    50.90%
+  20 DissipationAny           ExpansionFrame                     1479    -0.000039    -0.000050    44.76%    51.45%
+  21 ParticipationClimactic   AlternatingFrame                    223    -0.000038    -0.000100    43.05%    52.47%
+  22 ParticipationClimactic   CompressionFrame                    166    -0.000033    -0.000050    44.58%    50.60%
+  23 PeakAccepted             ExpansionFrame                      653    -0.000032    -0.000050    43.95%    50.54%
+  24 ParticipationPeak        AlternatingFrame                    500    -0.000029     0.000000    46.40%    49.20%
+  25 DissipationAccepted      AlternatingFrame                    312    -0.000025     0.000000    47.76%    48.72%
+
+Top 25 Combinations by Highest ContinuationRate5
+================================================
+Rank Event                    Frame                             Count   MeanDRFwd5       Median   ContRate   FailRate
+   1 DissipationContained     AlternatingFrame                    840     0.000019     0.000050    51.55%    45.36%
+   2 DissipationAccepted      CompressionFrame                     40     0.000098     0.000025    50.00%    50.00%
+   3 PeakContained            AlternatingFrame                    249    -0.000001     0.000000    49.40%    46.99%
+   4 DissipationAny           AlternatingFrame                   1329    -0.000003     0.000000    49.29%    47.18%
+   5 DissipationAny           CompressionFrame                   1961     0.000007     0.000000    48.70%    46.71%
+   6 DissipationContained     CompressionFrame                   1618     0.000005     0.000000    48.58%    46.79%
+   7 DissipationAccepted      AlternatingFrame                    312    -0.000025     0.000000    47.76%    48.72%
+   8 AllBars                  AlternatingFrame                   2876    -0.000008     0.000000    47.43%    48.16%
+   9 PeakAccepted             NoNamedFrame                       2624    -0.000007     0.000000    47.37%    47.60%
+  10 AllBars                  CompressionFrame                   4371    -0.000003     0.000000    47.17%    47.36%
+  11 ParticipationPeak        NoNamedFrame                       3937    -0.000007     0.000000    46.81%    48.29%
+  12 DissipationAccepted      NoNamedFrame                       6179    -0.000008     0.000000    46.63%    48.55%
+  13 DissipationAny           NoNamedFrame                      10472    -0.000013     0.000000    46.50%    48.54%
+  14 ParticipationPeak        AlternatingFrame                    500    -0.000029     0.000000    46.40%    49.20%
+  15 AllBars                  NoNamedFrame                      21206    -0.000008     0.000000    46.35%    48.47%
+  16 DissipationContained     ExpansionFrame                      568    -0.000024    -0.000050    46.30%    50.35%
+  17 DissipationContained     NoNamedFrame                       3595    -0.000020     0.000000    46.29%    48.48%
+  18 ClimacticContained       NoNamedFrame                        313     0.000016     0.000000    46.01%    48.24%
+  19 ClimacticAccepted        NoNamedFrame                       1163    -0.000010    -0.000050    46.00%    50.39%
+  20 PeakContained            NoNamedFrame                        893    -0.000007     0.000000    45.80%    48.94%
+  21 ParticipationClimactic   NoNamedFrame                       1577    -0.000006    -0.000050    45.78%    50.22%
+  22 ClimacticContained       AlternatingFrame                     94     0.000062     0.000000    45.74%    48.94%
+  23 ClimacticContained       CompressionFrame                    145    -0.000024     0.000000    45.52%    49.66%
+  24 ParticipationPeak        CompressionFrame                    580    -0.000052    -0.000025    45.00%    50.00%
+  25 DissipationAny           ExpansionFrame                     1479    -0.000039    -0.000050    44.76%    51.45%
+
+Top 25 Combinations by Highest FailureRate5
+===========================================
+Rank Event                    Frame                             Count   MeanDRFwd5       Median   ContRate   FailRate
+   1 ClimacticAccepted        DirectionalPersistenceFrame         154    -0.000137    -0.000150    35.06%    59.74%
+   2 ParticipationClimactic   DirectionalPersistenceFrame         188    -0.000136    -0.000125    36.17%    59.04%
+   3 DissipationContained     DirectionalPersistenceFrame         156    -0.000144    -0.000100    37.82%    57.05%
+   4 ClimacticAccepted        AlternatingFrame                     95    -0.000119    -0.000150    40.00%    55.79%
+   5 DissipationAny           DirectionalPersistenceFrame         557    -0.000104    -0.000050    40.75%    54.40%
+   6 AllBars                  DirectionalPersistenceFrame        1086    -0.000090    -0.000050    40.98%    54.05%
+   7 DissipationAccepted      DirectionalPersistenceFrame         386    -0.000088    -0.000050    41.97%    53.11%
+   8 PeakAccepted             AlternatingFrame                    161    -0.000081    -0.000050    41.61%    52.80%
+   9 ParticipationClimactic   AlternatingFrame                    223    -0.000038    -0.000100    43.05%    52.47%
+  10 DissipationAccepted      ExpansionFrame                      859    -0.000048    -0.000050    43.77%    52.15%
+  11 ClimacticContained       ExpansionFrame                      209    -0.000017    -0.000100    42.58%    52.15%
+  12 ClimacticAccepted        ExpansionFrame                      497    -0.000083    -0.000050    42.66%    52.11%
+  13 PeakContained            ExpansionFrame                      336    -0.000070    -0.000050    43.75%    52.08%
+  14 PeakContained            CompressionFrame                    442    -0.000082    -0.000050    42.99%    52.04%
+  15 ParticipationClimactic   ExpansionFrame                      775    -0.000071    -0.000050    43.10%    52.00%
+  16 ParticipationPeak        DirectionalPersistenceFrame         292    -0.000091    -0.000050    43.49%    51.71%
+  17 PeakAccepted             DirectionalPersistenceFrame         215    -0.000097    -0.000050    43.72%    51.63%
+  18 DissipationAny           ExpansionFrame                     1479    -0.000039    -0.000050    44.76%    51.45%
+  19 ParticipationPeak        ExpansionFrame                     1144    -0.000047    -0.000050    43.53%    51.31%
+  20 AllBars                  ExpansionFrame                     2947    -0.000043    -0.000050    44.66%    50.90%
+  21 ParticipationClimactic   CompressionFrame                    166    -0.000033    -0.000050    44.58%    50.60%
+  22 PeakAccepted             ExpansionFrame                      653    -0.000032    -0.000050    43.95%    50.54%
+  23 ClimacticAccepted        NoNamedFrame                       1163    -0.000010    -0.000050    46.00%    50.39%
+  24 DissipationContained     ExpansionFrame                      568    -0.000024    -0.000050    46.30%    50.35%
+  25 ParticipationClimactic   NoNamedFrame                       1577    -0.000006    -0.000050    45.78%    50.22%
+
+Research Notes
+==============
+- Frame with most bars: NoNamedFrame (24024).
+- Frame with fewest bars: DirectionalPersistenceFrame (1086).
+- Highest MeanDRFwd5 event-frame combination: DissipationAccepted inside CompressionFrame (0.000098, n=40).
+- Lowest MeanDRFwd5 event-frame combination: DissipationContained inside DirectionalPersistenceFrame (-0.000144, n=156).
+- Largest PeakContained inside-vs-outside MeanDRFwd5 improvement: NoNamedFrame (0.000047).
+- Largest PeakContained inside-vs-outside MeanDRFwd5 worsening: CompressionFrame (-0.000068).
+- Event-frame combinations skipped from ranked tables because Count < 30: 3.
