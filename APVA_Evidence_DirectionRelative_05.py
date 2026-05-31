@@ -11,6 +11,7 @@ import argparse
 import statistics
 from pathlib import Path
 
+from APVA_Evidence_Report_IO import add_input_arguments, report_path, resolve_input, write_report
 from APVA_Evidence_Consequences_02 import DEFAULT_INPUT, HORIZONS, event_sets, load_rows
 from APVA_Evidence_Sequences_03 import (
     DEFAULT_LENGTHS,
@@ -20,7 +21,6 @@ from APVA_Evidence_Sequences_03 import (
     sequence_occurrences,
 )
 
-DEFAULT_OUTPUT = Path("DirectionRelative.txt")
 MIN_RANKED_SAMPLES = 30
 TOP_LIMIT = 25
 
@@ -31,17 +31,11 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Print APVA Evidence v0.1 direction-relative consequence tables."
     )
-    parser.add_argument(
-        "--input",
-        type=Path,
-        default=DEFAULT_INPUT,
-        help=f"Evidence CSV path (default: {DEFAULT_INPUT.as_posix()})",
-    )
+    add_input_arguments(parser, DEFAULT_INPUT)
     parser.add_argument(
         "--output",
         type=Path,
-        default=DEFAULT_OUTPUT,
-        help=f"Report output path (default: {DEFAULT_OUTPUT.as_posix()})",
+        help="Report output path. Defaults to DirectionRelative_<instrument>.txt.",
     )
     return parser.parse_args()
 
@@ -268,14 +262,9 @@ def build_report(path: Path) -> str:
 
 def main() -> None:
     args = parse_args()
-    report = build_report(args.input)
-    try:
-        args.output.write_text(report, encoding="utf-8")
-    except PermissionError:
-        # PowerShell may already hold DirectionRelative.txt open when stdout is
-        # redirected to that same path. Printing below still writes the report.
-        pass
-    print(report, end="")
+    input_path = resolve_input(args, DEFAULT_INPUT)
+    output_path = args.output or report_path("DirectionRelative", input_path)
+    write_report(build_report(input_path), output_path)
 
 
 if __name__ == "__main__":

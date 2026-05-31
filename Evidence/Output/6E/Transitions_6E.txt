@@ -1,0 +1,543 @@
+APVA Evidence Transitions Study v0.1
+====================================
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_OPEN_apva_bar_evidence_v01.csv
+Complete rows: 35151
+
+ParticipationState
+==================
+
+ParticipationState: Top 25 One-Step Transitions
+-----------------------------------------------
+Transition                                                    Count   PercentAll   PercentFromCurrent
+Falling -> Rising                                              7055       20.07%               44.62%
+Falling -> Falling                                             5770       16.42%               36.49%
+Rising -> Falling                                              5189       14.76%               53.73%
+Peak -> Falling                                                3714       10.57%               55.42%
+Rising -> Rising                                               2566        7.30%               26.57%
+Falling -> Peak                                                2205        6.27%               13.95%
+Peak -> Peak                                                   2194        6.24%               32.74%
+Rising -> Peak                                                 1430        4.07%               14.81%
+Climactic -> Falling                                           1107        3.15%               38.21%
+Climactic -> Climactic                                          932        2.65%               32.17%
+Climactic -> Peak                                               858        2.44%               29.62%
+Peak -> Climactic                                               793        2.26%               11.83%
+Falling -> Climactic                                            729        2.07%                4.61%
+Rising -> Climactic                                             441        1.25%                4.57%
+Falling -> Normal                                                52        0.15%                0.33%
+Normal -> Rising                                                 36        0.10%               42.86%
+Normal -> Falling                                                31        0.09%               36.90%
+Rising -> Normal                                                 31        0.09%                0.32%
+Normal -> Peak                                                   14        0.04%               16.67%
+Normal -> Climactic                                               2        0.01%                2.38%
+Normal -> Normal                                                  1        0.00%                1.19%
+
+ParticipationState: Top 25 Two-Step Paths
+-----------------------------------------
+Path                                                                            Count   PercentAll   PercentFromPrefix
+Falling -> Rising -> Falling                                                     3686       10.49%              52.25%
+Falling -> Falling -> Rising                                                     3100        8.82%              53.73%
+Rising -> Falling -> Rising                                                      2540        7.23%              48.95%
+Falling -> Rising -> Rising                                                      2021        5.75%              28.65%
+Rising -> Falling -> Falling                                                     1897        5.40%              36.56%
+Falling -> Falling -> Falling                                                    1731        4.92%              30.00%
+Peak -> Falling -> Falling                                                       1635        4.65%              44.02%
+Rising -> Rising -> Falling                                                      1484        4.22%              57.83%
+Falling -> Peak -> Falling                                                       1277        3.63%              57.91%
+Peak -> Falling -> Rising                                                        1108        3.15%              29.83%
+Peak -> Peak -> Falling                                                          1108        3.15%              50.50%
+Falling -> Rising -> Peak                                                        1017        2.89%              14.42%
+Rising -> Peak -> Falling                                                         881        2.51%              61.61%
+Peak -> Peak -> Peak                                                              823        2.34%              37.51%
+Peak -> Falling -> Peak                                                           721        2.05%              19.41%
+Falling -> Peak -> Peak                                                           697        1.98%              31.61%
+Falling -> Falling -> Peak                                                        696        1.98%              12.06%
+Rising -> Falling -> Peak                                                         595        1.69%              11.47%
+Rising -> Rising -> Rising                                                        535        1.52%              20.85%
+Climactic -> Falling -> Falling                                                   496        1.41%              44.81%
+Climactic -> Peak -> Falling                                                      443        1.26%              51.63%
+Rising -> Peak -> Peak                                                            420        1.19%              29.37%
+Rising -> Rising -> Peak                                                          406        1.16%              15.82%
+Climactic -> Climactic -> Climactic                                               341        0.97%              36.59%
+Falling -> Climactic -> Falling                                                   317        0.90%              43.48%
+
+ParticipationState: Persistence
+-------------------------------
+State                          RunCount      MeanRun     MaxRun    Length1    Length2   Length3Plus
+Climactic                          1965         1.47         10       1374        373           218
+Falling                           10042         1.57          7       6003       2765          1274
+Normal                               83         1.01          2         82          1             0
+Peak                               4507         1.49         10       3136        870           501
+Rising                             7091         1.36          7       5060       1586           445
+
+AcceptanceState
+===============
+
+AcceptanceState: Top 25 One-Step Transitions
+--------------------------------------------
+Transition                                                    Count   PercentAll   PercentFromCurrent
+Accepted -> Accepted                                           6545       18.62%               41.67%
+Accepted -> Contained                                          5207       14.81%               33.15%
+Contained -> Accepted                                          5192       14.77%               44.47%
+Unresolved -> Accepted                                         3971       11.30%               51.13%
+Accepted -> Unresolved                                         3956       11.25%               25.18%
+Contained -> Contained                                         3836       10.91%               32.86%
+Contained -> Unresolved                                        2647        7.53%               22.67%
+Unresolved -> Contained                                        2632        7.49%               33.89%
+Unresolved -> Unresolved                                       1164        3.31%               14.99%
+
+AcceptanceState: Top 25 Two-Step Paths
+--------------------------------------
+Path                                                                            Count   PercentAll   PercentFromPrefix
+Accepted -> Accepted -> Accepted                                                 2698        7.68%              41.22%
+Accepted -> Contained -> Accepted                                                2324        6.61%              44.63%
+Contained -> Accepted -> Accepted                                                2219        6.31%              42.74%
+Accepted -> Accepted -> Contained                                                2189        6.23%              33.45%
+Accepted -> Unresolved -> Accepted                                               1987        5.65%              50.23%
+Contained -> Contained -> Accepted                                               1728        4.92%              45.05%
+Contained -> Accepted -> Contained                                               1714        4.88%              33.01%
+Accepted -> Contained -> Contained                                               1699        4.83%              32.63%
+Accepted -> Accepted -> Unresolved                                               1657        4.71%              25.32%
+Unresolved -> Accepted -> Accepted                                               1627        4.63%              40.97%
+Contained -> Unresolved -> Accepted                                              1352        3.85%              51.08%
+Accepted -> Unresolved -> Contained                                              1326        3.77%              33.52%
+Unresolved -> Accepted -> Contained                                              1304        3.71%              32.84%
+Contained -> Accepted -> Unresolved                                              1259        3.58%              24.25%
+Contained -> Contained -> Contained                                              1242        3.53%              32.38%
+Accepted -> Contained -> Unresolved                                              1184        3.37%              22.74%
+Unresolved -> Contained -> Accepted                                              1140        3.24%              43.31%
+Unresolved -> Accepted -> Unresolved                                             1040        2.96%              26.19%
+Contained -> Unresolved -> Contained                                              921        2.62%              34.79%
+Unresolved -> Contained -> Contained                                              895        2.55%              34.00%
+Contained -> Contained -> Unresolved                                              866        2.46%              22.58%
+Accepted -> Unresolved -> Unresolved                                              643        1.83%              16.25%
+Unresolved -> Unresolved -> Accepted                                              632        1.80%              54.30%
+Unresolved -> Contained -> Unresolved                                             597        1.70%              22.68%
+Unresolved -> Unresolved -> Contained                                             385        1.10%              33.08%
+
+AcceptanceState: Persistence
+----------------------------
+State                          RunCount      MeanRun     MaxRun    Length1    Length2   Length3Plus
+Accepted                           9164         1.71         12       5317       2264          1583
+Contained                          7839         1.49         10       5245       1765           829
+Unresolved                         6603         1.18          8       5586        897           120
+
+DissipationState
+================
+
+DissipationState: Top 25 One-Step Transitions
+---------------------------------------------
+Transition                                                    Count   PercentAll   PercentFromCurrent
+Absent -> Absent                                               9304       26.47%               51.69%
+Absent -> Local                                                8694       24.73%               48.31%
+Local -> Absent                                                8694       24.73%               50.69%
+Local -> Local                                                 8458       24.06%               49.31%
+
+DissipationState: Top 25 Two-Step Paths
+---------------------------------------
+Path                                                                            Count   PercentAll   PercentFromPrefix
+Absent -> Absent -> Absent                                                       4887       13.90%              52.53%
+Absent -> Absent -> Local                                                        4417       12.57%              47.47%
+Local -> Absent -> Absent                                                        4417       12.57%              50.81%
+Absent -> Local -> Local                                                         4367       12.42%              50.23%
+Local -> Local -> Absent                                                         4367       12.42%              51.63%
+Absent -> Local -> Absent                                                        4327       12.31%              49.77%
+Local -> Absent -> Local                                                         4277       12.17%              49.19%
+Local -> Local -> Local                                                          4090       11.64%              48.36%
+
+DissipationState: Persistence
+-----------------------------
+State                          RunCount      MeanRun     MaxRun    Length1    Length2   Length3Plus
+Absent                             8694         2.07         14       4277       2132          2285
+Local                              8695         1.97         13       4327       2297          2071
+
+CompressionState
+================
+
+CompressionState: Top 25 One-Step Transitions
+---------------------------------------------
+Transition                                                    Count   PercentAll   PercentFromCurrent
+Absent -> Absent                                               6366       18.11%               41.00%
+Absent -> Clustered                                            4795       13.64%               30.88%
+Clustered -> Absent                                            4649       13.23%               50.12%
+Local -> Absent                                                4512       12.84%               43.61%
+Absent -> Local                                                4366       12.42%               28.12%
+Local -> Local                                                 3042        8.65%               29.40%
+Clustered -> Local                                             2939        8.36%               31.68%
+Local -> Clustered                                             2793        7.95%               26.99%
+Clustered -> Clustered                                         1688        4.80%               18.20%
+
+CompressionState: Top 25 Two-Step Paths
+---------------------------------------
+Path                                                                            Count   PercentAll   PercentFromPrefix
+Absent -> Absent -> Absent                                                       2576        7.33%              40.46%
+Absent -> Clustered -> Absent                                                    2356        6.70%              49.13%
+Absent -> Absent -> Clustered                                                    2004        5.70%              31.48%
+Absent -> Local -> Absent                                                        1915        5.45%              43.86%
+Local -> Absent -> Absent                                                        1895        5.39%              42.00%
+Clustered -> Absent -> Absent                                                    1894        5.39%              40.74%
+Absent -> Absent -> Local                                                        1785        5.08%              28.04%
+Absent -> Clustered -> Local                                                     1480        4.21%              30.87%
+Clustered -> Absent -> Clustered                                                 1429        4.07%              30.74%
+Local -> Clustered -> Absent                                                     1399        3.98%              50.09%
+Local -> Absent -> Clustered                                                     1362        3.87%              30.19%
+Clustered -> Absent -> Local                                                     1326        3.77%              28.52%
+Local -> Local -> Absent                                                         1321        3.76%              43.43%
+Clustered -> Local -> Absent                                                     1276        3.63%              43.42%
+Absent -> Local -> Local                                                         1261        3.59%              28.88%
+Local -> Absent -> Local                                                         1255        3.57%              27.81%
+Absent -> Local -> Clustered                                                     1190        3.39%              27.26%
+Absent -> Clustered -> Clustered                                                  959        2.73%              20.00%
+Local -> Clustered -> Local                                                       922        2.62%              33.01%
+Clustered -> Clustered -> Absent                                                  894        2.54%              52.96%
+Clustered -> Local -> Local                                                       893        2.54%              30.38%
+Local -> Local -> Local                                                           888        2.53%              29.19%
+Local -> Local -> Clustered                                                       833        2.37%              27.38%
+Clustered -> Local -> Clustered                                                   770        2.19%              26.20%
+Clustered -> Clustered -> Local                                                   537        1.53%              31.81%
+
+CompressionState: Persistence
+-----------------------------
+State                          RunCount      MeanRun     MaxRun    Length1    Length2   Length3Plus
+Absent                             9162         1.69         12       5372       2258          1532
+Clustered                          7588         1.22          6       6157       1212           219
+Local                              7305         1.42          8       5151       1533           621
+
+ExpansionState
+==============
+
+ExpansionState: Top 25 One-Step Transitions
+-------------------------------------------
+Transition                                                    Count   PercentAll   PercentFromCurrent
+Absent -> Absent                                               6890       19.60%               39.52%
+Absent -> Local                                                6332       18.01%               36.32%
+Local -> Absent                                                4737       13.48%               61.96%
+Strong -> Absent                                               3652       10.39%               62.23%
+Absent -> Strong                                               2531        7.20%               14.52%
+Climactic -> Absent                                            2154        6.13%               51.26%
+Absent -> Climactic                                            1681        4.78%                9.64%
+Strong -> Strong                                               1357        3.86%               23.12%
+Local -> Local                                                 1314        3.74%               17.19%
+Climactic -> Climactic                                         1028        2.92%               24.46%
+Climactic -> Strong                                            1020        2.90%               24.27%
+Local -> Strong                                                 961        2.73%               12.57%
+Strong -> Climactic                                             860        2.45%               14.65%
+Local -> Climactic                                              633        1.80%                8.28%
+
+ExpansionState: Top 25 Two-Step Paths
+-------------------------------------
+Path                                                                            Count   PercentAll   PercentFromPrefix
+Absent -> Local -> Absent                                                        3814       10.85%              60.23%
+Absent -> Absent -> Local                                                        2991        8.51%              43.41%
+Absent -> Absent -> Absent                                                       2350        6.69%              34.11%
+Local -> Absent -> Absent                                                        1953        5.56%              41.23%
+Local -> Absent -> Local                                                         1865        5.31%              39.37%
+Absent -> Strong -> Absent                                                       1686        4.80%              66.61%
+Strong -> Absent -> Absent                                                       1628        4.63%              44.58%
+Absent -> Local -> Local                                                         1174        3.34%              18.54%
+Strong -> Absent -> Local                                                         973        2.77%              26.64%
+Absent -> Climactic -> Absent                                                     959        2.73%              57.05%
+Climactic -> Absent -> Absent                                                     958        2.73%              44.48%
+Absent -> Absent -> Strong                                                        942        2.68%              13.67%
+Local -> Local -> Absent                                                          923        2.63%              70.24%
+Absent -> Local -> Strong                                                         803        2.28%              12.68%
+Strong -> Strong -> Absent                                                        803        2.28%              59.17%
+Local -> Strong -> Absent                                                         668        1.90%              69.51%
+Strong -> Absent -> Strong                                                        645        1.84%              17.66%
+Absent -> Absent -> Climactic                                                     607        1.73%               8.81%
+Local -> Absent -> Strong                                                         552        1.57%              11.65%
+Absent -> Local -> Climactic                                                      540        1.54%               8.53%
+Climactic -> Absent -> Local                                                      503        1.43%              23.35%
+Absent -> Strong -> Strong                                                        497        1.41%              19.64%
+Climactic -> Strong -> Absent                                                     495        1.41%              48.53%
+Strong -> Climactic -> Absent                                                     425        1.21%              49.42%
+Climactic -> Climactic -> Absent                                                  409        1.16%              39.79%
+
+ExpansionState: Persistence
+---------------------------
+State                          RunCount      MeanRun     MaxRun    Length1    Length2   Length3Plus
+Absent                            10544         1.65         10       6004       2913          1627
+Climactic                          3174         1.32          9       2439        538           197
+Local                              6332         1.21          5       5158       1044           130
+Strong                             4512         1.30          7       3507        748           257
+
+SignificanceState
+=================
+
+SignificanceState: Top 25 One-Step Transitions
+----------------------------------------------
+Transition                                                    Count   PercentAll   PercentFromCurrent
+Minor -> Minor                                                 7305       20.78%               54.41%
+Moderate -> Minor                                              3021        8.59%               38.84%
+Minor -> Moderate                                              2885        8.21%               21.49%
+Structural -> Structural                                       2605        7.41%               34.47%
+Moderate -> Moderate                                           1936        5.51%               24.89%
+Structural -> Moderate                                         1649        4.69%               21.82%
+Minor -> Structural                                            1603        4.56%               11.94%
+Structural -> Minor                                            1561        4.44%               20.66%
+Moderate -> Structural                                         1502        4.27%               19.31%
+Major -> Minor                                                 1435        4.08%               28.96%
+Minor -> Major                                                 1430        4.07%               10.65%
+Structural -> Major                                            1186        3.37%               15.69%
+Major -> Structural                                            1169        3.33%               23.59%
+Major -> Moderate                                              1108        3.15%               22.36%
+Moderate -> Major                                              1100        3.13%               14.14%
+Major -> Major                                                 1059        3.01%               21.37%
+SessionDefining -> Structural                                   678        1.93%               47.28%
+Structural -> SessionDefining                                   556        1.58%                7.36%
+SessionDefining -> SessionDefining                              272        0.77%               18.97%
+Moderate -> SessionDefining                                     219        0.62%                2.82%
+Minor -> SessionDefining                                        203        0.58%                1.51%
+SessionDefining -> Moderate                                     200        0.57%               13.95%
+Major -> SessionDefining                                        184        0.52%                3.71%
+SessionDefining -> Major                                        180        0.51%               12.55%
+SessionDefining -> Minor                                        104        0.30%                7.25%
+
+SignificanceState: Top 25 Two-Step Paths
+----------------------------------------
+Path                                                                            Count   PercentAll   PercentFromPrefix
+Minor -> Minor -> Minor                                                          4291       12.21%              58.74%
+Moderate -> Minor -> Minor                                                       1533        4.36%              50.74%
+Minor -> Minor -> Moderate                                                       1520        4.32%              20.81%
+Minor -> Moderate -> Minor                                                       1349        3.84%              46.76%
+Structural -> Structural -> Structural                                           1019        2.90%              39.12%
+Major -> Minor -> Minor                                                           721        2.05%              50.24%
+Structural -> Minor -> Minor                                                      719        2.05%              46.06%
+Minor -> Minor -> Major                                                           710        2.02%               9.72%
+Minor -> Minor -> Structural                                                      705        2.01%               9.65%
+Moderate -> Moderate -> Minor                                                     704        2.00%              36.36%
+Moderate -> Minor -> Moderate                                                     697        1.98%              23.07%
+Minor -> Moderate -> Moderate                                                     685        1.95%              23.74%
+Structural -> Structural -> Moderate                                              579        1.65%              22.23%
+Minor -> Major -> Minor                                                           531        1.51%              37.13%
+Moderate -> Moderate -> Moderate                                                  520        1.48%              26.86%
+Structural -> Moderate -> Minor                                                   520        1.48%              31.53%
+Minor -> Structural -> Minor                                                      515        1.47%              32.13%
+Moderate -> Structural -> Structural                                              492        1.40%              32.76%
+Structural -> Structural -> Minor                                                 434        1.23%              16.66%
+Minor -> Moderate -> Structural                                                   429        1.22%              14.87%
+Structural -> Moderate -> Moderate                                                422        1.20%              25.59%
+Structural -> Moderate -> Structural                                              420        1.19%              25.47%
+Minor -> Structural -> Structural                                                 410        1.17%              25.58%
+Major -> Moderate -> Minor                                                        403        1.15%              36.37%
+Moderate -> Minor -> Structural                                                   401        1.14%              13.27%
+
+SignificanceState: Persistence
+------------------------------
+State                          RunCount      MeanRun     MaxRun    Length1    Length2   Length3Plus
+Major                              3896         1.27          6       3087        613           196
+Minor                              6122         2.19         21       3108       1404          1610
+Moderate                           5842         1.33          7       4426       1051           365
+SessionDefining                    1162         1.23          5        945        173            44
+Structural                         4952         1.53          9       3366        975           611
+
+Geometry
+========
+
+Geometry: Top 25 One-Step Transitions
+-------------------------------------
+Transition                                                    Count   PercentAll   PercentFromCurrent
+LLLH -> LLLH                                                   4278       12.17%               39.14%
+HHHL -> HHHL                                                   4122       11.73%               38.53%
+HHHL -> LLLH                                                   2592        7.37%               24.23%
+LLLH -> HHHL                                                   2563        7.29%               23.45%
+LLLH -> InsideBar                                              2196        6.25%               20.09%
+HHHL -> InsideBar                                              2086        5.93%               19.50%
+InsideBar -> LLLH                                              1989        5.66%               29.47%
+InsideBar -> HHHL                                              1956        5.56%               28.98%
+InsideBar -> OutsideBar                                        1880        5.35%               27.85%
+OutsideBar -> LLLH                                             1791        5.10%               31.12%
+OutsideBar -> HHHL                                             1766        5.02%               30.68%
+OutsideBar -> InsideBar                                        1635        4.65%               28.41%
+HHHL -> OutsideBar                                             1618        4.60%               15.12%
+LLLH -> OutsideBar                                             1603        4.56%               14.67%
+InsideBar -> InsideBar                                          676        1.92%               10.01%
+OutsideBar -> OutsideBar                                        447        1.27%                7.77%
+Symmetric -> HHHL                                               290        0.83%               28.52%
+LLLH -> Symmetric                                               289        0.82%                2.64%
+HHHL -> Symmetric                                               280        0.80%                2.62%
+Symmetric -> LLLH                                               279        0.79%               27.43%
+InsideBar -> Symmetric                                          249        0.71%                3.69%
+Symmetric -> OutsideBar                                         209        0.59%               20.55%
+Symmetric -> InsideBar                                          157        0.45%               15.44%
+OutsideBar -> Symmetric                                         117        0.33%                2.03%
+Symmetric -> Symmetric                                           82        0.23%                8.06%
+
+Geometry: Top 25 Two-Step Paths
+-------------------------------
+Path                                                                            Count   PercentAll   PercentFromPrefix
+LLLH -> LLLH -> LLLH                                                             1661        4.73%              38.83%
+HHHL -> HHHL -> HHHL                                                             1583        4.50%              38.40%
+LLLH -> HHHL -> HHHL                                                             1062        3.02%              41.44%
+HHHL -> HHHL -> LLLH                                                             1044        2.97%              25.33%
+LLLH -> LLLH -> HHHL                                                             1043        2.97%              24.38%
+HHHL -> LLLH -> LLLH                                                             1036        2.95%              39.97%
+LLLH -> LLLH -> InsideBar                                                         838        2.38%              19.59%
+InsideBar -> LLLH -> LLLH                                                         793        2.26%              39.87%
+HHHL -> HHHL -> InsideBar                                                         787        2.24%              19.09%
+InsideBar -> HHHL -> HHHL                                                         737        2.10%              37.68%
+LLLH -> InsideBar -> HHHL                                                         699        1.99%              31.83%
+OutsideBar -> LLLH -> LLLH                                                        685        1.95%              38.25%
+HHHL -> InsideBar -> LLLH                                                         667        1.90%              31.98%
+LLLH -> LLLH -> OutsideBar                                                        631        1.80%              14.75%
+OutsideBar -> HHHL -> HHHL                                                        623        1.77%              35.28%
+LLLH -> InsideBar -> LLLH                                                         616        1.75%              28.05%
+HHHL -> HHHL -> OutsideBar                                                        615        1.75%              14.92%
+HHHL -> LLLH -> HHHL                                                              601        1.71%              23.19%
+InsideBar -> OutsideBar -> HHHL                                                   591        1.68%              31.44%
+LLLH -> HHHL -> LLLH                                                              588        1.67%              22.94%
+HHHL -> InsideBar -> OutsideBar                                                   579        1.65%              27.76%
+InsideBar -> OutsideBar -> LLLH                                                   578        1.64%              30.74%
+LLLH -> InsideBar -> OutsideBar                                                   577        1.64%              26.28%
+HHHL -> InsideBar -> HHHL                                                         560        1.59%              26.85%
+HHHL -> OutsideBar -> LLLH                                                        557        1.58%              34.43%
+
+Geometry: Persistence
+---------------------
+State                          RunCount      MeanRun     MaxRun    Length1    Length2   Length3Plus
+HHHL                               6576         1.63         11       4037       1582           957
+InsideBar                          6074         1.11          3       5430        612            32
+LLLH                               6651         1.64         11       4034       1611          1006
+OutsideBar                         5310         1.08          4       4884        406            20
+Symmetric                           935         1.09          6        871         54            10
+
+VolumePolarity
+==============
+
+VolumePolarity: Top 25 One-Step Transitions
+-------------------------------------------
+Transition                                                    Count   PercentAll   PercentFromCurrent
+Black -> Red                                                   7023       19.98%               45.50%
+Red -> Black                                                   7009       19.94%               44.99%
+Red -> Red                                                     6777       19.28%               43.50%
+Black -> Black                                                 6666       18.96%               43.19%
+Red -> Neutral                                                 1793        5.10%               11.51%
+Neutral -> Red                                                 1780        5.06%               43.03%
+Neutral -> Black                                               1758        5.00%               42.49%
+Black -> Neutral                                               1745        4.96%               11.31%
+Neutral -> Neutral                                              599        1.70%               14.48%
+
+VolumePolarity: Top 25 Two-Step Paths
+-------------------------------------
+Path                                                                            Count   PercentAll   PercentFromPrefix
+Red -> Black -> Red                                                              3202        9.11%              45.68%
+Black -> Red -> Black                                                            3133        8.91%              44.61%
+Black -> Red -> Red                                                              3112        8.85%              44.31%
+Red -> Red -> Black                                                              3101        8.82%              45.76%
+Black -> Black -> Red                                                            3064        8.72%              45.96%
+Red -> Black -> Black                                                            3025        8.61%              43.16%
+Red -> Red -> Red                                                                2912        8.28%              42.97%
+Black -> Black -> Black                                                          2895        8.24%              43.43%
+Red -> Black -> Neutral                                                           782        2.22%              11.16%
+Red -> Neutral -> Red                                                             782        2.22%              43.61%
+Black -> Red -> Neutral                                                           777        2.21%              11.06%
+Neutral -> Red -> Black                                                           775        2.20%              43.54%
+Red -> Red -> Neutral                                                             764        2.17%              11.27%
+Black -> Neutral -> Red                                                           760        2.16%              43.55%
+Neutral -> Black -> Red                                                           757        2.15%              43.06%
+Neutral -> Red -> Red                                                             753        2.14%              42.30%
+Red -> Neutral -> Black                                                           751        2.14%              41.89%
+Neutral -> Black -> Black                                                         745        2.12%              42.38%
+Black -> Neutral -> Black                                                         737        2.10%              42.23%
+Black -> Black -> Neutral                                                         707        2.01%              10.61%
+Neutral -> Neutral -> Black                                                       270        0.77%              45.08%
+Red -> Neutral -> Neutral                                                         260        0.74%              14.50%
+Neutral -> Black -> Neutral                                                       256        0.73%              14.56%
+Neutral -> Red -> Neutral                                                         252        0.72%              14.16%
+Black -> Neutral -> Neutral                                                       248        0.71%              14.21%
+
+VolumePolarity: Persistence
+---------------------------
+State                          RunCount      MeanRun     MaxRun    Length1    Length2   Length3Plus
+Black                              8768         1.76         11       4997       2144          1627
+Neutral                            3538         1.17          5       3030        430            78
+Red                                8803         1.77         13       4938       2219          1646
+
+Focused Transition Probabilities
+================================
+
+ParticipationState
+------------------
+Transition                                            Count    FromState   Probability
+Peak -> Peak                                           2194         6701        32.74%
+Peak -> Falling                                        3714         6701        55.42%
+Peak -> Rising                                            0         6701         0.00%
+Peak -> Climactic                                       793         6701        11.83%
+Climactic -> Peak                                       858         2897        29.62%
+Climactic -> Falling                                   1107         2897        38.21%
+Climactic -> Rising                                       0         2897         0.00%
+
+AcceptanceState
+---------------
+Transition                                            Count    FromState   Probability
+Contained -> Contained                                 3836        11675        32.86%
+Contained -> Accepted                                  5192        11675        44.47%
+Accepted -> Contained                                  5207        15708        33.15%
+Accepted -> Accepted                                   6545        15708        41.67%
+Unresolved -> Accepted                                 3971         7767        51.13%
+Unresolved -> Contained                                2632         7767        33.89%
+
+DissipationState
+----------------
+Transition                                            Count    FromState   Probability
+Local -> Local                                         8458        17152        49.31%
+Local -> Absent                                        8694        17152        50.69%
+Absent -> Local                                        8694        17998        48.31%
+Absent -> Absent                                       9304        17998        51.69%
+
+CompressionState
+----------------
+Transition                                            Count    FromState   Probability
+Clustered -> Clustered                                 1688         9276        18.20%
+Clustered -> Local                                     2939         9276        31.68%
+Clustered -> Absent                                    4649         9276        50.12%
+Local -> Clustered                                     2793        10347        26.99%
+Local -> Absent                                        4512        10347        43.61%
+
+Research Notes
+==============
+- Highest persistence state by mean run length: SignificanceState=Minor (mean=2.19, max=21).
+- Most common one-step transition for ParticipationState: Falling -> Rising (count=7055).
+- Most common two-step path for ParticipationState: Falling -> Rising -> Falling (count=3686).
+- Most common one-step transition for AcceptanceState: Accepted -> Accepted (count=6545).
+- Most common two-step path for AcceptanceState: Accepted -> Accepted -> Accepted (count=2698).
+- Most common one-step transition for DissipationState: Absent -> Absent (count=9304).
+- Most common two-step path for DissipationState: Absent -> Absent -> Absent (count=4887).
+- Most common one-step transition for CompressionState: Absent -> Absent (count=6366).
+- Most common two-step path for CompressionState: Absent -> Absent -> Absent (count=2576).
+- Most common one-step transition for ExpansionState: Absent -> Absent (count=6890).
+- Most common two-step path for ExpansionState: Absent -> Local -> Absent (count=3814).
+- Most common one-step transition for SignificanceState: Minor -> Minor (count=7305).
+- Most common two-step path for SignificanceState: Minor -> Minor -> Minor (count=4291).
+- Most common one-step transition for Geometry: LLLH -> LLLH (count=4278).
+- Most common two-step path for Geometry: LLLH -> LLLH -> LLLH (count=1661).
+- Most common one-step transition for VolumePolarity: Black -> Red (count=7023).
+- Most common two-step path for VolumePolarity: Red -> Black -> Red (count=3202).
+- States with max run length >= 5:
+  AcceptanceState=Accepted: max=12
+  AcceptanceState=Contained: max=10
+  AcceptanceState=Unresolved: max=8
+  CompressionState=Absent: max=12
+  CompressionState=Clustered: max=6
+  CompressionState=Local: max=8
+  DissipationState=Absent: max=14
+  DissipationState=Local: max=13
+  ExpansionState=Absent: max=10
+  ExpansionState=Climactic: max=9
+  ExpansionState=Local: max=5
+  ExpansionState=Strong: max=7
+  Geometry=HHHL: max=11
+  Geometry=LLLH: max=11
+  Geometry=Symmetric: max=6
+  ParticipationState=Climactic: max=10
+  ParticipationState=Falling: max=7
+  ParticipationState=Peak: max=10
+  ParticipationState=Rising: max=7
+  SignificanceState=Major: max=6
+  SignificanceState=Minor: max=21
+  SignificanceState=Moderate: max=7
+  SignificanceState=SessionDefining: max=5
+  SignificanceState=Structural: max=9
+  VolumePolarity=Black: max=11
+  VolumePolarity=Neutral: max=5
+  VolumePolarity=Red: max=13
+- Focused transition probabilities are listed in the section above.

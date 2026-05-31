@@ -14,8 +14,9 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Iterable
 
+from APVA_Evidence_Report_IO import add_input_arguments, report_path, resolve_input, write_report
+
 DEFAULT_INPUT = Path("Evidence/NQ_5 Minute_apva_bar_evidence_v01.csv")
-DEFAULT_OUTPUT = Path("Transitions.txt")
 TOP_LIMIT = 25
 
 EVIDENCE_COLUMNS = [
@@ -70,17 +71,11 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Print APVA Evidence v0.1 transition and persistence tables."
     )
-    parser.add_argument(
-        "--input",
-        type=Path,
-        default=DEFAULT_INPUT,
-        help=f"Evidence CSV path (default: {DEFAULT_INPUT.as_posix()})",
-    )
+    add_input_arguments(parser, DEFAULT_INPUT)
     parser.add_argument(
         "--output",
         type=Path,
-        default=DEFAULT_OUTPUT,
-        help=f"Report output path (default: {DEFAULT_OUTPUT.as_posix()})",
+        help="Report output path. Defaults to Transitions_<instrument>.txt.",
     )
     return parser.parse_args()
 
@@ -297,14 +292,9 @@ def build_report(path: Path) -> str:
 
 def main() -> None:
     args = parse_args()
-    report = build_report(args.input)
-    try:
-        args.output.write_text(report, encoding="utf-8")
-    except PermissionError:
-        # PowerShell may already hold Transitions.txt open when stdout is
-        # redirected to that same path. Printing below still writes the report.
-        pass
-    print(report, end="")
+    input_path = resolve_input(args, DEFAULT_INPUT)
+    output_path = args.output or report_path("Transitions", input_path)
+    write_report(build_report(input_path), output_path)
 
 
 if __name__ == "__main__":

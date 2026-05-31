@@ -10,9 +10,12 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter, defaultdict
+from contextlib import redirect_stdout
+from io import StringIO
 from itertools import product
 from pathlib import Path
 
+from APVA_Evidence_Report_IO import add_input_arguments, report_path, resolve_input, write_report
 from APVA_Evidence_Consequences_02 import (
     DEFAULT_INPUT,
     HORIZONS,
@@ -33,12 +36,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Print APVA Evidence v0.1 ordered-sequence consequence tables."
     )
-    parser.add_argument(
-        "--input",
-        type=Path,
-        default=DEFAULT_INPUT,
-        help=f"Evidence CSV path (default: {DEFAULT_INPUT.as_posix()})",
-    )
+    add_input_arguments(parser, DEFAULT_INPUT)
     parser.add_argument(
         "--lengths",
         type=int,
@@ -280,7 +278,11 @@ def analyze(path: Path, lengths: list[int], min_samples: int) -> None:
 def main() -> None:
     args = parse_args()
     validate_args(args)
-    analyze(args.input, args.lengths, args.min_samples)
+    input_path = resolve_input(args, DEFAULT_INPUT)
+    buffer = StringIO()
+    with redirect_stdout(buffer):
+        analyze(input_path, args.lengths, args.min_samples)
+    write_report(buffer.getvalue(), report_path("Sequences", input_path))
 
 
 if __name__ == "__main__":

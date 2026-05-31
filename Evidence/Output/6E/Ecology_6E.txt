@@ -1,0 +1,226 @@
+APVA Evidence v0.1 Ecology
+========================
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_OPEN_apva_bar_evidence_v01.csv
+Total rows: 35151
+
+Frequency: Geometry
+-------------------
+Value                                           Count    Percent
+LLLH                                            10929     31.09%
+HHHL                                            10698     30.43%
+InsideBar                                        6750     19.20%
+OutsideBar                                       5757     16.38%
+Symmetric                                        1017      2.89%
+
+Frequency: VolumePolarity
+-------------------------
+Value                                           Count    Percent
+Red                                             15580     44.32%
+Black                                           15434     43.91%
+Neutral                                          4137     11.77%
+
+Frequency: VolumeDelta
+----------------------
+Value                                           Count    Percent
+Down                                            18039     51.32%
+Up                                              17014     48.40%
+Flat                                               98      0.28%
+
+Frequency: RangeDelta
+---------------------
+Value                                           Count    Percent
+Down                                            16135     45.90%
+Up                                              15358     43.69%
+Flat                                             3658     10.41%
+
+Frequency: BodyDelta
+--------------------
+Value                                           Count    Percent
+Down                                            15916     45.28%
+Up                                              15769     44.86%
+Flat                                             3466      9.86%
+
+Frequency: ParticipationState
+-----------------------------
+Value                                           Count    Percent
+Falling                                         15812     44.98%
+Rising                                           9657     27.47%
+Peak                                             6701     19.06%
+Climactic                                        2897      8.24%
+Normal                                             84      0.24%
+
+Frequency: ExpansionState
+-------------------------
+Value                                           Count    Percent
+Absent                                          17434     49.60%
+Local                                            7646     21.75%
+Strong                                           5869     16.70%
+Climactic                                        4202     11.95%
+
+Frequency: CompressionState
+---------------------------
+Value                                           Count    Percent
+Absent                                          15528     44.18%
+Local                                           10347     29.44%
+Clustered                                        9276     26.39%
+
+Frequency: DissipationState
+---------------------------
+Value                                           Count    Percent
+Absent                                          17998     51.20%
+Local                                           17153     48.80%
+
+Frequency: AcceptanceState
+--------------------------
+Value                                           Count    Percent
+Accepted                                        15709     44.69%
+Contained                                       11675     33.21%
+Unresolved                                       7767     22.10%
+
+Frequency: SignificanceState
+----------------------------
+Value                                           Count    Percent
+Minor                                           13427     38.20%
+Moderate                                         7778     22.13%
+Structural                                       7557     21.50%
+Major                                            4955     14.10%
+SessionDefining                                  1434      4.08%
+
+Frequency: EvidenceFlags
+------------------------
+Value                                           Count    Percent
+CloseInsidePriorRange                           19442     55.31%
+DissipationLocal                                17152     48.80%
+AcceptanceAccepted                              15708     44.69%
+BreaksPriorLow                                  14904     42.40%
+BreaksPriorHigh                                 14629     41.62%
+CloseInsidePriorBody                            12105     34.44%
+AcceptanceContained                             11675     33.21%
+CompressionLocal                                10347     29.44%
+RangePeak20                                     10071     28.65%
+VolumePeak20                                     9598     27.31%
+CompressionClustered                             9276     26.39%
+RangeClimactic20                                 4202     11.95%
+VolumeClimactic50                                2897      8.24%
+LowVolumeHighRange                               1234      3.51%
+HighVolumeLowRange                                904      2.57%
+BreaksPr                                            1      0.00%
+
+Crosstab: DissipationState | AcceptanceState
+--------------------------------------------
+Pair                                                      Count    Percent
+Local|Accepted                                             7889     22.44%
+Absent|Accepted                                            7820     22.25%
+Local|Contained                                            7803     22.20%
+Absent|Unresolved                                          6306     17.94%
+Absent|Contained                                           3872     11.02%
+Local|Unresolved                                           1461      4.16%
+
+Crosstab: ParticipationState | AcceptanceState
+----------------------------------------------
+Pair                                                      Count    Percent
+Falling|Accepted                                           5296     15.07%
+Falling|Unresolved                                         5295     15.06%
+Falling|Contained                                          5221     14.85%
+Rising|Accepted                                            4893     13.92%
+Peak|Accepted                                              3642     10.36%
+Rising|Contained                                           3433      9.77%
+Peak|Contained                                             2173      6.18%
+Climactic|Accepted                                         1845      5.25%
+Rising|Unresolved                                          1331      3.79%
+Peak|Unresolved                                             886      2.52%
+Climactic|Contained                                         821      2.34%
+Climactic|Unresolved                                        231      0.66%
+Normal|Accepted                                              33      0.09%
+Normal|Contained                                             27      0.08%
+Normal|Unresolved                                            24      0.07%
+
+Crosstab: ParticipationState | CompressionState
+-----------------------------------------------
+Pair                                                      Count    Percent
+Falling|Clustered                                          6147     17.49%
+Falling|Absent                                             5189     14.76%
+Rising|Absent                                              4868     13.85%
+Falling|Local                                              4476     12.73%
+Peak|Absent                                                3603     10.25%
+Rising|Local                                               3188      9.07%
+Peak|Local                                                 1922      5.47%
+Climactic|Absent                                           1835      5.22%
+Rising|Clustered                                           1601      4.55%
+Peak|Clustered                                             1176      3.35%
+Climactic|Local                                             734      2.09%
+Climactic|Clustered                                         328      0.93%
+Normal|Absent                                                33      0.09%
+Normal|Local                                                 27      0.08%
+Normal|Clustered                                             24      0.07%
+
+Crosstab: ParticipationState | ExpansionState
+---------------------------------------------
+Pair                                                      Count    Percent
+Falling|Absent                                            10738     30.55%
+Rising|Absent                                              4084     11.62%
+Rising|Local                                               3677     10.46%
+Falling|Local                                              2764      7.86%
+Peak|Absent                                                2062      5.87%
+Peak|Strong                                                2003      5.70%
+Falling|Strong                                             1732      4.93%
+Peak|Climactic                                             1676      4.77%
+Climactic|Climactic                                        1434      4.08%
+Rising|Strong                                              1385      3.94%
+Peak|Local                                                  960      2.73%
+Climactic|Strong                                            739      2.10%
+Falling|Climactic                                           578      1.64%
+Rising|Climactic                                            511      1.45%
+Climactic|Absent                                            499      1.42%
+Climactic|Local                                             225      0.64%
+Normal|Absent                                                51      0.15%
+Normal|Local                                                 20      0.06%
+Normal|Strong                                                10      0.03%
+Normal|Climactic                                              3      0.01%
+
+Crosstab: SignificanceState | AcceptanceState
+---------------------------------------------
+Pair                                                      Count    Percent
+Minor|Unresolved                                           4796     13.64%
+Structural|Accepted                                        4698     13.37%
+Minor|Contained                                            4615     13.13%
+Minor|Accepted                                             4016     11.42%
+Moderate|Accepted                                          3357      9.55%
+Moderate|Contained                                         2894      8.23%
+Major|Accepted                                             2536      7.21%
+Structural|Contained                                       2181      6.20%
+Major|Contained                                            1701      4.84%
+Moderate|Unresolved                                        1527      4.34%
+SessionDefining|Accepted                                   1102      3.14%
+Major|Unresolved                                            718      2.04%
+Structural|Unresolved                                       678      1.93%
+SessionDefining|Contained                                   284      0.81%
+SessionDefining|Unresolved                                   48      0.14%
+
+Crosstab: Geometry | AcceptanceState
+------------------------------------
+Pair                                                      Count    Percent
+InsideBar|Unresolved                                       6750     19.20%
+LLLH|Accepted                                              6493     18.47%
+HHHL|Accepted                                              6300     17.92%
+LLLH|Contained                                             4436     12.62%
+HHHL|Contained                                             4398     12.51%
+OutsideBar|Accepted                                        2916      8.30%
+OutsideBar|Contained                                       2841      8.08%
+Symmetric|Unresolved                                       1017      2.89%
+
+Crosstab: Geometry | CompressionState
+-------------------------------------
+Pair                                                      Count    Percent
+InsideBar|Clustered                                        6676     18.99%
+LLLH|Absent                                                6399     18.20%
+HHHL|Absent                                                6213     17.68%
+HHHL|Local                                                 3717     10.57%
+LLLH|Local                                                 3711     10.56%
+OutsideBar|Absent                                          2916      8.30%
+OutsideBar|Local                                           2841      8.08%
+Symmetric|Clustered                                        1013      2.88%
+LLLH|Clustered                                              819      2.33%
+HHHL|Clustered                                              768      2.18%
+InsideBar|Local                                              74      0.21%
+Symmetric|Local                                               4      0.01%

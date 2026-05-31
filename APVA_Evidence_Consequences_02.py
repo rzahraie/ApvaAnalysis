@@ -10,8 +10,12 @@ from __future__ import annotations
 import argparse
 import csv
 import statistics
+from contextlib import redirect_stdout
+from io import StringIO
 from pathlib import Path
 from typing import Callable, Iterable
+
+from APVA_Evidence_Report_IO import add_input_arguments, report_path, resolve_input, write_report
 
 DEFAULT_INPUT = Path("Evidence/NQ_5 Minute_apva_bar_evidence_v01.csv")
 HORIZONS = (1, 3, 5, 10)
@@ -36,12 +40,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Print APVA Evidence v0.1 forward consequence tables."
     )
-    parser.add_argument(
-        "--input",
-        type=Path,
-        default=DEFAULT_INPUT,
-        help=f"Evidence CSV path (default: {DEFAULT_INPUT.as_posix()})",
-    )
+    add_input_arguments(parser, DEFAULT_INPUT)
     return parser.parse_args()
 
 
@@ -295,7 +294,11 @@ def analyze(path: Path) -> None:
 
 def main() -> None:
     args = parse_args()
-    analyze(args.input)
+    input_path = resolve_input(args, DEFAULT_INPUT)
+    buffer = StringIO()
+    with redirect_stdout(buffer):
+        analyze(input_path)
+    write_report(buffer.getvalue(), report_path("Consequences", input_path))
 
 
 if __name__ == "__main__":
