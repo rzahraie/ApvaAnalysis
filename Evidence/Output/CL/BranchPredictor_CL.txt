@@ -1,0 +1,720 @@
+APVA Branch Predictor Study v0.1 - CL
+======================================
+Instrument: CL
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv
+Total rows: 2684
+Family counts: {'A': 24, 'B': 194, 'C': 448, 'D': 521, 'N': 1497}
+Archetype counts: {'Recovery': 165, 'Exhaustion': 162, 'Reassertion': 494, 'Decay': 256, 'Compression Resolution': 256, 'Destructive Persistence': 207, 'Constructive Emergence': 57, 'Neutral Drift': 950, 'Unclassified': 135}
+Valid archetype transitions: 2681
+Valid branch comparisons: 7
+
+Section 1 - Branch Frequency Summary
+====================================
+Comparison                                                                                      LeftN   RightN   TotalN
+Recovery->Recovery vs Recovery->Decay                                                              73       32      105
+Recovery->Recovery vs Recovery->Compression Resolution                                             73       31      104
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                                     73       36      109
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                        73       35      108
+Decay->Compression Resolution vs Decay->Neutral Drift                                              90       71      161
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay                    95       40      135
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                                251       81      332
+
+Section 2 - Branch Outcome Summary
+==================================
+Comparison                                                                                   Side        Count        Mean      Median      Cont      Fail      Flat
+Recovery->Recovery vs Recovery->Decay                                                        Left           72   -0.045972   -0.075000   47.22%   52.78%    0.00%
+Recovery->Recovery vs Recovery->Decay                                                        Right          31    0.886452    0.350000   54.84%   38.71%    6.45%
+Recovery->Recovery vs Recovery->Compression Resolution                                       Left           72   -0.045972   -0.075000   47.22%   52.78%    0.00%
+Recovery->Recovery vs Recovery->Compression Resolution                                       Right          28    0.297500    0.220000   67.86%   32.14%    0.00%
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Left           73   -0.189863   -0.070000   46.58%   53.42%    0.00%
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Right          36   -0.304722   -0.245000   25.00%   75.00%    0.00%
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Left           73   -0.189863   -0.070000   46.58%   53.42%    0.00%
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Right          35   -0.594000   -0.190000   40.00%   60.00%    0.00%
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Left           87    0.303908    0.060000   54.02%   45.98%    0.00%
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Right          69   -0.124928    0.040000   52.17%   47.83%    0.00%
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Left           90    0.068000   -0.080000   46.67%   53.33%    0.00%
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Right          40    0.010500   -0.210000   40.00%   60.00%    0.00%
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Left          251   -0.019522   -0.020000   48.61%   51.00%    0.40%
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Right          81    0.191358    0.030000   51.85%   46.91%    1.23%
+
+Section 3 - Top Branch Separators
+=================================
+
+Recovery->Recovery vs Recovery->Decay
+.....................................
+Top Positive Separators:
+  1. ArchetypeTotalRunLength                                Group=Runs       Delta=  1.697346 Effect=  3.509307
+  2. PositionInArchetypeRun_Middle                          Group=Runs       Delta=  0.506849 Effect=  1.204223
+  3. CurrentPath3_C->C->B                                   Group=Path3      Delta=  0.493151 Effect=  1.171676
+  4. PositionInArchetypeRun_First                           Group=Runs       Delta=  0.493151 Effect=  1.171676
+  5. Prev5AcceptedCount                                     Group=Memory5    Delta=  0.629281 Effect=  0.844506
+  6. FamilyPositionInRun_First                              Group=Runs       Delta=  0.315068 Effect=  0.805631
+  7. Prev5Dominance                                         Group=Memory5    Delta=  1.415240 Effect=  0.780841
+  8. Prev5ClimacticCount                                    Group=Memory5    Delta=  0.713185 Effect=  0.741758
+  9. CurrentPath4_N->C->C->B                                Group=Path4      Delta=  0.273973 Effect=  0.729683
+ 10. Prev20ClimacticCount                                   Group=Memory20   Delta=  0.964469 Effect=  0.682756
+ 11. Prev10ClimacticCount                                   Group=Memory10   Delta=  0.795805 Effect=  0.665461
+ 12. ParticipationState_Falling                             Group=States     Delta=  0.232877 Effect=  0.654467
+ 13. FamilyTotalRunLength                                   Group=Runs       Delta=  0.636130 Effect=  0.606674
+ 14. CurrentFamily_N                                        Group=Family     Delta=  0.191781 Effect=  0.578622
+ 15. CurrentPath3_C->B->N                                   Group=Path3      Delta=  0.191781 Effect=  0.578622
+ 16. CurrentPath4_C->C->B->N                                Group=Path4      Delta=  0.191781 Effect=  0.578622
+ 17. Prev20PeakCount                                        Group=Memory20   Delta=  1.087329 Effect=  0.550071
+ 18. Prev10PeakCount                                        Group=Memory10   Delta=  0.844606 Effect=  0.533977
+ 19. CurrentPath3_C->B->C                                   Group=Path3      Delta=  0.150685 Effect=  0.500331
+ 20. CurrentPath4_C->C->B->C                                Group=Path4      Delta=  0.150685 Effect=  0.500331
+ 21. Prev10AcceptedCount                                    Group=Memory10   Delta=  0.635702 Effect=  0.465079
+ 22. CurrentPath3_C->B->B                                   Group=Path3      Delta=  0.109589 Effect=  0.416721
+ 23. Prev10Dominance                                        Group=Memory10   Delta=  1.413099 Effect=  0.396394
+ 24. AcceptanceState_Accepted                               Group=States     Delta=  0.139127 Effect=  0.355675
+ 25. Flag_Accepted                                          Group=Evidence   Delta=  0.139127 Effect=  0.355675
+Top Negative Separators:
+  1. PositionInArchetypeRun_Only                            Group=Runs       Delta= -0.843750 Effect= -4.169083
+  2. CurrentPath3_N->C->B                                   Group=Path3      Delta= -0.656250 Effect= -2.478888
+  3. CurrentPath4_N->N->C->B                                Group=Path4      Delta= -0.312500 Effect= -1.209574
+  4. FamilyPositionInRun_Only                               Group=Runs       Delta= -0.362158 Effect= -0.827877
+  5. Prev5CompressedCount                                   Group=Memory5    Delta= -0.601884 Effect= -0.816988
+  6. CurrentPath3_D->C->B                                   Group=Path3      Delta= -0.156250 Effect= -0.772052
+  7. CurrentPath4_N->D->C->B                                Group=Path4      Delta= -0.156250 Effect= -0.772052
+  8. PositionInArchetypeRun_Last                            Group=Runs       Delta= -0.156250 Effect= -0.772052
+  9. CurrentFamily_B                                        Group=Family     Delta= -0.303510 Effect= -0.685387
+ 10. Flag_Peak                                              Group=Evidence   Delta= -0.270120 Effect= -0.678215
+ 11. ParticipationState_Peak                                Group=States     Delta= -0.270120 Effect= -0.678215
+ 12. CurrentPath3_B->C->C                                   Group=Path3      Delta= -0.062500 Effect= -0.463231
+ 13. Prev10CompressedCount                                  Group=Memory10   Delta= -0.629709 Effect= -0.457494
+ 14. Flag_Compressed                                        Group=Evidence   Delta= -0.125428 Effect= -0.326379
+ 15. Prev20CompressedCount                                  Group=Memory20   Delta= -0.609161 Effect= -0.280553
+ 16. AcceptanceState_Unresolved                             Group=States     Delta= -0.107021 Effect= -0.250547
+ 17. CompressionState_Local                                 Group=States     Delta= -0.089041 Effect= -0.178355
+ 18. Prev20NetAcceptance                                    Group=Memory20   Delta= -0.501284 Effect= -0.174227
+ 19. ExpansionState_Climactic                               Group=States     Delta= -0.050514 Effect= -0.139501
+ 20. DissipationState_Absent                                Group=States     Delta= -0.057791 Effect= -0.115830
+ 21. Prev10NetAcceptance                                    Group=Memory10   Delta= -0.208904 Effect= -0.096884
+ 22. ExpansionState_Absent                                  Group=States     Delta= -0.040240 Effect= -0.081105
+ 23. CompressionState_Clustered                             Group=States     Delta= -0.036387 Effect= -0.074256
+ 24. AcceptanceState_Contained                              Group=States     Delta= -0.032106 Effect= -0.064286
+ 25. CurrentArchetype_Compression Resolution                Group=Archetype  Delta=  0.000000 Effect=  0.000000
+
+Recovery->Recovery vs Recovery->Compression Resolution
+......................................................
+Top Positive Separators:
+  1. ArchetypeTotalRunLength                                Group=Runs       Delta=  0.750773 Effect=  1.356088
+  2. PositionInArchetypeRun_Middle                          Group=Runs       Delta=  0.506849 Effect=  1.198363
+  3. CurrentPath3_C->C->B                                   Group=Path3      Delta=  0.493151 Effect=  1.165974
+  4. PositionInArchetypeRun_First                           Group=Runs       Delta=  0.493151 Effect=  1.165974
+  5. CurrentPath4_N->C->C->B                                Group=Path4      Delta=  0.273973 Effect=  0.726132
+  6. Flag_Peak                                              Group=Evidence   Delta=  0.279275 Effect=  0.589172
+  7. ParticipationState_Peak                                Group=States     Delta=  0.279275 Effect=  0.589172
+  8. CurrentPath3_C->B->N                                   Group=Path3      Delta=  0.191781 Effect=  0.575807
+  9. CurrentPath4_C->C->B->N                                Group=Path4      Delta=  0.191781 Effect=  0.575807
+ 10. CurrentPath3_C->B->C                                   Group=Path3      Delta=  0.150685 Effect=  0.497897
+ 11. CurrentPath4_C->C->B->C                                Group=Path4      Delta=  0.150685 Effect=  0.497897
+ 12. CurrentFamily_B                                        Group=Family     Delta=  0.215643 Effect=  0.437028
+ 13. CurrentPath3_C->B->B                                   Group=Path3      Delta=  0.109589 Effect=  0.414693
+ 14. ExpansionState_Strong                                  Group=States     Delta=  0.190013 Effect=  0.408223
+ 15. CurrentFamily_C                                        Group=Family     Delta=  0.132125 Effect=  0.402426
+ 16. Flag_Expanding                                         Group=Evidence   Delta=  0.183385 Effect=  0.370213
+ 17. FamilyPositionInRun_Last                               Group=Runs       Delta=  0.077331 Effect=  0.274569
+ 18. Prev5NetAcceptance                                     Group=Memory5    Delta=  0.359700 Effect=  0.261291
+ 19. Prev5AcceptedCount                                     Group=Memory5    Delta=  0.191781 Effect=  0.251491
+ 20. Prev20AcceptedCount                                    Group=Memory20   Delta=  0.506407 Effect=  0.244530
+ 21. Prev20ClimacticCount                                   Group=Memory20   Delta=  0.356606 Effect=  0.243374
+ 22. Prev5ClimacticCount                                    Group=Memory5    Delta=  0.247459 Effect=  0.240429
+ 23. ExpansionState_Climactic                               Group=States     Delta=  0.072470 Effect=  0.225861
+ 24. CurrentPath3_C->B->D                                   Group=Path3      Delta=  0.027397 Effect=  0.198392
+ 25. Prev20Dominance                                        Group=Memory20   Delta=  1.027839 Effect=  0.189844
+Top Negative Separators:
+  1. PositionInArchetypeRun_Last                            Group=Runs       Delta= -0.645161 Effect= -2.445895
+  2. PositionInArchetypeRun_Only                            Group=Runs       Delta= -0.354839 Effect= -1.345243
+  3. ArchetypeRunLengthSoFar                                Group=Runs       Delta= -0.769775 Effect= -1.115109
+  4. CurrentPath3_B->N->N                                   Group=Path3      Delta= -0.225806 Effect= -0.979631
+  5. CurrentPath4_C->B->N->N                                Group=Path4      Delta= -0.225806 Effect= -0.979631
+  6. CurrentPath5_C->C->B->N->N                             Group=Path5      Delta= -0.225806 Effect= -0.979631
+  7. FamilyPositionInRun_Middle                             Group=Runs       Delta= -0.225806 Effect= -0.979631
+  8. ParticipationState_Rising                              Group=States     Delta= -0.193548 Effect= -0.888638
+  9. CurrentPath3_B->B->N                                   Group=Path3      Delta= -0.161290 Effect= -0.795459
+ 10. CurrentFamily_N                                        Group=Family     Delta= -0.324348 Effect= -0.750385
+ 11. CurrentPath3_B->C->N                                   Group=Path3      Delta= -0.129032 Effect= -0.698180
+ 12. CurrentPath3_D->C->B                                   Group=Path3      Delta= -0.129032 Effect= -0.698180
+ 13. CurrentPath3_N->C->B                                   Group=Path3      Delta= -0.129032 Effect= -0.698180
+ 14. CurrentPath3_B->N->D                                   Group=Path3      Delta= -0.064516 Effect= -0.476360
+ 15. CurrentPath4_N->N->C->B                                Group=Path4      Delta= -0.064516 Effect= -0.476360
+ 16. FamilyRunLengthSoFar                                   Group=Runs       Delta= -0.148475 Effect= -0.414958
+ 17. ExpansionState_Absent                                  Group=States     Delta= -0.183385 Effect= -0.370213
+ 18. CurrentPath3_B->C->C                                   Group=Path3      Delta= -0.032258 Effect= -0.331176
+ 19. CurrentPath4_N->D->C->B                                Group=Path4      Delta= -0.032258 Effect= -0.331176
+ 20. CompressionState_Clustered                             Group=States     Delta= -0.146266 Effect= -0.296897
+ 21. ParticipationState_Falling                             Group=States     Delta= -0.121962 Effect= -0.274485
+ 22. FamilyTotalRunLength                                   Group=Runs       Delta= -0.365886 Effect= -0.263116
+ 23. Prev5CompressedCount                                   Group=Memory5    Delta= -0.196642 Effect= -0.258564
+ 24. ExpansionState_Local                                   Group=States     Delta= -0.079099 Effect= -0.256492
+ 25. Prev20CompressedCount                                  Group=Memory20   Delta= -0.503314 Effect= -0.234852
+
+Exhaustion->Exhaustion vs Exhaustion->Recovery
+..............................................
+Top Positive Separators:
+  1. ArchetypeTotalRunLength                                Group=Runs       Delta=  3.572298 Effect=  2.800208
+  2. PositionInArchetypeRun_Middle                          Group=Runs       Delta=  0.657534 Effect=  1.677572
+  3. FamilyPositionInRun_Middle                             Group=Runs       Delta=  0.520548 Effect=  1.261503
+  4. ArchetypeRunLengthSoFar                                Group=Runs       Delta=  1.175038 Effect=  1.013942
+  5. FamilyTotalRunLength                                   Group=Runs       Delta=  1.517504 Effect=  0.980543
+  6. PositionInArchetypeRun_First                           Group=Runs       Delta=  0.342466 Effect=  0.873735
+  7. Prev5PeakCount                                         Group=Memory5    Delta=  0.992009 Effect=  0.865440
+  8. Prev10ExpandingCount                                   Group=Memory10   Delta=  0.883181 Effect=  0.707697
+  9. Prev10Dominance                                        Group=Memory10   Delta=  2.294901 Effect=  0.661448
+ 10. Prev20ExpandingCount                                   Group=Memory20   Delta=  0.992770 Effect=  0.637867
+ 11. CurrentPath4_C->C->C->C                                Group=Path4      Delta=  0.205479 Effect=  0.615690
+ 12. Prev5Dominance                                         Group=Memory5    Delta=  1.440259 Effect=  0.615608
+ 13. CurrentFamily_N                                        Group=Family     Delta=  0.191781 Effect=  0.589751
+ 14. CurrentPath3_C->C->N                                   Group=Path3      Delta=  0.191781 Effect=  0.589751
+ 15. CurrentPath4_C->C->C->N                                Group=Path4      Delta=  0.191781 Effect=  0.589751
+ 16. ParticipationState_Falling                             Group=States     Delta=  0.191781 Effect=  0.589751
+ 17. Prev5AcceptedCount                                     Group=Memory5    Delta=  0.576484 Effect=  0.587581
+ 18. Prev10PeakCount                                        Group=Memory10   Delta=  1.073440 Effect=  0.585818
+ 19. Prev10AcceptedCount                                    Group=Memory10   Delta=  0.792618 Effect=  0.567180
+ 20. Flag_Compressed                                        Group=Evidence   Delta=  0.150685 Effect=  0.509954
+ 21. Prev5ExpandingCount                                    Group=Memory5    Delta=  0.396880 Effect=  0.487877
+ 22. Prev20PeakCount                                        Group=Memory20   Delta=  1.014460 Effect=  0.475627
+ 23. Prev10DissipatingCount                                 Group=Memory10   Delta=  0.626332 Effect=  0.456356
+ 24. CurrentPath3_C->C->C                                   Group=Path3      Delta=  0.216134 Effect=  0.454521
+ 25. CompressionState_Clustered                             Group=States     Delta=  0.123288 Effect=  0.454006
+Top Negative Separators:
+  1. PositionInArchetypeRun_Only                            Group=Runs       Delta= -0.777778 Effect= -3.225334
+  2. FamilyPositionInRun_Last                               Group=Runs       Delta= -0.767123 Effect= -2.197354
+  3. PositionInArchetypeRun_Last                            Group=Runs       Delta= -0.222222 Effect= -0.921524
+  4. CurrentPath3_N->C->C                                   Group=Path3      Delta= -0.377473 Effect= -0.882552
+  5. CurrentFamily_C                                        Group=Family     Delta= -0.232877 Effect= -0.667054
+  6. Prev10CompressedCount                                  Group=Memory10   Delta= -0.875951 Effect= -0.627438
+  7. CurrentPath4_N->N->C->C                                Group=Path4      Delta= -0.181126 Effect= -0.621124
+  8. Prev5CompressedCount                                   Group=Memory5    Delta= -0.604262 Effect= -0.619496
+  9. CurrentPath5_N->N->N->C->C                             Group=Path5      Delta= -0.125190 Effect= -0.562935
+ 10. AcceptanceState_Accepted                               Group=States     Delta= -0.150685 Effect= -0.509954
+ 11. CompressionState_Absent                                Group=States     Delta= -0.150685 Effect= -0.509954
+ 12. Flag_Accepted                                          Group=Evidence   Delta= -0.150685 Effect= -0.509954
+ 13. Flag_Peak                                              Group=Evidence   Delta= -0.227169 Effect= -0.465434
+ 14. ParticipationState_Peak                                Group=States     Delta= -0.227169 Effect= -0.465434
+ 15. CurrentPath4_C->N->C->C                                Group=Path4      Delta= -0.125571 Effect= -0.462816
+ 16. CurrentPath5_N->D->N->C->C                             Group=Path5      Delta= -0.097793 Effect= -0.377458
+ 17. ExpansionState_Climactic                               Group=States     Delta= -0.171613 Effect= -0.350087
+ 18. Flag_Expanding                                         Group=Evidence   Delta= -0.134323 Effect= -0.297939
+ 19. Prev5NetAcceptance                                     Group=Memory5    Delta= -0.415525 Effect= -0.280083
+ 20. CurrentPath4_D->N->C->C                                Group=Path4      Delta= -0.084475 Effect= -0.269577
+ 21. Prev20CompressedCount                                  Group=Memory20   Delta= -0.567732 Effect= -0.265631
+ 22. DissipationState_Local                                 Group=States     Delta= -0.132040 Effect= -0.265061
+ 23. Flag_Dissipating                                       Group=Evidence   Delta= -0.132040 Effect= -0.265061
+ 24. Prev20NetAcceptance                                    Group=Memory20   Delta= -0.613394 Effect= -0.248442
+ 25. CurrentPath4_N->C->C->C                                Group=Path4      Delta= -0.070776 Effect= -0.217514
+
+Exhaustion->Exhaustion vs Exhaustion->Decay
+...........................................
+Top Positive Separators:
+  1. ArchetypeTotalRunLength                                Group=Runs       Delta=  3.565949 Effect=  2.608541
+  2. PositionInArchetypeRun_Middle                          Group=Runs       Delta=  0.657534 Effect=  1.669714
+  3. FamilyPositionInRun_Middle                             Group=Runs       Delta=  0.520548 Effect=  1.255594
+  4. FamilyTotalRunLength                                   Group=Runs       Delta=  1.768297 Effect=  1.149076
+  5. CurrentPath3_C->C->C                                   Group=Path3      Delta=  0.438356 Effect=  1.064571
+  6. Prev5PeakCount                                         Group=Memory5    Delta=  1.061057 Effect=  0.948757
+  7. ArchetypeRunLengthSoFar                                Group=Runs       Delta=  1.168689 Effect=  0.929285
+  8. PositionInArchetypeRun_First                           Group=Runs       Delta=  0.342466 Effect=  0.869643
+  9. CurrentPath4_C->C->C->C                                Group=Path4      Delta=  0.205479 Effect=  0.612806
+ 10. CurrentFamily_N                                        Group=Family     Delta=  0.191781 Effect=  0.586988
+ 11. CurrentPath3_C->C->N                                   Group=Path3      Delta=  0.191781 Effect=  0.586988
+ 12. CurrentPath4_C->C->C->N                                Group=Path4      Delta=  0.191781 Effect=  0.586988
+ 13. ParticipationState_Falling                             Group=States     Delta=  0.191781 Effect=  0.586988
+ 14. Prev5Dominance                                         Group=Memory5    Delta=  1.272798 Effect=  0.585841
+ 15. Prev10PeakCount                                        Group=Memory10   Delta=  1.083757 Effect=  0.576095
+ 16. FamilyRunLengthSoFar                                   Group=Runs       Delta=  0.535421 Effect=  0.492623
+ 17. CompressionState_Clustered                             Group=States     Delta=  0.123288 Effect=  0.451880
+ 18. FamilyPositionInRun_First                              Group=Runs       Delta=  0.123288 Effect=  0.451880
+ 19. Prev5AcceptedCount                                     Group=Memory5    Delta=  0.378865 Effect=  0.394450
+ 20. CurrentPath4_N->C->C->C                                Group=Path4      Delta=  0.095890 Effect=  0.392436
+ 21. Flag_Compressed                                        Group=Evidence   Delta=  0.122114 Effect=  0.391476
+ 22. Prev5DissipatingCount                                  Group=Memory5    Delta=  0.400783 Effect=  0.382301
+ 23. AcceptanceState_Unresolved                             Group=States     Delta=  0.082192 Effect=  0.360603
+ 24. Prev5ExpandingCount                                    Group=Memory5    Delta=  0.310372 Effect=  0.345829
+ 25. FamilyPositionInRun_Only                               Group=Runs       Delta=  0.094716 Effect=  0.327579
+Top Negative Separators:
+  1. PositionInArchetypeRun_Only                            Group=Runs       Delta= -0.942857 Effect= -7.069047
+  2. FamilyPositionInRun_Last                               Group=Runs       Delta= -0.738552 Effect= -2.031308
+  3. CurrentPath3_N->C->C                                   Group=Path3      Delta= -0.364775 Effect= -0.853308
+  4. Flag_Peak                                              Group=Evidence   Delta= -0.329550 Effect= -0.688536
+  5. ParticipationState_Peak                                Group=States     Delta= -0.329550 Effect= -0.688536
+  6. CurrentPath3_D->C->C                                   Group=Path3      Delta= -0.202348 Effect= -0.643948
+  7. CurrentPath4_N->N->C->C                                Group=Path4      Delta= -0.187476 Effect= -0.641679
+  8. CurrentPath5_N->N->N->C->C                             Group=Path5      Delta= -0.129159 Effect= -0.579145
+  9. CurrentPath4_N->D->C->C                                Group=Path4      Delta= -0.158904 Effect= -0.561920
+ 10. CurrentFamily_C                                        Group=Family     Delta= -0.204305 Effect= -0.561920
+ 11. Prev5CompressedCount                                   Group=Memory5    Delta= -0.493151 Effect= -0.522998
+ 12. Prev5NetAcceptance                                     Group=Memory5    Delta= -0.682192 Effect= -0.465244
+ 13. PositionInArchetypeRun_Last                            Group=Runs       Delta= -0.057143 Effect= -0.428427
+ 14. Prev10NetAcceptance                                    Group=Memory10   Delta= -0.780822 Effect= -0.392036
+ 15. AcceptanceState_Accepted                               Group=States     Delta= -0.122114 Effect= -0.391476
+ 16. CompressionState_Absent                                Group=States     Delta= -0.122114 Effect= -0.391476
+ 17. Flag_Accepted                                          Group=Evidence   Delta= -0.122114 Effect= -0.391476
+ 18. Prev10CompressedCount                                  Group=Memory10   Delta= -0.417221 Effect= -0.317190
+ 19. CurrentFamily_B                                        Group=Family     Delta= -0.028571 Effect= -0.298455
+ 20. CurrentPath3_C->N->B                                   Group=Path3      Delta= -0.028571 Effect= -0.298455
+ 21. ExpansionState_Local                                   Group=States     Delta= -0.058317 Effect= -0.277301
+ 22. Prev20NetAcceptance                                    Group=Memory20   Delta= -0.692759 Effect= -0.266492
+ 23. DissipationState_Local                                 Group=States     Delta= -0.121722 Effect= -0.243822
+ 24. Flag_Dissipating                                       Group=Evidence   Delta= -0.121722 Effect= -0.243822
+ 25. Prev20DissipatingCount                                 Group=Memory20   Delta= -0.456360 Effect= -0.212708
+
+Decay->Compression Resolution vs Decay->Neutral Drift
+.....................................................
+Top Positive Separators:
+  1. Prev5PeakCount                                         Group=Memory5    Delta=  1.084351 Effect=  1.243794
+  2. Prev10PeakCount                                        Group=Memory10   Delta=  1.361502 Effect=  0.950924
+  3. CurrentPath3_C->B->N                                   Group=Path3      Delta=  0.300000 Effect=  0.870140
+  4. CurrentPath3_N->B->N                                   Group=Path3      Delta=  0.211111 Effect=  0.687583
+  5. CurrentPath4_N->C->B->N                                Group=Path4      Delta=  0.211111 Effect=  0.687583
+  6. Prev5CompressedCount                                   Group=Memory5    Delta=  0.584977 Effect=  0.621710
+  7. CurrentPath3_B->C->N                                   Group=Path3      Delta=  0.133333 Effect=  0.521339
+  8. CurrentPath3_D->B->N                                   Group=Path3      Delta=  0.133333 Effect=  0.521339
+  9. CurrentPath4_N->N->B->N                                Group=Path4      Delta=  0.111111 Effect=  0.469929
+ 10. CurrentPath5_N->N->C->B->N                             Group=Path5      Delta=  0.111111 Effect=  0.469929
+ 11. CurrentPath4_N->D->B->N                                Group=Path4      Delta=  0.100000 Effect=  0.443053
+ 12. CurrentPath3_B->B->N                                   Group=Path3      Delta=  0.088889 Effect=  0.415160
+ 13. FamilyPositionInRun_Only                               Group=Runs       Delta=  0.159155 Effect=  0.382753
+ 14. CurrentPath3_C->C->N                                   Group=Path3      Delta=  0.066667 Effect=  0.355233
+ 15. ExpansionState_Local                                   Group=States     Delta=  0.063693 Effect=  0.294417
+ 16. Prev10CompressedCount                                  Group=Memory10   Delta=  0.397027 Effect=  0.287712
+ 17. Prev20PeakCount                                        Group=Memory20   Delta=  0.586541 Effect=  0.266431
+ 18. DissipationState_Local                                 Group=States     Delta=  0.120344 Effect=  0.246220
+ 19. Flag_Dissipating                                       Group=Evidence   Delta=  0.120344 Effect=  0.246220
+ 20. AcceptanceState_Contained                              Group=States     Delta=  0.121909 Effect=  0.244138
+ 21. Flag_Expanding                                         Group=Evidence   Delta=  0.097653 Effect=  0.234504
+ 22. Prev5ExpandingCount                                    Group=Memory5    Delta=  0.168232 Effect=  0.189117
+ 23. Prev10ExpandingCount                                   Group=Memory10   Delta=  0.220344 Effect=  0.169630
+ 24. Prev5DissipatingCount                                  Group=Memory5    Delta=  0.176995 Effect=  0.166408
+ 25. ExpansionState_Climactic                               Group=States     Delta=  0.035524 Effect=  0.146660
+Top Negative Separators:
+  1. CurrentPath3_N->C->N                                   Group=Path3      Delta= -0.736150 Effect= -2.262045
+  2. CurrentPath4_N->N->C->N                                Group=Path4      Delta= -0.619718 Effect= -1.910354
+  3. Prev5NetAcceptance                                     Group=Memory5    Delta= -1.669327 Effect= -1.426922
+  4. Prev10NetAcceptance                                    Group=Memory10   Delta= -1.728169 Effect= -0.935292
+  5. CurrentPath5_N->N->N->C->N                             Group=Path5      Delta= -0.211268 Effect= -0.774499
+  6. CurrentPath3_D->C->N                                   Group=Path3      Delta= -0.197183 Effect= -0.741645
+  7. CurrentPath4_N->D->C->N                                Group=Path4      Delta= -0.197183 Effect= -0.741645
+  8. CurrentPath5_C->N->N->C->N                             Group=Path5      Delta= -0.183099 Effect= -0.708479
+  9. CurrentPath5_D->N->N->C->N                             Group=Path5      Delta= -0.183099 Effect= -0.708479
+ 10. Prev5AcceptedCount                                     Group=Memory5    Delta= -0.584977 Effect= -0.621710
+ 11. CurrentPath5_N->N->D->C->N                             Group=Path5      Delta= -0.140845 Effect= -0.605905
+ 12. CurrentPath4_C->N->C->N                                Group=Path4      Delta= -0.098592 Effect= -0.494912
+ 13. CurrentPath4_D->N->C->N                                Group=Path4      Delta= -0.084507 Effect= -0.454662
+ 14. Prev5Dominance                                         Group=Memory5    Delta= -0.992958 Effect= -0.452911
+ 15. FamilyPositionInRun_First                              Group=Runs       Delta= -0.159155 Effect= -0.382753
+ 16. Prev20NetAcceptance                                    Group=Memory20   Delta= -0.784038 Effect= -0.306036
+ 17. AcceptanceState_Unresolved                             Group=States     Delta= -0.142567 Effect= -0.294279
+ 18. Prev10AcceptedCount                                    Group=Memory10   Delta= -0.366667 Effect= -0.265656
+ 19. DissipationState_Absent                                Group=States     Delta= -0.120344 Effect= -0.246220
+ 20. ExpansionState_Absent                                  Group=States     Delta= -0.097653 Effect= -0.234504
+ 21. Prev10Dominance                                        Group=Memory10   Delta= -0.637402 Effect= -0.192191
+ 22. Prev20ClimacticCount                                   Group=Memory20   Delta= -0.268545 Effect= -0.179152
+ 23. CompressionState_Clustered                             Group=States     Delta= -0.075274 Effect= -0.151882
+ 24. FamilyTotalRunLength                                   Group=Runs       Delta= -0.211581 Effect= -0.144596
+ 25. Prev20AcceptedCount                                    Group=Memory20   Delta= -0.197496 Effect= -0.096304
+
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay
+...............................................................................
+Top Positive Separators:
+  1. CurrentFamily_N                                        Group=Family     Delta=  0.863158 Effect=  2.971661
+  2. ArchetypeTotalRunLength                                Group=Runs       Delta=  1.159211 Effect=  2.212758
+  3. PositionInArchetypeRun_First                           Group=Runs       Delta=  0.757895 Effect=  2.093468
+  4. FamilyRunLengthSoFar                                   Group=Runs       Delta=  1.017105 Effect=  1.752350
+  5. ExpansionState_Absent                                  Group=States     Delta=  0.598684 Effect=  1.419461
+  6. ParticipationState_Falling                             Group=States     Delta=  0.589474 Effect=  1.417835
+  7. FamilyTotalRunLength                                   Group=Runs       Delta=  2.185526 Effect=  1.398613
+  8. FamilyPositionInRun_Middle                             Group=Runs       Delta=  0.484211 Effect=  1.146423
+  9. Flag_Compressed                                        Group=Evidence   Delta=  0.457895 Effect=  1.039001
+ 10. CurrentPath3_B->N->N                                   Group=Path3      Delta=  0.431579 Effect=  1.031001
+ 11. ParticipationState_Rising                              Group=States     Delta=  0.294737 Effect=  0.764902
+ 12. CompressionState_Clustered                             Group=States     Delta=  0.307895 Effect=  0.728895
+ 13. FamilyPositionInRun_Last                               Group=Runs       Delta=  0.280263 Effect=  0.703267
+ 14. CurrentPath3_N->N->N                                   Group=Path3      Delta=  0.252632 Effect=  0.687924
+ 15. CurrentPath4_B->N->N->N                                Group=Path4      Delta=  0.252632 Effect=  0.687924
+ 16. PositionInArchetypeRun_Middle                          Group=Runs       Delta=  0.242105 Effect=  0.668747
+ 17. AcceptanceState_Unresolved                             Group=States     Delta=  0.221053 Effect=  0.630315
+ 18. DissipationState_Local                                 Group=States     Delta=  0.303947 Effect=  0.628224
+ 19. Flag_Dissipating                                       Group=Evidence   Delta=  0.303947 Effect=  0.628224
+ 20. CurrentPath4_C->B->N->N                                Group=Path4      Delta=  0.147368 Effect=  0.491910
+ 21. CurrentPath4_N->B->N->N                                Group=Path4      Delta=  0.126316 Effect=  0.449900
+ 22. AcceptanceState_Contained                              Group=States     Delta=  0.205263 Effect=  0.417507
+ 23. CurrentPath5_C->B->N->N->N                             Group=Path5      Delta=  0.105263 Effect=  0.405840
+ 24. CurrentPath5_N->C->B->N->N                             Group=Path5      Delta=  0.105263 Effect=  0.405840
+ 25. CurrentPath3_N->D->N                                   Group=Path3      Delta=  0.094737 Effect=  0.382768
+Top Negative Separators:
+  1. Flag_Peak                                              Group=Evidence   Delta= -0.811842 Effect= -2.961305
+  2. ParticipationState_Peak                                Group=States     Delta= -0.811842 Effect= -2.961305
+  3. PositionInArchetypeRun_Only                            Group=Runs       Delta= -0.725000 Effect= -2.960728
+  4. FamilyPositionInRun_Only                               Group=Runs       Delta= -0.827632 Effect= -2.656249
+  5. CurrentFamily_C                                        Group=Family     Delta= -0.689474 Effect= -2.594914
+  6. Flag_Expanding                                         Group=Evidence   Delta= -0.598684 Effect= -1.419461
+  7. ExpansionState_Strong                                  Group=States     Delta= -0.397368 Effect= -1.197831
+  8. ExpansionState_Climactic                               Group=States     Delta= -0.343421 Effect= -1.130183
+  9. PositionInArchetypeRun_Last                            Group=Runs       Delta= -0.275000 Effect= -1.123035
+ 10. CompressionState_Absent                                Group=States     Delta= -0.457895 Effect= -1.039001
+ 11. AcceptanceState_Accepted                               Group=States     Delta= -0.426316 Effect= -0.941243
+ 12. Flag_Accepted                                          Group=Evidence   Delta= -0.426316 Effect= -0.941243
+ 13. CurrentPath3_N->N->C                                   Group=Path3      Delta= -0.175000 Effect= -0.839823
+ 14. CurrentFamily_B                                        Group=Family     Delta= -0.247368 Effect= -0.787090
+ 15. CurrentPath3_B->N->C                                   Group=Path3      Delta= -0.150000 Effect= -0.766006
+ 16. CurrentPath4_B->N->N->C                                Group=Path4      Delta= -0.125000 Effect= -0.689202
+ 17. DissipationState_Absent                                Group=States     Delta= -0.303947 Effect= -0.628224
+ 18. CurrentPath3_N->D->B                                   Group=Path3      Delta= -0.075000 Effect= -0.519225
+ 19. CurrentPath3_C->B->C                                   Group=Path3      Delta= -0.050000 Effect= -0.418330
+ 20. CurrentPath4_N->N->D->B                                Group=Path4      Delta= -0.050000 Effect= -0.418330
+ 21. Prev20AcceptedCount                                    Group=Memory20   Delta= -0.706579 Effect= -0.354330
+ 22. Prev10AcceptedCount                                    Group=Memory10   Delta= -0.405263 Effect= -0.312174
+ 23. Prev20Dominance                                        Group=Memory20   Delta= -1.547368 Effect= -0.295523
+ 24. CurrentPath4_C->N->N->C                                Group=Path4      Delta= -0.025000 Effect= -0.291987
+ 25. CurrentPath4_N->N->N->B                                Group=Path4      Delta= -0.025000 Effect= -0.291987
+
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence
+..................................................................
+Top Positive Separators:
+  1. FamilyPositionInRun_Only                               Group=Runs       Delta=  0.814815 Effect=  4.233902
+  2. PositionInArchetypeRun_Only                            Group=Runs       Delta=  0.790123 Effect=  3.916336
+  3. CurrentPath3_N->N->D                                   Group=Path3      Delta=  0.693227 Effect=  1.723651
+  4. CurrentPath4_N->N->N->D                                Group=Path4      Delta=  0.474104 Effect=  1.088696
+  5. Prev5CompressedCount                                   Group=Memory5    Delta=  0.724509 Effect=  0.754363
+  6. CurrentPath5_N->N->N->N->D                             Group=Path5      Delta=  0.254980 Effect=  0.670794
+  7. CurrentPath4_N->D->N->D                                Group=Path4      Delta=  0.219124 Effect=  0.607398
+  8. CurrentPath5_N->N->D->N->D                             Group=Path5      Delta=  0.171315 Effect=  0.521342
+  9. Prev10CompressedCount                                  Group=Memory10   Delta=  0.703704 Effect=  0.501064
+ 10. CurrentPath4_D->N->N->D                                Group=Path4      Delta=  0.123506 Effect=  0.430417
+ 11. CurrentPath5_D->N->N->N->D                             Group=Path5      Delta=  0.111554 Effect=  0.406300
+ 12. CurrentPath4_C->N->N->D                                Group=Path4      Delta=  0.087649 Effect=  0.355397
+ 13. CurrentPath5_N->D->N->N->D                             Group=Path5      Delta=  0.087649 Effect=  0.355397
+ 14. CurrentPath5_C->N->N->N->D                             Group=Path5      Delta=  0.075697 Effect=  0.328135
+ 15. CurrentPath3_D->N->D                                   Group=Path3      Delta=  0.120358 Effect=  0.308718
+ 16. CurrentPath5_N->C->N->N->D                             Group=Path5      Delta=  0.051793 Effect=  0.267981
+ 17. ExpansionState_Local                                   Group=States     Delta=  0.114997 Effect=  0.259526
+ 18. CurrentPath4_N->C->N->D                                Group=Path4      Delta=  0.047809 Effect=  0.256928
+ 19. CurrentPath5_D->N->D->N->D                             Group=Path5      Delta=  0.039841 Effect=  0.233567
+ 20. Prev20CompressedCount                                  Group=Memory20   Delta=  0.497565 Effect=  0.227862
+ 21. CurrentPath5_N->N->C->N->D                             Group=Path5      Delta=  0.035857 Effect=  0.221123
+ 22. CurrentPath5_D->D->N->N->D                             Group=Path5      Delta=  0.027888 Effect=  0.194211
+ 23. Prev5DissipatingCount                                  Group=Memory5    Delta=  0.197777 Effect=  0.177650
+ 24. Prev20ClimacticCount                                   Group=Memory20   Delta=  0.232699 Effect=  0.173893
+ 25. Prev10DissipatingCount                                 Group=Memory10   Delta=  0.154985 Effect=  0.108130
+Top Negative Separators:
+  1. FamilyPositionInRun_Last                               Group=Runs       Delta= -0.814815 Effect= -4.233902
+  2. PositionInArchetypeRun_Last                            Group=Runs       Delta= -0.790123 Effect= -3.916336
+  3. FamilyRunLengthSoFar                                   Group=Runs       Delta= -0.901235 Effect= -3.554887
+  4. FamilyTotalRunLength                                   Group=Runs       Delta= -0.901235 Effect= -3.554887
+  5. ArchetypeRunLengthSoFar                                Group=Runs       Delta= -0.876543 Effect= -3.337278
+  6. ArchetypeTotalRunLength                                Group=Runs       Delta= -0.876543 Effect= -3.337278
+  7. CurrentPath3_N->D->D                                   Group=Path3      Delta= -0.691358 Effect= -3.020915
+  8. CurrentPath4_N->N->D->D                                Group=Path4      Delta= -0.432099 Effect= -1.760636
+  9. CurrentPath5_N->N->N->D->D                             Group=Path5      Delta= -0.296296 Effect= -1.309733
+ 10. CurrentPath4_D->N->D->D                                Group=Path4      Delta= -0.185185 Effect= -0.962250
+ 11. CurrentPath5_N->D->N->D->D                             Group=Path5      Delta= -0.135802 Effect= -0.800132
+ 12. Prev5ExpandingCount                                    Group=Memory5    Delta= -0.629974 Effect= -0.793621
+ 13. Prev5AcceptedCount                                     Group=Memory5    Delta= -0.684669 Effect= -0.707712
+ 14. CurrentPath4_D->D->N->D                                Group=Path4      Delta= -0.098765 Effect= -0.668187
+ 15. CurrentPath5_N->D->D->N->D                             Group=Path5      Delta= -0.086420 Effect= -0.620794
+ 16. Prev5NetAcceptance                                     Group=Memory5    Delta= -0.666913 Effect= -0.583505
+ 17. CurrentPath4_C->C->N->D                                Group=Path4      Delta= -0.074074 Effect= -0.570899
+ 18. Prev5Dominance                                         Group=Memory5    Delta= -1.211401 Effect= -0.526535
+ 19. Prev10AcceptedCount                                    Group=Memory10   Delta= -0.645517 Effect= -0.451966
+ 20. Prev10ExpandingCount                                   Group=Memory10   Delta= -0.485170 Effect= -0.421781
+ 21. Prev10Dominance                                        Group=Memory10   Delta= -1.194235 Effect= -0.369338
+ 22. Prev10NetAcceptance                                    Group=Memory10   Delta= -0.543653 Effect= -0.303229
+ 23. ExpansionState_Strong                                  Group=States     Delta= -0.100684 Effect= -0.248807
+ 24. Prev20AcceptedCount                                    Group=Memory20   Delta= -0.419064 Effect= -0.186633
+ 25. Prev20Dominance                                        Group=Memory20   Delta= -0.861246 Effect= -0.168329
+
+Section 4 - Cross-Feature Group Importance
+==========================================
+Comparison                                                                                   Group      Features    MeanAbs     MaxAbs
+Recovery->Recovery vs Recovery->Decay                                                        Evidence          6   0.286092   0.678215
+Recovery->Recovery vs Recovery->Decay                                                        States           15   0.231908   0.678215
+Recovery->Recovery vs Recovery->Decay                                                        Memory5           8   0.528079   0.844506
+Recovery->Recovery vs Recovery->Decay                                                        Memory10          8   0.375002   0.665461
+Recovery->Recovery vs Recovery->Decay                                                        Memory20          8   0.319925   0.682756
+Recovery->Recovery vs Recovery->Decay                                                        Runs             12   1.138658   4.169083
+Recovery->Recovery vs Recovery->Decay                                                        Family            5   0.360830   0.685387
+Recovery->Recovery vs Recovery->Decay                                                        Archetype         9   0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        Path3             8   0.822611   2.478888
+Recovery->Recovery vs Recovery->Decay                                                        Path4             5   0.758053   1.209574
+Recovery->Recovery vs Recovery->Decay                                                        Path5             0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Evidence          6   0.241307   0.589172
+Recovery->Recovery vs Recovery->Compression Resolution                                       States           16   0.263910   0.888638
+Recovery->Recovery vs Recovery->Compression Resolution                                       Memory5           8   0.204617   0.261291
+Recovery->Recovery vs Recovery->Compression Resolution                                       Memory10          8   0.127844   0.189036
+Recovery->Recovery vs Recovery->Compression Resolution                                       Memory20          8   0.146698   0.244530
+Recovery->Recovery vs Recovery->Compression Resolution                                       Runs             12   0.905436   2.445895
+Recovery->Recovery vs Recovery->Compression Resolution                                       Family            5   0.384210   0.750385
+Recovery->Recovery vs Recovery->Compression Resolution                                       Archetype         9   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Path3            12   0.627494   1.165974
+Recovery->Recovery vs Recovery->Compression Resolution                                       Path4             6   0.597834   0.979631
+Recovery->Recovery vs Recovery->Compression Resolution                                       Path5             1   0.979631   0.979631
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Evidence          6   0.353168   0.509954
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               States           15   0.326442   0.589751
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Memory5           8   0.486203   0.865440
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Memory10          8   0.493954   0.707697
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Memory20          8   0.258995   0.637867
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Runs             12   1.343124   3.225334
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Family            5   0.301488   0.667054
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Archetype         9   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Path3             6   0.381448   0.882552
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Path4             7   0.422951   0.621124
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Path5             2   0.470197   0.562935
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Evidence          6   0.358327   0.688536
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  States           15   0.285777   0.688536
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Memory5           8   0.493620   0.948757
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Memory10          8   0.306112   0.576095
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Memory20          8   0.141429   0.268802
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Runs             12   1.606893   7.069047
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Family            5   0.339365   0.586988
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Archetype         9   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Path3             7   0.528446   1.064571
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Path4             7   0.442779   0.641679
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Path5             2   0.327426   0.579145
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Evidence          6   0.114964   0.246220
+Decay->Compression Resolution vs Decay->Neutral Drift                                        States           14   0.162550   0.294417
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Memory5           8   0.592371   1.426922
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Memory10          8   0.366565   0.950924
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Memory20          8   0.139822   0.306036
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Runs             12   0.075842   0.382753
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Family            5   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Archetype         9   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Path3             8   0.796810   2.262045
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Path4             7   0.743163   1.910354
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Path5             5   0.653458   0.774499
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Evidence          6   1.210953   2.961305
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              States           16   0.928314   2.961305
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Memory5           8   0.078175   0.202514
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Memory10          8   0.157804   0.312174
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Memory20          8   0.186966   0.354330
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Runs             12   1.433066   2.960728
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Family            5   1.363080   2.971661
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Archetype         9   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Path3            13   0.442543   1.031001
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Path4            10   0.437876   0.689202
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Path5             3   0.381797   0.405840
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Evidence          6   0.006362   0.038174
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           States            9   0.073818   0.259526
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Memory5           8   0.462062   0.793621
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Memory10          8   0.280808   0.501064
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Memory20          8   0.133819   0.227862
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Runs             12   2.507067   4.233902
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Family            5   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Archetype         9   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Path3             4   1.292267   3.020915
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Path4             9   0.744534   1.760636
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Path5            12   0.494126   1.309733
+
+Section 5 - Memory Depth Analysis
+=================================
+Comparison                                                                                   Group         MeanAbs     MaxAbs
+Recovery->Recovery vs Recovery->Decay                                                        Memory5      0.528079   0.844506
+Recovery->Recovery vs Recovery->Decay                                                        Memory10     0.375002   0.665461
+Recovery->Recovery vs Recovery->Decay                                                        Memory20     0.319925   0.682756
+Recovery->Recovery vs Recovery->Compression Resolution                                       Memory5      0.204617   0.261291
+Recovery->Recovery vs Recovery->Compression Resolution                                       Memory10     0.127844   0.189036
+Recovery->Recovery vs Recovery->Compression Resolution                                       Memory20     0.146698   0.244530
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Memory5      0.486203   0.865440
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Memory10     0.493954   0.707697
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Memory20     0.258995   0.637867
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Memory5      0.493620   0.948757
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Memory10     0.306112   0.576095
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Memory20     0.141429   0.268802
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Memory5      0.592371   1.426922
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Memory10     0.366565   0.950924
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Memory20     0.139822   0.306036
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Memory5      0.078175   0.202514
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Memory10     0.157804   0.312174
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Memory20     0.186966   0.354330
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Memory5      0.462062   0.793621
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Memory10     0.280808   0.501064
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Memory20     0.133819   0.227862
+
+Section 6 - Trajectory Importance
+=================================
+Comparison                                                                                   Group         MeanAbs     MaxAbs
+Recovery->Recovery vs Recovery->Decay                                                        Family       0.360830   0.685387
+Recovery->Recovery vs Recovery->Decay                                                        Archetype    0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        Path3        0.822611   2.478888
+Recovery->Recovery vs Recovery->Decay                                                        Path4        0.758053   1.209574
+Recovery->Recovery vs Recovery->Decay                                                        Path5        0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Family       0.384210   0.750385
+Recovery->Recovery vs Recovery->Compression Resolution                                       Archetype    0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Path3        0.627494   1.165974
+Recovery->Recovery vs Recovery->Compression Resolution                                       Path4        0.597834   0.979631
+Recovery->Recovery vs Recovery->Compression Resolution                                       Path5        0.979631   0.979631
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Family       0.301488   0.667054
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Archetype    0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Path3        0.381448   0.882552
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Path4        0.422951   0.621124
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Path5        0.470197   0.562935
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Family       0.339365   0.586988
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Archetype    0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Path3        0.528446   1.064571
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Path4        0.442779   0.641679
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Path5        0.327426   0.579145
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Family       0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Archetype    0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Path3        0.796810   2.262045
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Path4        0.743163   1.910354
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Path5        0.653458   0.774499
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Family       1.363080   2.971661
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Archetype    0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Path3        0.442543   1.031001
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Path4        0.437876   0.689202
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Path5        0.381797   0.405840
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Family       0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Archetype    0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Path3        1.292267   3.020915
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Path4        0.744534   1.760636
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Path5        0.494126   1.309733
+
+Section 7 - Population B Branch Analysis
+========================================
+Population B observations: 0
+Comparison                                                                                      LeftN   RightN   TotalN
+Recovery->Recovery vs Recovery->Decay                                                               0        0        0
+Recovery->Recovery vs Recovery->Compression Resolution                                              0        0        0
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                                      0        0        0
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                         0        0        0
+Decay->Compression Resolution vs Decay->Neutral Drift                                               0        0        0
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay                     0        0        0
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                                  0        0        0
+
+Population B Outcomes
+---------------------
+Comparison                                                                                   Side        Count        Mean      Median      Cont      Fail      Flat
+Recovery->Recovery vs Recovery->Decay                                                        Left            0    0.000000    0.000000    0.00%    0.00%    0.00%
+Recovery->Recovery vs Recovery->Decay                                                        Right           0    0.000000    0.000000    0.00%    0.00%    0.00%
+Recovery->Recovery vs Recovery->Compression Resolution                                       Left            0    0.000000    0.000000    0.00%    0.00%    0.00%
+Recovery->Recovery vs Recovery->Compression Resolution                                       Right           0    0.000000    0.000000    0.00%    0.00%    0.00%
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Left            0    0.000000    0.000000    0.00%    0.00%    0.00%
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Right           0    0.000000    0.000000    0.00%    0.00%    0.00%
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Left            0    0.000000    0.000000    0.00%    0.00%    0.00%
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Right           0    0.000000    0.000000    0.00%    0.00%    0.00%
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Left            0    0.000000    0.000000    0.00%    0.00%    0.00%
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Right           0    0.000000    0.000000    0.00%    0.00%    0.00%
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Left            0    0.000000    0.000000    0.00%    0.00%    0.00%
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Right           0    0.000000    0.000000    0.00%    0.00%    0.00%
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Left            0    0.000000    0.000000    0.00%    0.00%    0.00%
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Right           0    0.000000    0.000000    0.00%    0.00%    0.00%
+
+Population B Separators
+-----------------------
+
+Recovery->Recovery vs Recovery->Decay
+.....................................
+Insufficient observations.
+
+Recovery->Recovery vs Recovery->Compression Resolution
+......................................................
+Insufficient observations.
+
+Exhaustion->Exhaustion vs Exhaustion->Recovery
+..............................................
+Insufficient observations.
+
+Exhaustion->Exhaustion vs Exhaustion->Decay
+...........................................
+Insufficient observations.
+
+Decay->Compression Resolution vs Decay->Neutral Drift
+.....................................................
+Insufficient observations.
+
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay
+...............................................................................
+Insufficient observations.
+
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence
+..................................................................
+Insufficient observations.
+
+Population B Feature Groups
+---------------------------
+Comparison                                                                                   Group      Features    MeanAbs     MaxAbs
+Recovery->Recovery vs Recovery->Decay                                                        Evidence          0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        States            0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        Memory5           0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        Memory10          0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        Memory20          0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        Runs              0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        Family            0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        Archetype         0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        Path3             0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        Path4             0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Decay                                                        Path5             0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Evidence          0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       States            0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Memory5           0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Memory10          0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Memory20          0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Runs              0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Family            0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Archetype         0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Path3             0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Path4             0   0.000000   0.000000
+Recovery->Recovery vs Recovery->Compression Resolution                                       Path5             0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Evidence          0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               States            0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Memory5           0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Memory10          0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Memory20          0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Runs              0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Family            0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Archetype         0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Path3             0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Path4             0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Path5             0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Evidence          0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  States            0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Memory5           0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Memory10          0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Memory20          0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Runs              0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Family            0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Archetype         0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Path3             0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Path4             0   0.000000   0.000000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Path5             0   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Evidence          0   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        States            0   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Memory5           0   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Memory10          0   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Memory20          0   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Runs              0   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Family            0   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Archetype         0   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Path3             0   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Path4             0   0.000000   0.000000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Path5             0   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Evidence          0   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              States            0   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Memory5           0   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Memory10          0   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Memory20          0   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Runs              0   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Family            0   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Archetype         0   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Path3             0   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Path4             0   0.000000   0.000000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Path5             0   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Evidence          0   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           States            0   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Memory5           0   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Memory10          0   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Memory20          0   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Runs              0   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Family            0   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Archetype         0   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Path3             0   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Path4             0   0.000000   0.000000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Path5             0   0.000000   0.000000
+
+Section 8 - Mechanical Research Notes
+=====================================
+- 7 branch comparisons have at least 20 observations on both sides.
+- Path indicators are materialized at instrument Count >= 10; aggregate reporting also requires Count >= 50.
+- Population B contains 0 bar-aligned observations and is reported sparsely.
+- Separators and outcome summaries are descriptive only.

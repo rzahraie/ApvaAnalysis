@@ -1,0 +1,722 @@
+APVA Structural Compression Study v0.1 - 6E
+===========================================
+Instrument: 6E
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_20260531_apva_bar_evidence_v01.csv
+Total rows: 35260
+Family counts: {'A': 181, 'B': 3069, 'C': 5456, 'D': 6497, 'N': 20057}
+Archetype counts: {'Recovery': 1614, 'Exhaustion': 1679, 'Reassertion': 6130, 'Decay': 3820, 'Compression Resolution': 4295, 'Destructive Persistence': 2260, 'Constructive Emergence': 1140, 'Neutral Drift': 12588, 'Unclassified': 1732}
+Valid branch comparisons: 7
+
+Section 1 - Branch Comparison Diagnostics
+=========================================
+Comparison                                                                                      LeftN   RightN
+Recovery->Recovery vs Recovery->Decay                                                             627      376
+Recovery->Recovery vs Recovery->Compression Resolution                                            627      387
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                                    711      302
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                       711      459
+Decay->Compression Resolution vs Decay->Neutral Drift                                            1536      937
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay                  1568      813
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                               3097      876
+
+Section 2 - Exact Path Separation
+=================================
+
+Recovery->Recovery vs Recovery->Decay
+.....................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+ExactPath_L3_N->C->B                                                                       0.0000     0.5585    -0.5585    -1.8352
+ExactPath_L3_C->C->B                                                                       0.4880     0.0000     0.4880     1.2336
+ExactPath_L4_N->N->C->B                                                                    0.0000     0.3085    -0.3085    -1.0898
+ExactPath_L3_B->C->B                                                                       0.0000     0.1755    -0.1755    -0.7529
+ExactPath_L5_N->N->N->C->B                                                                 0.0000     0.1596    -0.1596    -0.7110
+ExactPath_L3_C->B->N                                                                       0.2185     0.0000     0.2185     0.6681
+ExactPath_L4_C->C->B->N                                                                    0.2185     0.0000     0.2185     0.6681
+ExactPath_L4_N->C->C->B                                                                    0.2169     0.0000     0.2169     0.6650
+ExactPath_L3_D->C->B                                                                       0.0000     0.1410    -0.1410    -0.6609
+ExactPath_L4_D->N->C->B                                                                    0.0000     0.1117    -0.1117    -0.5786
+ExactPath_L4_N->D->C->B                                                                    0.0000     0.0984    -0.0984    -0.5390
+ExactPath_L5_N->D->N->C->B                                                                 0.0000     0.0984    -0.0984    -0.5390
+ExactPath_L4_C->N->C->B                                                                    0.0000     0.0931    -0.0931    -0.5227
+ExactPath_L3_C->B->C                                                                       0.1372     0.0000     0.1372     0.5038
+ExactPath_L4_C->C->B->C                                                                    0.1372     0.0000     0.1372     0.5038
+ExactPath_L4_C->C->C->B                                                                    0.1340     0.0000     0.1340     0.4970
+ExactPath_L5_D->N->N->C->B                                                                 0.0000     0.0718    -0.0718    -0.4538
+ExactPath_L4_N->B->C->B                                                                    0.0000     0.0691    -0.0691    -0.4447
+ExactPath_L4_C->B->C->B                                                                    0.0000     0.0638    -0.0638    -0.4260
+ExactPath_L5_N->C->C->B->N                                                                 0.1021     0.0000     0.1021     0.4260
+ExactPath_L5_N->N->C->C->B                                                                 0.0989     0.0000     0.0989     0.4186
+ExactPath_L3_C->B->B                                                                       0.0861     0.0000     0.0861     0.3879
+ExactPath_L4_C->C->B->B                                                                    0.0861     0.0000     0.0861     0.3879
+ExactPath_L5_N->C->N->C->B                                                                 0.0000     0.0532    -0.0532    -0.3867
+ExactPath_L5_N->N->D->C->B                                                                 0.0000     0.0532    -0.0532    -0.3867
+
+Recovery->Recovery vs Recovery->Compression Resolution
+......................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+ExactPath_L3_C->C->B                                                                       0.4880     0.0000     0.4880     1.2404
+ExactPath_L3_N->C->B                                                                       0.0000     0.3049    -0.3049    -1.0710
+ExactPath_L3_B->C->B                                                                       0.0000     0.1990    -0.1990    -0.8059
+ExactPath_L3_B->N->N                                                                       0.0000     0.1680    -0.1680    -0.7265
+ExactPath_L4_C->B->N->N                                                                    0.0000     0.1680    -0.1680    -0.7265
+ExactPath_L5_C->C->B->N->N                                                                 0.0000     0.1680    -0.1680    -0.7265
+ExactPath_L3_C->B->N                                                                       0.2185     0.0000     0.2185     0.6718
+ExactPath_L4_C->C->B->N                                                                    0.2185     0.0000     0.2185     0.6718
+ExactPath_L4_N->C->C->B                                                                    0.2169     0.0000     0.2169     0.6686
+ExactPath_L4_N->N->C->B                                                                    0.0000     0.1344    -0.1344    -0.6371
+ExactPath_L3_C->B->C                                                                       0.1372     0.0000     0.1372     0.5065
+ExactPath_L4_C->C->B->C                                                                    0.1372     0.0000     0.1372     0.5065
+ExactPath_L4_C->C->C->B                                                                    0.1340     0.0000     0.1340     0.4997
+ExactPath_L3_B->C->N                                                                       0.0000     0.0801    -0.0801    -0.4772
+ExactPath_L3_D->C->B                                                                       0.0000     0.0801    -0.0801    -0.4772
+ExactPath_L4_C->B->C->B                                                                    0.0000     0.0801    -0.0801    -0.4772
+ExactPath_L4_C->B->C->N                                                                    0.0000     0.0801    -0.0801    -0.4772
+ExactPath_L5_C->C->B->C->N                                                                 0.0000     0.0801    -0.0801    -0.4772
+ExactPath_L4_N->B->C->B                                                                    0.0000     0.0672    -0.0672    -0.4340
+ExactPath_L5_N->C->C->B->N                                                                 0.1021     0.0000     0.1021     0.4283
+ExactPath_L5_N->N->C->C->B                                                                 0.0989     0.0000     0.0989     0.4209
+ExactPath_L4_B->N->C->B                                                                    0.0000     0.0620    -0.0620    -0.4158
+ExactPath_L5_N->N->N->C->B                                                                 0.0000     0.0620    -0.0620    -0.4158
+ExactPath_L3_B->N->D                                                                       0.0000     0.0568    -0.0568    -0.3970
+ExactPath_L4_C->B->N->D                                                                    0.0000     0.0568    -0.0568    -0.3970
+
+Exhaustion->Exhaustion vs Exhaustion->Recovery
+..............................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+ExactPath_L3_C->C->N                                                                       0.2138     0.0000     0.2138     0.6218
+ExactPath_L4_C->C->C->N                                                                    0.2138     0.0000     0.2138     0.6218
+ExactPath_L3_N->C->C                                                                       0.2166     0.4503    -0.2337    -0.5317
+ExactPath_L5_N->C->C->C->N                                                                 0.0928     0.0000     0.0928     0.3814
+ExactPath_L5_C->C->C->C->N                                                                 0.0661     0.0000     0.0661     0.3173
+ExactPath_L4_N->N->C->C                                                                    0.1055     0.2053    -0.0998    -0.2942
+ExactPath_L3_D->C->C                                                                       0.0577     0.1325    -0.0748    -0.2777
+ExactPath_L4_D->N->C->C                                                                    0.0394     0.0993    -0.0600    -0.2596
+ExactPath_L5_D->N->N->C->C                                                                 0.0197     0.0629    -0.0432    -0.2448
+ExactPath_L3_C->C->C                                                                       0.3938     0.2781     0.1157     0.2423
+ExactPath_L4_N->D->C->C                                                                    0.0323     0.0795    -0.0471    -0.2250
+ExactPath_L5_B->C->C->C->N                                                                 0.0309     0.0000     0.0309     0.2131
+ExactPath_L4_N->C->C->C                                                                    0.1744     0.0993     0.0751     0.2098
+ExactPath_L4_B->N->C->C                                                                    0.0267     0.0662    -0.0395    -0.2060
+ExactPath_L5_D->D->N->C->C                                                                 0.0014     0.0166    -0.0151    -0.1981
+ExactPath_L3_C->C->D                                                                       0.0253     0.0000     0.0253     0.1922
+ExactPath_L4_C->C->C->D                                                                    0.0253     0.0000     0.0253     0.1922
+ExactPath_L5_C->N->N->C->C                                                                 0.0253     0.0596    -0.0343    -0.1857
+ExactPath_L3_B->C->C                                                                       0.0731     0.1258    -0.0527    -0.1857
+ExactPath_L5_N->D->N->C->C                                                                 0.0281     0.0629    -0.0348    -0.1812
+ExactPath_L5_D->C->C->C->N                                                                 0.0225     0.0000     0.0225     0.1809
+ExactPath_L4_N->B->C->C                                                                    0.0267     0.0596    -0.0329    -0.1757
+ExactPath_L5_N->N->C->C->C                                                                 0.0872     0.0430     0.0442     0.1690
+ExactPath_L4_C->N->C->C                                                                    0.0422     0.0795    -0.0373    -0.1662
+ExactPath_L5_N->N->B->C->C                                                                 0.0098     0.0298    -0.0200    -0.1603
+
+Exhaustion->Exhaustion vs Exhaustion->Decay
+...........................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+ExactPath_L3_C->C->C                                                                       0.3938     0.0000     0.3938     1.0331
+ExactPath_L3_N->C->C                                                                       0.2166     0.5556    -0.3390    -0.7573
+ExactPath_L3_C->C->N                                                                       0.2138     0.0000     0.2138     0.6683
+ExactPath_L4_C->C->C->N                                                                    0.2138     0.0000     0.2138     0.6683
+ExactPath_L4_N->C->C->C                                                                    0.1744     0.0000     0.1744     0.5891
+ExactPath_L3_D->C->C                                                                       0.0577     0.2157    -0.1580    -0.5008
+ExactPath_L4_N->D->C->C                                                                    0.0323     0.1590    -0.1267    -0.4734
+ExactPath_L4_C->C->C->C                                                                    0.1195     0.0000     0.1195     0.4723
+ExactPath_L4_N->N->C->C                                                                    0.1055     0.2789    -0.1734    -0.4693
+ExactPath_L5_N->C->C->C->N                                                                 0.0928     0.0000     0.0928     0.4100
+ExactPath_L5_N->N->C->C->C                                                                 0.0872     0.0000     0.0872     0.3962
+ExactPath_L5_C->C->C->C->N                                                                 0.0661     0.0000     0.0661     0.3410
+ExactPath_L5_N->N->N->C->C                                                                 0.0436     0.1285    -0.0849    -0.3224
+ExactPath_L5_N->C->C->C->C                                                                 0.0591     0.0000     0.0591     0.3211
+ExactPath_L4_B->C->C->C                                                                    0.0577     0.0000     0.0577     0.3171
+ExactPath_L5_N->N->D->C->C                                                                 0.0183     0.0806    -0.0623    -0.3114
+ExactPath_L3_B->C->C                                                                       0.0731     0.1612    -0.0881    -0.2867
+ExactPath_L4_D->N->C->C                                                                    0.0394     0.1089    -0.0696    -0.2812
+ExactPath_L4_D->C->C->C                                                                    0.0394     0.0000     0.0394     0.2595
+ExactPath_L5_C->N->C->C->C                                                                 0.0352     0.0000     0.0352     0.2447
+ExactPath_L5_D->N->C->C->C                                                                 0.0338     0.0000     0.0338     0.2396
+ExactPath_L5_C->C->C->C->C                                                                 0.0323     0.0000     0.0323     0.2343
+ExactPath_L4_C->N->C->C                                                                    0.0422     0.0980    -0.0558    -0.2292
+ExactPath_L5_B->C->C->C->N                                                                 0.0309     0.0000     0.0309     0.2290
+ExactPath_L5_N->D->N->C->C                                                                 0.0281     0.0763    -0.0481    -0.2286
+
+Decay->Compression Resolution vs Decay->Neutral Drift
+.....................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+ExactPath_L3_N->C->N                                                                       0.0638     0.8154    -0.7516    -2.4485
+ExactPath_L4_N->N->C->N                                                                    0.0000     0.4995    -0.4995    -1.6222
+ExactPath_L5_N->N->N->C->N                                                                 0.0000     0.2711    -0.2711    -0.9903
+ExactPath_L3_N->B->N                                                                       0.2852     0.0000     0.2852     0.8011
+ExactPath_L3_D->C->N                                                                       0.0000     0.1804    -0.1804    -0.7618
+ExactPath_L4_N->D->C->N                                                                    0.0000     0.1804    -0.1804    -0.7618
+ExactPath_L4_D->N->C->N                                                                    0.0000     0.1654    -0.1654    -0.7230
+ExactPath_L4_C->N->C->N                                                                    0.0000     0.1483    -0.1483    -0.6778
+ExactPath_L5_N->D->N->C->N                                                                 0.0000     0.1206    -0.1206    -0.6014
+ExactPath_L3_C->B->N                                                                       0.1816     0.0000     0.1816     0.5976
+ExactPath_L3_B->C->N                                                                       0.1738     0.0000     0.1738     0.5818
+ExactPath_L5_N->N->D->C->N                                                                 0.0000     0.1131    -0.1131    -0.5800
+ExactPath_L5_D->N->N->C->N                                                                 0.0000     0.1014    -0.1014    -0.5455
+ExactPath_L4_N->N->B->N                                                                    0.1361     0.0000     0.1361     0.5034
+ExactPath_L3_D->B->N                                                                       0.1328     0.0000     0.1328     0.4964
+ExactPath_L5_C->N->N->C->N                                                                 0.0000     0.0779    -0.0779    -0.4720
+ExactPath_L4_N->C->B->N                                                                    0.1068     0.0000     0.1068     0.4385
+ExactPath_L3_B->B->N                                                                       0.1029     0.0000     0.1029     0.4295
+ExactPath_L5_N->C->N->C->N                                                                 0.0000     0.0640    -0.0640    -0.4248
+ExactPath_L4_N->D->B->N                                                                    0.0964     0.0000     0.0964     0.4142
+ExactPath_L5_B->N->N->C->N                                                                 0.0000     0.0470    -0.0470    -0.3605
+ExactPath_L5_C->C->N->C->N                                                                 0.0000     0.0448    -0.0448    -0.3518
+ExactPath_L5_N->N->N->B->N                                                                 0.0690     0.0000     0.0690     0.3453
+ExactPath_L4_N->B->C->N                                                                    0.0684     0.0000     0.0684     0.3436
+ExactPath_L4_C->N->B->N                                                                    0.0645     0.0000     0.0645     0.3329
+
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay
+...............................................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+ExactPath_L3_B->N->N                                                                       0.3591     0.0000     0.3591     0.9219
+ExactPath_L3_N->B->C                                                                       0.0057     0.1501    -0.1443    -0.6633
+ExactPath_L3_N->N->C                                                                       0.0000     0.1292    -0.1292    -0.6588
+ExactPath_L3_N->N->N                                                                       0.2028     0.0000     0.2028     0.6213
+ExactPath_L4_B->N->N->N                                                                    0.2028     0.0000     0.2028     0.6213
+ExactPath_L3_B->N->C                                                                       0.0064     0.1378    -0.1314    -0.6209
+ExactPath_L4_N->B->N->N                                                                    0.1537     0.0000     0.1537     0.5249
+ExactPath_L3_C->B->C                                                                       0.0057     0.1009    -0.0951    -0.5102
+ExactPath_L4_N->N->B->C                                                                    0.0006     0.0824    -0.0818    -0.5046
+ExactPath_L4_B->N->N->C                                                                    0.0000     0.0750    -0.0750    -0.4872
+ExactPath_L3_N->D->N                                                                       0.1122     0.0000     0.1122     0.4380
+ExactPath_L4_B->N->D->N                                                                    0.1122     0.0000     0.1122     0.4380
+ExactPath_L3_N->D->C                                                                       0.0000     0.0566    -0.0566    -0.4189
+ExactPath_L3_C->N->C                                                                       0.0032     0.0652    -0.0620    -0.4095
+ExactPath_L4_N->B->N->C                                                                    0.0006     0.0566    -0.0559    -0.4095
+ExactPath_L4_N->C->B->C                                                                    0.0032     0.0603    -0.0571    -0.3897
+ExactPath_L4_C->B->N->N                                                                    0.0874     0.0000     0.0874     0.3811
+ExactPath_L3_C->N->N                                                                       0.0842     0.0000     0.0842     0.3735
+ExactPath_L4_B->C->N->N                                                                    0.0842     0.0000     0.0842     0.3735
+ExactPath_L3_D->B->C                                                                       0.0026     0.0529    -0.0503    -0.3672
+ExactPath_L5_N->B->N->N->N                                                                 0.0784     0.0000     0.0784     0.3594
+ExactPath_L5_N->N->B->N->N                                                                 0.0765     0.0000     0.0765     0.3546
+ExactPath_L5_N->N->N->B->C                                                                 0.0000     0.0406    -0.0406    -0.3519
+ExactPath_L3_B->B->C                                                                       0.0032     0.0480    -0.0448    -0.3366
+ExactPath_L4_D->B->N->N                                                                    0.0689     0.0000     0.0689     0.3350
+
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence
+..................................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+ExactPath_L3_N->D->D                                                                       0.0000     0.6210    -0.6210    -2.7254
+ExactPath_L4_N->N->D->D                                                                    0.0000     0.4178    -0.4178    -1.8037
+ExactPath_L3_N->N->D                                                                       0.7142     0.0000     0.7142     1.7902
+ExactPath_L5_N->N->N->D->D                                                                 0.0000     0.2306    -0.2306    -1.1656
+ExactPath_L4_N->N->N->D                                                                    0.4795     0.0000     0.4795     1.0868
+ExactPath_L4_D->N->D->D                                                                    0.0000     0.1484    -0.1484    -0.8888
+ExactPath_L4_D->D->N->D                                                                    0.0000     0.1381    -0.1381    -0.8523
+ExactPath_L5_N->D->N->D->D                                                                 0.0000     0.1221    -0.1221    -0.7942
+ExactPath_L5_N->D->D->N->D                                                                 0.0000     0.1176    -0.1176    -0.7772
+ExactPath_L5_D->N->N->D->D                                                                 0.0000     0.1164    -0.1164    -0.7729
+ExactPath_L5_N->N->N->N->D                                                                 0.2751     0.0000     0.2751     0.6976
+ExactPath_L3_D->D->D                                                                       0.0000     0.0753    -0.0753    -0.6078
+ExactPath_L4_C->C->N->D                                                                    0.0000     0.0685    -0.0685    -0.5773
+ExactPath_L4_N->D->N->D                                                                    0.1931     0.0000     0.1931     0.5539
+ExactPath_L4_N->D->D->D                                                                    0.0000     0.0605    -0.0605    -0.5403
+ExactPath_L5_N->C->C->N->D                                                                 0.0000     0.0537    -0.0537    -0.5070
+ExactPath_L4_C->N->D->D                                                                    0.0000     0.0502    -0.0502    -0.4896
+ExactPath_L4_D->N->N->D                                                                    0.1566     0.0000     0.1566     0.4879
+ExactPath_L5_C->N->N->D->D                                                                 0.0000     0.0411    -0.0411    -0.4408
+ExactPath_L3_C->C->D                                                                       0.0000     0.0388    -0.0388    -0.4278
+ExactPath_L5_N->N->D->D->D                                                                 0.0000     0.0388    -0.0388    -0.4278
+ExactPath_L5_N->D->N->N->D                                                                 0.1195     0.0000     0.1195     0.4171
+ExactPath_L5_N->N->D->N->D                                                                 0.1172     0.0000     0.1172     0.4126
+ExactPath_L5_D->N->N->N->D                                                                 0.1127     0.0000     0.1127     0.4035
+ExactPath_L4_N->C->C->D                                                                    0.0000     0.0320    -0.0320    -0.3869
+
+Section 3 - Structural Signature Separation
+===========================================
+
+Recovery->Recovery vs Recovery->Decay
+.....................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+Structural_L3_StartFamily_C                                              Endpoint          0.9761     0.0000     0.9761     8.0707
+Structural_L4_ContainsCCB                                                Motif             0.9761     0.0000     0.9761     8.0707
+Structural_L4_ContainsCC                                                 Composition       0.9856     0.0372     0.9484     6.3472
+Structural_L5_ContainsCCB                                                Motif             1.0000     0.1516     0.8484     3.8599
+Structural_L3_StartsDestructive                                          Composition       0.9761     0.1410     0.8351     3.4062
+Structural_L5_ContainsCC                                                 Composition       1.0000     0.1888     0.8112     3.3818
+Structural_L4_ContainsRepeatedC                                          Repetition        1.0000     0.2766     0.7234     2.6387
+Structural_L4_ExhaustionLike                                             NarrativeLike     1.0000     0.2766     0.7234     2.6387
+Structural_L5_ContainsRepeatedC                                          Repetition        1.0000     0.4096     0.5904     1.9590
+Structural_L5_ExhaustionLike                                             NarrativeLike     1.0000     0.4096     0.5904     1.9590
+Structural_L3_DirectionClass_NeutralToConstructive                       Endpoint          0.0000     0.5585    -0.5585    -1.8352
+Structural_L3_StartFamily_N                                              Endpoint          0.0000     0.5585    -0.5585    -1.8352
+Structural_L3_StartsNeutral                                              Composition       0.0000     0.5585    -0.5585    -1.8352
+Structural_L4_MiddleFamilySet_CN                                         Composition       0.0000     0.5585    -0.5585    -1.8352
+Structural_L4_TransitionCount                                            Composition       1.7863     2.5824    -0.7962    -1.7349
+Structural_L4_RepeatCount                                                Repetition        1.2137     0.4176     0.7962     1.7349
+Structural_L4_DominantFamily_C                                           Composition       0.8357     0.1915     0.6442     1.6968
+Structural_L3_ContainsRepeatedC                                          Repetition        0.6348     0.0372     0.5975     1.5000
+Structural_L3_DominantFamily_C                                           Composition       0.6348     0.0372     0.5975     1.5000
+Structural_L4_DestructiveCount                                           Composition       2.3892     1.6170     0.7721     1.4202
+Structural_L5_DominantFamily_N                                           Composition       0.0000     0.3910    -0.3910    -1.3073
+Structural_L3_ExhaustionLike                                             NarrativeLike     0.6491     0.1011     0.5481     1.3035
+Structural_L3_PersistenceClass_RepeatedDominantFamily                    Repetition        0.5917     0.0585     0.5332     1.2856
+Structural_L3_ContainsCCB                                                Motif             0.4880     0.0000     0.4880     1.2336
+Structural_L4_MiddleFamilySet_C                                          Composition       0.4880     0.0000     0.4880     1.2336
+
+Recovery->Recovery vs Recovery->Compression Resolution
+......................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+Structural_L4_ContainsCC                                                 Composition       0.9856     0.0103     0.9753     8.6622
+Structural_L3_StartFamily_C                                              Endpoint          0.9761     0.0000     0.9761     8.1150
+Structural_L4_ContainsCCB                                                Motif             0.9761     0.0000     0.9761     8.1150
+Structural_L3_StartsDestructive                                          Composition       0.9761     0.0801     0.8960     4.3387
+Structural_L4_ContainsRepeatedC                                          Repetition        1.0000     0.2739     0.7261     2.6329
+Structural_L4_ExhaustionLike                                             NarrativeLike     1.0000     0.2739     0.7261     2.6329
+Structural_L5_ContainsCCB                                                Motif             1.0000     0.4264     0.5736     1.8757
+Structural_L3_StartsConstructive                                         Composition       0.0239     0.6150    -0.5911    -1.8239
+Structural_L5_ContainsCC                                                 Composition       1.0000     0.4419     0.5581     1.8175
+Structural_L3_StartFamily_B                                              Endpoint          0.0239     0.6072    -0.5833    -1.7944
+Structural_L4_TransitionCount                                            Composition       1.7863     2.5891    -0.8029    -1.7665
+Structural_L4_RepeatCount                                                Repetition        1.2137     0.4109     0.8029     1.7665
+Structural_L4_DominantFamily_C                                           Composition       0.8357     0.1912     0.6445     1.6973
+Structural_L4_DestructiveCount                                           Composition       2.3892     1.4987     0.8904     1.6935
+Structural_L3_ExhaustionLike                                             NarrativeLike     0.6491     0.0207     0.6285     1.6289
+Structural_L3_ContainsRepeatedC                                          Repetition        0.6348     0.0103     0.6244     1.6256
+Structural_L3_DominantFamily_C                                           Composition       0.6348     0.0103     0.6244     1.6256
+Structural_L3_DestructiveCount                                           Composition       1.6794     0.8708     0.8086     1.5889
+Structural_L3_ContainsCCB                                                Motif             0.4880     0.0000     0.4880     1.2404
+Structural_L4_MiddleFamilySet_C                                          Composition       0.4880     0.0000     0.4880     1.2404
+Structural_L3_ContainsCC                                                 Composition       0.4976     0.0103     0.4873     1.2228
+Structural_L5_MiddleFamilySet_BCN                                        Composition       0.0048     0.3773    -0.3725    -1.2228
+Structural_L3_ContainsCB                                                 Motif             0.9761     0.5917     0.3843     1.1758
+Structural_L3_NeutralCount                                               Composition       0.2233     0.8501    -0.6268    -1.1749
+Structural_L3_DirectionClass_DestructiveToConstructive                   Endpoint          0.5774     0.0801     0.4972     1.1741
+
+Exhaustion->Exhaustion vs Exhaustion->Recovery
+..............................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+Structural_L3_StartFamily_C                                              Endpoint          0.6498     0.2848     0.3650     0.7767
+Structural_L5_ContainsCCC                                                Motif             0.6498     0.2848     0.3650     0.7767
+Structural_L4_ContainsCCC                                                Motif             0.6343     0.2781     0.3562     0.7541
+Structural_L4_MiddleFamilySet_C                                          Composition       0.6343     0.2781     0.3562     0.7541
+Structural_L3_EndFamily_C                                                Endpoint          0.7595     1.0000    -0.2405    -0.6710
+Structural_L4_EndFamily_C                                                Endpoint          0.7595     1.0000    -0.2405    -0.6710
+Structural_L5_EndFamily_C                                                Endpoint          0.7595     1.0000    -0.2405    -0.6710
+Structural_L5_MiddleFamilySet_C                                          Composition       0.3601     0.0795     0.2806     0.6543
+Structural_L3_ContainsCN                                                 Motif             0.2278     0.0033     0.2245     0.6358
+Structural_L3_EndsDestructive                                            Composition       0.7848     1.0000    -0.2152    -0.6244
+Structural_L4_EndsDestructive                                            Composition       0.7848     1.0000    -0.2152    -0.6244
+Structural_L5_EndsDestructive                                            Composition       0.7848     1.0000    -0.2152    -0.6244
+Structural_L3_DecayLike                                                  NarrativeLike     0.2138     0.0000     0.2138     0.6218
+Structural_L3_DirectionClass_DestructiveToNeutral                        Endpoint          0.2138     0.0000     0.2138     0.6218
+Structural_L3_EndFamily_N                                                Endpoint          0.2138     0.0000     0.2138     0.6218
+Structural_L3_EndsNeutral                                                Composition       0.2138     0.0000     0.2138     0.6218
+Structural_L4_DecayLike                                                  NarrativeLike     0.2138     0.0000     0.2138     0.6218
+Structural_L4_DirectionClass_DestructiveToNeutral                        Endpoint          0.2138     0.0000     0.2138     0.6218
+Structural_L4_EndFamily_N                                                Endpoint          0.2138     0.0000     0.2138     0.6218
+Structural_L4_EndsNeutral                                                Composition       0.2138     0.0000     0.2138     0.6218
+Structural_L5_DecayLike                                                  NarrativeLike     0.2138     0.0000     0.2138     0.6218
+Structural_L5_EndFamily_N                                                Endpoint          0.2138     0.0000     0.2138     0.6218
+Structural_L5_EndsNeutral                                                Composition       0.2138     0.0000     0.2138     0.6218
+Structural_L3_StartsDestructive                                          Composition       0.7075     0.4172     0.2902     0.6214
+Structural_L4_StartFamily_C                                              Endpoint          0.4473     0.1954     0.2519     0.5360
+
+Exhaustion->Exhaustion vs Exhaustion->Decay
+...........................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+Structural_L4_ContainsCCC                                                Motif             0.6343     0.0000     0.6343     1.6881
+Structural_L4_MiddleFamilySet_C                                          Composition       0.6343     0.0000     0.6343     1.6881
+Structural_L3_StartFamily_C                                              Endpoint          0.6498     0.0545     0.5953     1.4941
+Structural_L5_ContainsCCC                                                Motif             0.6498     0.0545     0.5953     1.4941
+Structural_L3_UniqueFamilyCount                                          Composition       1.6062     2.0196    -0.4134    -1.0574
+Structural_L3_ContainsCCC                                                Motif             0.3938     0.0000     0.3938     1.0331
+Structural_L3_PersistenceClass_AllSame                                   Repetition        0.3938     0.0000     0.3938     1.0331
+Structural_L4_RepeatCount                                                Repetition        1.8861     1.3333     0.5527     1.0188
+Structural_L4_TransitionCount                                            Composition       1.1139     1.6667    -0.5527    -1.0188
+Structural_L3_RepeatCount                                                Repetition        1.3783     0.9455     0.4328     1.0138
+Structural_L3_TransitionCount                                            Composition       0.6217     1.0545    -0.4328    -1.0138
+Structural_L3_StartsDestructive                                          Composition       0.7075     0.2702     0.4373     0.9695
+Structural_L5_MiddleFamilySet_C                                          Composition       0.3601     0.0000     0.3601     0.9614
+Structural_L3_PersistenceClass_RepeatedDominantFamily                    Repetition        0.5907     0.9455    -0.3548    -0.8672
+Structural_L4_UniqueFamilyCount                                          Composition       2.0267     2.4619    -0.4352    -0.8550
+Structural_L4_MiddleFamilySet_CN                                         Composition       0.2307     0.6035    -0.3728    -0.8294
+Structural_L5_DominantFamily_C                                           Composition       0.8087     0.4684     0.3403     0.7766
+Structural_L3_DirectionClass_NeutralToDestructive                        Endpoint          0.2166     0.5556    -0.3390    -0.7573
+Structural_L3_StartFamily_N                                              Endpoint          0.2166     0.5556    -0.3390    -0.7573
+Structural_L3_StartsNeutral                                              Composition       0.2166     0.5556    -0.3390    -0.7573
+Structural_L4_DestructiveCount                                           Composition       3.0197     2.5795     0.4402     0.7344
+Structural_L5_RepeatCount                                                Repetition        2.2138     1.6928     0.5210     0.7121
+Structural_L5_TransitionCount                                            Composition       1.7862     2.3072    -0.5210    -0.7121
+Structural_L3_DecayLike                                                  NarrativeLike     0.2138     0.0000     0.2138     0.6683
+Structural_L3_DirectionClass_DestructiveToNeutral                        Endpoint          0.2138     0.0000     0.2138     0.6683
+
+Decay->Compression Resolution vs Decay->Neutral Drift
+.....................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+Structural_L5_ContainsB                                                  Composition       1.0000     0.0907     0.9093     5.1413
+Structural_L3_ContainsB                                                  Composition       0.8789     0.0000     0.8789     3.4170
+Structural_L4_ConstructiveCount                                          Composition       1.2324     0.0064     1.2260     3.2577
+Structural_L3_ConstructiveCount                                          Composition       0.9844     0.0043     0.9801     2.5982
+Structural_L5_ConstructiveCount                                          Composition       1.3470     0.1003     1.2467     2.5245
+Structural_L4_MiddleFamilySet_CN                                         Composition       0.0638     0.8154    -0.7516    -2.4485
+Structural_L4_ContainsBN                                                 Motif             0.7689     0.0000     0.7689     2.3134
+Structural_L5_MiddleFamilySet_CN                                         Composition       0.0000     0.6478    -0.6478    -2.2024
+Structural_L5_ContainsBN                                                 Motif             0.7741     0.0576     0.7165     1.9925
+Structural_L3_ContainsBN                                                 Motif             0.7051     0.0000     0.7051     1.9611
+Structural_L3_ContainsCN                                                 Motif             0.2949     1.0000    -0.7051    -1.9611
+Structural_L3_MiddleFamilySet_B                                          Composition       0.7051     0.0000     0.7051     1.9611
+Structural_L3_MiddleFamilySet_C                                          Composition       0.2949     1.0000    -0.7051    -1.9611
+Structural_L4_ContainsCN                                                 Motif             0.3594     1.0000    -0.6406    -1.6934
+Structural_L5_ContainsCN                                                 Motif             0.4154     1.0000    -0.5846    -1.5048
+Structural_L3_ContainsC                                                  Composition       0.4766     1.0000    -0.5234    -1.3293
+Structural_L5_MiddleFamilySet_CDN                                        Composition       0.0000     0.3458    -0.3458    -1.1806
+Structural_L4_NeutralCount                                               Composition       1.7897     2.4995    -0.7098    -1.1713
+Structural_L4_ContainsC                                                  Composition       0.5859     1.0000    -0.4141    -1.0662
+Structural_L3_NeutralCount                                               Composition       1.3490     1.8154    -0.4664    -1.0474
+Structural_L3_ContainsRepeatedN                                          Repetition        0.3490     0.8154    -0.4664    -1.0474
+Structural_L3_DirectionClass_NeutralToNeutral                            Endpoint          0.3490     0.8154    -0.4664    -1.0474
+Structural_L3_DominantFamily_N                                           Composition       0.3490     0.8154    -0.4664    -1.0474
+Structural_L3_NeutralDriftLike                                           NarrativeLike     0.3490     0.8154    -0.4664    -1.0474
+Structural_L3_PersistenceClass_Alternating                               Repetition        0.3490     0.8154    -0.4664    -1.0474
+
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay
+...............................................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+Structural_L3_EndFamily_C                                                Endpoint          0.0274     0.7724    -0.7450    -2.6737
+Structural_L4_EndFamily_C                                                Endpoint          0.0274     0.7724    -0.7450    -2.6737
+Structural_L5_EndFamily_C                                                Endpoint          0.0274     0.7724    -0.7450    -2.6737
+Structural_L3_ExhaustionLike                                             NarrativeLike     0.0383     0.7724    -0.7342    -2.5283
+Structural_L4_ExhaustionLike                                             NarrativeLike     0.0466     0.7860    -0.7394    -2.5106
+Structural_L3_EndFamily_N                                                Endpoint          0.7723     0.0000     0.7723     2.2686
+Structural_L3_EndsNeutral                                                Composition       0.7723     0.0000     0.7723     2.2686
+Structural_L4_DecayLike                                                  NarrativeLike     0.7723     0.0000     0.7723     2.2686
+Structural_L4_EndFamily_N                                                Endpoint          0.7723     0.0000     0.7723     2.2686
+Structural_L4_EndsNeutral                                                Composition       0.7723     0.0000     0.7723     2.2686
+Structural_L5_DecayLike                                                  NarrativeLike     0.7723     0.0000     0.7723     2.2686
+Structural_L5_EndFamily_N                                                Endpoint          0.7723     0.0000     0.7723     2.2686
+Structural_L5_EndsNeutral                                                Composition       0.7723     0.0000     0.7723     2.2686
+Structural_L5_ExhaustionLike                                             NarrativeLike     0.1154     0.7970    -0.6816    -1.9468
+Structural_L3_EndsDestructive                                            Composition       0.1065     0.7724    -0.6659    -1.9004
+Structural_L4_EndsDestructive                                            Composition       0.1065     0.7724    -0.6659    -1.9004
+Structural_L5_EndsDestructive                                            Composition       0.1065     0.7724    -0.6659    -1.9004
+Structural_L3_ContainsC                                                  Composition       0.2181     0.8229    -0.6048    -1.5016
+Structural_L3_ContainsRepeatedN                                          Repetition        0.7761     0.1931     0.5830     1.4235
+Structural_L3_DominantFamily_N                                           Composition       0.7761     0.1931     0.5830     1.4235
+Structural_L3_NeutralDriftLike                                           NarrativeLike     0.7761     0.1931     0.5830     1.4235
+Structural_L3_NeutralCount                                               Composition       1.9126     0.9471     0.9655     1.2944
+Structural_L4_ContainsC                                                  Composition       0.3272     0.8512    -0.5240    -1.2073
+Structural_L4_DirectionClass_ConstructiveToNeutral                       Endpoint          0.4624     0.0000     0.4624     1.1423
+Structural_L3_DecayLike                                                  NarrativeLike     0.4547     0.0000     0.4547     1.1248
+
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence
+..................................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+Structural_L3_MiddleFamilySet_D                                          Composition       0.0000     0.7432    -0.7432    -3.6216
+Structural_L3_MiddleFamilySet_N                                          Composition       0.9606     0.2066     0.7540     2.9421
+Structural_L3_ReassertionLike                                            NarrativeLike     0.9606     0.2066     0.7540     2.9421
+Structural_L4_ReassertionLike                                            NarrativeLike     0.9606     0.2066     0.7540     2.9421
+Structural_L5_ReassertionLike                                            NarrativeLike     0.9603     0.2066     0.7537     2.9357
+Structural_L4_ContainsRepeatedN                                          Repetition        1.0000     0.4178     0.5822     2.5133
+Structural_L4_CompressionLike                                            NarrativeLike     1.0000     0.4486     0.5514     2.3603
+Structural_L4_DestructiveCount                                           Composition       1.4934     2.5970    -1.1037    -2.1536
+Structural_L4_NeutralCount                                               Composition       2.4795     1.3630     1.1165     2.1493
+Structural_L3_DestructiveCount                                           Composition       1.2625     2.1427    -0.8802    -2.0864
+Structural_L3_NeutralCount                                               Composition       1.7142     0.8276     0.8866     2.0306
+Structural_L4_DominantFamily_D                                           Composition       0.0000     0.4680    -0.4680    -1.9971
+Structural_L3_ContainsRepeatedD                                          Repetition        0.1931     0.8927    -0.6996    -1.8524
+Structural_L3_DominantFamily_D                                           Composition       0.1931     0.8927    -0.6996    -1.8524
+Structural_L3_ContainsRepeatedN                                          Repetition        0.7142     0.0000     0.7142     1.7902
+Structural_L3_DominantFamily_N                                           Composition       0.7142     0.0000     0.7142     1.7902
+Structural_L3_NeutralDriftLike                                           NarrativeLike     0.7142     0.0000     0.7142     1.7902
+Structural_L4_MiddleFamilySet_N                                          Composition       0.7142     0.0000     0.7142     1.7902
+Structural_L3_CompressionLike                                            NarrativeLike     0.7333     0.0274     0.7059     1.7736
+Structural_L5_DestructiveCount                                           Composition       1.8211     2.8733    -1.0522    -1.5859
+Structural_L4_DominantFamily_N                                           Composition       0.6503     0.0000     0.6503     1.5442
+Structural_L5_NeutralCount                                               Composition       3.0765     2.0297     1.0468     1.5287
+Structural_L5_DominantFamily_N                                           Composition       0.8250     0.2306     0.5944     1.5259
+Structural_L4_MiddleFamilySet_DN                                         Composition       0.1931     0.7591    -0.5660    -1.4070
+Structural_L5_DominantFamily_D                                           Composition       0.0707     0.5263    -0.4555    -1.3976
+
+Section 4 - Family-Only and Archetype-Only Baselines
+====================================================
+
+Recovery->Recovery vs Recovery->Decay
+.....................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentFamily_B                                                                            0.5742     0.8989    -0.3248    -0.7505
+CurrentFamily_N                                                                            0.2185     0.0000     0.2185     0.6681
+CurrentFamily_D                                                                            0.0431     0.0000     0.0431     0.2680
+CurrentFamily_C                                                                            0.1611     0.1011     0.0600     0.1742
+CurrentFamily_A                                                                            0.0032     0.0000     0.0032     0.0715
+
+Recovery->Recovery vs Recovery->Compression Resolution
+......................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentFamily_C                                                                            0.1611     0.0207     0.1404     0.4643
+CurrentFamily_N                                                                            0.2185     0.2972    -0.0787    -0.1825
+CurrentFamily_D                                                                            0.0431     0.0724    -0.0293    -0.1294
+CurrentFamily_B                                                                            0.5742     0.6072    -0.0331    -0.0671
+CurrentFamily_A                                                                            0.0032     0.0026     0.0006     0.0111
+
+Exhaustion->Exhaustion vs Exhaustion->Recovery
+..............................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentFamily_C                                                                            0.7595     1.0000    -0.2405    -0.6710
+CurrentFamily_N                                                                            0.2138     0.0000     0.2138     0.6218
+CurrentFamily_D                                                                            0.0253     0.0000     0.0253     0.1922
+CurrentFamily_A                                                                            0.0014     0.0000     0.0014     0.0448
+CurrentFamily_B                                                                            0.0000     0.0000     0.0000     0.0000
+
+Exhaustion->Exhaustion vs Exhaustion->Decay
+...........................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentFamily_N                                                                            0.2138     0.0000     0.2138     0.6683
+CurrentFamily_C                                                                            0.7595     0.9804    -0.2209    -0.6410
+CurrentFamily_B                                                                            0.0000     0.0196    -0.0196    -0.2256
+CurrentFamily_D                                                                            0.0253     0.0000     0.0253     0.2066
+CurrentFamily_A                                                                            0.0014     0.0000     0.0014     0.0481
+
+Decay->Compression Resolution vs Decay->Neutral Drift
+.....................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentFamily_A                                                                            0.0000     0.0000     0.0000     0.0000
+CurrentFamily_B                                                                            0.0000     0.0000     0.0000     0.0000
+CurrentFamily_C                                                                            0.0000     0.0000     0.0000     0.0000
+CurrentFamily_D                                                                            0.0000     0.0000     0.0000     0.0000
+CurrentFamily_N                                                                            1.0000     1.0000     0.0000     0.0000
+
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay
+...............................................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentFamily_C                                                                            0.0274     0.7724    -0.7450    -2.6737
+CurrentFamily_N                                                                            0.7723     0.0000     0.7723     2.2686
+CurrentFamily_D                                                                            0.0791     0.0000     0.0791     0.3610
+CurrentFamily_B                                                                            0.1078     0.2276    -0.1198    -0.3409
+CurrentFamily_A                                                                            0.0134     0.0000     0.0134     0.1435
+
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence
+..................................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentFamily_A                                                                            0.0000     0.0000     0.0000     0.0000
+CurrentFamily_B                                                                            0.0000     0.0000     0.0000     0.0000
+CurrentFamily_C                                                                            0.0000     0.0000     0.0000     0.0000
+CurrentFamily_D                                                                            1.0000     1.0000     0.0000     0.0000
+CurrentFamily_N                                                                            0.0000     0.0000     0.0000     0.0000
+
+Recovery->Recovery vs Recovery->Decay
+.....................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentArchetype_Compression Resolution                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Constructive Emergence                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Decay                                                                     0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Destructive Persistence                                                   0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Exhaustion                                                                0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Neutral Drift                                                             0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Reassertion                                                               0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Recovery                                                                  1.0000     1.0000     0.0000     0.0000
+CurrentArchetype_Unclassified                                                              0.0000     0.0000     0.0000     0.0000
+
+Recovery->Recovery vs Recovery->Compression Resolution
+......................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentArchetype_Compression Resolution                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Constructive Emergence                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Decay                                                                     0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Destructive Persistence                                                   0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Exhaustion                                                                0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Neutral Drift                                                             0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Reassertion                                                               0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Recovery                                                                  1.0000     1.0000     0.0000     0.0000
+CurrentArchetype_Unclassified                                                              0.0000     0.0000     0.0000     0.0000
+
+Exhaustion->Exhaustion vs Exhaustion->Recovery
+..............................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentArchetype_Compression Resolution                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Constructive Emergence                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Decay                                                                     0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Destructive Persistence                                                   0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Exhaustion                                                                1.0000     1.0000     0.0000     0.0000
+CurrentArchetype_Neutral Drift                                                             0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Reassertion                                                               0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Recovery                                                                  0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Unclassified                                                              0.0000     0.0000     0.0000     0.0000
+
+Exhaustion->Exhaustion vs Exhaustion->Decay
+...........................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentArchetype_Compression Resolution                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Constructive Emergence                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Decay                                                                     0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Destructive Persistence                                                   0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Exhaustion                                                                1.0000     1.0000     0.0000     0.0000
+CurrentArchetype_Neutral Drift                                                             0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Reassertion                                                               0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Recovery                                                                  0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Unclassified                                                              0.0000     0.0000     0.0000     0.0000
+
+Decay->Compression Resolution vs Decay->Neutral Drift
+.....................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentArchetype_Compression Resolution                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Constructive Emergence                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Decay                                                                     1.0000     1.0000     0.0000     0.0000
+CurrentArchetype_Destructive Persistence                                                   0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Exhaustion                                                                0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Neutral Drift                                                             0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Reassertion                                                               0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Recovery                                                                  0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Unclassified                                                              0.0000     0.0000     0.0000     0.0000
+
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay
+...............................................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentArchetype_Compression Resolution                                                    1.0000     1.0000     0.0000     0.0000
+CurrentArchetype_Constructive Emergence                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Decay                                                                     0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Destructive Persistence                                                   0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Exhaustion                                                                0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Neutral Drift                                                             0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Reassertion                                                               0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Recovery                                                                  0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Unclassified                                                              0.0000     0.0000     0.0000     0.0000
+
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence
+..................................................................
+Feature                                                                  Group           LeftMean  RightMean      Delta     Effect
+CurrentArchetype_Compression Resolution                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Constructive Emergence                                                    0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Decay                                                                     0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Destructive Persistence                                                   0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Exhaustion                                                                0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Neutral Drift                                                             0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Reassertion                                                               1.0000     1.0000     0.0000     0.0000
+CurrentArchetype_Recovery                                                                  0.0000     0.0000     0.0000     0.0000
+CurrentArchetype_Unclassified                                                              0.0000     0.0000     0.0000     0.0000
+
+Section 5 - Feature Set Power Comparison
+========================================
+Comparison                                                                                   FeatureSet           Features       Top5      Top10     MaxAbs
+Recovery->Recovery vs Recovery->Decay                                                        ExactPath                  86     1.1245     0.8863     1.8352
+Recovery->Recovery vs Recovery->Decay                                                        StructuralSignature       208     5.9510     4.2332     8.0707
+Recovery->Recovery vs Recovery->Decay                                                        FamilyOnly                  5     0.3865     0.3865     0.7505
+Recovery->Recovery vs Recovery->Decay                                                        ArchetypeOnly               9     0.0000     0.0000     0.0000
+Recovery->Recovery vs Recovery->Decay                                                        RunOnly                    12     1.9314     1.2241     3.7445
+Recovery->Recovery vs Recovery->Compression Resolution                                       ExactPath                  98     0.9141     0.7946     1.2404
+Recovery->Recovery vs Recovery->Compression Resolution                                       StructuralSignature       210     6.3727     4.1808     8.6622
+Recovery->Recovery vs Recovery->Compression Resolution                                       FamilyOnly                  5     0.1709     0.1709     0.4643
+Recovery->Recovery vs Recovery->Compression Resolution                                       ArchetypeOnly               9     0.0000     0.0000     0.0000
+Recovery->Recovery vs Recovery->Compression Resolution                                       RunOnly                    12     1.4591     0.8891     1.8175
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               ExactPath                  77     0.4948     0.3793     0.6218
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               StructuralSignature       192     0.7465     0.6989     0.7767
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               FamilyOnly                  5     0.3060     0.3060     0.6710
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               ArchetypeOnly               9     0.0000     0.0000     0.0000
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               RunOnly                    12     2.0570     1.4209     2.8532
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  ExactPath                  81     0.7432     0.6042     1.0331
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  StructuralSignature       197     1.4843     1.2539     1.6881
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  FamilyOnly                  5     0.3579     0.3579     0.6683
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  ArchetypeOnly               9     0.0000     0.0000     0.0000
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  RunOnly                    12     2.7668     1.7836     6.0323
+Decay->Compression Resolution vs Decay->Neutral Drift                                        ExactPath                  97     1.3248     0.9985     2.4485
+Decay->Compression Resolution vs Decay->Neutral Drift                                        StructuralSignature       189     3.3878     2.7857     5.1413
+Decay->Compression Resolution vs Decay->Neutral Drift                                        FamilyOnly                  5     0.0000     0.0000     0.0000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        ArchetypeOnly               9     0.0000     0.0000     0.0000
+Decay->Compression Resolution vs Decay->Neutral Drift                                        RunOnly                    12     0.2781     0.1390     0.5583
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              ExactPath                 209     0.6973     0.6134     0.9219
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              StructuralSignature       228     2.6120     2.4403     2.6737
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              FamilyOnly                  5     1.1575     1.1575     2.6737
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              ArchetypeOnly               9     0.0000     0.0000     0.0000
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              RunOnly                    12     2.0164     1.4905     2.6276
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           ExactPath                  77     1.7143     1.2657     2.7254
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           StructuralSignature       191     3.0767     2.6647     3.6216
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           FamilyOnly                  5     0.0000     0.0000     0.0000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           ArchetypeOnly               9     0.0000     0.0000     0.0000
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           RunOnly                    12     3.4612     2.6449     3.6216
+
+Section 6 - Retention Ratio and Compression Verdict
+===================================================
+Comparison                                                                                       Exact  Structure    Family  Archetype       Run  Retention Verdict             
+Recovery->Recovery vs Recovery->Decay                                                           0.8863     4.2332    0.3865     0.0000    1.2241     4.7761 LikelyStructural    
+Recovery->Recovery vs Recovery->Compression Resolution                                          0.7946     4.1808    0.1709     0.0000    0.8891     5.2613 LikelyStructural    
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                                  0.3793     0.6989    0.3060     0.0000    1.4209     1.8428 LikelyStructural    
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                     0.6042     1.2539    0.3579     0.0000    1.7836     2.0753 LikelyStructural    
+Decay->Compression Resolution vs Decay->Neutral Drift                                           0.9985     2.7857    0.0000     0.0000    0.1390     2.7898 LikelyStructural    
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay                 0.6134     2.4403    1.1575     0.0000    1.4905     3.9781 LikelyStructural    
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                              1.2657     2.6647    0.0000     0.0000    2.6449     2.1053 LikelyStructural    
+
+Section 7 - Structural Feature Group Importance
+===============================================
+Comparison                                                                                   Group                Top5     MaxAbs
+Recovery->Recovery vs Recovery->Decay                                                        Endpoint           2.7223     8.0707
+Recovery->Recovery vs Recovery->Decay                                                        Composition        3.3611     6.3472
+Recovery->Recovery vs Recovery->Decay                                                        Repetition         1.8236     2.6387
+Recovery->Recovery vs Recovery->Decay                                                        Motif              2.9279     8.0707
+Recovery->Recovery vs Recovery->Decay                                                        NarrativeLike      1.4520     2.6387
+Recovery->Recovery vs Recovery->Compression Resolution                                       Endpoint           2.6451     8.1150
+Recovery->Recovery vs Recovery->Compression Resolution                                       Composition        3.6818     8.6622
+Recovery->Recovery vs Recovery->Compression Resolution                                       Repetition         1.6426     2.6329
+Recovery->Recovery vs Recovery->Compression Resolution                                       Motif              2.6351     8.1150
+Recovery->Recovery vs Recovery->Compression Resolution                                       NarrativeLike      1.4479     2.6329
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Endpoint           0.6823     0.7767
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Composition        0.6563     0.7541
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Repetition         0.3289     0.4628
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Motif              0.5969     0.7767
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               NarrativeLike      0.4668     0.6218
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Endpoint           0.8691     1.4941
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Composition        1.1495     1.6881
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Repetition         0.9290     1.0331
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Motif              1.0093     1.6881
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  NarrativeLike      0.4958     0.6683
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Endpoint           0.8743     1.0474
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Composition        3.3878     5.1413
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Repetition         0.8972     1.0474
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Motif              1.9843     2.3134
+Decay->Compression Resolution vs Decay->Neutral Drift                                        NarrativeLike      0.5917     1.0474
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Endpoint           2.5116     2.6737
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Composition        2.1214     2.2686
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Repetition         1.0007     1.4235
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Motif              0.6341     0.9723
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              NarrativeLike      2.3046     2.5283
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Endpoint           0.4595     0.5206
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Composition        2.5906     3.6216
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Repetition         1.6797     2.5133
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Motif              0.5775     1.0868
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           NarrativeLike      2.5941     2.9421
+
+Section 8 - Outcome Layer
+=========================
+Comparison                                                                                   Side      Count        Mean      Median      Cont      Fail      Flat
+Recovery->Recovery vs Recovery->Decay                                                        Left        558   -0.000071   -0.000100   42.11%   54.30%    3.58%
+Recovery->Recovery vs Recovery->Decay                                                        Right       319   -0.000004    0.000000   47.02%   48.28%    4.70%
+Recovery->Recovery vs Recovery->Compression Resolution                                       Left        558   -0.000071   -0.000100   42.11%   54.30%    3.58%
+Recovery->Recovery vs Recovery->Compression Resolution                                       Right       318    0.000066    0.000050   50.63%   46.23%    3.14%
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Left        684    0.000042    0.000000   49.27%   46.49%    4.24%
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                               Right       298   -0.000079   -0.000050   42.62%   51.34%    6.04%
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Left        684    0.000042    0.000000   49.27%   46.49%    4.24%
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                  Right       457   -0.000097   -0.000050   42.23%   52.95%    4.81%
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Left       1288   -0.000010   -0.000050   44.10%   51.01%    4.89%
+Decay->Compression Resolution vs Decay->Neutral Drift                                        Right       805   -0.000033   -0.000050   43.73%   51.43%    4.84%
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Left       1332   -0.000008    0.000000   46.92%   47.90%    5.18%
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay              Right       771   -0.000092   -0.000050   39.95%   54.60%    5.45%
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Left       3051   -0.000021    0.000000   44.80%   49.33%    5.87%
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                           Right       866   -0.000003    0.000000   47.46%   48.50%    4.04%
+
+Section 9 - Population B
+========================
+Population B observations: 2
+Comparison                                                                                      LeftN   RightN
+Recovery->Recovery vs Recovery->Decay                                                               0        0
+Recovery->Recovery vs Recovery->Compression Resolution                                              0        0
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                                      0        0
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                         0        0
+Decay->Compression Resolution vs Decay->Neutral Drift                                               0        0
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay                     0        0
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                                  0        0
+Comparison                                                                                       Exact  Structure    Family  Archetype       Run  Retention Verdict             
+Recovery->Recovery vs Recovery->Decay                                                           0.0000     0.0000    0.0000     0.0000    0.0000        N/A N/A                 
+Recovery->Recovery vs Recovery->Compression Resolution                                          0.0000     0.0000    0.0000     0.0000    0.0000        N/A N/A                 
+Exhaustion->Exhaustion vs Exhaustion->Recovery                                                  0.0000     0.0000    0.0000     0.0000    0.0000        N/A N/A                 
+Exhaustion->Exhaustion vs Exhaustion->Decay                                                     0.0000     0.0000    0.0000     0.0000    0.0000        N/A N/A                 
+Decay->Compression Resolution vs Decay->Neutral Drift                                           0.0000     0.0000    0.0000     0.0000    0.0000        N/A N/A                 
+Compression Resolution->Compression Resolution vs Compression Resolution->Decay                 0.0000     0.0000    0.0000     0.0000    0.0000        N/A N/A                 
+Reassertion->Neutral Drift vs Reassertion->Destructive Persistence                              0.0000     0.0000    0.0000     0.0000    0.0000        N/A N/A                 
+
+Section 10 - Mechanical Research Notes
+======================================
+- Highest structural retention: Recovery->Recovery vs Recovery->Compression Resolution (5.2613).
+- Structural signatures are mechanical compressions of exact family paths.
+- Verdict thresholds are descriptive only: LikelyStructural >= 0.70, Mixed >= 0.40, LikelyPathSpecific < 0.40.
+- Population B remains separately reported and may be sparse.

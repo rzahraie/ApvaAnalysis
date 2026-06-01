@@ -1,0 +1,201 @@
+APVA Structural State Machine Study v0.1
+============================================
+
+Instrument: 6E
+Input: .\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_20260531_apva_bar_evidence_v01.csv
+Total rows: 35260
+Valid polarity rows: 31107
+
+Family Counts
+=============
+ A      181    0.51%
+ B     3069    8.70%
+ C     6282   17.82%
+ D     5671   16.08%
+ N    20057   56.88%
+
+Structural State Counts
+=======================
+RecoveryResolution               4873   13.82%
+ExhaustionPersistence            3652   10.36%
+CompressionProcessing            6435   18.25%
+NeutralProcessing               11331   32.14%
+ReassertionProcessing            6942   19.69%
+DecayToNeutral                   1239    3.51%
+DestructiveRotation               682    1.93%
+ConstructiveEmergence              16    0.05%
+MixedStructure                     90    0.26%
+
+Outcome By Structural State
+===========================
+State                               N       MeanDR        MedDR     Cont     Fail     Flat
+RecoveryResolution               4271     -0.00002      0.00000   46.29%   49.59%    4.12%
+ExhaustionPersistence            3386     -0.00002      0.00000   46.07%   48.88%    5.05%
+CompressionProcessing            5609     -0.00001      0.00000   46.21%   48.92%    4.87%
+NeutralProcessing                9681     -0.00001      0.00000   46.43%   47.96%    5.61%
+ReassertionProcessing            6329     -0.00001      0.00000   46.42%   48.21%    5.37%
+DecayToNeutral                   1057     -0.00001     -0.00005   45.41%   50.61%    3.97%
+DestructiveRotation               670     -0.00005      0.00000   46.72%   49.10%    4.18%
+ConstructiveEmergence              16      0.00009      0.00015   56.25%   43.75%    0.00%
+MixedStructure                     83     -0.00018     -0.00020   39.76%   54.22%    6.02%
+
+Structural State Persistence
+============================
+State                            Runs    MeanDur     MedDur   MaxDur
+RecoveryResolution               1533       3.18       4.00       11
+ExhaustionPersistence            1064       3.43       4.00       15
+CompressionProcessing            1987       3.24       3.00       17
+NeutralProcessing                2383       4.75       4.00       31
+ReassertionProcessing            2241       3.10       2.00       17
+DecayToNeutral                   1013       1.22       1.00        2
+DestructiveRotation               641       1.06       1.00        4
+ConstructiveEmergence              16       1.00       1.00        1
+MixedStructure                     69       1.30       1.00        4
+
+Top Structural State Transitions Lag 1
+====================================
+Source                       Target                          Count     Prob     Lift
+ConstructiveEmergence        MixedStructure                      6   37.50%  146.921
+MixedStructure               MixedStructure                     21   23.33%   91.417
+ConstructiveEmergence        DecayToNeutral                     10   62.50%   17.787
+DestructiveRotation          DecayToNeutral                    357   52.42%   14.897
+DecayToNeutral               ConstructiveEmergence               8    0.65%   14.230
+DestructiveRotation          ConstructiveEmergence               3    0.44%    9.694
+DecayToNeutral               DestructiveRotation               210   16.95%    8.763
+MixedStructure               DecayToNeutral                     24   26.67%    7.589
+ExhaustionPersistence        ExhaustionPersistence            2588   70.87%    6.842
+DecayToNeutral               DecayToNeutral                    226   18.24%    5.191
+RecoveryResolution           RecoveryResolution               3340   68.54%    4.960
+DecayToNeutral               MixedStructure                     13    1.05%    4.111
+CompressionProcessing        CompressionProcessing            4448   69.12%    3.788
+ReassertionProcessing        ReassertionProcessing            4701   67.72%    3.440
+DestructiveRotation          DestructiveRotation                41    6.02%    3.108
+NeutralProcessing            NeutralProcessing                8948   78.97%    2.457
+DestructiveRotation          ExhaustionPersistence             151   22.17%    2.138
+ReassertionProcessing        DecayToNeutral                    369    5.32%    1.513
+RecoveryResolution           CompressionProcessing            1301   26.70%    1.463
+ReassertionProcessing        MixedStructure                     24    0.35%    1.354
+DestructiveRotation          RecoveryResolution                112   16.45%    1.188
+DecayToNeutral               ReassertionProcessing             264   21.31%    1.082
+ReassertionProcessing        DestructiveRotation               144    2.07%    1.072
+DecayToNeutral               NeutralProcessing                 427   34.46%    1.072
+ExhaustionPersistence        RecoveryResolution                478   13.09%    0.947
+ExhaustionPersistence        DecayToNeutral                    105    2.88%    0.818
+NeutralProcessing            DestructiveRotation               176    1.55%    0.803
+NeutralProcessing            ConstructiveEmergence               4    0.04%    0.778
+MixedStructure               ExhaustionPersistence               7    7.78%    0.751
+MixedStructure               NeutralProcessing                  20   22.22%    0.692
+
+Top Structural State Transitions Lag 2
+====================================
+Source                       Target                          Count     Prob     Lift
+ConstructiveEmergence        MixedStructure                      5   31.25%  122.438
+MixedStructure               MixedStructure                      7    7.78%   30.473
+DecayToNeutral               ConstructiveEmergence               5    0.40%    8.894
+DestructiveRotation          DecayToNeutral                    149   21.88%    6.218
+DestructiveRotation          DestructiveRotation                81   11.89%    6.141
+MixedStructure               DecayToNeutral                     19   21.11%    6.008
+ConstructiveEmergence        DecayToNeutral                      3   18.75%    5.336
+ExhaustionPersistence        ExhaustionPersistence            1835   50.25%    4.852
+DecayToNeutral               MixedStructure                     13    1.05%    4.111
+RecoveryResolution           RecoveryResolution               2468   50.65%    3.665
+DecayToNeutral               DestructiveRotation                72    5.81%    3.005
+CompressionProcessing        CompressionProcessing            3295   51.20%    2.806
+DecayToNeutral               DecayToNeutral                    121    9.77%    2.779
+ReassertionProcessing        ReassertionProcessing            3240   46.68%    2.371
+NeutralProcessing            NeutralProcessing                7051   62.23%    1.937
+DestructiveRotation          RecoveryResolution                174   25.55%    1.846
+RecoveryResolution           CompressionProcessing            1528   31.36%    1.718
+CompressionProcessing        ConstructiveEmergence               5    0.08%    1.712
+ReassertionProcessing        DecayToNeutral                    394    5.68%    1.615
+DestructiveRotation          ExhaustionPersistence             111   16.30%    1.572
+ReassertionProcessing        DestructiveRotation               193    2.78%    1.437
+DecayToNeutral               ReassertionProcessing             334   26.96%    1.369
+ReassertionProcessing        MixedStructure                     23    0.33%    1.298
+ExhaustionPersistence        RecoveryResolution                629   17.22%    1.246
+ExhaustionPersistence        ConstructiveEmergence               2    0.05%    1.207
+ConstructiveEmergence        NeutralProcessing                   6   37.50%    1.167
+MixedStructure               DestructiveRotation                 2    2.22%    1.149
+DecayToNeutral               NeutralProcessing                 456   36.80%    1.145
+ExhaustionPersistence        DecayToNeutral                    124    3.40%    0.966
+RecoveryResolution           MixedStructure                     12    0.25%    0.965
+
+Top Structural State Transitions Lag 3
+====================================
+Source                       Target                          Count     Prob     Lift
+ConstructiveEmergence        MixedStructure                      4   25.00%   97.953
+MixedStructure               ConstructiveEmergence               1    1.11%   24.488
+MixedStructure               MixedStructure                      5    5.56%   21.767
+DestructiveRotation          ConstructiveEmergence               3    0.44%    9.695
+DestructiveRotation          DestructiveRotation                48    7.05%    3.639
+ConstructiveEmergence        DecayToNeutral                      2   12.50%    3.558
+ExhaustionPersistence        ExhaustionPersistence            1173   32.12%    3.101
+DecayToNeutral               MixedStructure                      9    0.73%    2.846
+DestructiveRotation          DecayToNeutral                     63    9.25%    2.629
+MixedStructure               DecayToNeutral                      8    8.89%    2.530
+RecoveryResolution           RecoveryResolution               1601   32.85%    2.377
+DestructiveRotation          MixedStructure                      4    0.59%    2.298
+DecayToNeutral               DecayToNeutral                     92    7.43%    2.113
+CompressionProcessing        CompressionProcessing            2333   36.25%    1.987
+RecoveryResolution           CompressionProcessing            1703   34.95%    1.915
+DestructiveRotation          ExhaustionPersistence             128   18.80%    1.812
+DestructiveRotation          RecoveryResolution                170   24.96%    1.804
+ReassertionProcessing        ReassertionProcessing            2402   34.61%    1.758
+NeutralProcessing            NeutralProcessing                5735   50.61%    1.575
+ExhaustionPersistence        RecoveryResolution                758   20.76%    1.502
+ReassertionProcessing        DecayToNeutral                    365    5.26%    1.496
+RecoveryResolution           ConstructiveEmergence               3    0.06%    1.357
+DecayToNeutral               NeutralProcessing                 505   40.76%    1.268
+MixedStructure               NeutralProcessing                  36   40.00%    1.245
+ExhaustionPersistence        ConstructiveEmergence               2    0.05%    1.207
+MixedStructure               DestructiveRotation                 2    2.22%    1.149
+ExhaustionPersistence        DecayToNeutral                    146    4.00%    1.138
+ReassertionProcessing        DestructiveRotation               152    2.19%    1.132
+DecayToNeutral               ReassertionProcessing             275   22.20%    1.127
+NeutralProcessing            ReassertionProcessing            2461   21.72%    1.103
+
+Top Structural State Transitions Lag 5
+====================================
+Source                       Target                          Count     Prob     Lift
+MixedStructure               ConstructiveEmergence               1    1.11%   24.490
+MixedStructure               MixedStructure                      2    2.22%    8.707
+ConstructiveEmergence        DecayToNeutral                      3   18.75%    5.337
+DestructiveRotation          ConstructiveEmergence               1    0.15%    3.232
+DecayToNeutral               MixedStructure                      8    0.65%    2.530
+RecoveryResolution           ConstructiveEmergence               4    0.08%    1.809
+DecayToNeutral               ConstructiveEmergence               1    0.08%    1.779
+DestructiveRotation          MixedStructure                      3    0.44%    1.724
+ConstructiveEmergence        NeutralProcessing                   8   50.00%    1.556
+DestructiveRotation          DestructiveRotation                20    2.94%    1.516
+DestructiveRotation          ExhaustionPersistence              99   14.54%    1.402
+ExhaustionPersistence        ExhaustionPersistence             523   14.32%    1.383
+ExhaustionPersistence        MixedStructure                     12    0.33%    1.288
+RecoveryResolution           ExhaustionPersistence             649   13.32%    1.286
+RecoveryResolution           RecoveryResolution                865   17.75%    1.285
+DestructiveRotation          RecoveryResolution                121   17.77%    1.284
+MixedStructure               NeutralProcessing                  37   41.11%    1.279
+ReassertionProcessing        ConstructiveEmergence               4    0.06%    1.270
+MixedStructure               DecayToNeutral                      4    4.44%    1.265
+RecoveryResolution           DestructiveRotation               118    2.42%    1.252
+DecayToNeutral               DestructiveRotation                30    2.42%    1.252
+DestructiveRotation          CompressionProcessing             153   22.47%    1.229
+ExhaustionPersistence        ConstructiveEmergence               2    0.05%    1.207
+CompressionProcessing        DestructiveRotation               149    2.32%    1.197
+RecoveryResolution           CompressionProcessing            1041   21.36%    1.171
+ExhaustionPersistence        RecoveryResolution                582   15.94%    1.153
+CompressionProcessing        RecoveryResolution               1025   15.93%    1.153
+DecayToNeutral               ReassertionProcessing             278   22.44%    1.140
+NeutralProcessing            NeutralProcessing                4146   36.59%    1.139
+NeutralProcessing            ReassertionProcessing            2512   22.17%    1.126
+
+Population B Diagnostic
+=======================
+Population B rows: 0
+Population B columns were missing or no rows qualified.
+
+Mechanical Research Notes
+=========================
+- Structural states are generated mechanically from family path signatures.
+- No trading rule, fitting, optimization, or entry/exit policy is used.
+- Exact path strings are not used as final states; they are compressed into structural labels.
+- Outcome statistics are descriptive only and anchored on the current bar.
