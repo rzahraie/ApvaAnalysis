@@ -1,0 +1,49 @@
+APVA Dominance Gradient Study v0.1 - Cross-Instrument Aggregate
+==============================================================
+Input instruments: 6E, NQ, CL
+Valid instrument threshold: non-flat outcome count >= 30.
+Dominance-gradient names are fixed descriptive score labels only.
+
+Cross-Instrument Score Table
+============================
+Score                                 Count_6E    Rho_6E   HiLo_6E  Count_NQ    Rho_NQ   HiLo_NQ  Count_CL    Rho_CL   HiLo_CL Valid PosRho PosHiLo   MeanRho   MeanHiLo
+DominanceGradient                          463    0.0110    1.30%        71    0.1992   21.74%        57    0.2211   26.32%     3      3       3    0.1438    16.45%
+DominanceGradient_WithExpansion            463    0.0487    5.19%        71    0.1797   21.74%        57    0.2047   26.32%     3      3       3    0.1444    17.75%
+DominanceGradient_Weighted                 463    0.0070    2.60%        71    0.2168   17.39%        57    0.2153   26.32%     3      3       3    0.1464    15.43%
+
+Most Replicated Positive Scores
+===============================
+Rank Score                                Valid PosRho PosHiLo    MeanRho   MeanHiLo     RhoStd
+   1 DominanceGradient_Weighted               3      3       3     0.1464    15.43%     0.0986
+   2 DominanceGradient_WithExpansion          3      3       3     0.1444    17.75%     0.0684
+   3 DominanceGradient                        3      3       3     0.1438    16.45%     0.0943
+
+Strongest Average Spearman
+==========================
+Rank Score                                Valid PosRho PosHiLo    MeanRho   MeanHiLo     RhoStd
+   1 DominanceGradient_Weighted               3      3       3     0.1464    15.43%     0.0986
+   2 DominanceGradient_WithExpansion          3      3       3     0.1444    17.75%     0.0684
+   3 DominanceGradient                        3      3       3     0.1438    16.45%     0.0943
+
+Strongest High-Minus-Low Continuation Advantage
+===============================================
+Rank Score                                Valid PosRho PosHiLo    MeanRho   MeanHiLo     RhoStd
+   1 DominanceGradient_WithExpansion          3      3       3     0.1444    17.75%     0.0684
+   2 DominanceGradient                        3      3       3     0.1438    16.45%     0.0943
+   3 DominanceGradient_Weighted               3      3       3     0.1464    15.43%     0.0986
+
+Most Stable Score across Instruments
+====================================
+Rank Score                                Valid PosRho PosHiLo    MeanRho   MeanHiLo     RhoStd
+   1 DominanceGradient_WithExpansion          3      3       3     0.1444    17.75%     0.0684
+   2 DominanceGradient                        3      3       3     0.1438    16.45%     0.0943
+   3 DominanceGradient_Weighted               3      3       3     0.1464    15.43%     0.0986
+
+Cross-Instrument Research Notes
+===============================
+- DominanceGradient: valid instruments=3, positive Spearman slopes=3, positive HighMinusLow values=3, MeanSpearman=0.1438.
+- DominanceGradient_WithExpansion: valid instruments=3, positive Spearman slopes=3, positive HighMinusLow values=3, MeanSpearman=0.1444.
+- DominanceGradient_Weighted: valid instruments=3, positive Spearman slopes=3, positive HighMinusLow values=3, MeanSpearman=0.1464.
+- Expansion effect on MeanSpearman: 0.0006.
+- Weighting effect on MeanSpearman: 0.0026.
+- Comparison to individual Prev10_DissipationCount / Prev10_CompressionCount gradients remains visible in per-instrument reports.

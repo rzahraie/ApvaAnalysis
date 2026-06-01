@@ -1,0 +1,140 @@
+APVA Lateral Anatomy Case-Control Study v0.1 - 6E
+===================================================
+Instrument: 6E
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_OPEN_apva_bar_evidence_v01.csv
+Total rows: 35179
+Qualifying cases: 468
+Success count: 245
+Failure count: 217
+Flat count: 6
+Population: Lateral + DissipationContained + Stage4 Mature + Aligned.
+Lateral frame metadata is skipped because reused segment bars do not expose it.
+
+Feature Comparison Table
+========================
+Feature                             SuccessN  FailureN  SuccessMean  FailureMean        Delta   EffectSize
+AnchorVolume                             245       217   693.579592   667.875576    25.704016       0.0314
+AnchorRange                              245       217     0.000374     0.000359     0.000015       0.0635
+AnchorBody                               245       217     0.000147     0.000142     0.000005       0.0385
+AnchorBodyToRange                        245       217     0.387010     0.417668    -0.030658      -0.1441
+AnchorUpperWick                          245       217     0.000113     0.000110     0.000003       0.0270
+AnchorLowerWick                          245       217     0.000114     0.000107     0.000007       0.0578
+AnchorWickImbalance                      245       217    -0.000000     0.000003    -0.000003      -0.0215
+AnchorParticipation_Falling              245       217     0.542857     0.562212    -0.019355      -0.0388
+AnchorParticipation_Rising               245       217     0.212245     0.239631    -0.027386      -0.0655
+AnchorParticipation_Peak                 245       217     0.179592     0.152074     0.027518       0.0737
+AnchorParticipation_Climactic            245       217     0.065306     0.046083     0.019223       0.0833
+AnchorParticipation_Other                245       217     0.000000     0.000000     0.000000       0.0000
+AnchorAcceptance_Accepted                245       217     0.000000     0.000000     0.000000       0.0000
+AnchorAcceptance_Contained               245       217     1.000000     1.000000     0.000000       0.0000
+AnchorAcceptance_Other                   245       217     0.000000     0.000000     0.000000       0.0000
+AnchorCompressionOn                      245       217     1.000000     1.000000     0.000000       0.0000
+AnchorExpansionOn                        245       217     0.310204     0.317972    -0.007768      -0.0167
+AnchorDissipationOn                      245       217     1.000000     1.000000     0.000000       0.0000
+AnchorPolarity_Black                     245       217     0.510204     0.608295    -0.098091      -0.1980
+AnchorPolarity_Red                       245       217     0.489796     0.391705     0.098091       0.1980
+Prev5_MeanVolume                         245       217   848.929796   721.351152   127.578644       0.1576
+Prev5_MedianVolume                       245       217   720.371429   633.179724    87.191705       0.1304
+Prev5_MeanRange                          245       217     0.000456     0.000411     0.000045       0.1772
+Prev5_MedianRange                        245       217     0.000431     0.000378     0.000053       0.2350
+Prev5_CompressionCount                   245       217     2.689796     2.677419     0.012377       0.0110
+Prev5_ExpansionCount                     245       217     2.800000     2.645161     0.154839       0.1638
+Prev5_DissipationCount                   245       217     2.583673     2.497696     0.085978       0.0830
+Prev5_PeakCount                          245       217     0.979592     0.866359     0.113232       0.1171
+Prev5_ClimacticCount                     245       217     0.648980     0.447005     0.201975       0.2167
+Prev5_FallingCount                       245       217     2.118367     2.156682    -0.038315      -0.0407
+Prev5_RisingCount                        245       217     1.253061     1.511521    -0.258460      -0.2550
+Prev5_AcceptedCount                      245       217     2.322449     2.368664    -0.046215      -0.0405
+Prev5_ContainedCount                     245       217     1.730612     1.764977    -0.034365      -0.0328
+Prev5_SamePolarityCount                  245       217     2.061224     2.115207    -0.053983      -0.0548
+Prev5_OppositePolarityCount              245       217     2.620408     2.502304     0.118104       0.1161
+Prev10_MeanVolume                        245       217   812.686122   755.764055    56.922067       0.0834
+Prev10_MedianVolume                      245       217   674.391837   633.331797    41.060039       0.0730
+Prev10_MeanRange                         245       217     0.000440     0.000421     0.000019       0.0840
+Prev10_MedianRange                       245       217     0.000401     0.000385     0.000016       0.0807
+Prev10_CompressionCount                  245       217     5.248980     5.294931    -0.045951      -0.0293
+Prev10_ExpansionCount                    245       217     5.481633     5.239631     0.242001       0.1724
+Prev10_DissipationCount                  245       217     5.130612     5.105991     0.024621       0.0168
+Prev10_PeakCount                         245       217     2.036735     1.949309     0.087426       0.0547
+Prev10_ClimacticCount                    245       217     1.314286     1.105991     0.208295       0.1310
+Prev10_FallingCount                      245       217     4.155102     4.244240    -0.089138      -0.0650
+Prev10_RisingCount                       245       217     2.481633     2.668203    -0.186570      -0.1229
+Prev10_AcceptedCount                     245       217     4.808163     4.774194     0.033970       0.0214
+Prev10_ContainedCount                    245       217     3.432653     3.520737    -0.088084      -0.0606
+Prev10_SamePolarityCount                 245       217     4.432653     4.603687    -0.171034      -0.1179
+Prev10_OppositePolarityCount             245       217     4.853061     4.677419     0.175642       0.1238
+
+Top 25 Success-Leaning Features
+===============================
+Rank Feature                              EffectSize        Delta  SuccessMean  FailureMean
+   1 Prev5_MedianRange                        0.2350     0.000053     0.000431     0.000378
+   2 Prev5_ClimacticCount                     0.2167     0.201975     0.648980     0.447005
+   3 AnchorPolarity_Red                       0.1980     0.098091     0.489796     0.391705
+   4 Prev5_MeanRange                          0.1772     0.000045     0.000456     0.000411
+   5 Prev10_ExpansionCount                    0.1724     0.242001     5.481633     5.239631
+   6 Prev5_ExpansionCount                     0.1638     0.154839     2.800000     2.645161
+   7 Prev5_MeanVolume                         0.1576   127.578644   848.929796   721.351152
+   8 Prev10_ClimacticCount                    0.1310     0.208295     1.314286     1.105991
+   9 Prev5_MedianVolume                       0.1304    87.191705   720.371429   633.179724
+  10 Prev10_OppositePolarityCount             0.1238     0.175642     4.853061     4.677419
+  11 Prev5_PeakCount                          0.1171     0.113232     0.979592     0.866359
+  12 Prev5_OppositePolarityCount              0.1161     0.118104     2.620408     2.502304
+  13 Prev10_MeanRange                         0.0840     0.000019     0.000440     0.000421
+  14 Prev10_MeanVolume                        0.0834    56.922067   812.686122   755.764055
+  15 AnchorParticipation_Climactic            0.0833     0.019223     0.065306     0.046083
+  16 Prev5_DissipationCount                   0.0830     0.085978     2.583673     2.497696
+  17 Prev10_MedianRange                       0.0807     0.000016     0.000401     0.000385
+  18 AnchorParticipation_Peak                 0.0737     0.027518     0.179592     0.152074
+  19 Prev10_MedianVolume                      0.0730    41.060039   674.391837   633.331797
+  20 AnchorRange                              0.0635     0.000015     0.000374     0.000359
+  21 AnchorLowerWick                          0.0578     0.000007     0.000114     0.000107
+  22 Prev10_PeakCount                         0.0547     0.087426     2.036735     1.949309
+  23 AnchorBody                               0.0385     0.000005     0.000147     0.000142
+  24 AnchorVolume                             0.0314    25.704016   693.579592   667.875576
+  25 AnchorUpperWick                          0.0270     0.000003     0.000113     0.000110
+
+Top 25 Failure-Leaning Features
+===============================
+Rank Feature                              EffectSize        Delta  SuccessMean  FailureMean
+   1 Prev5_RisingCount                       -0.2550    -0.258460     1.253061     1.511521
+   2 AnchorPolarity_Black                    -0.1980    -0.098091     0.510204     0.608295
+   3 AnchorBodyToRange                       -0.1441    -0.030658     0.387010     0.417668
+   4 Prev10_RisingCount                      -0.1229    -0.186570     2.481633     2.668203
+   5 Prev10_SamePolarityCount                -0.1179    -0.171034     4.432653     4.603687
+   6 AnchorParticipation_Rising              -0.0655    -0.027386     0.212245     0.239631
+   7 Prev10_FallingCount                     -0.0650    -0.089138     4.155102     4.244240
+   8 Prev10_ContainedCount                   -0.0606    -0.088084     3.432653     3.520737
+   9 Prev5_SamePolarityCount                 -0.0548    -0.053983     2.061224     2.115207
+  10 Prev5_FallingCount                      -0.0407    -0.038315     2.118367     2.156682
+  11 Prev5_AcceptedCount                     -0.0405    -0.046215     2.322449     2.368664
+  12 AnchorParticipation_Falling             -0.0388    -0.019355     0.542857     0.562212
+  13 Prev5_ContainedCount                    -0.0328    -0.034365     1.730612     1.764977
+  14 Prev10_CompressionCount                 -0.0293    -0.045951     5.248980     5.294931
+  15 AnchorWickImbalance                     -0.0215    -0.000003    -0.000000     0.000003
+  16 AnchorExpansionOn                       -0.0167    -0.007768     0.310204     0.317972
+  17 AnchorAcceptance_Accepted                0.0000     0.000000     0.000000     0.000000
+  18 AnchorAcceptance_Contained               0.0000     0.000000     1.000000     1.000000
+  19 AnchorAcceptance_Other                   0.0000     0.000000     0.000000     0.000000
+  20 AnchorCompressionOn                      0.0000     0.000000     1.000000     1.000000
+  21 AnchorDissipationOn                      0.0000     0.000000     1.000000     1.000000
+  22 AnchorParticipation_Other                0.0000     0.000000     0.000000     0.000000
+  23 Prev5_CompressionCount                   0.0110     0.012377     2.689796     2.677419
+  24 Prev10_DissipationCount                  0.0168     0.024621     5.130612     5.105991
+  25 Prev10_AcceptedCount                     0.0214     0.033970     4.808163     4.774194
+
+Outcome Sanity
+==============
+MeanDRFwd5: 0.000054
+MedianDRFwd5: 0.000050
+ContinuationRate5: 52.35%
+FailureRate5: 46.37%
+
+Research Notes
+==============
+- Highest success-leaning effects: Prev5_MedianRange, Prev5_ClimacticCount, AnchorPolarity_Red, Prev5_MeanRange, Prev10_ExpansionCount.
+- Highest failure-leaning effects: Prev5_RisingCount, AnchorPolarity_Black, AnchorBodyToRange, Prev10_RisingCount, Prev10_SamePolarityCount.
+- Prev5_ExpansionCount: Delta=0.154839, EffectSize=0.1638.
+- Prev5_CompressionCount: Delta=0.012377, EffectSize=0.0110.
+- Prev5_DissipationCount: Delta=0.085978, EffectSize=0.0830.
+- AnchorBodyToRange: Delta=-0.030658, EffectSize=-0.1441.
+- AnchorWickImbalance: Delta=-0.000003, EffectSize=-0.0215.

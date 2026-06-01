@@ -1,0 +1,448 @@
+APVA Stage + Alignment + Breakout Type Study v0.1 - 6E
+======================================================
+Instrument: 6E
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_OPEN_apva_bar_evidence_v01.csv
+Total rows: 35179
+Total stage-alignment-breakout observations: 28147
+Breakout, SequenceStage, alignment, event, and DRFwd logic are reused from prior studies.
+This is a descriptive decomposition of the prior Stage x Alignment result.
+
+Observation Counts by BreakoutType
+==================================
+IBSYM            8724
+Lateral         19423
+
+Observation Counts by Stage
+===========================
+Stage0      2892
+Stage1      8403
+Stage2      6783
+Stage3      3856
+Stage4      6213
+
+Observation Counts by Alignment
+===============================
+Aligned         13938
+Opposed         14209
+
+Event x Stage x Alignment x BreakoutType
+========================================
+Event                    Type       Stage Alignment    Count   MeanDRFwd5       Median  ContRate5  FailRate5  FlatRate5
+AllBars                  IBSYM     Stage0 Aligned         2     0.000200     0.000200    50.00%     0.00%    50.00%
+AllBars                  IBSYM     Stage0 Opposed      1066     0.000043     0.000000    46.44%    47.37%     6.19%
+AllBars                  IBSYM     Stage1 Aligned      2064    -0.000031     0.000000    44.33%    49.03%     6.64%
+AllBars                  IBSYM     Stage1 Opposed       590     0.000008     0.000000    45.08%    49.66%     5.25%
+AllBars                  IBSYM     Stage2 Aligned       896    -0.000019    -0.000050    44.64%    50.67%     4.69%
+AllBars                  IBSYM     Stage2 Opposed      1165     0.000000     0.000000    46.78%    47.30%     5.92%
+AllBars                  IBSYM     Stage3 Aligned       219     0.000015     0.000000    48.40%    47.03%     4.57%
+AllBars                  IBSYM     Stage3 Opposed       913    -0.000060    -0.000050    42.83%    51.70%     5.48%
+AllBars                  IBSYM     Stage4 Aligned      1039     0.000003     0.000000    48.99%    46.49%     4.52%
+AllBars                  IBSYM     Stage4 Opposed       770    -0.000012     0.000000    45.84%    48.44%     5.71%
+AllBars                  Lateral   Stage0 Aligned         7     0.000150     0.000200    71.43%    14.29%    14.29%
+AllBars                  Lateral   Stage0 Opposed      1817     0.000004     0.000000    46.18%    48.05%     5.78%
+AllBars                  Lateral   Stage1 Aligned      4459    -0.000022     0.000000    44.94%    49.59%     5.47%
+AllBars                  Lateral   Stage1 Opposed      1290     0.000001     0.000000    47.36%    47.52%     5.12%
+AllBars                  Lateral   Stage2 Aligned      2143    -0.000007     0.000000    47.04%    48.67%     4.29%
+AllBars                  Lateral   Stage2 Opposed      2579    -0.000025     0.000000    46.10%    48.97%     4.92%
+AllBars                  Lateral   Stage3 Aligned       551     0.000043     0.000050    50.45%    44.46%     5.08%
+AllBars                  Lateral   Stage3 Opposed      2173    -0.000043    -0.000050    43.53%    51.40%     5.06%
+AllBars                  Lateral   Stage4 Aligned      2558     0.000043     0.000050    50.70%    45.15%     4.14%
+AllBars                  Lateral   Stage4 Opposed      1846    -0.000035    -0.000050    45.02%    50.38%     4.60%
+DissipationAny           IBSYM     Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+DissipationAny           IBSYM     Stage0 Opposed       494     0.000046     0.000000    46.36%    48.18%     5.47%
+DissipationAny           IBSYM     Stage1 Aligned       970    -0.000023     0.000000    45.15%    48.66%     6.19%
+DissipationAny           IBSYM     Stage1 Opposed       370     0.000007    -0.000025    45.14%    50.00%     4.86%
+DissipationAny           IBSYM     Stage2 Aligned       429    -0.000015     0.000000    46.62%    48.48%     4.90%
+DissipationAny           IBSYM     Stage2 Opposed       389     0.000010     0.000000    47.30%    44.99%     7.71%
+DissipationAny           IBSYM     Stage3 Aligned       151     0.000023     0.000000    49.01%    45.03%     5.96%
+DissipationAny           IBSYM     Stage3 Opposed       528    -0.000060    -0.000050    43.94%    52.08%     3.98%
+DissipationAny           IBSYM     Stage4 Aligned       469     0.000016     0.000050    51.39%    44.35%     4.26%
+DissipationAny           IBSYM     Stage4 Opposed       395     0.000008     0.000000    48.86%    46.58%     4.56%
+DissipationAny           Lateral   Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+DissipationAny           Lateral   Stage0 Opposed       887     0.000005     0.000000    45.66%    48.37%     5.98%
+DissipationAny           Lateral   Stage1 Aligned      2247    -0.000011     0.000000    46.46%    48.06%     5.47%
+DissipationAny           Lateral   Stage1 Opposed       790    -0.000016     0.000000    47.47%    47.59%     4.94%
+DissipationAny           Lateral   Stage2 Aligned      1076    -0.000003     0.000000    48.79%    47.49%     3.72%
+DissipationAny           Lateral   Stage2 Opposed       900    -0.000048    -0.000050    44.33%    50.56%     5.11%
+DissipationAny           Lateral   Stage3 Aligned       372     0.000021     0.000050    50.54%    44.62%     4.84%
+DissipationAny           Lateral   Stage3 Opposed      1257    -0.000037    -0.000050    43.75%    51.47%     4.77%
+DissipationAny           Lateral   Stage4 Aligned      1143     0.000035     0.000050    51.53%    45.76%     2.71%
+DissipationAny           Lateral   Stage4 Opposed       923    -0.000036     0.000000    45.83%    49.84%     4.33%
+DissipationContained     IBSYM     Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+DissipationContained     IBSYM     Stage0 Opposed       232     0.000079     0.000000    48.28%    45.69%     6.03%
+DissipationContained     IBSYM     Stage1 Aligned       368    -0.000006     0.000000    46.74%    46.74%     6.52%
+DissipationContained     IBSYM     Stage1 Opposed       200     0.000010    -0.000025    46.00%    50.00%     4.00%
+DissipationContained     IBSYM     Stage2 Aligned       192    -0.000029     0.000000    47.40%    46.35%     6.25%
+DissipationContained     IBSYM     Stage2 Opposed       152     0.000007     0.000000    45.39%    48.03%     6.58%
+DissipationContained     IBSYM     Stage3 Aligned        83     0.000075     0.000100    56.63%    37.35%     6.02%
+DissipationContained     IBSYM     Stage3 Opposed       197    -0.000096    -0.000050    45.18%    52.28%     2.54%
+DissipationContained     IBSYM     Stage4 Aligned       200     0.000060     0.000050    51.50%    44.00%     4.50%
+DissipationContained     IBSYM     Stage4 Opposed       183     0.000019     0.000000    46.99%    47.54%     5.46%
+DissipationContained     Lateral   Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+DissipationContained     Lateral   Stage0 Opposed       395     0.000018     0.000000    44.81%    49.11%     6.08%
+DissipationContained     Lateral   Stage1 Aligned       851    -0.000012     0.000000    47.71%    47.47%     4.82%
+DissipationContained     Lateral   Stage1 Opposed       417    -0.000014     0.000000    47.96%    47.72%     4.32%
+DissipationContained     Lateral   Stage2 Aligned       520    -0.000015     0.000000    47.31%    48.08%     4.62%
+DissipationContained     Lateral   Stage2 Opposed       377    -0.000043    -0.000050    44.30%    51.99%     3.71%
+DissipationContained     Lateral   Stage3 Aligned       202     0.000040     0.000050    54.46%    40.59%     4.95%
+DissipationContained     Lateral   Stage3 Opposed       475    -0.000047     0.000000    44.42%    49.89%     5.68%
+DissipationContained     Lateral   Stage4 Aligned       468     0.000053     0.000050    52.35%    46.37%     1.28%
+DissipationContained     Lateral   Stage4 Opposed       437    -0.000055    -0.000050    44.62%    50.80%     4.58%
+DissipationAccepted      IBSYM     Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+DissipationAccepted      IBSYM     Stage0 Opposed       208     0.000031    -0.000050    44.23%    50.48%     5.29%
+DissipationAccepted      IBSYM     Stage1 Aligned       524    -0.000025     0.000000    45.61%    49.05%     5.34%
+DissipationAccepted      IBSYM     Stage1 Opposed       170     0.000003    -0.000025    44.12%    50.00%     5.88%
+DissipationAccepted      IBSYM     Stage2 Aligned       208     0.000006    -0.000025    46.63%    50.00%     3.37%
+DissipationAccepted      IBSYM     Stage2 Opposed       147     0.000026     0.000050    50.34%    39.46%    10.20%
+DissipationAccepted      IBSYM     Stage3 Aligned        68    -0.000041    -0.000050    39.71%    54.41%     5.88%
+DissipationAccepted      IBSYM     Stage3 Opposed       318    -0.000042    -0.000050    42.77%    52.52%     4.72%
+DissipationAccepted      IBSYM     Stage4 Aligned       209    -0.000030     0.000050    52.63%    43.06%     4.31%
+DissipationAccepted      IBSYM     Stage4 Opposed       171    -0.000009     0.000000    47.95%    47.95%     4.09%
+DissipationAccepted      Lateral   Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+DissipationAccepted      Lateral   Stage0 Opposed       395    -0.000003     0.000000    45.57%    48.86%     5.57%
+DissipationAccepted      Lateral   Stage1 Aligned      1246    -0.000011     0.000000    45.51%    48.39%     6.10%
+DissipationAccepted      Lateral   Stage1 Opposed       373    -0.000018     0.000000    46.92%    47.45%     5.63%
+DissipationAccepted      Lateral   Stage2 Aligned       502     0.000008     0.000050    50.20%    46.81%     2.99%
+DissipationAccepted      Lateral   Stage2 Opposed       340    -0.000050     0.000000    44.71%    48.82%     6.47%
+DissipationAccepted      Lateral   Stage3 Aligned       170    -0.000002     0.000000    45.88%    49.41%     4.71%
+DissipationAccepted      Lateral   Stage3 Opposed       735    -0.000027    -0.000050    43.13%    52.65%     4.22%
+DissipationAccepted      Lateral   Stage4 Aligned       537     0.000019     0.000050    51.40%    45.44%     3.17%
+DissipationAccepted      Lateral   Stage4 Opposed       408    -0.000013     0.000000    47.55%    48.53%     3.92%
+ParticipationPeak        IBSYM     Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationPeak        IBSYM     Stage0 Opposed       180     0.000120     0.000000    49.44%    45.56%     5.00%
+ParticipationPeak        IBSYM     Stage1 Aligned       456    -0.000053    -0.000050    40.57%    51.10%     8.33%
+ParticipationPeak        IBSYM     Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationPeak        IBSYM     Stage2 Aligned       201     0.000009    -0.000050    42.79%    53.23%     3.98%
+ParticipationPeak        IBSYM     Stage2 Opposed       460    -0.000022     0.000000    45.22%    47.83%     6.96%
+ParticipationPeak        IBSYM     Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationPeak        IBSYM     Stage3 Opposed        84    -0.000087    -0.000025    46.43%    50.00%     3.57%
+ParticipationPeak        IBSYM     Stage4 Aligned       230     0.000012     0.000050    51.74%    43.04%     5.22%
+ParticipationPeak        IBSYM     Stage4 Opposed       151    -0.000040    -0.000050    43.05%    51.66%     5.30%
+ParticipationPeak        Lateral   Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationPeak        Lateral   Stage0 Opposed       352     0.000052     0.000000    48.86%    47.16%     3.98%
+ParticipationPeak        Lateral   Stage1 Aligned      1041    -0.000038     0.000000    43.23%    49.95%     6.82%
+ParticipationPeak        Lateral   Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationPeak        Lateral   Stage2 Aligned       500    -0.000012    -0.000050    45.40%    50.60%     4.00%
+ParticipationPeak        Lateral   Stage2 Opposed      1023    -0.000037     0.000000    45.45%    49.85%     4.69%
+ParticipationPeak        Lateral   Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationPeak        Lateral   Stage3 Opposed       220    -0.000032    -0.000050    44.55%    53.18%     2.27%
+ParticipationPeak        Lateral   Stage4 Aligned       508     0.000034     0.000050    51.57%    44.88%     3.54%
+ParticipationPeak        Lateral   Stage4 Opposed       348    -0.000071    -0.000050    45.98%    50.86%     3.16%
+ParticipationClimactic   IBSYM     Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationClimactic   IBSYM     Stage0 Opposed        65     0.000185     0.000100    53.85%    40.00%     6.15%
+ParticipationClimactic   IBSYM     Stage1 Aligned       146    -0.000123    -0.000075    41.10%    56.16%     2.74%
+ParticipationClimactic   IBSYM     Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationClimactic   IBSYM     Stage2 Aligned       102    -0.000032    -0.000050    43.14%    53.92%     2.94%
+ParticipationClimactic   IBSYM     Stage2 Opposed       156    -0.000016     0.000000    47.44%    48.08%     4.49%
+ParticipationClimactic   IBSYM     Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationClimactic   IBSYM     Stage3 Opposed        20    -0.000140    -0.000150    30.00%    55.00%    15.00%
+ParticipationClimactic   IBSYM     Stage4 Aligned        78    -0.000126    -0.000075    46.15%    51.28%     2.56%
+ParticipationClimactic   IBSYM     Stage4 Opposed        53     0.000092     0.000050    50.94%    45.28%     3.77%
+ParticipationClimactic   Lateral   Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationClimactic   Lateral   Stage0 Opposed       147     0.000029     0.000000    47.62%    46.94%     5.44%
+ParticipationClimactic   Lateral   Stage1 Aligned       499    -0.000047    -0.000050    43.09%    54.31%     2.61%
+ParticipationClimactic   Lateral   Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationClimactic   Lateral   Stage2 Aligned       256     0.000036     0.000000    47.66%    48.83%     3.52%
+ParticipationClimactic   Lateral   Stage2 Opposed       415    -0.000072    -0.000050    44.10%    50.84%     5.06%
+ParticipationClimactic   Lateral   Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ParticipationClimactic   Lateral   Stage3 Opposed        89    -0.000201    -0.000150    37.08%    56.18%     6.74%
+ParticipationClimactic   Lateral   Stage4 Aligned       271     0.000087     0.000100    54.24%    42.07%     3.69%
+ParticipationClimactic   Lateral   Stage4 Opposed       177    -0.000050    -0.000100    41.24%    54.24%     4.52%
+PeakContained            IBSYM     Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakContained            IBSYM     Stage0 Opposed        51     0.000042    -0.000050    43.14%    52.94%     3.92%
+PeakContained            IBSYM     Stage1 Aligned       116     0.000034     0.000000    43.10%    48.28%     8.62%
+PeakContained            IBSYM     Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakContained            IBSYM     Stage2 Aligned        75     0.000036     0.000050    50.67%    44.00%     5.33%
+PeakContained            IBSYM     Stage2 Opposed       160    -0.000062    -0.000025    45.62%    50.00%     4.38%
+PeakContained            IBSYM     Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakContained            IBSYM     Stage3 Opposed        19    -0.000045     0.000000    47.37%    47.37%     5.26%
+PeakContained            IBSYM     Stage4 Aligned        90     0.000094     0.000050    55.56%    38.89%     5.56%
+PeakContained            IBSYM     Stage4 Opposed        44     0.000031     0.000000    45.45%    47.73%     6.82%
+PeakContained            Lateral   Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakContained            Lateral   Stage0 Opposed       104     0.000010    -0.000100    41.35%    57.69%     0.96%
+PeakContained            Lateral   Stage1 Aligned       247     0.000007     0.000000    44.94%    47.37%     7.69%
+PeakContained            Lateral   Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakContained            Lateral   Stage2 Aligned       165    -0.000081    -0.000050    40.00%    54.55%     5.45%
+PeakContained            Lateral   Stage2 Opposed       367    -0.000015     0.000000    47.41%    48.50%     4.09%
+PeakContained            Lateral   Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakContained            Lateral   Stage3 Opposed        43    -0.000006    -0.000050    44.19%    55.81%     0.00%
+PeakContained            Lateral   Stage4 Aligned       191     0.000019     0.000050    51.31%    45.55%     3.14%
+PeakContained            Lateral   Stage4 Opposed       115    -0.000185    -0.000050    41.74%    54.78%     3.48%
+PeakAccepted             IBSYM     Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakAccepted             IBSYM     Stage0 Opposed        93     0.000172     0.000000    49.46%    43.01%     7.53%
+PeakAccepted             IBSYM     Stage1 Aligned       298    -0.000073    -0.000050    39.93%    51.34%     8.72%
+PeakAccepted             IBSYM     Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakAccepted             IBSYM     Stage2 Aligned        95     0.000001    -0.000100    41.05%    55.79%     3.16%
+PeakAccepted             IBSYM     Stage2 Opposed       234     0.000010     0.000000    46.58%    45.30%     8.12%
+PeakAccepted             IBSYM     Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakAccepted             IBSYM     Stage3 Opposed        61    -0.000115    -0.000050    45.90%    50.82%     3.28%
+PeakAccepted             IBSYM     Stage4 Aligned       112    -0.000018     0.000050    51.79%    44.64%     3.57%
+PeakAccepted             IBSYM     Stage4 Opposed        80    -0.000102    -0.000050    41.25%    53.75%     5.00%
+PeakAccepted             Lateral   Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakAccepted             Lateral   Stage0 Opposed       173     0.000084     0.000000    49.71%    43.35%     6.94%
+PeakAccepted             Lateral   Stage1 Aligned       700    -0.000059    -0.000050    42.14%    51.14%     6.71%
+PeakAccepted             Lateral   Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakAccepted             Lateral   Stage2 Aligned       251     0.000051     0.000000    49.80%    47.01%     3.19%
+PeakAccepted             Lateral   Stage2 Opposed       506    -0.000059     0.000000    44.86%    49.80%     5.34%
+PeakAccepted             Lateral   Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+PeakAccepted             Lateral   Stage3 Opposed       163    -0.000050    -0.000050    42.94%    53.99%     3.07%
+PeakAccepted             Lateral   Stage4 Aligned       251     0.000042     0.000050    52.19%    44.62%     3.19%
+PeakAccepted             Lateral   Stage4 Opposed       178    -0.000000     0.000050    51.69%    44.94%     3.37%
+ClimacticContained       IBSYM     Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticContained       IBSYM     Stage0 Opposed        16    -0.000059     0.000000    43.75%    43.75%    12.50%
+ClimacticContained       IBSYM     Stage1 Aligned        28     0.000045     0.000000    46.43%    39.29%    14.29%
+ClimacticContained       IBSYM     Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticContained       IBSYM     Stage2 Aligned        35     0.000074     0.000050    51.43%    45.71%     2.86%
+ClimacticContained       IBSYM     Stage2 Opposed        53     0.000017     0.000000    47.17%    45.28%     7.55%
+ClimacticContained       IBSYM     Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticContained       IBSYM     Stage3 Opposed         3    -0.000150    -0.000050    33.33%    66.67%     0.00%
+ClimacticContained       IBSYM     Stage4 Aligned        26     0.000046     0.000100    53.85%    42.31%     3.85%
+ClimacticContained       IBSYM     Stage4 Opposed        15     0.000110     0.000000    46.67%    46.67%     6.67%
+ClimacticContained       Lateral   Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticContained       Lateral   Stage0 Opposed        47    -0.000105    -0.000100    40.43%    55.32%     4.26%
+ClimacticContained       Lateral   Stage1 Aligned        88     0.000090     0.000000    47.73%    46.59%     5.68%
+ClimacticContained       Lateral   Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticContained       Lateral   Stage2 Aligned        77     0.000111     0.000050    50.65%    46.75%     2.60%
+ClimacticContained       Lateral   Stage2 Opposed       145    -0.000032    -0.000050    44.14%    50.34%     5.52%
+ClimacticContained       Lateral   Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticContained       Lateral   Stage3 Opposed        18    -0.000328    -0.000325    27.78%    66.67%     5.56%
+ClimacticContained       Lateral   Stage4 Aligned        65     0.000202     0.000150    58.46%    35.38%     6.15%
+ClimacticContained       Lateral   Stage4 Opposed        60    -0.000005    -0.000100    46.67%    53.33%     0.00%
+ClimacticAccepted        IBSYM     Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticAccepted        IBSYM     Stage0 Opposed        38     0.000270     0.000100    52.63%    42.11%     5.26%
+ClimacticAccepted        IBSYM     Stage1 Aligned       114    -0.000142    -0.000100    40.35%    59.65%     0.00%
+ClimacticAccepted        IBSYM     Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticAccepted        IBSYM     Stage2 Aligned        58    -0.000067    -0.000075    37.93%    58.62%     3.45%
+ClimacticAccepted        IBSYM     Stage2 Opposed        87    -0.000055    -0.000050    44.83%    51.72%     3.45%
+ClimacticAccepted        IBSYM     Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticAccepted        IBSYM     Stage3 Opposed        17    -0.000138    -0.000250    29.41%    52.94%    17.65%
+ClimacticAccepted        IBSYM     Stage4 Aligned        47    -0.000256    -0.000100    42.55%    55.32%     2.13%
+ClimacticAccepted        IBSYM     Stage4 Opposed        31     0.000168     0.000100    54.84%    41.94%     3.23%
+ClimacticAccepted        Lateral   Stage0 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticAccepted        Lateral   Stage0 Opposed        77     0.000154     0.000050    53.25%    40.26%     6.49%
+ClimacticAccepted        Lateral   Stage1 Aligned       388    -0.000057    -0.000050    43.30%    54.64%     2.06%
+ClimacticAccepted        Lateral   Stage1 Opposed         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticAccepted        Lateral   Stage2 Aligned       158    -0.000009    -0.000050    44.94%    50.63%     4.43%
+ClimacticAccepted        Lateral   Stage2 Opposed       231    -0.000087    -0.000050    43.29%    51.95%     4.76%
+ClimacticAccepted        Lateral   Stage3 Aligned         0     0.000000     0.000000     0.00%     0.00%     0.00%
+ClimacticAccepted        Lateral   Stage3 Opposed        69    -0.000145    -0.000050    39.13%    53.62%     7.25%
+ClimacticAccepted        Lateral   Stage4 Aligned       186     0.000008     0.000050    51.61%    45.70%     2.69%
+ClimacticAccepted        Lateral   Stage4 Opposed        96    -0.000033    -0.000050    41.67%    51.04%     7.29%
+
+Mature Aligned versus Mature Opposed by BreakoutType
+====================================================
+Event                    Type     LeftCount  LeftCont5 RightCount  RightCont5 DeltaCont5  DeltaMean5
+AllBars                  IBSYM         1039    48.99%        770     45.84%     3.15%    0.000015
+AllBars                  Lateral       2558    50.70%       1846     45.02%     5.69%    0.000078
+DissipationAny           IBSYM          469    51.39%        395     48.86%     2.53%    0.000008
+DissipationAny           Lateral       1143    51.53%        923     45.83%     5.70%    0.000071
+DissipationContained     IBSYM          200    51.50%        183     46.99%     4.51%    0.000041
+DissipationContained     Lateral        468    52.35%        437     44.62%     7.73%    0.000109
+DissipationAccepted      IBSYM          209    52.63%        171     47.95%     4.68%   -0.000021
+DissipationAccepted      Lateral        537    51.40%        408     47.55%     3.85%    0.000032
+ParticipationPeak        IBSYM          230    51.74%        151     43.05%     8.69%    0.000052
+ParticipationPeak        Lateral        508    51.57%        348     45.98%     5.60%    0.000105
+ParticipationClimactic   IBSYM           78    46.15%         53     50.94%    -4.79%   -0.000217
+ParticipationClimactic   Lateral        271    54.24%        177     41.24%    13.00%    0.000137
+PeakContained            IBSYM           90    55.56%         44     45.45%    10.10%    0.000063
+PeakContained            Lateral        191    51.31%        115     41.74%     9.57%    0.000204
+PeakAccepted             IBSYM          112    51.79%         80     41.25%    10.54%    0.000084
+PeakAccepted             Lateral        251    52.19%        178     51.69%     0.51%    0.000042
+ClimacticContained       IBSYM           26    53.85%         15     46.67%     7.18%   -0.000064
+ClimacticContained       Lateral         65    58.46%         60     46.67%    11.79%    0.000207
+ClimacticAccepted        IBSYM           47    42.55%         31     54.84%   -12.29%   -0.000424
+ClimacticAccepted        Lateral        186    51.61%         96     41.67%     9.95%    0.000041
+
+Immature Aligned versus Immature Opposed by BreakoutType
+========================================================
+Event                    Type     LeftCount  LeftCont5 RightCount  RightCont5 DeltaCont5  DeltaMean5
+AllBars                  IBSYM         2066    44.34%       1656     45.95%    -1.62%   -0.000061
+AllBars                  Lateral       4466    44.98%       3107     46.67%    -1.68%   -0.000024
+DissipationAny           IBSYM          970    45.15%        864     45.83%    -0.68%   -0.000052
+DissipationAny           Lateral       2247    46.46%       1677     46.51%    -0.05%   -0.000006
+DissipationContained     IBSYM          368    46.74%        432     47.22%    -0.48%   -0.000053
+DissipationContained     Lateral        851    47.71%        812     46.43%     1.28%   -0.000014
+DissipationAccepted      IBSYM          524    45.61%        378     44.18%     1.43%   -0.000043
+DissipationAccepted      Lateral       1246    45.51%        768     46.22%    -0.72%   -0.000000
+ParticipationPeak        IBSYM          456    40.57%        180     49.44%    -8.87%   -0.000173
+ParticipationPeak        Lateral       1041    43.23%        352     48.86%    -5.64%   -0.000090
+ParticipationClimactic   IBSYM          146    41.10%         65     53.85%   -12.75%   -0.000308
+ParticipationClimactic   Lateral        499    43.09%        147     47.62%    -4.53%   -0.000076
+PeakContained            IBSYM          116    43.10%         51     43.14%    -0.03%   -0.000009
+PeakContained            Lateral        247    44.94%        104     41.35%     3.59%   -0.000003
+PeakAccepted             IBSYM          298    39.93%         93     49.46%    -9.53%   -0.000245
+PeakAccepted             Lateral        700    42.14%        173     49.71%    -7.57%   -0.000143
+ClimacticContained       IBSYM           28    46.43%         16     43.75%     2.68%    0.000104
+ClimacticContained       Lateral         88    47.73%         47     40.43%     7.30%    0.000195
+ClimacticAccepted        IBSYM          114    40.35%         38     52.63%   -12.28%   -0.000412
+ClimacticAccepted        Lateral        388    43.30%         77     53.25%    -9.95%   -0.000210
+
+Mature Aligned versus Immature Aligned by BreakoutType
+======================================================
+Event                    Type     LeftCount  LeftCont5 RightCount  RightCont5 DeltaCont5  DeltaMean5
+AllBars                  IBSYM         1039    48.99%       2066     44.34%     4.65%    0.000033
+AllBars                  Lateral       2558    50.70%       4466     44.98%     5.72%    0.000065
+DissipationAny           IBSYM          469    51.39%        970     45.15%     6.23%    0.000039
+DissipationAny           Lateral       1143    51.53%       2247     46.46%     5.07%    0.000046
+DissipationContained     IBSYM          200    51.50%        368     46.74%     4.76%    0.000066
+DissipationContained     Lateral        468    52.35%        851     47.71%     4.64%    0.000065
+DissipationAccepted      IBSYM          209    52.63%        524     45.61%     7.02%   -0.000006
+DissipationAccepted      Lateral        537    51.40%       1246     45.51%     5.89%    0.000030
+ParticipationPeak        IBSYM          230    51.74%        456     40.57%    11.17%    0.000066
+ParticipationPeak        Lateral        508    51.57%       1041     43.23%     8.35%    0.000072
+ParticipationClimactic   IBSYM           78    46.15%        146     41.10%     5.06%   -0.000002
+ParticipationClimactic   Lateral        271    54.24%        499     43.09%    11.16%    0.000133
+PeakContained            IBSYM           90    55.56%        116     43.10%    12.45%    0.000060
+PeakContained            Lateral        191    51.31%        247     44.94%     6.37%    0.000012
+PeakAccepted             IBSYM          112    51.79%        298     39.93%    11.85%    0.000055
+PeakAccepted             Lateral        251    52.19%        700     42.14%    10.05%    0.000101
+ClimacticContained       IBSYM           26    53.85%         28     46.43%     7.42%    0.000002
+ClimacticContained       Lateral         65    58.46%         88     47.73%    10.73%    0.000112
+ClimacticAccepted        IBSYM           47    42.55%        114     40.35%     2.20%   -0.000114
+ClimacticAccepted        Lateral        186    51.61%        388     43.30%     8.31%    0.000064
+
+Largest Mature Alignment Advantages by BreakoutType
+===================================================
+Rank Event                    Type     LeftCount RightCount DeltaCont5  DeltaMean5
+   1 ParticipationClimactic   Lateral        271        177    13.00%    0.000137
+   2 ClimacticContained       Lateral         65         60    11.79%    0.000207
+   3 PeakAccepted             IBSYM          112         80    10.54%    0.000084
+   4 PeakContained            IBSYM           90         44    10.10%    0.000063
+   5 ClimacticAccepted        Lateral        186         96     9.95%    0.000041
+   6 PeakContained            Lateral        191        115     9.57%    0.000204
+   7 ParticipationPeak        IBSYM          230        151     8.69%    0.000052
+   8 DissipationContained     Lateral        468        437     7.73%    0.000109
+   9 DissipationAny           Lateral       1143        923     5.70%    0.000071
+  10 AllBars                  Lateral       2558       1846     5.69%    0.000078
+  11 ParticipationPeak        Lateral        508        348     5.60%    0.000105
+  12 DissipationAccepted      IBSYM          209        171     4.68%   -0.000021
+  13 DissipationContained     IBSYM          200        183     4.51%    0.000041
+  14 DissipationAccepted      Lateral        537        408     3.85%    0.000032
+  15 AllBars                  IBSYM         1039        770     3.15%    0.000015
+  16 DissipationAny           IBSYM          469        395     2.53%    0.000008
+  17 PeakAccepted             Lateral        251        178     0.51%    0.000042
+  18 ParticipationClimactic   IBSYM           78         53    -4.79%   -0.000217
+  19 ClimacticAccepted        IBSYM           47         31   -12.29%   -0.000424
+
+Largest Immature Alignment Advantages by BreakoutType
+=====================================================
+Rank Event                    Type     LeftCount RightCount DeltaCont5  DeltaMean5
+   1 ClimacticContained       Lateral         88         47     7.30%    0.000195
+   2 PeakContained            Lateral        247        104     3.59%   -0.000003
+   3 DissipationAccepted      IBSYM          524        378     1.43%   -0.000043
+   4 DissipationContained     Lateral        851        812     1.28%   -0.000014
+   5 PeakContained            IBSYM          116         51    -0.03%   -0.000009
+   6 DissipationAny           Lateral       2247       1677    -0.05%   -0.000006
+   7 DissipationContained     IBSYM          368        432    -0.48%   -0.000053
+   8 DissipationAny           IBSYM          970        864    -0.68%   -0.000052
+   9 DissipationAccepted      Lateral       1246        768    -0.72%   -0.000000
+  10 AllBars                  IBSYM         2066       1656    -1.62%   -0.000061
+  11 AllBars                  Lateral       4466       3107    -1.68%   -0.000024
+  12 ParticipationClimactic   Lateral        499        147    -4.53%   -0.000076
+  13 ParticipationPeak        Lateral       1041        352    -5.64%   -0.000090
+  14 PeakAccepted             Lateral        700        173    -7.57%   -0.000143
+  15 ParticipationPeak        IBSYM          456        180    -8.87%   -0.000173
+  16 PeakAccepted             IBSYM          298         93    -9.53%   -0.000245
+  17 ClimacticAccepted        Lateral        388         77    -9.95%   -0.000210
+  18 ClimacticAccepted        IBSYM          114         38   -12.28%   -0.000412
+  19 ParticipationClimactic   IBSYM          146         65   -12.75%   -0.000308
+
+Largest Maturity Improvements for Aligned Events by BreakoutType
+================================================================
+Rank Event                    Type     LeftCount RightCount DeltaCont5  DeltaMean5
+   1 PeakContained            IBSYM           90        116    12.45%    0.000060
+   2 PeakAccepted             IBSYM          112        298    11.85%    0.000055
+   3 ParticipationPeak        IBSYM          230        456    11.17%    0.000066
+   4 ParticipationClimactic   Lateral        271        499    11.16%    0.000133
+   5 ClimacticContained       Lateral         65         88    10.73%    0.000112
+   6 PeakAccepted             Lateral        251        700    10.05%    0.000101
+   7 ParticipationPeak        Lateral        508       1041     8.35%    0.000072
+   8 ClimacticAccepted        Lateral        186        388     8.31%    0.000064
+   9 DissipationAccepted      IBSYM          209        524     7.02%   -0.000006
+  10 PeakContained            Lateral        191        247     6.37%    0.000012
+  11 DissipationAny           IBSYM          469        970     6.23%    0.000039
+  12 DissipationAccepted      Lateral        537       1246     5.89%    0.000030
+  13 AllBars                  Lateral       2558       4466     5.72%    0.000065
+  14 DissipationAny           Lateral       1143       2247     5.07%    0.000046
+  15 ParticipationClimactic   IBSYM           78        146     5.06%   -0.000002
+  16 DissipationContained     IBSYM          200        368     4.76%    0.000066
+  17 AllBars                  IBSYM         1039       2066     4.65%    0.000033
+  18 DissipationContained     Lateral        468        851     4.64%    0.000065
+  19 ClimacticAccepted        IBSYM           47        114     2.20%   -0.000114
+
+Largest Maturity Deteriorations for Aligned Events by BreakoutType
+==================================================================
+Rank Event                    Type     LeftCount RightCount DeltaCont5  DeltaMean5
+   1 ClimacticAccepted        IBSYM           47        114     2.20%   -0.000114
+   2 DissipationContained     Lateral        468        851     4.64%    0.000065
+   3 AllBars                  IBSYM         1039       2066     4.65%    0.000033
+   4 DissipationContained     IBSYM          200        368     4.76%    0.000066
+   5 ParticipationClimactic   IBSYM           78        146     5.06%   -0.000002
+   6 DissipationAny           Lateral       1143       2247     5.07%    0.000046
+   7 AllBars                  Lateral       2558       4466     5.72%    0.000065
+   8 DissipationAccepted      Lateral        537       1246     5.89%    0.000030
+   9 DissipationAny           IBSYM          469        970     6.23%    0.000039
+  10 PeakContained            Lateral        191        247     6.37%    0.000012
+  11 DissipationAccepted      IBSYM          209        524     7.02%   -0.000006
+  12 ClimacticAccepted        Lateral        186        388     8.31%    0.000064
+  13 ParticipationPeak        Lateral        508       1041     8.35%    0.000072
+  14 PeakAccepted             Lateral        251        700    10.05%    0.000101
+  15 ClimacticContained       Lateral         65         88    10.73%    0.000112
+  16 ParticipationClimactic   Lateral        271        499    11.16%    0.000133
+  17 ParticipationPeak        IBSYM          230        456    11.17%    0.000066
+  18 PeakAccepted             IBSYM          112        298    11.85%    0.000055
+  19 PeakContained            IBSYM           90        116    12.45%    0.000060
+
+Strongest Mature Aligned Combinations
+=====================================
+Rank Event                    Type        Count   MeanDRFwd5  ContRate5
+   1 ClimacticContained       Lateral        65     0.000202    58.46%
+   2 PeakContained            IBSYM          90     0.000094    55.56%
+   3 ParticipationClimactic   Lateral       271     0.000087    54.24%
+   4 DissipationContained     IBSYM         200     0.000060    51.50%
+   5 DissipationContained     Lateral       468     0.000053    52.35%
+   6 AllBars                  Lateral      2558     0.000043    50.70%
+   7 PeakAccepted             Lateral       251     0.000042    52.19%
+   8 DissipationAny           Lateral      1143     0.000035    51.53%
+   9 ParticipationPeak        Lateral       508     0.000034    51.57%
+  10 DissipationAccepted      Lateral       537     0.000019    51.40%
+  11 PeakContained            Lateral       191     0.000019    51.31%
+  12 DissipationAny           IBSYM         469     0.000016    51.39%
+  13 ParticipationPeak        IBSYM         230     0.000012    51.74%
+  14 ClimacticAccepted        Lateral       186     0.000008    51.61%
+  15 AllBars                  IBSYM        1039     0.000003    48.99%
+  16 PeakAccepted             IBSYM         112    -0.000018    51.79%
+  17 DissipationAccepted      IBSYM         209    -0.000030    52.63%
+  18 ParticipationClimactic   IBSYM          78    -0.000126    46.15%
+  19 ClimacticAccepted        IBSYM          47    -0.000256    42.55%
+
+Strongest Mature Opposed Combinations
+=====================================
+Rank Event                    Type        Count   MeanDRFwd5  ContRate5
+   1 ClimacticAccepted        IBSYM          31     0.000168    54.84%
+   2 ParticipationClimactic   IBSYM          53     0.000092    50.94%
+   3 PeakContained            IBSYM          44     0.000031    45.45%
+   4 DissipationContained     IBSYM         183     0.000019    46.99%
+   5 DissipationAny           IBSYM         395     0.000008    48.86%
+   6 PeakAccepted             Lateral       178    -0.000000    51.69%
+   7 ClimacticContained       Lateral        60    -0.000005    46.67%
+   8 DissipationAccepted      IBSYM         171    -0.000009    47.95%
+   9 AllBars                  IBSYM         770    -0.000012    45.84%
+  10 DissipationAccepted      Lateral       408    -0.000013    47.55%
+  11 ClimacticAccepted        Lateral        96    -0.000033    41.67%
+  12 AllBars                  Lateral      1846    -0.000035    45.02%
+  13 DissipationAny           Lateral       923    -0.000036    45.83%
+  14 ParticipationPeak        IBSYM         151    -0.000040    43.05%
+  15 ParticipationClimactic   Lateral       177    -0.000050    41.24%
+  16 DissipationContained     Lateral       437    -0.000055    44.62%
+  17 ParticipationPeak        Lateral       348    -0.000071    45.98%
+  18 PeakAccepted             IBSYM          80    -0.000102    41.25%
+  19 PeakContained            Lateral       115    -0.000185    41.74%
+
+Research Notes
+==============
+- Largest mature alignment advantage: ParticipationClimactic, Lateral (13.00%).
+- Best mature alignment breakout type for DissipationContained: Lateral (7.73%).
+- Best mature alignment breakout type for ParticipationPeak: IBSYM (8.69%).
+- Best mature alignment breakout type for AllBars: Lateral (5.69%).
+- Mature-alignment comparisons skipped from ranked tables because one side Count < 30: 1.

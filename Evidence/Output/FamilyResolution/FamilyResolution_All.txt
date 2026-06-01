@@ -1,0 +1,993 @@
+APVA Family Resolution Study v0.1 - Aggregate
+==============================================
+Instruments: 6E, NQ, CL
+Family C resolution uses the existing Study 30 family projection.
+
+Aggregate Resolution Counts
+===========================
+Resolution           6E_Count     6E_Pct    6E_Med     NQ_Count     NQ_Pct    NQ_Med     CL_Count     CL_Pct    CL_Med ValidN    MeanPct  MeanMedian
+C->A                       70     1.28%    1.0000            6     2.37%    1.0000            6     1.34%    1.0000      1     1.28%      1.0000
+C->B                     1443    26.46%    1.0000           61    24.11%    1.0000          139    31.03%    1.0000      3    27.20%      1.0000
+C->D                      452     8.29%    1.0000           26    10.28%    1.0000           28     6.25%    1.0000      3     8.27%      1.0000
+C->N                     3481    63.82%    1.0000          158    62.45%    1.0000          273    60.94%    1.0000      3    62.40%      1.0000
+C->C_Persist                8     0.15%    5.0000            2     0.79%    5.0000            2     0.45%    5.0000      0     0.00%      0.0000
+
+Aggregate Branch Predictor Table
+================================
+Category                 Feature                                     6E_Effect    NQ_Effect    CL_Effect ValidN  PosN  NegN  MeanEffect
+C->A                     AcceptanceState_Accepted                     0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     AcceptanceState_Contained                    0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     AcceptanceState_Rejected                     0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     AcceptanceState_Unknown                      0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     AcceptanceState_Unresolved                   0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     CompressionOn                                0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     CompressionState_Absent                      0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     CompressionState_Clustered                   0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     CompressionState_FailedResolution            0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     CompressionState_Lateral                     0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     CompressionState_Local                       0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     CompressionState_Resolving                   0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     CompressionState_Unknown                     0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     CurrentFlag_Accepted                         0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     CurrentFlag_Climactic                        0.289054     0.785869    -0.314136      1     1     0    0.289054
+C->A                     CurrentFlag_Compressed                       0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     CurrentFlag_Dissipating                     -0.181568    -0.418600     0.499091      1     0     1   -0.181568
+C->A                     CurrentFlag_Expanding                        0.231404     0.402752    -0.582727      1     1     0    0.231404
+C->A                     CurrentFlag_Peak                            -0.289054    -0.785869     0.314136      1     0     1   -0.289054
+C->A                     DissipationOn                               -0.181568    -0.418600     0.499091      1     0     1   -0.181568
+C->A                     DissipationState_Absent                      0.181568     0.418600    -0.499091      1     1     0    0.181568
+C->A                     DissipationState_Climactic                   0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     DissipationState_Local                      -0.181568    -0.418600     0.499091      1     0     1   -0.181568
+C->A                     DissipationState_Repeated                    0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     DissipationState_Strong                      0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     DissipationState_Unknown                     0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     ExpansionOn                                  0.231404     0.402752    -0.582727      1     1     0    0.231404
+C->A                     ExpansionState_Absent                       -0.231404    -0.402752     0.582727      1     0     1   -0.231404
+C->A                     ExpansionState_Climactic                     0.286837     0.687963     0.099814      1     1     0    0.286837
+C->A                     ExpansionState_Failed                        0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     ExpansionState_Local                        -0.153063    -0.345763    -0.358755      1     0     1   -0.153063
+C->A                     ExpansionState_Strong                       -0.019036    -0.227092    -0.297000      1     0     1   -0.019036
+C->A                     ExpansionState_Unknown                       0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     FamilyCRunLengthSoFar                       -0.147628    -0.161055    -0.331515      1     0     1   -0.147628
+C->A                     FamilyCTotalRunLength                       -0.205515    -0.217372    -0.460039      1     0     1   -0.205515
+C->A                     ParticipationState_Climactic                 0.289054     0.785869    -0.314136      1     1     0    0.289054
+C->A                     ParticipationState_Falling                   0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     ParticipationState_Normal                    0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     ParticipationState_Peak                     -0.289054    -0.785869     0.314136      1     0     1   -0.289054
+C->A                     ParticipationState_Rising                    0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     ParticipationState_Silent                    0.000000     0.000000     0.000000      1     0     0    0.000000
+C->A                     PositionInRun_First                          0.079438     0.444792    -0.102047      1     1     0    0.079438
+C->A                     PositionInRun_Last                           0.079438     0.444792    -0.102047      1     1     0    0.079438
+C->A                     PositionInRun_Middle                        -0.212932    -0.367671    -0.316864      1     0     1   -0.212932
+C->A                     PositionInRun_Only                          -0.016987    -0.435588     0.346422      1     0     1   -0.016987
+C->A                     Prev10AcceptedCount                          0.073635     0.043921    -0.616505      1     1     0    0.073635
+C->A                     Prev10ClimacticCount                         0.193224     0.147691    -0.519755      1     1     0    0.193224
+C->A                     Prev10CompressedCount                       -0.071718     0.005194     0.570928      1     0     1   -0.071718
+C->A                     Prev10DissipatingCount                       0.177938     0.293756    -0.340236      1     1     0    0.177938
+C->A                     Prev10Dominance                              0.141101     0.131527    -0.645870      1     1     0    0.141101
+C->A                     Prev10ExpandingCount                        -0.031088     0.607315     0.313503      1     0     1   -0.031088
+C->A                     Prev10NetAcceptance                          0.083838    -0.260254    -0.388750      1     1     0    0.083838
+C->A                     Prev10PeakCount                             -0.039349     0.362455    -0.071818      1     0     1   -0.039349
+C->A                     Prev20AcceptedCount                          0.146436    -0.171121    -0.585742      1     1     0    0.146436
+C->A                     Prev20ClimacticCount                         0.119316     0.336014    -0.257913      1     1     0    0.119316
+C->A                     Prev20CompressedCount                       -0.152625     0.132280     0.683662      1     0     1   -0.152625
+C->A                     Prev20DissipatingCount                       0.142612     0.881438    -0.013847      1     1     0    0.142612
+C->A                     Prev20Dominance                              0.187409     0.231326    -0.527181      1     1     0    0.187409
+C->A                     Prev20ExpandingCount                         0.183359     0.182761     0.256736      1     1     0    0.183359
+C->A                     Prev20NetAcceptance                          0.101057    -0.451839    -0.168875      1     1     0    0.101057
+C->A                     Prev20PeakCount                              0.003675     0.417242    -0.333807      1     1     0    0.003675
+C->A                     Prev5AcceptedCount                           0.168953     0.233371    -0.327202      1     1     0    0.168953
+C->A                     Prev5ClimacticCount                         -0.011777     0.010733    -0.369931      1     0     1   -0.011777
+C->A                     Prev5CompressedCount                        -0.183238    -0.126337     0.296192      1     0     1   -0.183238
+C->A                     Prev5DissipatingCount                        0.104746    -0.024193     0.251116      1     1     0    0.104746
+C->A                     Prev5Dominance                               0.195420     0.144952    -0.151814      1     1     0    0.195420
+C->A                     Prev5ExpandingCount                          0.018430     0.696907     0.068570      1     1     0    0.018430
+C->A                     Prev5NetAcceptance                           0.126406    -0.112052    -0.484878      1     1     0    0.126406
+C->A                     Prev5PeakCount                              -0.005240     0.371774     0.289194      1     0     1   -0.005240
+C->A                     VolumePolarity_Black                         0.157879    -0.679765    -0.722563      1     1     0    0.157879
+C->A                     VolumePolarity_Neutral                      -0.115495     0.000000     0.000000      1     0     1   -0.115495
+C->A                     VolumePolarity_Red                          -0.131752     0.679765     0.722563      1     0     1   -0.131752
+C->B                     AcceptanceState_Accepted                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     AcceptanceState_Contained                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     AcceptanceState_Rejected                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     AcceptanceState_Unknown                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     AcceptanceState_Unresolved                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     CompressionOn                                0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     CompressionState_Absent                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     CompressionState_Clustered                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     CompressionState_FailedResolution            0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     CompressionState_Lateral                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     CompressionState_Local                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     CompressionState_Resolving                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     CompressionState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     CurrentFlag_Accepted                         0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     CurrentFlag_Climactic                        0.022406    -0.095141     0.200471      3     2     1    0.042578
+C->B                     CurrentFlag_Compressed                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     CurrentFlag_Dissipating                     -0.083203    -0.142583    -0.064616      3     0     3   -0.096800
+C->B                     CurrentFlag_Expanding                        0.078334     0.202483     0.211187      3     3     0    0.164001
+C->B                     CurrentFlag_Peak                            -0.022406     0.095141    -0.200471      3     1     2   -0.042578
+C->B                     DissipationOn                               -0.083203    -0.142583    -0.064616      3     0     3   -0.096800
+C->B                     DissipationState_Absent                      0.083203     0.142583     0.064616      3     3     0    0.096800
+C->B                     DissipationState_Climactic                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     DissipationState_Local                      -0.083203    -0.142583    -0.064616      3     0     3   -0.096800
+C->B                     DissipationState_Repeated                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     DissipationState_Strong                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     DissipationState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     ExpansionOn                                  0.078334     0.202483     0.211187      3     3     0    0.164001
+C->B                     ExpansionState_Absent                       -0.078334    -0.202483    -0.211187      3     0     3   -0.164001
+C->B                     ExpansionState_Climactic                     0.230833     0.558501     0.433633      3     3     0    0.407656
+C->B                     ExpansionState_Failed                        0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     ExpansionState_Local                        -0.104506    -0.161145    -0.149530      3     0     3   -0.138394
+C->B                     ExpansionState_Strong                       -0.113113    -0.352842    -0.202437      3     0     3   -0.222797
+C->B                     ExpansionState_Unknown                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     FamilyCRunLengthSoFar                        0.126162    -0.215649    -0.111073      3     1     2   -0.066853
+C->B                     FamilyCTotalRunLength                        0.161799    -0.292014    -0.154219      3     1     2   -0.094811
+C->B                     ParticipationState_Climactic                 0.022406    -0.095141     0.200471      3     2     1    0.042578
+C->B                     ParticipationState_Falling                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     ParticipationState_Normal                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     ParticipationState_Peak                     -0.022406     0.095141    -0.200471      3     1     2   -0.042578
+C->B                     ParticipationState_Rising                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     ParticipationState_Silent                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B                     PositionInRun_First                          0.096464     0.093589     0.184009      3     3     0    0.124687
+C->B                     PositionInRun_Last                           0.098903     0.093589     0.184009      3     3     0    0.125500
+C->B                     PositionInRun_Middle                         0.078168    -0.202853    -0.161426      3     1     2   -0.095370
+C->B                     PositionInRun_Only                          -0.192568    -0.011785    -0.206584      3     0     3   -0.136979
+C->B                     Prev10AcceptedCount                         -0.054223    -0.261377    -0.126135      3     0     3   -0.147245
+C->B                     Prev10ClimacticCount                        -0.232346    -0.163158    -0.106816      3     0     3   -0.167440
+C->B                     Prev10CompressedCount                        0.042766     0.257670     0.136038      3     3     0    0.145492
+C->B                     Prev10DissipatingCount                      -0.047449    -0.311640    -0.117828      3     0     3   -0.158972
+C->B                     Prev10Dominance                             -0.061829    -0.340513    -0.160266      3     0     3   -0.187536
+C->B                     Prev10ExpandingCount                        -0.023464    -0.006307    -0.211972      3     0     3   -0.080581
+C->B                     Prev10NetAcceptance                         -0.145671    -0.182141    -0.023110      3     0     3   -0.116974
+C->B                     Prev10PeakCount                              0.131667    -0.032244    -0.080252      3     1     2    0.006390
+C->B                     Prev20AcceptedCount                         -0.086626    -0.157130    -0.059027      3     0     3   -0.100928
+C->B                     Prev20ClimacticCount                        -0.331603    -0.151324    -0.199268      3     0     3   -0.227398
+C->B                     Prev20CompressedCount                        0.073474     0.104246     0.069620      3     3     0    0.082447
+C->B                     Prev20DissipatingCount                      -0.069694    -0.063842    -0.008635      3     0     3   -0.047390
+C->B                     Prev20Dominance                             -0.097356    -0.140260    -0.056514      3     0     3   -0.098043
+C->B                     Prev20ExpandingCount                        -0.152150    -0.155227    -0.282919      3     0     3   -0.196765
+C->B                     Prev20NetAcceptance                         -0.018545    -0.208992     0.157509      3     1     2   -0.023343
+C->B                     Prev20PeakCount                             -0.052730     0.111544    -0.244477      3     1     2   -0.061888
+C->B                     Prev5AcceptedCount                          -0.011338    -0.245748    -0.054708      3     0     3   -0.103931
+C->B                     Prev5ClimacticCount                         -0.138081    -0.020553     0.040102      3     1     2   -0.039511
+C->B                     Prev5CompressedCount                         0.008257     0.274308     0.033280      3     3     0    0.105281
+C->B                     Prev5DissipatingCount                       -0.043340    -0.187992    -0.033859      3     0     3   -0.088397
+C->B                     Prev5Dominance                              -0.027536    -0.301984    -0.052482      3     0     3   -0.127334
+C->B                     Prev5ExpandingCount                          0.042243    -0.002530    -0.131540      3     1     2   -0.030609
+C->B                     Prev5NetAcceptance                          -0.149051    -0.186308    -0.028661      3     0     3   -0.121340
+C->B                     Prev5PeakCount                               0.181554    -0.012775    -0.014462      3     1     2    0.051439
+C->B                     VolumePolarity_Black                        -0.046408    -0.320553     0.008278      3     1     2   -0.119561
+C->B                     VolumePolarity_Neutral                       0.020756     0.000000     0.000000      3     1     0    0.006919
+C->B                     VolumePolarity_Red                           0.041699     0.320553    -0.008278      3     2     1    0.117991
+C->D                     AcceptanceState_Accepted                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     AcceptanceState_Contained                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     AcceptanceState_Rejected                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     AcceptanceState_Unknown                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     AcceptanceState_Unresolved                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     CompressionOn                                0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     CompressionState_Absent                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     CompressionState_Clustered                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     CompressionState_FailedResolution            0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     CompressionState_Lateral                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     CompressionState_Local                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     CompressionState_Resolving                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     CompressionState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     CurrentFlag_Accepted                         0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     CurrentFlag_Climactic                       -0.179663    -0.476557     0.355656      3     1     2   -0.100188
+C->D                     CurrentFlag_Compressed                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     CurrentFlag_Dissipating                      0.255037     0.497845     0.356198      3     3     0    0.369693
+C->D                     CurrentFlag_Expanding                       -0.440875    -0.572611    -0.467070      3     0     3   -0.493519
+C->D                     CurrentFlag_Peak                             0.179663     0.476557    -0.355656      3     2     1    0.100188
+C->D                     DissipationOn                                0.255037     0.497845     0.356198      3     3     0    0.369693
+C->D                     DissipationState_Absent                     -0.255037    -0.497845    -0.356198      3     0     3   -0.369693
+C->D                     DissipationState_Climactic                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     DissipationState_Local                       0.255037     0.497845     0.356198      3     3     0    0.369693
+C->D                     DissipationState_Repeated                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     DissipationState_Strong                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     DissipationState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     ExpansionOn                                 -0.440875    -0.572611    -0.467070      3     0     3   -0.493519
+C->D                     ExpansionState_Absent                        0.440875     0.572611     0.467070      3     3     0    0.493519
+C->D                     ExpansionState_Climactic                    -0.436170    -0.514184    -0.277539      3     0     3   -0.409298
+C->D                     ExpansionState_Failed                        0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     ExpansionState_Local                         0.166549     0.187043     0.105658      3     3     0    0.153084
+C->D                     ExpansionState_Strong                        0.005217     0.011092    -0.119132      3     2     1   -0.034274
+C->D                     ExpansionState_Unknown                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     FamilyCRunLengthSoFar                       -0.031537    -0.205768     0.930824      3     1     2    0.231173
+C->D                     FamilyCTotalRunLength                       -0.043899    -0.278101     0.965821      3     1     2    0.214607
+C->D                     ParticipationState_Climactic                -0.179663    -0.476557     0.355656      3     1     2   -0.100188
+C->D                     ParticipationState_Falling                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     ParticipationState_Normal                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     ParticipationState_Peak                      0.179663     0.476557    -0.355656      3     2     1    0.100188
+C->D                     ParticipationState_Rising                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     ParticipationState_Silent                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D                     PositionInRun_First                         -0.006995    -0.161501    -0.076159      3     0     3   -0.081551
+C->D                     PositionInRun_Last                          -0.006995    -0.161501     0.017572      3     1     2   -0.050308
+C->D                     PositionInRun_Middle                        -0.030602    -0.131485     0.606286      3     1     2    0.148066
+C->D                     PositionInRun_Only                           0.026341     0.329049    -0.295345      3     2     1    0.020015
+C->D                     Prev10AcceptedCount                          0.037341    -0.015418     0.338930      3     2     1    0.120284
+C->D                     Prev10ClimacticCount                         0.034677     0.134611     0.149786      3     3     0    0.106358
+C->D                     Prev10CompressedCount                       -0.038011     0.005652    -0.363661      3     1     2   -0.132007
+C->D                     Prev10DissipatingCount                      -0.013999     0.125511     0.338286      3     2     1    0.149933
+C->D                     Prev10Dominance                              0.024938     0.040376     0.439276      3     3     0    0.168196
+C->D                     Prev10ExpandingCount                        -0.015755     0.260320     0.172974      3     2     1    0.139179
+C->D                     Prev10NetAcceptance                          0.078615     0.107346    -0.248911      3     2     1   -0.020983
+C->D                     Prev10PeakCount                             -0.064168    -0.146805     0.581246      3     1     2    0.123424
+C->D                     Prev20AcceptedCount                          0.150340     0.005565     0.182213      3     3     0    0.112706
+C->D                     Prev20ClimacticCount                         0.065620     0.299097     0.196684      3     3     0    0.187134
+C->D                     Prev20CompressedCount                       -0.154374    -0.077748    -0.223539      3     0     3   -0.151887
+C->D                     Prev20DissipatingCount                       0.004067     0.017585     0.183792      3     3     0    0.068481
+C->D                     Prev20Dominance                              0.126738     0.043233     0.244335      3     3     0    0.138102
+C->D                     Prev20ExpandingCount                         0.015189     0.498810     0.224915      3     3     0    0.246305
+C->D                     Prev20NetAcceptance                          0.127887    -0.047357    -0.164083      3     1     2   -0.027851
+C->D                     Prev20PeakCount                             -0.025843     0.068226     0.365526      3     2     1    0.135970
+C->D                     Prev5AcceptedCount                           0.014437     0.332637     0.409194      3     3     0    0.252089
+C->D                     Prev5ClimacticCount                          0.029039     0.057142     0.359898      3     3     0    0.148693
+C->D                     Prev5CompressedCount                        -0.012253    -0.310114    -0.454373      3     0     3   -0.258913
+C->D                     Prev5DissipatingCount                       -0.000649     0.122060     0.275987      3     2     1    0.132466
+C->D                     Prev5Dominance                               0.010996     0.326990     0.490173      3     3     0    0.276053
+C->D                     Prev5ExpandingCount                         -0.023907     0.406692     0.142644      3     2     1    0.175143
+C->D                     Prev5NetAcceptance                           0.094263     0.302292     0.040957      3     3     0    0.145837
+C->D                     Prev5PeakCount                              -0.107943    -0.044177     0.315583      3     1     2    0.054488
+C->D                     VolumePolarity_Black                        -0.051350     0.175428    -0.199987      3     1     2   -0.025303
+C->D                     VolumePolarity_Neutral                       0.047117     0.000000     0.000000      3     1     0    0.015706
+C->D                     VolumePolarity_Red                           0.040702    -0.175428     0.199987      3     2     1    0.021754
+C->N                     AcceptanceState_Accepted                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     AcceptanceState_Contained                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     AcceptanceState_Rejected                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     AcceptanceState_Unknown                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     AcceptanceState_Unresolved                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     CompressionOn                                0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     CompressionState_Absent                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     CompressionState_Clustered                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     CompressionState_FailedResolution            0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     CompressionState_Lateral                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     CompressionState_Local                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     CompressionState_Resolving                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     CompressionState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     CurrentFlag_Accepted                         0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     CurrentFlag_Climactic                        0.023823     0.169543    -0.238302      3     2     1   -0.014979
+C->N                     CurrentFlag_Compressed                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     CurrentFlag_Dissipating                     -0.008294    -0.015864    -0.066202      3     0     3   -0.030120
+C->N                     CurrentFlag_Expanding                        0.064928     0.011479    -0.022594      3     2     1    0.017938
+C->N                     CurrentFlag_Peak                            -0.023823    -0.169543     0.238302      3     1     2    0.014979
+C->N                     DissipationOn                               -0.008294    -0.015864    -0.066202      3     0     3   -0.030120
+C->N                     DissipationState_Absent                      0.008294     0.015864     0.066202      3     3     0    0.030120
+C->N                     DissipationState_Climactic                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     DissipationState_Local                      -0.008294    -0.015864    -0.066202      3     0     3   -0.030120
+C->N                     DissipationState_Repeated                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     DissipationState_Strong                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     DissipationState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     ExpansionOn                                  0.064928     0.011479    -0.022594      3     2     1    0.017938
+C->N                     ExpansionState_Absent                       -0.064928    -0.011479     0.022594      3     1     2   -0.017938
+C->N                     ExpansionState_Climactic                    -0.069227    -0.329437    -0.305989      3     0     3   -0.234884
+C->N                     ExpansionState_Failed                        0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     ExpansionState_Local                         0.039090     0.097575     0.105065      3     3     0    0.080577
+C->N                     ExpansionState_Strong                        0.098745     0.314004     0.240934      3     3     0    0.217894
+C->N                     ExpansionState_Unknown                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     FamilyCRunLengthSoFar                       -0.091406     0.284029    -0.106944      3     1     2    0.028560
+C->N                     FamilyCTotalRunLength                       -0.147066     0.261678    -0.148492      3     1     2   -0.011293
+C->N                     ParticipationState_Climactic                 0.023823     0.169543    -0.238302      3     2     1   -0.014979
+C->N                     ParticipationState_Falling                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     ParticipationState_Normal                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     ParticipationState_Peak                     -0.023823    -0.169543     0.238302      3     1     2    0.014979
+C->N                     ParticipationState_Rising                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     ParticipationState_Silent                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->N                     PositionInRun_First                         -0.088539    -0.127805    -0.154351      3     0     3   -0.123565
+C->N                     PositionInRun_Last                          -0.082375    -0.038168    -0.154351      3     0     3   -0.091631
+C->N                     PositionInRun_Middle                        -0.055126     0.259716    -0.012304      3     1     2    0.064095
+C->N                     PositionInRun_Only                           0.161693    -0.039855     0.258772      3     2     1    0.126870
+C->N                     Prev10AcceptedCount                          0.026489     0.218378     0.069395      3     3     0    0.104754
+C->N                     Prev10ClimacticCount                         0.174163     0.080456     0.100395      3     3     0    0.118338
+C->N                     Prev10CompressedCount                       -0.016478    -0.214714    -0.068864      3     0     3   -0.100018
+C->N                     Prev10DissipatingCount                       0.028899     0.161186     0.020147      3     3     0    0.070078
+C->N                     Prev10Dominance                              0.030969     0.244893     0.067112      3     3     0    0.114325
+C->N                     Prev10ExpandingCount                         0.024399    -0.121886     0.129009      3     2     1    0.010508
+C->N                     Prev10NetAcceptance                          0.095836     0.108311     0.136775      3     3     0    0.113641
+C->N                     Prev10PeakCount                             -0.094587     0.080531    -0.099604      3     1     2   -0.037887
+C->N                     Prev20AcceptedCount                          0.012916     0.145622     0.030844      3     3     0    0.063127
+C->N                     Prev20ClimacticCount                         0.252514    -0.026940     0.161121      3     2     1    0.128898
+C->N                     Prev20CompressedCount                        0.000120    -0.076082    -0.034620      3     1     2   -0.036861
+C->N                     Prev20DissipatingCount                       0.047346    -0.058454    -0.043592      3     1     2   -0.018233
+C->N                     Prev20Dominance                              0.026773     0.072096     0.008553      3     3     0    0.035807
+C->N                     Prev20ExpandingCount                         0.113629    -0.074002     0.184257      3     2     1    0.074628
+C->N                     Prev20NetAcceptance                         -0.031741     0.208647    -0.081678      3     1     2    0.031742
+C->N                     Prev20PeakCount                              0.050212    -0.122851     0.126617      3     2     1    0.017992
+C->N                     Prev5AcceptedCount                          -0.006923     0.045046    -0.023976      3     1     2    0.004716
+C->N                     Prev5ClimacticCount                          0.108110     0.010032    -0.092763      3     2     1    0.008460
+C->N                     Prev5CompressedCount                         0.009763    -0.084976     0.056433      3     2     1   -0.006260
+C->N                     Prev5DissipatingCount                        0.023435     0.059049    -0.078060      3     2     1    0.001475
+C->N                     Prev5Dominance                               0.003358     0.080124    -0.068851      3     2     1    0.004877
+C->N                     Prev5ExpandingCount                         -0.032310    -0.197179     0.074456      3     1     2   -0.051678
+C->N                     Prev5NetAcceptance                           0.091057     0.021018     0.096788      3     3     0    0.069621
+C->N                     Prev5PeakCount                              -0.123834     0.018742    -0.137795      3     1     2   -0.080962
+C->N                     VolumePolarity_Black                         0.050272     0.247296     0.101391      3     3     0    0.132986
+C->N                     VolumePolarity_Neutral                      -0.025941     0.000000     0.000000      3     0     1   -0.008647
+C->N                     VolumePolarity_Red                          -0.044390    -0.247296    -0.101391      3     0     3   -0.131026
+C->C_Persist             AcceptanceState_Accepted                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             AcceptanceState_Contained                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             AcceptanceState_Rejected                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             AcceptanceState_Unknown                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             AcceptanceState_Unresolved                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             CompressionOn                                0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             CompressionState_Absent                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             CompressionState_Clustered                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             CompressionState_FailedResolution            0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             CompressionState_Lateral                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             CompressionState_Local                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             CompressionState_Resolving                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             CompressionState_Unknown                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             CurrentFlag_Accepted                         0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             CurrentFlag_Climactic                        0.081293     0.407017    -0.672881      0     0     0    0.000000
+C->C_Persist             CurrentFlag_Compressed                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             CurrentFlag_Dissipating                      0.721589    -0.760668     0.494068      0     0     0    0.000000
+C->C_Persist             CurrentFlag_Expanding                        0.080017     0.395831    -1.065952      0     0     0    0.000000
+C->C_Persist             CurrentFlag_Peak                            -0.081293    -0.407017     0.672881      0     0     0    0.000000
+C->C_Persist             DissipationOn                                0.721589    -0.760668     0.494068      0     0     0    0.000000
+C->C_Persist             DissipationState_Absent                     -0.721589     0.760668    -0.494068      0     0     0    0.000000
+C->C_Persist             DissipationState_Climactic                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             DissipationState_Local                       0.721589    -0.760668     0.494068      0     0     0    0.000000
+C->C_Persist             DissipationState_Repeated                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             DissipationState_Strong                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             DissipationState_Unknown                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             ExpansionOn                                  0.080017     0.395831    -1.065952      0     0     0    0.000000
+C->C_Persist             ExpansionState_Absent                       -0.080017    -0.395831     1.065952      0     0     0    0.000000
+C->C_Persist             ExpansionState_Climactic                     0.391777     1.012024    -0.909873      0     0     0    0.000000
+C->C_Persist             ExpansionState_Failed                        0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             ExpansionState_Local                         0.397697    -0.339935     1.240455      0     0     0    0.000000
+C->C_Persist             ExpansionState_Strong                       -0.646777    -0.603432    -0.658850      0     0     0    0.000000
+C->C_Persist             ExpansionState_Unknown                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             FamilyCRunLengthSoFar                        0.574390    -0.513713     0.075763      0     0     0    0.000000
+C->C_Persist             FamilyCTotalRunLength                        5.884761     2.998742     4.497916      0     0     0    0.000000
+C->C_Persist             ParticipationState_Climactic                 0.081293     0.407017    -0.672881      0     0     0    0.000000
+C->C_Persist             ParticipationState_Falling                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             ParticipationState_Normal                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             ParticipationState_Peak                     -0.081293    -0.407017     0.672881      0     0     0    0.000000
+C->C_Persist             ParticipationState_Rising                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             ParticipationState_Silent                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             PositionInRun_First                          0.817388     2.263173     0.723426      0     0     0    0.000000
+C->C_Persist             PositionInRun_Last                          -0.475392    -0.454677    -0.513280      0     0     0    0.000000
+C->C_Persist             PositionInRun_Middle                         1.742110    -0.361429     1.450303      0     0     0    0.000000
+C->C_Persist             PositionInRun_Only                          -1.143290    -1.105097    -0.995526      0     0     0    0.000000
+C->C_Persist             Prev10AcceptedCount                          0.451367    -0.381648    -0.276525      0     0     0    0.000000
+C->C_Persist             Prev10ClimacticCount                        -0.124186    -0.624720    -0.665187      0     0     0    0.000000
+C->C_Persist             Prev10CompressedCount                       -0.490182     0.328543     0.230927      0     0     0    0.000000
+C->C_Persist             Prev10DissipatingCount                       0.935013     0.060821     1.155315      0     0     0    0.000000
+C->C_Persist             Prev10Dominance                              0.815273    -0.273209     0.259499      0     0     0    0.000000
+C->C_Persist             Prev10ExpandingCount                         0.357549    -1.055645     0.051941      0     0     0    0.000000
+C->C_Persist             Prev10NetAcceptance                         -0.583533     0.509307    -1.778659      0     0     0    0.000000
+C->C_Persist             Prev10PeakCount                              1.103934    -1.001948     1.829016      0     0     0    0.000000
+C->C_Persist             Prev20AcceptedCount                          0.402028    -0.246113     0.527295      0     0     0    0.000000
+C->C_Persist             Prev20ClimacticCount                        -0.364459    -0.164153    -0.873665      0     0     0    0.000000
+C->C_Persist             Prev20CompressedCount                       -0.450804     0.367224    -0.580584      0     0     0    0.000000
+C->C_Persist             Prev20DissipatingCount                       0.348134     0.450723     0.370627      0     0     0    0.000000
+C->C_Persist             Prev20Dominance                              0.507773    -0.078658     0.611566      0     0     0    0.000000
+C->C_Persist             Prev20ExpandingCount                        -0.092430    -0.512900    -0.045511      0     0     0    0.000000
+C->C_Persist             Prev20NetAcceptance                         -0.039884     0.537710    -0.529801      0     0     0    0.000000
+C->C_Persist             Prev20PeakCount                              0.399430    -0.967440     1.123068      0     0     0    0.000000
+C->C_Persist             Prev5AcceptedCount                           0.387031    -0.224172    -0.479046      0     0     0    0.000000
+C->C_Persist             Prev5ClimacticCount                         -0.114726    -0.524427    -0.595934      0     0     0    0.000000
+C->C_Persist             Prev5CompressedCount                        -0.415239     0.185557     0.450779      0     0     0    0.000000
+C->C_Persist             Prev5DissipatingCount                        1.191365     1.251921     1.437785      0     0     0    0.000000
+C->C_Persist             Prev5Dominance                               0.868246     0.339919     0.246030      0     0     0    0.000000
+C->C_Persist             Prev5ExpandingCount                          0.563150    -0.865674     0.253615      0     0     0    0.000000
+C->C_Persist             Prev5NetAcceptance                          -0.565506     0.496610    -2.954691      0     0     0    0.000000
+C->C_Persist             Prev5PeakCount                               1.090003    -0.841133     3.117591      0     0     0    0.000000
+C->C_Persist             VolumePolarity_Black                        -0.459618     0.003968    -1.050606      0     0     0    0.000000
+C->C_Persist             VolumePolarity_Neutral                      -0.114172     0.000000     0.000000      0     0     0    0.000000
+C->C_Persist             VolumePolarity_Red                           0.484998    -0.003968     1.050606      0     0     0    0.000000
+
+Aggregate Branch-vs-Branch Table
+================================
+Category                 Feature                                     6E_Effect    NQ_Effect    CL_Effect ValidN  PosN  NegN  MeanEffect
+C->B vs C->D             AcceptanceState_Accepted                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             AcceptanceState_Contained                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             AcceptanceState_Rejected                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             AcceptanceState_Unknown                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             AcceptanceState_Unresolved                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             CompressionOn                                0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             CompressionState_Absent                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             CompressionState_Clustered                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             CompressionState_FailedResolution            0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             CompressionState_Lateral                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             CompressionState_Local                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             CompressionState_Resolving                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             CompressionState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             CurrentFlag_Accepted                         0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             CurrentFlag_Climactic                        0.183305     0.389832    -0.184296      3     2     1    0.129614
+C->B vs C->D             CurrentFlag_Compressed                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             CurrentFlag_Dissipating                     -0.295514    -0.555230    -0.376161      3     0     3   -0.408968
+C->B vs C->D             CurrentFlag_Expanding                        0.445911     0.653904     0.627126      3     3     0    0.575647
+C->B vs C->D             CurrentFlag_Peak                            -0.183305    -0.389832     0.184296      3     1     2   -0.129614
+C->B vs C->D             DissipationOn                               -0.295514    -0.555230    -0.376161      3     0     3   -0.408968
+C->B vs C->D             DissipationState_Absent                      0.295514     0.555230     0.376161      3     3     0    0.408968
+C->B vs C->D             DissipationState_Climactic                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             DissipationState_Local                      -0.295514    -0.555230    -0.376161      3     0     3   -0.408968
+C->B vs C->D             DissipationState_Repeated                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             DissipationState_Strong                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             DissipationState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             ExpansionOn                                  0.445911     0.653904     0.627126      3     3     0    0.575647
+C->B vs C->D             ExpansionState_Absent                       -0.445911    -0.653904    -0.627126      3     0     3   -0.575647
+C->B vs C->D             ExpansionState_Climactic                     0.580539     0.951977     0.563142      3     3     0    0.698553
+C->B vs C->D             ExpansionState_Failed                        0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             ExpansionState_Local                        -0.236670    -0.304946    -0.222291      3     0     3   -0.254636
+C->B vs C->D             ExpansionState_Strong                       -0.090662    -0.313740    -0.029324      3     0     3   -0.144575
+C->B vs C->D             ExpansionState_Unknown                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             FamilyCRunLengthSoFar                        0.115190     0.031451    -0.886876      3     2     1   -0.246745
+C->B vs C->D             FamilyCTotalRunLength                        0.156557     0.045141    -1.061446      3     2     1   -0.286583
+C->B vs C->D             ParticipationState_Climactic                 0.183305     0.389832    -0.184296      3     2     1    0.129614
+C->B vs C->D             ParticipationState_Falling                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             ParticipationState_Normal                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             ParticipationState_Peak                     -0.183305    -0.389832     0.184296      3     1     2   -0.129614
+C->B vs C->D             ParticipationState_Rising                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             ParticipationState_Silent                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->D             PositionInRun_First                          0.074290     0.213877     0.186189      3     3     0    0.158119
+C->B vs C->D             PositionInRun_Last                           0.075937     0.213877     0.102499      3     3     0    0.130771
+C->B vs C->D             PositionInRun_Middle                         0.080564    -0.044280    -0.691231      3     1     2   -0.218316
+C->B vs C->D             PositionInRun_Only                          -0.164265    -0.306746     0.136069      3     1     2   -0.111648
+C->B vs C->D             Prev10AcceptedCount                         -0.076195    -0.199268    -0.423901      3     0     3   -0.233121
+C->B vs C->D             Prev10ClimacticCount                        -0.221015    -0.257503    -0.251401      3     0     3   -0.243306
+C->B vs C->D             Prev10CompressedCount                        0.068124     0.205835     0.453388      3     3     0    0.242449
+C->B vs C->D             Prev10DissipatingCount                      -0.022398    -0.363634    -0.402968      3     0     3   -0.263000
+C->B vs C->D             Prev10Dominance                             -0.069996    -0.308905    -0.536111      3     0     3   -0.305004
+C->B vs C->D             Prev10ExpandingCount                        -0.002824    -0.219172    -0.334340      3     0     3   -0.185445
+C->B vs C->D             Prev10NetAcceptance                         -0.181091    -0.259513     0.210673      3     1     2   -0.076644
+C->B vs C->D             Prev10PeakCount                              0.153060     0.112852    -0.592997      3     2     1   -0.109028
+C->B vs C->D             Prev20AcceptedCount                         -0.202582    -0.126446    -0.209144      3     0     3   -0.179391
+C->B vs C->D             Prev20ClimacticCount                        -0.339450    -0.375540    -0.352715      3     0     3   -0.355902
+C->B vs C->D             Prev20CompressedCount                        0.196429     0.150014     0.251629      3     3     0    0.199357
+C->B vs C->D             Prev20DissipatingCount                      -0.056293    -0.069954    -0.171755      3     0     3   -0.099334
+C->B vs C->D             Prev20Dominance                             -0.188672    -0.144244    -0.260804      3     0     3   -0.197907
+C->B vs C->D             Prev20ExpandingCount                        -0.127412    -0.527041    -0.433559      3     0     3   -0.362670
+C->B vs C->D             Prev20NetAcceptance                         -0.132856    -0.118308     0.252798      3     1     2    0.000545
+C->B vs C->D             Prev20PeakCount                             -0.014991     0.023428    -0.516884      3     1     2   -0.169482
+C->B vs C->D             Prev5AcceptedCount                          -0.022015    -0.506965    -0.429081      3     0     3   -0.319354
+C->B vs C->D             Prev5ClimacticCount                         -0.135893    -0.069642    -0.297667      3     0     3   -0.167734
+C->B vs C->D             Prev5CompressedCount                         0.017683     0.506408     0.449753      3     3     0    0.324615
+C->B vs C->D             Prev5DissipatingCount                       -0.031226    -0.257503    -0.276064      3     0     3   -0.188264
+C->B vs C->D             Prev5Dominance                              -0.030917    -0.536761    -0.482133      3     0     3   -0.349937
+C->B vs C->D             Prev5ExpandingCount                          0.053162    -0.349326    -0.234798      3     1     2   -0.176987
+C->B vs C->D             Prev5NetAcceptance                          -0.196932    -0.393041    -0.057353      3     0     3   -0.215775
+C->B vs C->D             Prev5PeakCount                               0.227303     0.028952    -0.312857      3     2     1   -0.018868
+C->B vs C->D             VolumePolarity_Black                         0.012992    -0.405278     0.192590      3     2     1   -0.066565
+C->B vs C->D             VolumePolarity_Neutral                      -0.025617     0.000000     0.000000      3     0     1   -0.008539
+C->B vs C->D             VolumePolarity_Red                          -0.006671     0.405278    -0.192590      3     1     2    0.068673
+C->B vs C->N             AcceptanceState_Accepted                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             AcceptanceState_Contained                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             AcceptanceState_Rejected                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             AcceptanceState_Unknown                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             AcceptanceState_Unresolved                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             CompressionOn                                0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             CompressionState_Absent                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             CompressionState_Clustered                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             CompressionState_FailedResolution            0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             CompressionState_Lateral                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             CompressionState_Local                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             CompressionState_Resolving                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             CompressionState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             CurrentFlag_Accepted                         0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             CurrentFlag_Climactic                        0.007830    -0.134401     0.232941      3     2     1    0.035457
+C->B vs C->N             CurrentFlag_Compressed                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             CurrentFlag_Dissipating                     -0.058707    -0.103170    -0.019012      3     0     3   -0.060296
+C->B vs C->N             CurrentFlag_Expanding                        0.035274     0.157169     0.161969      3     3     0    0.118137
+C->B vs C->N             CurrentFlag_Peak                            -0.007830     0.134401    -0.232941      3     1     2   -0.035457
+C->B vs C->N             DissipationOn                               -0.058707    -0.103170    -0.019012      3     0     3   -0.060296
+C->B vs C->N             DissipationState_Absent                      0.058707     0.103170     0.019012      3     3     0    0.060296
+C->B vs C->N             DissipationState_Climactic                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             DissipationState_Local                      -0.058707    -0.103170    -0.019012      3     0     3   -0.060296
+C->B vs C->N             DissipationState_Repeated                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             DissipationState_Strong                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             DissipationState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             ExpansionOn                                  0.035274     0.157169     0.161969      3     3     0    0.118137
+C->B vs C->N             ExpansionState_Absent                       -0.035274    -0.157169    -0.161969      3     0     3   -0.118137
+C->B vs C->N             ExpansionState_Climactic                     0.193909     0.550257     0.418609      3     3     0    0.387592
+C->B vs C->N             ExpansionState_Failed                        0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             ExpansionState_Local                        -0.092354    -0.160523    -0.145559      3     0     3   -0.132812
+C->B vs C->N             ExpansionState_Strong                       -0.118888    -0.384639    -0.232360      3     0     3   -0.245296
+C->B vs C->N             ExpansionState_Unknown                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             FamilyCRunLengthSoFar                        0.124867    -0.261194    -0.039884      3     1     2   -0.058737
+C->B vs C->N             FamilyCTotalRunLength                        0.175236    -0.320951    -0.057180      3     1     2   -0.067632
+C->B vs C->N             ParticipationState_Climactic                 0.007830    -0.134401     0.232941      3     2     1    0.035457
+C->B vs C->N             ParticipationState_Falling                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             ParticipationState_Normal                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             ParticipationState_Peak                     -0.007830     0.134401    -0.232941      3     1     2   -0.035457
+C->B vs C->N             ParticipationState_Rising                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             ParticipationState_Silent                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->B vs C->N             PositionInRun_First                          0.103146     0.120562     0.186893      3     3     0    0.136867
+C->B vs C->N             PositionInRun_Last                           0.102532     0.084608     0.186893      3     3     0    0.124677
+C->B vs C->N             PositionInRun_Middle                         0.077068    -0.243661    -0.113312      3     1     2   -0.093302
+C->B vs C->N             PositionInRun_Only                          -0.200248     0.006008    -0.243685      3     1     2   -0.145975
+C->B vs C->N             Prev10AcceptedCount                         -0.049175    -0.278498    -0.113570      3     0     3   -0.147081
+C->B vs C->N             Prev10ClimacticCount                        -0.236562    -0.154034    -0.111882      3     0     3   -0.167493
+C->B vs C->N             Prev10CompressedCount                        0.037204     0.273629     0.120041      3     3     0    0.143624
+C->B vs C->N             Prev10DissipatingCount                      -0.045133    -0.286413    -0.087612      3     0     3   -0.139719
+C->B vs C->N             Prev10Dominance                             -0.056419    -0.343187    -0.134920      3     0     3   -0.178175
+C->B vs C->N             Prev10ExpandingCount                        -0.025999     0.042197    -0.194067      3     1     2   -0.059290
+C->B vs C->N             Prev10NetAcceptance                         -0.141822    -0.173683    -0.069879      3     0     3   -0.128462
+C->B vs C->N             Prev10PeakCount                              0.131018    -0.055336    -0.017232      3     1     2    0.019483
+C->B vs C->N             Prev20AcceptedCount                         -0.068249    -0.170803    -0.052394      3     0     3   -0.097148
+C->B vs C->N             Prev20ClimacticCount                        -0.339508    -0.107395    -0.200317      3     0     3   -0.215740
+C->B vs C->N             Prev20CompressedCount                        0.053906     0.105454     0.060993      3     3     0    0.073451
+C->B vs C->N             Prev20DissipatingCount                      -0.068421    -0.025522     0.010849      3     1     2   -0.027698
+C->B vs C->N             Prev20Dominance                             -0.081317    -0.129144    -0.041606      3     0     3   -0.084022
+C->B vs C->N             Prev20ExpandingCount                        -0.153192    -0.090339    -0.263618      3     0     3   -0.169050
+C->B vs C->N             Prev20NetAcceptance                         -0.002157    -0.232775     0.139161      3     1     2   -0.031924
+C->B vs C->N             Prev20PeakCount                             -0.056912     0.128064    -0.220563      3     1     2   -0.049804
+C->B vs C->N             Prev5AcceptedCount                          -0.005825    -0.200280    -0.028562      3     0     3   -0.078222
+C->B vs C->N             Prev5ClimacticCount                         -0.141155    -0.018988     0.065126      3     1     2   -0.031672
+C->B vs C->N             Prev5CompressedCount                         0.002538     0.235477     0.000924      3     3     0    0.079646
+C->B vs C->N             Prev5DissipatingCount                       -0.040249    -0.161872     0.007091      3     1     2   -0.065010
+C->B vs C->N             Prev5Dominance                              -0.021464    -0.255738    -0.009311      3     0     3   -0.095504
+C->B vs C->N             Prev5ExpandingCount                          0.042506     0.071972    -0.118193      3     2     1   -0.001238
+C->B vs C->N             Prev5NetAcceptance                          -0.142376    -0.148772    -0.058902      3     0     3   -0.116683
+C->B vs C->N             Prev5PeakCount                               0.178822    -0.017129     0.045888      3     2     1    0.069193
+C->B vs C->N             VolumePolarity_Black                        -0.052311    -0.336790    -0.033901      3     0     3   -0.141001
+C->B vs C->N             VolumePolarity_Neutral                       0.024882     0.000000     0.000000      3     1     0    0.008294
+C->B vs C->N             VolumePolarity_Red                           0.046724     0.336790     0.033901      3     3     0    0.139138
+C->B vs C->C_Persist     AcceptanceState_Accepted                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     AcceptanceState_Contained                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     AcceptanceState_Rejected                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     AcceptanceState_Unknown                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     AcceptanceState_Unresolved                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     CompressionOn                                0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     CompressionState_Absent                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     CompressionState_Clustered                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     CompressionState_FailedResolution            0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     CompressionState_Lateral                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     CompressionState_Local                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     CompressionState_Resolving                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     CompressionState_Unknown                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     CurrentFlag_Accepted                         0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     CurrentFlag_Climactic                       -0.064301    -0.483843     0.773111      0     0     0    0.000000
+C->B vs C->C_Persist     CurrentFlag_Compressed                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     CurrentFlag_Dissipating                     -0.804419     0.672593    -0.545058      0     0     0    0.000000
+C->B vs C->C_Persist     CurrentFlag_Expanding                       -0.023707    -0.298807     1.440429      0     0     0    0.000000
+C->B vs C->C_Persist     CurrentFlag_Peak                             0.064301     0.483843    -0.773111      0     0     0    0.000000
+C->B vs C->C_Persist     DissipationOn                               -0.804419     0.672593    -0.545058      0     0     0    0.000000
+C->B vs C->C_Persist     DissipationState_Absent                      0.804419    -0.672593     0.545058      0     0     0    0.000000
+C->B vs C->C_Persist     DissipationState_Climactic                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     DissipationState_Local                      -0.804419     0.672593    -0.545058      0     0     0    0.000000
+C->B vs C->C_Persist     DissipationState_Repeated                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     DissipationState_Strong                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     DissipationState_Unknown                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     ExpansionOn                                 -0.023707    -0.298807     1.440429      0     0     0    0.000000
+C->B vs C->C_Persist     ExpansionState_Absent                        0.023707     0.298807    -1.440429      0     0     0    0.000000
+C->B vs C->C_Persist     ExpansionState_Climactic                    -0.220184    -0.646997     1.217433      0     0     0    0.000000
+C->B vs C->C_Persist     ExpansionState_Failed                        0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     ExpansionState_Local                        -0.522853     0.264906    -1.521921      0     0     0    0.000000
+C->B vs C->C_Persist     ExpansionState_Strong                        0.588440     0.416025     0.557961      0     0     0    0.000000
+C->B vs C->C_Persist     ExpansionState_Unknown                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     FamilyCRunLengthSoFar                       -0.441950     0.553001    -0.211946      0     0     0    0.000000
+C->B vs C->C_Persist     FamilyCTotalRunLength                       -5.412186    -5.520833    -7.188717      0     0     0    0.000000
+C->B vs C->C_Persist     ParticipationState_Climactic                -0.064301    -0.483843     0.773111      0     0     0    0.000000
+C->B vs C->C_Persist     ParticipationState_Falling                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     ParticipationState_Normal                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     ParticipationState_Peak                      0.064301     0.483843    -0.773111      0     0     0    0.000000
+C->B vs C->C_Persist     ParticipationState_Rising                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     ParticipationState_Silent                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     PositionInRun_First                         -0.705500    -2.020726    -0.545058      0     0     0    0.000000
+C->B vs C->C_Persist     PositionInRun_Last                           0.519854     0.494872     0.591198      0     0     0    0.000000
+C->B vs C->C_Persist     PositionInRun_Middle                        -1.523808     0.264906    -1.839718      0     0     0    0.000000
+C->B vs C->C_Persist     PositionInRun_Only                           0.993089     1.085620     0.858778      0     0     0    0.000000
+C->B vs C->C_Persist     Prev10AcceptedCount                         -0.499248     0.186249     0.194727      0     0     0    0.000000
+C->B vs C->C_Persist     Prev10ClimacticCount                        -0.053393     0.568966     0.712286      0     0     0    0.000000
+C->B vs C->C_Persist     Prev10CompressedCount                        0.529704    -0.132825    -0.139703      0     0     0    0.000000
+C->B vs C->C_Persist     Prev10DissipatingCount                      -0.968452    -0.282515    -1.187833      0     0     0    0.000000
+C->B vs C->C_Persist     Prev10Dominance                             -0.878309     0.015145    -0.363435      0     0     0    0.000000
+C->B vs C->C_Persist     Prev10ExpandingCount                        -0.370228     0.956896    -0.211762      0     0     0    0.000000
+C->B vs C->C_Persist     Prev10NetAcceptance                          0.481179    -0.695957     1.703062      0     0     0    0.000000
+C->B vs C->C_Persist     Prev10PeakCount                             -0.976561     1.070733    -2.036508      0     0     0    0.000000
+C->B vs C->C_Persist     Prev20AcceptedCount                         -0.464445     0.121309    -0.543244      0     0     0    0.000000
+C->B vs C->C_Persist     Prev20ClimacticCount                         0.149139     0.052875     0.833962      0     0     0    0.000000
+C->B vs C->C_Persist     Prev20CompressedCount                        0.503065    -0.271458     0.589780      0     0     0    0.000000
+C->B vs C->C_Persist     Prev20DissipatingCount                      -0.410991    -0.475267    -0.347253      0     0     0    0.000000
+C->B vs C->C_Persist     Prev20Dominance                             -0.582917    -0.025997    -0.603073      0     0     0    0.000000
+C->B vs C->C_Persist     Prev20ExpandingCount                        -0.019714     0.369582    -0.155818      0     0     0    0.000000
+C->B vs C->C_Persist     Prev20NetAcceptance                          0.026546    -0.694769     0.603119      0     0     0    0.000000
+C->B vs C->C_Persist     Prev20PeakCount                             -0.433059     1.009370    -1.363738      0     0     0    0.000000
+C->B vs C->C_Persist     Prev5AcceptedCount                          -0.402765     0.037299     0.462251      0     0     0    0.000000
+C->B vs C->C_Persist     Prev5ClimacticCount                          0.014476     0.518851     0.636656      0     0     0    0.000000
+C->B vs C->C_Persist     Prev5CompressedCount                         0.429711     0.022679    -0.441565      0     0     0    0.000000
+C->B vs C->C_Persist     Prev5DissipatingCount                       -1.200847    -1.390625    -1.410366      0     0     0    0.000000
+C->B vs C->C_Persist     Prev5Dominance                              -0.902625    -0.569773    -0.274395      0     0     0    0.000000
+C->B vs C->C_Persist     Prev5ExpandingCount                         -0.523961     0.813945    -0.354755      0     0     0    0.000000
+C->B vs C->C_Persist     Prev5NetAcceptance                           0.454690    -0.608249     2.877927      0     0     0    0.000000
+C->B vs C->C_Persist     Prev5PeakCount                              -0.924329     0.865749    -3.320684      0     0     0    0.000000
+C->B vs C->C_Persist     VolumePolarity_Black                         0.425674    -0.249377     1.051694      0     0     0    0.000000
+C->B vs C->C_Persist     VolumePolarity_Neutral                       0.121776     0.000000     0.000000      0     0     0    0.000000
+C->B vs C->C_Persist     VolumePolarity_Red                          -0.454057     0.249377    -1.051694      0     0     0    0.000000
+C->D vs C->N             AcceptanceState_Accepted                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             AcceptanceState_Contained                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             AcceptanceState_Rejected                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             AcceptanceState_Unknown                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             AcceptanceState_Unresolved                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             CompressionOn                                0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             CompressionState_Absent                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             CompressionState_Clustered                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             CompressionState_FailedResolution            0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             CompressionState_Lateral                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             CompressionState_Local                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             CompressionState_Resolving                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             CompressionState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             CurrentFlag_Accepted                         0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             CurrentFlag_Climactic                       -0.174136    -0.494159     0.437899      3     1     2   -0.076799
+C->D vs C->N             CurrentFlag_Compressed                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             CurrentFlag_Dissipating                      0.234519     0.445844     0.358785      3     3     0    0.346383
+C->D vs C->N             CurrentFlag_Expanding                       -0.418668    -0.483863    -0.408721      3     0     3   -0.437084
+C->D vs C->N             CurrentFlag_Peak                             0.174136     0.494159    -0.437899      3     2     1    0.076799
+C->D vs C->N             DissipationOn                                0.234519     0.445844     0.358785      3     3     0    0.346383
+C->D vs C->N             DissipationState_Absent                     -0.234519    -0.445844    -0.358785      3     0     3   -0.346383
+C->D vs C->N             DissipationState_Climactic                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             DissipationState_Local                       0.234519     0.445844     0.358785      3     3     0    0.346383
+C->D vs C->N             DissipationState_Repeated                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             DissipationState_Strong                      0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             DissipationState_Unknown                     0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             ExpansionOn                                 -0.418668    -0.483863    -0.408721      3     0     3   -0.437084
+C->D vs C->N             ExpansionState_Absent                        0.418668     0.483863     0.408721      3     3     0    0.437084
+C->D vs C->N             ExpansionState_Climactic                    -0.379288    -0.340686    -0.144530      3     0     3   -0.288168
+C->D vs C->N             ExpansionState_Failed                        0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             ExpansionState_Local                         0.134011     0.122487     0.054968      3     3     0    0.103822
+C->D vs C->N             ExpansionState_Strong                       -0.030473    -0.101637    -0.199430      3     0     3   -0.110513
+C->D vs C->N             ExpansionState_Unknown                       0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             FamilyCRunLengthSoFar                        0.004246    -0.263279     0.823987      3     2     1    0.188318
+C->D vs C->N             FamilyCTotalRunLength                        0.013437    -0.323513     0.893041      3     2     1    0.194322
+C->D vs C->N             ParticipationState_Climactic                -0.174136    -0.494159     0.437899      3     1     2   -0.076799
+C->D vs C->N             ParticipationState_Falling                   0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             ParticipationState_Normal                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             ParticipationState_Peak                      0.174136     0.494159    -0.437899      3     2     1    0.076799
+C->D vs C->N             ParticipationState_Rising                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             ParticipationState_Silent                    0.000000     0.000000     0.000000      3     0     0    0.000000
+C->D vs C->N             PositionInRun_First                          0.026225    -0.102696    -0.011809      3     1     2   -0.029427
+C->D vs C->N             PositionInRun_Last                           0.023903    -0.134363     0.079766      3     2     1   -0.010232
+C->D vs C->N             PositionInRun_Middle                        -0.008443    -0.199735     0.537998      3     1     2    0.109940
+C->D vs C->N             PositionInRun_Only                          -0.034459     0.311031    -0.378925      3     1     2   -0.034117
+C->D vs C->N             Prev10AcceptedCount                          0.024493    -0.097551     0.287932      3     2     1    0.071624
+C->D vs C->N             Prev10ClimacticCount                        -0.029964     0.086309     0.093981      3     2     1    0.050109
+C->D vs C->N             Prev10CompressedCount                       -0.028709     0.087891    -0.312141      3     1     2   -0.084320
+C->D vs C->N             Prev10DissipatingCount                      -0.023315     0.052694     0.314588      3     2     1    0.114656
+C->D vs C->N             Prev10Dominance                              0.011572    -0.056386     0.390161      3     2     1    0.115116
+C->D vs C->N             Prev10ExpandingCount                        -0.023404     0.294738     0.108606      3     2     1    0.126647
+C->D vs C->N             Prev10NetAcceptance                          0.037476     0.053845    -0.292328      3     2     1   -0.067002
+C->D vs C->N             Prev10PeakCount                             -0.025024    -0.158666     0.570351      3     1     2    0.128887
+C->D vs C->N             Prev20AcceptedCount                          0.133521    -0.050137     0.162976      3     2     1    0.082120
+C->D vs C->N             Prev20ClimacticCount                        -0.029352     0.269276     0.115606      3     2     1    0.118510
+C->D vs C->N             Prev20CompressedCount                       -0.142005    -0.041915    -0.203364      3     0     3   -0.129095
+C->D vs C->N             Prev20DissipatingCount                      -0.013271     0.038276     0.195302      3     2     1    0.073436
+C->D vs C->N             Prev20Dominance                              0.106462     0.012016     0.233909      3     3     0    0.117462
+C->D vs C->N             Prev20ExpandingCount                        -0.027028     0.480654     0.137021      3     2     1    0.196882
+C->D vs C->N             Prev20NetAcceptance                          0.128436    -0.119626    -0.124777      3     1     2   -0.038656
+C->D vs C->N             Prev20PeakCount                             -0.042035     0.107721     0.286368      3     2     1    0.117352
+C->D vs C->N             Prev5AcceptedCount                           0.015632     0.281567     0.383394      3     3     0    0.226864
+C->D vs C->N             Prev5ClimacticCount                         -0.012092     0.046626     0.367266      3     2     1    0.133933
+C->D vs C->N             Prev5CompressedCount                        -0.014666    -0.246977    -0.439991      3     0     3   -0.233878
+C->D vs C->N             Prev5DissipatingCount                       -0.009151     0.086482     0.292175      3     2     1    0.123168
+C->D vs C->N             Prev5Dominance                               0.008834     0.263201     0.490433      3     3     0    0.254156
+C->D vs C->N             Prev5ExpandingCount                         -0.010289     0.446064     0.102621      3     2     1    0.179465
+C->D vs C->N             Prev5NetAcceptance                           0.053807     0.264784     0.000645      3     3     0    0.106412
+C->D vs C->N             Prev5PeakCount                              -0.055285    -0.045940     0.351150      3     1     2    0.083308
+C->D vs C->N             VolumePolarity_Black                        -0.065255     0.065213    -0.227300      3     1     2   -0.075781
+C->D vs C->N             VolumePolarity_Neutral                       0.053374     0.000000     0.000000      3     1     0    0.017791
+C->D vs C->N             VolumePolarity_Red                           0.053380    -0.065213     0.227300      3     2     1    0.071822
+C->D vs C->C_Persist     AcceptanceState_Accepted                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     AcceptanceState_Contained                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     AcceptanceState_Rejected                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     AcceptanceState_Unknown                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     AcceptanceState_Unresolved                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     CompressionOn                                0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     CompressionState_Absent                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     CompressionState_Clustered                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     CompressionState_FailedResolution            0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     CompressionState_Lateral                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     CompressionState_Local                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     CompressionState_Resolving                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     CompressionState_Unknown                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     CurrentFlag_Accepted                         0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     CurrentFlag_Climactic                       -0.264096    -1.104315     0.930949      0     0     0    0.000000
+C->D vs C->C_Persist     CurrentFlag_Compressed                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     CurrentFlag_Dissipating                     -0.452479     1.167748    -0.139347      0     0     0    0.000000
+C->D vs C->C_Persist     CurrentFlag_Expanding                       -0.380224    -0.666667     0.454859      0     0     0    0.000000
+C->D vs C->C_Persist     CurrentFlag_Peak                             0.264096     1.104315    -0.930949      0     0     0    0.000000
+C->D vs C->C_Persist     DissipationOn                               -0.452479     1.167748    -0.139347      0     0     0    0.000000
+C->D vs C->C_Persist     DissipationState_Absent                      0.452479    -1.167748     0.139347      0     0     0    0.000000
+C->D vs C->C_Persist     DissipationState_Climactic                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     DissipationState_Local                      -0.452479     1.167748    -0.139347      0     0     0    0.000000
+C->D vs C->C_Persist     DissipationState_Repeated                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     DissipationState_Strong                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     DissipationState_Unknown                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     ExpansionOn                                 -0.380224    -0.666667     0.454859      0     0     0    0.000000
+C->D vs C->C_Persist     ExpansionState_Absent                        0.380224     0.666667    -0.454859      0     0     0    0.000000
+C->D vs C->C_Persist     ExpansionState_Climactic                    -0.917184    -1.647509     0.688247      0     0     0    0.000000
+C->D vs C->C_Persist     ExpansionState_Failed                        0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     ExpansionState_Local                        -0.210797     0.426401    -0.953463      0     0     0    0.000000
+C->D vs C->C_Persist     ExpansionState_Strong                        0.653435     0.606977     0.577350      0     0     0    0.000000
+C->D vs C->C_Persist     ExpansionState_Unknown                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     FamilyCRunLengthSoFar                       -0.632315     0.426401     0.390383      0     0     0    0.000000
+C->D vs C->C_Persist     FamilyCTotalRunLength                       -6.146843    -4.071429    -1.890571      0     0     0    0.000000
+C->D vs C->C_Persist     ParticipationState_Climactic                -0.264096    -1.104315     0.930949      0     0     0    0.000000
+C->D vs C->C_Persist     ParticipationState_Falling                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     ParticipationState_Normal                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     ParticipationState_Peak                      0.264096     1.104315    -0.930949      0     0     0    0.000000
+C->D vs C->C_Persist     ParticipationState_Rising                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     ParticipationState_Silent                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     PositionInRun_First                         -0.820054    -2.768875    -0.792406      0     0     0    0.000000
+C->D vs C->C_Persist     PositionInRun_Last                           0.473881     0.361158     0.522233      0     0     0    0.000000
+C->D vs C->C_Persist     PositionInRun_Middle                        -1.800420     0.288675    -0.551677      0     0     0    0.000000
+C->D vs C->C_Persist     PositionInRun_Only                           1.176704     1.500000     0.745356      0     0     0    0.000000
+C->D vs C->C_Persist     Prev10AcceptedCount                         -0.441271     0.487950     0.702902      0     0     0    0.000000
+C->D vs C->C_Persist     Prev10ClimacticCount                         0.147371     0.686040     0.852989      0     0     0    0.000000
+C->D vs C->C_Persist     Prev10CompressedCount                        0.481379    -0.461644    -0.692244      0     0     0    0.000000
+C->D vs C->C_Persist     Prev10DissipatingCount                      -1.007754     0.068439    -1.254963      0     0     0    0.000000
+C->D vs C->C_Persist     Prev10Dominance                             -0.825370     0.419837     0.228828      0     0     0    0.000000
+C->D vs C->C_Persist     Prev10ExpandingCount                        -0.390031     1.179324     0.131733      0     0     0    0.000000
+C->D vs C->C_Persist     Prev10NetAcceptance                          0.668664    -0.499293     1.484928      0     0     0    0.000000
+C->D vs C->C_Persist     Prev10PeakCount                             -1.181804     0.842927    -0.947931      0     0     0    0.000000
+C->D vs C->C_Persist     Prev20AcceptedCount                         -0.273900     0.293584    -0.438931      0     0     0    0.000000
+C->D vs C->C_Persist     Prev20ClimacticCount                         0.397950     0.353492     1.020621      0     0     0    0.000000
+C->D vs C->C_Persist     Prev20CompressedCount                        0.320287    -0.533465     0.482614      0     0     0    0.000000
+C->D vs C->C_Persist     Prev20DissipatingCount                      -0.344653    -0.725512    -0.262991      0     0     0    0.000000
+C->D vs C->C_Persist     Prev20Dominance                             -0.394524     0.158528    -0.543702      0     0     0    0.000000
+C->D vs C->C_Persist     Prev20ExpandingCount                         0.105731     0.914341     0.319574      0     0     0    0.000000
+C->D vs C->C_Persist     Prev20NetAcceptance                          0.161425    -0.627216     0.411980      0     0     0    0.000000
+C->D vs C->C_Persist     Prev20PeakCount                             -0.424868     1.172338    -0.671156      0     0     0    0.000000
+C->D vs C->C_Persist     Prev5AcceptedCount                          -0.379379     0.622305     0.798584      0     0     0    0.000000
+C->D vs C->C_Persist     Prev5ClimacticCount                          0.137394     0.639010     0.731310      0     0     0    0.000000
+C->D vs C->C_Persist     Prev5CompressedCount                         0.410596    -0.563093    -0.798584      0     0     0    0.000000
+C->D vs C->C_Persist     Prev5DissipatingCount                       -1.250220    -1.240000    -1.234019      0     0     0    0.000000
+C->D vs C->C_Persist     Prev5Dominance                              -0.873941    -0.051083     0.218079      0     0     0    0.000000
+C->D vs C->C_Persist     Prev5ExpandingCount                         -0.622802     1.240000    -0.138823      0     0     0    0.000000
+C->D vs C->C_Persist     Prev5NetAcceptance                           0.676311    -0.216454     2.742343      0     0     0    0.000000
+C->D vs C->C_Persist     Prev5PeakCount                              -1.182065     0.675012    -2.305628      0     0     0    0.000000
+C->D vs C->C_Persist     VolumePolarity_Black                         0.413104     0.149906     0.866025      0     0     0    0.000000
+C->D vs C->C_Persist     VolumePolarity_Neutral                       0.135119     0.000000     0.000000      0     0     0    0.000000
+C->D vs C->C_Persist     VolumePolarity_Red                          -0.447526    -0.149906    -0.866025      0     0     0    0.000000
+C->N vs C->C_Persist     AcceptanceState_Accepted                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     AcceptanceState_Contained                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     AcceptanceState_Rejected                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     AcceptanceState_Unknown                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     AcceptanceState_Unresolved                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     CompressionOn                                0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     CompressionState_Absent                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     CompressionState_Clustered                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     CompressionState_FailedResolution            0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     CompressionState_Lateral                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     CompressionState_Local                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     CompressionState_Resolving                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     CompressionState_Unknown                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     CurrentFlag_Accepted                         0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     CurrentFlag_Climactic                       -0.072333    -0.331278     0.604152      0     0     0    0.000000
+C->N vs C->C_Persist     CurrentFlag_Compressed                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     CurrentFlag_Dissipating                     -0.724050     0.751237    -0.523090      0     0     0    0.000000
+C->N vs C->C_Persist     CurrentFlag_Expanding                       -0.057758    -0.391516     1.034466      0     0     0    0.000000
+C->N vs C->C_Persist     CurrentFlag_Peak                             0.072333     0.331278    -0.604152      0     0     0    0.000000
+C->N vs C->C_Persist     DissipationOn                               -0.724050     0.751237    -0.523090      0     0     0    0.000000
+C->N vs C->C_Persist     DissipationState_Absent                      0.724050    -0.751237     0.523090      0     0     0    0.000000
+C->N vs C->C_Persist     DissipationState_Climactic                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     DissipationState_Local                      -0.724050     0.751237    -0.523090      0     0     0    0.000000
+C->N vs C->C_Persist     DissipationState_Repeated                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     DissipationState_Strong                      0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     DissipationState_Unknown                     0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     ExpansionOn                                 -0.057758    -0.391516     1.034466      0     0     0    0.000000
+C->N vs C->C_Persist     ExpansionState_Absent                        0.057758     0.391516    -1.034466      0     0     0    0.000000
+C->N vs C->C_Persist     ExpansionState_Climactic                    -0.417748    -1.135718     0.802856      0     0     0    0.000000
+C->N vs C->C_Persist     ExpansionState_Failed                        0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     ExpansionState_Local                        -0.376465     0.358569    -1.127634      0     0     0    0.000000
+C->N vs C->C_Persist     ExpansionState_Strong                        0.671709     0.680414     0.724665      0     0     0    0.000000
+C->N vs C->C_Persist     ExpansionState_Unknown                       0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     FamilyCRunLengthSoFar                       -0.624031     0.538943    -0.124417      0     0     0    0.000000
+C->N vs C->C_Persist     FamilyCTotalRunLength                       -6.057202    -2.512716    -4.635869      0     0     0    0.000000
+C->N vs C->C_Persist     ParticipationState_Climactic                -0.072333    -0.331278     0.604152      0     0     0    0.000000
+C->N vs C->C_Persist     ParticipationState_Falling                   0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     ParticipationState_Normal                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     ParticipationState_Peak                      0.072333     0.331278    -0.604152      0     0     0    0.000000
+C->N vs C->C_Persist     ParticipationState_Rising                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     ParticipationState_Silent                    0.000000     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     PositionInRun_First                         -0.870460    -2.362908    -0.814210      0     0     0    0.000000
+C->N vs C->C_Persist     PositionInRun_Last                           0.456749     0.443813     0.473514      0     0     0    0.000000
+C->N vs C->C_Persist     PositionInRun_Middle                        -1.813078     0.412759    -1.438941      0     0     0    0.000000
+C->N vs C->C_Persist     PositionInRun_Only                           1.211537     1.079066     1.096181      0     0     0    0.000000
+C->N vs C->C_Persist     Prev10AcceptedCount                         -0.434461     0.457275     0.296930      0     0     0    0.000000
+C->N vs C->C_Persist     Prev10ClimacticCount                         0.181348     0.625982     0.645526      0     0     0    0.000000
+C->N vs C->C_Persist     Prev10CompressedCount                        0.476383    -0.404557    -0.252795      0     0     0    0.000000
+C->N vs C->C_Persist     Prev10DissipatingCount                      -0.916109     0.000000    -1.134314      0     0     0    0.000000
+C->N vs C->C_Persist     Prev10Dominance                             -0.791979     0.360159    -0.230654      0     0     0    0.000000
+C->N vs C->C_Persist     Prev10ExpandingCount                        -0.347556     1.081104    -0.001355      0     0     0    0.000000
+C->N vs C->C_Persist     Prev10NetAcceptance                          0.616713    -0.438222     1.866745      0     0     0    0.000000
+C->N vs C->C_Persist     Prev10PeakCount                             -1.150514     1.006724    -1.900010      0     0     0    0.000000
+C->N vs C->C_Persist     Prev20AcceptedCount                         -0.396717     0.295882    -0.520041      0     0     0    0.000000
+C->N vs C->C_Persist     Prev20ClimacticCount                         0.439328     0.153700     0.887914      0     0     0    0.000000
+C->N vs C->C_Persist     Prev20CompressedCount                        0.450353    -0.390895     0.576957      0     0     0    0.000000
+C->N vs C->C_Persist     Prev20DissipatingCount                      -0.326892    -0.450106    -0.391645      0     0     0    0.000000
+C->N vs C->C_Persist     Prev20Dominance                             -0.497336     0.104629    -0.615407      0     0     0    0.000000
+C->N vs C->C_Persist     Prev20ExpandingCount                         0.132841     0.499180     0.113612      0     0     0    0.000000
+C->N vs C->C_Persist     Prev20NetAcceptance                          0.028208    -0.446806     0.505495      0     0     0    0.000000
+C->N vs C->C_Persist     Prev20PeakCount                             -0.381826     0.902188    -1.063968      0     0     0    0.000000
+C->N vs C->C_Persist     Prev5AcceptedCount                          -0.384863     0.235777     0.462411      0     0     0    0.000000
+C->N vs C->C_Persist     Prev5ClimacticCount                          0.149631     0.507522     0.568044      0     0     0    0.000000
+C->N vs C->C_Persist     Prev5CompressedCount                         0.413724    -0.212802    -0.426467      0     0     0    0.000000
+C->N vs C->C_Persist     Prev5DissipatingCount                       -1.184299    -1.189987    -1.472193      0     0     0    0.000000
+C->N vs C->C_Persist     Prev5Dominance                              -0.858819    -0.304629    -0.276408      0     0     0    0.000000
+C->N vs C->C_Persist     Prev5ExpandingCount                         -0.572763     0.806864    -0.216720      0     0     0    0.000000
+C->N vs C->C_Persist     Prev5NetAcceptance                           0.599010    -0.494443     3.035110      0     0     0    0.000000
+C->N vs C->C_Persist     Prev5PeakCount                              -1.154225     0.855620    -3.198188      0     0     0    0.000000
+C->N vs C->C_Persist     VolumePolarity_Black                         0.476860     0.088395     1.088118      0     0     0    0.000000
+C->N vs C->C_Persist     VolumePolarity_Neutral                       0.109266     0.000000     0.000000      0     0     0    0.000000
+C->N vs C->C_Persist     VolumePolarity_Red                          -0.500287    -0.088395    -1.088118      0     0     0    0.000000
+
+Aggregate Outcome Table
+=======================
+Resolution            6E_N    6E_Cont    6E_Fail     6E_Mean      NQ_N    NQ_Cont    NQ_Fail     NQ_Mean      CL_N    CL_Cont    CL_Fail     CL_Mean ValidN  PosN  NegN  MeanCont  MeanFail
+C->A                    70    48.57%    50.00%    0.000055         6    50.00%    50.00%   29.250000         6    66.67%    33.33%    0.208333      1     0     1    48.57%    50.00%
+C->B                  1422    46.41%    48.52%   -0.000003        61    42.62%    55.74%   -4.942623       139    39.57%    60.43%   -0.000000      3     0     3    42.87%    54.90%
+C->D                   444    50.68%    44.59%    0.000013        26    65.38%    34.62%    5.538462        28    42.86%    57.14%   -0.074286      3     2     1    52.97%    45.45%
+C->N                  3440    44.56%    50.64%   -0.000043       158    40.51%    58.86%   -9.056962       273    46.15%    53.85%   -0.114322      3     0     3    43.74%    54.45%
+C->C_Persist             8    50.00%    50.00%    0.000088         2    50.00%    50.00%   32.500000         2    50.00%    50.00%    0.160000      0     0     0     0.00%     0.00%
+
+Aggregate Population-B Resolution Counts
+========================================
+Resolution           6E_Count     6E_Pct    6E_Med     NQ_Count     NQ_Pct    NQ_Med     CL_Count     CL_Pct    CL_Med ValidN    MeanPct  MeanMedian
+C->A                        0     0.00%    0.0000            0     0.00%    0.0000            0     0.00%    0.0000      0     0.00%      0.0000
+C->B                        0     0.00%    0.0000            0     0.00%    0.0000            0     0.00%    0.0000      0     0.00%      0.0000
+C->D                        0     0.00%    0.0000            0     0.00%    0.0000            0     0.00%    0.0000      0     0.00%      0.0000
+C->N                        0     0.00%    0.0000            0     0.00%    0.0000            0     0.00%    0.0000      0     0.00%      0.0000
+C->C_Persist                0     0.00%    0.0000            0     0.00%    0.0000            0     0.00%    0.0000      0     0.00%      0.0000
+
+Aggregate Rankings
+==================
+
+1. Most common Family C resolutions
+...................................
+  1. C->N             MeanPct=62.40% ValidN=3
+  2. C->B             MeanPct=27.20% ValidN=3
+  3. C->D             MeanPct=8.27% ValidN=3
+
+2. Fastest Family C resolutions
+...............................
+  1. C->B             MeanMedianBars=1.0000 ValidN=3
+  2. C->D             MeanMedianBars=1.0000 ValidN=3
+  3. C->N             MeanMedianBars=1.0000 ValidN=3
+
+3. Strongest predictors of C->B
+...............................
+  1. ExpansionState_Climactic                 MeanEffect=  0.407656 PosN=3 NegN=0 ValidN=3
+  2. Prev20ClimacticCount                     MeanEffect= -0.227398 PosN=0 NegN=3 ValidN=3
+  3. ExpansionState_Strong                    MeanEffect= -0.222797 PosN=0 NegN=3 ValidN=3
+  4. Prev20ExpandingCount                     MeanEffect= -0.196765 PosN=0 NegN=3 ValidN=3
+  5. Prev10Dominance                          MeanEffect= -0.187536 PosN=0 NegN=3 ValidN=3
+  6. Prev10ClimacticCount                     MeanEffect= -0.167440 PosN=0 NegN=3 ValidN=3
+  7. ExpansionState_Absent                    MeanEffect= -0.164001 PosN=0 NegN=3 ValidN=3
+  8. ExpansionOn                              MeanEffect=  0.164001 PosN=3 NegN=0 ValidN=3
+  9. CurrentFlag_Expanding                    MeanEffect=  0.164001 PosN=3 NegN=0 ValidN=3
+ 10. Prev10DissipatingCount                   MeanEffect= -0.158972 PosN=0 NegN=3 ValidN=3
+ 11. Prev10AcceptedCount                      MeanEffect= -0.147245 PosN=0 NegN=3 ValidN=3
+ 12. Prev10CompressedCount                    MeanEffect=  0.145492 PosN=3 NegN=0 ValidN=3
+ 13. ExpansionState_Local                     MeanEffect= -0.138394 PosN=0 NegN=3 ValidN=3
+ 14. PositionInRun_Only                       MeanEffect= -0.136979 PosN=0 NegN=3 ValidN=3
+ 15. Prev5Dominance                           MeanEffect= -0.127334 PosN=0 NegN=3 ValidN=3
+ 16. PositionInRun_Last                       MeanEffect=  0.125500 PosN=3 NegN=0 ValidN=3
+ 17. PositionInRun_First                      MeanEffect=  0.124687 PosN=3 NegN=0 ValidN=3
+ 18. Prev5NetAcceptance                       MeanEffect= -0.121340 PosN=0 NegN=3 ValidN=3
+ 19. VolumePolarity_Black                     MeanEffect= -0.119561 PosN=1 NegN=2 ValidN=3
+ 20. VolumePolarity_Red                       MeanEffect=  0.117991 PosN=2 NegN=1 ValidN=3
+
+4. Strongest predictors of C->D
+...............................
+  1. ExpansionState_Absent                    MeanEffect=  0.493519 PosN=3 NegN=0 ValidN=3
+  2. ExpansionOn                              MeanEffect= -0.493519 PosN=0 NegN=3 ValidN=3
+  3. CurrentFlag_Expanding                    MeanEffect= -0.493519 PosN=0 NegN=3 ValidN=3
+  4. ExpansionState_Climactic                 MeanEffect= -0.409298 PosN=0 NegN=3 ValidN=3
+  5. DissipationState_Absent                  MeanEffect= -0.369693 PosN=0 NegN=3 ValidN=3
+  6. DissipationState_Local                   MeanEffect=  0.369693 PosN=3 NegN=0 ValidN=3
+  7. DissipationOn                            MeanEffect=  0.369693 PosN=3 NegN=0 ValidN=3
+  8. CurrentFlag_Dissipating                  MeanEffect=  0.369693 PosN=3 NegN=0 ValidN=3
+  9. Prev5Dominance                           MeanEffect=  0.276053 PosN=3 NegN=0 ValidN=3
+ 10. Prev5CompressedCount                     MeanEffect= -0.258913 PosN=0 NegN=3 ValidN=3
+ 11. Prev5AcceptedCount                       MeanEffect=  0.252089 PosN=3 NegN=0 ValidN=3
+ 12. Prev20ExpandingCount                     MeanEffect=  0.246305 PosN=3 NegN=0 ValidN=3
+ 13. FamilyCRunLengthSoFar                    MeanEffect=  0.231173 PosN=1 NegN=2 ValidN=3
+ 14. FamilyCTotalRunLength                    MeanEffect=  0.214607 PosN=1 NegN=2 ValidN=3
+ 15. Prev20ClimacticCount                     MeanEffect=  0.187134 PosN=3 NegN=0 ValidN=3
+ 16. Prev5ExpandingCount                      MeanEffect=  0.175143 PosN=2 NegN=1 ValidN=3
+ 17. Prev10Dominance                          MeanEffect=  0.168196 PosN=3 NegN=0 ValidN=3
+ 18. ExpansionState_Local                     MeanEffect=  0.153084 PosN=3 NegN=0 ValidN=3
+ 19. Prev20CompressedCount                    MeanEffect= -0.151887 PosN=0 NegN=3 ValidN=3
+ 20. Prev10DissipatingCount                   MeanEffect=  0.149933 PosN=2 NegN=1 ValidN=3
+
+5. Strongest predictors of C->N
+...............................
+  1. ExpansionState_Climactic                 MeanEffect= -0.234884 PosN=0 NegN=3 ValidN=3
+  2. ExpansionState_Strong                    MeanEffect=  0.217894 PosN=3 NegN=0 ValidN=3
+  3. VolumePolarity_Black                     MeanEffect=  0.132986 PosN=3 NegN=0 ValidN=3
+  4. VolumePolarity_Red                       MeanEffect= -0.131026 PosN=0 NegN=3 ValidN=3
+  5. Prev20ClimacticCount                     MeanEffect=  0.128898 PosN=2 NegN=1 ValidN=3
+  6. PositionInRun_Only                       MeanEffect=  0.126870 PosN=2 NegN=1 ValidN=3
+  7. PositionInRun_First                      MeanEffect= -0.123565 PosN=0 NegN=3 ValidN=3
+  8. Prev10ClimacticCount                     MeanEffect=  0.118338 PosN=3 NegN=0 ValidN=3
+  9. Prev10Dominance                          MeanEffect=  0.114325 PosN=3 NegN=0 ValidN=3
+ 10. Prev10NetAcceptance                      MeanEffect=  0.113641 PosN=3 NegN=0 ValidN=3
+ 11. Prev10AcceptedCount                      MeanEffect=  0.104754 PosN=3 NegN=0 ValidN=3
+ 12. Prev10CompressedCount                    MeanEffect= -0.100018 PosN=0 NegN=3 ValidN=3
+ 13. PositionInRun_Last                       MeanEffect= -0.091631 PosN=0 NegN=3 ValidN=3
+ 14. Prev5PeakCount                           MeanEffect= -0.080962 PosN=1 NegN=2 ValidN=3
+ 15. ExpansionState_Local                     MeanEffect=  0.080577 PosN=3 NegN=0 ValidN=3
+ 16. Prev20ExpandingCount                     MeanEffect=  0.074628 PosN=2 NegN=1 ValidN=3
+ 17. Prev10DissipatingCount                   MeanEffect=  0.070078 PosN=3 NegN=0 ValidN=3
+ 18. Prev5NetAcceptance                       MeanEffect=  0.069621 PosN=3 NegN=0 ValidN=3
+ 19. PositionInRun_Middle                     MeanEffect=  0.064095 PosN=1 NegN=2 ValidN=3
+ 20. Prev20AcceptedCount                      MeanEffect=  0.063127 PosN=3 NegN=0 ValidN=3
+
+6. Strongest predictors of C->C_Persist
+.......................................
+No items met the two-instrument minimum.
+
+7. Strongest C->B vs C->D differentiators
+.........................................
+  1. ExpansionState_Climactic                 MeanEffect=  0.698553 PosN=3 NegN=0 ValidN=3
+  2. ExpansionState_Absent                    MeanEffect= -0.575647 PosN=0 NegN=3 ValidN=3
+  3. ExpansionOn                              MeanEffect=  0.575647 PosN=3 NegN=0 ValidN=3
+  4. CurrentFlag_Expanding                    MeanEffect=  0.575647 PosN=3 NegN=0 ValidN=3
+  5. DissipationState_Absent                  MeanEffect=  0.408968 PosN=3 NegN=0 ValidN=3
+  6. DissipationState_Local                   MeanEffect= -0.408968 PosN=0 NegN=3 ValidN=3
+  7. DissipationOn                            MeanEffect= -0.408968 PosN=0 NegN=3 ValidN=3
+  8. CurrentFlag_Dissipating                  MeanEffect= -0.408968 PosN=0 NegN=3 ValidN=3
+  9. Prev20ExpandingCount                     MeanEffect= -0.362670 PosN=0 NegN=3 ValidN=3
+ 10. Prev20ClimacticCount                     MeanEffect= -0.355902 PosN=0 NegN=3 ValidN=3
+ 11. Prev5Dominance                           MeanEffect= -0.349937 PosN=0 NegN=3 ValidN=3
+ 12. Prev5CompressedCount                     MeanEffect=  0.324615 PosN=3 NegN=0 ValidN=3
+ 13. Prev5AcceptedCount                       MeanEffect= -0.319354 PosN=0 NegN=3 ValidN=3
+ 14. Prev10Dominance                          MeanEffect= -0.305004 PosN=0 NegN=3 ValidN=3
+ 15. FamilyCTotalRunLength                    MeanEffect= -0.286583 PosN=2 NegN=1 ValidN=3
+ 16. Prev10DissipatingCount                   MeanEffect= -0.263000 PosN=0 NegN=3 ValidN=3
+ 17. ExpansionState_Local                     MeanEffect= -0.254636 PosN=0 NegN=3 ValidN=3
+ 18. FamilyCRunLengthSoFar                    MeanEffect= -0.246745 PosN=2 NegN=1 ValidN=3
+ 19. Prev10ClimacticCount                     MeanEffect= -0.243306 PosN=0 NegN=3 ValidN=3
+ 20. Prev10CompressedCount                    MeanEffect=  0.242449 PosN=3 NegN=0 ValidN=3
+
+8. Strongest C->B vs C->N differentiators
+.........................................
+  1. ExpansionState_Climactic                 MeanEffect=  0.387592 PosN=3 NegN=0 ValidN=3
+  2. ExpansionState_Strong                    MeanEffect= -0.245296 PosN=0 NegN=3 ValidN=3
+  3. Prev20ClimacticCount                     MeanEffect= -0.215740 PosN=0 NegN=3 ValidN=3
+  4. Prev10Dominance                          MeanEffect= -0.178175 PosN=0 NegN=3 ValidN=3
+  5. Prev20ExpandingCount                     MeanEffect= -0.169050 PosN=0 NegN=3 ValidN=3
+  6. Prev10ClimacticCount                     MeanEffect= -0.167493 PosN=0 NegN=3 ValidN=3
+  7. Prev10AcceptedCount                      MeanEffect= -0.147081 PosN=0 NegN=3 ValidN=3
+  8. PositionInRun_Only                       MeanEffect= -0.145975 PosN=1 NegN=2 ValidN=3
+  9. Prev10CompressedCount                    MeanEffect=  0.143624 PosN=3 NegN=0 ValidN=3
+ 10. VolumePolarity_Black                     MeanEffect= -0.141001 PosN=0 NegN=3 ValidN=3
+ 11. Prev10DissipatingCount                   MeanEffect= -0.139719 PosN=0 NegN=3 ValidN=3
+ 12. VolumePolarity_Red                       MeanEffect=  0.139138 PosN=3 NegN=0 ValidN=3
+ 13. PositionInRun_First                      MeanEffect=  0.136867 PosN=3 NegN=0 ValidN=3
+ 14. ExpansionState_Local                     MeanEffect= -0.132812 PosN=0 NegN=3 ValidN=3
+ 15. Prev10NetAcceptance                      MeanEffect= -0.128462 PosN=0 NegN=3 ValidN=3
+ 16. PositionInRun_Last                       MeanEffect=  0.124677 PosN=3 NegN=0 ValidN=3
+ 17. ExpansionState_Absent                    MeanEffect= -0.118137 PosN=0 NegN=3 ValidN=3
+ 18. ExpansionOn                              MeanEffect=  0.118137 PosN=3 NegN=0 ValidN=3
+ 19. CurrentFlag_Expanding                    MeanEffect=  0.118137 PosN=3 NegN=0 ValidN=3
+ 20. Prev5NetAcceptance                       MeanEffect= -0.116683 PosN=0 NegN=3 ValidN=3
+
+9. Best resolution outcomes
+...........................
+  1. C->D             MeanCont=52.97% MeanFail=45.45% ValidN=3
+  2. C->N             MeanCont=43.74% MeanFail=54.45% ValidN=3
+  3. C->B             MeanCont=42.87% MeanFail=54.90% ValidN=3
+
+10. Worst resolution outcomes
+.............................
+  1. C->B             MeanCont=42.87% MeanFail=54.90% ValidN=3
+  2. C->N             MeanCont=43.74% MeanFail=54.45% ValidN=3
+  3. C->D             MeanCont=52.97% MeanFail=45.45% ValidN=3
+
+11. Population-B differences
+............................
+C->N             DeltaMeanPct=   -62.40% PopulationBValidN=0
+C->B             DeltaMeanPct=   -27.20% PopulationBValidN=0
+C->D             DeltaMeanPct=    -8.27% PopulationBValidN=0
+C->A             DeltaMeanPct=    -1.28% PopulationBValidN=0
+C->C_Persist     DeltaMeanPct=     0.00% PopulationBValidN=0
+
+Cross-Instrument Mechanical Research Notes
+==========================================
+- Most common replicated resolution: C->N, MeanPct=62.40%.
+- Fastest replicated resolution: C->A.
+- Highest replicated continuation outcome: C->D, MeanContinuation=52.97%.
+- Lowest replicated continuation outcome: C->C_Persist, MeanContinuation=0.00%.
+- Resolution, branch predictors, outcomes, and Population B differences are descriptive only.

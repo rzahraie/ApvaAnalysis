@@ -1,0 +1,89 @@
+APVA Dissipation/Compression Gradient Study v0.1 - 6E
+========================================================
+Instrument: 6E
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_OPEN_apva_bar_evidence_v01.csv
+Total rows: 35192
+Qualifying population count: 468
+Non-flat outcome count: 462
+Success count: 245
+Failure count: 217
+Flat count: 6
+Population and features reuse APVA_LateralAnatomy_19.py.
+Study 19 does not retain anatomy for flat cases, so flats are counted diagnostically but omitted from feature bins.
+
+Variable Bin Tables
+===================
+
+Prev10_DissipationCount
+-----------------------
+Bin       Count   MeanDRFwd5   MedianDRFwd5  ContRate5  FailRate5  FlatRate5
+0-2          20     0.000060       0.000000    50.00%    50.00%     0.00%
+3-4         132     0.000058       0.000100    55.30%    44.70%     0.00%
+5-6         230     0.000003      -0.000050    48.70%    51.30%     0.00%
+7-8          79     0.000172       0.000150    62.03%    37.97%     0.00%
+9-10          1     0.001800       0.001800   100.00%     0.00%     0.00%
+
+Prev10_CompressionCount
+-----------------------
+Bin       Count   MeanDRFwd5   MedianDRFwd5  ContRate5  FailRate5  FlatRate5
+0-2          16     0.000016      -0.000075    43.75%    56.25%     0.00%
+3-4         124     0.000062       0.000050    54.84%    45.16%     0.00%
+5-6         221     0.000103       0.000100    53.85%    46.15%     0.00%
+7-8          93    -0.000069      -0.000050    49.46%    50.54%     0.00%
+9-10          8     0.000069       0.000100    62.50%    37.50%     0.00%
+
+Prev10_AcceptedCount
+--------------------
+Bin       Count   MeanDRFwd5   MedianDRFwd5  ContRate5  FailRate5  FlatRate5
+0-2          33    -0.000123      -0.000200    42.42%    57.58%     0.00%
+3-4         161    -0.000017       0.000050    50.93%    49.07%     0.00%
+5-6         204     0.000150       0.000100    58.33%    41.67%     0.00%
+7-8          60     0.000038      -0.000100    48.33%    51.67%     0.00%
+9-10          4    -0.000275      -0.000175    25.00%    75.00%     0.00%
+
+Prev10_ClimacticCount
+---------------------
+Bin       Count   MeanDRFwd5   MedianDRFwd5  ContRate5  FailRate5  FlatRate5
+0-2         374     0.000055       0.000050    51.87%    48.13%     0.00%
+3-4          65     0.000039       0.000100    53.85%    46.15%     0.00%
+5-6          18     0.000008       0.000150    66.67%    33.33%     0.00%
+7-8           4     0.000488       0.000350   100.00%     0.00%     0.00%
+9-10          1    -0.000250      -0.000250     0.00%   100.00%     0.00%
+
+Prev10_ExpansionCount
+---------------------
+Bin       Count   MeanDRFwd5   MedianDRFwd5  ContRate5  FailRate5  FlatRate5
+0-2           3    -0.000083      -0.000250    33.33%    66.67%     0.00%
+3-4         119     0.000029      -0.000050    47.90%    52.10%     0.00%
+5-6         245     0.000044       0.000050    51.84%    48.16%     0.00%
+7-8          84     0.000106       0.000100    61.90%    38.10%     0.00%
+9-10         11     0.000182       0.000350    72.73%    27.27%     0.00%
+
+Gradient Summary
+================
+Variable                       LowestBin  HighestBin   LowCont5  HighCont5 DeltaCont5   Spearman
+Prev10_DissipationCount        0-2        9-10          50.00%   100.00%    50.00%     0.0037
+Prev10_CompressionCount        0-2        9-10          43.75%    62.50%    18.75%    -0.0277
+Prev10_AcceptedCount           0-2        9-10          42.42%    25.00%   -17.42%     0.0217
+Prev10_ClimacticCount          0-2        9-10          51.87%     0.00%   -51.87%     0.0479
+Prev10_ExpansionCount          0-2        9-10          33.33%    72.73%    39.39%     0.0823
+
+Dissipation x Compression Interaction
+====================================
+Cell format: Count / ContinuationRate5; rates are N/A when Count < 10.
+Dissipation               0-2              3-4              5-6              7-8             9-10
+0-2              0 / N/A          5 / N/A          9 / N/A          6 / N/A          0 / N/A     
+3-4              1 / N/A         27 / 48.15%      66 / 60.61%      32 / 53.12%       6 / N/A     
+5-6             12 / 41.67%      56 / 48.21%     118 / 50.00%      42 / 45.24%       2 / N/A     
+7-8              2 / N/A         36 / 69.44%      28 / 57.14%      13 / 53.85%       0 / N/A     
+9-10             1 / N/A          0 / N/A          0 / N/A          0 / N/A          0 / N/A     
+
+Research Notes
+==============
+- Prev10_DissipationCount: DeltaContinuationRate5=50.00%, SpearmanRho=0.0037.
+- Prev10_CompressionCount: DeltaContinuationRate5=18.75%, SpearmanRho=-0.0277.
+- Prev10_AcceptedCount: DeltaContinuationRate5=-17.42%, SpearmanRho=0.0217.
+- Prev10_ClimacticCount: DeltaContinuationRate5=-51.87%, SpearmanRho=0.0479.
+- Prev10_ExpansionCount: DeltaContinuationRate5=39.39%, SpearmanRho=0.0823.
+- Apparent threshold review: inspect occupied fixed-bin tables; no threshold is fit or optimized.
+- Flat cases excluded from feature bins because reused study 19 population does not retain their feature records: 6.

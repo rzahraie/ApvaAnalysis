@@ -1,0 +1,126 @@
+APVA Acceptance Anatomy Study v0.1 - Cross-Instrument Aggregate
+===============================================================
+Input instruments: 6E, NQ, CL
+Valid metric threshold: count >= 30.
+
+Aggregate Metric Table
+======================
+Finding                                                                Count_6E    Metric_6E   Count_NQ    Metric_NQ   Count_CL    Metric_CL Valid  Pos  Neg   MeanMetric
+AllBars:AcceptanceState:Accepted:ContinuationRate5                        15385     0.460773        948     0.464135       1239     0.479419     3    3    0     0.468109
+AllBars:AcceptanceState:Contained:ContinuationRate5                        9464     0.471048        737     0.506106        946     0.503171     3    3    0     0.493442
+AllBars:AcceptanceState:Other/Absent:ContinuationRate5                     6221     0.455875        231     0.549784        436     0.497706     3    3    0     0.501122
+AllBars:Context:CompressionOn:EffectSize                                  15385   -13.097514        948    -8.461465       1239   -10.344622     3    0    3   -10.634534
+AllBars:Context:ExpansionOn:EffectSize                                    15385     0.762391        948     0.739597       1239     0.824283     3    3    0     0.775424
+AllBars:Context:DissipationOn:EffectSize                                  15385     0.048071        948    -0.144959       1239    -0.127629     3    1    2    -0.074839
+AllBars:Latent:AcceptanceScore:Spearman                                   29494     0.005944       1909     0.022603       2602    -0.000071     3    2    1     0.009492
+AllBars:Latent:AcceptanceScore:HighMinusLowContinuation                   29494     0.010815       1909     0.023511       2602     0.011455     3    3    0     0.015260
+AllBars:Latent:AcceptanceScore2:Spearman                                  29494     0.008323       1909     0.021390       2602     0.007780     3    3    0     0.012498
+AllBars:Latent:AcceptanceScore2:HighMinusLowContinuation                  29494     0.012167       1909    -0.009404       2602     0.016037     3    2    1     0.006266
+AllBars:Latent:AcceptanceScore3:Spearman                                  29494     0.008081       1909     0.022296       2602     0.003313     3    3    0     0.011230
+AllBars:Latent:AcceptanceScore3:HighMinusLowContinuation                  29494     0.013519       1909     0.004702       2602    -0.002291     3    2    1     0.005310
+AllBars:Latent:DominanceGradient:Spearman                                 29494     0.008081       1909     0.022296       2602     0.003313     3    3    0     0.011230
+AllBars:Latent:DominanceGradient:HighMinusLowContinuation                 29494     0.013519       1909     0.004702       2602    -0.002291     3    2    1     0.005310
+PopulationB:AcceptanceState:Accepted:ContinuationRate5                        0     0.000000          0     0.000000          0     0.000000     0    0    0     0.000000
+PopulationB:AcceptanceState:Contained:ContinuationRate5                     469     0.522388         71     0.535211         57     0.561404     3    3    0     0.539668
+PopulationB:AcceptanceState:Other/Absent:ContinuationRate5                    0     0.000000          0     0.000000          0     0.000000     0    0    0     0.000000
+PopulationB:Context:CompressionOn:EffectSize                                  0     0.000000          0     0.000000          0     0.000000     0    0    0     0.000000
+PopulationB:Context:ExpansionOn:EffectSize                                    0     0.000000          0     0.000000          0     0.000000     0    0    0     0.000000
+PopulationB:Context:DissipationOn:EffectSize                                  0     0.000000          0     0.000000          0     0.000000     0    0    0     0.000000
+PopulationB:Latent:AcceptanceScore:Spearman                                 463     0.021365         71     0.084285         57     0.213886     3    3    0     0.106512
+PopulationB:Latent:AcceptanceScore:HighMinusLowContinuation                 463     0.006410         71     0.130435         57     0.263158     3    3    0     0.133334
+PopulationB:Latent:AcceptanceScore2:Spearman                                463     0.001698         71     0.225868         57     0.208774     3    3    0     0.145447
+PopulationB:Latent:AcceptanceScore2:HighMinusLowContinuation                463    -0.012821         71     0.304348         57     0.210526     3    2    1     0.167351
+PopulationB:Latent:AcceptanceScore3:Spearman                                463     0.011029         71     0.199217         57     0.221084     3    3    0     0.143777
+PopulationB:Latent:AcceptanceScore3:HighMinusLowContinuation                463     0.000000         71     0.217391         57     0.263158     3    2    0     0.160183
+PopulationB:Latent:DominanceGradient:Spearman                               463     0.011029         71     0.199217         57     0.221084     3    3    0     0.143777
+PopulationB:Latent:DominanceGradient:HighMinusLowContinuation               463     0.000000         71     0.217391         57     0.263158     3    2    0     0.160183
+LateralBreakout:Final3AcceptedMean:Spearman                                1992     0.058558         76     0.043635        142     0.039416     3    3    0     0.047203
+LateralBreakout:Final5AcceptedMean:Spearman                                1992     0.030831         76     0.097222        142     0.090714     3    3    0     0.072922
+
+Most Replicated Positive Findings
+=================================
+Rank Finding                                                              Valid  Pos  Neg   MeanMetric
+   1 AllBars:Context:ExpansionOn:EffectSize                                   3    3    0     0.775424
+   2 PopulationB:AcceptanceState:Contained:ContinuationRate5                  3    3    0     0.539668
+   3 AllBars:AcceptanceState:Other/Absent:ContinuationRate5                   3    3    0     0.501122
+   4 AllBars:AcceptanceState:Contained:ContinuationRate5                      3    3    0     0.493442
+   5 AllBars:AcceptanceState:Accepted:ContinuationRate5                       3    3    0     0.468109
+   6 PopulationB:Latent:AcceptanceScore2:Spearman                             3    3    0     0.145447
+   7 PopulationB:Latent:AcceptanceScore3:Spearman                             3    3    0     0.143777
+   8 PopulationB:Latent:DominanceGradient:Spearman                            3    3    0     0.143777
+   9 PopulationB:Latent:AcceptanceScore:HighMinusLowContinuation              3    3    0     0.133334
+  10 PopulationB:Latent:AcceptanceScore:Spearman                              3    3    0     0.106512
+  11 LateralBreakout:Final5AcceptedMean:Spearman                              3    3    0     0.072922
+  12 LateralBreakout:Final3AcceptedMean:Spearman                              3    3    0     0.047203
+  13 AllBars:Latent:AcceptanceScore:HighMinusLowContinuation                  3    3    0     0.015260
+  14 AllBars:Latent:AcceptanceScore2:Spearman                                 3    3    0     0.012498
+  15 AllBars:Latent:AcceptanceScore3:Spearman                                 3    3    0     0.011230
+  16 AllBars:Latent:DominanceGradient:Spearman                                3    3    0     0.011230
+  17 PopulationB:Latent:AcceptanceScore2:HighMinusLowContinuation             3    2    1     0.167351
+  18 PopulationB:Latent:AcceptanceScore3:HighMinusLowContinuation             3    2    0     0.160183
+  19 PopulationB:Latent:DominanceGradient:HighMinusLowContinuation            3    2    0     0.160183
+  20 AllBars:Latent:AcceptanceScore:Spearman                                  3    2    1     0.009492
+  21 AllBars:Latent:AcceptanceScore2:HighMinusLowContinuation                 3    2    1     0.006266
+  22 AllBars:Latent:AcceptanceScore3:HighMinusLowContinuation                 3    2    1     0.005310
+  23 AllBars:Latent:DominanceGradient:HighMinusLowContinuation                3    2    1     0.005310
+  24 AllBars:Context:DissipationOn:EffectSize                                 3    1    2    -0.074839
+  25 AllBars:Context:CompressionOn:EffectSize                                 3    0    3   -10.634534
+
+Most Replicated Negative Findings
+=================================
+Rank Finding                                                              Valid  Pos  Neg   MeanMetric
+   1 AllBars:Context:CompressionOn:EffectSize                                 3    0    3   -10.634534
+   2 AllBars:Context:DissipationOn:EffectSize                                 3    1    2    -0.074839
+   3 AllBars:Latent:AcceptanceScore3:HighMinusLowContinuation                 3    2    1     0.005310
+   4 AllBars:Latent:DominanceGradient:HighMinusLowContinuation                3    2    1     0.005310
+   5 AllBars:Latent:AcceptanceScore2:HighMinusLowContinuation                 3    2    1     0.006266
+   6 AllBars:Latent:AcceptanceScore:Spearman                                  3    2    1     0.009492
+   7 PopulationB:Latent:AcceptanceScore2:HighMinusLowContinuation             3    2    1     0.167351
+   8 AllBars:Latent:AcceptanceScore3:Spearman                                 3    3    0     0.011230
+   9 AllBars:Latent:DominanceGradient:Spearman                                3    3    0     0.011230
+  10 AllBars:Latent:AcceptanceScore2:Spearman                                 3    3    0     0.012498
+  11 AllBars:Latent:AcceptanceScore:HighMinusLowContinuation                  3    3    0     0.015260
+  12 LateralBreakout:Final3AcceptedMean:Spearman                              3    3    0     0.047203
+  13 LateralBreakout:Final5AcceptedMean:Spearman                              3    3    0     0.072922
+  14 PopulationB:Latent:AcceptanceScore:Spearman                              3    3    0     0.106512
+  15 PopulationB:Latent:AcceptanceScore:HighMinusLowContinuation              3    3    0     0.133334
+  16 PopulationB:Latent:AcceptanceScore3:Spearman                             3    3    0     0.143777
+  17 PopulationB:Latent:DominanceGradient:Spearman                            3    3    0     0.143777
+  18 PopulationB:Latent:AcceptanceScore2:Spearman                             3    3    0     0.145447
+  19 PopulationB:Latent:AcceptanceScore3:HighMinusLowContinuation             3    2    0     0.160183
+  20 PopulationB:Latent:DominanceGradient:HighMinusLowContinuation            3    2    0     0.160183
+  21 AllBars:AcceptanceState:Accepted:ContinuationRate5                       3    3    0     0.468109
+  22 AllBars:AcceptanceState:Contained:ContinuationRate5                      3    3    0     0.493442
+  23 AllBars:AcceptanceState:Other/Absent:ContinuationRate5                   3    3    0     0.501122
+  24 PopulationB:AcceptanceState:Contained:ContinuationRate5                  3    3    0     0.539668
+  25 AllBars:Context:ExpansionOn:EffectSize                                   3    3    0     0.775424
+
+Most Predictive Acceptance Metrics
+==================================
+Rank Finding                                                              Valid  Pos  Neg   MeanMetric
+   1 PopulationB:Latent:AcceptanceScore2:HighMinusLowContinuation             3    2    1     0.167351
+   2 PopulationB:Latent:AcceptanceScore3:HighMinusLowContinuation             3    2    0     0.160183
+   3 PopulationB:Latent:DominanceGradient:HighMinusLowContinuation            3    2    0     0.160183
+   4 PopulationB:Latent:AcceptanceScore2:Spearman                             3    3    0     0.145447
+   5 PopulationB:Latent:AcceptanceScore3:Spearman                             3    3    0     0.143777
+   6 PopulationB:Latent:DominanceGradient:Spearman                            3    3    0     0.143777
+   7 PopulationB:Latent:AcceptanceScore:HighMinusLowContinuation              3    3    0     0.133334
+   8 PopulationB:Latent:AcceptanceScore:Spearman                              3    3    0     0.106512
+   9 LateralBreakout:Final5AcceptedMean:Spearman                              3    3    0     0.072922
+  10 LateralBreakout:Final3AcceptedMean:Spearman                              3    3    0     0.047203
+  11 AllBars:Latent:AcceptanceScore:HighMinusLowContinuation                  3    3    0     0.015260
+  12 AllBars:Latent:AcceptanceScore2:Spearman                                 3    3    0     0.012498
+  13 AllBars:Latent:AcceptanceScore3:Spearman                                 3    3    0     0.011230
+  14 AllBars:Latent:DominanceGradient:Spearman                                3    3    0     0.011230
+  15 AllBars:Latent:AcceptanceScore:Spearman                                  3    2    1     0.009492
+  16 AllBars:Latent:AcceptanceScore2:HighMinusLowContinuation                 3    2    1     0.006266
+  17 AllBars:Latent:AcceptanceScore3:HighMinusLowContinuation                 3    2    1     0.005310
+  18 AllBars:Latent:DominanceGradient:HighMinusLowContinuation                3    2    1     0.005310
+
+Cross-Instrument Research Notes
+===============================
+- AllBars:Context:DissipationOn:EffectSize: MeanMetric=-0.074839.
+- AllBars:Context:CompressionOn:EffectSize: MeanMetric=-10.634534.
+- AllBars:Latent:AcceptanceScore:Spearman: MeanMetric=0.009492.
+- AllBars:Latent:DominanceGradient:Spearman: MeanMetric=0.011230.
+- Findings excluded from replicated rankings because fewer than two instruments were valid: 5.

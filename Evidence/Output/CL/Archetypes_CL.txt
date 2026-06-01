@@ -1,0 +1,567 @@
+APVA Narrative Archetype Study v0.1 - CL
+=========================================
+Instrument: CL
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv
+Total rows: 2684
+Family counts: {'A': 24, 'B': 194, 'C': 448, 'D': 521, 'N': 1497}
+Path counts: {3: 2682, 4: 2681, 5: 2680}
+Primary archetype counts: {'Recovery': 165, 'Exhaustion': 162, 'Reassertion': 494, 'Decay': 256, 'Compression Resolution': 256, 'Destructive Persistence': 207, 'Constructive Emergence': 57, 'Neutral Drift': 950, 'Unclassified': 135}
+Archetype membership is multi-match; primary labels use the requested precedence.
+
+Section 1 - Path Generation Summary
+===================================
+Path                               Len    Count   Frequency       OER      Cont      Fail        Mean
+N->N->N                              3      470     17.52%    1.0100   50.77%   48.57%    0.057033
+N->D->N                              3      264      9.84%    1.6301   53.15%   45.67%   -0.007913
+N->N->D                              3      248      9.25%    1.5313   51.21%   48.39%    0.064073
+D->N->N                              3      196      7.31%    1.2102   47.12%   52.36%   -0.067906
+C->N->N                              3      113      4.21%    0.8114   50.00%   47.22%    0.112130
+N->N->C                              3      101      3.77%    0.7253   45.54%   54.46%    0.131287
+D->N->D                              3       98      3.65%    1.7387   50.00%   48.98%   -0.011633
+N->C->N                              3       88      3.28%    0.6319   48.81%   51.19%   -0.153333
+N->D->D                              3       63      2.35%    1.1177   50.79%   49.21%    0.225873
+B->N->N                              3       61      2.27%    1.0115   48.28%   51.72%   -0.447931
+N->C->C                              3       55      2.05%    1.3197   36.36%   63.64%   -0.358364
+D->D->N                              3       54      2.01%    0.9580   41.18%   56.86%   -0.122941
+N->D->C                              3       53      1.98%    1.0935   49.06%   50.94%   -0.113585
+C->C->N                              3       50      1.86%    1.1997   42.00%   58.00%   -0.427600
+C->B->N                              3       43      1.60%    2.3826   57.14%   42.86%    0.548810
+C->C->C                              3       40      1.49%    3.2071   35.00%   65.00%   -0.384250
+D->C->N                              3       40      1.49%    0.8253   45.00%   50.00%   -0.041750
+C->N->D                              3       38      1.42%    0.7840   50.00%   50.00%   -0.609737
+D->N->C                              3       38      1.42%    0.7840   34.21%   65.79%   -0.093421
+C->C->B                              3       36      1.34%    6.6655   50.00%   50.00%    0.115833
+N->C->B                              3       36      1.34%    1.9948   58.82%   38.24%    0.897647
+C->N->C                              3       35      1.30%    0.8398   54.29%   45.71%   -0.116571
+N->N->B                              3       24      0.89%    0.3980   65.22%   34.78%    0.235652
+N->B->N                              3       23      0.86%    0.3814   50.00%   50.00%    0.070000
+N->N->N->N                           4      255      9.51%    0.9828   52.03%   47.56%    0.030894
+N->N->D->N                           4      157      5.86%    1.7387   50.66%   48.68%   -0.058224
+N->N->N->D                           4      153      5.71%    1.6944   56.21%   43.14%    0.084314
+N->D->N->N                           4      149      5.56%    1.6501   43.75%   55.56%   -0.125903
+D->N->N->N                           4      116      4.33%    1.2847   49.12%   50.00%    0.029912
+N->D->N->D                           4       84      3.13%    2.6730   53.57%   45.24%   -0.013214
+D->N->D->N                           4       63      2.35%    2.0047   47.54%   49.18%   -0.029836
+C->N->N->N                           4       61      2.28%    0.7856   50.00%   48.33%   -0.084333
+N->N->C->N                           4       57      2.13%    0.7341   51.85%   48.15%   -0.148519
+D->N->N->D                           4       52      1.94%    1.6547   50.00%   50.00%    0.105000
+N->C->N->N                           4       52      1.94%    0.6697   44.00%   52.00%   -0.001000
+N->D->D->N                           4       48      1.79%    1.5274   40.00%   57.78%   -0.258222
+N->N->N->C                           4       46      1.72%    0.5924   47.83%   52.17%    0.316957
+N->N->D->D                           4       40      1.49%    1.2728   47.50%   52.50%    0.059000
+N->N->D->C                           4       36      1.34%    1.3322   47.22%   52.78%   -0.101389
+B->N->N->N                           4       33      1.23%    0.9815   51.61%   48.39%    0.647742
+D->D->N->N                           4       32      1.19%    1.0183   56.25%   43.75%    0.074063
+C->N->N->D                           4       28      1.04%    1.0362   39.29%   60.71%   -0.061786
+C->B->N->N                           4       27      1.01%    2.6833   52.00%   48.00%   -0.935600
+C->C->N->N                           4       27      1.01%    1.1620   48.15%   48.15%   -0.015556
+N->D->C->N                           4       27      1.01%    0.9992   51.85%   48.15%   -0.000741
+C->N->D->N                           4       26      0.97%    0.9622   79.17%   20.83%    0.164167
+N->D->N->C                           4       25      0.93%    0.9252   28.00%   72.00%   -0.013600
+D->C->N->N                           4       24      0.90%    0.8881   59.09%   40.91%    0.100909
+C->N->N->C                           4       23      0.86%    0.9898   56.52%   43.48%    0.281739
+D->N->N->C                           4       21      0.78%    0.7771   42.86%   57.14%    0.021905
+N->C->B->N                           4       21      0.78%    2.0870   66.67%   33.33%    1.139048
+N->C->C->B                           4       20      0.75%    6.6418   40.00%   60.00%    0.073000
+N->N->N->N->N                        5      139      5.19%    0.9609   46.32%   53.68%   -0.045147
+N->N->N->D->N                        5       93      3.47%    1.8473   43.82%   55.06%   -0.097978
+N->D->N->N->N                        5       90      3.36%    1.7877   53.41%   45.45%    0.066023
+N->N->N->N->D                        5       83      3.10%    1.6487   56.63%   42.17%    0.054337
+N->N->D->N->N                        5       82      3.06%    1.6288   41.03%   57.69%   -0.095256
+D->N->N->N->N                        5       71      2.65%    1.4103   58.82%   39.71%    0.036765
+N->N->D->N->D                        5       57      2.13%    3.2532   49.12%   50.88%   -0.092456
+N->D->N->D->N                        5       55      2.05%    3.1391   46.30%   50.00%   -0.045926
+D->N->D->N->N                        5       39      1.46%    2.2259   48.72%   51.28%   -0.058462
+D->N->N->N->D                        5       37      1.38%    2.1117   51.35%   48.65%    0.069730
+N->D->N->N->D                        5       37      1.38%    2.1117   48.65%   51.35%    0.116216
+N->N->C->N->N                        5       34      1.27%    0.7854   34.38%   59.38%   -0.227813
+D->N->N->D->N                        5       31      1.16%    1.7693   54.84%   45.16%   -0.086452
+N->N->D->D->N                        5       30      1.12%    1.7122   40.74%   55.56%   -0.051481
+N->D->D->N->N                        5       29      1.08%    1.6551   55.17%   44.83%    0.035517
+N->N->N->D->D                        5       27      1.01%    1.5410   48.15%   51.85%   -0.030370
+C->N->N->N->N                        5       26      0.97%    0.6006   58.33%   41.67%    0.300417
+N->C->N->N->N                        5       26      0.97%    0.6006   48.00%   52.00%   -0.338800
+N->N->N->D->C                        5       26      0.97%    1.7257   42.31%   57.69%   -0.105769
+C->N->N->N->D                        5       24      0.90%    1.5930   70.83%   29.17%    0.278333
+N->N->N->C->N                        5       24      0.90%    0.5544   47.83%   52.17%   -0.210435
+N->N->N->N->C                        5       23      0.86%    0.5313   56.52%   43.48%   -0.140870
+C->N->N->D->N                        5       22      0.82%    1.4602   61.90%   38.10%   -0.004762
+D->N->D->N->D                        5       20      0.75%    3.2798   55.00%   40.00%    0.027500
+N->N->D->C->N                        5       20      0.75%    1.3275   50.00%   50.00%   -0.000500
+
+Section 2 - Archetype Membership
+================================
+Archetype                    MemberPaths  Occurrences   MeanOER      Cont      Fail        Mean
+Recovery                              83          391    19.468   50.27%   48.14%    0.246090
+Exhaustion                            92          474     9.398   41.44%   58.35%   -0.250063
+Reassertion                          115         1450     1.536   51.45%   47.93%    0.019538
+Decay                                128          879     3.155   49.47%   49.82%    0.003158
+Compression Resolution               297         1200     7.174   49.83%   50.17%    0.113024
+Destructive Persistence              288         1555     9.470   45.90%   53.51%   -0.111229
+Constructive Emergence                94          258     3.374   52.94%   47.06%   -0.111294
+Neutral Drift                        154         4425     1.130   49.88%   49.42%    0.019942
+Unclassified                         156          746     7.200   47.20%   52.12%   -0.056101
+
+Section 3 - Archetype Statistics
+================================
+
+Recovery Member Paths
+.....................
+Top by Count:
+  N->C->B                            Count=    36 OER=  1.9948 Cont= 58.82% Fail= 38.24%
+  C->C->B                            Count=    36 OER=  6.6655 Cont= 50.00% Fail= 50.00%
+  N->C->C->B                         Count=    20 OER=  6.6418 Cont= 40.00% Fail= 60.00%
+Top by OER:
+  C->C->B                            Count=    36 OER=  6.6655 Cont= 50.00% Fail= 50.00%
+  N->C->C->B                         Count=    20 OER=  6.6418 Cont= 40.00% Fail= 60.00%
+  N->C->B                            Count=    36 OER=  1.9948 Cont= 58.82% Fail= 38.24%
+Top by Continuation:
+  N->C->B                            Count=    36 OER=  1.9948 Cont= 58.82% Fail= 38.24%
+  C->C->B                            Count=    36 OER=  6.6655 Cont= 50.00% Fail= 50.00%
+  N->C->C->B                         Count=    20 OER=  6.6418 Cont= 40.00% Fail= 60.00%
+Top by Failure:
+  N->C->C->B                         Count=    20 OER=  6.6418 Cont= 40.00% Fail= 60.00%
+  C->C->B                            Count=    36 OER=  6.6655 Cont= 50.00% Fail= 50.00%
+  N->C->B                            Count=    36 OER=  1.9948 Cont= 58.82% Fail= 38.24%
+
+Exhaustion Member Paths
+.......................
+Top by Count:
+  N->C->C                            Count=    55 OER=  1.3197 Cont= 36.36% Fail= 63.64%
+  C->C->C                            Count=    40 OER=  3.2071 Cont= 35.00% Fail= 65.00%
+Top by OER:
+  C->C->C                            Count=    40 OER=  3.2071 Cont= 35.00% Fail= 65.00%
+  N->C->C                            Count=    55 OER=  1.3197 Cont= 36.36% Fail= 63.64%
+Top by Continuation:
+  N->C->C                            Count=    55 OER=  1.3197 Cont= 36.36% Fail= 63.64%
+  C->C->C                            Count=    40 OER=  3.2071 Cont= 35.00% Fail= 65.00%
+Top by Failure:
+  C->C->C                            Count=    40 OER=  3.2071 Cont= 35.00% Fail= 65.00%
+  N->C->C                            Count=    55 OER=  1.3197 Cont= 36.36% Fail= 63.64%
+
+Reassertion Member Paths
+........................
+Top by Count:
+  N->N->D                            Count=   248 OER=  1.5313 Cont= 51.21% Fail= 48.39%
+  N->N->N->D                         Count=   153 OER=  1.6944 Cont= 56.21% Fail= 43.14%
+  D->N->D                            Count=    98 OER=  1.7387 Cont= 50.00% Fail= 48.98%
+  N->D->N->D                         Count=    84 OER=  2.6730 Cont= 53.57% Fail= 45.24%
+  N->N->N->N->D                      Count=    83 OER=  1.6487 Cont= 56.63% Fail= 42.17%
+Top by OER:
+  D->N->D->N->D                      Count=    20 OER=  3.2798 Cont= 55.00% Fail= 40.00%
+  N->N->D->N->D                      Count=    57 OER=  3.2532 Cont= 49.12% Fail= 50.88%
+  N->D->N->D                         Count=    84 OER=  2.6730 Cont= 53.57% Fail= 45.24%
+  D->N->N->N->D                      Count=    37 OER=  2.1117 Cont= 51.35% Fail= 48.65%
+  N->D->N->N->D                      Count=    37 OER=  2.1117 Cont= 48.65% Fail= 51.35%
+Top by Continuation:
+  C->N->N->N->D                      Count=    24 OER=  1.5930 Cont= 70.83% Fail= 29.17%
+  N->N->N->N->D                      Count=    83 OER=  1.6487 Cont= 56.63% Fail= 42.17%
+  N->N->N->D                         Count=   153 OER=  1.6944 Cont= 56.21% Fail= 43.14%
+  D->N->D->N->D                      Count=    20 OER=  3.2798 Cont= 55.00% Fail= 40.00%
+  N->D->N->D                         Count=    84 OER=  2.6730 Cont= 53.57% Fail= 45.24%
+Top by Failure:
+  C->N->N->D                         Count=    28 OER=  1.0362 Cont= 39.29% Fail= 60.71%
+  N->N->D->D                         Count=    40 OER=  1.2728 Cont= 47.50% Fail= 52.50%
+  N->N->N->D->D                      Count=    27 OER=  1.5410 Cont= 48.15% Fail= 51.85%
+  N->D->N->N->D                      Count=    37 OER=  2.1117 Cont= 48.65% Fail= 51.35%
+  N->N->D->N->D                      Count=    57 OER=  3.2532 Cont= 49.12% Fail= 50.88%
+
+Decay Member Paths
+..................
+Top by Count:
+  N->C->N                            Count=    88 OER=  0.6319 Cont= 48.81% Fail= 51.19%
+  N->N->C->N                         Count=    57 OER=  0.7341 Cont= 51.85% Fail= 48.15%
+  C->C->N                            Count=    50 OER=  1.1997 Cont= 42.00% Fail= 58.00%
+  C->B->N                            Count=    43 OER=  2.3826 Cont= 57.14% Fail= 42.86%
+  D->C->N                            Count=    40 OER=  0.8253 Cont= 45.00% Fail= 50.00%
+Top by OER:
+  C->B->N                            Count=    43 OER=  2.3826 Cont= 57.14% Fail= 42.86%
+  N->C->B->N                         Count=    21 OER=  2.0870 Cont= 66.67% Fail= 33.33%
+  N->N->D->C->N                      Count=    20 OER=  1.3275 Cont= 50.00% Fail= 50.00%
+  C->C->N                            Count=    50 OER=  1.1997 Cont= 42.00% Fail= 58.00%
+  N->D->C->N                         Count=    27 OER=  0.9992 Cont= 51.85% Fail= 48.15%
+Top by Continuation:
+  N->C->B->N                         Count=    21 OER=  2.0870 Cont= 66.67% Fail= 33.33%
+  C->B->N                            Count=    43 OER=  2.3826 Cont= 57.14% Fail= 42.86%
+  N->D->C->N                         Count=    27 OER=  0.9992 Cont= 51.85% Fail= 48.15%
+  N->N->C->N                         Count=    57 OER=  0.7341 Cont= 51.85% Fail= 48.15%
+  N->B->N                            Count=    23 OER=  0.3814 Cont= 50.00% Fail= 50.00%
+Top by Failure:
+  C->C->N                            Count=    50 OER=  1.1997 Cont= 42.00% Fail= 58.00%
+  N->N->N->C->N                      Count=    24 OER=  0.5544 Cont= 47.83% Fail= 52.17%
+  N->C->N                            Count=    88 OER=  0.6319 Cont= 48.81% Fail= 51.19%
+  D->C->N                            Count=    40 OER=  0.8253 Cont= 45.00% Fail= 50.00%
+  N->B->N                            Count=    23 OER=  0.3814 Cont= 50.00% Fail= 50.00%
+
+Compression Resolution Member Paths
+...................................
+Top by Count:
+  B->N->N                            Count=    61 OER=  1.0115 Cont= 48.28% Fail= 51.72%
+  C->B->N                            Count=    43 OER=  2.3826 Cont= 57.14% Fail= 42.86%
+  B->N->N->N                         Count=    33 OER=  0.9815 Cont= 51.61% Fail= 48.39%
+  C->B->N->N                         Count=    27 OER=  2.6833 Cont= 52.00% Fail= 48.00%
+  N->B->N                            Count=    23 OER=  0.3814 Cont= 50.00% Fail= 50.00%
+Top by OER:
+  C->B->N->N                         Count=    27 OER=  2.6833 Cont= 52.00% Fail= 48.00%
+  C->B->N                            Count=    43 OER=  2.3826 Cont= 57.14% Fail= 42.86%
+  N->C->B->N                         Count=    21 OER=  2.0870 Cont= 66.67% Fail= 33.33%
+  B->N->N                            Count=    61 OER=  1.0115 Cont= 48.28% Fail= 51.72%
+  B->N->N->N                         Count=    33 OER=  0.9815 Cont= 51.61% Fail= 48.39%
+Top by Continuation:
+  N->C->B->N                         Count=    21 OER=  2.0870 Cont= 66.67% Fail= 33.33%
+  C->B->N                            Count=    43 OER=  2.3826 Cont= 57.14% Fail= 42.86%
+  C->B->N->N                         Count=    27 OER=  2.6833 Cont= 52.00% Fail= 48.00%
+  B->N->N->N                         Count=    33 OER=  0.9815 Cont= 51.61% Fail= 48.39%
+  N->B->N                            Count=    23 OER=  0.3814 Cont= 50.00% Fail= 50.00%
+Top by Failure:
+  B->N->N                            Count=    61 OER=  1.0115 Cont= 48.28% Fail= 51.72%
+  N->B->N                            Count=    23 OER=  0.3814 Cont= 50.00% Fail= 50.00%
+  B->N->N->N                         Count=    33 OER=  0.9815 Cont= 51.61% Fail= 48.39%
+  C->B->N->N                         Count=    27 OER=  2.6833 Cont= 52.00% Fail= 48.00%
+  C->B->N                            Count=    43 OER=  2.3826 Cont= 57.14% Fail= 42.86%
+
+Destructive Persistence Member Paths
+....................................
+Top by Count:
+  N->D->D                            Count=    63 OER=  1.1177 Cont= 50.79% Fail= 49.21%
+  N->C->C                            Count=    55 OER=  1.3197 Cont= 36.36% Fail= 63.64%
+  D->D->N                            Count=    54 OER=  0.9580 Cont= 41.18% Fail= 56.86%
+  C->C->N                            Count=    50 OER=  1.1997 Cont= 42.00% Fail= 58.00%
+  N->D->D->N                         Count=    48 OER=  1.5274 Cont= 40.00% Fail= 57.78%
+Top by OER:
+  C->C->B                            Count=    36 OER=  6.6655 Cont= 50.00% Fail= 50.00%
+  N->C->C->B                         Count=    20 OER=  6.6418 Cont= 40.00% Fail= 60.00%
+  C->C->C                            Count=    40 OER=  3.2071 Cont= 35.00% Fail= 65.00%
+  N->N->D->D->N                      Count=    30 OER=  1.7122 Cont= 40.74% Fail= 55.56%
+  N->D->D->N->N                      Count=    29 OER=  1.6551 Cont= 55.17% Fail= 44.83%
+Top by Continuation:
+  D->D->N->N                         Count=    32 OER=  1.0183 Cont= 56.25% Fail= 43.75%
+  N->D->D->N->N                      Count=    29 OER=  1.6551 Cont= 55.17% Fail= 44.83%
+  N->D->D                            Count=    63 OER=  1.1177 Cont= 50.79% Fail= 49.21%
+  C->C->B                            Count=    36 OER=  6.6655 Cont= 50.00% Fail= 50.00%
+  C->C->N->N                         Count=    27 OER=  1.1620 Cont= 48.15% Fail= 48.15%
+Top by Failure:
+  C->C->C                            Count=    40 OER=  3.2071 Cont= 35.00% Fail= 65.00%
+  N->C->C                            Count=    55 OER=  1.3197 Cont= 36.36% Fail= 63.64%
+  N->C->C->B                         Count=    20 OER=  6.6418 Cont= 40.00% Fail= 60.00%
+  C->C->N                            Count=    50 OER=  1.1997 Cont= 42.00% Fail= 58.00%
+  N->D->D->N                         Count=    48 OER=  1.5274 Cont= 40.00% Fail= 57.78%
+
+Constructive Emergence Member Paths
+...................................
+Top by Count:
+  N->N->B                            Count=    24 OER=  0.3980 Cont= 65.22% Fail= 34.78%
+Top by OER:
+  N->N->B                            Count=    24 OER=  0.3980 Cont= 65.22% Fail= 34.78%
+Top by Continuation:
+  N->N->B                            Count=    24 OER=  0.3980 Cont= 65.22% Fail= 34.78%
+Top by Failure:
+  N->N->B                            Count=    24 OER=  0.3980 Cont= 65.22% Fail= 34.78%
+
+Neutral Drift Member Paths
+..........................
+Top by Count:
+  N->N->N                            Count=   470 OER=  1.0100 Cont= 50.77% Fail= 48.57%
+  N->D->N                            Count=   264 OER=  1.6301 Cont= 53.15% Fail= 45.67%
+  N->N->N->N                         Count=   255 OER=  0.9828 Cont= 52.03% Fail= 47.56%
+  N->N->D                            Count=   248 OER=  1.5313 Cont= 51.21% Fail= 48.39%
+  D->N->N                            Count=   196 OER=  1.2102 Cont= 47.12% Fail= 52.36%
+Top by OER:
+  N->N->D->N->D                      Count=    57 OER=  3.2532 Cont= 49.12% Fail= 50.88%
+  N->D->N->D->N                      Count=    55 OER=  3.1391 Cont= 46.30% Fail= 50.00%
+  D->N->D->N->N                      Count=    39 OER=  2.2259 Cont= 48.72% Fail= 51.28%
+  D->N->N->N->D                      Count=    37 OER=  2.1117 Cont= 51.35% Fail= 48.65%
+  N->D->N->N->D                      Count=    37 OER=  2.1117 Cont= 48.65% Fail= 51.35%
+Top by Continuation:
+  C->N->N->N->D                      Count=    24 OER=  1.5930 Cont= 70.83% Fail= 29.17%
+  N->N->B                            Count=    24 OER=  0.3980 Cont= 65.22% Fail= 34.78%
+  C->N->N->D->N                      Count=    22 OER=  1.4602 Cont= 61.90% Fail= 38.10%
+  D->N->N->N->N                      Count=    71 OER=  1.4103 Cont= 58.82% Fail= 39.71%
+  C->N->N->N->N                      Count=    26 OER=  0.6006 Cont= 58.33% Fail= 41.67%
+Top by Failure:
+  N->N->C->N->N                      Count=    34 OER=  0.7854 Cont= 34.38% Fail= 59.38%
+  N->N->D->N->N                      Count=    82 OER=  1.6288 Cont= 41.03% Fail= 57.69%
+  N->N->N->D->C                      Count=    26 OER=  1.7257 Cont= 42.31% Fail= 57.69%
+  N->D->N->N                         Count=   149 OER=  1.6501 Cont= 43.75% Fail= 55.56%
+  N->N->D->D->N                      Count=    30 OER=  1.7122 Cont= 40.74% Fail= 55.56%
+
+Unclassified Member Paths
+.........................
+Top by Count:
+  D->N->D->N                         Count=    63 OER=  2.0047 Cont= 47.54% Fail= 49.18%
+  N->D->C                            Count=    53 OER=  1.0935 Cont= 49.06% Fail= 50.94%
+  D->N->C                            Count=    38 OER=  0.7840 Cont= 34.21% Fail= 65.79%
+  N->N->D->C                         Count=    36 OER=  1.3322 Cont= 47.22% Fail= 52.78%
+  C->N->C                            Count=    35 OER=  0.8398 Cont= 54.29% Fail= 45.71%
+Top by OER:
+  D->N->D->N                         Count=    63 OER=  2.0047 Cont= 47.54% Fail= 49.18%
+  N->N->D->C                         Count=    36 OER=  1.3322 Cont= 47.22% Fail= 52.78%
+  N->D->C                            Count=    53 OER=  1.0935 Cont= 49.06% Fail= 50.94%
+  C->N->N->C                         Count=    23 OER=  0.9898 Cont= 56.52% Fail= 43.48%
+  C->N->D->N                         Count=    26 OER=  0.9622 Cont= 79.17% Fail= 20.83%
+Top by Continuation:
+  C->N->D->N                         Count=    26 OER=  0.9622 Cont= 79.17% Fail= 20.83%
+  D->C->N->N                         Count=    24 OER=  0.8881 Cont= 59.09% Fail= 40.91%
+  C->N->N->C                         Count=    23 OER=  0.9898 Cont= 56.52% Fail= 43.48%
+  C->N->C                            Count=    35 OER=  0.8398 Cont= 54.29% Fail= 45.71%
+  N->D->C                            Count=    53 OER=  1.0935 Cont= 49.06% Fail= 50.94%
+Top by Failure:
+  N->D->N->C                         Count=    25 OER=  0.9252 Cont= 28.00% Fail= 72.00%
+  D->N->C                            Count=    38 OER=  0.7840 Cont= 34.21% Fail= 65.79%
+  D->N->N->C                         Count=    21 OER=  0.7771 Cont= 42.86% Fail= 57.14%
+  N->N->D->C                         Count=    36 OER=  1.3322 Cont= 47.22% Fail= 52.78%
+  N->D->C                            Count=    53 OER=  1.0935 Cont= 49.06% Fail= 50.94%
+
+Section 4 - Archetype Transitions
+=================================
+Transition                                                    Count  Probability      Lift      Cont      Fail
+Compression Resolution -> Compression Resolution                 95      37.11%    3.8892   51.65%   48.35%
+Compression Resolution -> Constructive Emergence                  2       0.78%    0.3677   50.00%   50.00%
+Compression Resolution -> Decay                                  40      15.62%    1.6376   55.26%   44.74%
+Compression Resolution -> Destructive Persistence                 2       0.78%    0.1013   50.00%   50.00%
+Compression Resolution -> Exhaustion                             27      10.55%    1.7467   33.33%   66.67%
+Compression Resolution -> Neutral Drift                          23       8.98%    0.2537   60.87%   39.13%
+Compression Resolution -> Reassertion                            47      18.36%    0.9971   46.81%   53.19%
+Compression Resolution -> Recovery                               18       7.03%    1.1433   68.75%   31.25%
+Compression Resolution -> Unclassified                            2       0.78%    0.1553  100.00%    0.00%
+Constructive Emergence -> Compression Resolution                 12      21.05%    2.2064   58.33%   41.67%
+Constructive Emergence -> Decay                                  24      42.11%    4.4128   47.83%   52.17%
+Constructive Emergence -> Neutral Drift                          11      19.30%    0.5450   36.36%   63.64%
+Constructive Emergence -> Reassertion                             2       3.51%    0.1906   50.00%   50.00%
+Constructive Emergence -> Unclassified                            8      14.04%    2.7893   62.50%   37.50%
+Decay -> Compression Resolution                                  90      35.29%    3.6845   40.23%   59.77%
+Decay -> Constructive Emergence                                   6       2.35%    1.1032   66.67%   33.33%
+Decay -> Destructive Persistence                                 25       9.80%    1.2658   50.00%   50.00%
+Decay -> Neutral Drift                                           71      27.84%    0.7833   49.28%   47.83%
+Decay -> Reassertion                                             41      16.08%    0.8698   53.66%   46.34%
+Decay -> Unclassified                                            22       8.63%    1.7079   61.90%   38.10%
+Destructive Persistence -> Compression Resolution                 3       1.45%    0.1519   66.67%   33.33%
+Destructive Persistence -> Decay                                 22      10.63%    1.1139   47.62%   52.38%
+Destructive Persistence -> Destructive Persistence               83      40.10%    5.1971   49.40%   49.40%
+Destructive Persistence -> Exhaustion                             7       3.38%    0.5601   57.14%   42.86%
+Destructive Persistence -> Neutral Drift                         34      16.43%    0.4639   53.12%   43.75%
+Destructive Persistence -> Reassertion                           48      23.19%    1.2594   52.08%   47.92%
+Destructive Persistence -> Recovery                               6       2.90%    0.4713   50.00%   50.00%
+Destructive Persistence -> Unclassified                           4       1.93%    0.3840   75.00%   25.00%
+Exhaustion -> Decay                                              35      21.60%    2.2643   40.00%   60.00%
+Exhaustion -> Destructive Persistence                            15       9.26%    1.2001   66.67%   33.33%
+Exhaustion -> Exhaustion                                         73      45.06%    7.4630   42.47%   56.16%
+Exhaustion -> Reassertion                                         3       1.85%    0.1006   33.33%   66.67%
+Exhaustion -> Recovery                                           36      22.22%    3.6135   50.00%   50.00%
+Neutral Drift -> Compression Resolution                           1       0.11%    0.0110  100.00%    0.00%
+Neutral Drift -> Constructive Emergence                          25       2.63%    1.2387   58.33%   41.67%
+Neutral Drift -> Decay                                           66       6.95%    0.7281   52.38%   47.62%
+Neutral Drift -> Exhaustion                                      23       2.42%    0.4010   43.48%   56.52%
+Neutral Drift -> Neutral Drift                                  538      56.63%    1.5994   47.33%   52.29%
+Neutral Drift -> Reassertion                                    262      27.58%    1.4979   52.29%   46.95%
+Neutral Drift -> Recovery                                        20       2.11%    0.3423   52.63%   42.11%
+Neutral Drift -> Unclassified                                    15       1.58%    0.3138   60.00%   40.00%
+Reassertion -> Compression Resolution                            20       4.05%    0.4243   50.00%   50.00%
+Reassertion -> Constructive Emergence                            24       4.86%    2.2868   50.00%   50.00%
+Reassertion -> Destructive Persistence                           81      16.40%    2.1252   51.32%   47.37%
+Reassertion -> Neutral Drift                                    251      50.81%    1.4350   49.38%   49.38%
+Reassertion -> Reassertion                                       71      14.37%    0.7806   52.11%   46.48%
+Reassertion -> Unclassified                                      47       9.51%    1.8909   53.19%   46.81%
+Recovery -> Compression Resolution                               31      18.79%    1.9691   46.67%   53.33%
+Recovery -> Decay                                                32      19.39%    2.0326   59.38%   40.62%
+Recovery -> Destructive Persistence                               1       0.61%    0.0786    0.00%  100.00%
+Recovery -> Exhaustion                                            4       2.42%    0.4015   25.00%   75.00%
+Recovery -> Reassertion                                          12       7.27%    0.3950   50.00%   50.00%
+Recovery -> Recovery                                             73      44.24%    7.1941   50.70%   49.30%
+Recovery -> Unclassified                                         12       7.27%    1.4454   27.27%   63.64%
+Unclassified -> Compression Resolution                            4       2.96%    0.3105   75.00%   25.00%
+Unclassified -> Decay                                            37      27.41%    2.8724   35.14%   59.46%
+Unclassified -> Exhaustion                                       28      20.74%    3.4350   32.14%   67.86%
+Unclassified -> Neutral Drift                                    21      15.56%    0.4393   47.62%   52.38%
+Unclassified -> Reassertion                                       8       5.93%    0.3218   50.00%   50.00%
+Unclassified -> Recovery                                         12       8.89%    1.4454   27.27%   63.64%
+Unclassified -> Unclassified                                     25      18.52%    3.6804   25.00%   75.00%
+
+Section 5 - Archetype Stability
+===============================
+Archetype                       Count   Repeat10   Repeat20   Return10   Return20
+Recovery                          165    61.21%    69.70%    61.21%    69.70%
+Exhaustion                        162    61.73%    68.52%    61.73%    68.52%
+Reassertion                       494    86.84%    97.57%    86.84%    97.57%
+Decay                             256    63.67%    86.72%    63.67%    86.72%
+Compression Resolution            256    72.27%    80.86%    72.27%    80.86%
+Destructive Persistence           207    62.32%    75.85%    62.32%    75.85%
+Constructive Emergence             57    14.04%    35.09%    14.04%    35.09%
+Neutral Drift                     950    93.68%    98.42%    93.68%    98.42%
+Unclassified                      135    47.41%    63.70%    47.41%    63.70%
+
+Section 6 - Divergence
+======================
+Source                       Target                          Count  Probability      Lift
+Compression Resolution       Compression Resolution             95      37.11%    3.8878
+Compression Resolution       Constructive Emergence              2       0.78%    0.3676
+Compression Resolution       Decay                              40      15.62%    1.6370
+Compression Resolution       Destructive Persistence             2       0.78%    0.1012
+Compression Resolution       Exhaustion                         27      10.55%    1.7461
+Compression Resolution       Neutral Drift                      23       8.98%    0.2536
+Compression Resolution       Reassertion                        47      18.36%    0.9968
+Compression Resolution       Recovery                           18       7.03%    1.1429
+Compression Resolution       Unclassified                        2       0.78%    0.1552
+Constructive Emergence       Compression Resolution             12      21.05%    2.2056
+Constructive Emergence       Decay                              24      42.11%    4.4112
+Constructive Emergence       Neutral Drift                      11      19.30%    0.5448
+Constructive Emergence       Reassertion                         2       3.51%    0.1905
+Constructive Emergence       Unclassified                        8      14.04%    2.7883
+Decay                        Compression Resolution             90      35.29%    3.6976
+Decay                        Constructive Emergence              6       2.35%    1.1071
+Decay                        Destructive Persistence            25       9.80%    1.2702
+Decay                        Neutral Drift                      71      27.84%    0.7861
+Decay                        Reassertion                        41      16.08%    0.8729
+Decay                        Unclassified                       22       8.63%    1.7140
+Destructive Persistence      Compression Resolution              3       1.45%    0.1518
+Destructive Persistence      Decay                              22      10.63%    1.1135
+Destructive Persistence      Destructive Persistence            83      40.10%    5.1951
+Destructive Persistence      Exhaustion                          7       3.38%    0.5598
+Destructive Persistence      Neutral Drift                      34      16.43%    0.4637
+Destructive Persistence      Reassertion                        48      23.19%    1.2589
+Destructive Persistence      Recovery                            6       2.90%    0.4711
+Destructive Persistence      Unclassified                        4       1.93%    0.3839
+Exhaustion                   Decay                              35      21.60%    2.2635
+Exhaustion                   Destructive Persistence            15       9.26%    1.1997
+Exhaustion                   Exhaustion                         73      45.06%    7.4602
+Exhaustion                   Reassertion                         3       1.85%    0.1005
+Exhaustion                   Recovery                           36      22.22%    3.6121
+Neutral Drift                Compression Resolution              1       0.11%    0.0110
+Neutral Drift                Constructive Emergence             25       2.63%    1.2382
+Neutral Drift                Decay                              66       6.95%    0.7278
+Neutral Drift                Exhaustion                         23       2.42%    0.4008
+Neutral Drift                Neutral Drift                     538      56.63%    1.5988
+Neutral Drift                Reassertion                       262      27.58%    1.4973
+Neutral Drift                Recovery                           20       2.11%    0.3422
+Neutral Drift                Unclassified                       15       1.58%    0.3137
+Reassertion                  Compression Resolution             20       4.05%    0.4242
+Reassertion                  Constructive Emergence             24       4.86%    2.2860
+Reassertion                  Destructive Persistence            81      16.40%    2.1244
+Reassertion                  Neutral Drift                     251      50.81%    1.4344
+Reassertion                  Reassertion                        71      14.37%    0.7803
+Reassertion                  Unclassified                       47       9.51%    1.8901
+Recovery                     Compression Resolution             31      18.79%    1.9683
+Recovery                     Decay                              32      19.39%    2.0318
+Recovery                     Destructive Persistence             1       0.61%    0.0785
+Recovery                     Exhaustion                          4       2.42%    0.4013
+Recovery                     Reassertion                        12       7.27%    0.3948
+Recovery                     Recovery                           73      44.24%    7.1914
+Recovery                     Unclassified                       12       7.27%    1.4448
+Unclassified                 Compression Resolution              4       2.96%    0.3104
+Unclassified                 Decay                              37      27.41%    2.8714
+Unclassified                 Exhaustion                         28      20.74%    3.4337
+Unclassified                 Neutral Drift                      21      15.56%    0.4392
+Unclassified                 Reassertion                         8       5.93%    0.3217
+Unclassified                 Recovery                           12       8.89%    1.4448
+Unclassified                 Unclassified                       25      18.52%    3.6790
+
+Section 7 - Convergence
+=======================
+Source                       Target                          Count  Probability      Lift
+Compression Resolution       Compression Resolution             95      37.11%    3.8878
+Compression Resolution       Constructive Emergence             12       4.69%    2.2056
+Compression Resolution       Decay                              90      35.16%    3.6832
+Compression Resolution       Destructive Persistence             3       1.17%    0.1518
+Compression Resolution       Neutral Drift                       1       0.39%    0.0110
+Compression Resolution       Reassertion                        20       7.81%    0.4242
+Compression Resolution       Recovery                           31      12.11%    1.9683
+Compression Resolution       Unclassified                        4       1.56%    0.3104
+Constructive Emergence       Compression Resolution              2       3.51%    0.3676
+Constructive Emergence       Decay                               6      10.53%    1.1028
+Constructive Emergence       Neutral Drift                      25      43.86%    1.2382
+Constructive Emergence       Reassertion                        24      42.11%    2.2860
+Decay                        Compression Resolution             40      15.62%    1.6370
+Decay                        Constructive Emergence             24       9.38%    4.4112
+Decay                        Destructive Persistence            22       8.59%    1.1135
+Decay                        Exhaustion                         35      13.67%    2.2635
+Decay                        Neutral Drift                      66      25.78%    0.7278
+Decay                        Recovery                           32      12.50%    2.0318
+Decay                        Unclassified                       37      14.45%    2.8714
+Destructive Persistence      Compression Resolution              2       0.97%    0.1012
+Destructive Persistence      Decay                              25      12.08%    1.2653
+Destructive Persistence      Destructive Persistence            83      40.10%    5.1951
+Destructive Persistence      Exhaustion                         15       7.25%    1.1997
+Destructive Persistence      Reassertion                        81      39.13%    2.1244
+Destructive Persistence      Recovery                            1       0.48%    0.0785
+Exhaustion                   Compression Resolution             27      16.67%    1.7461
+Exhaustion                   Destructive Persistence             7       4.32%    0.5598
+Exhaustion                   Exhaustion                         73      45.06%    7.4602
+Exhaustion                   Neutral Drift                      23      14.20%    0.4008
+Exhaustion                   Recovery                            4       2.47%    0.4013
+Exhaustion                   Unclassified                       28      17.28%    3.4337
+Neutral Drift                Compression Resolution             23       2.42%    0.2539
+Neutral Drift                Constructive Emergence             11       1.16%    0.5454
+Neutral Drift                Decay                              71       7.48%    0.7838
+Neutral Drift                Destructive Persistence            34       3.58%    0.4642
+Neutral Drift                Neutral Drift                     538      56.69%    1.6005
+Neutral Drift                Reassertion                       251      26.45%    1.4360
+Neutral Drift                Unclassified                       21       2.21%    0.4396
+Reassertion                  Compression Resolution             47       9.51%    0.9968
+Reassertion                  Constructive Emergence              2       0.40%    0.1905
+Reassertion                  Decay                              41       8.30%    0.8695
+Reassertion                  Destructive Persistence            48       9.72%    1.2589
+Reassertion                  Exhaustion                          3       0.61%    0.1005
+Reassertion                  Neutral Drift                     262      53.04%    1.4973
+Reassertion                  Reassertion                        71      14.37%    0.7803
+Reassertion                  Recovery                           12       2.43%    0.3948
+Reassertion                  Unclassified                        8       1.62%    0.3217
+Recovery                     Compression Resolution             18      10.91%    1.1429
+Recovery                     Destructive Persistence             6       3.64%    0.4711
+Recovery                     Exhaustion                         36      21.82%    3.6121
+Recovery                     Neutral Drift                      20      12.12%    0.3422
+Recovery                     Recovery                           73      44.24%    7.1914
+Recovery                     Unclassified                       12       7.27%    1.4448
+Unclassified                 Compression Resolution              2       1.48%    0.1552
+Unclassified                 Constructive Emergence              8       5.93%    2.7883
+Unclassified                 Decay                              22      16.30%    1.7073
+Unclassified                 Destructive Persistence             4       2.96%    0.3839
+Unclassified                 Neutral Drift                      15      11.11%    0.3137
+Unclassified                 Reassertion                        47      34.81%    1.8901
+Unclassified                 Recovery                           12       8.89%    1.4448
+Unclassified                 Unclassified                       25      18.52%    3.6790
+
+Section 8 - Population B
+========================
+Population B rows: 57
+Archetype                    MemberPaths  Occurrences   MeanOER      Cont      Fail        Mean
+Recovery                               0            0     0.000    0.00%    0.00%    0.000000
+Exhaustion                             0            0     0.000    0.00%    0.00%    0.000000
+Reassertion                            0            0     0.000    0.00%    0.00%    0.000000
+Decay                                  0            0     0.000    0.00%    0.00%    0.000000
+Compression Resolution                 0            0     0.000    0.00%    0.00%    0.000000
+Destructive Persistence                0            0     0.000    0.00%    0.00%    0.000000
+Constructive Emergence                 0            0     0.000    0.00%    0.00%    0.000000
+Neutral Drift                          0            0     0.000    0.00%    0.00%    0.000000
+Unclassified                           0            0     0.000    0.00%    0.00%    0.000000
+
+Population B Transitions
+------------------------
+Transition                                                    Count  Probability      Lift      Cont      Fail
+
+Population B Stability
+----------------------
+Archetype                       Count   Repeat10   Repeat20   Return10   Return20
+Recovery                            0     0.00%     0.00%     0.00%     0.00%
+Exhaustion                          0     0.00%     0.00%     0.00%     0.00%
+Reassertion                         0     0.00%     0.00%     0.00%     0.00%
+Decay                               0     0.00%     0.00%     0.00%     0.00%
+Compression Resolution              0     0.00%     0.00%     0.00%     0.00%
+Destructive Persistence             0     0.00%     0.00%     0.00%     0.00%
+Constructive Emergence              0     0.00%     0.00%     0.00%     0.00%
+Neutral Drift                       0     0.00%     0.00%     0.00%     0.00%
+Unclassified                        0     0.00%     0.00%     0.00%     0.00%
+
+Population B Divergence
+-----------------------
+Source                       Target                          Count  Probability      Lift
+
+Population B Convergence
+------------------------
+Source                       Target                          Count  Probability      Lift
+
+Section 9 - Mechanical Research Notes
+=====================================
+- Most common multi-match archetype: Neutral Drift.
+- Highest ReturnWithin20 primary archetype: Neutral Drift.
+- Population B contains 0 primary-labeled contiguous path anchors.
+- Archetype rules, transitions, and stability metrics are mechanical and descriptive only.

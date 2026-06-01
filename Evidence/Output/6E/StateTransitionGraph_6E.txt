@@ -1,0 +1,179 @@
+APVA State Transition Graph Study v0.1 - 6E
+============================================
+Instrument: 6E
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_OPEN_apva_bar_evidence_v01.csv
+Total rows: 35233
+Valid polarity rows: 31085
+State encoding precedence: A Accepted, C Compression, D Dissipation, E Expansion, P Peak, K Climactic, N None.
+OER is a crude independence baseline over raw recurrence counts.
+Triplet class membership may overlap where a requested motif belongs to more than one class.
+
+Section 1 - Diagnostics
+=======================
+State               Count    Frequency
+A Accepted          15739      44.67%
+C Compression       19494      55.33%
+D Dissipation           0       0.00%
+E Expansion             0       0.00%
+P Peak                  0       0.00%
+K Climactic             0       0.00%
+N None                  0       0.00%
+
+Total edges: 35232
+Total edge-pairs: 35231
+
+Section 2 - Edge Table
+----------------------
+Item              Class                                    Count  OutcomeN       OER   MeanDRFwd5       Median  ContRate5  FailRate5  FlatRate5
+A->A              Persistence                               6555      6423    0.9324    -0.000004     0.000000    46.40%    48.76%     4.84%
+A->C              Alternation                               9183      7512    1.0546    -0.000017     0.000000    46.45%    48.39%     5.17%
+C->A              Alternation                               9183      8967    1.0546    -0.000021     0.000000    45.85%    49.21%     4.94%
+C->C              Persistence                              10311      8177    0.9560    -0.000003     0.000000    46.55%    48.12%     5.33%
+
+Section 3 - Edge-Pair Table
+---------------------------
+Item              Class                                    Count  OutcomeN       OER   MeanDRFwd5       Median  ContRate5  FailRate5  FlatRate5
+A->A->A           ContinuationOfState                       2700      2649    0.8597    -0.000002     0.000000    47.07%    47.60%     5.32%
+A->A->C           BreakFromPersistence                      3855      3174    0.9910    -0.000033     0.000000    46.19%    49.12%     4.69%
+A->C->A           SameDirection,ReturnToState               4319      4208    1.1103    -0.000022     0.000000    45.87%    49.29%     4.85%
+A->C->C           Other                                     4864      3918    1.0096    -0.000004     0.000000    45.79%    49.08%     5.13%
+C->A->A           Other                                     3854      3773    0.9908    -0.000004     0.000000    45.93%    49.56%     4.51%
+C->A->C           SameDirection,ReturnToState               5328      4338    1.1059    -0.000006     0.000000    46.63%    47.86%     5.51%
+C->C->A           BreakFromPersistence                      4864      4759    1.0096    -0.000020     0.000000    45.83%    49.15%     5.02%
+C->C->C           ContinuationOfState                       5447      4259    0.9128    -0.000003     0.000000    47.24%    47.24%     5.52%
+
+Edge Class Summary
+------------------
+Class                      Count  OutcomeN   MeanDRFwd5  ContRate5  FailRate5
+Persistence                16866     14600    -0.000003    46.48%    48.40%
+Alternation                18366     16479    -0.000019    46.12%    48.84%
+Other                          0         0     0.000000     0.00%     0.00%
+
+Transition Momentum Summary
+---------------------------
+Class                      Count  OutcomeN   MeanDRFwd5  ContRate5  FailRate5
+SameDirection               9647      8546    -0.000014    46.26%    48.56%
+ContinuationOfState         8147      6908    -0.000003    47.18%    47.38%
+BreakFromPersistence        8719      7933    -0.000025    45.97%    49.14%
+ReturnToState               9647      8546    -0.000014    46.26%    48.56%
+Other                       8718      7691    -0.000004    45.86%    49.32%
+
+Section 4 - Ranked Edge Sections
+================================
+
+Most Common Edges
+-----------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 C->C              Persistence                              10311      8177    0.9560    -0.000003    46.55%    48.12%
+   2 A->C              Alternation                               9183      7512    1.0546    -0.000017    46.45%    48.39%
+   3 C->A              Alternation                               9183      8967    1.0546    -0.000021    45.85%    49.21%
+   4 A->A              Persistence                               6555      6423    0.9324    -0.000004    46.40%    48.76%
+
+Most Overrepresented Edges
+--------------------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 A->C              Alternation                               9183      7512    1.0546    -0.000017    46.45%    48.39%
+   2 C->A              Alternation                               9183      8967    1.0546    -0.000021    45.85%    49.21%
+   3 C->C              Persistence                              10311      8177    0.9560    -0.000003    46.55%    48.12%
+   4 A->A              Persistence                               6555      6423    0.9324    -0.000004    46.40%    48.76%
+
+Highest Continuation Edges
+--------------------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 C->C              Persistence                              10311      8177    0.9560    -0.000003    46.55%    48.12%
+   2 A->C              Alternation                               9183      7512    1.0546    -0.000017    46.45%    48.39%
+   3 A->A              Persistence                               6555      6423    0.9324    -0.000004    46.40%    48.76%
+   4 C->A              Alternation                               9183      8967    1.0546    -0.000021    45.85%    49.21%
+
+Highest Failure Edges
+---------------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 C->A              Alternation                               9183      8967    1.0546    -0.000021    45.85%    49.21%
+   2 A->A              Persistence                               6555      6423    0.9324    -0.000004    46.40%    48.76%
+   3 A->C              Alternation                               9183      7512    1.0546    -0.000017    46.45%    48.39%
+   4 C->C              Persistence                              10311      8177    0.9560    -0.000003    46.55%    48.12%
+
+Best Alternation Edges
+----------------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 A->C              Alternation                               9183      7512    1.0546    -0.000017    46.45%    48.39%
+   2 C->A              Alternation                               9183      8967    1.0546    -0.000021    45.85%    49.21%
+
+Worst Persistence Edges
+-----------------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 A->A              Persistence                               6555      6423    0.9324    -0.000004    46.40%    48.76%
+   2 C->C              Persistence                              10311      8177    0.9560    -0.000003    46.55%    48.12%
+
+Section 5 - Ranked Edge-Pair Sections
+=====================================
+
+Most Common Triplets
+--------------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 C->C->C           ContinuationOfState                       5447      4259    0.9128    -0.000003    47.24%    47.24%
+   2 C->A->C           SameDirection,ReturnToState               5328      4338    1.1059    -0.000006    46.63%    47.86%
+   3 A->C->C           Other                                     4864      3918    1.0096    -0.000004    45.79%    49.08%
+   4 C->C->A           BreakFromPersistence                      4864      4759    1.0096    -0.000020    45.83%    49.15%
+   5 A->C->A           SameDirection,ReturnToState               4319      4208    1.1103    -0.000022    45.87%    49.29%
+   6 A->A->C           BreakFromPersistence                      3855      3174    0.9910    -0.000033    46.19%    49.12%
+   7 C->A->A           Other                                     3854      3773    0.9908    -0.000004    45.93%    49.56%
+   8 A->A->A           ContinuationOfState                       2700      2649    0.8597    -0.000002    47.07%    47.60%
+
+Most Overrepresented Triplets
+-----------------------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 A->C->A           SameDirection,ReturnToState               4319      4208    1.1103    -0.000022    45.87%    49.29%
+   2 C->A->C           SameDirection,ReturnToState               5328      4338    1.1059    -0.000006    46.63%    47.86%
+   3 A->C->C           Other                                     4864      3918    1.0096    -0.000004    45.79%    49.08%
+   4 C->C->A           BreakFromPersistence                      4864      4759    1.0096    -0.000020    45.83%    49.15%
+   5 A->A->C           BreakFromPersistence                      3855      3174    0.9910    -0.000033    46.19%    49.12%
+   6 C->A->A           Other                                     3854      3773    0.9908    -0.000004    45.93%    49.56%
+   7 C->C->C           ContinuationOfState                       5447      4259    0.9128    -0.000003    47.24%    47.24%
+   8 A->A->A           ContinuationOfState                       2700      2649    0.8597    -0.000002    47.07%    47.60%
+
+Highest Continuation Triplets
+-----------------------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 C->C->C           ContinuationOfState                       5447      4259    0.9128    -0.000003    47.24%    47.24%
+   2 A->A->A           ContinuationOfState                       2700      2649    0.8597    -0.000002    47.07%    47.60%
+   3 C->A->C           SameDirection,ReturnToState               5328      4338    1.1059    -0.000006    46.63%    47.86%
+   4 A->A->C           BreakFromPersistence                      3855      3174    0.9910    -0.000033    46.19%    49.12%
+   5 C->A->A           Other                                     3854      3773    0.9908    -0.000004    45.93%    49.56%
+   6 A->C->A           SameDirection,ReturnToState               4319      4208    1.1103    -0.000022    45.87%    49.29%
+   7 C->C->A           BreakFromPersistence                      4864      4759    1.0096    -0.000020    45.83%    49.15%
+   8 A->C->C           Other                                     4864      3918    1.0096    -0.000004    45.79%    49.08%
+
+Highest Failure Triplets
+------------------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 C->A->A           Other                                     3854      3773    0.9908    -0.000004    45.93%    49.56%
+   2 A->C->A           SameDirection,ReturnToState               4319      4208    1.1103    -0.000022    45.87%    49.29%
+   3 C->C->A           BreakFromPersistence                      4864      4759    1.0096    -0.000020    45.83%    49.15%
+   4 A->A->C           BreakFromPersistence                      3855      3174    0.9910    -0.000033    46.19%    49.12%
+   5 A->C->C           Other                                     4864      3918    1.0096    -0.000004    45.79%    49.08%
+   6 C->A->C           SameDirection,ReturnToState               5328      4338    1.1059    -0.000006    46.63%    47.86%
+   7 A->A->A           ContinuationOfState                       2700      2649    0.8597    -0.000002    47.07%    47.60%
+   8 C->C->C           ContinuationOfState                       5447      4259    0.9128    -0.000003    47.24%    47.24%
+
+Best ReturnToState Triplets
+---------------------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 C->A->C           SameDirection,ReturnToState               5328      4338    1.1059    -0.000006    46.63%    47.86%
+   2 A->C->A           SameDirection,ReturnToState               4319      4208    1.1103    -0.000022    45.87%    49.29%
+
+Worst ContinuationOfState Triplets
+----------------------------------
+Rank Item              Class                                    Count  OutcomeN       OER         Mean  ContRate5  FailRate5
+   1 A->A->A           ContinuationOfState                       2700      2649    0.8597    -0.000002    47.07%    47.60%
+   2 C->C->C           ContinuationOfState                       5447      4259    0.9128    -0.000003    47.24%    47.24%
+
+Section 6 - Research Notes
+==========================
+- Alternation continuation rate: 46.12%; persistence continuation rate: 46.48%.
+- A->C: Count=9183, OER=1.0546, ContinuationRate5=46.45%, FailureRate5=48.39%.
+- C->A: Count=9183, OER=1.0546, ContinuationRate5=45.85%, FailureRate5=49.21%.
+- A->A: Count=6555, OER=0.9324, ContinuationRate5=46.40%, FailureRate5=48.76%.
+- A->C->A: Count=4319, OER=1.1103, ContinuationRate5=45.87%, FailureRate5=49.29%.
+- A->A->A: Count=2700, OER=0.8597, ContinuationRate5=47.07%, FailureRate5=47.60%.
+- 0 observed graph items are below the per-instrument ranked-table threshold of 20.

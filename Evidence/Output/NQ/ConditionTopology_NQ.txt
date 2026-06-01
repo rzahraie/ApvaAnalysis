@@ -1,0 +1,218 @@
+APVA Condition Topology Study v0.1 - NQ
+=======================================
+Instrument: NQ
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\NQ\NQ_5 Minute_apva_bar_evidence_v01.csv
+Total rows: 1930
+Population B rows: 71
+Conditions are independent binary flags; a bar may belong to multiple combinations.
+Population B reuses the mature aligned lateral DissipationContained selector.
+
+Section 1 - Condition Frequencies
+=================================
+
+Full Population Condition Frequencies
+-------------------------------------
+Population bars: 1930
+Condition                              Type          Count  Frequency
+Accepted                               Condition       950    49.22%
+Compressed                             Condition      1006    52.12%
+Dissipating                            Condition      1104    57.20%
+Expanding                              Condition       988    51.19%
+Peak                                   Condition       265    13.73%
+Climactic                              Condition       120     6.22%
+Accepted+Compressed                    Pair             26     1.35%
+Accepted+Dissipating                   Pair            509    26.37%
+Accepted+Expanding                     Pair            654    33.89%
+Accepted+Peak                          Pair            177     9.17%
+Accepted+Climactic                     Pair             80     4.15%
+Compressed+Dissipating                 Pair            621    32.18%
+Compressed+Expanding                   Pair            338    17.51%
+Compressed+Peak                        Pair             91     4.72%
+Dissipating+Peak                       Pair            127     6.58%
+Dissipating+Climactic                  Pair             50     2.59%
+Expanding+Peak                         Pair            205    10.62%
+Expanding+Climactic                    Pair            105     5.44%
+Accepted+Compressed+Dissipating        Triple           26     1.35%
+Accepted+Compressed+Peak               Triple            3     0.16%
+Accepted+Dissipating+Peak              Triple           70     3.63%
+Compressed+Dissipating+Peak            Triple           60     3.11%
+Accepted+Compressed+Dissipating+Peak   Quadruple         3     0.16%
+
+Section 2 - Pair Consequences
+=============================
+
+Full Population Pairs
+---------------------
+Combination                            Type          Count  OutcomeN      Lift   MeanDRFwd5       Median  ContRate5  FailRate5  FlatRate5
+Accepted+Compressed                    Pair             26        26    0.0525    -2.826923     2.625000    53.85%    46.15%     0.00%
+Accepted+Dissipating                   Pair            509       508    0.9367    -5.735236    -1.250000    47.64%    51.77%     0.59%
+Accepted+Expanding                     Pair            654       653    1.3448    -9.025651    -5.750000    43.03%    56.36%     0.61%
+Accepted+Peak                          Pair            177       177    1.3569    -4.216102    -5.000000    43.50%    55.37%     1.13%
+Accepted+Climactic                     Pair             80        80    1.3544    -7.978125    -4.875000    45.00%    55.00%     0.00%
+Compressed+Dissipating                 Pair            621       614    1.0792    -0.420195     1.750000    50.98%    48.86%     0.16%
+Compressed+Expanding                   Pair            338       335    0.6563    -3.367164     1.500000    51.34%    48.36%     0.30%
+Compressed+Peak                        Pair             91        89    0.6588    12.092697     8.750000    60.67%    39.33%     0.00%
+Dissipating+Peak                       Pair            127       125    0.8378     8.338000     7.750000    56.00%    42.40%     1.60%
+Dissipating+Climactic                  Pair             50        50    0.7284    -8.650000     2.000000    54.00%    46.00%     0.00%
+Expanding+Peak                         Pair            205       205    1.5112    -2.296341    -2.000000    48.29%    51.22%     0.49%
+Expanding+Climactic                    Pair            105       104    1.7093    -1.682692    -2.125000    49.04%    50.96%     0.00%
+
+Section 3 - Triple Consequences
+===============================
+
+Full Population Triples
+-----------------------
+Combination                            Type          Count  OutcomeN      Lift   MeanDRFwd5       Median  ContRate5  FailRate5  FlatRate5
+Accepted+Compressed+Dissipating        Triple           26        26    0.0918    -2.826923     2.625000    53.85%    46.15%     0.00%
+Accepted+Dissipating+Peak              Triple           70        70    0.9382     0.828571    -3.375000    45.71%    51.43%     2.86%
+Compressed+Dissipating+Peak            Triple           60        58    0.7594    16.301724    17.125000    67.24%    32.76%     0.00%
+
+Section 4 - Observed vs Expected
+================================
+
+Most Overrepresented Pairs
+--------------------------
+Rank Combination                            Type          Count   Observed   Expected      Lift
+   1 Expanding+Climactic                    Pair            105     5.44%     3.18%    1.7093
+   2 Expanding+Peak                         Pair            205    10.62%     7.03%    1.5112
+   3 Accepted+Peak                          Pair            177     9.17%     6.76%    1.3569
+   4 Accepted+Climactic                     Pair             80     4.15%     3.06%    1.3544
+   5 Accepted+Expanding                     Pair            654    33.89%    25.20%    1.3448
+   6 Compressed+Dissipating                 Pair            621    32.18%    29.82%    1.0792
+   7 Accepted+Dissipating                   Pair            509    26.37%    28.16%    0.9367
+   8 Dissipating+Peak                       Pair            127     6.58%     7.85%    0.8378
+   9 Dissipating+Climactic                  Pair             50     2.59%     3.56%    0.7284
+  10 Compressed+Peak                        Pair             91     4.72%     7.16%    0.6588
+  11 Compressed+Expanding                   Pair            338    17.51%    26.68%    0.6563
+  12 Accepted+Compressed                    Pair             26     1.35%    25.66%    0.0525
+
+Most Overrepresented Triples
+----------------------------
+Rank Combination                            Type          Count   Observed   Expected      Lift
+   1 Accepted+Dissipating+Peak              Triple           70     3.63%     3.87%    0.9382
+   2 Compressed+Dissipating+Peak            Triple           60     3.11%     4.09%    0.7594
+   3 Accepted+Compressed+Dissipating        Triple           26     1.35%    14.68%    0.0918
+
+Section 5 - Acceptance Topology
+===============================
+
+Acceptance-Centered Comparison
+------------------------------
+Combination                            Type          Count  OutcomeN      Lift   MeanDRFwd5       Median  ContRate5  FailRate5  FlatRate5
+Accepted alone                         Alone             2         2       N/A   -20.875000   -20.875000    50.00%    50.00%     0.00%
+Accepted+Compressed                    Inclusive        26        26       N/A    -2.826923     2.625000    53.85%    46.15%     0.00%
+Accepted+Dissipating                   Inclusive       509       508       N/A    -5.735236    -1.250000    47.64%    51.77%     0.59%
+Accepted+Peak                          Inclusive       177       177       N/A    -4.216102    -5.000000    43.50%    55.37%     1.13%
+Accepted+Compressed+Dissipating        Inclusive        26        26       N/A    -2.826923     2.625000    53.85%    46.15%     0.00%
+Accepted+Compressed+Peak               Inclusive         3         3       N/A   -12.916667   -55.250000    33.33%    66.67%     0.00%
+Accepted+Dissipating+Peak              Inclusive        70        70       N/A     0.828571    -3.375000    45.71%    51.43%     2.86%
+
+Section 6 - Compression Topology
+================================
+
+Compression-Centered Comparison
+-------------------------------
+Combination                            Type          Count  OutcomeN      Lift   MeanDRFwd5       Median  ContRate5  FailRate5  FlatRate5
+Compressed alone                       Alone           202       199       N/A     1.948492     4.000000    55.78%    43.72%     0.50%
+Compressed+Accepted                    Inclusive        26        26       N/A    -2.826923     2.625000    53.85%    46.15%     0.00%
+Compressed+Dissipating                 Inclusive       621       614       N/A    -0.420195     1.750000    50.98%    48.86%     0.16%
+Compressed+Peak                        Inclusive        91        89       N/A    12.092697     8.750000    60.67%    39.33%     0.00%
+Compressed+Dissipating+Peak            Inclusive        60        58       N/A    16.301724    17.125000    67.24%    32.76%     0.00%
+
+Section 7 - Dissipation Topology
+================================
+
+Dissipation-Centered Comparison
+-------------------------------
+Combination                            Type          Count  OutcomeN      Lift   MeanDRFwd5       Median  ContRate5  FailRate5  FlatRate5
+Dissipating alone                      Alone             0         0       N/A     0.000000     0.000000     0.00%     0.00%     0.00%
+Dissipating+Accepted                   Inclusive       509       508       N/A    -5.735236    -1.250000    47.64%    51.77%     0.59%
+Dissipating+Compressed                 Inclusive       621       614       N/A    -0.420195     1.750000    50.98%    48.86%     0.16%
+Dissipating+Peak                       Inclusive       127       125       N/A     8.338000     7.750000    56.00%    42.40%     1.60%
+Dissipating+Accepted+Peak              Inclusive        70        70       N/A     0.828571    -3.375000    45.71%    51.43%     2.86%
+
+Section 8 - Population B
+========================
+
+Population B Condition Frequencies
+----------------------------------
+Population bars: 71
+Condition                              Type          Count  Frequency
+Accepted                               Condition         0     0.00%
+Compressed                             Condition        71   100.00%
+Dissipating                            Condition        71   100.00%
+Expanding                              Condition        19    26.76%
+Peak                                   Condition        11    15.49%
+Climactic                              Condition         1     1.41%
+Accepted+Compressed                    Pair              0     0.00%
+Accepted+Dissipating                   Pair              0     0.00%
+Accepted+Expanding                     Pair              0     0.00%
+Accepted+Peak                          Pair              0     0.00%
+Accepted+Climactic                     Pair              0     0.00%
+Compressed+Dissipating                 Pair             71   100.00%
+Compressed+Expanding                   Pair             19    26.76%
+Compressed+Peak                        Pair             11    15.49%
+Dissipating+Peak                       Pair             11    15.49%
+Dissipating+Climactic                  Pair              1     1.41%
+Expanding+Peak                         Pair              6     8.45%
+Expanding+Climactic                    Pair              1     1.41%
+Accepted+Compressed+Dissipating        Triple            0     0.00%
+Accepted+Compressed+Peak               Triple            0     0.00%
+Accepted+Dissipating+Peak              Triple            0     0.00%
+Compressed+Dissipating+Peak            Triple           11    15.49%
+Accepted+Compressed+Dissipating+Peak   Quadruple         0     0.00%
+
+Population B Pairs and Triples
+------------------------------
+Combination                            Type          Count  OutcomeN      Lift   MeanDRFwd5       Median  ContRate5  FailRate5  FlatRate5
+Accepted+Compressed                    Pair              0         0       N/A     0.000000     0.000000     0.00%     0.00%     0.00%
+Accepted+Dissipating                   Pair              0         0       N/A     0.000000     0.000000     0.00%     0.00%     0.00%
+Accepted+Expanding                     Pair              0         0       N/A     0.000000     0.000000     0.00%     0.00%     0.00%
+Accepted+Peak                          Pair              0         0       N/A     0.000000     0.000000     0.00%     0.00%     0.00%
+Accepted+Climactic                     Pair              0         0       N/A     0.000000     0.000000     0.00%     0.00%     0.00%
+Compressed+Dissipating                 Pair             71        71    1.0000    -7.771127     2.750000    53.52%    46.48%     0.00%
+Compressed+Expanding                   Pair             19        19    1.0000    -5.789474     4.250000    57.89%    42.11%     0.00%
+Compressed+Peak                        Pair             11        11    1.0000    22.568182    13.500000    72.73%    27.27%     0.00%
+Dissipating+Peak                       Pair             11        11    1.0000    22.568182    13.500000    72.73%    27.27%     0.00%
+Dissipating+Climactic                  Pair              1         1    1.0000    24.250000    24.250000   100.00%     0.00%     0.00%
+Expanding+Peak                         Pair              6         6    2.0383    25.333333    16.500000    83.33%    16.67%     0.00%
+Expanding+Climactic                    Pair              1         1    3.7368    24.250000    24.250000   100.00%     0.00%     0.00%
+Accepted+Compressed+Dissipating        Triple            0         0       N/A     0.000000     0.000000     0.00%     0.00%     0.00%
+Accepted+Compressed+Peak               Triple            0         0       N/A     0.000000     0.000000     0.00%     0.00%     0.00%
+Accepted+Dissipating+Peak              Triple            0         0       N/A     0.000000     0.000000     0.00%     0.00%     0.00%
+Compressed+Dissipating+Peak            Triple           11        11    1.0000    22.568182    13.500000    72.73%    27.27%     0.00%
+Accepted+Compressed+Dissipating+Peak   Quadruple         0         0       N/A     0.000000     0.000000     0.00%     0.00%     0.00%
+
+Population B Most Overrepresented Combinations
+----------------------------------------------
+Rank Combination                            Type          Count   Observed   Expected      Lift
+   1 Compressed+Dissipating                 Pair             71   100.00%   100.00%    1.0000
+
+Population B vs Full Population
+-------------------------------
+Combination                              FullN  FullCont  FullFail  FullLift   PopBN  PopBCont  PopBFail  PopBLift  DeltaCont  DeltaFail  DeltaLift
+Accepted+Compressed                         26   53.85%   46.15%    0.0525       0    0.00%    0.00%       N/A   -53.85%   -46.15%        N/A
+Accepted+Dissipating                       509   47.64%   51.77%    0.9367       0    0.00%    0.00%       N/A   -47.64%   -51.77%        N/A
+Accepted+Expanding                         654   43.03%   56.36%    1.3448       0    0.00%    0.00%       N/A   -43.03%   -56.36%        N/A
+Accepted+Peak                              177   43.50%   55.37%    1.3569       0    0.00%    0.00%       N/A   -43.50%   -55.37%        N/A
+Accepted+Climactic                          80   45.00%   55.00%    1.3544       0    0.00%    0.00%       N/A   -45.00%   -55.00%        N/A
+Compressed+Dissipating                     621   50.98%   48.86%    1.0792      71   53.52%   46.48%    1.0000     2.54%    -2.38%    -0.0792
+Compressed+Expanding                       338   51.34%   48.36%    0.6563      19   57.89%   42.11%    1.0000     6.55%    -6.25%     0.3437
+Compressed+Peak                             91   60.67%   39.33%    0.6588      11   72.73%   27.27%    1.0000    12.05%   -12.05%     0.3412
+Dissipating+Peak                           127   56.00%   42.40%    0.8378      11   72.73%   27.27%    1.0000    16.73%   -15.13%     0.1622
+Dissipating+Climactic                       50   54.00%   46.00%    0.7284       1  100.00%    0.00%    1.0000    46.00%   -46.00%     0.2716
+Expanding+Peak                             205   48.29%   51.22%    1.5112       6   83.33%   16.67%    2.0383    35.04%   -34.55%     0.5271
+Expanding+Climactic                        105   49.04%   50.96%    1.7093       1  100.00%    0.00%    3.7368    50.96%   -50.96%     2.0276
+Accepted+Compressed+Dissipating             26   53.85%   46.15%    0.0918       0    0.00%    0.00%       N/A   -53.85%   -46.15%        N/A
+Accepted+Compressed+Peak                     3   33.33%   66.67%    0.0441       0    0.00%    0.00%       N/A   -33.33%   -66.67%        N/A
+Accepted+Dissipating+Peak                   70   45.71%   51.43%    0.9382       0    0.00%    0.00%       N/A   -45.71%   -51.43%        N/A
+Compressed+Dissipating+Peak                 60   67.24%   32.76%    0.7594      11   72.73%   27.27%    1.0000     5.49%    -5.49%     0.2406
+Accepted+Compressed+Dissipating+Peak         3   33.33%   66.67%    0.0771       0    0.00%    0.00%       N/A   -33.33%   -66.67%        N/A
+
+Research Notes
+==============
+- Highest full-population continuation combination: Compressed+Dissipating+Peak, ContinuationRate5=67.24%, Count=60.
+- Highest full-population lift combination: Expanding+Climactic, Lift=1.7093, Count=105.
+- 2 full-population combinations are below the ranked-table threshold of 20.
+- Population B contains 71 rows; its table is printed without suppressing low counts.
+- Co-occurrence lift is descriptive only and does not imply a causal relationship.

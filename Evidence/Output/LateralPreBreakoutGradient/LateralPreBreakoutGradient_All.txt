@@ -1,0 +1,123 @@
+APVA Lateral Pre-Breakout Gradient Study v0.1 - Cross-Instrument Aggregate
+===========================================================================
+Input instruments: 6E, NQ, CL
+Valid metric threshold: non-flat count >= 30.
+
+Cross-Instrument Metric Table
+=============================
+Score                                Metric                    Count_6E    Rho_6E    Delta_6E  Count_NQ    Rho_NQ    Delta_NQ  Count_CL    Rho_CL    Delta_CL Valid  Pos  Neg   MeanRho   MeanDelta
+DominanceGradient                    GradientDelta                 1900   -0.0112   -0.068962        76   -0.0236   -0.050000       142    0.0700    0.373635     3    1    2    0.0117    0.084891
+DominanceGradient                    GradientVelocity              1900   -0.0125   -0.013944        76   -0.0114   -0.002751       142    0.0098    0.027562     3    1    2   -0.0047    0.003622
+DominanceGradient                    GradientAcceleration           744   -0.0020   -0.057476        38   -0.1251   -0.562160        62    0.0393    0.276418     3    1    2   -0.0293   -0.114406
+DominanceGradient                    Final3GradientMean            1900    0.0312    0.251268        76    0.0860    0.552778       142    0.0361   -0.024750     3    3    0    0.0511    0.259765
+DominanceGradient                    Final5GradientMean            1900    0.0323    0.249728        76    0.0685    0.650370       142    0.0186   -0.179449     3    3    0    0.0398    0.240217
+DominanceGradient_WithExpansion      GradientDelta                 1900   -0.0094   -0.016182        76   -0.0235   -0.258333       142    0.0496    0.385150     3    1    2    0.0055    0.036878
+DominanceGradient_WithExpansion      GradientVelocity              1900   -0.0081   -0.002709        76    0.0084   -0.010219       142    0.0026    0.001707     3    2    1    0.0010   -0.003740
+DominanceGradient_WithExpansion      GradientAcceleration           744   -0.0070   -0.036009        38   -0.2284   -1.593920        62    0.0530    0.481663     3    1    2   -0.0608   -0.382755
+DominanceGradient_WithExpansion      Final3GradientMean            1900    0.0224    0.211854        76    0.0745    0.610185       142    0.0220    0.021772     3    3    0    0.0396    0.281270
+DominanceGradient_WithExpansion      Final5GradientMean            1900    0.0225    0.197967        76    0.0835    0.679352       142   -0.0034   -0.186927     3    2    1    0.0342    0.230131
+DominanceGradient_Weighted           GradientDelta                 1900   -0.0124   -0.127659        76   -0.0121   -0.061111       142    0.0541    0.394679     3    1    2    0.0099    0.068636
+DominanceGradient_Weighted           GradientVelocity              1900   -0.0134   -0.031269        76   -0.0229   -0.011007       142   -0.0071    0.020213     3    0    3   -0.0144   -0.007354
+DominanceGradient_Weighted           GradientAcceleration           744    0.0017   -0.059557        38   -0.1106   -0.812562        62    0.0037    0.013881     3    2    1   -0.0351   -0.286079
+DominanceGradient_Weighted           Final3GradientMean            1900    0.0296    0.393579        76    0.0998    1.041667       142    0.0148   -0.196016     3    3    0    0.0481    0.413076
+DominanceGradient_Weighted           Final5GradientMean            1900    0.0294    0.384806        76    0.0805    1.204074       142    0.0022   -0.411396     3    3    0    0.0374    0.392495
+
+Cross-Instrument Feature Effects
+================================
+GradientDelta                Valid=3 SuccessAgreement=1 FailureAgreement=2 MeanEffect=0.0287
+GradientVelocity             Valid=3 SuccessAgreement=1 FailureAgreement=2 MeanEffect=0.0074
+GradientAcceleration         Valid=3 SuccessAgreement=1 FailureAgreement=2 MeanEffect=-0.0323
+Final3GradientMean           Valid=3 SuccessAgreement=2 FailureAgreement=1 MeanEffect=0.0754
+Final5GradientMean           Valid=3 SuccessAgreement=2 FailureAgreement=1 MeanEffect=0.0701
+Final3CompressionMean        Valid=3 SuccessAgreement=0 FailureAgreement=3 MeanEffect=-0.0763
+Final3DissipationMean        Valid=3 SuccessAgreement=1 FailureAgreement=2 MeanEffect=0.0419
+Final3AcceptedMean           Valid=3 SuccessAgreement=3 FailureAgreement=0 MeanEffect=0.0866
+Final3ExpansionMean          Valid=3 SuccessAgreement=1 FailureAgreement=2 MeanEffect=-0.0177
+LateralDuration              Valid=3 SuccessAgreement=1 FailureAgreement=2 MeanEffect=-0.1439
+LateralRange                 Valid=3 SuccessAgreement=2 FailureAgreement=1 MeanEffect=-0.0348
+BreakoutBarRange             Valid=3 SuccessAgreement=0 FailureAgreement=3 MeanEffect=-0.1504
+BreakoutBarVolume            Valid=3 SuccessAgreement=0 FailureAgreement=3 MeanEffect=-0.1538
+
+Most Replicated Positive Gradient Metrics
+=========================================
+   1 DominanceGradient                    Final3GradientMean       Valid=3 Pos=3 Neg=0 MeanRho=0.0511 MeanDelta=0.259765
+   2 DominanceGradient_Weighted           Final3GradientMean       Valid=3 Pos=3 Neg=0 MeanRho=0.0481 MeanDelta=0.413076
+   3 DominanceGradient                    Final5GradientMean       Valid=3 Pos=3 Neg=0 MeanRho=0.0398 MeanDelta=0.240217
+   4 DominanceGradient_WithExpansion      Final3GradientMean       Valid=3 Pos=3 Neg=0 MeanRho=0.0396 MeanDelta=0.281270
+   5 DominanceGradient_Weighted           Final5GradientMean       Valid=3 Pos=3 Neg=0 MeanRho=0.0374 MeanDelta=0.392495
+   6 DominanceGradient_WithExpansion      Final5GradientMean       Valid=3 Pos=2 Neg=1 MeanRho=0.0342 MeanDelta=0.230131
+   7 DominanceGradient_WithExpansion      GradientVelocity         Valid=3 Pos=2 Neg=1 MeanRho=0.0010 MeanDelta=-0.003740
+   8 DominanceGradient_Weighted           GradientAcceleration     Valid=3 Pos=2 Neg=1 MeanRho=-0.0351 MeanDelta=-0.286079
+   9 DominanceGradient                    GradientDelta            Valid=3 Pos=1 Neg=2 MeanRho=0.0117 MeanDelta=0.084891
+  10 DominanceGradient_Weighted           GradientDelta            Valid=3 Pos=1 Neg=2 MeanRho=0.0099 MeanDelta=0.068636
+  11 DominanceGradient_WithExpansion      GradientDelta            Valid=3 Pos=1 Neg=2 MeanRho=0.0055 MeanDelta=0.036878
+  12 DominanceGradient                    GradientVelocity         Valid=3 Pos=1 Neg=2 MeanRho=-0.0047 MeanDelta=0.003622
+  13 DominanceGradient                    GradientAcceleration     Valid=3 Pos=1 Neg=2 MeanRho=-0.0293 MeanDelta=-0.114406
+  14 DominanceGradient_WithExpansion      GradientAcceleration     Valid=3 Pos=1 Neg=2 MeanRho=-0.0608 MeanDelta=-0.382755
+  15 DominanceGradient_Weighted           GradientVelocity         Valid=3 Pos=0 Neg=3 MeanRho=-0.0144 MeanDelta=-0.007354
+
+Most Replicated Negative Gradient Metrics
+=========================================
+   1 DominanceGradient_Weighted           GradientVelocity         Valid=3 Pos=0 Neg=3 MeanRho=-0.0144 MeanDelta=-0.007354
+   2 DominanceGradient_WithExpansion      GradientAcceleration     Valid=3 Pos=1 Neg=2 MeanRho=-0.0608 MeanDelta=-0.382755
+   3 DominanceGradient                    GradientAcceleration     Valid=3 Pos=1 Neg=2 MeanRho=-0.0293 MeanDelta=-0.114406
+   4 DominanceGradient                    GradientVelocity         Valid=3 Pos=1 Neg=2 MeanRho=-0.0047 MeanDelta=0.003622
+   5 DominanceGradient_WithExpansion      GradientDelta            Valid=3 Pos=1 Neg=2 MeanRho=0.0055 MeanDelta=0.036878
+   6 DominanceGradient_Weighted           GradientDelta            Valid=3 Pos=1 Neg=2 MeanRho=0.0099 MeanDelta=0.068636
+   7 DominanceGradient                    GradientDelta            Valid=3 Pos=1 Neg=2 MeanRho=0.0117 MeanDelta=0.084891
+   8 DominanceGradient_Weighted           GradientAcceleration     Valid=3 Pos=2 Neg=1 MeanRho=-0.0351 MeanDelta=-0.286079
+   9 DominanceGradient_WithExpansion      GradientVelocity         Valid=3 Pos=2 Neg=1 MeanRho=0.0010 MeanDelta=-0.003740
+  10 DominanceGradient_WithExpansion      Final5GradientMean       Valid=3 Pos=2 Neg=1 MeanRho=0.0342 MeanDelta=0.230131
+  11 DominanceGradient_Weighted           Final5GradientMean       Valid=3 Pos=3 Neg=0 MeanRho=0.0374 MeanDelta=0.392495
+  12 DominanceGradient_WithExpansion      Final3GradientMean       Valid=3 Pos=3 Neg=0 MeanRho=0.0396 MeanDelta=0.281270
+  13 DominanceGradient                    Final5GradientMean       Valid=3 Pos=3 Neg=0 MeanRho=0.0398 MeanDelta=0.240217
+  14 DominanceGradient_Weighted           Final3GradientMean       Valid=3 Pos=3 Neg=0 MeanRho=0.0481 MeanDelta=0.413076
+  15 DominanceGradient                    Final3GradientMean       Valid=3 Pos=3 Neg=0 MeanRho=0.0511 MeanDelta=0.259765
+
+Strongest Success-Side Features
+===============================
+   1 Final3AcceptedMean           Valid=3 Success=3 Failure=0 MeanEffect=0.0866
+   2 Final3GradientMean           Valid=3 Success=2 Failure=1 MeanEffect=0.0754
+   3 Final5GradientMean           Valid=3 Success=2 Failure=1 MeanEffect=0.0701
+   4 LateralRange                 Valid=3 Success=2 Failure=1 MeanEffect=-0.0348
+   5 Final3DissipationMean        Valid=3 Success=1 Failure=2 MeanEffect=0.0419
+   6 GradientDelta                Valid=3 Success=1 Failure=2 MeanEffect=0.0287
+   7 GradientVelocity             Valid=3 Success=1 Failure=2 MeanEffect=0.0074
+   8 Final3ExpansionMean          Valid=3 Success=1 Failure=2 MeanEffect=-0.0177
+   9 GradientAcceleration         Valid=3 Success=1 Failure=2 MeanEffect=-0.0323
+  10 LateralDuration              Valid=3 Success=1 Failure=2 MeanEffect=-0.1439
+  11 Final3CompressionMean        Valid=3 Success=0 Failure=3 MeanEffect=-0.0763
+  12 BreakoutBarRange             Valid=3 Success=0 Failure=3 MeanEffect=-0.1504
+  13 BreakoutBarVolume            Valid=3 Success=0 Failure=3 MeanEffect=-0.1538
+
+Strongest Failure-Side Features
+===============================
+   1 BreakoutBarVolume            Valid=3 Success=0 Failure=3 MeanEffect=-0.1538
+   2 BreakoutBarRange             Valid=3 Success=0 Failure=3 MeanEffect=-0.1504
+   3 Final3CompressionMean        Valid=3 Success=0 Failure=3 MeanEffect=-0.0763
+   4 LateralDuration              Valid=3 Success=1 Failure=2 MeanEffect=-0.1439
+   5 GradientAcceleration         Valid=3 Success=1 Failure=2 MeanEffect=-0.0323
+   6 Final3ExpansionMean          Valid=3 Success=1 Failure=2 MeanEffect=-0.0177
+   7 GradientVelocity             Valid=3 Success=1 Failure=2 MeanEffect=0.0074
+   8 GradientDelta                Valid=3 Success=1 Failure=2 MeanEffect=0.0287
+   9 Final3DissipationMean        Valid=3 Success=1 Failure=2 MeanEffect=0.0419
+  10 LateralRange                 Valid=3 Success=2 Failure=1 MeanEffect=-0.0348
+  11 Final5GradientMean           Valid=3 Success=2 Failure=1 MeanEffect=0.0701
+  12 Final3GradientMean           Valid=3 Success=2 Failure=1 MeanEffect=0.0754
+  13 Final3AcceptedMean           Valid=3 Success=3 Failure=0 MeanEffect=0.0866
+
+Best Score Variant
+==================
+DominanceGradient                    MeanMetricRho=0.0137
+DominanceGradient_Weighted           MeanMetricRho=0.0092
+DominanceGradient_WithExpansion      MeanMetricRho=0.0039
+
+Cross-Instrument Research Notes
+===============================
+- DominanceGradient: GradientVelocity MeanRho=-0.0047; GradientAcceleration MeanRho=-0.0293.
+- DominanceGradient_WithExpansion: GradientVelocity MeanRho=0.0010; GradientAcceleration MeanRho=-0.0608.
+- DominanceGradient_Weighted: GradientVelocity MeanRho=-0.0144; GradientAcceleration MeanRho=-0.0351.
+- Final3CompressionMean: valid instruments=3, MeanEffect=-0.0763.
+- Final3DissipationMean: valid instruments=3, MeanEffect=0.0419.
+- LateralDuration: valid instruments=3, MeanEffect=-0.1439.
+- Metrics excluded from replicated rankings because fewer than two valid instruments: 0.

@@ -1,0 +1,1674 @@
+APVA Context-to-Topology Study v0.1 - 6E
+========================================
+Instrument: 6E
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_20260531_apva_bar_evidence_v01.csv
+Total rows: 35260
+Population B rows: 469
+Historical context is compared for topology-present versus topology-absent bars.
+This report measures Context -> Topology only; it does not measure forward outcomes.
+
+Section 1 - Diagnostics
+=======================
+Topology                               Group       Present    Absent
+Accepted+Compressed                    Positive        181     35079
+Accepted+Compressed+Dissipating        Positive        173     35087
+Compressed+Dissipating                 Positive       9461     25799
+Compressed+Peak                        Positive       3108     32152
+Compressed+Dissipating+Peak            Positive       1489     33771
+Accepted+Peak                          Negative       3659     31601
+Accepted+Climactic                     Negative       1846     33414
+Accepted+Expanding                     Negative      11163     24097
+Accepted+Dissipating                   Negative       7907     27353
+Accepted+Dissipating+Peak              Negative       1256     34004
+
+Section 2 - Topology Signature Table
+====================================
+
+Full Population: Accepted+Compressed
+------------------------------------
+Accepted+Compressed: Group=Positive; TotalBars=35260; TopologyPresent=181; TopologyAbsent=35079
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                    181    35079     2.563536     2.231592     0.331944    0.312717
+Prev5CompressedCount                  181    35079     2.475138     2.793580    -0.318442   -0.301149
+Prev5DissipatingCount                 181    35079     2.497238     2.437954     0.059283    0.052250
+Prev5ExpandingCount                   181    35079     3.033149     2.516833     0.516316    0.546702
+Prev5PeakCount                        181    35079     1.171271     0.952707     0.218564    0.205302
+Prev5ClimacticCount                   181    35079     0.718232     0.409504     0.308728    0.382901
+Prev5Dominance                        181    35079     2.585635     1.875966     0.709670    0.280278
+Prev5NetAcceptance                    181    35079     1.392265     1.278885     0.113380    0.080221
+Prev10AcceptedCount                   181    35079     4.861878     4.464209     0.397669    0.265592
+Prev10CompressedCount                 181    35079     5.204420     5.585478    -0.381059   -0.256323
+Prev10DissipatingCount                181    35079     5.027624     4.875567     0.152058    0.093855
+Prev10ExpandingCount                  181    35079     5.640884     5.035491     0.605393    0.452590
+Prev10PeakCount                       181    35079     2.165746     1.906098     0.259648    0.160373
+Prev10ClimacticCount                  181    35079     1.397790     0.819208     0.578582    0.451353
+Prev10Dominance                       181    35079     4.685083     3.754297     0.930785    0.257689
+Prev10NetAcceptance                   181    35079     2.696133     2.558112     0.138021    0.066898
+Prev20AcceptedCount                   181    35079     9.563536     8.927706     0.635830    0.297172
+Prev20CompressedCount                 181    35079    10.563536    11.168847    -0.605312   -0.285213
+Prev20DissipatingCount                181    35079    10.110497     9.749708     0.360789    0.153514
+Prev20ExpandingCount                  181    35079    10.906077    10.071496     0.834582    0.436449
+Prev20PeakCount                       181    35079     4.320442     3.811511     0.508931    0.215298
+Prev20ClimacticCount                  181    35079     2.453039     1.640184     0.812855    0.395054
+Prev20Dominance                       181    35079     9.110497     7.508566     1.601931    0.305169
+Prev20NetAcceptance                   181    35079     5.243094     5.116195     0.126899    0.042393
+
+Accepted+Compressed Ranked Signature Features
+---------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5ExpandingCount              Delta=  0.516316 Effect=  0.546702
+  2. Prev10ExpandingCount             Delta=  0.605393 Effect=  0.452590
+  3. Prev10ClimacticCount             Delta=  0.578582 Effect=  0.451353
+  4. Prev20ExpandingCount             Delta=  0.834582 Effect=  0.436449
+  5. Prev20ClimacticCount             Delta=  0.812855 Effect=  0.395054
+  6. Prev5ClimacticCount              Delta=  0.308728 Effect=  0.382901
+  7. Prev5AcceptedCount               Delta=  0.331944 Effect=  0.312717
+  8. Prev20Dominance                  Delta=  1.601931 Effect=  0.305169
+  9. Prev20AcceptedCount              Delta=  0.635830 Effect=  0.297172
+ 10. Prev5Dominance                   Delta=  0.709670 Effect=  0.280278
+ 11. Prev10AcceptedCount              Delta=  0.397669 Effect=  0.265592
+ 12. Prev10Dominance                  Delta=  0.930785 Effect=  0.257689
+ 13. Prev20PeakCount                  Delta=  0.508931 Effect=  0.215298
+ 14. Prev5PeakCount                   Delta=  0.218564 Effect=  0.205302
+ 15. Prev10PeakCount                  Delta=  0.259648 Effect=  0.160373
+ 16. Prev20DissipatingCount           Delta=  0.360789 Effect=  0.153514
+ 17. Prev10DissipatingCount           Delta=  0.152058 Effect=  0.093855
+ 18. Prev5NetAcceptance               Delta=  0.113380 Effect=  0.080221
+ 19. Prev10NetAcceptance              Delta=  0.138021 Effect=  0.066898
+ 20. Prev5DissipatingCount            Delta=  0.059283 Effect=  0.052250
+
+Top 20 Negative Context Features
+................................
+  1. Prev5CompressedCount             Delta= -0.318442 Effect= -0.301149
+  2. Prev20CompressedCount            Delta= -0.605312 Effect= -0.285213
+  3. Prev10CompressedCount            Delta= -0.381059 Effect= -0.256323
+  4. Prev20NetAcceptance              Delta=  0.126899 Effect=  0.042393
+  5. Prev5DissipatingCount            Delta=  0.059283 Effect=  0.052250
+  6. Prev10NetAcceptance              Delta=  0.138021 Effect=  0.066898
+  7. Prev5NetAcceptance               Delta=  0.113380 Effect=  0.080221
+  8. Prev10DissipatingCount           Delta=  0.152058 Effect=  0.093855
+  9. Prev20DissipatingCount           Delta=  0.360789 Effect=  0.153514
+ 10. Prev10PeakCount                  Delta=  0.259648 Effect=  0.160373
+ 11. Prev5PeakCount                   Delta=  0.218564 Effect=  0.205302
+ 12. Prev20PeakCount                  Delta=  0.508931 Effect=  0.215298
+ 13. Prev10Dominance                  Delta=  0.930785 Effect=  0.257689
+ 14. Prev10AcceptedCount              Delta=  0.397669 Effect=  0.265592
+ 15. Prev5Dominance                   Delta=  0.709670 Effect=  0.280278
+ 16. Prev20AcceptedCount              Delta=  0.635830 Effect=  0.297172
+ 17. Prev20Dominance                  Delta=  1.601931 Effect=  0.305169
+ 18. Prev5AcceptedCount               Delta=  0.331944 Effect=  0.312717
+ 19. Prev5ClimacticCount              Delta=  0.308728 Effect=  0.382901
+ 20. Prev20ClimacticCount             Delta=  0.812855 Effect=  0.395054
+
+Full Population: Accepted+Compressed+Dissipating
+------------------------------------------------
+Accepted+Compressed+Dissipating: Group=Positive; TotalBars=35260; TopologyPresent=173; TopologyAbsent=35087
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                    173    35087     2.566474     2.231653     0.334821    0.315425
+Prev5CompressedCount                  173    35087     2.473988     2.793513    -0.319525   -0.302171
+Prev5DissipatingCount                 173    35087     2.508671     2.437911     0.070759    0.062365
+Prev5ExpandingCount                   173    35087     3.034682     2.516944     0.517738    0.548192
+Prev5PeakCount                        173    35087     1.156069     0.952832     0.203238    0.190902
+Prev5ClimacticCount                   173    35087     0.728324     0.409525     0.318799    0.395395
+Prev5Dominance                        173    35087     2.601156     1.876051     0.725105    0.286374
+Prev5NetAcceptance                    173    35087     1.410405     1.278821     0.131583    0.093101
+Prev10AcceptedCount                   173    35087     4.867052     4.464275     0.402778    0.269003
+Prev10CompressedCount                 173    35087     5.202312     5.585402    -0.383090   -0.257688
+Prev10DissipatingCount                173    35087     5.000000     4.875737     0.124263    0.076698
+Prev10ExpandingCount                  173    35087     5.658960     5.035540     0.623419    0.466070
+Prev10PeakCount                       173    35087     2.167630     1.906148     0.261482    0.161506
+Prev10ClimacticCount                  173    35087     1.427746     0.819192     0.608553    0.474748
+Prev10Dominance                       173    35087     4.664740     3.754610     0.910130    0.251967
+Prev10NetAcceptance                   173    35087     2.699422     2.558127     0.141295    0.068485
+Prev20AcceptedCount                   173    35087     9.589595     8.927723     0.661873    0.309347
+Prev20CompressedCount                 173    35087    10.543353    11.168809    -0.625456   -0.294706
+Prev20DissipatingCount                173    35087    10.052023     9.750078     0.301945    0.128473
+Prev20ExpandingCount                  173    35087    10.901734    10.071707     0.830027    0.434056
+Prev20PeakCount                       173    35087     4.352601     3.811469     0.541133    0.228923
+Prev20ClimacticCount                  173    35087     2.497110     1.640152     0.856958    0.416499
+Prev20Dominance                       173    35087     9.098266     7.508992     1.589274    0.302753
+Prev20NetAcceptance                   173    35087     5.236994     5.116254     0.120740    0.040336
+
+Accepted+Compressed+Dissipating Ranked Signature Features
+---------------------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5ExpandingCount              Delta=  0.517738 Effect=  0.548192
+  2. Prev10ClimacticCount             Delta=  0.608553 Effect=  0.474748
+  3. Prev10ExpandingCount             Delta=  0.623419 Effect=  0.466070
+  4. Prev20ExpandingCount             Delta=  0.830027 Effect=  0.434056
+  5. Prev20ClimacticCount             Delta=  0.856958 Effect=  0.416499
+  6. Prev5ClimacticCount              Delta=  0.318799 Effect=  0.395395
+  7. Prev5AcceptedCount               Delta=  0.334821 Effect=  0.315425
+  8. Prev20AcceptedCount              Delta=  0.661873 Effect=  0.309347
+  9. Prev20Dominance                  Delta=  1.589274 Effect=  0.302753
+ 10. Prev5Dominance                   Delta=  0.725105 Effect=  0.286374
+ 11. Prev10AcceptedCount              Delta=  0.402778 Effect=  0.269003
+ 12. Prev10Dominance                  Delta=  0.910130 Effect=  0.251967
+ 13. Prev20PeakCount                  Delta=  0.541133 Effect=  0.228923
+ 14. Prev5PeakCount                   Delta=  0.203238 Effect=  0.190902
+ 15. Prev10PeakCount                  Delta=  0.261482 Effect=  0.161506
+ 16. Prev20DissipatingCount           Delta=  0.301945 Effect=  0.128473
+ 17. Prev5NetAcceptance               Delta=  0.131583 Effect=  0.093101
+ 18. Prev10DissipatingCount           Delta=  0.124263 Effect=  0.076698
+ 19. Prev10NetAcceptance              Delta=  0.141295 Effect=  0.068485
+ 20. Prev5DissipatingCount            Delta=  0.070759 Effect=  0.062365
+
+Top 20 Negative Context Features
+................................
+  1. Prev5CompressedCount             Delta= -0.319525 Effect= -0.302171
+  2. Prev20CompressedCount            Delta= -0.625456 Effect= -0.294706
+  3. Prev10CompressedCount            Delta= -0.383090 Effect= -0.257688
+  4. Prev20NetAcceptance              Delta=  0.120740 Effect=  0.040336
+  5. Prev5DissipatingCount            Delta=  0.070759 Effect=  0.062365
+  6. Prev10NetAcceptance              Delta=  0.141295 Effect=  0.068485
+  7. Prev10DissipatingCount           Delta=  0.124263 Effect=  0.076698
+  8. Prev5NetAcceptance               Delta=  0.131583 Effect=  0.093101
+  9. Prev20DissipatingCount           Delta=  0.301945 Effect=  0.128473
+ 10. Prev10PeakCount                  Delta=  0.261482 Effect=  0.161506
+ 11. Prev5PeakCount                   Delta=  0.203238 Effect=  0.190902
+ 12. Prev20PeakCount                  Delta=  0.541133 Effect=  0.228923
+ 13. Prev10Dominance                  Delta=  0.910130 Effect=  0.251967
+ 14. Prev10AcceptedCount              Delta=  0.402778 Effect=  0.269003
+ 15. Prev5Dominance                   Delta=  0.725105 Effect=  0.286374
+ 16. Prev20Dominance                  Delta=  1.589274 Effect=  0.302753
+ 17. Prev20AcceptedCount              Delta=  0.661873 Effect=  0.309347
+ 18. Prev5AcceptedCount               Delta=  0.334821 Effect=  0.315425
+ 19. Prev5ClimacticCount              Delta=  0.318799 Effect=  0.395395
+ 20. Prev20ClimacticCount             Delta=  0.856958 Effect=  0.416499
+
+Full Population: Compressed+Dissipating
+---------------------------------------
+Compressed+Dissipating: Group=Positive; TotalBars=35260; TopologyPresent=9461; TopologyAbsent=25799
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                   9461    25799     2.293415     2.211248     0.082167    0.077433
+Prev5CompressedCount                 9461    25799     2.735863     2.812512    -0.076649   -0.072507
+Prev5DissipatingCount                9461    25799     2.458408     2.430869     0.027539    0.024273
+Prev5ExpandingCount                  9461    25799     2.632386     2.478081     0.154305    0.163690
+Prev5PeakCount                       9461    25799     0.995032     0.938719     0.056314    0.052906
+Prev5ClimacticCount                  9461    25799     0.444245     0.398930     0.045315    0.056198
+Prev5Dominance                       9461    25799     2.015960     1.829606     0.186354    0.073624
+Prev5NetAcceptance                   9461    25799     1.298383     1.272530     0.025853    0.018292
+Prev10AcceptedCount                  9461    25799     4.540218     4.439126     0.101092    0.067535
+Prev10CompressedCount                9461    25799     5.517599     5.607698    -0.090099   -0.060618
+Prev10DissipatingCount               9461    25799     4.904238     4.866119     0.038120    0.023529
+Prev10ExpandingCount                 9461    25799     5.157489     4.995000     0.162489    0.121589
+Prev10PeakCount                      9461    25799     1.951696     1.891197     0.060499    0.037370
+Prev10ClimacticCount                 9461    25799     0.885213     0.799062     0.086151    0.067201
+Prev10Dominance                      9461    25799     3.926858     3.697546     0.229311    0.063500
+Prev10NetAcceptance                  9461    25799     2.588521     2.547928     0.040593    0.019676
+Prev20AcceptedCount                  9461    25799     9.028961     8.895035     0.133926    0.062604
+Prev20CompressedCount                9461    25799    11.080753    11.196907    -0.116154   -0.054735
+Prev20DissipatingCount               9461    25799     9.785012     9.739292     0.045720    0.019453
+Prev20ExpandingCount                 9461    25799    10.232111    10.018450     0.213660    0.111818
+Prev20PeakCount                      9461    25799     3.880457     3.789798     0.090659    0.038353
+Prev20ClimacticCount                 9461    25799     1.762816     1.600915     0.161901    0.078702
+Prev20Dominance                      9461    25799     7.733221     7.437420     0.295801    0.056354
+Prev20NetAcceptance                  9461    25799     5.148504     5.105237     0.043268    0.014455
+
+Compressed+Dissipating Ranked Signature Features
+------------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5ExpandingCount              Delta=  0.154305 Effect=  0.163690
+  2. Prev10ExpandingCount             Delta=  0.162489 Effect=  0.121589
+  3. Prev20ExpandingCount             Delta=  0.213660 Effect=  0.111818
+  4. Prev20ClimacticCount             Delta=  0.161901 Effect=  0.078702
+  5. Prev5AcceptedCount               Delta=  0.082167 Effect=  0.077433
+  6. Prev5Dominance                   Delta=  0.186354 Effect=  0.073624
+  7. Prev10AcceptedCount              Delta=  0.101092 Effect=  0.067535
+  8. Prev10ClimacticCount             Delta=  0.086151 Effect=  0.067201
+  9. Prev10Dominance                  Delta=  0.229311 Effect=  0.063500
+ 10. Prev20AcceptedCount              Delta=  0.133926 Effect=  0.062604
+ 11. Prev20Dominance                  Delta=  0.295801 Effect=  0.056354
+ 12. Prev5ClimacticCount              Delta=  0.045315 Effect=  0.056198
+ 13. Prev5PeakCount                   Delta=  0.056314 Effect=  0.052906
+ 14. Prev20PeakCount                  Delta=  0.090659 Effect=  0.038353
+ 15. Prev10PeakCount                  Delta=  0.060499 Effect=  0.037370
+ 16. Prev5DissipatingCount            Delta=  0.027539 Effect=  0.024273
+ 17. Prev10DissipatingCount           Delta=  0.038120 Effect=  0.023529
+ 18. Prev10NetAcceptance              Delta=  0.040593 Effect=  0.019676
+ 19. Prev20DissipatingCount           Delta=  0.045720 Effect=  0.019453
+ 20. Prev5NetAcceptance               Delta=  0.025853 Effect=  0.018292
+
+Top 20 Negative Context Features
+................................
+  1. Prev5CompressedCount             Delta= -0.076649 Effect= -0.072507
+  2. Prev10CompressedCount            Delta= -0.090099 Effect= -0.060618
+  3. Prev20CompressedCount            Delta= -0.116154 Effect= -0.054735
+  4. Prev20NetAcceptance              Delta=  0.043268 Effect=  0.014455
+  5. Prev5NetAcceptance               Delta=  0.025853 Effect=  0.018292
+  6. Prev20DissipatingCount           Delta=  0.045720 Effect=  0.019453
+  7. Prev10NetAcceptance              Delta=  0.040593 Effect=  0.019676
+  8. Prev10DissipatingCount           Delta=  0.038120 Effect=  0.023529
+  9. Prev5DissipatingCount            Delta=  0.027539 Effect=  0.024273
+ 10. Prev10PeakCount                  Delta=  0.060499 Effect=  0.037370
+ 11. Prev20PeakCount                  Delta=  0.090659 Effect=  0.038353
+ 12. Prev5PeakCount                   Delta=  0.056314 Effect=  0.052906
+ 13. Prev5ClimacticCount              Delta=  0.045315 Effect=  0.056198
+ 14. Prev20Dominance                  Delta=  0.295801 Effect=  0.056354
+ 15. Prev20AcceptedCount              Delta=  0.133926 Effect=  0.062604
+ 16. Prev10Dominance                  Delta=  0.229311 Effect=  0.063500
+ 17. Prev10ClimacticCount             Delta=  0.086151 Effect=  0.067201
+ 18. Prev10AcceptedCount              Delta=  0.101092 Effect=  0.067535
+ 19. Prev5Dominance                   Delta=  0.186354 Effect=  0.073624
+ 20. Prev5AcceptedCount               Delta=  0.082167 Effect=  0.077433
+
+Full Population: Compressed+Peak
+--------------------------------
+Compressed+Peak: Group=Positive; TotalBars=35260; TopologyPresent=3108; TopologyAbsent=32152
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                   3108    32152     2.380631     2.219053     0.161577    0.152322
+Prev5CompressedCount                 3108    32152     2.641892     2.806451    -0.164559   -0.155738
+Prev5DissipatingCount                3108    32152     2.300193     2.451605    -0.151412   -0.133545
+Prev5ExpandingCount                  3108    32152     2.800515     2.492318     0.308197    0.327489
+Prev5PeakCount                       3108    32152     1.368082     0.913785     0.454298    0.429843
+Prev5ClimacticCount                  3108    32152     0.573681     0.395372     0.178309    0.221501
+Prev5Dominance                       3108    32152     2.038932     1.864208     0.174724    0.069005
+Prev5NetAcceptance                   3108    32152     1.012548     1.305269    -0.292720   -0.207466
+Prev10AcceptedCount                  3108    32152     4.603282     4.453004     0.150277    0.100389
+Prev10CompressedCount                3108    32152     5.437259     5.597661    -0.160402   -0.107929
+Prev10DissipatingCount               3108    32152     4.730695     4.890427    -0.159732   -0.098628
+Prev10ExpandingCount                 3108    32152     5.320785     5.011321     0.309464    0.231732
+Prev10PeakCount                      3108    32152     2.398005     1.860009     0.537996    0.333759
+Prev10ClimacticCount                 3108    32152     0.900579     0.814599     0.085980    0.067050
+Prev10Dominance                      3108    32152     3.896718     3.745770     0.150948    0.041786
+Prev10NetAcceptance                  3108    32152     2.205277     2.592996    -0.387719   -0.188192
+Prev20AcceptedCount                  3108    32152     8.942407     8.929864     0.012542    0.005861
+Prev20CompressedCount                3108    32152    11.136422    11.168574    -0.032152   -0.015147
+Prev20DissipatingCount               3108    32152     9.485521     9.777277    -0.291755   -0.124210
+Prev20ExpandingCount                 3108    32152    10.197555    10.064008     0.133546    0.069819
+Prev20PeakCount                      3108    32152     4.172780     3.779454     0.393326    0.166558
+Prev20ClimacticCount                 3108    32152     1.435006     1.664593    -0.229587   -0.111592
+Prev20Dominance                      3108    32152     7.291506     7.538567    -0.247061   -0.047058
+Prev20NetAcceptance                  3108    32152     4.769627     5.150411    -0.380784   -0.127291
+
+Compressed+Peak Ranked Signature Features
+-----------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5PeakCount                   Delta=  0.454298 Effect=  0.429843
+  2. Prev10PeakCount                  Delta=  0.537996 Effect=  0.333759
+  3. Prev5ExpandingCount              Delta=  0.308197 Effect=  0.327489
+  4. Prev10ExpandingCount             Delta=  0.309464 Effect=  0.231732
+  5. Prev5ClimacticCount              Delta=  0.178309 Effect=  0.221501
+  6. Prev20PeakCount                  Delta=  0.393326 Effect=  0.166558
+  7. Prev5AcceptedCount               Delta=  0.161577 Effect=  0.152322
+  8. Prev10AcceptedCount              Delta=  0.150277 Effect=  0.100389
+  9. Prev20ExpandingCount             Delta=  0.133546 Effect=  0.069819
+ 10. Prev5Dominance                   Delta=  0.174724 Effect=  0.069005
+ 11. Prev10ClimacticCount             Delta=  0.085980 Effect=  0.067050
+ 12. Prev10Dominance                  Delta=  0.150948 Effect=  0.041786
+ 13. Prev20AcceptedCount              Delta=  0.012542 Effect=  0.005861
+ 14. Prev20CompressedCount            Delta= -0.032152 Effect= -0.015147
+ 15. Prev20Dominance                  Delta= -0.247061 Effect= -0.047058
+ 16. Prev10DissipatingCount           Delta= -0.159732 Effect= -0.098628
+ 17. Prev10CompressedCount            Delta= -0.160402 Effect= -0.107929
+ 18. Prev20ClimacticCount             Delta= -0.229587 Effect= -0.111592
+ 19. Prev20DissipatingCount           Delta= -0.291755 Effect= -0.124210
+ 20. Prev20NetAcceptance              Delta= -0.380784 Effect= -0.127291
+
+Top 20 Negative Context Features
+................................
+  1. Prev5NetAcceptance               Delta= -0.292720 Effect= -0.207466
+  2. Prev10NetAcceptance              Delta= -0.387719 Effect= -0.188192
+  3. Prev5CompressedCount             Delta= -0.164559 Effect= -0.155738
+  4. Prev5DissipatingCount            Delta= -0.151412 Effect= -0.133545
+  5. Prev20NetAcceptance              Delta= -0.380784 Effect= -0.127291
+  6. Prev20DissipatingCount           Delta= -0.291755 Effect= -0.124210
+  7. Prev20ClimacticCount             Delta= -0.229587 Effect= -0.111592
+  8. Prev10CompressedCount            Delta= -0.160402 Effect= -0.107929
+  9. Prev10DissipatingCount           Delta= -0.159732 Effect= -0.098628
+ 10. Prev20Dominance                  Delta= -0.247061 Effect= -0.047058
+ 11. Prev20CompressedCount            Delta= -0.032152 Effect= -0.015147
+ 12. Prev20AcceptedCount              Delta=  0.012542 Effect=  0.005861
+ 13. Prev10Dominance                  Delta=  0.150948 Effect=  0.041786
+ 14. Prev10ClimacticCount             Delta=  0.085980 Effect=  0.067050
+ 15. Prev5Dominance                   Delta=  0.174724 Effect=  0.069005
+ 16. Prev20ExpandingCount             Delta=  0.133546 Effect=  0.069819
+ 17. Prev10AcceptedCount              Delta=  0.150277 Effect=  0.100389
+ 18. Prev5AcceptedCount               Delta=  0.161577 Effect=  0.152322
+ 19. Prev20PeakCount                  Delta=  0.393326 Effect=  0.166558
+ 20. Prev5ClimacticCount              Delta=  0.178309 Effect=  0.221501
+
+Full Population: Compressed+Dissipating+Peak
+--------------------------------------------
+Compressed+Dissipating+Peak: Group=Positive; TotalBars=35260; TopologyPresent=1489; TopologyAbsent=33771
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                   1489    33771     2.471457     2.222795     0.248663    0.234461
+Prev5CompressedCount                 1489    33771     2.551377     2.802552    -0.251176   -0.237752
+Prev5DissipatingCount                1489    33771     2.293486     2.444642    -0.151156   -0.133272
+Prev5ExpandingCount                  1489    33771     2.978509     2.499245     0.479264    0.509740
+Prev5PeakCount                       1489    33771     1.513096     0.929170     0.583926    0.551803
+Prev5ClimacticCount                  1489    33771     0.656145     0.400284     0.255861    0.317861
+Prev5Dominance                       1489    33771     2.213566     1.864884     0.348682    0.137734
+Prev5NetAcceptance                   1489    33771     0.958361     1.293625    -0.335263   -0.237479
+Prev10AcceptedCount                  1489    33771     4.692411     4.456279     0.236132    0.157757
+Prev10CompressedCount                1489    33771     5.349899     5.593823    -0.243924   -0.164140
+Prev10DissipatingCount               1489    33771     4.707186     4.883806    -0.176620   -0.109039
+Prev10ExpandingCount                 1489    33771     5.523842     5.017204     0.506637    0.379665
+Prev10PeakCount                      1489    33771     2.552048     1.879009     0.673040    0.417140
+Prev10ClimacticCount                 1489    33771     1.018805     0.813509     0.205296    0.160152
+Prev10Dominance                      1489    33771     4.049698     3.746262     0.303436    0.084005
+Prev10NetAcceptance                  1489    33771     2.140363     2.577270    -0.436908   -0.211958
+Prev20AcceptedCount                  1489    33771     9.057757     8.925380     0.132377    0.061861
+Prev20CompressedCount                1489    33771    11.025520    11.171923    -0.146402   -0.068975
+Prev20DissipatingCount               1489    33771     9.490934     9.763051    -0.272118   -0.115809
+Prev20ExpandingCount                 1489    33771    10.413700    10.060881     0.352820    0.184547
+Prev20PeakCount                      1489    33771     4.384822     3.788961     0.595861    0.252368
+Prev20ClimacticCount                 1489    33771     1.574211     1.647449    -0.073238   -0.035581
+Prev20Dominance                      1489    33771     7.523170     7.516508     0.006662    0.001269
+Prev20NetAcceptance                  1489    33771     4.672935     5.136419    -0.463484   -0.154911
+
+Compressed+Dissipating+Peak Ranked Signature Features
+-----------------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5PeakCount                   Delta=  0.583926 Effect=  0.551803
+  2. Prev5ExpandingCount              Delta=  0.479264 Effect=  0.509740
+  3. Prev10PeakCount                  Delta=  0.673040 Effect=  0.417140
+  4. Prev10ExpandingCount             Delta=  0.506637 Effect=  0.379665
+  5. Prev5ClimacticCount              Delta=  0.255861 Effect=  0.317861
+  6. Prev20PeakCount                  Delta=  0.595861 Effect=  0.252368
+  7. Prev5AcceptedCount               Delta=  0.248663 Effect=  0.234461
+  8. Prev20ExpandingCount             Delta=  0.352820 Effect=  0.184547
+  9. Prev10ClimacticCount             Delta=  0.205296 Effect=  0.160152
+ 10. Prev10AcceptedCount              Delta=  0.236132 Effect=  0.157757
+ 11. Prev5Dominance                   Delta=  0.348682 Effect=  0.137734
+ 12. Prev10Dominance                  Delta=  0.303436 Effect=  0.084005
+ 13. Prev20AcceptedCount              Delta=  0.132377 Effect=  0.061861
+ 14. Prev20Dominance                  Delta=  0.006662 Effect=  0.001269
+ 15. Prev20ClimacticCount             Delta= -0.073238 Effect= -0.035581
+ 16. Prev20CompressedCount            Delta= -0.146402 Effect= -0.068975
+ 17. Prev10DissipatingCount           Delta= -0.176620 Effect= -0.109039
+ 18. Prev20DissipatingCount           Delta= -0.272118 Effect= -0.115809
+ 19. Prev5DissipatingCount            Delta= -0.151156 Effect= -0.133272
+ 20. Prev20NetAcceptance              Delta= -0.463484 Effect= -0.154911
+
+Top 20 Negative Context Features
+................................
+  1. Prev5CompressedCount             Delta= -0.251176 Effect= -0.237752
+  2. Prev5NetAcceptance               Delta= -0.335263 Effect= -0.237479
+  3. Prev10NetAcceptance              Delta= -0.436908 Effect= -0.211958
+  4. Prev10CompressedCount            Delta= -0.243924 Effect= -0.164140
+  5. Prev20NetAcceptance              Delta= -0.463484 Effect= -0.154911
+  6. Prev5DissipatingCount            Delta= -0.151156 Effect= -0.133272
+  7. Prev20DissipatingCount           Delta= -0.272118 Effect= -0.115809
+  8. Prev10DissipatingCount           Delta= -0.176620 Effect= -0.109039
+  9. Prev20CompressedCount            Delta= -0.146402 Effect= -0.068975
+ 10. Prev20ClimacticCount             Delta= -0.073238 Effect= -0.035581
+ 11. Prev20Dominance                  Delta=  0.006662 Effect=  0.001269
+ 12. Prev20AcceptedCount              Delta=  0.132377 Effect=  0.061861
+ 13. Prev10Dominance                  Delta=  0.303436 Effect=  0.084005
+ 14. Prev5Dominance                   Delta=  0.348682 Effect=  0.137734
+ 15. Prev10AcceptedCount              Delta=  0.236132 Effect=  0.157757
+ 16. Prev10ClimacticCount             Delta=  0.205296 Effect=  0.160152
+ 17. Prev20ExpandingCount             Delta=  0.352820 Effect=  0.184547
+ 18. Prev5AcceptedCount               Delta=  0.248663 Effect=  0.234461
+ 19. Prev20PeakCount                  Delta=  0.595861 Effect=  0.252368
+ 20. Prev5ClimacticCount              Delta=  0.255861 Effect=  0.317861
+
+Full Population: Accepted+Peak
+------------------------------
+Accepted+Peak: Group=Negative; TotalBars=35260; TopologyPresent=3659; TopologyAbsent=31601
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                   3659    31601     2.295163     2.226132     0.069031    0.065028
+Prev5CompressedCount                 3659    31601     2.731074     2.798994    -0.067920   -0.064229
+Prev5DissipatingCount                3659    31601     2.396556     2.443087    -0.046531   -0.041014
+Prev5ExpandingCount                  3659    31601     2.626947     2.507041     0.119906    0.126961
+Prev5PeakCount                       3659    31601     1.237770     0.920952     0.316818    0.298795
+Prev5ClimacticCount                  3659    31601     0.439464     0.407804     0.031661    0.039256
+Prev5Dominance                       3659    31601     1.960645     1.870226     0.090419    0.035705
+Prev5NetAcceptance                   3659    31601     1.057393     1.305180    -0.247787   -0.175568
+Prev10AcceptedCount                  3659    31601     4.525280     4.459416     0.065864    0.043985
+Prev10CompressedCount                3659    31601     5.525553     5.590234    -0.064681   -0.043505
+Prev10DissipatingCount               3659    31601     4.818256     4.883073    -0.064817   -0.040009
+Prev10ExpandingCount                 3659    31601     5.123804     5.028733     0.095071    0.071054
+Prev10PeakCount                      3659    31601     2.247882     1.868011     0.379871    0.235217
+Prev10ClimacticCount                 3659    31601     0.754578     0.830005    -0.075428   -0.058820
+Prev10Dominance                      3659    31601     3.817983     3.752255     0.065728    0.018194
+Prev10NetAcceptance                  3659    31601     2.277398     2.591405    -0.314007   -0.152361
+Prev20AcceptedCount                  3659    31601     8.903252     8.934179    -0.030927   -0.014451
+Prev20CompressedCount                3659    31601    11.188849    11.163064     0.025785    0.012147
+Prev20DissipatingCount               3659    31601     9.619295     9.766874    -0.147580   -0.062802
+Prev20ExpandingCount                 3659    31601    10.019404    10.082308    -0.062903   -0.032881
+Prev20PeakCount                      3659    31601     3.919104     3.801968     0.117135    0.049553
+Prev20ClimacticCount                 3659    31601     1.285597     1.685896    -0.400299   -0.194814
+Prev20Dominance                      3659    31601     7.333698     7.537989    -0.204292   -0.038911
+Prev20NetAcceptance                  3659    31601     4.984149     5.132211    -0.148062   -0.049469
+
+Accepted+Peak Ranked Signature Features
+---------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5PeakCount                   Delta=  0.316818 Effect=  0.298795
+  2. Prev10PeakCount                  Delta=  0.379871 Effect=  0.235217
+  3. Prev5ExpandingCount              Delta=  0.119906 Effect=  0.126961
+  4. Prev10ExpandingCount             Delta=  0.095071 Effect=  0.071054
+  5. Prev5AcceptedCount               Delta=  0.069031 Effect=  0.065028
+  6. Prev20PeakCount                  Delta=  0.117135 Effect=  0.049553
+  7. Prev10AcceptedCount              Delta=  0.065864 Effect=  0.043985
+  8. Prev5ClimacticCount              Delta=  0.031661 Effect=  0.039256
+  9. Prev5Dominance                   Delta=  0.090419 Effect=  0.035705
+ 10. Prev10Dominance                  Delta=  0.065728 Effect=  0.018194
+ 11. Prev20CompressedCount            Delta=  0.025785 Effect=  0.012147
+ 12. Prev20AcceptedCount              Delta= -0.030927 Effect= -0.014451
+ 13. Prev20ExpandingCount             Delta= -0.062903 Effect= -0.032881
+ 14. Prev20Dominance                  Delta= -0.204292 Effect= -0.038911
+ 15. Prev10DissipatingCount           Delta= -0.064817 Effect= -0.040009
+ 16. Prev5DissipatingCount            Delta= -0.046531 Effect= -0.041014
+ 17. Prev10CompressedCount            Delta= -0.064681 Effect= -0.043505
+ 18. Prev20NetAcceptance              Delta= -0.148062 Effect= -0.049469
+ 19. Prev10ClimacticCount             Delta= -0.075428 Effect= -0.058820
+ 20. Prev20DissipatingCount           Delta= -0.147580 Effect= -0.062802
+
+Top 20 Negative Context Features
+................................
+  1. Prev20ClimacticCount             Delta= -0.400299 Effect= -0.194814
+  2. Prev5NetAcceptance               Delta= -0.247787 Effect= -0.175568
+  3. Prev10NetAcceptance              Delta= -0.314007 Effect= -0.152361
+  4. Prev5CompressedCount             Delta= -0.067920 Effect= -0.064229
+  5. Prev20DissipatingCount           Delta= -0.147580 Effect= -0.062802
+  6. Prev10ClimacticCount             Delta= -0.075428 Effect= -0.058820
+  7. Prev20NetAcceptance              Delta= -0.148062 Effect= -0.049469
+  8. Prev10CompressedCount            Delta= -0.064681 Effect= -0.043505
+  9. Prev5DissipatingCount            Delta= -0.046531 Effect= -0.041014
+ 10. Prev10DissipatingCount           Delta= -0.064817 Effect= -0.040009
+ 11. Prev20Dominance                  Delta= -0.204292 Effect= -0.038911
+ 12. Prev20ExpandingCount             Delta= -0.062903 Effect= -0.032881
+ 13. Prev20AcceptedCount              Delta= -0.030927 Effect= -0.014451
+ 14. Prev20CompressedCount            Delta=  0.025785 Effect=  0.012147
+ 15. Prev10Dominance                  Delta=  0.065728 Effect=  0.018194
+ 16. Prev5Dominance                   Delta=  0.090419 Effect=  0.035705
+ 17. Prev5ClimacticCount              Delta=  0.031661 Effect=  0.039256
+ 18. Prev10AcceptedCount              Delta=  0.065864 Effect=  0.043985
+ 19. Prev20PeakCount                  Delta=  0.117135 Effect=  0.049553
+ 20. Prev5AcceptedCount               Delta=  0.069031 Effect=  0.065028
+
+Full Population: Accepted+Climactic
+-----------------------------------
+Accepted+Climactic: Group=Negative; TotalBars=35260; TopologyPresent=1846; TopologyAbsent=33414
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                   1846    33414     2.421993     2.222871     0.199123    0.187706
+Prev5CompressedCount                 1846    33414     2.611593     2.801909    -0.190317   -0.180085
+Prev5DissipatingCount                1846    33414     2.440412     2.438140     0.002272    0.002002
+Prev5ExpandingCount                  1846    33414     2.847237     2.501377     0.345861    0.367158
+Prev5PeakCount                       1846    33414     1.276273     0.936015     0.340258    0.320391
+Prev5ClimacticCount                  1846    33414     0.959913     0.380769     0.579145    0.727382
+Prev5Dominance                       1846    33414     2.250813     1.859101     0.391712    0.154764
+Prev5NetAcceptance                   1846    33414     1.145720     1.286856    -0.141135   -0.099882
+Prev10AcceptedCount                  1846    33414     4.686349     4.454091     0.232258    0.155183
+Prev10CompressedCount                1846    33414     5.372156     5.595200    -0.223044   -0.150091
+Prev10DissipatingCount               1846    33414     4.938787     4.872898     0.065889    0.040670
+Prev10ExpandingCount                 1846    33414     5.530336     5.011432     0.518904    0.389182
+Prev10PeakCount                      1846    33414     2.529794     1.873047     0.656747    0.407283
+Prev10ClimacticCount                 1846    33414     1.658722     0.775962     0.882759    0.696519
+Prev10Dominance                      1846    33414     4.252979     3.731789     0.521190    0.144342
+Prev10NetAcceptance                  1846    33414     2.156555     2.581044    -0.424489   -0.205963
+Prev20AcceptedCount                  1846    33414     9.260563     8.912761     0.347802    0.162625
+Prev20CompressedCount                1846    33414    10.843987    11.183516    -0.339529   -0.160049
+Prev20DissipatingCount               1846    33414     9.816901     9.747950     0.068951    0.029337
+Prev20ExpandingCount                 1846    33414    10.888949    10.030855     0.858094    0.450783
+Prev20PeakCount                      1846    33414     5.003792     3.748399     1.255393    0.534773
+Prev20ClimacticCount                 1846    33414     2.789274     1.581104     1.208170    0.592029
+Prev20Dominance                      1846    33414     8.233478     7.477195     0.756283    0.144112
+Prev20NetAcceptance                  1846    33414     4.256771     5.164362    -0.907591   -0.303892
+
+Accepted+Climactic Ranked Signature Features
+--------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5ClimacticCount              Delta=  0.579145 Effect=  0.727382
+  2. Prev10ClimacticCount             Delta=  0.882759 Effect=  0.696519
+  3. Prev20ClimacticCount             Delta=  1.208170 Effect=  0.592029
+  4. Prev20PeakCount                  Delta=  1.255393 Effect=  0.534773
+  5. Prev20ExpandingCount             Delta=  0.858094 Effect=  0.450783
+  6. Prev10PeakCount                  Delta=  0.656747 Effect=  0.407283
+  7. Prev10ExpandingCount             Delta=  0.518904 Effect=  0.389182
+  8. Prev5ExpandingCount              Delta=  0.345861 Effect=  0.367158
+  9. Prev5PeakCount                   Delta=  0.340258 Effect=  0.320391
+ 10. Prev5AcceptedCount               Delta=  0.199123 Effect=  0.187706
+ 11. Prev20AcceptedCount              Delta=  0.347802 Effect=  0.162625
+ 12. Prev10AcceptedCount              Delta=  0.232258 Effect=  0.155183
+ 13. Prev5Dominance                   Delta=  0.391712 Effect=  0.154764
+ 14. Prev10Dominance                  Delta=  0.521190 Effect=  0.144342
+ 15. Prev20Dominance                  Delta=  0.756283 Effect=  0.144112
+ 16. Prev10DissipatingCount           Delta=  0.065889 Effect=  0.040670
+ 17. Prev20DissipatingCount           Delta=  0.068951 Effect=  0.029337
+ 18. Prev5DissipatingCount            Delta=  0.002272 Effect=  0.002002
+ 19. Prev5NetAcceptance               Delta= -0.141135 Effect= -0.099882
+ 20. Prev10CompressedCount            Delta= -0.223044 Effect= -0.150091
+
+Top 20 Negative Context Features
+................................
+  1. Prev20NetAcceptance              Delta= -0.907591 Effect= -0.303892
+  2. Prev10NetAcceptance              Delta= -0.424489 Effect= -0.205963
+  3. Prev5CompressedCount             Delta= -0.190317 Effect= -0.180085
+  4. Prev20CompressedCount            Delta= -0.339529 Effect= -0.160049
+  5. Prev10CompressedCount            Delta= -0.223044 Effect= -0.150091
+  6. Prev5NetAcceptance               Delta= -0.141135 Effect= -0.099882
+  7. Prev5DissipatingCount            Delta=  0.002272 Effect=  0.002002
+  8. Prev20DissipatingCount           Delta=  0.068951 Effect=  0.029337
+  9. Prev10DissipatingCount           Delta=  0.065889 Effect=  0.040670
+ 10. Prev20Dominance                  Delta=  0.756283 Effect=  0.144112
+ 11. Prev10Dominance                  Delta=  0.521190 Effect=  0.144342
+ 12. Prev5Dominance                   Delta=  0.391712 Effect=  0.154764
+ 13. Prev10AcceptedCount              Delta=  0.232258 Effect=  0.155183
+ 14. Prev20AcceptedCount              Delta=  0.347802 Effect=  0.162625
+ 15. Prev5AcceptedCount               Delta=  0.199123 Effect=  0.187706
+ 16. Prev5PeakCount                   Delta=  0.340258 Effect=  0.320391
+ 17. Prev5ExpandingCount              Delta=  0.345861 Effect=  0.367158
+ 18. Prev10ExpandingCount             Delta=  0.518904 Effect=  0.389182
+ 19. Prev10PeakCount                  Delta=  0.656747 Effect=  0.407283
+ 20. Prev20ExpandingCount             Delta=  0.858094 Effect=  0.450783
+
+Full Population: Accepted+Expanding
+-----------------------------------
+Accepted+Expanding: Group=Negative; TotalBars=35260; TopologyPresent=11163; TopologyAbsent=24097
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                  11163    24097     2.162322     2.266174    -0.103852   -0.097914
+Prev5CompressedCount                11163    24097     2.863030     2.759016     0.104014    0.098446
+Prev5DissipatingCount               11163    24097     2.470572     2.423289     0.047283    0.041682
+Prev5ExpandingCount                 11163    24097     2.399086     2.575258    -0.176172   -0.187102
+Prev5PeakCount                      11163    24097     0.957359     0.952193     0.005166    0.004852
+Prev5ClimacticCount                 11163    24097     0.423900     0.405154     0.018746    0.023243
+Prev5Dominance                      11163    24097     1.769865     1.930448    -0.160583   -0.063436
+Prev5NetAcceptance                  11163    24097     1.204963     1.313981    -0.109018   -0.077183
+Prev10AcceptedCount                 11163    24097     4.394876     4.499315    -0.104439   -0.069776
+Prev10CompressedCount               11163    24097     5.654215     5.550774     0.103441    0.069605
+Prev10DissipatingCount              11163    24097     4.907104     4.862099     0.045005    0.027780
+Prev10ExpandingCount                11163    24097     4.933441     5.087314    -0.153873   -0.115140
+Prev10PeakCount                     11163    24097     1.936307     1.894053     0.042254    0.026099
+Prev10ClimacticCount                11163    24097     0.848159     0.810142     0.038017    0.029644
+Prev10Dominance                     11163    24097     3.647765     3.810640    -0.162875   -0.045095
+Prev10NetAcceptance                 11163    24097     2.458568     2.605262    -0.146694   -0.071140
+Prev20AcceptedCount                 11163    24097     8.877990     8.955513    -0.077523   -0.036230
+Prev20CompressedCount               11163    24097    11.216250    11.142341     0.073909    0.034822
+Prev20DissipatingCount              11163    24097     9.795754     9.731087     0.064667    0.027516
+Prev20ExpandingCount                11163    24097     9.972230    10.123750    -0.151520   -0.079254
+Prev20PeakCount                     11163    24097     3.845113     3.799768     0.045346    0.019182
+Prev20ClimacticCount                11163    24097     1.668996     1.632942     0.036054    0.017516
+Prev20Dominance                     11163    24097     7.457494     7.544259    -0.086765   -0.016525
+Prev20NetAcceptance                 11163    24097     5.032876     5.155746    -0.122869   -0.041054
+
+Accepted+Expanding Ranked Signature Features
+--------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5CompressedCount             Delta=  0.104014 Effect=  0.098446
+  2. Prev10CompressedCount            Delta=  0.103441 Effect=  0.069605
+  3. Prev5DissipatingCount            Delta=  0.047283 Effect=  0.041682
+  4. Prev20CompressedCount            Delta=  0.073909 Effect=  0.034822
+  5. Prev10ClimacticCount             Delta=  0.038017 Effect=  0.029644
+  6. Prev10DissipatingCount           Delta=  0.045005 Effect=  0.027780
+  7. Prev20DissipatingCount           Delta=  0.064667 Effect=  0.027516
+  8. Prev10PeakCount                  Delta=  0.042254 Effect=  0.026099
+  9. Prev5ClimacticCount              Delta=  0.018746 Effect=  0.023243
+ 10. Prev20PeakCount                  Delta=  0.045346 Effect=  0.019182
+ 11. Prev20ClimacticCount             Delta=  0.036054 Effect=  0.017516
+ 12. Prev5PeakCount                   Delta=  0.005166 Effect=  0.004852
+ 13. Prev20Dominance                  Delta= -0.086765 Effect= -0.016525
+ 14. Prev20AcceptedCount              Delta= -0.077523 Effect= -0.036230
+ 15. Prev20NetAcceptance              Delta= -0.122869 Effect= -0.041054
+ 16. Prev10Dominance                  Delta= -0.162875 Effect= -0.045095
+ 17. Prev5Dominance                   Delta= -0.160583 Effect= -0.063436
+ 18. Prev10AcceptedCount              Delta= -0.104439 Effect= -0.069776
+ 19. Prev10NetAcceptance              Delta= -0.146694 Effect= -0.071140
+ 20. Prev5NetAcceptance               Delta= -0.109018 Effect= -0.077183
+
+Top 20 Negative Context Features
+................................
+  1. Prev5ExpandingCount              Delta= -0.176172 Effect= -0.187102
+  2. Prev10ExpandingCount             Delta= -0.153873 Effect= -0.115140
+  3. Prev5AcceptedCount               Delta= -0.103852 Effect= -0.097914
+  4. Prev20ExpandingCount             Delta= -0.151520 Effect= -0.079254
+  5. Prev5NetAcceptance               Delta= -0.109018 Effect= -0.077183
+  6. Prev10NetAcceptance              Delta= -0.146694 Effect= -0.071140
+  7. Prev10AcceptedCount              Delta= -0.104439 Effect= -0.069776
+  8. Prev5Dominance                   Delta= -0.160583 Effect= -0.063436
+  9. Prev10Dominance                  Delta= -0.162875 Effect= -0.045095
+ 10. Prev20NetAcceptance              Delta= -0.122869 Effect= -0.041054
+ 11. Prev20AcceptedCount              Delta= -0.077523 Effect= -0.036230
+ 12. Prev20Dominance                  Delta= -0.086765 Effect= -0.016525
+ 13. Prev5PeakCount                   Delta=  0.005166 Effect=  0.004852
+ 14. Prev20ClimacticCount             Delta=  0.036054 Effect=  0.017516
+ 15. Prev20PeakCount                  Delta=  0.045346 Effect=  0.019182
+ 16. Prev5ClimacticCount              Delta=  0.018746 Effect=  0.023243
+ 17. Prev10PeakCount                  Delta=  0.042254 Effect=  0.026099
+ 18. Prev20DissipatingCount           Delta=  0.064667 Effect=  0.027516
+ 19. Prev10DissipatingCount           Delta=  0.045005 Effect=  0.027780
+ 20. Prev10ClimacticCount             Delta=  0.038017 Effect=  0.029644
+
+Full Population: Accepted+Dissipating
+-------------------------------------
+Accepted+Dissipating: Group=Negative; TotalBars=35260; TopologyPresent=7907; TopologyAbsent=27353
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                   7907    27353     2.295940     2.215187     0.080754    0.076095
+Prev5CompressedCount                 7907    27353     2.729227     2.810076    -0.080848   -0.076479
+Prev5DissipatingCount                7907    27353     2.437460     2.438489    -0.001029   -0.000907
+Prev5ExpandingCount                  7907    27353     2.606551     2.494315     0.112236    0.118897
+Prev5PeakCount                       7907    27353     1.020362     0.934596     0.085766    0.080599
+Prev5ClimacticCount                  7907    27353     0.484634     0.389829     0.094805    0.117679
+Prev5Dominance                       7907    27353     2.004174     1.843600     0.160573    0.063427
+Prev5NetAcceptance                   7907    27353     1.275579     1.280591    -0.005012   -0.003546
+Prev10AcceptedCount                  7907    27353     4.533831     4.446715     0.087116    0.058189
+Prev10CompressedCount                7907    27353     5.513975     5.603627    -0.089652   -0.060314
+Prev10DissipatingCount               7907    27353     4.902491     4.868790     0.033702    0.020802
+Prev10ExpandingCount                 7907    27353     5.131276     5.011809     0.119468    0.089329
+Prev10PeakCount                      7907    27353     1.979006     1.886740     0.092266    0.057001
+Prev10ClimacticCount                 7907    27353     0.903756     0.798596     0.105160    0.082041
+Prev10Dominance                      7907    27353     3.922347     3.711878     0.210469    0.058276
+Prev10NetAcceptance                  7907    27353     2.554825     2.559975    -0.005150   -0.002496
+Prev20AcceptedCount                  7907    27353     9.026053     8.903484     0.122569    0.057289
+Prev20CompressedCount                7907    27353    11.069306    11.193617    -0.124311   -0.058579
+Prev20DissipatingCount               7907    27353     9.834071     9.727708     0.106363    0.045262
+Prev20ExpandingCount                 7907    27353    10.185532    10.044054     0.141478    0.073986
+Prev20PeakCount                      7907    27353     3.912609     3.785654     0.126955    0.053714
+Prev20ClimacticCount                 7907    27353     1.746933     1.614704     0.132229    0.064262
+Prev20Dominance                      7907    27353     7.790818     7.437575     0.353243    0.067304
+Prev20NetAcceptance                  7907    27353     5.113444     5.117830    -0.004386   -0.001465
+
+Accepted+Dissipating Ranked Signature Features
+----------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5ExpandingCount              Delta=  0.112236 Effect=  0.118897
+  2. Prev5ClimacticCount              Delta=  0.094805 Effect=  0.117679
+  3. Prev10ExpandingCount             Delta=  0.119468 Effect=  0.089329
+  4. Prev10ClimacticCount             Delta=  0.105160 Effect=  0.082041
+  5. Prev5PeakCount                   Delta=  0.085766 Effect=  0.080599
+  6. Prev5AcceptedCount               Delta=  0.080754 Effect=  0.076095
+  7. Prev20ExpandingCount             Delta=  0.141478 Effect=  0.073986
+  8. Prev20Dominance                  Delta=  0.353243 Effect=  0.067304
+  9. Prev20ClimacticCount             Delta=  0.132229 Effect=  0.064262
+ 10. Prev5Dominance                   Delta=  0.160573 Effect=  0.063427
+ 11. Prev10Dominance                  Delta=  0.210469 Effect=  0.058276
+ 12. Prev10AcceptedCount              Delta=  0.087116 Effect=  0.058189
+ 13. Prev20AcceptedCount              Delta=  0.122569 Effect=  0.057289
+ 14. Prev10PeakCount                  Delta=  0.092266 Effect=  0.057001
+ 15. Prev20PeakCount                  Delta=  0.126955 Effect=  0.053714
+ 16. Prev20DissipatingCount           Delta=  0.106363 Effect=  0.045262
+ 17. Prev10DissipatingCount           Delta=  0.033702 Effect=  0.020802
+ 18. Prev5DissipatingCount            Delta= -0.001029 Effect= -0.000907
+ 19. Prev20NetAcceptance              Delta= -0.004386 Effect= -0.001465
+ 20. Prev10NetAcceptance              Delta= -0.005150 Effect= -0.002496
+
+Top 20 Negative Context Features
+................................
+  1. Prev5CompressedCount             Delta= -0.080848 Effect= -0.076479
+  2. Prev10CompressedCount            Delta= -0.089652 Effect= -0.060314
+  3. Prev20CompressedCount            Delta= -0.124311 Effect= -0.058579
+  4. Prev5NetAcceptance               Delta= -0.005012 Effect= -0.003546
+  5. Prev10NetAcceptance              Delta= -0.005150 Effect= -0.002496
+  6. Prev20NetAcceptance              Delta= -0.004386 Effect= -0.001465
+  7. Prev5DissipatingCount            Delta= -0.001029 Effect= -0.000907
+  8. Prev10DissipatingCount           Delta=  0.033702 Effect=  0.020802
+  9. Prev20DissipatingCount           Delta=  0.106363 Effect=  0.045262
+ 10. Prev20PeakCount                  Delta=  0.126955 Effect=  0.053714
+ 11. Prev10PeakCount                  Delta=  0.092266 Effect=  0.057001
+ 12. Prev20AcceptedCount              Delta=  0.122569 Effect=  0.057289
+ 13. Prev10AcceptedCount              Delta=  0.087116 Effect=  0.058189
+ 14. Prev10Dominance                  Delta=  0.210469 Effect=  0.058276
+ 15. Prev5Dominance                   Delta=  0.160573 Effect=  0.063427
+ 16. Prev20ClimacticCount             Delta=  0.132229 Effect=  0.064262
+ 17. Prev20Dominance                  Delta=  0.353243 Effect=  0.067304
+ 18. Prev20ExpandingCount             Delta=  0.141478 Effect=  0.073986
+ 19. Prev5AcceptedCount               Delta=  0.080754 Effect=  0.076095
+ 20. Prev5PeakCount                   Delta=  0.085766 Effect=  0.080599
+
+Full Population: Accepted+Dissipating+Peak
+------------------------------------------
+Accepted+Dissipating+Peak: Group=Negative; TotalBars=35260; TopologyPresent=1256; TopologyAbsent=34004
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                   1256    34004     2.503981     2.223297     0.280684    0.264677
+Prev5CompressedCount                 1256    34004     2.525478     2.801788    -0.276310   -0.261552
+Prev5DissipatingCount                1256    34004     2.291401     2.443683    -0.152282   -0.134257
+Prev5ExpandingCount                  1256    34004     3.000796     2.501706     0.499090    0.530607
+Prev5PeakCount                       1256    34004     1.506369     0.933420     0.572950    0.540824
+Prev5ClimacticCount                  1256    34004     0.760350     0.398188     0.362162    0.450568
+Prev5Dominance                       1256    34004     2.269904     1.865192     0.404712    0.159876
+Prev5NetAcceptance                   1256    34004     0.997611     1.289878    -0.292266   -0.206938
+Prev10AcceptedCount                  1256    34004     4.740446     4.456123     0.284323    0.189975
+Prev10CompressedCount                1256    34004     5.312898     5.593518    -0.280620   -0.188846
+Prev10DissipatingCount               1256    34004     4.760350     4.880632    -0.120281   -0.074247
+Prev10ExpandingCount                 1256    34004     5.511943     5.021115     0.490828    0.367600
+Prev10PeakCount                      1256    34004     2.574045     1.882808     0.691237    0.428261
+Prev10ClimacticCount                 1256    34004     1.113854     0.811405     0.302449    0.236044
+Prev10Dominance                      1256    34004     4.187898     3.743236     0.444662    0.123117
+Prev10NetAcceptance                  1256    34004     2.166401     2.573315    -0.406914   -0.197360
+Prev20AcceptedCount                  1256    34004     9.179140     8.921803     0.257337    0.120276
+Prev20CompressedCount                1256    34004    10.922771    11.174715    -0.251944   -0.118716
+Prev20DissipatingCount               1256    34004     9.585987     9.757676    -0.171688   -0.073055
+Prev20ExpandingCount                 1256    34004    10.421178    10.063022     0.358156    0.187322
+Prev20PeakCount                      1256    34004     4.334395     3.794906     0.539488    0.228402
+Prev20ClimacticCount                 1256    34004     1.666401     1.643542     0.022859    0.011105
+Prev20Dominance                      1256    34004     7.842357     7.504764     0.337593    0.064301
+Prev20NetAcceptance                  1256    34004     4.844745     5.126897    -0.282152   -0.094273
+
+Accepted+Dissipating+Peak Ranked Signature Features
+---------------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5PeakCount                   Delta=  0.572950 Effect=  0.540824
+  2. Prev5ExpandingCount              Delta=  0.499090 Effect=  0.530607
+  3. Prev5ClimacticCount              Delta=  0.362162 Effect=  0.450568
+  4. Prev10PeakCount                  Delta=  0.691237 Effect=  0.428261
+  5. Prev10ExpandingCount             Delta=  0.490828 Effect=  0.367600
+  6. Prev5AcceptedCount               Delta=  0.280684 Effect=  0.264677
+  7. Prev10ClimacticCount             Delta=  0.302449 Effect=  0.236044
+  8. Prev20PeakCount                  Delta=  0.539488 Effect=  0.228402
+  9. Prev10AcceptedCount              Delta=  0.284323 Effect=  0.189975
+ 10. Prev20ExpandingCount             Delta=  0.358156 Effect=  0.187322
+ 11. Prev5Dominance                   Delta=  0.404712 Effect=  0.159876
+ 12. Prev10Dominance                  Delta=  0.444662 Effect=  0.123117
+ 13. Prev20AcceptedCount              Delta=  0.257337 Effect=  0.120276
+ 14. Prev20Dominance                  Delta=  0.337593 Effect=  0.064301
+ 15. Prev20ClimacticCount             Delta=  0.022859 Effect=  0.011105
+ 16. Prev20DissipatingCount           Delta= -0.171688 Effect= -0.073055
+ 17. Prev10DissipatingCount           Delta= -0.120281 Effect= -0.074247
+ 18. Prev20NetAcceptance              Delta= -0.282152 Effect= -0.094273
+ 19. Prev20CompressedCount            Delta= -0.251944 Effect= -0.118716
+ 20. Prev5DissipatingCount            Delta= -0.152282 Effect= -0.134257
+
+Top 20 Negative Context Features
+................................
+  1. Prev5CompressedCount             Delta= -0.276310 Effect= -0.261552
+  2. Prev5NetAcceptance               Delta= -0.292266 Effect= -0.206938
+  3. Prev10NetAcceptance              Delta= -0.406914 Effect= -0.197360
+  4. Prev10CompressedCount            Delta= -0.280620 Effect= -0.188846
+  5. Prev5DissipatingCount            Delta= -0.152282 Effect= -0.134257
+  6. Prev20CompressedCount            Delta= -0.251944 Effect= -0.118716
+  7. Prev20NetAcceptance              Delta= -0.282152 Effect= -0.094273
+  8. Prev10DissipatingCount           Delta= -0.120281 Effect= -0.074247
+  9. Prev20DissipatingCount           Delta= -0.171688 Effect= -0.073055
+ 10. Prev20ClimacticCount             Delta=  0.022859 Effect=  0.011105
+ 11. Prev20Dominance                  Delta=  0.337593 Effect=  0.064301
+ 12. Prev20AcceptedCount              Delta=  0.257337 Effect=  0.120276
+ 13. Prev10Dominance                  Delta=  0.444662 Effect=  0.123117
+ 14. Prev5Dominance                   Delta=  0.404712 Effect=  0.159876
+ 15. Prev20ExpandingCount             Delta=  0.358156 Effect=  0.187322
+ 16. Prev10AcceptedCount              Delta=  0.284323 Effect=  0.189975
+ 17. Prev20PeakCount                  Delta=  0.539488 Effect=  0.228402
+ 18. Prev10ClimacticCount             Delta=  0.302449 Effect=  0.236044
+ 19. Prev5AcceptedCount               Delta=  0.280684 Effect=  0.264677
+ 20. Prev10ExpandingCount             Delta=  0.490828 Effect=  0.367600
+
+Section 3 - Ranked Signature Features
+=====================================
+Rankings are printed below each topology signature table.
+
+Section 4 - Context Window Comparison
+=====================================
+Topology                               Window BestFeature                       EffectSize
+Accepted+Compressed                     Prev5 Prev5ExpandingCount                 0.546702
+Accepted+Compressed                    Prev10 Prev10ExpandingCount                0.452590
+Accepted+Compressed                    Prev20 Prev20ExpandingCount                0.436449
+Accepted+Compressed+Dissipating         Prev5 Prev5ExpandingCount                 0.548192
+Accepted+Compressed+Dissipating        Prev10 Prev10ClimacticCount                0.474748
+Accepted+Compressed+Dissipating        Prev20 Prev20ExpandingCount                0.434056
+Compressed+Dissipating                  Prev5 Prev5ExpandingCount                 0.163690
+Compressed+Dissipating                 Prev10 Prev10ExpandingCount                0.121589
+Compressed+Dissipating                 Prev20 Prev20ExpandingCount                0.111818
+Compressed+Peak                         Prev5 Prev5PeakCount                      0.429843
+Compressed+Peak                        Prev10 Prev10PeakCount                     0.333759
+Compressed+Peak                        Prev20 Prev20PeakCount                     0.166558
+Compressed+Dissipating+Peak             Prev5 Prev5PeakCount                      0.551803
+Compressed+Dissipating+Peak            Prev10 Prev10PeakCount                     0.417140
+Compressed+Dissipating+Peak            Prev20 Prev20PeakCount                     0.252368
+Accepted+Peak                           Prev5 Prev5PeakCount                      0.298795
+Accepted+Peak                          Prev10 Prev10PeakCount                     0.235217
+Accepted+Peak                          Prev20 Prev20ClimacticCount               -0.194814
+Accepted+Climactic                      Prev5 Prev5ClimacticCount                 0.727382
+Accepted+Climactic                     Prev10 Prev10ClimacticCount                0.696519
+Accepted+Climactic                     Prev20 Prev20ClimacticCount                0.592029
+Accepted+Expanding                      Prev5 Prev5ExpandingCount                -0.187102
+Accepted+Expanding                     Prev10 Prev10ExpandingCount               -0.115140
+Accepted+Expanding                     Prev20 Prev20ExpandingCount               -0.079254
+Accepted+Dissipating                    Prev5 Prev5ExpandingCount                 0.118897
+Accepted+Dissipating                   Prev10 Prev10ExpandingCount                0.089329
+Accepted+Dissipating                   Prev20 Prev20ExpandingCount                0.073986
+Accepted+Dissipating+Peak               Prev5 Prev5PeakCount                      0.540824
+Accepted+Dissipating+Peak              Prev10 Prev10PeakCount                     0.428261
+Accepted+Dissipating+Peak              Prev20 Prev20PeakCount                     0.228402
+
+Section 5 - Context Similarity Matrix
+=====================================
+Topology                               Accepted+Com Accepted+Com Compressed+D Compressed+P Compressed+D Accepted+Pea Accepted+Cli Accepted+Exp Accepted+Dis Accepted+Dis
+Accepted+Compressed                          1.0000       0.9994       0.9758       0.5221       0.6818       0.1588       0.8406      -0.6340       0.9725       0.7644
+Accepted+Compressed+Dissipating              0.9994       1.0000       0.9731       0.5166       0.6772       0.1469       0.8462      -0.6303       0.9684       0.7602
+Compressed+Dissipating                       0.9758       0.9731       1.0000       0.5528       0.7062       0.2205       0.7606      -0.7456       0.9419       0.7671
+Compressed+Peak                              0.5221       0.5166       0.5528       1.0000       0.9786       0.8851       0.6398      -0.3497       0.6556       0.9439
+Compressed+Dissipating+Peak                  0.6818       0.6772       0.7062       0.9786       1.0000       0.7917       0.7489      -0.4490       0.7859       0.9854
+Accepted+Peak                                0.1588       0.1469       0.2205       0.8851       0.7917       1.0000       0.2723      -0.1302       0.3323       0.7220
+Accepted+Climactic                           0.8406       0.8462       0.7606       0.6398       0.7489       0.2723       1.0000      -0.2327       0.8633       0.8041
+Accepted+Expanding                          -0.6340      -0.6303      -0.7456      -0.3497      -0.4490      -0.1302      -0.2327       1.0000      -0.5747      -0.4675
+Accepted+Dissipating                         0.9725       0.9684       0.9419       0.6556       0.7859       0.3323       0.8633      -0.5747       1.0000       0.8629
+Accepted+Dissipating+Peak                    0.7644       0.7602       0.7671       0.9439       0.9854       0.7220       0.8041      -0.4675       0.8629       1.0000
+
+Section 6 - Topology Family Grouping
+====================================
+Family-candidate threshold: cosine similarity >= 0.75
+Topology A                             Topology B                              Similarity
+Accepted+Compressed                    Accepted+Compressed+Dissipating             0.9994
+Compressed+Dissipating+Peak            Accepted+Dissipating+Peak                   0.9854
+Compressed+Peak                        Compressed+Dissipating+Peak                 0.9786
+Accepted+Compressed                    Compressed+Dissipating                      0.9758
+Accepted+Compressed+Dissipating        Compressed+Dissipating                      0.9731
+Accepted+Compressed                    Accepted+Dissipating                        0.9725
+Accepted+Compressed+Dissipating        Accepted+Dissipating                        0.9684
+Compressed+Peak                        Accepted+Dissipating+Peak                   0.9439
+Compressed+Dissipating                 Accepted+Dissipating                        0.9419
+Compressed+Peak                        Accepted+Peak                               0.8851
+Accepted+Climactic                     Accepted+Dissipating                        0.8633
+Accepted+Dissipating                   Accepted+Dissipating+Peak                   0.8629
+Accepted+Compressed+Dissipating        Accepted+Climactic                          0.8462
+Accepted+Compressed                    Accepted+Climactic                          0.8406
+Accepted+Climactic                     Accepted+Dissipating+Peak                   0.8041
+Compressed+Dissipating+Peak            Accepted+Peak                               0.7917
+Compressed+Dissipating+Peak            Accepted+Dissipating                        0.7859
+Compressed+Dissipating                 Accepted+Dissipating+Peak                   0.7671
+Accepted+Compressed                    Accepted+Dissipating+Peak                   0.7644
+Compressed+Dissipating                 Accepted+Climactic                          0.7606
+Accepted+Compressed+Dissipating        Accepted+Dissipating+Peak                   0.7602
+
+Section 7 - Population B Repeat
+===============================
+
+Population B: Accepted+Compressed
+---------------------------------
+Accepted+Compressed: Group=Positive; TotalBars=469; TopologyPresent=0; TopologyAbsent=469
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                      0      469     0.000000     2.343284    -2.343284    0.000000
+Prev5CompressedCount                    0      469     0.000000     2.684435    -2.684435    0.000000
+Prev5DissipatingCount                   0      469     0.000000     2.558635    -2.558635    0.000000
+Prev5ExpandingCount                     0      469     0.000000     2.729211    -2.729211    0.000000
+Prev5PeakCount                          0      469     0.000000     0.923241    -0.923241    0.000000
+Prev5ClimacticCount                     0      469     0.000000     0.552239    -0.552239    0.000000
+Prev5Dominance                          0      469     0.000000     2.217484    -2.217484    0.000000
+Prev5NetAcceptance                      0      469     0.000000     1.420043    -1.420043    0.000000
+Prev10AcceptedCount                     0      469     0.000000     4.791045    -4.791045    0.000000
+Prev10CompressedCount                   0      469     0.000000     5.270789    -5.270789    0.000000
+Prev10DissipatingCount                  0      469     0.000000     5.130064    -5.130064    0.000000
+Prev10ExpandingCount                    0      469     0.000000     5.373134    -5.373134    0.000000
+Prev10PeakCount                         0      469     0.000000     1.991471    -1.991471    0.000000
+Prev10ClimacticCount                    0      469     0.000000     1.215352    -1.215352    0.000000
+Prev10Dominance                         0      469     0.000000     4.650320    -4.650320    0.000000
+Prev10NetAcceptance                     0      469     0.000000     2.799574    -2.799574    0.000000
+Prev20AcceptedCount                     0      469     0.000000     9.396588    -9.396588    0.000000
+Prev20CompressedCount                   0      469     0.000000    10.722814   -10.722814    0.000000
+Prev20DissipatingCount                  0      469     0.000000     9.972281    -9.972281    0.000000
+Prev20ExpandingCount                    0      469     0.000000    10.609808   -10.609808    0.000000
+Prev20PeakCount                         0      469     0.000000     4.023454    -4.023454    0.000000
+Prev20ClimacticCount                    0      469     0.000000     2.439232    -2.439232    0.000000
+Prev20Dominance                         0      469     0.000000     8.646055    -8.646055    0.000000
+Prev20NetAcceptance                     0      469     0.000000     5.373134    -5.373134    0.000000
+
+Accepted+Compressed Ranked Signature Features
+---------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Top 20 Negative Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Population B: Accepted+Compressed+Dissipating
+---------------------------------------------
+Accepted+Compressed+Dissipating: Group=Positive; TotalBars=469; TopologyPresent=0; TopologyAbsent=469
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                      0      469     0.000000     2.343284    -2.343284    0.000000
+Prev5CompressedCount                    0      469     0.000000     2.684435    -2.684435    0.000000
+Prev5DissipatingCount                   0      469     0.000000     2.558635    -2.558635    0.000000
+Prev5ExpandingCount                     0      469     0.000000     2.729211    -2.729211    0.000000
+Prev5PeakCount                          0      469     0.000000     0.923241    -0.923241    0.000000
+Prev5ClimacticCount                     0      469     0.000000     0.552239    -0.552239    0.000000
+Prev5Dominance                          0      469     0.000000     2.217484    -2.217484    0.000000
+Prev5NetAcceptance                      0      469     0.000000     1.420043    -1.420043    0.000000
+Prev10AcceptedCount                     0      469     0.000000     4.791045    -4.791045    0.000000
+Prev10CompressedCount                   0      469     0.000000     5.270789    -5.270789    0.000000
+Prev10DissipatingCount                  0      469     0.000000     5.130064    -5.130064    0.000000
+Prev10ExpandingCount                    0      469     0.000000     5.373134    -5.373134    0.000000
+Prev10PeakCount                         0      469     0.000000     1.991471    -1.991471    0.000000
+Prev10ClimacticCount                    0      469     0.000000     1.215352    -1.215352    0.000000
+Prev10Dominance                         0      469     0.000000     4.650320    -4.650320    0.000000
+Prev10NetAcceptance                     0      469     0.000000     2.799574    -2.799574    0.000000
+Prev20AcceptedCount                     0      469     0.000000     9.396588    -9.396588    0.000000
+Prev20CompressedCount                   0      469     0.000000    10.722814   -10.722814    0.000000
+Prev20DissipatingCount                  0      469     0.000000     9.972281    -9.972281    0.000000
+Prev20ExpandingCount                    0      469     0.000000    10.609808   -10.609808    0.000000
+Prev20PeakCount                         0      469     0.000000     4.023454    -4.023454    0.000000
+Prev20ClimacticCount                    0      469     0.000000     2.439232    -2.439232    0.000000
+Prev20Dominance                         0      469     0.000000     8.646055    -8.646055    0.000000
+Prev20NetAcceptance                     0      469     0.000000     5.373134    -5.373134    0.000000
+
+Accepted+Compressed+Dissipating Ranked Signature Features
+---------------------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Top 20 Negative Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Population B: Compressed+Dissipating
+------------------------------------
+Compressed+Dissipating: Group=Positive; TotalBars=469; TopologyPresent=469; TopologyAbsent=0
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                    469        0     2.343284     0.000000     2.343284    0.000000
+Prev5CompressedCount                  469        0     2.684435     0.000000     2.684435    0.000000
+Prev5DissipatingCount                 469        0     2.558635     0.000000     2.558635    0.000000
+Prev5ExpandingCount                   469        0     2.729211     0.000000     2.729211    0.000000
+Prev5PeakCount                        469        0     0.923241     0.000000     0.923241    0.000000
+Prev5ClimacticCount                   469        0     0.552239     0.000000     0.552239    0.000000
+Prev5Dominance                        469        0     2.217484     0.000000     2.217484    0.000000
+Prev5NetAcceptance                    469        0     1.420043     0.000000     1.420043    0.000000
+Prev10AcceptedCount                   469        0     4.791045     0.000000     4.791045    0.000000
+Prev10CompressedCount                 469        0     5.270789     0.000000     5.270789    0.000000
+Prev10DissipatingCount                469        0     5.130064     0.000000     5.130064    0.000000
+Prev10ExpandingCount                  469        0     5.373134     0.000000     5.373134    0.000000
+Prev10PeakCount                       469        0     1.991471     0.000000     1.991471    0.000000
+Prev10ClimacticCount                  469        0     1.215352     0.000000     1.215352    0.000000
+Prev10Dominance                       469        0     4.650320     0.000000     4.650320    0.000000
+Prev10NetAcceptance                   469        0     2.799574     0.000000     2.799574    0.000000
+Prev20AcceptedCount                   469        0     9.396588     0.000000     9.396588    0.000000
+Prev20CompressedCount                 469        0    10.722814     0.000000    10.722814    0.000000
+Prev20DissipatingCount                469        0     9.972281     0.000000     9.972281    0.000000
+Prev20ExpandingCount                  469        0    10.609808     0.000000    10.609808    0.000000
+Prev20PeakCount                       469        0     4.023454     0.000000     4.023454    0.000000
+Prev20ClimacticCount                  469        0     2.439232     0.000000     2.439232    0.000000
+Prev20Dominance                       469        0     8.646055     0.000000     8.646055    0.000000
+Prev20NetAcceptance                   469        0     5.373134     0.000000     5.373134    0.000000
+
+Compressed+Dissipating Ranked Signature Features
+------------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev10AcceptedCount              Delta=  4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta=  1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta=  5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta=  5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta=  4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta=  5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta=  2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta=  1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta=  9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta=  2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta= 10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta=  9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta=  8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta= 10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta=  5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta=  4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta=  2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta=  0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta=  2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta=  2.558635 Effect=  0.000000
+
+Top 20 Negative Context Features
+................................
+  1. Prev10AcceptedCount              Delta=  4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta=  1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta=  5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta=  5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta=  4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta=  5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta=  2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta=  1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta=  9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta=  2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta= 10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta=  9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta=  8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta= 10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta=  5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta=  4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta=  2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta=  0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta=  2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta=  2.558635 Effect=  0.000000
+
+Population B: Compressed+Peak
+-----------------------------
+Compressed+Peak: Group=Positive; TotalBars=469; TopologyPresent=78; TopologyAbsent=391
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                     78      391     2.487179     2.314578     0.172601    0.151795
+Prev5CompressedCount                   78      391     2.551282     2.710997    -0.159715   -0.142623
+Prev5DissipatingCount                  78      391     2.538462     2.562660    -0.024198   -0.023210
+Prev5ExpandingCount                    78      391     2.935897     2.687980     0.247918    0.262482
+Prev5PeakCount                         78      391     1.230769     0.861893     0.368877    0.385142
+Prev5ClimacticCount                    78      391     0.923077     0.478261     0.444816    0.483597
+Prev5Dominance                         78      391     2.474359     2.166240     0.308119    0.115082
+Prev5NetAcceptance                     78      391     1.256410     1.452685    -0.196275   -0.137343
+Prev10AcceptedCount                    78      391     4.974359     4.754476     0.219883    0.139372
+Prev10CompressedCount                  78      391     5.102564     5.304348    -0.201784   -0.129493
+Prev10DissipatingCount                 78      391     5.230769     5.109974     0.120795    0.082461
+Prev10ExpandingCount                   78      391     5.615385     5.324808     0.290576    0.204138
+Prev10PeakCount                        78      391     2.179487     1.953964     0.225523    0.141597
+Prev10ClimacticCount                   78      391     1.602564     1.138107     0.464457    0.293783
+Prev10Dominance                        78      391     5.102564     4.560102     0.542462    0.145722
+Prev10NetAcceptance                    78      391     2.794872     2.800512    -0.005640   -0.002702
+Prev20AcceptedCount                    78      391     9.448718     9.386189     0.062529    0.029657
+Prev20CompressedCount                  78      391    10.653846    10.736573    -0.082727   -0.040060
+Prev20DissipatingCount                 78      391     9.948718     9.976982    -0.028264   -0.012950
+Prev20ExpandingCount                   78      391    10.692308    10.593350     0.098957    0.050224
+Prev20PeakCount                        78      391     4.320513     3.964194     0.356318    0.149229
+Prev20ClimacticCount                   78      391     2.756410     2.375959     0.380451    0.153145
+Prev20Dominance                        78      391     8.743590     8.626598     0.116991    0.023215
+Prev20NetAcceptance                    78      391     5.128205     5.421995    -0.293790   -0.098316
+
+Compressed+Peak Ranked Signature Features
+-----------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5ClimacticCount              Delta=  0.444816 Effect=  0.483597
+  2. Prev5PeakCount                   Delta=  0.368877 Effect=  0.385142
+  3. Prev10ClimacticCount             Delta=  0.464457 Effect=  0.293783
+  4. Prev5ExpandingCount              Delta=  0.247918 Effect=  0.262482
+  5. Prev10ExpandingCount             Delta=  0.290576 Effect=  0.204138
+  6. Prev20ClimacticCount             Delta=  0.380451 Effect=  0.153145
+  7. Prev5AcceptedCount               Delta=  0.172601 Effect=  0.151795
+  8. Prev20PeakCount                  Delta=  0.356318 Effect=  0.149229
+  9. Prev10Dominance                  Delta=  0.542462 Effect=  0.145722
+ 10. Prev10PeakCount                  Delta=  0.225523 Effect=  0.141597
+ 11. Prev10AcceptedCount              Delta=  0.219883 Effect=  0.139372
+ 12. Prev5Dominance                   Delta=  0.308119 Effect=  0.115082
+ 13. Prev10DissipatingCount           Delta=  0.120795 Effect=  0.082461
+ 14. Prev20ExpandingCount             Delta=  0.098957 Effect=  0.050224
+ 15. Prev20AcceptedCount              Delta=  0.062529 Effect=  0.029657
+ 16. Prev20Dominance                  Delta=  0.116991 Effect=  0.023215
+ 17. Prev10NetAcceptance              Delta= -0.005640 Effect= -0.002702
+ 18. Prev20DissipatingCount           Delta= -0.028264 Effect= -0.012950
+ 19. Prev5DissipatingCount            Delta= -0.024198 Effect= -0.023210
+ 20. Prev20CompressedCount            Delta= -0.082727 Effect= -0.040060
+
+Top 20 Negative Context Features
+................................
+  1. Prev5CompressedCount             Delta= -0.159715 Effect= -0.142623
+  2. Prev5NetAcceptance               Delta= -0.196275 Effect= -0.137343
+  3. Prev10CompressedCount            Delta= -0.201784 Effect= -0.129493
+  4. Prev20NetAcceptance              Delta= -0.293790 Effect= -0.098316
+  5. Prev20CompressedCount            Delta= -0.082727 Effect= -0.040060
+  6. Prev5DissipatingCount            Delta= -0.024198 Effect= -0.023210
+  7. Prev20DissipatingCount           Delta= -0.028264 Effect= -0.012950
+  8. Prev10NetAcceptance              Delta= -0.005640 Effect= -0.002702
+  9. Prev20Dominance                  Delta=  0.116991 Effect=  0.023215
+ 10. Prev20AcceptedCount              Delta=  0.062529 Effect=  0.029657
+ 11. Prev20ExpandingCount             Delta=  0.098957 Effect=  0.050224
+ 12. Prev10DissipatingCount           Delta=  0.120795 Effect=  0.082461
+ 13. Prev5Dominance                   Delta=  0.308119 Effect=  0.115082
+ 14. Prev10AcceptedCount              Delta=  0.219883 Effect=  0.139372
+ 15. Prev10PeakCount                  Delta=  0.225523 Effect=  0.141597
+ 16. Prev10Dominance                  Delta=  0.542462 Effect=  0.145722
+ 17. Prev20PeakCount                  Delta=  0.356318 Effect=  0.149229
+ 18. Prev5AcceptedCount               Delta=  0.172601 Effect=  0.151795
+ 19. Prev20ClimacticCount             Delta=  0.380451 Effect=  0.153145
+ 20. Prev10ExpandingCount             Delta=  0.290576 Effect=  0.204138
+
+Population B: Compressed+Dissipating+Peak
+-----------------------------------------
+Compressed+Dissipating+Peak: Group=Positive; TotalBars=469; TopologyPresent=78; TopologyAbsent=391
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                     78      391     2.487179     2.314578     0.172601    0.151795
+Prev5CompressedCount                   78      391     2.551282     2.710997    -0.159715   -0.142623
+Prev5DissipatingCount                  78      391     2.538462     2.562660    -0.024198   -0.023210
+Prev5ExpandingCount                    78      391     2.935897     2.687980     0.247918    0.262482
+Prev5PeakCount                         78      391     1.230769     0.861893     0.368877    0.385142
+Prev5ClimacticCount                    78      391     0.923077     0.478261     0.444816    0.483597
+Prev5Dominance                         78      391     2.474359     2.166240     0.308119    0.115082
+Prev5NetAcceptance                     78      391     1.256410     1.452685    -0.196275   -0.137343
+Prev10AcceptedCount                    78      391     4.974359     4.754476     0.219883    0.139372
+Prev10CompressedCount                  78      391     5.102564     5.304348    -0.201784   -0.129493
+Prev10DissipatingCount                 78      391     5.230769     5.109974     0.120795    0.082461
+Prev10ExpandingCount                   78      391     5.615385     5.324808     0.290576    0.204138
+Prev10PeakCount                        78      391     2.179487     1.953964     0.225523    0.141597
+Prev10ClimacticCount                   78      391     1.602564     1.138107     0.464457    0.293783
+Prev10Dominance                        78      391     5.102564     4.560102     0.542462    0.145722
+Prev10NetAcceptance                    78      391     2.794872     2.800512    -0.005640   -0.002702
+Prev20AcceptedCount                    78      391     9.448718     9.386189     0.062529    0.029657
+Prev20CompressedCount                  78      391    10.653846    10.736573    -0.082727   -0.040060
+Prev20DissipatingCount                 78      391     9.948718     9.976982    -0.028264   -0.012950
+Prev20ExpandingCount                   78      391    10.692308    10.593350     0.098957    0.050224
+Prev20PeakCount                        78      391     4.320513     3.964194     0.356318    0.149229
+Prev20ClimacticCount                   78      391     2.756410     2.375959     0.380451    0.153145
+Prev20Dominance                        78      391     8.743590     8.626598     0.116991    0.023215
+Prev20NetAcceptance                    78      391     5.128205     5.421995    -0.293790   -0.098316
+
+Compressed+Dissipating+Peak Ranked Signature Features
+-----------------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev5ClimacticCount              Delta=  0.444816 Effect=  0.483597
+  2. Prev5PeakCount                   Delta=  0.368877 Effect=  0.385142
+  3. Prev10ClimacticCount             Delta=  0.464457 Effect=  0.293783
+  4. Prev5ExpandingCount              Delta=  0.247918 Effect=  0.262482
+  5. Prev10ExpandingCount             Delta=  0.290576 Effect=  0.204138
+  6. Prev20ClimacticCount             Delta=  0.380451 Effect=  0.153145
+  7. Prev5AcceptedCount               Delta=  0.172601 Effect=  0.151795
+  8. Prev20PeakCount                  Delta=  0.356318 Effect=  0.149229
+  9. Prev10Dominance                  Delta=  0.542462 Effect=  0.145722
+ 10. Prev10PeakCount                  Delta=  0.225523 Effect=  0.141597
+ 11. Prev10AcceptedCount              Delta=  0.219883 Effect=  0.139372
+ 12. Prev5Dominance                   Delta=  0.308119 Effect=  0.115082
+ 13. Prev10DissipatingCount           Delta=  0.120795 Effect=  0.082461
+ 14. Prev20ExpandingCount             Delta=  0.098957 Effect=  0.050224
+ 15. Prev20AcceptedCount              Delta=  0.062529 Effect=  0.029657
+ 16. Prev20Dominance                  Delta=  0.116991 Effect=  0.023215
+ 17. Prev10NetAcceptance              Delta= -0.005640 Effect= -0.002702
+ 18. Prev20DissipatingCount           Delta= -0.028264 Effect= -0.012950
+ 19. Prev5DissipatingCount            Delta= -0.024198 Effect= -0.023210
+ 20. Prev20CompressedCount            Delta= -0.082727 Effect= -0.040060
+
+Top 20 Negative Context Features
+................................
+  1. Prev5CompressedCount             Delta= -0.159715 Effect= -0.142623
+  2. Prev5NetAcceptance               Delta= -0.196275 Effect= -0.137343
+  3. Prev10CompressedCount            Delta= -0.201784 Effect= -0.129493
+  4. Prev20NetAcceptance              Delta= -0.293790 Effect= -0.098316
+  5. Prev20CompressedCount            Delta= -0.082727 Effect= -0.040060
+  6. Prev5DissipatingCount            Delta= -0.024198 Effect= -0.023210
+  7. Prev20DissipatingCount           Delta= -0.028264 Effect= -0.012950
+  8. Prev10NetAcceptance              Delta= -0.005640 Effect= -0.002702
+  9. Prev20Dominance                  Delta=  0.116991 Effect=  0.023215
+ 10. Prev20AcceptedCount              Delta=  0.062529 Effect=  0.029657
+ 11. Prev20ExpandingCount             Delta=  0.098957 Effect=  0.050224
+ 12. Prev10DissipatingCount           Delta=  0.120795 Effect=  0.082461
+ 13. Prev5Dominance                   Delta=  0.308119 Effect=  0.115082
+ 14. Prev10AcceptedCount              Delta=  0.219883 Effect=  0.139372
+ 15. Prev10PeakCount                  Delta=  0.225523 Effect=  0.141597
+ 16. Prev10Dominance                  Delta=  0.542462 Effect=  0.145722
+ 17. Prev20PeakCount                  Delta=  0.356318 Effect=  0.149229
+ 18. Prev5AcceptedCount               Delta=  0.172601 Effect=  0.151795
+ 19. Prev20ClimacticCount             Delta=  0.380451 Effect=  0.153145
+ 20. Prev10ExpandingCount             Delta=  0.290576 Effect=  0.204138
+
+Population B: Accepted+Peak
+---------------------------
+Accepted+Peak: Group=Negative; TotalBars=469; TopologyPresent=0; TopologyAbsent=469
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                      0      469     0.000000     2.343284    -2.343284    0.000000
+Prev5CompressedCount                    0      469     0.000000     2.684435    -2.684435    0.000000
+Prev5DissipatingCount                   0      469     0.000000     2.558635    -2.558635    0.000000
+Prev5ExpandingCount                     0      469     0.000000     2.729211    -2.729211    0.000000
+Prev5PeakCount                          0      469     0.000000     0.923241    -0.923241    0.000000
+Prev5ClimacticCount                     0      469     0.000000     0.552239    -0.552239    0.000000
+Prev5Dominance                          0      469     0.000000     2.217484    -2.217484    0.000000
+Prev5NetAcceptance                      0      469     0.000000     1.420043    -1.420043    0.000000
+Prev10AcceptedCount                     0      469     0.000000     4.791045    -4.791045    0.000000
+Prev10CompressedCount                   0      469     0.000000     5.270789    -5.270789    0.000000
+Prev10DissipatingCount                  0      469     0.000000     5.130064    -5.130064    0.000000
+Prev10ExpandingCount                    0      469     0.000000     5.373134    -5.373134    0.000000
+Prev10PeakCount                         0      469     0.000000     1.991471    -1.991471    0.000000
+Prev10ClimacticCount                    0      469     0.000000     1.215352    -1.215352    0.000000
+Prev10Dominance                         0      469     0.000000     4.650320    -4.650320    0.000000
+Prev10NetAcceptance                     0      469     0.000000     2.799574    -2.799574    0.000000
+Prev20AcceptedCount                     0      469     0.000000     9.396588    -9.396588    0.000000
+Prev20CompressedCount                   0      469     0.000000    10.722814   -10.722814    0.000000
+Prev20DissipatingCount                  0      469     0.000000     9.972281    -9.972281    0.000000
+Prev20ExpandingCount                    0      469     0.000000    10.609808   -10.609808    0.000000
+Prev20PeakCount                         0      469     0.000000     4.023454    -4.023454    0.000000
+Prev20ClimacticCount                    0      469     0.000000     2.439232    -2.439232    0.000000
+Prev20Dominance                         0      469     0.000000     8.646055    -8.646055    0.000000
+Prev20NetAcceptance                     0      469     0.000000     5.373134    -5.373134    0.000000
+
+Accepted+Peak Ranked Signature Features
+---------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Top 20 Negative Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Population B: Accepted+Climactic
+--------------------------------
+Accepted+Climactic: Group=Negative; TotalBars=469; TopologyPresent=0; TopologyAbsent=469
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                      0      469     0.000000     2.343284    -2.343284    0.000000
+Prev5CompressedCount                    0      469     0.000000     2.684435    -2.684435    0.000000
+Prev5DissipatingCount                   0      469     0.000000     2.558635    -2.558635    0.000000
+Prev5ExpandingCount                     0      469     0.000000     2.729211    -2.729211    0.000000
+Prev5PeakCount                          0      469     0.000000     0.923241    -0.923241    0.000000
+Prev5ClimacticCount                     0      469     0.000000     0.552239    -0.552239    0.000000
+Prev5Dominance                          0      469     0.000000     2.217484    -2.217484    0.000000
+Prev5NetAcceptance                      0      469     0.000000     1.420043    -1.420043    0.000000
+Prev10AcceptedCount                     0      469     0.000000     4.791045    -4.791045    0.000000
+Prev10CompressedCount                   0      469     0.000000     5.270789    -5.270789    0.000000
+Prev10DissipatingCount                  0      469     0.000000     5.130064    -5.130064    0.000000
+Prev10ExpandingCount                    0      469     0.000000     5.373134    -5.373134    0.000000
+Prev10PeakCount                         0      469     0.000000     1.991471    -1.991471    0.000000
+Prev10ClimacticCount                    0      469     0.000000     1.215352    -1.215352    0.000000
+Prev10Dominance                         0      469     0.000000     4.650320    -4.650320    0.000000
+Prev10NetAcceptance                     0      469     0.000000     2.799574    -2.799574    0.000000
+Prev20AcceptedCount                     0      469     0.000000     9.396588    -9.396588    0.000000
+Prev20CompressedCount                   0      469     0.000000    10.722814   -10.722814    0.000000
+Prev20DissipatingCount                  0      469     0.000000     9.972281    -9.972281    0.000000
+Prev20ExpandingCount                    0      469     0.000000    10.609808   -10.609808    0.000000
+Prev20PeakCount                         0      469     0.000000     4.023454    -4.023454    0.000000
+Prev20ClimacticCount                    0      469     0.000000     2.439232    -2.439232    0.000000
+Prev20Dominance                         0      469     0.000000     8.646055    -8.646055    0.000000
+Prev20NetAcceptance                     0      469     0.000000     5.373134    -5.373134    0.000000
+
+Accepted+Climactic Ranked Signature Features
+--------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Top 20 Negative Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Population B: Accepted+Expanding
+--------------------------------
+Accepted+Expanding: Group=Negative; TotalBars=469; TopologyPresent=0; TopologyAbsent=469
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                      0      469     0.000000     2.343284    -2.343284    0.000000
+Prev5CompressedCount                    0      469     0.000000     2.684435    -2.684435    0.000000
+Prev5DissipatingCount                   0      469     0.000000     2.558635    -2.558635    0.000000
+Prev5ExpandingCount                     0      469     0.000000     2.729211    -2.729211    0.000000
+Prev5PeakCount                          0      469     0.000000     0.923241    -0.923241    0.000000
+Prev5ClimacticCount                     0      469     0.000000     0.552239    -0.552239    0.000000
+Prev5Dominance                          0      469     0.000000     2.217484    -2.217484    0.000000
+Prev5NetAcceptance                      0      469     0.000000     1.420043    -1.420043    0.000000
+Prev10AcceptedCount                     0      469     0.000000     4.791045    -4.791045    0.000000
+Prev10CompressedCount                   0      469     0.000000     5.270789    -5.270789    0.000000
+Prev10DissipatingCount                  0      469     0.000000     5.130064    -5.130064    0.000000
+Prev10ExpandingCount                    0      469     0.000000     5.373134    -5.373134    0.000000
+Prev10PeakCount                         0      469     0.000000     1.991471    -1.991471    0.000000
+Prev10ClimacticCount                    0      469     0.000000     1.215352    -1.215352    0.000000
+Prev10Dominance                         0      469     0.000000     4.650320    -4.650320    0.000000
+Prev10NetAcceptance                     0      469     0.000000     2.799574    -2.799574    0.000000
+Prev20AcceptedCount                     0      469     0.000000     9.396588    -9.396588    0.000000
+Prev20CompressedCount                   0      469     0.000000    10.722814   -10.722814    0.000000
+Prev20DissipatingCount                  0      469     0.000000     9.972281    -9.972281    0.000000
+Prev20ExpandingCount                    0      469     0.000000    10.609808   -10.609808    0.000000
+Prev20PeakCount                         0      469     0.000000     4.023454    -4.023454    0.000000
+Prev20ClimacticCount                    0      469     0.000000     2.439232    -2.439232    0.000000
+Prev20Dominance                         0      469     0.000000     8.646055    -8.646055    0.000000
+Prev20NetAcceptance                     0      469     0.000000     5.373134    -5.373134    0.000000
+
+Accepted+Expanding Ranked Signature Features
+--------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Top 20 Negative Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Population B: Accepted+Dissipating
+----------------------------------
+Accepted+Dissipating: Group=Negative; TotalBars=469; TopologyPresent=0; TopologyAbsent=469
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                      0      469     0.000000     2.343284    -2.343284    0.000000
+Prev5CompressedCount                    0      469     0.000000     2.684435    -2.684435    0.000000
+Prev5DissipatingCount                   0      469     0.000000     2.558635    -2.558635    0.000000
+Prev5ExpandingCount                     0      469     0.000000     2.729211    -2.729211    0.000000
+Prev5PeakCount                          0      469     0.000000     0.923241    -0.923241    0.000000
+Prev5ClimacticCount                     0      469     0.000000     0.552239    -0.552239    0.000000
+Prev5Dominance                          0      469     0.000000     2.217484    -2.217484    0.000000
+Prev5NetAcceptance                      0      469     0.000000     1.420043    -1.420043    0.000000
+Prev10AcceptedCount                     0      469     0.000000     4.791045    -4.791045    0.000000
+Prev10CompressedCount                   0      469     0.000000     5.270789    -5.270789    0.000000
+Prev10DissipatingCount                  0      469     0.000000     5.130064    -5.130064    0.000000
+Prev10ExpandingCount                    0      469     0.000000     5.373134    -5.373134    0.000000
+Prev10PeakCount                         0      469     0.000000     1.991471    -1.991471    0.000000
+Prev10ClimacticCount                    0      469     0.000000     1.215352    -1.215352    0.000000
+Prev10Dominance                         0      469     0.000000     4.650320    -4.650320    0.000000
+Prev10NetAcceptance                     0      469     0.000000     2.799574    -2.799574    0.000000
+Prev20AcceptedCount                     0      469     0.000000     9.396588    -9.396588    0.000000
+Prev20CompressedCount                   0      469     0.000000    10.722814   -10.722814    0.000000
+Prev20DissipatingCount                  0      469     0.000000     9.972281    -9.972281    0.000000
+Prev20ExpandingCount                    0      469     0.000000    10.609808   -10.609808    0.000000
+Prev20PeakCount                         0      469     0.000000     4.023454    -4.023454    0.000000
+Prev20ClimacticCount                    0      469     0.000000     2.439232    -2.439232    0.000000
+Prev20Dominance                         0      469     0.000000     8.646055    -8.646055    0.000000
+Prev20NetAcceptance                     0      469     0.000000     5.373134    -5.373134    0.000000
+
+Accepted+Dissipating Ranked Signature Features
+----------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Top 20 Negative Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Population B: Accepted+Dissipating+Peak
+---------------------------------------
+Accepted+Dissipating+Peak: Group=Negative; TotalBars=469; TopologyPresent=0; TopologyAbsent=469
+Feature                          PresentN  AbsentN  PresentMean   AbsentMean        Delta  EffectSize
+Prev5AcceptedCount                      0      469     0.000000     2.343284    -2.343284    0.000000
+Prev5CompressedCount                    0      469     0.000000     2.684435    -2.684435    0.000000
+Prev5DissipatingCount                   0      469     0.000000     2.558635    -2.558635    0.000000
+Prev5ExpandingCount                     0      469     0.000000     2.729211    -2.729211    0.000000
+Prev5PeakCount                          0      469     0.000000     0.923241    -0.923241    0.000000
+Prev5ClimacticCount                     0      469     0.000000     0.552239    -0.552239    0.000000
+Prev5Dominance                          0      469     0.000000     2.217484    -2.217484    0.000000
+Prev5NetAcceptance                      0      469     0.000000     1.420043    -1.420043    0.000000
+Prev10AcceptedCount                     0      469     0.000000     4.791045    -4.791045    0.000000
+Prev10CompressedCount                   0      469     0.000000     5.270789    -5.270789    0.000000
+Prev10DissipatingCount                  0      469     0.000000     5.130064    -5.130064    0.000000
+Prev10ExpandingCount                    0      469     0.000000     5.373134    -5.373134    0.000000
+Prev10PeakCount                         0      469     0.000000     1.991471    -1.991471    0.000000
+Prev10ClimacticCount                    0      469     0.000000     1.215352    -1.215352    0.000000
+Prev10Dominance                         0      469     0.000000     4.650320    -4.650320    0.000000
+Prev10NetAcceptance                     0      469     0.000000     2.799574    -2.799574    0.000000
+Prev20AcceptedCount                     0      469     0.000000     9.396588    -9.396588    0.000000
+Prev20CompressedCount                   0      469     0.000000    10.722814   -10.722814    0.000000
+Prev20DissipatingCount                  0      469     0.000000     9.972281    -9.972281    0.000000
+Prev20ExpandingCount                    0      469     0.000000    10.609808   -10.609808    0.000000
+Prev20PeakCount                         0      469     0.000000     4.023454    -4.023454    0.000000
+Prev20ClimacticCount                    0      469     0.000000     2.439232    -2.439232    0.000000
+Prev20Dominance                         0      469     0.000000     8.646055    -8.646055    0.000000
+Prev20NetAcceptance                     0      469     0.000000     5.373134    -5.373134    0.000000
+
+Accepted+Dissipating+Peak Ranked Signature Features
+---------------------------------------------------
+
+Top 20 Positive Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Top 20 Negative Context Features
+................................
+  1. Prev10AcceptedCount              Delta= -4.791045 Effect=  0.000000
+  2. Prev10ClimacticCount             Delta= -1.215352 Effect=  0.000000
+  3. Prev10CompressedCount            Delta= -5.270789 Effect=  0.000000
+  4. Prev10DissipatingCount           Delta= -5.130064 Effect=  0.000000
+  5. Prev10Dominance                  Delta= -4.650320 Effect=  0.000000
+  6. Prev10ExpandingCount             Delta= -5.373134 Effect=  0.000000
+  7. Prev10NetAcceptance              Delta= -2.799574 Effect=  0.000000
+  8. Prev10PeakCount                  Delta= -1.991471 Effect=  0.000000
+  9. Prev20AcceptedCount              Delta= -9.396588 Effect=  0.000000
+ 10. Prev20ClimacticCount             Delta= -2.439232 Effect=  0.000000
+ 11. Prev20CompressedCount            Delta=-10.722814 Effect=  0.000000
+ 12. Prev20DissipatingCount           Delta= -9.972281 Effect=  0.000000
+ 13. Prev20Dominance                  Delta= -8.646055 Effect=  0.000000
+ 14. Prev20ExpandingCount             Delta=-10.609808 Effect=  0.000000
+ 15. Prev20NetAcceptance              Delta= -5.373134 Effect=  0.000000
+ 16. Prev20PeakCount                  Delta= -4.023454 Effect=  0.000000
+ 17. Prev5AcceptedCount               Delta= -2.343284 Effect=  0.000000
+ 18. Prev5ClimacticCount              Delta= -0.552239 Effect=  0.000000
+ 19. Prev5CompressedCount             Delta= -2.684435 Effect=  0.000000
+ 20. Prev5DissipatingCount            Delta= -2.558635 Effect=  0.000000
+
+Research Notes
+==============
+- Accepted+Compressed: strongest context signature feature=Prev5ExpandingCount, EffectSize=0.546702.
+- Accepted+Compressed+Dissipating: strongest context signature feature=Prev5ExpandingCount, EffectSize=0.548192.
+- Accepted+Peak: strongest context signature feature=Prev5PeakCount, EffectSize=0.298795.
+- Prev10 supplies the strongest absolute feature for 0/10 topologies.
+- Similarity groups are descriptive family candidates only; they do not define a new ontology.

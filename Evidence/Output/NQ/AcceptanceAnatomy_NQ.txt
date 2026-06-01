@@ -1,0 +1,180 @@
+APVA Acceptance Anatomy Study v0.1 - NQ
+=======================================
+Instrument: NQ
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\NQ\NQ_5 Minute_apva_bar_evidence_v01.csv
+Total rows: 1930
+
+Population A - All Bars
+=======================
+Rows with valid DRFwd5: 1916
+
+Section 1 - Acceptance Frequency Analysis
+-----------------------------------------
+State                  RawCount   Percent  OutcomeN   MeanDRFwd5       Median  ContRate5
+Accepted                    950   49.22%       948    -6.112078    -3.250000    46.41%
+Contained                   745   38.60%       737    -0.924016     1.000000    50.61%
+Other/Absent                235   12.18%       231     1.676407     4.000000    54.98%
+
+Section 2 - Acceptance Context Analysis
+---------------------------------------
+Feature                        AcceptedN    OtherN  AcceptedMean    OtherMean      Delta    Effect
+CompressionOn                        948       968      0.027426     1.000000  -0.972574   -8.4615
+ExpansionOn                          948       968      0.688819     0.341942   0.346876    0.7396
+DissipationOn                        948       968      0.535865     0.607438  -0.071573   -0.1450
+Participation_Falling                948       968      0.358650     0.629132  -0.270482   -0.5616
+Participation_Rising                 948       968      0.369198     0.241736   0.127463    0.2794
+Participation_Peak                   948       968      0.186709     0.088843   0.097866    0.2872
+Participation_Climactic              948       968      0.084388     0.040289   0.044099    0.1834
+VolumePolarity_Black                 948       968      0.553797     0.487603   0.066194    0.1327
+VolumePolarity_Red                   948       968      0.446203     0.512397  -0.066194   -0.1327
+VolumePolarity_Other                 948       968      0.000000     0.000000   0.000000    0.0000
+
+Section 3 - Acceptance Neighborhood
+-----------------------------------
+Feature                        AcceptedN    OtherN  AcceptedMean    OtherMean      Delta    Effect
+Prev10_CompressionCount              948       968      5.217300     5.152893   0.064407    0.0410
+Prev10_DissipationCount              948       968      5.710970     5.717975  -0.007005   -0.0046
+Prev10_ExpansionCount                948       968      5.092827     5.119835  -0.027008   -0.0194
+Prev10_AcceptedCount                 948       968      4.883966     4.955579  -0.071612   -0.0461
+Prev10_PeakCount                     948       968      1.314346     1.433884  -0.119538   -0.0820
+Prev10_ClimacticCount                948       968      0.578059     0.655992  -0.077933   -0.0711
+
+Section 4 - Acceptance Persistence
+----------------------------------
+Label                                         Count   Percent   MeanDRFwd5       Median  ContRate5  FailRate5
+1                                               250   51.65%   -14.920000    -6.875000    39.60%    59.20%
+2                                               117   24.17%    -9.833333    -6.000000    42.74%    57.26%
+3                                                62   12.81%   -21.350806   -15.875000    33.87%    66.13%
+4                                                26    5.37%   -11.923077   -10.000000    38.46%    61.54%
+5+                                               29    5.99%   -19.793103   -16.250000    37.93%    62.07%
+
+Section 6 - Acceptance Interaction Matrix
+-----------------------------------------
+
+Acceptance x Compression
+------------------------
+Cell                                          Count  ContinuationRate5
+Accepted | CompressionOff                       922             46.20%
+Accepted | CompressionOn                         26             53.85%
+Contained | CompressionOn                       737             50.61%
+Other/Absent | CompressionOn                    231             54.98%
+
+Acceptance x Dissipation
+------------------------
+Cell                                          Count  ContinuationRate5
+Accepted | DissipationOff                       440             45.00%
+Accepted | DissipationOn                        508             47.64%
+Contained | DissipationOff                      167             49.10%
+Contained | DissipationOn                       570             51.05%
+Other/Absent | DissipationOff                   213             55.87%
+Other/Absent | DissipationOn                     18             44.44%
+
+Acceptance x Expansion
+----------------------
+Cell                                          Count  ContinuationRate5
+Accepted | ExpansionOff                         295             53.90%
+Accepted | ExpansionOn                          653             43.03%
+Contained | ExpansionOff                        418             50.00%
+Contained | ExpansionOn                         319             51.41%
+Other/Absent | ExpansionOff                     219             55.25%
+Other/Absent | ExpansionOn                       12             50.00%
+
+Section 7 - Acceptance Latent Variable Test
+-------------------------------------------
+Score                   NonFlat   Spearman    LowRate  MiddleRate   HighRate   High-Low
+AcceptanceScore            1909     0.0226    47.96%     48.91%    50.31%     2.35%
+AcceptanceScore2           1909     0.0214    49.53%     49.06%    48.59%    -0.94%
+AcceptanceScore3           1909     0.0223    48.75%     49.22%    49.22%     0.47%
+DominanceGradient          1909     0.0223    48.75%     49.22%    49.22%     0.47%
+
+Population B - DissipationContained + Lateral + Mature + Aligned
+================================================================
+Rows with valid DRFwd5: 71
+
+Section 1 - Acceptance Frequency Analysis
+-----------------------------------------
+State                  RawCount   Percent  OutcomeN   MeanDRFwd5       Median  ContRate5
+Accepted                      0    0.00%         0     0.000000     0.000000     0.00%
+Contained                    71  100.00%        71    -7.771127     2.750000    53.52%
+Other/Absent                  0    0.00%         0     0.000000     0.000000     0.00%
+
+Section 2 - Acceptance Context Analysis
+---------------------------------------
+Feature                        AcceptedN    OtherN  AcceptedMean    OtherMean      Delta    Effect
+CompressionOn                          0        71      0.000000     1.000000  -1.000000    0.0000
+ExpansionOn                            0        71      0.000000     0.267606  -0.267606    0.0000
+DissipationOn                          0        71      0.000000     1.000000  -1.000000    0.0000
+Participation_Falling                  0        71      0.000000     0.619718  -0.619718    0.0000
+Participation_Rising                   0        71      0.000000     0.211268  -0.211268    0.0000
+Participation_Peak                     0        71      0.000000     0.154930  -0.154930    0.0000
+Participation_Climactic                0        71      0.000000     0.014085  -0.014085    0.0000
+VolumePolarity_Black                   0        71      0.000000     0.535211  -0.535211    0.0000
+VolumePolarity_Red                     0        71      0.000000     0.464789  -0.464789    0.0000
+VolumePolarity_Other                   0        71      0.000000     0.000000   0.000000    0.0000
+
+Section 3 - Acceptance Neighborhood
+-----------------------------------
+Feature                        AcceptedN    OtherN  AcceptedMean    OtherMean      Delta    Effect
+Prev10_CompressionCount                0        71      0.000000     5.309859  -5.309859    0.0000
+Prev10_DissipationCount                0        71      0.000000     5.845070  -5.845070    0.0000
+Prev10_ExpansionCount                  0        71      0.000000     5.014085  -5.014085    0.0000
+Prev10_AcceptedCount                   0        71      0.000000     4.760563  -4.760563    0.0000
+Prev10_PeakCount                       0        71      0.000000     1.492958  -1.492958    0.0000
+Prev10_ClimacticCount                  0        71      0.000000     0.605634  -0.605634    0.0000
+
+Section 4 - Acceptance Persistence
+----------------------------------
+Label                                         Count   Percent   MeanDRFwd5       Median  ContRate5  FailRate5
+1                                                 0    0.00%     0.000000     0.000000     0.00%     0.00%
+2                                                 0    0.00%     0.000000     0.000000     0.00%     0.00%
+3                                                 0    0.00%     0.000000     0.000000     0.00%     0.00%
+4                                                 0    0.00%     0.000000     0.000000     0.00%     0.00%
+5+                                                0    0.00%     0.000000     0.000000     0.00%     0.00%
+
+Section 6 - Acceptance Interaction Matrix
+-----------------------------------------
+
+Acceptance x Compression
+------------------------
+Cell                                          Count  ContinuationRate5
+Contained | CompressionOn                        71             53.52%
+
+Acceptance x Dissipation
+------------------------
+Cell                                          Count  ContinuationRate5
+Contained | DissipationOn                        71             53.52%
+
+Acceptance x Expansion
+----------------------
+Cell                                          Count  ContinuationRate5
+Contained | ExpansionOff                         52             51.92%
+Contained | ExpansionOn                          19             57.89%
+
+Section 7 - Acceptance Latent Variable Test
+-------------------------------------------
+Score                   NonFlat   Spearman    LowRate  MiddleRate   HighRate   High-Low
+AcceptanceScore              71     0.0843    43.48%     60.00%    56.52%    13.04%
+AcceptanceScore2             71     0.2259    34.78%     60.00%    65.22%    30.43%
+AcceptanceScore3             71     0.1992    34.78%     68.00%    56.52%    21.74%
+DominanceGradient            71     0.1992    34.78%     68.00%    56.52%    21.74%
+
+Section 5 - Acceptance Before Breakout
+--------------------------------------
+Label                                         Count   Percent   MeanDRFwd5       Median  ContRate5  FailRate5
+Final3AcceptedMean Low                           54   35.53%     4.333333    -1.000000    50.00%    50.00%
+Final3AcceptedMean Medium                        21   13.82%    -0.523810    19.000000    61.90%    38.10%
+Final3AcceptedMean High                           1    0.66%    -1.000000    -1.000000     0.00%   100.00%
+Final5AcceptedMean Low                           38   25.00%    -6.664474    -5.375000    44.74%    55.26%
+Final5AcceptedMean Medium                        34   22.37%    21.264706    24.500000    61.76%    38.24%
+Final5AcceptedMean High                           4    2.63%   -61.937500     2.250000    50.00%    50.00%
+Final3AcceptedMean SpearmanRho: 0.0436
+Final5AcceptedMean SpearmanRho: 0.0972
+
+Research Notes
+==============
+- Accepted bars: n=948, MeanDRFwd5=-6.112078, ContinuationRate5=46.41%.
+- Accepted versus non-accepted DissipationOn effect=-0.1450.
+- Accepted versus non-accepted CompressionOn effect=-8.4615.
+- Prev10_AcceptedCount accepted-versus-other effect=-0.0461.
+- Final3AcceptedMean breakout SpearmanRho=0.0436; Final5AcceptedMean=0.0972.
+- AcceptanceScore SpearmanRho=0.0226; DominanceGradient=0.0223.

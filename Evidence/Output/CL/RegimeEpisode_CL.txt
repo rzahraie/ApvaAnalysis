@@ -1,0 +1,261 @@
+APVA Regime Episode Study v0.1 - CL
+===================================
+Instrument: CL
+InputPath: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_OPEN_apva_bar_evidence_v01.csv
+TotalRows: 2677
+ValidPolarityRows: 2625
+TotalEpisodes: 3215
+Anchor: first bar of the three-bar target window.
+Alignment proxy: Black anchor polarity is Aligned; Red anchor polarity is Opposed.
+
+Episode Counts by Family
+========================
+Dissipation Cluster -> Expansion Cluster              452
+Compression Cluster -> Expansion Cluster              590
+Contained Cluster -> Accepted Cluster                 198
+Falling Cluster -> Rising Cluster                     208
+Peak/Climactic Cluster -> Expansion Cluster           192
+Dissipation Cluster -> Accepted Cluster               359
+Compression Cluster -> Accepted Cluster               463
+Contained Cluster -> Expansion Cluster                239
+Falling Cluster -> Expansion Cluster                  367
+Peak/Climactic Cluster -> Accepted Cluster            147
+
+Main Episode Table
+==================
+EpisodeFamily                                       Count   MeanDRFwd5   MedianDRFwd5  ContRate5  FailRate5  FlatRate5
+Dissipation Cluster -> Expansion Cluster              445     0.013933       0.040000    52.58%    46.29%     1.12%
+Compression Cluster -> Expansion Cluster              582     0.036082      -0.020000    48.63%    50.86%     0.52%
+Contained Cluster -> Accepted Cluster                 194    -0.129691      -0.025000    48.97%    51.03%     0.00%
+Falling Cluster -> Rising Cluster                     202     0.020198       0.045000    51.98%    46.04%     1.98%
+Peak/Climactic Cluster -> Expansion Cluster           190    -0.151789       0.015000    50.00%    49.47%     0.53%
+Dissipation Cluster -> Accepted Cluster               354    -0.038362       0.040000    51.98%    47.18%     0.85%
+Compression Cluster -> Accepted Cluster               459    -0.050893      -0.020000    48.37%    51.20%     0.44%
+Contained Cluster -> Expansion Cluster                236     0.096144       0.030000    51.27%    48.73%     0.00%
+Falling Cluster -> Expansion Cluster                  360     0.026917       0.040000    52.50%    46.39%     1.11%
+Peak/Climactic Cluster -> Accepted Cluster            146    -0.333425      -0.180000    43.15%    56.85%     0.00%
+
+All-Horizon Appendix
+====================
+
+Dissipation Cluster -> Expansion Cluster
+----------------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       445     0.021483     0.030000    54.38%    44.49%     1.12%
+DRFwd3       445     0.005461     0.040000    52.58%    45.84%     1.57%
+DRFwd5       445     0.013933     0.040000    52.58%    46.29%     1.12%
+DRFwd10      444    -0.051937    -0.020000    48.65%    50.90%     0.45%
+DRFwd20      444    -0.112860     0.010000    50.23%    49.77%     0.00%
+
+Compression Cluster -> Expansion Cluster
+----------------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       582     0.015979    -0.010000    46.91%    50.52%     2.58%
+DRFwd3       582     0.039622    -0.005000    48.97%    50.00%     1.03%
+DRFwd5       582     0.036082    -0.020000    48.63%    50.86%     0.52%
+DRFwd10      580    -0.042552    -0.075000    46.55%    52.76%     0.69%
+DRFwd20      580    -0.072586    -0.050000    47.93%    51.38%     0.69%
+
+Contained Cluster -> Accepted Cluster
+-------------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       195    -0.005487     0.030000    55.90%    42.05%     2.05%
+DRFwd3       195    -0.071436     0.030000    52.31%    45.64%     2.05%
+DRFwd5       194    -0.129691    -0.025000    48.97%    51.03%     0.00%
+DRFwd10      194    -0.154175    -0.100000    45.36%    53.61%     1.03%
+DRFwd20      194    -0.386907    -0.165000    43.81%    55.67%     0.52%
+
+Falling Cluster -> Rising Cluster
+---------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       202     0.006337     0.020000    53.47%    44.06%     2.48%
+DRFwd3       202     0.056287     0.050000    55.94%    43.56%     0.50%
+DRFwd5       202     0.020198     0.045000    51.98%    46.04%     1.98%
+DRFwd10      200     0.018850     0.075000    53.00%    46.50%     0.50%
+DRFwd20      199    -0.046281     0.010000    50.75%    48.74%     0.50%
+
+Peak/Climactic Cluster -> Expansion Cluster
+-------------------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       190    -0.098684    -0.020000    45.79%    52.11%     2.11%
+DRFwd3       190    -0.187105    -0.080000    38.42%    59.47%     2.11%
+DRFwd5       190    -0.151789     0.015000    50.00%    49.47%     0.53%
+DRFwd10      190    -0.197474    -0.115000    46.84%    53.16%     0.00%
+DRFwd20      190    -0.122368     0.000000    49.47%    49.47%     1.05%
+
+Dissipation Cluster -> Accepted Cluster
+---------------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       354     0.048842     0.080000    61.58%    37.85%     0.56%
+DRFwd3       354    -0.022486     0.080000    54.80%    43.22%     1.98%
+DRFwd5       354    -0.038362     0.040000    51.98%    47.18%     0.85%
+DRFwd10      354     0.027034    -0.010000    49.44%    50.28%     0.28%
+DRFwd20      354    -0.044802     0.050000    51.41%    48.59%     0.00%
+
+Compression Cluster -> Accepted Cluster
+---------------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       460    -0.014565     0.030000    54.78%    43.91%     1.30%
+DRFwd3       460    -0.024630     0.040000    52.39%    46.30%     1.30%
+DRFwd5       459    -0.050893    -0.020000    48.37%    51.20%     0.44%
+DRFwd10      457    -0.157024    -0.090000    45.95%    53.39%     0.66%
+DRFwd20      455    -0.223165    -0.130000    45.49%    53.63%     0.88%
+
+Contained Cluster -> Expansion Cluster
+--------------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       236     0.091059     0.010000    51.69%    45.34%     2.97%
+DRFwd3       236     0.126653     0.050000    52.54%    46.19%     1.27%
+DRFwd5       236     0.096144     0.030000    51.27%    48.73%     0.00%
+DRFwd10      236     0.033390    -0.065000    46.61%    52.54%     0.85%
+DRFwd20      236    -0.084322    -0.110000    47.03%    52.97%     0.00%
+
+Falling Cluster -> Expansion Cluster
+------------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       360     0.015750     0.000000    48.61%    49.44%     1.94%
+DRFwd3       360     0.018611     0.030000    52.22%    47.50%     0.28%
+DRFwd5       360     0.026917     0.040000    52.50%    46.39%     1.11%
+DRFwd10      359     0.047994     0.020000    50.97%    48.75%     0.28%
+DRFwd20      358    -0.040084     0.030000    50.84%    48.88%     0.28%
+
+Peak/Climactic Cluster -> Accepted Cluster
+------------------------------------------
+Horizon     Count    MeanDRFwd       Median   ContRate   FailRate   FlatRate
+DRFwd1       146    -0.184247     0.040000    52.05%    47.95%     0.00%
+DRFwd3       146    -0.268151    -0.230000    39.04%    58.22%     2.74%
+DRFwd5       146    -0.333425    -0.180000    43.15%    56.85%     0.00%
+DRFwd10      146    -0.369384    -0.160000    45.89%    54.11%     0.00%
+DRFwd20      146    -0.303219    -0.035000    48.63%    50.68%     0.68%
+
+Quality Breakdown
+=================
+EpisodeFamily                                    Quality     Count   MeanDRFwd5  ContRate5
+Dissipation Cluster -> Expansion Cluster         Strong         13     0.371538    53.85%
+Dissipation Cluster -> Expansion Cluster         Weak          432     0.003171    52.55%
+Compression Cluster -> Expansion Cluster         Strong         20     0.141000    55.00%
+Compression Cluster -> Expansion Cluster         Weak          562     0.032349    48.40%
+Contained Cluster -> Accepted Cluster            Strong          6     0.046667    50.00%
+Contained Cluster -> Accepted Cluster            Weak          188    -0.135319    48.94%
+Falling Cluster -> Rising Cluster                Strong          5     0.028000    60.00%
+Falling Cluster -> Rising Cluster                Weak          197     0.020000    51.78%
+Peak/Climactic Cluster -> Expansion Cluster      Strong         15     0.086667    53.33%
+Peak/Climactic Cluster -> Expansion Cluster      Weak          175    -0.172229    49.71%
+Dissipation Cluster -> Accepted Cluster          Strong         13    -0.263846    30.77%
+Dissipation Cluster -> Accepted Cluster          Weak          341    -0.029765    52.79%
+Compression Cluster -> Accepted Cluster          Strong         15    -0.059333    46.67%
+Compression Cluster -> Accepted Cluster          Weak          444    -0.050608    48.42%
+Contained Cluster -> Expansion Cluster           Strong          7    -0.090000    42.86%
+Contained Cluster -> Expansion Cluster           Weak          229     0.101834    51.53%
+Falling Cluster -> Expansion Cluster             Strong          2     0.290000    50.00%
+Falling Cluster -> Expansion Cluster             Weak          358     0.025447    52.51%
+Peak/Climactic Cluster -> Accepted Cluster       Strong         12    -0.259167    33.33%
+Peak/Climactic Cluster -> Accepted Cluster       Weak          134    -0.340075    44.03%
+
+Alignment Breakdown
+===================
+EpisodeFamily                                    Alignment    Count   MeanDRFwd5  ContRate5
+Dissipation Cluster -> Expansion Cluster         Aligned       237     0.110759    56.54%
+Dissipation Cluster -> Expansion Cluster         Opposed       208    -0.096394    48.08%
+Compression Cluster -> Expansion Cluster         Aligned       279    -0.084409    52.33%
+Compression Cluster -> Expansion Cluster         Opposed       303     0.147030    45.21%
+Contained Cluster -> Accepted Cluster            Aligned        92    -0.056087    57.61%
+Contained Cluster -> Accepted Cluster            Opposed       102    -0.196078    41.18%
+Falling Cluster -> Rising Cluster                Aligned       102     0.113627    55.88%
+Falling Cluster -> Rising Cluster                Opposed       100    -0.075100    48.00%
+Peak/Climactic Cluster -> Expansion Cluster      Aligned        95    -0.070421    52.63%
+Peak/Climactic Cluster -> Expansion Cluster      Opposed        95    -0.233158    47.37%
+Dissipation Cluster -> Accepted Cluster          Aligned       177     0.091977    55.93%
+Dissipation Cluster -> Accepted Cluster          Opposed       177    -0.168701    48.02%
+Compression Cluster -> Accepted Cluster          Aligned       221    -0.034706    52.94%
+Compression Cluster -> Accepted Cluster          Opposed       238    -0.065924    44.12%
+Contained Cluster -> Expansion Cluster           Aligned       110     0.016909    60.00%
+Contained Cluster -> Expansion Cluster           Opposed       126     0.165317    43.65%
+Falling Cluster -> Expansion Cluster             Aligned       185     0.017405    52.43%
+Falling Cluster -> Expansion Cluster             Opposed       175     0.036971    52.57%
+Peak/Climactic Cluster -> Accepted Cluster       Aligned        78    -0.247179    47.44%
+Peak/Climactic Cluster -> Accepted Cluster       Opposed        68    -0.432353    38.24%
+
+Best Episode Families by MeanDRFwd5
+===================================
+Rank EpisodeFamily                                       Count   MeanDRFwd5  ContRate5
+   1 Contained Cluster -> Expansion Cluster                236     0.096144    51.27%
+   2 Compression Cluster -> Expansion Cluster              582     0.036082    48.63%
+   3 Falling Cluster -> Expansion Cluster                  360     0.026917    52.50%
+   4 Falling Cluster -> Rising Cluster                     202     0.020198    51.98%
+   5 Dissipation Cluster -> Expansion Cluster              445     0.013933    52.58%
+   6 Dissipation Cluster -> Accepted Cluster               354    -0.038362    51.98%
+   7 Compression Cluster -> Accepted Cluster               459    -0.050893    48.37%
+   8 Contained Cluster -> Accepted Cluster                 194    -0.129691    48.97%
+   9 Peak/Climactic Cluster -> Expansion Cluster           190    -0.151789    50.00%
+  10 Peak/Climactic Cluster -> Accepted Cluster            146    -0.333425    43.15%
+
+Worst Episode Families by MeanDRFwd5
+====================================
+Rank EpisodeFamily                                       Count   MeanDRFwd5  ContRate5
+   1 Peak/Climactic Cluster -> Accepted Cluster            146    -0.333425    43.15%
+   2 Peak/Climactic Cluster -> Expansion Cluster           190    -0.151789    50.00%
+   3 Contained Cluster -> Accepted Cluster                 194    -0.129691    48.97%
+   4 Compression Cluster -> Accepted Cluster               459    -0.050893    48.37%
+   5 Dissipation Cluster -> Accepted Cluster               354    -0.038362    51.98%
+   6 Dissipation Cluster -> Expansion Cluster              445     0.013933    52.58%
+   7 Falling Cluster -> Rising Cluster                     202     0.020198    51.98%
+   8 Falling Cluster -> Expansion Cluster                  360     0.026917    52.50%
+   9 Compression Cluster -> Expansion Cluster              582     0.036082    48.63%
+  10 Contained Cluster -> Expansion Cluster                236     0.096144    51.27%
+
+Best Episode Families by ContinuationRate5
+==========================================
+Rank EpisodeFamily                                       Count   MeanDRFwd5  ContRate5
+   1 Dissipation Cluster -> Expansion Cluster              445     0.013933    52.58%
+   2 Falling Cluster -> Expansion Cluster                  360     0.026917    52.50%
+   3 Falling Cluster -> Rising Cluster                     202     0.020198    51.98%
+   4 Dissipation Cluster -> Accepted Cluster               354    -0.038362    51.98%
+   5 Contained Cluster -> Expansion Cluster                236     0.096144    51.27%
+   6 Peak/Climactic Cluster -> Expansion Cluster           190    -0.151789    50.00%
+   7 Contained Cluster -> Accepted Cluster                 194    -0.129691    48.97%
+   8 Compression Cluster -> Expansion Cluster              582     0.036082    48.63%
+   9 Compression Cluster -> Accepted Cluster               459    -0.050893    48.37%
+  10 Peak/Climactic Cluster -> Accepted Cluster            146    -0.333425    43.15%
+
+Worst Episode Families by ContinuationRate5
+===========================================
+Rank EpisodeFamily                                       Count   MeanDRFwd5  ContRate5
+   1 Peak/Climactic Cluster -> Accepted Cluster            146    -0.333425    43.15%
+   2 Compression Cluster -> Accepted Cluster               459    -0.050893    48.37%
+   3 Compression Cluster -> Expansion Cluster              582     0.036082    48.63%
+   4 Contained Cluster -> Accepted Cluster                 194    -0.129691    48.97%
+   5 Peak/Climactic Cluster -> Expansion Cluster           190    -0.151789    50.00%
+   6 Contained Cluster -> Expansion Cluster                236     0.096144    51.27%
+   7 Dissipation Cluster -> Accepted Cluster               354    -0.038362    51.98%
+   8 Falling Cluster -> Rising Cluster                     202     0.020198    51.98%
+   9 Falling Cluster -> Expansion Cluster                  360     0.026917    52.50%
+  10 Dissipation Cluster -> Expansion Cluster              445     0.013933    52.58%
+
+Strong vs Weak Quality Advantage
+================================
+Rank EpisodeFamily                                     LeftCount  RightCount   DeltaMean5  DeltaCont5
+
+Aligned vs Opposed Advantage
+============================
+Rank EpisodeFamily                                     LeftCount  RightCount   DeltaMean5  DeltaCont5
+   1 Contained Cluster -> Accepted Cluster                    92         102     0.139991     16.43%
+   2 Contained Cluster -> Expansion Cluster                  110         126    -0.148408     16.35%
+   3 Peak/Climactic Cluster -> Accepted Cluster               78          68     0.185173      9.20%
+   4 Compression Cluster -> Accepted Cluster                 221         238     0.031218      8.82%
+   5 Dissipation Cluster -> Expansion Cluster                237         208     0.207154      8.46%
+   6 Dissipation Cluster -> Accepted Cluster                 177         177     0.260678      7.91%
+   7 Falling Cluster -> Rising Cluster                       102         100     0.188727      7.88%
+   8 Compression Cluster -> Expansion Cluster                279         303    -0.231438      7.12%
+   9 Peak/Climactic Cluster -> Expansion Cluster              95          95     0.162737      5.26%
+  10 Falling Cluster -> Expansion Cluster                    185         175    -0.019566     -0.14%
+
+Research Notes
+==============
+- Best episode family by MeanDRFwd5: Contained Cluster -> Expansion Cluster (0.096144, n=236).
+- Worst episode family by MeanDRFwd5: Peak/Climactic Cluster -> Accepted Cluster (-0.333425, n=146).
+- Mean Aligned-minus-Opposed DeltaContinuationRate5 across eligible families: 8.73%.
+- Dissipation Cluster -> Expansion Cluster: MeanDRFwd5=0.013933, ContinuationRate5=52.58%, n=445.
+- Compression Cluster -> Expansion Cluster: MeanDRFwd5=0.036082, ContinuationRate5=48.63%, n=582.
+- Contained Cluster -> Accepted Cluster: MeanDRFwd5=-0.129691, ContinuationRate5=48.97%, n=194.
+- Families skipped from main ranked tables because Count < 30: 0.

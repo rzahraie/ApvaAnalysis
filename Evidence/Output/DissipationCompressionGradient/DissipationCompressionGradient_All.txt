@@ -1,0 +1,57 @@
+APVA Dissipation/Compression Gradient Study v0.1 - Cross-Instrument Aggregate
+============================================================================
+Input instruments: 6E, NQ, CL
+Valid instrument threshold: non-flat outcome count >= 30.
+
+Cross-Instrument Gradient Table
+===============================
+Variable                        Count_6E   Delta_6E    Rho_6E  Count_NQ   Delta_NQ    Rho_NQ  Count_CL   Delta_CL    Rho_CL Valid  Pos  Neg   MeanRho  MeanDelta
+Prev10_DissipationCount              462    50.00%    0.0037        71     0.00%    0.2467        57    12.50%    0.0919     3    3    0    0.1141    20.83%
+Prev10_CompressionCount              462    18.75%   -0.0277        71     0.00%   -0.1007        57   -61.11%   -0.2282     3    0    3   -0.1188   -14.12%
+Prev10_AcceptedCount                 462   -17.42%    0.0217        71    50.00%    0.0843        57    22.22%    0.2139     3    3    0    0.1066    18.27%
+Prev10_ClimacticCount                462   -51.87%    0.0479        71    -4.10%    0.0706        57   -33.49%    0.0444     3    3    0    0.0543   -29.82%
+Prev10_ExpansionCount                462    39.39%    0.0823        71     7.04%   -0.0142        57   -54.55%    0.0716     3    2    1    0.0466    -2.70%
+
+Most Replicated Positive Gradients
+==================================
+Rank Variable                       Valid Positive Negative    MeanRho  MeanDelta
+   1 Prev10_DissipationCount            3        3        0     0.1141    20.83%
+   2 Prev10_AcceptedCount               3        3        0     0.1066    18.27%
+   3 Prev10_ClimacticCount              3        3        0     0.0543   -29.82%
+   4 Prev10_ExpansionCount              3        2        1     0.0466    -2.70%
+   5 Prev10_CompressionCount            3        0        3    -0.1188   -14.12%
+
+Most Replicated Negative Gradients
+==================================
+Rank Variable                       Valid Positive Negative    MeanRho  MeanDelta
+   1 Prev10_CompressionCount            3        0        3    -0.1188   -14.12%
+   2 Prev10_ExpansionCount              3        2        1     0.0466    -2.70%
+   3 Prev10_ClimacticCount              3        3        0     0.0543   -29.82%
+   4 Prev10_AcceptedCount               3        3        0     0.1066    18.27%
+   5 Prev10_DissipationCount            3        3        0     0.1141    20.83%
+
+Strongest Average Positive Gradients
+====================================
+Rank Variable                       Valid Positive Negative    MeanRho  MeanDelta
+   1 Prev10_DissipationCount            3        3        0     0.1141    20.83%
+   2 Prev10_AcceptedCount               3        3        0     0.1066    18.27%
+   3 Prev10_ClimacticCount              3        3        0     0.0543   -29.82%
+   4 Prev10_ExpansionCount              3        2        1     0.0466    -2.70%
+   5 Prev10_CompressionCount            3        0        3    -0.1188   -14.12%
+
+Strongest Average Negative Gradients
+====================================
+Rank Variable                       Valid Positive Negative    MeanRho  MeanDelta
+   1 Prev10_CompressionCount            3        0        3    -0.1188   -14.12%
+   2 Prev10_ExpansionCount              3        2        1     0.0466    -2.70%
+   3 Prev10_ClimacticCount              3        3        0     0.0543   -29.82%
+   4 Prev10_AcceptedCount               3        3        0     0.1066    18.27%
+   5 Prev10_DissipationCount            3        3        0     0.1141    20.83%
+
+Cross-Instrument Research Notes
+===============================
+- Variables replicating positive gradients in at least two valid instruments: Prev10_DissipationCount, Prev10_AcceptedCount, Prev10_ClimacticCount, Prev10_ExpansionCount.
+- Variables replicating negative gradients in at least two valid instruments: Prev10_CompressionCount.
+- Prev10_DissipationCount: valid instruments=3, positive slopes=3, negative slopes=0, MeanSpearman=0.1141.
+- Prev10_CompressionCount: valid instruments=3, positive slopes=0, negative slopes=3, MeanSpearman=-0.1188.
+- Variables excluded from replicated rankings because fewer than two valid instruments: 0.

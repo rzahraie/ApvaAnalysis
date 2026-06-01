@@ -1,0 +1,199 @@
+APVA Context Topology Study v0.1 - Cross-Instrument Aggregate
+=============================================================
+Input instruments: 6E, NQ, CL
+Imported target combinations: 10.
+Replication threshold: at least 20 non-flat observations in two instruments.
+
+Aggregate Combination Summary
+=============================
+Combination                            Group      Count_6E  Success_6E     LargestDiff_6E  Count_NQ  Success_NQ     LargestDiff_NQ  Count_CL  Success_CL     LargestDiff_CL Valid Agree  MeanEffect
+Accepted+Compressed                    Positive        179          97 Prev10ExpandingCount:0.378        26          14 ContextSlopePeak:0.875        24          13 ContextSlopeDissipating:-1.152     3     2    0.033498
+Accepted+Compressed+Dissipating        Positive        171          91 Prev10ExpandingCount:0.400        26          14 ContextSlopePeak:0.875        24          13 ContextSlopeDissipating:-1.152     3     2    0.040965
+Compressed+Dissipating                 Positive       7630        3609 ContextSlopeCompressed:0.050       614         313 Prev20PeakCount:-0.128       740         379 Prev20DissipatingCount:0.174     3     2    0.031970
+Compressed+Peak                        Positive       2581        1184 Prev20DissipatingCount:0.102        89          54 ContextSlopeDominance:0.333       186          92 Prev10CompressedCount:0.125     3     3    0.186662
+Compressed+Dissipating+Peak            Positive       1226         555 ContextSlopePeak:-0.152        58          39 Prev20DissipatingCount:-0.544        90          45 Prev10NetAcceptance:-0.241     3     3   -0.312430
+Accepted+Peak                          Negative       3597        1662 Prev20NetAcceptance:0.086       177          77 Prev20ExpandingCount:0.343       308         136 Prev10ExpandingCount:-0.329     3     2    0.032998
+Accepted+Climactic                     Negative       1833         819 Prev20PeakCount:-0.103        80          36 Prev5ExpandingCount:-0.555       139          62 Prev20AcceptedCount:-0.200     3     3   -0.285987
+Accepted+Expanding                     Negative      11026        5057 Prev10DissipatingCount:0.057       653         281 Prev20PeakCount:-0.198       908         438 Prev5ExpandingCount:-0.120     3     2   -0.086838
+Accepted+Dissipating                   Negative       7687        3554 Prev10Dominance:0.050       508         242 Prev10ClimacticCount:-0.184       563         266 Prev5DissipatingCount:-0.154     3     2   -0.096038
+Accepted+Dissipating+Peak              Negative       1228         566 Prev20AcceptedCount:0.094        70          32 Prev20ExpandingCount:0.492        95          35 ContextSlopeAccepted:0.328     3     3    0.304264
+
+Most Replicated Positive-Context Features
+-----------------------------------------
+Rank Combination | Feature                                                      Valid  Pos  Neg  MeanEffect
+   1 Accepted+Compressed | Prev10PeakCount                                          3    3    0    0.324722
+   2 Accepted+Compressed+Dissipating | Prev10PeakCount                              3    3    0    0.321926
+   3 Accepted+Compressed | Prev5PeakCount                                           3    3    0    0.223240
+   4 Accepted+Compressed+Dissipating | Prev5PeakCount                               3    3    0    0.204709
+   5 Accepted+Compressed+Dissipating | Prev10Dominance                              3    3    0    0.133695
+   6 Accepted+Compressed | Prev10Dominance                                          3    3    0    0.123855
+   7 Compressed+Dissipating+Peak | Prev10ExpandingCount                             3    3    0    0.119819
+   8 Compressed+Dissipating+Peak | ContextSlopeDissipating                          3    3    0    0.092371
+   9 Accepted+Dissipating+Peak | ContextSlopeDissipating                            3    3    0    0.088345
+  10 Compressed+Peak | ContextSlopeDissipating                                      3    3    0    0.087640
+  11 Accepted+Climactic | Prev10CompressedCount                                     3    3    0    0.078005
+  12 Accepted+Climactic | Prev5CompressedCount                                      3    3    0    0.067350
+  13 Accepted+Dissipating | Prev5NetAcceptance                                      3    3    0    0.064959
+  14 Accepted+Peak | Prev20AcceptedCount                                            3    3    0    0.063026
+  15 Compressed+Dissipating | Prev20DissipatingCount                                3    3    0    0.060425
+  16 Compressed+Peak | Prev10ClimacticCount                                         3    3    0    0.043850
+  17 Compressed+Dissipating | Prev10DissipatingCount                                3    3    0    0.043204
+  18 Compressed+Dissipating | Prev5PeakCount                                        3    3    0    0.038017
+  19 Compressed+Dissipating | Prev10PeakCount                                       3    3    0    0.030599
+  20 Accepted+Dissipating+Peak | Prev5DissipatingCount                              3    3    0    0.030287
+  21 Accepted+Dissipating | Prev10NetAcceptance                                     3    3    0    0.029721
+  22 Accepted+Peak | ContextSlopeDissipating                                        3    3    0    0.029229
+  23 Accepted+Dissipating+Peak | Prev10Dominance                                    3    3    0    0.027284
+  24 Accepted+Climactic | Prev20DissipatingCount                                    3    3    0    0.024187
+  25 Accepted+Compressed+Dissipating | Prev10AcceptedCount                          3    2    1    0.220620
+
+Most Replicated Negative-Context Features
+-----------------------------------------
+Rank Combination | Feature                                                      Valid  Pos  Neg  MeanEffect
+   1 Accepted+Compressed+Dissipating | Prev10CompressedCount                        3    0    3   -0.250644
+   2 Compressed+Dissipating+Peak | Prev10DissipatingCount                           3    0    3   -0.188775
+   3 Accepted+Compressed | Prev5ClimacticCount                                      3    0    3   -0.157492
+   4 Compressed+Dissipating+Peak | Prev10Dominance                                  3    0    3   -0.132925
+   5 Compressed+Dissipating+Peak | Prev10NetAcceptance                              3    0    3   -0.112913
+   6 Accepted+Climactic | Prev20ExpandingCount                                      3    0    3   -0.107520
+   7 Accepted+Expanding | Prev20PeakCount                                           3    0    3   -0.093704
+   8 Accepted+Climactic | Prev5AcceptedCount                                        3    0    3   -0.084206
+   9 Accepted+Climactic | Prev10AcceptedCount                                       3    0    3   -0.078895
+  10 Accepted+Climactic | Prev10Dominance                                           3    0    3   -0.078647
+  11 Accepted+Expanding | Prev5ExpandingCount                                       3    0    3   -0.075976
+  12 Accepted+Peak | Prev5PeakCount                                                 3    0    3   -0.063656
+  13 Compressed+Dissipating+Peak | Prev20PeakCount                                  3    0    3   -0.063344
+  14 Accepted+Expanding | Prev5PeakCount                                            3    0    3   -0.059860
+  15 Accepted+Dissipating | Prev20PeakCount                                         3    0    3   -0.059627
+  16 Accepted+Dissipating | Prev10PeakCount                                         3    0    3   -0.056667
+  17 Accepted+Expanding | Prev20ExpandingCount                                      3    0    3   -0.055791
+  18 Accepted+Peak | Prev20CompressedCount                                          3    0    3   -0.054470
+  19 Accepted+Dissipating+Peak | Prev5ExpandingCount                                3    0    3   -0.051573
+  20 Accepted+Dissipating+Peak | Prev20PeakCount                                    3    0    3   -0.051033
+  21 Accepted+Climactic | Prev5Dominance                                            3    0    3   -0.048510
+  22 Accepted+Peak | ContextSlopePeak                                               3    0    3   -0.047713
+  23 Accepted+Dissipating | ContextSlopeCompressed                                  3    0    3   -0.043275
+  24 Accepted+Dissipating+Peak | Prev10ExpandingCount                               3    0    3   -0.041516
+  25 Accepted+Expanding | Prev5ClimacticCount                                       3    0    3   -0.040925
+
+Strongest Success Context Patterns
+----------------------------------
+Rank Combination | Feature                                                      Valid  Pos  Neg  MeanEffect
+   1 Accepted+Compressed | Prev10PeakCount                                          3    3    0    0.324722
+   2 Accepted+Compressed+Dissipating | Prev10PeakCount                              3    3    0    0.321926
+   3 Accepted+Compressed | Prev5PeakCount                                           3    3    0    0.223240
+   4 Accepted+Compressed+Dissipating | Prev5PeakCount                               3    3    0    0.204709
+   5 Accepted+Compressed+Dissipating | Prev10Dominance                              3    3    0    0.133695
+   6 Accepted+Compressed | Prev10Dominance                                          3    3    0    0.123855
+   7 Compressed+Dissipating+Peak | Prev10ExpandingCount                             3    3    0    0.119819
+   8 Compressed+Dissipating+Peak | ContextSlopeDissipating                          3    3    0    0.092371
+   9 Accepted+Dissipating+Peak | ContextSlopeDissipating                            3    3    0    0.088345
+  10 Compressed+Peak | ContextSlopeDissipating                                      3    3    0    0.087640
+  11 Accepted+Climactic | Prev10CompressedCount                                     3    3    0    0.078005
+  12 Accepted+Climactic | Prev5CompressedCount                                      3    3    0    0.067350
+  13 Accepted+Dissipating | Prev5NetAcceptance                                      3    3    0    0.064959
+  14 Accepted+Peak | Prev20AcceptedCount                                            3    3    0    0.063026
+  15 Compressed+Dissipating | Prev20DissipatingCount                                3    3    0    0.060425
+  16 Compressed+Peak | Prev10ClimacticCount                                         3    3    0    0.043850
+  17 Compressed+Dissipating | Prev10DissipatingCount                                3    3    0    0.043204
+  18 Compressed+Dissipating | Prev5PeakCount                                        3    3    0    0.038017
+  19 Compressed+Dissipating | Prev10PeakCount                                       3    3    0    0.030599
+  20 Accepted+Dissipating+Peak | Prev5DissipatingCount                              3    3    0    0.030287
+  21 Accepted+Dissipating | Prev10NetAcceptance                                     3    3    0    0.029721
+  22 Accepted+Peak | ContextSlopeDissipating                                        3    3    0    0.029229
+  23 Accepted+Dissipating+Peak | Prev10Dominance                                    3    3    0    0.027284
+  24 Accepted+Climactic | Prev20DissipatingCount                                    3    3    0    0.024187
+  25 Accepted+Compressed+Dissipating | Prev10AcceptedCount                          3    2    1    0.220620
+
+Strongest Failure Context Patterns
+----------------------------------
+Rank Combination | Feature                                                      Valid  Pos  Neg  MeanEffect
+   1 Accepted+Compressed+Dissipating | Prev10CompressedCount                        3    0    3   -0.250644
+   2 Compressed+Dissipating+Peak | Prev10DissipatingCount                           3    0    3   -0.188775
+   3 Accepted+Compressed | Prev5ClimacticCount                                      3    0    3   -0.157492
+   4 Compressed+Dissipating+Peak | Prev10Dominance                                  3    0    3   -0.132925
+   5 Compressed+Dissipating+Peak | Prev10NetAcceptance                              3    0    3   -0.112913
+   6 Accepted+Climactic | Prev20ExpandingCount                                      3    0    3   -0.107520
+   7 Accepted+Expanding | Prev20PeakCount                                           3    0    3   -0.093704
+   8 Accepted+Climactic | Prev5AcceptedCount                                        3    0    3   -0.084206
+   9 Accepted+Climactic | Prev10AcceptedCount                                       3    0    3   -0.078895
+  10 Accepted+Climactic | Prev10Dominance                                           3    0    3   -0.078647
+  11 Accepted+Expanding | Prev5ExpandingCount                                       3    0    3   -0.075976
+  12 Accepted+Peak | Prev5PeakCount                                                 3    0    3   -0.063656
+  13 Compressed+Dissipating+Peak | Prev20PeakCount                                  3    0    3   -0.063344
+  14 Accepted+Expanding | Prev5PeakCount                                            3    0    3   -0.059860
+  15 Accepted+Dissipating | Prev20PeakCount                                         3    0    3   -0.059627
+  16 Accepted+Dissipating | Prev10PeakCount                                         3    0    3   -0.056667
+  17 Accepted+Expanding | Prev20ExpandingCount                                      3    0    3   -0.055791
+  18 Accepted+Peak | Prev20CompressedCount                                          3    0    3   -0.054470
+  19 Accepted+Dissipating+Peak | Prev5ExpandingCount                                3    0    3   -0.051573
+  20 Accepted+Dissipating+Peak | Prev20PeakCount                                    3    0    3   -0.051033
+  21 Accepted+Climactic | Prev5Dominance                                            3    0    3   -0.048510
+  22 Accepted+Peak | ContextSlopePeak                                               3    0    3   -0.047713
+  23 Accepted+Dissipating | ContextSlopeCompressed                                  3    0    3   -0.043275
+  24 Accepted+Dissipating+Peak | Prev10ExpandingCount                               3    0    3   -0.041516
+  25 Accepted+Expanding | Prev5ClimacticCount                                       3    0    3   -0.040925
+
+Most Important Context Slopes
+-----------------------------
+Rank Combination | Feature                                                      Valid  Pos  Neg  MeanEffect
+   1 Accepted+Compressed | ContextSlopeDissipating                                  3    1    2   -0.449853
+   2 Accepted+Compressed+Dissipating | ContextSlopeDissipating                      3    1    2   -0.443947
+   3 Accepted+Compressed | ContextSlopePeak                                         3    1    2    0.253804
+   4 Accepted+Compressed+Dissipating | ContextSlopePeak                             3    1    2    0.232309
+   5 Accepted+Compressed | ContextSlopeCompressed                                   3    1    2   -0.138474
+   6 Accepted+Compressed+Dissipating | ContextSlopeCompressed                       3    1    2   -0.128654
+   7 Accepted+Compressed | ContextSlopeAccepted                                     3    2    1    0.122496
+   8 Accepted+Compressed+Dissipating | ContextSlopeAccepted                         3    2    1    0.110864
+   9 Compressed+Peak | ContextSlopeDominance                                        3    2    1    0.100374
+  10 Compressed+Dissipating+Peak | ContextSlopeDissipating                          3    3    0    0.092371
+  11 Accepted+Dissipating+Peak | ContextSlopeDissipating                            3    3    0    0.088345
+  12 Compressed+Peak | ContextSlopeDissipating                                      3    3    0    0.087640
+  13 Accepted+Dissipating+Peak | ContextSlopeDominance                              3    2    1    0.086515
+  14 Accepted+Dissipating+Peak | ContextSlopeCompressed                             3    1    2   -0.075799
+  15 Compressed+Dissipating+Peak | ContextSlopeDominance                            3    2    1    0.075213
+  16 Accepted+Dissipating | ContextSlopeDissipating                                 3    1    2   -0.073289
+  17 Compressed+Peak | ContextSlopeAccepted                                         3    2    1    0.069932
+  18 Compressed+Dissipating+Peak | ContextSlopePeak                                 3    2    1    0.063613
+  19 Compressed+Peak | ContextSlopeCompressed                                       3    1    2   -0.056706
+  20 Compressed+Dissipating | ContextSlopePeak                                      3    2    1    0.048816
+  21 Accepted+Peak | ContextSlopeAccepted                                           3    1    2   -0.047932
+  22 Accepted+Peak | ContextSlopePeak                                               3    0    3   -0.047713
+  23 Accepted+Climactic | ContextSlopeAccepted                                      3    1    2   -0.047415
+  24 Accepted+Climactic | ContextSlopePeak                                          3    1    2   -0.044586
+  25 Accepted+Dissipating | ContextSlopeCompressed                                  3    0    3   -0.043275
+
+Most Important Population-B Context Features
+--------------------------------------------
+Rank Combination | Feature                                                      Valid  Pos  Neg  MeanEffect
+   1 Compressed+Dissipating | Prev10Dominance                                       3    3    0    0.281908
+   2 Compressed+Dissipating | Prev20Dominance                                       3    3    0    0.259983
+   3 Compressed+Dissipating | Prev20NetAcceptance                                   3    2    1    0.248226
+   4 Compressed+Dissipating | Prev20DissipatingCount                                3    2    1    0.245126
+   5 Compressed+Dissipating | Prev10DissipatingCount                                3    3    0    0.238196
+   6 Compressed+Dissipating | Prev10CompressedCount                                 3    0    3   -0.235555
+   7 Compressed+Dissipating | Prev10NetAcceptance                                   3    2    1    0.224427
+   8 Compressed+Dissipating | Prev10AcceptedCount                                   3    3    0    0.208894
+   9 Compressed+Dissipating | Prev20AcceptedCount                                   3    3    0    0.198242
+  10 Compressed+Dissipating | Prev20CompressedCount                                 3    0    3   -0.193180
+  11 Compressed+Dissipating | Prev20PeakCount                                       3    1    2   -0.140903
+  12 Compressed+Dissipating | ContextSlopeDissipating                               3    1    2   -0.118159
+  13 Compressed+Dissipating | ContextSlopeDominance                                 3    0    3   -0.099402
+  14 Compressed+Dissipating | ContextSlopeAccepted                                  3    0    3   -0.090680
+  15 Compressed+Dissipating | Prev10PeakCount                                       3    2    1   -0.088723
+  16 Compressed+Dissipating | ContextSlopePeak                                      3    2    1    0.082182
+  17 Compressed+Dissipating | Prev10ClimacticCount                                  3    3    0    0.080831
+  18 Compressed+Dissipating | Prev5ClimacticCount                                   3    2    1    0.073068
+  19 Compressed+Dissipating | Prev5ExpandingCount                                   3    2    1    0.068603
+  20 Compressed+Dissipating | Prev5CompressedCount                                  3    1    2   -0.062952
+  21 Compressed+Dissipating | Prev20ExpandingCount                                  3    2    1   -0.059965
+  22 Compressed+Dissipating | Prev5Dominance                                        3    3    0    0.053220
+  23 Compressed+Dissipating | Prev10ExpandingCount                                  3    2    1    0.050600
+  24 Compressed+Dissipating | ContextSlopeCompressed                                3    3    0    0.040044
+  25 Compressed+Dissipating | Prev20ClimacticCount                                  3    1    2   -0.037593
+
+Cross-Instrument Research Notes
+===============================
+- Strongest replicated context feature: Accepted+Compressed | Prev5DissipatingCount, MeanEffect=-0.466925.
+- Context comparisons describe histories preceding topology occurrences; they do not establish sufficiency.
+- Population B rankings reuse the existing mature aligned lateral DissipationContained selector.

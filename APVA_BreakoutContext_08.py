@@ -91,6 +91,17 @@ class Breakout:
 
 
 @dataclass(frozen=True)
+class CompletedFrame:
+    source: str
+    start_index: int
+    end_index: int
+    breakout_index: int
+    direction: str
+    high: float
+    low: float
+
+
+@dataclass(frozen=True)
 class CombinationStats:
     event_name: str
     context_name: str
@@ -153,8 +164,14 @@ def load_rows(path: Path) -> list[EvidenceBar]:
     with path.open("r", newline="", encoding="utf-8-sig") as handle:
         reader = csv.DictReader(handle)
         require_columns(reader.fieldnames)
-        for line_number, raw in enumerate(reader, start=2):
+        raw_rows = list(reader)
+        for row_offset, raw in enumerate(raw_rows):
+            line_number = row_offset + 2
             if not any((value or "").strip() for value in raw.values()):
+                continue
+            if row_offset == len(raw_rows) - 1 and any(
+                not (raw.get(column) or "").strip() for column in REQUIRED_COLUMNS
+            ):
                 continue
             bar_index_text = (raw.get("BarIndex") or "").strip()
             try:
@@ -291,6 +308,37 @@ def detect_frames(
     if active is not None:
         diagnostics.total_length += len(rows) - active.start_index
     return breakouts, diagnostics
+
+
+def detect_completed_frames(
+    rows: list[EvidenceBar],
+    source: str,
+    start_detector: Callable[[list[EvidenceBar], int], ActiveFrame | None],
+) -> list[CompletedFrame]:
+    completed: list[CompletedFrame] = []
+    active: ActiveFrame | None = None
+
+    for index, bar in enumerate(rows):
+        if active is None:
+            active = start_detector(rows, index)
+            continue
+
+        result = classify_breakout(bar, active)
+        if result in {"Up", "Down"}:
+            completed.append(
+                CompletedFrame(
+                    source=source,
+                    start_index=active.start_index,
+                    end_index=index - 1,
+                    breakout_index=index,
+                    direction=result,
+                    high=active.high,
+                    low=active.low,
+                )
+            )
+            active = None
+
+    return completed
 
 
 def build_contexts(

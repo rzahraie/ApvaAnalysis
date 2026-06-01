@@ -1,0 +1,164 @@
+APVA Family Graph Study v0.1 - Cross-Instrument Aggregate
+========================================================
+Input instruments: 6E, NQ, CL
+Study 30 family precedence reused exactly: A, then B, then C, then D, then N.
+Cycle aggregate threshold: 50; replication threshold: Count >= 20 in at least two instruments.
+
+Aggregate Node Table
+====================
+Family    Count_6E   Freq_6E Persist_6E   Ret5_6E  Ret10_6E  Ret20_6E  Count_NQ   Freq_NQ Persist_NQ   Ret5_NQ  Ret10_NQ  Ret20_NQ  Count_CL   Freq_CL Persist_CL   Ret5_CL  Ret10_CL  Ret20_CL Valid MeanPersist  MeanRet5 MeanRet10 MeanRet20
+A              181    0.51%     0.00%    3.87%    6.08%   11.60%        26    1.35%     0.00%    3.85%   11.54%   15.38%        24    0.89%     0.00%    8.33%    8.33%   16.67%     3      0.00%    5.35%    8.65%   14.55%
+B             3069    8.70%    14.70%   44.18%   63.83%   80.42%        88    4.56%     6.82%   30.68%   40.91%   63.64%       194    7.23%    14.95%   44.33%   56.70%   74.23%     3     12.15%   39.73%   53.81%   72.76%
+C             5456   15.47%    25.06%   64.41%   81.07%   93.16%       253   13.11%    28.46%   61.26%   74.70%   90.12%       448   16.69%    29.69%   68.75%   81.03%   93.75%     3     27.74%   64.81%   78.93%   92.34%
+D             6497   18.43%    11.71%   65.08%   87.92%   98.29%       431   22.33%    14.85%   72.39%   92.81%   99.54%       521   19.41%    14.20%   67.95%   89.44%   98.27%     3     13.59%   68.47%   90.06%   98.70%
+N            20057   56.88%    56.42%   98.01%   99.92%  100.00%      1132   58.65%    58.62%   97.61%   99.91%   99.91%      1497   55.77%    56.62%   97.33%   99.80%   99.93%     3     57.22%   97.65%   99.88%   99.95%
+
+Aggregate Connectivity Table
+============================
+Family       In_6E    WIn_6E    Out_6E   WOut_6E   Attr_6E    Src_6E    Hub_6E     In_NQ    WIn_NQ    Out_NQ   WOut_NQ   Attr_NQ    Src_NQ    Hub_NQ     In_CL    WIn_CL    Out_CL   WOut_CL   Attr_CL    Src_CL    Hub_CL  MeanAttr   MeanSrc   MeanHub
+A           0.9583    1.1774    0.7576    1.0266    0.1508   -0.1508    2.2041    0.7156    1.1439    0.7588    1.0696    0.0744   -0.0744    2.2135    0.9749    1.0768    0.6807    1.1281   -0.0512    0.0512    2.2049    0.0580   -0.0580    2.2075
+B           1.2064    1.3225    1.1905    1.1112    0.3583   -0.2113    2.2867    1.4891    2.3436    0.9138    1.0496    1.3623   -1.2941    3.3250    1.2168    1.9285    1.3330    1.1443    0.9337   -0.7843    2.9233    0.8848   -0.7632    2.8450
+C           1.1840    1.1087    1.3798    1.2698    0.0894    0.1612    2.1279    1.1472    1.2235    1.6739    1.6901   -0.1821    0.4666    2.6290    1.2521    1.1488    1.3887    1.5250   -0.0793    0.3761    2.3769   -0.0573    0.3347    2.3779
+D           0.7595    1.1681    0.8626    1.0605    0.2247   -0.1075    2.1114    0.8916    1.1271    1.0199    1.0448    0.2308   -0.0823    2.0234    0.7600    1.2187    0.9020    1.0432    0.3176   -0.1755    2.1199    0.2577   -0.1218    2.0849
+N           0.9966    1.0130    0.9143    1.0377    0.5395    0.0247    1.4865    0.9775    1.0128    0.8546    1.0422    0.5568    0.0294    1.4688    0.9808    1.0141    0.8802    1.0635    0.5168    0.0494    1.5114    0.5377    0.0345    1.4889
+
+Aggregate Cycle Table
+=====================
+Cycle         Count_6E    OER_6E   Cont_6E   Fail_6E  Count_NQ    OER_NQ   Cont_NQ   Fail_NQ  Count_CL    OER_CL   Cont_CL   Fail_CL Valid   MeanOER  MeanCont  MeanFail
+B->C->B            143    3.4598   50.00%   45.76%         2    3.8064  100.00%    0.00%         7    2.9930   50.00%   50.00%     1    3.4598   50.00%   45.76%
+B->N->B            110    0.7240   44.44%   50.00%         3    1.2761   66.67%   33.33%         5    0.6398   40.00%   60.00%     1    0.7240   44.44%   50.00%
+C->B->C            263    3.5793   41.31%   55.98%         8    5.2958   37.50%   62.50%        18    3.3328   33.33%   66.67%     1    3.5793   41.31%   55.98%
+C->D->C             61    0.3922   44.26%   49.18%         8    1.0813    0.00%  100.00%         5    0.3447   60.00%   40.00%     1    0.3922   44.26%   49.18%
+C->N->C            488    1.0162   44.51%   50.93%        21    1.0807   42.86%   52.38%        35    0.8398   54.29%   45.71%     3    0.9789   47.22%   49.68%
+D->B->D             56    0.5375   41.07%   57.14%         4    0.9124   75.00%   25.00%         0       N/A    0.00%    0.00%     1    0.5375   41.07%   57.14%
+D->C->D             54    0.2915   38.89%   59.26%         6    0.4760   16.67%   66.67%         2    0.1186    0.00%  100.00%     1    0.2915   38.89%   59.26%
+D->N->D           1096    1.6096   43.56%   51.71%        86    1.5250   44.19%   54.65%        98    1.7387   50.00%   48.98%     3    1.6244   45.91%   51.78%
+N->A->N             47    0.8026   37.21%   60.47%         7    0.7834   14.29%   85.71%         9    1.2064   66.67%   33.33%     1    0.8026   37.21%   60.47%
+N->B->N            578    0.5821   41.61%   52.44%        13    0.4299   53.85%   46.15%        23    0.3814   50.00%   50.00%     2    0.4817   45.81%   51.22%
+N->C->N           1314    0.7444   46.24%   49.28%        52    0.5981   58.82%   41.18%        88    0.6319   48.81%   51.19%     3    0.6581   51.29%   47.22%
+N->D->N           3451    1.6417   46.75%   47.47%       227    1.5326   51.77%   48.23%       264    1.6301   53.15%   45.67%     3    1.6014   50.56%   47.12%
+
+Aggregate Constructive / Destructive Table
+==========================================
+TransitionClass                   Count_6E   Prob_6E   Lift_6E   Cont_6E   Fail_6E  Count_NQ   Prob_NQ   Lift_NQ   Cont_NQ   Fail_NQ  Count_CL   Prob_CL   Lift_CL   Cont_CL   Fail_CL  MeanLift  MeanCont  MeanFail
+Constructive->Constructive             482   14.83%    1.6091   42.61%   51.48%         7    6.14%    1.0401   57.14%   42.86%        32   14.68%    1.8079   40.00%   56.67%    1.4857   46.58%   50.33%
+Constructive->Destructive             1169   35.97%    1.0611   43.77%   51.82%        40   35.09%    0.9906   50.00%   50.00%        78   35.78%    0.9914   50.00%   50.00%    1.0144   47.92%   50.61%
+Constructive->Neutral                 1599   49.20%    0.8650   44.35%   50.38%        67   58.77%    1.0025   45.45%   54.55%       108   49.54%    0.8886   53.85%   46.15%    0.9187   47.88%   50.36%
+Destructive->Constructive             1543   12.91%    1.4006   46.06%   50.27%        74   10.82%    1.8325   62.50%   37.50%       130   13.42%    1.6524   48.41%   50.00%    1.6285   52.32%   45.92%
+Destructive->Destructive              3269   27.35%    0.8068   46.56%   48.78%       209   30.56%    0.8626   34.93%   64.11%       298   30.75%    0.8521   46.31%   53.36%    0.8405   42.60%   55.42%
+Destructive->Neutral                  7140   59.74%    1.0501   46.52%   48.23%       401   58.63%    1.0001   52.01%   47.74%       541   55.83%    1.0014   48.76%   50.10%    1.0172   49.10%   48.69%
+Neutral->Constructive                 1225    6.11%    0.6626   48.21%   47.32%        33    2.92%    0.4938   54.55%   45.45%        56    3.74%    0.4607   58.18%   41.82%    0.5391   53.65%   44.86%
+Neutral->Destructive                  7515   37.47%    1.1053   46.03%   48.80%       435   38.46%    1.0848   46.31%   53.00%       593   39.64%    1.0976   48.74%   50.93%    1.0959   47.03%   50.91%
+Neutral->Neutral                     11317   56.42%    0.9920   46.83%   47.85%       663   58.62%    0.9991   51.98%   47.87%       847   56.62%    1.0148   49.69%   49.45%    1.0020   49.50%   48.39%
+
+Strongest Attractors
+--------------------
+Family B: MeanAttractor=0.8848
+Family N: MeanAttractor=0.5377
+Family D: MeanAttractor=0.2577
+Family A: MeanAttractor=0.0580
+Family C: MeanAttractor=-0.0573
+
+Strongest Sources
+-----------------
+Family C: MeanSource=0.3347
+Family N: MeanSource=0.0345
+Family A: MeanSource=-0.0580
+Family D: MeanSource=-0.1218
+Family B: MeanSource=-0.7632
+
+Strongest Hubs
+--------------
+Family B: MeanHub=2.8450
+Family C: MeanHub=2.3779
+Family A: MeanHub=2.2075
+Family D: MeanHub=2.0849
+Family N: MeanHub=1.4889
+
+Highest Persistence Families
+----------------------------
+Family N: MeanPersistence1=57.22%
+Family C: MeanPersistence1=27.74%
+Family D: MeanPersistence1=13.59%
+Family B: MeanPersistence1=12.15%
+Family A: MeanPersistence1=0.00%
+
+Highest Return Families
+-----------------------
+Family N: MeanReturn5=97.65%, MeanReturn10=99.88%, MeanReturn20=99.95%
+Family D: MeanReturn5=68.47%, MeanReturn10=90.06%, MeanReturn20=98.70%
+Family C: MeanReturn5=64.81%, MeanReturn10=78.93%, MeanReturn20=92.34%
+Family B: MeanReturn5=39.73%, MeanReturn10=53.81%, MeanReturn20=72.76%
+Family A: MeanReturn5=5.35%, MeanReturn10=8.65%, MeanReturn20=14.55%
+
+Strongest Cycles by OER
+-----------------------
+D->N->D: MeanOER=1.6244, AggregateCount=1280
+N->D->N: MeanOER=1.6014, AggregateCount=3942
+C->N->C: MeanOER=0.9789, AggregateCount=544
+N->C->N: MeanOER=0.6581, AggregateCount=1454
+N->B->N: MeanOER=0.4817, AggregateCount=614
+
+Best Cycles by Continuation
+---------------------------
+N->C->N: MeanContinuation=51.29%, MeanOER=0.6581
+N->D->N: MeanContinuation=50.56%, MeanOER=1.6014
+C->N->C: MeanContinuation=47.22%, MeanOER=0.9789
+D->N->D: MeanContinuation=45.91%, MeanOER=1.6244
+N->B->N: MeanContinuation=45.81%, MeanOER=0.4817
+
+Worst Cycles by Failure
+-----------------------
+D->N->D: MeanFailure=51.78%, MeanOER=1.6244
+N->B->N: MeanFailure=51.22%, MeanOER=0.4817
+C->N->C: MeanFailure=49.68%, MeanOER=0.9789
+N->C->N: MeanFailure=47.22%, MeanOER=0.6581
+N->D->N: MeanFailure=47.12%, MeanOER=1.6014
+
+Best Constructive / Destructive Transitions
+-------------------------------------------
+Neutral->Constructive: MeanContinuation=53.65%, MeanLift=0.5391
+Destructive->Constructive: MeanContinuation=52.32%, MeanLift=1.6285
+Neutral->Neutral: MeanContinuation=49.50%, MeanLift=1.0020
+Destructive->Neutral: MeanContinuation=49.10%, MeanLift=1.0172
+Constructive->Destructive: MeanContinuation=47.92%, MeanLift=1.0144
+Constructive->Neutral: MeanContinuation=47.88%, MeanLift=0.9187
+Neutral->Destructive: MeanContinuation=47.03%, MeanLift=1.0959
+Constructive->Constructive: MeanContinuation=46.58%, MeanLift=1.4857
+Destructive->Destructive: MeanContinuation=42.60%, MeanLift=0.8405
+
+Worst Constructive / Destructive Transitions
+--------------------------------------------
+Destructive->Destructive: MeanFailure=55.42%, MeanLift=0.8405
+Neutral->Destructive: MeanFailure=50.91%, MeanLift=1.0959
+Constructive->Destructive: MeanFailure=50.61%, MeanLift=1.0144
+Constructive->Neutral: MeanFailure=50.36%, MeanLift=0.9187
+Constructive->Constructive: MeanFailure=50.33%, MeanLift=1.4857
+Destructive->Neutral: MeanFailure=48.69%, MeanLift=1.0172
+Neutral->Neutral: MeanFailure=48.39%, MeanLift=1.0020
+Destructive->Constructive: MeanFailure=45.92%, MeanLift=1.6285
+Neutral->Constructive: MeanFailure=44.86%, MeanLift=0.5391
+
+Population-B Strongest Differences
+----------------------------------
+Family B | CL: AttractorDeltaVsFull=2.1201
+Family B | NQ: AttractorDeltaVsFull=-1.3623
+Family B | 6E: AttractorDeltaVsFull=-1.1337
+Family N | CL: AttractorDeltaVsFull=0.7624
+Family N | 6E: AttractorDeltaVsFull=0.6188
+Family N | NQ: AttractorDeltaVsFull=0.4432
+Family D | CL: AttractorDeltaVsFull=-0.3176
+Family D | NQ: AttractorDeltaVsFull=-0.2308
+Family D | 6E: AttractorDeltaVsFull=-0.2247
+Family C | NQ: AttractorDeltaVsFull=0.1821
+Family A | 6E: AttractorDeltaVsFull=-0.1508
+Family C | 6E: AttractorDeltaVsFull=-0.0894
+Family C | CL: AttractorDeltaVsFull=0.0793
+Family A | NQ: AttractorDeltaVsFull=-0.0744
+Family A | CL: AttractorDeltaVsFull=0.0512
+
+Research Notes
+==============
+- Graph scores combine transition lift and persistence mechanically.
+- Return rates measure first same-family reappearance inside 5, 10, and 20 original bars.
+- Population B differences compare attractor score against the full population.

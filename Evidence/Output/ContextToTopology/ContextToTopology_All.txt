@@ -1,0 +1,471 @@
+APVA Context-to-Topology Study v0.1 - Cross-Instrument Aggregate
+================================================================
+Input instruments: 6E, NQ, CL
+Replication threshold: topology present count >= 20 in at least two instruments.
+Effects compare historical context for topology-present versus topology-absent bars.
+
+Aggregate Topology-Feature Table
+================================
+Topology                               Group     Feature                            Effect_6E   Effect_NQ   Effect_CL Valid  Pos  Neg  MeanEffect
+Accepted+Compressed                    Positive  Prev5AcceptedCount                  0.312717   -0.100740    0.213631     3    2    1    0.141869
+Accepted+Compressed                    Positive  Prev5CompressedCount               -0.301149    0.081876   -0.173927     3    1    2   -0.131067
+Accepted+Compressed                    Positive  Prev5DissipatingCount               0.052250   -0.231975   -0.033298     3    1    2   -0.071008
+Accepted+Compressed                    Positive  Prev5ExpandingCount                 0.546702    0.022348    0.141950     3    3    0    0.237000
+Accepted+Compressed                    Positive  Prev5PeakCount                      0.205302   -0.074986    0.335492     3    2    1    0.155269
+Accepted+Compressed                    Positive  Prev5ClimacticCount                 0.382901    0.099343   -0.049032     3    2    1    0.144404
+Accepted+Compressed                    Positive  Prev5Dominance                      0.280278   -0.179389    0.154970     3    2    1    0.085286
+Accepted+Compressed                    Positive  Prev5NetAcceptance                  0.080221   -0.030867   -0.097749     3    1    2   -0.016131
+Accepted+Compressed                    Positive  Prev10AcceptedCount                 0.265592   -0.092828   -0.057459     3    1    2    0.038435
+Accepted+Compressed                    Positive  Prev10CompressedCount              -0.256323    0.097763    0.067660     3    2    1   -0.030300
+Accepted+Compressed                    Positive  Prev10DissipatingCount              0.093855   -0.348149   -0.407663     3    1    2   -0.220652
+Accepted+Compressed                    Positive  Prev10ExpandingCount                0.452590    0.118958    0.104838     3    3    0    0.225462
+Accepted+Compressed                    Positive  Prev10PeakCount                     0.160373    0.034781    0.410012     3    3    0    0.201722
+Accepted+Compressed                    Positive  Prev10ClimacticCount                0.451353   -0.005883   -0.278033     3    1    2    0.055813
+Accepted+Compressed                    Positive  Prev10Dominance                     0.257689   -0.231972   -0.233041     3    1    2   -0.069108
+Accepted+Compressed                    Positive  Prev10NetAcceptance                 0.066898   -0.102599   -0.391334     3    1    2   -0.142345
+Accepted+Compressed                    Positive  Prev20AcceptedCount                 0.297172   -0.085746   -0.052361     3    1    2    0.053022
+Accepted+Compressed                    Positive  Prev20CompressedCount              -0.285213    0.083246    0.084090     3    2    1   -0.039292
+Accepted+Compressed                    Positive  Prev20DissipatingCount              0.153514   -0.183063   -0.255653     3    1    2   -0.095067
+Accepted+Compressed                    Positive  Prev20ExpandingCount                0.436449   -0.037272    0.085648     3    2    1    0.161609
+Accepted+Compressed                    Positive  Prev20PeakCount                     0.215298   -0.098133    0.395441     3    2    1    0.170869
+Accepted+Compressed                    Positive  Prev20ClimacticCount                0.395054    0.144541   -0.003476     3    2    1    0.178706
+Accepted+Compressed                    Positive  Prev20Dominance                     0.305169   -0.155709   -0.170534     3    1    2   -0.007025
+Accepted+Compressed                    Positive  Prev20NetAcceptance                 0.042393    0.003680   -0.373031     3    2    1   -0.108986
+Accepted+Compressed+Dissipating        Positive  Prev5AcceptedCount                  0.315425   -0.100740    0.213631     3    2    1    0.142772
+Accepted+Compressed+Dissipating        Positive  Prev5CompressedCount               -0.302171    0.081876   -0.173927     3    1    2   -0.131407
+Accepted+Compressed+Dissipating        Positive  Prev5DissipatingCount               0.062365   -0.231975   -0.033298     3    1    2   -0.067636
+Accepted+Compressed+Dissipating        Positive  Prev5ExpandingCount                 0.548192    0.022348    0.141950     3    3    0    0.237497
+Accepted+Compressed+Dissipating        Positive  Prev5PeakCount                      0.190902   -0.074986    0.335492     3    2    1    0.150469
+Accepted+Compressed+Dissipating        Positive  Prev5ClimacticCount                 0.395395    0.099343   -0.049032     3    2    1    0.148569
+Accepted+Compressed+Dissipating        Positive  Prev5Dominance                      0.286374   -0.179389    0.154970     3    2    1    0.087318
+Accepted+Compressed+Dissipating        Positive  Prev5NetAcceptance                  0.093101   -0.030867   -0.097749     3    1    2   -0.011838
+Accepted+Compressed+Dissipating        Positive  Prev10AcceptedCount                 0.269003   -0.092828   -0.057459     3    1    2    0.039572
+Accepted+Compressed+Dissipating        Positive  Prev10CompressedCount              -0.257688    0.097763    0.067660     3    2    1   -0.030755
+Accepted+Compressed+Dissipating        Positive  Prev10DissipatingCount              0.076698   -0.348149   -0.407663     3    1    2   -0.226371
+Accepted+Compressed+Dissipating        Positive  Prev10ExpandingCount                0.466070    0.118958    0.104838     3    3    0    0.229955
+Accepted+Compressed+Dissipating        Positive  Prev10PeakCount                     0.161506    0.034781    0.410012     3    3    0    0.202100
+Accepted+Compressed+Dissipating        Positive  Prev10ClimacticCount                0.474748   -0.005883   -0.278033     3    1    2    0.063611
+Accepted+Compressed+Dissipating        Positive  Prev10Dominance                     0.251967   -0.231972   -0.233041     3    1    2   -0.071015
+Accepted+Compressed+Dissipating        Positive  Prev10NetAcceptance                 0.068485   -0.102599   -0.391334     3    1    2   -0.141816
+Accepted+Compressed+Dissipating        Positive  Prev20AcceptedCount                 0.309347   -0.085746   -0.052361     3    1    2    0.057080
+Accepted+Compressed+Dissipating        Positive  Prev20CompressedCount              -0.294706    0.083246    0.084090     3    2    1   -0.042457
+Accepted+Compressed+Dissipating        Positive  Prev20DissipatingCount              0.128473   -0.183063   -0.255653     3    1    2   -0.103414
+Accepted+Compressed+Dissipating        Positive  Prev20ExpandingCount                0.434056   -0.037272    0.085648     3    2    1    0.160811
+Accepted+Compressed+Dissipating        Positive  Prev20PeakCount                     0.228923   -0.098133    0.395441     3    2    1    0.175410
+Accepted+Compressed+Dissipating        Positive  Prev20ClimacticCount                0.416499    0.144541   -0.003476     3    2    1    0.185855
+Accepted+Compressed+Dissipating        Positive  Prev20Dominance                     0.302753   -0.155709   -0.170534     3    1    2   -0.007830
+Accepted+Compressed+Dissipating        Positive  Prev20NetAcceptance                 0.040336    0.003680   -0.373031     3    2    1   -0.109672
+Compressed+Dissipating                 Positive  Prev5AcceptedCount                  0.077433    0.086695    0.105075     3    3    0    0.089734
+Compressed+Dissipating                 Positive  Prev5CompressedCount               -0.072507   -0.055033   -0.127566     3    0    3   -0.085035
+Compressed+Dissipating                 Positive  Prev5DissipatingCount               0.024273    0.017549    0.001533     3    3    0    0.014452
+Compressed+Dissipating                 Positive  Prev5ExpandingCount                 0.163690    0.090410    0.088509     3    3    0    0.114203
+Compressed+Dissipating                 Positive  Prev5PeakCount                      0.052906    0.058445    0.032006     3    3    0    0.047785
+Compressed+Dissipating                 Positive  Prev5ClimacticCount                 0.056198    0.078762    0.016607     3    3    0    0.050522
+Compressed+Dissipating                 Positive  Prev5Dominance                      0.073624    0.070726    0.102462     3    3    0    0.082271
+Compressed+Dissipating                 Positive  Prev5NetAcceptance                  0.018292    0.030958    0.057987     3    3    0    0.035746
+Compressed+Dissipating                 Positive  Prev10AcceptedCount                 0.067535    0.063567    0.045615     3    3    0    0.058906
+Compressed+Dissipating                 Positive  Prev10CompressedCount              -0.060618   -0.053788   -0.075699     3    0    3   -0.063368
+Compressed+Dissipating                 Positive  Prev10DissipatingCount              0.023529    0.016561   -0.019664     3    2    1    0.006809
+Compressed+Dissipating                 Positive  Prev10ExpandingCount                0.121589    0.073916    0.035188     3    3    0    0.076898
+Compressed+Dissipating                 Positive  Prev10PeakCount                     0.037370    0.096729    0.021376     3    3    0    0.051825
+Compressed+Dissipating                 Positive  Prev10ClimacticCount                0.067201    0.053789    0.024205     3    3    0    0.048398
+Compressed+Dissipating                 Positive  Prev10Dominance                     0.063500    0.058829    0.044167     3    3    0    0.055499
+Compressed+Dissipating                 Positive  Prev10NetAcceptance                 0.019676   -0.021988    0.016850     3    2    1    0.004846
+Compressed+Dissipating                 Positive  Prev20AcceptedCount                 0.062604    0.031954    0.087549     3    3    0    0.060702
+Compressed+Dissipating                 Positive  Prev20CompressedCount              -0.054735   -0.029122   -0.119615     3    0    3   -0.067824
+Compressed+Dissipating                 Positive  Prev20DissipatingCount              0.019453   -0.017350   -0.020079     3    1    2   -0.005992
+Compressed+Dissipating                 Positive  Prev20ExpandingCount                0.111818    0.008338    0.035730     3    3    0    0.051962
+Compressed+Dissipating                 Positive  Prev20PeakCount                     0.038353    0.068938    0.006071     3    3    0    0.037787
+Compressed+Dissipating                 Positive  Prev20ClimacticCount                0.078702    0.041532    0.036277     3    3    0    0.052170
+Compressed+Dissipating                 Positive  Prev20Dominance                     0.056354    0.019894    0.079812     3    3    0    0.052020
+Compressed+Dissipating                 Positive  Prev20NetAcceptance                 0.014455   -0.025228    0.064336     3    2    1    0.017854
+Compressed+Peak                        Positive  Prev5AcceptedCount                  0.152322    0.292500    0.369877     3    3    0    0.271566
+Compressed+Peak                        Positive  Prev5CompressedCount               -0.155738   -0.287393   -0.382891     3    0    3   -0.275341
+Compressed+Peak                        Positive  Prev5DissipatingCount              -0.133545   -0.306251   -0.189266     3    0    3   -0.209687
+Compressed+Peak                        Positive  Prev5ExpandingCount                 0.327489    0.541528    0.477261     3    3    0    0.448759
+Compressed+Peak                        Positive  Prev5PeakCount                      0.429843    0.697317    0.563311     3    3    0    0.563490
+Compressed+Peak                        Positive  Prev5ClimacticCount                 0.221501    0.645281    0.538185     3    3    0    0.468322
+Compressed+Peak                        Positive  Prev5Dominance                      0.069005    0.129738    0.244319     3    3    0    0.147688
+Compressed+Peak                        Positive  Prev5NetAcceptance                 -0.207466   -0.255008   -0.152138     3    0    3   -0.204871
+Compressed+Peak                        Positive  Prev10AcceptedCount                 0.100389    0.170460    0.250108     3    3    0    0.173652
+Compressed+Peak                        Positive  Prev10CompressedCount              -0.107929   -0.173567   -0.264671     3    0    3   -0.182056
+Compressed+Peak                        Positive  Prev10DissipatingCount             -0.098628   -0.396001   -0.182385     3    0    3   -0.225671
+Compressed+Peak                        Positive  Prev10ExpandingCount                0.231732    0.460489    0.322222     3    3    0    0.338147
+Compressed+Peak                        Positive  Prev10PeakCount                     0.333759    0.437387    0.457342     3    3    0    0.409496
+Compressed+Peak                        Positive  Prev10ClimacticCount                0.067050    0.267223    0.299010     3    3    0    0.211094
+Compressed+Peak                        Positive  Prev10Dominance                     0.041786   -0.015773    0.143999     3    2    1    0.056671
+Compressed+Peak                        Positive  Prev10NetAcceptance                -0.188192   -0.194210   -0.193634     3    0    3   -0.192012
+Compressed+Peak                        Positive  Prev20AcceptedCount                 0.005861   -0.031768    0.143728     3    2    1    0.039273
+Compressed+Peak                        Positive  Prev20CompressedCount              -0.015147    0.055659   -0.129242     3    1    2   -0.029577
+Compressed+Peak                        Positive  Prev20DissipatingCount             -0.124210   -0.296112   -0.121116     3    0    3   -0.180479
+Compressed+Peak                        Positive  Prev20ExpandingCount                0.069819    0.141956    0.183391     3    3    0    0.131722
+Compressed+Peak                        Positive  Prev20PeakCount                     0.166558    0.310009    0.132572     3    3    0    0.203046
+Compressed+Peak                        Positive  Prev20ClimacticCount               -0.111592    0.163902   -0.009890     3    1    2    0.014140
+Compressed+Peak                        Positive  Prev20Dominance                    -0.047058   -0.168220    0.063703     3    1    2   -0.050525
+Compressed+Peak                        Positive  Prev20NetAcceptance                -0.127291   -0.254022    0.002871     3    1    2   -0.126148
+Compressed+Dissipating+Peak            Positive  Prev5AcceptedCount                  0.234461    0.377649    0.515189     3    3    0    0.375766
+Compressed+Dissipating+Peak            Positive  Prev5CompressedCount               -0.237752   -0.341245   -0.539725     3    0    3   -0.372908
+Compressed+Dissipating+Peak            Positive  Prev5DissipatingCount              -0.133272   -0.267719   -0.264586     3    0    3   -0.221859
+Compressed+Dissipating+Peak            Positive  Prev5ExpandingCount                 0.509740    0.687564    0.651503     3    3    0    0.616269
+Compressed+Dissipating+Peak            Positive  Prev5PeakCount                      0.551803    0.680929    0.713770     3    3    0    0.648834
+Compressed+Dissipating+Peak            Positive  Prev5ClimacticCount                 0.317861    1.006004    0.616330     3    3    0    0.646732
+Compressed+Dissipating+Peak            Positive  Prev5Dominance                      0.137734    0.207891    0.342642     3    3    0    0.229422
+Compressed+Dissipating+Peak            Positive  Prev5NetAcceptance                 -0.237479   -0.172774   -0.156868     3    0    3   -0.189040
+Compressed+Dissipating+Peak            Positive  Prev10AcceptedCount                 0.157757    0.323801    0.258257     3    3    0    0.246605
+Compressed+Dissipating+Peak            Positive  Prev10CompressedCount              -0.164140   -0.313536   -0.279274     3    0    3   -0.252316
+Compressed+Dissipating+Peak            Positive  Prev10DissipatingCount             -0.109039   -0.326612   -0.210355     3    0    3   -0.215335
+Compressed+Dissipating+Peak            Positive  Prev10ExpandingCount                0.379665    0.616436    0.335920     3    3    0    0.444007
+Compressed+Dissipating+Peak            Positive  Prev10PeakCount                     0.417140    0.445181    0.561041     3    3    0    0.474454
+Compressed+Dissipating+Peak            Positive  Prev10ClimacticCount                0.160152    0.482183    0.302798     3    3    0    0.315044
+Compressed+Dissipating+Peak            Positive  Prev10Dominance                     0.084005    0.142518    0.141779     3    3    0    0.122767
+Compressed+Dissipating+Peak            Positive  Prev10NetAcceptance                -0.211958   -0.075276   -0.275295     3    0    3   -0.187510
+Compressed+Dissipating+Peak            Positive  Prev20AcceptedCount                 0.061861    0.044696    0.165844     3    3    0    0.090800
+Compressed+Dissipating+Peak            Positive  Prev20CompressedCount              -0.068975   -0.016240   -0.168886     3    0    3   -0.084700
+Compressed+Dissipating+Peak            Positive  Prev20DissipatingCount             -0.115809   -0.321284   -0.150571     3    0    3   -0.195888
+Compressed+Dissipating+Peak            Positive  Prev20ExpandingCount                0.184547    0.254232    0.209939     3    3    0    0.216239
+Compressed+Dissipating+Peak            Positive  Prev20PeakCount                     0.252368    0.351553    0.250585     3    3    0    0.284835
+Compressed+Dissipating+Peak            Positive  Prev20ClimacticCount               -0.035581    0.415749   -0.033915     3    1    2    0.115418
+Compressed+Dissipating+Peak            Positive  Prev20Dominance                     0.001269   -0.112440    0.077216     3    2    1   -0.011319
+Compressed+Dissipating+Peak            Positive  Prev20NetAcceptance                -0.154911   -0.223208   -0.078343     3    0    3   -0.152154
+Accepted+Peak                          Negative  Prev5AcceptedCount                  0.065028    0.345977    0.104452     3    3    0    0.171819
+Accepted+Peak                          Negative  Prev5CompressedCount               -0.064229   -0.355781   -0.112970     3    0    3   -0.177660
+Accepted+Peak                          Negative  Prev5DissipatingCount              -0.041014   -0.192817   -0.066937     3    0    3   -0.100256
+Accepted+Peak                          Negative  Prev5ExpandingCount                 0.126961    0.337928    0.107555     3    3    0    0.190815
+Accepted+Peak                          Negative  Prev5PeakCount                      0.298795    0.380526    0.315290     3    3    0    0.331537
+Accepted+Peak                          Negative  Prev5ClimacticCount                 0.039256    0.115589    0.048379     3    3    0    0.067741
+Accepted+Peak                          Negative  Prev5Dominance                      0.035705    0.231199    0.065330     3    3    0    0.110745
+Accepted+Peak                          Negative  Prev5NetAcceptance                 -0.175568    0.016653   -0.167612     3    1    2   -0.108842
+Accepted+Peak                          Negative  Prev10AcceptedCount                 0.043985    0.194277    0.117753     3    3    0    0.118672
+Accepted+Peak                          Negative  Prev10CompressedCount              -0.043505   -0.195423   -0.121839     3    0    3   -0.120256
+Accepted+Peak                          Negative  Prev10DissipatingCount             -0.040009   -0.267308   -0.052510     3    0    3   -0.119942
+Accepted+Peak                          Negative  Prev10ExpandingCount                0.071054    0.287945    0.035042     3    3    0    0.131347
+Accepted+Peak                          Negative  Prev10PeakCount                     0.235217    0.256576    0.169150     3    3    0    0.220314
+Accepted+Peak                          Negative  Prev10ClimacticCount               -0.058820   -0.011615   -0.008554     3    0    3   -0.026330
+Accepted+Peak                          Negative  Prev10Dominance                     0.018194    0.058625    0.081310     3    3    0    0.052710
+Accepted+Peak                          Negative  Prev10NetAcceptance                -0.152361   -0.037173   -0.052883     3    0    3   -0.080806
+Accepted+Peak                          Negative  Prev20AcceptedCount                -0.014451    0.099986   -0.058020     3    1    2    0.009172
+Accepted+Peak                          Negative  Prev20CompressedCount               0.012147   -0.044909    0.070688     3    2    1    0.012642
+Accepted+Peak                          Negative  Prev20DissipatingCount             -0.062802   -0.216366   -0.059018     3    0    3   -0.112729
+Accepted+Peak                          Negative  Prev20ExpandingCount               -0.032881    0.089050   -0.100651     3    1    2   -0.014827
+Accepted+Peak                          Negative  Prev20PeakCount                     0.049553    0.029113   -0.067650     3    2    1    0.003672
+Accepted+Peak                          Negative  Prev20ClimacticCount               -0.194814   -0.155454   -0.207539     3    0    3   -0.185936
+Accepted+Peak                          Negative  Prev20Dominance                    -0.038911   -0.029136   -0.080995     3    0    3   -0.049681
+Accepted+Peak                          Negative  Prev20NetAcceptance                -0.049469    0.058621    0.010678     3    2    1    0.006610
+Accepted+Climactic                     Negative  Prev5AcceptedCount                  0.187706    0.179316    0.421897     3    3    0    0.262973
+Accepted+Climactic                     Negative  Prev5CompressedCount               -0.180085   -0.188830   -0.415677     3    0    3   -0.261531
+Accepted+Climactic                     Negative  Prev5DissipatingCount               0.002002   -0.142789   -0.069347     3    1    2   -0.070045
+Accepted+Climactic                     Negative  Prev5ExpandingCount                 0.367158    0.315995    0.339863     3    3    0    0.341005
+Accepted+Climactic                     Negative  Prev5PeakCount                      0.320391    0.095985    0.577892     3    3    0    0.331423
+Accepted+Climactic                     Negative  Prev5ClimacticCount                 0.727382    0.631130    0.455764     3    3    0    0.604758
+Accepted+Climactic                     Negative  Prev5Dominance                      0.154764    0.104169    0.335252     3    3    0    0.198062
+Accepted+Climactic                     Negative  Prev5NetAcceptance                 -0.099882    0.082176   -0.123404     3    1    2   -0.047036
+Accepted+Climactic                     Negative  Prev10AcceptedCount                 0.155183    0.017129    0.410755     3    3    0    0.194355
+Accepted+Climactic                     Negative  Prev10CompressedCount              -0.150091   -0.037634   -0.406547     3    0    3   -0.198091
+Accepted+Climactic                     Negative  Prev10DissipatingCount              0.040670   -0.101694   -0.059901     3    1    2   -0.040309
+Accepted+Climactic                     Negative  Prev10ExpandingCount                0.389182    0.108047    0.436356     3    3    0    0.311195
+Accepted+Climactic                     Negative  Prev10PeakCount                     0.407283    0.010336    0.521921     3    3    0    0.313180
+Accepted+Climactic                     Negative  Prev10ClimacticCount                0.696519    0.240706    0.321143     3    3    0    0.419456
+Accepted+Climactic                     Negative  Prev10Dominance                     0.144342   -0.018951    0.329217     3    2    1    0.151536
+Accepted+Climactic                     Negative  Prev10NetAcceptance                -0.205963    0.006104   -0.125667     3    1    2   -0.108509
+Accepted+Climactic                     Negative  Prev20AcceptedCount                 0.162625    0.138987    0.358669     3    3    0    0.220094
+Accepted+Climactic                     Negative  Prev20CompressedCount              -0.160049   -0.104660   -0.351789     3    0    3   -0.205499
+Accepted+Climactic                     Negative  Prev20DissipatingCount              0.029337   -0.002516    0.010471     3    2    1    0.012431
+Accepted+Climactic                     Negative  Prev20ExpandingCount                0.450783    0.134110    0.409299     3    3    0    0.331397
+Accepted+Climactic                     Negative  Prev20PeakCount                     0.534773    0.357722    0.435352     3    3    0    0.442615
+Accepted+Climactic                     Negative  Prev20ClimacticCount                0.592029    0.471984    0.148055     3    3    0    0.404023
+Accepted+Climactic                     Negative  Prev20Dominance                     0.144112    0.108316    0.308537     3    3    0    0.186988
+Accepted+Climactic                     Negative  Prev20NetAcceptance                -0.303892   -0.151958   -0.079642     3    0    3   -0.178497
+Accepted+Expanding                     Negative  Prev5AcceptedCount                 -0.097914   -0.043791   -0.130851     3    0    3   -0.090852
+Accepted+Expanding                     Negative  Prev5CompressedCount                0.098446    0.039846    0.125214     3    3    0    0.087835
+Accepted+Expanding                     Negative  Prev5DissipatingCount               0.041682    0.044957    0.039819     3    3    0    0.042153
+Accepted+Expanding                     Negative  Prev5ExpandingCount                -0.187102   -0.100413   -0.186056     3    0    3   -0.157857
+Accepted+Expanding                     Negative  Prev5PeakCount                      0.004852   -0.014404   -0.002188     3    1    2   -0.003913
+Accepted+Expanding                     Negative  Prev5ClimacticCount                 0.023243    0.048222   -0.051403     3    2    1    0.006687
+Accepted+Expanding                     Negative  Prev5Dominance                     -0.063436   -0.018404   -0.094298     3    0    3   -0.058713
+Accepted+Expanding                     Negative  Prev5NetAcceptance                 -0.077183   -0.026662   -0.102295     3    0    3   -0.068713
+Accepted+Expanding                     Negative  Prev10AcceptedCount                -0.069776   -0.107591   -0.064364     3    0    3   -0.080577
+Accepted+Expanding                     Negative  Prev10CompressedCount               0.069605    0.099883    0.069713     3    3    0    0.079734
+Accepted+Expanding                     Negative  Prev10DissipatingCount              0.027780    0.033932    0.055881     3    3    0    0.039198
+Accepted+Expanding                     Negative  Prev10ExpandingCount               -0.115140   -0.094901   -0.151945     3    0    3   -0.120662
+Accepted+Expanding                     Negative  Prev10PeakCount                     0.026099   -0.069809   -0.019865     3    1    2   -0.021192
+Accepted+Expanding                     Negative  Prev10ClimacticCount                0.029644   -0.005540   -0.074309     3    1    2   -0.016735
+Accepted+Expanding                     Negative  Prev10Dominance                    -0.045095   -0.077123   -0.033895     3    0    3   -0.052038
+Accepted+Expanding                     Negative  Prev10NetAcceptance                -0.071140   -0.034519   -0.032487     3    0    3   -0.046049
+Accepted+Expanding                     Negative  Prev20AcceptedCount                -0.036230   -0.058814   -0.105205     3    0    3   -0.066750
+Accepted+Expanding                     Negative  Prev20CompressedCount               0.034822    0.063881    0.094608     3    3    0    0.064437
+Accepted+Expanding                     Negative  Prev20DissipatingCount              0.027516    0.053332    0.061338     3    3    0    0.047395
+Accepted+Expanding                     Negative  Prev20ExpandingCount               -0.079254   -0.096610   -0.140792     3    0    3   -0.105552
+Accepted+Expanding                     Negative  Prev20PeakCount                     0.019182   -0.028065   -0.013660     3    1    2   -0.007515
+Accepted+Expanding                     Negative  Prev20ClimacticCount                0.017516   -0.018640   -0.101249     3    1    2   -0.034124
+Accepted+Expanding                     Negative  Prev20Dominance                    -0.016525   -0.031955   -0.058580     3    0    3   -0.035687
+Accepted+Expanding                     Negative  Prev20NetAcceptance                -0.041054   -0.026411   -0.071946     3    0    3   -0.046470
+Accepted+Dissipating                   Negative  Prev5AcceptedCount                  0.076095    0.124310    0.133494     3    3    0    0.111300
+Accepted+Dissipating                   Negative  Prev5CompressedCount               -0.076479   -0.139882   -0.122836     3    0    3   -0.113066
+Accepted+Dissipating                   Negative  Prev5DissipatingCount              -0.000907   -0.099161   -0.115729     3    0    3   -0.071932
+Accepted+Dissipating                   Negative  Prev5ExpandingCount                 0.118897    0.262666    0.196313     3    3    0    0.192625
+Accepted+Dissipating                   Negative  Prev5PeakCount                      0.080599    0.032068    0.116020     3    3    0    0.076229
+Accepted+Dissipating                   Negative  Prev5ClimacticCount                 0.117679    0.169858    0.136830     3    3    0    0.141456
+Accepted+Dissipating                   Negative  Prev5Dominance                      0.063427    0.076070    0.060640     3    3    0    0.066712
+Accepted+Dissipating                   Negative  Prev5NetAcceptance                 -0.003546    0.082021    0.013548     3    2    1    0.030674
+Accepted+Dissipating                   Negative  Prev10AcceptedCount                 0.058189    0.104288    0.084700     3    3    0    0.082392
+Accepted+Dissipating                   Negative  Prev10CompressedCount              -0.060314   -0.111811   -0.073541     3    0    3   -0.081889
+Accepted+Dissipating                   Negative  Prev10DissipatingCount              0.020802   -0.094037   -0.031550     3    1    2   -0.034928
+Accepted+Dissipating                   Negative  Prev10ExpandingCount                0.089329    0.237178    0.147730     3    3    0    0.158079
+Accepted+Dissipating                   Negative  Prev10PeakCount                     0.057001    0.003869    0.108586     3    3    0    0.056486
+Accepted+Dissipating                   Negative  Prev10ClimacticCount                0.082041    0.108243    0.073802     3    3    0    0.088029
+Accepted+Dissipating                   Negative  Prev10Dominance                     0.058276    0.055441    0.055106     3    3    0    0.056274
+Accepted+Dissipating                   Negative  Prev10NetAcceptance                -0.002496    0.082347   -0.027005     3    1    2    0.017615
+Accepted+Dissipating                   Negative  Prev20AcceptedCount                 0.057289    0.052716    0.088979     3    3    0    0.066328
+Accepted+Dissipating                   Negative  Prev20CompressedCount              -0.058579   -0.078144   -0.048101     3    0    3   -0.061608
+Accepted+Dissipating                   Negative  Prev20DissipatingCount              0.045262   -0.090737    0.006045     3    2    1   -0.013143
+Accepted+Dissipating                   Negative  Prev20ExpandingCount                0.073986    0.192078    0.131824     3    3    0    0.132629
+Accepted+Dissipating                   Negative  Prev20PeakCount                     0.053714   -0.022175    0.075060     3    2    1    0.035533
+Accepted+Dissipating                   Negative  Prev20ClimacticCount                0.064262    0.141571    0.010266     3    3    0    0.072033
+Accepted+Dissipating                   Negative  Prev20Dominance                     0.067304    0.019438    0.061352     3    3    0    0.049365
+Accepted+Dissipating                   Negative  Prev20NetAcceptance                -0.001465    0.058609    0.007647     3    2    1    0.021597
+Accepted+Dissipating+Peak              Negative  Prev5AcceptedCount                  0.264677    0.531392    0.453763     3    3    0    0.416611
+Accepted+Dissipating+Peak              Negative  Prev5CompressedCount               -0.261552   -0.521859   -0.477479     3    0    3   -0.420297
+Accepted+Dissipating+Peak              Negative  Prev5DissipatingCount              -0.134257   -0.337376   -0.244515     3    0    3   -0.238716
+Accepted+Dissipating+Peak              Negative  Prev5ExpandingCount                 0.530607    0.912367    0.542177     3    3    0    0.661717
+Accepted+Dissipating+Peak              Negative  Prev5PeakCount                      0.540824    0.541324    0.620936     3    3    0    0.567694
+Accepted+Dissipating+Peak              Negative  Prev5ClimacticCount                 0.450568    0.679972    0.435948     3    3    0    0.522163
+Accepted+Dissipating+Peak              Negative  Prev5Dominance                      0.159876    0.326850    0.297847     3    3    0    0.261524
+Accepted+Dissipating+Peak              Negative  Prev5NetAcceptance                 -0.206938    0.056473   -0.132697     3    1    2   -0.094388
+Accepted+Dissipating+Peak              Negative  Prev10AcceptedCount                 0.189975    0.335198    0.410451     3    3    0    0.311875
+Accepted+Dissipating+Peak              Negative  Prev10CompressedCount              -0.188846   -0.326345   -0.440063     3    0    3   -0.318418
+Accepted+Dissipating+Peak              Negative  Prev10DissipatingCount             -0.074247   -0.262562   -0.080789     3    0    3   -0.139199
+Accepted+Dissipating+Peak              Negative  Prev10ExpandingCount                0.367600    0.660209    0.327446     3    3    0    0.451751
+Accepted+Dissipating+Peak              Negative  Prev10PeakCount                     0.428261    0.314600    0.435564     3    3    0    0.392808
+Accepted+Dissipating+Peak              Negative  Prev10ClimacticCount                0.236044    0.385152    0.237217     3    3    0    0.286138
+Accepted+Dissipating+Peak              Negative  Prev10Dominance                     0.123117    0.180253    0.334548     3    3    0    0.212639
+Accepted+Dissipating+Peak              Negative  Prev10NetAcceptance                -0.197360    0.033320   -0.054048     3    1    2   -0.072696
+Accepted+Dissipating+Peak              Negative  Prev20AcceptedCount                 0.120276    0.271755    0.135866     3    3    0    0.175966
+Accepted+Dissipating+Peak              Negative  Prev20CompressedCount              -0.118716   -0.220348   -0.128804     3    0    3   -0.155956
+Accepted+Dissipating+Peak              Negative  Prev20DissipatingCount             -0.073055   -0.255791   -0.101758     3    0    3   -0.143535
+Accepted+Dissipating+Peak              Negative  Prev20ExpandingCount                0.187322    0.503487    0.180893     3    3    0    0.290567
+Accepted+Dissipating+Peak              Negative  Prev20PeakCount                     0.228402    0.169574    0.094481     3    3    0    0.164153
+Accepted+Dissipating+Peak              Negative  Prev20ClimacticCount                0.011105    0.291318   -0.079435     3    2    1    0.074329
+Accepted+Dissipating+Peak              Negative  Prev20Dominance                     0.064301    0.109586    0.068655     3    3    0    0.080847
+Accepted+Dissipating+Peak              Negative  Prev20NetAcceptance                -0.094273    0.092466    0.028557     3    2    1    0.008917
+
+Most Replicated Positive Context Predictors of Positive Topologies
+------------------------------------------------------------------
+Rank Topology                               Feature                          Valid  Pos  Neg  MeanEffect
+   1 Compressed+Dissipating+Peak            Prev5PeakCount                       3    3    0    0.648834
+   2 Compressed+Dissipating+Peak            Prev5ClimacticCount                  3    3    0    0.646732
+   3 Compressed+Dissipating+Peak            Prev5ExpandingCount                  3    3    0    0.616269
+   4 Compressed+Peak                        Prev5PeakCount                       3    3    0    0.563490
+   5 Compressed+Dissipating+Peak            Prev10PeakCount                      3    3    0    0.474454
+   6 Compressed+Peak                        Prev5ClimacticCount                  3    3    0    0.468322
+   7 Compressed+Peak                        Prev5ExpandingCount                  3    3    0    0.448759
+   8 Compressed+Dissipating+Peak            Prev10ExpandingCount                 3    3    0    0.444007
+   9 Compressed+Peak                        Prev10PeakCount                      3    3    0    0.409496
+  10 Compressed+Dissipating+Peak            Prev5AcceptedCount                   3    3    0    0.375766
+  11 Compressed+Peak                        Prev10ExpandingCount                 3    3    0    0.338147
+  12 Compressed+Dissipating+Peak            Prev10ClimacticCount                 3    3    0    0.315044
+  13 Compressed+Dissipating+Peak            Prev20PeakCount                      3    3    0    0.284835
+  14 Compressed+Peak                        Prev5AcceptedCount                   3    3    0    0.271566
+  15 Compressed+Dissipating+Peak            Prev10AcceptedCount                  3    3    0    0.246605
+  16 Accepted+Compressed+Dissipating        Prev5ExpandingCount                  3    3    0    0.237497
+  17 Accepted+Compressed                    Prev5ExpandingCount                  3    3    0    0.237000
+  18 Accepted+Compressed+Dissipating        Prev10ExpandingCount                 3    3    0    0.229955
+  19 Compressed+Dissipating+Peak            Prev5Dominance                       3    3    0    0.229422
+  20 Accepted+Compressed                    Prev10ExpandingCount                 3    3    0    0.225462
+
+Most Replicated Negative Context Predictors of Positive Topologies
+------------------------------------------------------------------
+Rank Topology                               Feature                          Valid  Pos  Neg  MeanEffect
+   1 Compressed+Dissipating+Peak            Prev5CompressedCount                 3    0    3   -0.372908
+   2 Compressed+Peak                        Prev5CompressedCount                 3    0    3   -0.275341
+   3 Compressed+Dissipating+Peak            Prev10CompressedCount                3    0    3   -0.252316
+   4 Compressed+Peak                        Prev10DissipatingCount               3    0    3   -0.225671
+   5 Compressed+Dissipating+Peak            Prev5DissipatingCount                3    0    3   -0.221859
+   6 Compressed+Dissipating+Peak            Prev10DissipatingCount               3    0    3   -0.215335
+   7 Compressed+Peak                        Prev5DissipatingCount                3    0    3   -0.209687
+   8 Compressed+Peak                        Prev5NetAcceptance                   3    0    3   -0.204871
+   9 Compressed+Dissipating+Peak            Prev20DissipatingCount               3    0    3   -0.195888
+  10 Compressed+Peak                        Prev10NetAcceptance                  3    0    3   -0.192012
+  11 Compressed+Dissipating+Peak            Prev5NetAcceptance                   3    0    3   -0.189040
+  12 Compressed+Dissipating+Peak            Prev10NetAcceptance                  3    0    3   -0.187510
+  13 Compressed+Peak                        Prev10CompressedCount                3    0    3   -0.182056
+  14 Compressed+Peak                        Prev20DissipatingCount               3    0    3   -0.180479
+  15 Compressed+Dissipating+Peak            Prev20NetAcceptance                  3    0    3   -0.152154
+  16 Compressed+Dissipating                 Prev5CompressedCount                 3    0    3   -0.085035
+  17 Compressed+Dissipating+Peak            Prev20CompressedCount                3    0    3   -0.084700
+  18 Compressed+Dissipating                 Prev20CompressedCount                3    0    3   -0.067824
+  19 Compressed+Dissipating                 Prev10CompressedCount                3    0    3   -0.063368
+  20 Accepted+Compressed+Dissipating        Prev10DissipatingCount               3    1    2   -0.226371
+
+Most Replicated Positive Context Predictors of Negative Topologies
+------------------------------------------------------------------
+Rank Topology                               Feature                          Valid  Pos  Neg  MeanEffect
+   1 Accepted+Dissipating+Peak              Prev5ExpandingCount                  3    3    0    0.661717
+   2 Accepted+Climactic                     Prev5ClimacticCount                  3    3    0    0.604758
+   3 Accepted+Dissipating+Peak              Prev5PeakCount                       3    3    0    0.567694
+   4 Accepted+Dissipating+Peak              Prev5ClimacticCount                  3    3    0    0.522163
+   5 Accepted+Dissipating+Peak              Prev10ExpandingCount                 3    3    0    0.451751
+   6 Accepted+Climactic                     Prev20PeakCount                      3    3    0    0.442615
+   7 Accepted+Climactic                     Prev10ClimacticCount                 3    3    0    0.419456
+   8 Accepted+Dissipating+Peak              Prev5AcceptedCount                   3    3    0    0.416611
+   9 Accepted+Climactic                     Prev20ClimacticCount                 3    3    0    0.404023
+  10 Accepted+Dissipating+Peak              Prev10PeakCount                      3    3    0    0.392808
+  11 Accepted+Climactic                     Prev5ExpandingCount                  3    3    0    0.341005
+  12 Accepted+Peak                          Prev5PeakCount                       3    3    0    0.331537
+  13 Accepted+Climactic                     Prev5PeakCount                       3    3    0    0.331423
+  14 Accepted+Climactic                     Prev20ExpandingCount                 3    3    0    0.331397
+  15 Accepted+Climactic                     Prev10PeakCount                      3    3    0    0.313180
+  16 Accepted+Dissipating+Peak              Prev10AcceptedCount                  3    3    0    0.311875
+  17 Accepted+Climactic                     Prev10ExpandingCount                 3    3    0    0.311195
+  18 Accepted+Dissipating+Peak              Prev20ExpandingCount                 3    3    0    0.290567
+  19 Accepted+Dissipating+Peak              Prev10ClimacticCount                 3    3    0    0.286138
+  20 Accepted+Climactic                     Prev5AcceptedCount                   3    3    0    0.262973
+
+Most Replicated Negative Context Predictors of Negative Topologies
+------------------------------------------------------------------
+Rank Topology                               Feature                          Valid  Pos  Neg  MeanEffect
+   1 Accepted+Dissipating+Peak              Prev5CompressedCount                 3    0    3   -0.420297
+   2 Accepted+Dissipating+Peak              Prev10CompressedCount                3    0    3   -0.318418
+   3 Accepted+Climactic                     Prev5CompressedCount                 3    0    3   -0.261531
+   4 Accepted+Dissipating+Peak              Prev5DissipatingCount                3    0    3   -0.238716
+   5 Accepted+Climactic                     Prev20CompressedCount                3    0    3   -0.205499
+   6 Accepted+Climactic                     Prev10CompressedCount                3    0    3   -0.198091
+   7 Accepted+Peak                          Prev20ClimacticCount                 3    0    3   -0.185936
+   8 Accepted+Climactic                     Prev20NetAcceptance                  3    0    3   -0.178497
+   9 Accepted+Peak                          Prev5CompressedCount                 3    0    3   -0.177660
+  10 Accepted+Expanding                     Prev5ExpandingCount                  3    0    3   -0.157857
+  11 Accepted+Dissipating+Peak              Prev20CompressedCount                3    0    3   -0.155956
+  12 Accepted+Dissipating+Peak              Prev20DissipatingCount               3    0    3   -0.143535
+  13 Accepted+Dissipating+Peak              Prev10DissipatingCount               3    0    3   -0.139199
+  14 Accepted+Expanding                     Prev10ExpandingCount                 3    0    3   -0.120662
+  15 Accepted+Peak                          Prev10CompressedCount                3    0    3   -0.120256
+  16 Accepted+Peak                          Prev10DissipatingCount               3    0    3   -0.119942
+  17 Accepted+Dissipating                   Prev5CompressedCount                 3    0    3   -0.113066
+  18 Accepted+Peak                          Prev20DissipatingCount               3    0    3   -0.112729
+  19 Accepted+Expanding                     Prev20ExpandingCount                 3    0    3   -0.105552
+  20 Accepted+Peak                          Prev5DissipatingCount                3    0    3   -0.100256
+
+Strongest Positive Topology Signatures
+--------------------------------------
+Rank Topology                               Feature                          Valid  Pos  Neg  MeanEffect
+   1 Accepted+Dissipating+Peak              Prev5ExpandingCount                  3    3    0    0.661717
+   2 Compressed+Dissipating+Peak            Prev5PeakCount                       3    3    0    0.648834
+   3 Compressed+Dissipating+Peak            Prev5ClimacticCount                  3    3    0    0.646732
+   4 Compressed+Dissipating+Peak            Prev5ExpandingCount                  3    3    0    0.616269
+   5 Accepted+Climactic                     Prev5ClimacticCount                  3    3    0    0.604758
+   6 Accepted+Dissipating+Peak              Prev5PeakCount                       3    3    0    0.567694
+   7 Compressed+Peak                        Prev5PeakCount                       3    3    0    0.563490
+   8 Accepted+Dissipating+Peak              Prev5ClimacticCount                  3    3    0    0.522163
+   9 Compressed+Dissipating+Peak            Prev10PeakCount                      3    3    0    0.474454
+  10 Compressed+Peak                        Prev5ClimacticCount                  3    3    0    0.468322
+  11 Accepted+Dissipating+Peak              Prev10ExpandingCount                 3    3    0    0.451751
+  12 Compressed+Peak                        Prev5ExpandingCount                  3    3    0    0.448759
+  13 Compressed+Dissipating+Peak            Prev10ExpandingCount                 3    3    0    0.444007
+  14 Accepted+Climactic                     Prev20PeakCount                      3    3    0    0.442615
+  15 Accepted+Climactic                     Prev10ClimacticCount                 3    3    0    0.419456
+  16 Accepted+Dissipating+Peak              Prev5AcceptedCount                   3    3    0    0.416611
+  17 Compressed+Peak                        Prev10PeakCount                      3    3    0    0.409496
+  18 Accepted+Climactic                     Prev20ClimacticCount                 3    3    0    0.404023
+  19 Accepted+Dissipating+Peak              Prev10PeakCount                      3    3    0    0.392808
+  20 Compressed+Dissipating+Peak            Prev5AcceptedCount                   3    3    0    0.375766
+
+Strongest Negative Topology Signatures
+--------------------------------------
+Rank Topology                               Feature                          Valid  Pos  Neg  MeanEffect
+   1 Accepted+Dissipating+Peak              Prev5CompressedCount                 3    0    3   -0.420297
+   2 Compressed+Dissipating+Peak            Prev5CompressedCount                 3    0    3   -0.372908
+   3 Accepted+Dissipating+Peak              Prev10CompressedCount                3    0    3   -0.318418
+   4 Compressed+Peak                        Prev5CompressedCount                 3    0    3   -0.275341
+   5 Accepted+Climactic                     Prev5CompressedCount                 3    0    3   -0.261531
+   6 Compressed+Dissipating+Peak            Prev10CompressedCount                3    0    3   -0.252316
+   7 Accepted+Dissipating+Peak              Prev5DissipatingCount                3    0    3   -0.238716
+   8 Compressed+Peak                        Prev10DissipatingCount               3    0    3   -0.225671
+   9 Compressed+Dissipating+Peak            Prev5DissipatingCount                3    0    3   -0.221859
+  10 Compressed+Dissipating+Peak            Prev10DissipatingCount               3    0    3   -0.215335
+  11 Compressed+Peak                        Prev5DissipatingCount                3    0    3   -0.209687
+  12 Accepted+Climactic                     Prev20CompressedCount                3    0    3   -0.205499
+  13 Compressed+Peak                        Prev5NetAcceptance                   3    0    3   -0.204871
+  14 Accepted+Climactic                     Prev10CompressedCount                3    0    3   -0.198091
+  15 Compressed+Dissipating+Peak            Prev20DissipatingCount               3    0    3   -0.195888
+  16 Compressed+Peak                        Prev10NetAcceptance                  3    0    3   -0.192012
+  17 Compressed+Dissipating+Peak            Prev5NetAcceptance                   3    0    3   -0.189040
+  18 Compressed+Dissipating+Peak            Prev10NetAcceptance                  3    0    3   -0.187510
+  19 Accepted+Peak                          Prev20ClimacticCount                 3    0    3   -0.185936
+  20 Compressed+Peak                        Prev10CompressedCount                3    0    3   -0.182056
+
+Most Similar Topology Pairs
+---------------------------
+Rank Topology A                             Topology B                             MeanSimilarity
+   1 Accepted+Compressed                    Accepted+Compressed+Dissipating              0.999791
+   2 Compressed+Peak                        Compressed+Dissipating+Peak                  0.976261
+   3 Compressed+Dissipating+Peak            Accepted+Dissipating+Peak                    0.951085
+   4 Compressed+Peak                        Accepted+Dissipating+Peak                    0.915857
+   5 Accepted+Dissipating                   Accepted+Dissipating+Peak                    0.900980
+   6 Compressed+Dissipating+Peak            Accepted+Dissipating                         0.827622
+   7 Accepted+Climactic                     Accepted+Dissipating                         0.821748
+   8 Accepted+Climactic                     Accepted+Dissipating+Peak                    0.820472
+   9 Compressed+Dissipating+Peak            Accepted+Climactic                           0.818389
+  10 Compressed+Dissipating                 Accepted+Dissipating                         0.787471
+  11 Compressed+Peak                        Accepted+Peak                                0.780205
+  12 Compressed+Dissipating                 Accepted+Dissipating+Peak                    0.770156
+  13 Accepted+Peak                          Accepted+Dissipating+Peak                    0.760139
+  14 Compressed+Peak                        Accepted+Climactic                           0.745277
+  15 Compressed+Peak                        Accepted+Dissipating                         0.741841
+  16 Compressed+Dissipating+Peak            Accepted+Peak                                0.733354
+  17 Compressed+Dissipating                 Accepted+Climactic                           0.728625
+  18 Compressed+Dissipating                 Compressed+Dissipating+Peak                  0.725775
+  19 Compressed+Dissipating                 Compressed+Peak                              0.642436
+  20 Accepted+Peak                          Accepted+Dissipating                         0.492553
+
+Most Distinct Topology Pairs
+----------------------------
+Rank Topology A                             Topology B                             MeanSimilarity
+   1 Compressed+Dissipating                 Accepted+Expanding                          -0.754260
+   2 Accepted+Expanding                     Accepted+Dissipating                        -0.718750
+   3 Accepted+Expanding                     Accepted+Dissipating+Peak                   -0.626468
+   4 Compressed+Dissipating+Peak            Accepted+Expanding                          -0.542330
+   5 Compressed+Peak                        Accepted+Expanding                          -0.487024
+   6 Accepted+Climactic                     Accepted+Expanding                          -0.419255
+   7 Accepted+Peak                          Accepted+Expanding                          -0.301270
+   8 Accepted+Compressed                    Accepted+Expanding                          -0.199880
+   9 Accepted+Compressed+Dissipating        Accepted+Expanding                          -0.198655
+  10 Accepted+Compressed+Dissipating        Accepted+Peak                                0.200921
+  11 Accepted+Compressed                    Accepted+Peak                                0.204902
+  12 Accepted+Compressed+Dissipating        Compressed+Dissipating                       0.258116
+  13 Accepted+Compressed                    Compressed+Dissipating                       0.259002
+  14 Accepted+Peak                          Accepted+Climactic                           0.374992
+  15 Accepted+Compressed+Dissipating        Accepted+Dissipating+Peak                    0.379328
+  16 Accepted+Compressed                    Accepted+Dissipating+Peak                    0.380741
+  17 Compressed+Dissipating                 Accepted+Peak                                0.381126
+  18 Accepted+Compressed+Dissipating        Compressed+Peak                              0.416752
+  19 Accepted+Compressed                    Compressed+Peak                              0.418582
+  20 Accepted+Compressed                    Accepted+Climactic                           0.436715
+
+Population-B Strongest Topology Predictors
+------------------------------------------
+Rank Topology                               Feature                          Valid  Pos  Neg  MeanEffect
+   1 Compressed+Dissipating                 Prev10AcceptedCount                  3    0    0    0.000000
+   2 Compressed+Dissipating                 Prev10ClimacticCount                 3    0    0    0.000000
+   3 Compressed+Dissipating                 Prev10CompressedCount                3    0    0    0.000000
+   4 Compressed+Dissipating                 Prev10DissipatingCount               3    0    0    0.000000
+   5 Compressed+Dissipating                 Prev10Dominance                      3    0    0    0.000000
+   6 Compressed+Dissipating                 Prev10ExpandingCount                 3    0    0    0.000000
+   7 Compressed+Dissipating                 Prev10NetAcceptance                  3    0    0    0.000000
+   8 Compressed+Dissipating                 Prev10PeakCount                      3    0    0    0.000000
+   9 Compressed+Dissipating                 Prev20AcceptedCount                  3    0    0    0.000000
+  10 Compressed+Dissipating                 Prev20ClimacticCount                 3    0    0    0.000000
+  11 Compressed+Dissipating                 Prev20CompressedCount                3    0    0    0.000000
+  12 Compressed+Dissipating                 Prev20DissipatingCount               3    0    0    0.000000
+  13 Compressed+Dissipating                 Prev20Dominance                      3    0    0    0.000000
+  14 Compressed+Dissipating                 Prev20ExpandingCount                 3    0    0    0.000000
+  15 Compressed+Dissipating                 Prev20NetAcceptance                  3    0    0    0.000000
+  16 Compressed+Dissipating                 Prev20PeakCount                      3    0    0    0.000000
+  17 Compressed+Dissipating                 Prev5AcceptedCount                   3    0    0    0.000000
+  18 Compressed+Dissipating                 Prev5ClimacticCount                  3    0    0    0.000000
+  19 Compressed+Dissipating                 Prev5CompressedCount                 3    0    0    0.000000
+  20 Compressed+Dissipating                 Prev5DissipatingCount                3    0    0    0.000000
+
+Cross-Instrument Research Notes
+===============================
+- Strongest replicated context-to-topology feature: Accepted+Dissipating+Peak | Prev5ExpandingCount, MeanEffect=0.661717.
+- Similarity compares effect-size vectors and is descriptive only.
+- This report studies context upstream of topology; it does not measure topology consequences.

@@ -1,0 +1,81 @@
+APVA Dominance Gradient Study v0.1 - 6E
+========================================
+Instrument: 6E
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_OPEN_apva_bar_evidence_v01.csv
+Qualifying population count: 469
+Success count: 245
+Failure count: 218
+Flat count: 6
+Dominance-gradient names are fixed descriptive score labels only.
+Population and features reuse APVA_LateralAnatomy_19.py.
+Flat feature records are unavailable from reused study 19 and are counted diagnostically only.
+
+Score Tables
+============
+
+DominanceGradient
+-----------------
+Bin           Count   MeanDRFwd5   MedianDRFwd5  ContRate5  FailRate5  FlatRate5
+<= -5             2     0.000100       0.000100   100.00%     0.00%     0.00%
+-4 to -2         18     0.000011      -0.000100    44.44%    55.56%     0.00%
+-1 to 1          71    -0.000027       0.000050    54.93%    45.07%     0.00%
+2 to 4          143     0.000038       0.000050    53.15%    46.85%     0.00%
+5 to 7          130     0.000127       0.000100    53.85%    46.15%     0.00%
+>= 8             99     0.000043       0.000050    50.51%    49.49%     0.00%
+
+Tercile Split
+-------------
+Tercile     Count   MeanDRFwd5  ContRate5
+Low           154    -0.000009    51.95%
+Middle        155     0.000081    53.55%
+High          154     0.000089    53.25%
+
+DominanceGradient_WithExpansion
+-------------------------------
+Bin           Count   MeanDRFwd5   MedianDRFwd5  ContRate5  FailRate5  FlatRate5
+<= -5             0     0.000000       0.000000     0.00%     0.00%     0.00%
+-4 to -2          1     0.000050       0.000050   100.00%     0.00%     0.00%
+-1 to 1           6    -0.000042       0.000050    50.00%    50.00%     0.00%
+2 to 4           38     0.000087      -0.000050    50.00%    50.00%     0.00%
+5 to 7           82    -0.000115      -0.000075    46.34%    53.66%     0.00%
+>= 8            336     0.000092       0.000075    54.76%    45.24%     0.00%
+
+Tercile Split
+-------------
+Tercile     Count   MeanDRFwd5  ContRate5
+Low           154    -0.000044    48.70%
+Middle        155     0.000137    56.13%
+High          154     0.000066    53.90%
+
+DominanceGradient_Weighted
+--------------------------
+Bin           Count   MeanDRFwd5   MedianDRFwd5  ContRate5  FailRate5  FlatRate5
+<= -5            29     0.000047       0.000050    51.72%    48.28%     0.00%
+-4 to -2         47    -0.000067      -0.000150    48.94%    51.06%     0.00%
+-1 to 1          66     0.000048       0.000050    56.06%    43.94%     0.00%
+2 to 4           97     0.000025       0.000100    53.61%    46.39%     0.00%
+5 to 7           88     0.000116       0.000050    51.14%    48.86%     0.00%
+>= 8            136     0.000079       0.000050    53.68%    46.32%     0.00%
+
+Tercile Split
+-------------
+Tercile     Count   MeanDRFwd5  ContRate5
+Low           154     0.000027    52.60%
+Middle        155     0.000019    50.97%
+High          154     0.000114    55.19%
+
+Score Comparison Summary
+========================
+ScoreName                              Spearman LowestBin  HighestBin DeltaCont5  HighCont5   LowCont5   High-Low
+DominanceGradient                        0.0110 <= -5      >= 8         -49.49%    53.25%    51.95%     1.30%
+DominanceGradient_WithExpansion          0.0487 -4 to -2   >= 8         -45.24%    53.90%    48.70%     5.19%
+DominanceGradient_Weighted               0.0070 <= -5      >= 8           1.95%    55.19%    52.60%     2.60%
+
+Research Notes
+==============
+- Highest combined-score SpearmanRho: DominanceGradient_WithExpansion (0.0487).
+- DominanceGradient: SpearmanRho=0.0110, HighMinusLowContinuationRate5=1.30%.
+- DominanceGradient_WithExpansion: SpearmanRho=0.0487, HighMinusLowContinuationRate5=5.19%.
+- DominanceGradient_Weighted: SpearmanRho=0.0070, HighMinusLowContinuationRate5=2.60%.
+- Individual gradient reference: Prev10_DissipationCount rho=0.0040; Prev10_CompressionCount rho=-0.0272.
+- Monotonicity review is mechanical: inspect fixed-bin and tercile tables; no curve is fit.

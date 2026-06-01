@@ -1,0 +1,145 @@
+APVA Condition Topology Study v0.1 - Cross-Instrument Aggregate
+===============================================================
+Input instruments: 6E, NQ, CL
+Aggregate raw-count threshold: 50.
+Replication threshold: Count >= 20 in at least two instruments.
+Conditions are independent binary flags; combination rows are inclusive.
+Lift is observed co-occurrence divided by the independent-frequency baseline.
+
+Aggregate Combination Table
+===========================
+Combination                            Type        Count_6E   Cont_6E   Fail_6E   Lift_6E  Count_NQ   Cont_NQ   Fail_NQ   Lift_NQ  Count_CL   Cont_CL   Fail_CL   Lift_CL Valid  Pos  Neg  MeanCont  MeanFail  MeanLift
+Accepted+Expanding                     Pair           11157   45.86%   49.08%    1.4063       654   43.03%   56.36%    1.3448       909   48.24%   51.43%    1.3936     3    0    3   45.71%   52.29%    1.3816
+Compressed+Dissipating                 Pair            9458   47.30%   47.98%    0.9852       621   50.98%   48.86%    1.0792       773   51.22%   48.11%    1.0786     3    2    1   49.83%   48.32%    1.0477
+Accepted+Dissipating                   Pair            7906   46.23%   49.08%    1.0296       509   47.64%   51.77%    0.9367       565   47.25%   52.40%    0.9275     3    0    3   47.04%   51.08%    0.9646
+Compressed+Expanding                   Pair            6655   46.75%   48.31%    0.6709       338   51.34%   48.36%    0.6563       499   49.80%   49.39%    0.6503     3    1    2   49.30%   48.68%    0.6592
+Expanding+Peak                         Pair            4658   45.43%   49.20%    1.3749       205   48.29%   51.22%    1.5112       374   47.18%   52.55%    1.4203     3    0    3   46.97%   50.99%    1.4355
+Accepted+Peak                          Pair            3654   46.21%   48.60%    1.2168       177   43.50%   55.37%    1.3569       308   44.16%   55.84%    1.3261     3    0    3   44.62%   53.27%    1.3000
+Compressed+Peak                        Pair            3108   45.87%   49.71%    0.8278        91   60.67%   39.33%    0.6588       193   49.46%   48.92%    0.7063     3    1    2   52.00%   45.99%    0.7310
+Dissipating+Peak                       Pair            2709   45.68%   49.73%    0.8262       127   56.00%   42.40%    0.8378       191   43.24%   56.76%    0.7767     3    1    2   48.31%   49.63%    0.8136
+Expanding+Climactic                    Pair            2399   44.90%   50.83%    1.6421       105   49.04%   50.96%    1.7093       158   44.94%   55.06%    1.7277     3    0    3   46.29%   52.28%    1.6930
+Accepted+Climactic                     Pair            1846   44.68%   51.34%    1.4256        80   45.00%   55.00%    1.3544       139   44.60%   55.40%    1.7232     3    0    3   44.76%   53.91%    1.5011
+Dissipating+Climactic                  Pair             855   44.95%   51.89%    0.6047        50   54.00%   46.00%    0.7284        43   53.49%   46.51%    0.5035     3    2    1   50.81%   48.14%    0.6122
+Accepted+Compressed                    Pair             181   54.19%   43.58%    0.0206        26   53.85%   46.15%    0.0525        24   54.17%   45.83%    0.0355     3    3    0   54.07%   45.19%    0.0362
+Compressed+Dissipating+Peak            Triple          1489   45.27%   50.08%    0.8131        60   67.24%   32.76%    0.7594        96   50.00%   50.00%    0.7158     3    1    1   54.17%   44.28%    0.7628
+Accepted+Dissipating+Peak              Triple          1255   46.09%   49.43%    0.8569        70   45.71%   51.43%    0.9382        95   36.84%   63.16%    0.8333     3    0    3   42.88%   54.67%    0.8761
+Accepted+Compressed+Dissipating        Triple           173   53.22%   44.44%    0.0403        26   53.85%   46.15%    0.0918        24   54.17%   45.83%    0.0722     3    3    0   53.74%   45.48%    0.0681
+
+Most Replicated Positive Pairs
+------------------------------
+Rank Combination                            Type          Count Valid  Pos  Neg  MeanCont  MeanFail  MeanLift
+   1 Accepted+Compressed                    Pair            231     3    3    0   54.07%   45.19%    0.0362
+   2 Dissipating+Climactic                  Pair            948     3    2    1   50.81%   48.14%    0.6122
+   3 Compressed+Dissipating                 Pair          10852     3    2    1   49.83%   48.32%    1.0477
+   4 Compressed+Peak                        Pair           3392     3    1    2   52.00%   45.99%    0.7310
+   5 Compressed+Expanding                   Pair           7492     3    1    2   49.30%   48.68%    0.6592
+   6 Dissipating+Peak                       Pair           3027     3    1    2   48.31%   49.63%    0.8136
+   7 Accepted+Dissipating                   Pair           8980     3    0    3   47.04%   51.08%    0.9646
+   8 Expanding+Peak                         Pair           5237     3    0    3   46.97%   50.99%    1.4355
+   9 Expanding+Climactic                    Pair           2662     3    0    3   46.29%   52.28%    1.6930
+  10 Accepted+Expanding                     Pair          12720     3    0    3   45.71%   52.29%    1.3816
+  11 Accepted+Climactic                     Pair           2065     3    0    3   44.76%   53.91%    1.5011
+  12 Accepted+Peak                          Pair           4139     3    0    3   44.62%   53.27%    1.3000
+
+Most Replicated Negative Pairs
+------------------------------
+Rank Combination                            Type          Count Valid  Pos  Neg  MeanCont  MeanFail  MeanLift
+   1 Accepted+Climactic                     Pair           2065     3    0    3   44.76%   53.91%    1.5011
+   2 Accepted+Peak                          Pair           4139     3    0    3   44.62%   53.27%    1.3000
+   3 Accepted+Expanding                     Pair          12720     3    0    3   45.71%   52.29%    1.3816
+   4 Expanding+Climactic                    Pair           2662     3    0    3   46.29%   52.28%    1.6930
+   5 Accepted+Dissipating                   Pair           8980     3    0    3   47.04%   51.08%    0.9646
+   6 Expanding+Peak                         Pair           5237     3    0    3   46.97%   50.99%    1.4355
+   7 Dissipating+Peak                       Pair           3027     3    1    2   48.31%   49.63%    0.8136
+   8 Compressed+Expanding                   Pair           7492     3    1    2   49.30%   48.68%    0.6592
+   9 Compressed+Peak                        Pair           3392     3    1    2   52.00%   45.99%    0.7310
+  10 Compressed+Dissipating                 Pair          10852     3    2    1   49.83%   48.32%    1.0477
+  11 Dissipating+Climactic                  Pair            948     3    2    1   50.81%   48.14%    0.6122
+  12 Accepted+Compressed                    Pair            231     3    3    0   54.07%   45.19%    0.0362
+
+Most Replicated Positive Triples
+--------------------------------
+Rank Combination                            Type          Count Valid  Pos  Neg  MeanCont  MeanFail  MeanLift
+   1 Accepted+Compressed+Dissipating        Triple          223     3    3    0   53.74%   45.48%    0.0681
+   2 Compressed+Dissipating+Peak            Triple         1645     3    1    1   54.17%   44.28%    0.7628
+   3 Accepted+Dissipating+Peak              Triple         1420     3    0    3   42.88%   54.67%    0.8761
+
+Most Replicated Negative Triples
+--------------------------------
+Rank Combination                            Type          Count Valid  Pos  Neg  MeanCont  MeanFail  MeanLift
+   1 Accepted+Dissipating+Peak              Triple         1420     3    0    3   42.88%   54.67%    0.8761
+   2 Compressed+Dissipating+Peak            Triple         1645     3    1    1   54.17%   44.28%    0.7628
+   3 Accepted+Compressed+Dissipating        Triple          223     3    3    0   53.74%   45.48%    0.0681
+
+Highest Lift Pairs
+------------------
+Rank Combination                            Type          Count Valid  Pos  Neg  MeanCont  MeanFail  MeanLift
+   1 Expanding+Climactic                    Pair           2662     3    0    3   46.29%   52.28%    1.6930
+   2 Accepted+Climactic                     Pair           2065     3    0    3   44.76%   53.91%    1.5011
+   3 Expanding+Peak                         Pair           5237     3    0    3   46.97%   50.99%    1.4355
+   4 Accepted+Expanding                     Pair          12720     3    0    3   45.71%   52.29%    1.3816
+   5 Accepted+Peak                          Pair           4139     3    0    3   44.62%   53.27%    1.3000
+   6 Compressed+Dissipating                 Pair          10852     3    2    1   49.83%   48.32%    1.0477
+   7 Accepted+Dissipating                   Pair           8980     3    0    3   47.04%   51.08%    0.9646
+   8 Dissipating+Peak                       Pair           3027     3    1    2   48.31%   49.63%    0.8136
+   9 Compressed+Peak                        Pair           3392     3    1    2   52.00%   45.99%    0.7310
+  10 Compressed+Expanding                   Pair           7492     3    1    2   49.30%   48.68%    0.6592
+  11 Dissipating+Climactic                  Pair            948     3    2    1   50.81%   48.14%    0.6122
+  12 Accepted+Compressed                    Pair            231     3    3    0   54.07%   45.19%    0.0362
+
+Highest Lift Triples
+--------------------
+Rank Combination                            Type          Count Valid  Pos  Neg  MeanCont  MeanFail  MeanLift
+   1 Accepted+Dissipating+Peak              Triple         1420     3    0    3   42.88%   54.67%    0.8761
+   2 Compressed+Dissipating+Peak            Triple         1645     3    1    1   54.17%   44.28%    0.7628
+   3 Accepted+Compressed+Dissipating        Triple          223     3    3    0   53.74%   45.48%    0.0681
+
+Best Acceptance Combinations
+----------------------------
+Rank Combination                            Type          Count Valid  Pos  Neg  MeanCont  MeanFail  MeanLift
+   1 Accepted+Compressed                    Pair            231     3    3    0   54.07%   45.19%    0.0362
+   2 Accepted+Compressed+Dissipating        Triple          223     3    3    0   53.74%   45.48%    0.0681
+   3 Accepted+Dissipating                   Pair           8980     3    0    3   47.04%   51.08%    0.9646
+   4 Accepted+Expanding                     Pair          12720     3    0    3   45.71%   52.29%    1.3816
+   5 Accepted+Climactic                     Pair           2065     3    0    3   44.76%   53.91%    1.5011
+   6 Accepted+Peak                          Pair           4139     3    0    3   44.62%   53.27%    1.3000
+   7 Accepted+Dissipating+Peak              Triple         1420     3    0    3   42.88%   54.67%    0.8761
+
+Worst Acceptance Combinations
+-----------------------------
+Rank Combination                            Type          Count Valid  Pos  Neg  MeanCont  MeanFail  MeanLift
+   1 Accepted+Dissipating+Peak              Triple         1420     3    0    3   42.88%   54.67%    0.8761
+   2 Accepted+Climactic                     Pair           2065     3    0    3   44.76%   53.91%    1.5011
+   3 Accepted+Peak                          Pair           4139     3    0    3   44.62%   53.27%    1.3000
+   4 Accepted+Expanding                     Pair          12720     3    0    3   45.71%   52.29%    1.3816
+   5 Accepted+Dissipating                   Pair           8980     3    0    3   47.04%   51.08%    0.9646
+   6 Accepted+Compressed+Dissipating        Triple          223     3    3    0   53.74%   45.48%    0.0681
+   7 Accepted+Compressed                    Pair            231     3    3    0   54.07%   45.19%    0.0362
+
+Best Compression Combinations
+-----------------------------
+Rank Combination                            Type          Count Valid  Pos  Neg  MeanCont  MeanFail  MeanLift
+   1 Accepted+Compressed                    Pair            231     3    3    0   54.07%   45.19%    0.0362
+   2 Accepted+Compressed+Dissipating        Triple          223     3    3    0   53.74%   45.48%    0.0681
+   3 Compressed+Dissipating                 Pair          10852     3    2    1   49.83%   48.32%    1.0477
+   4 Compressed+Dissipating+Peak            Triple         1645     3    1    1   54.17%   44.28%    0.7628
+   5 Compressed+Peak                        Pair           3392     3    1    2   52.00%   45.99%    0.7310
+   6 Compressed+Expanding                   Pair           7492     3    1    2   49.30%   48.68%    0.6592
+
+Best Dissipation Combinations
+-----------------------------
+Rank Combination                            Type          Count Valid  Pos  Neg  MeanCont  MeanFail  MeanLift
+   1 Accepted+Compressed+Dissipating        Triple          223     3    3    0   53.74%   45.48%    0.0681
+   2 Dissipating+Climactic                  Pair            948     3    2    1   50.81%   48.14%    0.6122
+   3 Compressed+Dissipating                 Pair          10852     3    2    1   49.83%   48.32%    1.0477
+   4 Compressed+Dissipating+Peak            Triple         1645     3    1    1   54.17%   44.28%    0.7628
+   5 Dissipating+Peak                       Pair           3027     3    1    2   48.31%   49.63%    0.8136
+   6 Accepted+Dissipating                   Pair           8980     3    0    3   47.04%   51.08%    0.9646
+   7 Accepted+Dissipating+Peak              Triple         1420     3    0    3   42.88%   54.67%    0.8761
+
+Cross-Instrument Research Notes
+===============================
+- Most replicated positive combination: Accepted+Compressed, PositiveContinuationCount=3, MeanContinuation=54.07%.
+- Highest replicated lift combination: Expanding+Climactic, MeanLift=1.6930.
+- Pair and triple topology results are descriptive comparisons against the prior state-sequence studies.
+- Co-occurrence lift does not imply causality or establish a new ontology.

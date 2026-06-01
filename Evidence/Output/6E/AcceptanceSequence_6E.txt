@@ -1,0 +1,498 @@
+APVA Acceptance Sequence Study v0.1 - 6E
+========================================
+Instrument: 6E
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_OPEN_apva_bar_evidence_v01.csv
+Total rows: 35219
+Accepted bars: 15731
+Sequence encoding precedence: A Accepted, C Compression, D Dissipation, E Expansion, P Peak, K Climactic, N None.
+
+Section 1 - Acceptance Transition Matrix
+----------------------------------------
+
+All Accepted Bars
+-----------------
+Offset Transition                      Count  Probability
+     1 Accepted -> Accepted             6551      41.65%
+     1 Accepted -> Compression          9274      58.96%
+     1 Accepted -> Dissipation          8297      52.75%
+     1 Accepted -> Expansion            7039      44.75%
+     1 Accepted -> Peak                 3375      21.46%
+     1 Accepted -> Climactic            1644      10.45%
+     1 Accepted -> None                    0       0.00%
+     2 Accepted -> Accepted             7015      44.60%
+     2 Accepted -> Compression          8806      55.98%
+     2 Accepted -> Dissipation          7906      50.26%
+     2 Accepted -> Expansion            7934      50.44%
+     2 Accepted -> Peak                 3176      20.19%
+     2 Accepted -> Climactic            1376       8.75%
+     2 Accepted -> None                    0       0.00%
+     3 Accepted -> Accepted             7008      44.55%
+     3 Accepted -> Compression          8808      55.99%
+     3 Accepted -> Dissipation          7739      49.20%
+     3 Accepted -> Expansion            7955      50.57%
+     3 Accepted -> Peak                 3107      19.75%
+     3 Accepted -> Climactic            1335       8.49%
+     3 Accepted -> None                    0       0.00%
+     5 Accepted -> Accepted             7038      44.75%
+     5 Accepted -> Compression          8790      55.88%
+     5 Accepted -> Dissipation          7733      49.16%
+     5 Accepted -> Expansion            7839      49.84%
+     5 Accepted -> Peak                 2955      18.79%
+     5 Accepted -> Climactic            1355       8.61%
+     5 Accepted -> None                    0       0.00%
+
+Section 2 - Acceptance Persistence
+----------------------------------
+
+Accepted Run Lengths
+--------------------
+RunLength     Count   MeanDRFwd5       Median  ContRate5  FailRate5
+1              5214    -0.000101    -0.000100    38.82%    55.79%
+2              2225    -0.000077    -0.000050    40.04%    55.10%
+3               923    -0.000072    -0.000050    39.22%    54.82%
+4               366    -0.000081    -0.000050    42.35%    51.09%
+5+              273    -0.000104    -0.000100    39.19%    54.21%
+10+               3    -0.000117    -0.000150    33.33%    66.67%
+
+Section 3 - Acceptance Sequence Mining
+--------------------------------------
+
+Most Common Sequences
+---------------------
+Sequence                        Count   MeanDRFwd5  ContRate5  FailRate5
+A->C                             9001    -0.000091    39.32%    55.28%
+A->A                             6384     0.000096    55.61%    40.19%
+A->C->C                          4763    -0.000060    39.81%    54.08%
+A->C->A                          4238    -0.000127    38.77%    56.63%
+A->A->C                          3749     0.000074    53.75%    40.92%
+A->A->A                          2635     0.000128    58.25%    39.17%
+A->C->C->C                       2494    -0.000072    37.25%    54.93%
+A->C->A->C                       2493    -0.000121    37.18%    57.24%
+A->C->C->A                       2269    -0.000047    42.62%    53.15%
+A->A->C->C                       1999     0.000083    55.63%    38.62%
+A->A->C->A                       1750     0.000063    51.60%    43.54%
+A->C->A->A                       1745    -0.000135    41.03%    55.76%
+A->A->A->C                       1549     0.000134    59.01%    37.64%
+A->C->A->C->C                    1329    -0.000127    34.46%    59.67%
+A->C->C->C->C                    1329    -0.000071    35.59%    55.23%
+A->C->C->A->C                    1273    -0.000069    39.91%    54.67%
+A->C->C->C->A                    1165    -0.000074    39.14%    54.59%
+A->C->A->C->A                    1164    -0.000115    40.29%    54.47%
+A->A->A->A                       1086     0.000120    57.18%    41.34%
+A->A->C->C->C                    1060     0.000085    55.85%    37.55%
+A->C->A->A->C                    1014    -0.000134    39.74%    56.51%
+A->A->C->A->C                    1002     0.000053    52.50%    42.12%
+A->C->C->A->A                     996    -0.000018    46.08%    51.20%
+A->A->C->C->A                     939     0.000081    55.38%    39.83%
+A->A->A->C->C                     827     0.000169    63.24%    33.62%
+
+Highest Continuation Sequences
+------------------------------
+Sequence                        Count   MeanDRFwd5  ContRate5  FailRate5
+A->A->A->C->C                     827     0.000169    63.24%    33.62%
+A->A->A->C                       1549     0.000134    59.01%    37.64%
+A->A->A                          2635     0.000128    58.25%    39.17%
+A->A->A->A->C                     635     0.000083    57.64%    40.63%
+A->A->A->A                       1086     0.000120    57.18%    41.34%
+A->A->A->A->A                     451     0.000170    56.54%    42.35%
+A->A->C->C->C                    1060     0.000085    55.85%    37.55%
+A->A->C->C                       1999     0.000083    55.63%    38.62%
+A->A                             6384     0.000096    55.61%    40.19%
+A->A->C->C->A                     939     0.000081    55.38%    39.83%
+A->A->A->C->A                     722     0.000094    54.16%    42.24%
+A->A->C                          3749     0.000074    53.75%    40.92%
+A->A->C->A->C                    1002     0.000053    52.50%    42.12%
+A->A->C->A                       1750     0.000063    51.60%    43.54%
+A->A->C->A->A                     748     0.000076    50.40%    45.45%
+A->C->C->A->A                     996    -0.000018    46.08%    51.20%
+A->C->A->A->A                     731    -0.000135    42.82%    54.72%
+A->C->C->A                       2269    -0.000047    42.62%    53.15%
+A->C->A->A                       1745    -0.000135    41.03%    55.76%
+A->C->A->C->A                    1164    -0.000115    40.29%    54.47%
+A->C->C->A->C                    1273    -0.000069    39.91%    54.67%
+A->C->C                          4763    -0.000060    39.81%    54.08%
+A->C->A->A->C                    1014    -0.000134    39.74%    56.51%
+A->C                             9001    -0.000091    39.32%    55.28%
+A->C->C->C->A                    1165    -0.000074    39.14%    54.59%
+
+Highest Failure Sequences
+-------------------------
+Sequence                        Count   MeanDRFwd5  ContRate5  FailRate5
+A->C->A->C->C                    1329    -0.000127    34.46%    59.67%
+A->C->A->C                       2493    -0.000121    37.18%    57.24%
+A->C->A                          4238    -0.000127    38.77%    56.63%
+A->C->A->A->C                    1014    -0.000134    39.74%    56.51%
+A->C->A->A                       1745    -0.000135    41.03%    55.76%
+A->C                             9001    -0.000091    39.32%    55.28%
+A->C->C->C->C                    1329    -0.000071    35.59%    55.23%
+A->C->C->C                       2494    -0.000072    37.25%    54.93%
+A->C->A->A->A                     731    -0.000135    42.82%    54.72%
+A->C->C->A->C                    1273    -0.000069    39.91%    54.67%
+A->C->C->C->A                    1165    -0.000074    39.14%    54.59%
+A->C->A->C->A                    1164    -0.000115    40.29%    54.47%
+A->C->C                          4763    -0.000060    39.81%    54.08%
+A->C->C->A                       2269    -0.000047    42.62%    53.15%
+A->C->C->A->A                     996    -0.000018    46.08%    51.20%
+A->A->C->A->A                     748     0.000076    50.40%    45.45%
+A->A->C->A                       1750     0.000063    51.60%    43.54%
+A->A->A->A->A                     451     0.000170    56.54%    42.35%
+A->A->A->C->A                     722     0.000094    54.16%    42.24%
+A->A->C->A->C                    1002     0.000053    52.50%    42.12%
+A->A->A->A                       1086     0.000120    57.18%    41.34%
+A->A->C                          3749     0.000074    53.75%    40.92%
+A->A->A->A->C                     635     0.000083    57.64%    40.63%
+A->A                             6384     0.000096    55.61%    40.19%
+A->A->C->C->A                     939     0.000081    55.38%    39.83%
+
+Section 4 - Acceptance Neighborhood
+-----------------------------------
+Feature                      AcceptedN    OtherN  AcceptedMean    OtherMean      Delta    Effect
+Fwd1_AcceptedCount               15731     19488      0.416439     0.471008  -0.054569   -0.1099
+Fwd1_CompressionCount            15731     19488      0.583498     0.528992   0.054505    0.1098
+Fwd1_DissipationCount            15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd1_ExpansionCount              15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd1_PeakCount                   15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd1_ClimacticCount              15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd2_AcceptedCount               15731     19488      0.862374     0.918155  -0.055781   -0.0817
+Fwd2_CompressionCount            15731     19488      1.137499     1.081794   0.055705    0.0815
+Fwd2_DissipationCount            15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd2_ExpansionCount              15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd2_PeakCount                   15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd2_ClimacticCount              15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd3_AcceptedCount               15731     19488      1.307863     1.365661  -0.057797   -0.0698
+Fwd3_CompressionCount            15731     19488      1.691946     1.634185   0.057761    0.0697
+Fwd3_DissipationCount            15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd3_ExpansionCount              15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd3_PeakCount                   15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd3_ClimacticCount              15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd5_AcceptedCount               15731     19488      2.205327     2.255285  -0.049958   -0.0471
+Fwd5_CompressionCount            15731     19488      2.794292     2.744253   0.050039    0.0471
+Fwd5_DissipationCount            15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd5_ExpansionCount              15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd5_PeakCount                   15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd5_ClimacticCount              15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd10_AcceptedCount              15731     19488      4.437798     4.487839  -0.050041   -0.0334
+Fwd10_CompressionCount           15731     19488      5.561185     5.510160   0.051025    0.0341
+Fwd10_DissipationCount           15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd10_ExpansionCount             15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd10_PeakCount                  15731     19488      0.000000     0.000000   0.000000    0.0000
+Fwd10_ClimacticCount             15731     19488      0.000000     0.000000   0.000000    0.0000
+
+Section 5 - Population B Analysis
+---------------------------------
+Population B tables are measured after qualifying event anchors, separated by DRFwd5 success and failure.
+
+Population B Success-Anchor Transitions
+---------------------------------------
+Offset Transition                      Count  Probability
+     1 Accepted -> Accepted              125      51.02%
+     1 Accepted -> Compression           120      48.98%
+     1 Accepted -> Dissipation           122      49.80%
+     1 Accepted -> Expansion             133      54.29%
+     1 Accepted -> Peak                   33      13.47%
+     1 Accepted -> Climactic              27      11.02%
+     1 Accepted -> None                    0       0.00%
+     2 Accepted -> Accepted              113      46.12%
+     2 Accepted -> Compression           133      54.29%
+     2 Accepted -> Dissipation           131      53.47%
+     2 Accepted -> Expansion             133      54.29%
+     2 Accepted -> Peak                   35      14.29%
+     2 Accepted -> Climactic              29      11.84%
+     2 Accepted -> None                    0       0.00%
+     3 Accepted -> Accepted              121      49.39%
+     3 Accepted -> Compression           124      50.61%
+     3 Accepted -> Dissipation           121      49.39%
+     3 Accepted -> Expansion             136      55.51%
+     3 Accepted -> Peak                   44      17.96%
+     3 Accepted -> Climactic              24       9.80%
+     3 Accepted -> None                    0       0.00%
+     5 Accepted -> Accepted              101      41.22%
+     5 Accepted -> Compression           145      59.18%
+     5 Accepted -> Dissipation           130      53.06%
+     5 Accepted -> Expansion             113      46.12%
+     5 Accepted -> Peak                   44      17.96%
+     5 Accepted -> Climactic              20       8.16%
+     5 Accepted -> None                    0       0.00%
+
+Population B Failure-Anchor Transitions
+---------------------------------------
+Offset Transition                      Count  Probability
+     1 Accepted -> Accepted               83      38.07%
+     1 Accepted -> Compression           137      62.84%
+     1 Accepted -> Dissipation            95      43.58%
+     1 Accepted -> Expansion             107      49.08%
+     1 Accepted -> Peak                   38      17.43%
+     1 Accepted -> Climactic              13       5.96%
+     1 Accepted -> None                    0       0.00%
+     2 Accepted -> Accepted              102      46.79%
+     2 Accepted -> Compression           119      54.59%
+     2 Accepted -> Dissipation           111      50.92%
+     2 Accepted -> Expansion             110      50.46%
+     2 Accepted -> Peak                   37      16.97%
+     2 Accepted -> Climactic              11       5.05%
+     2 Accepted -> None                    0       0.00%
+     3 Accepted -> Accepted               93      42.66%
+     3 Accepted -> Compression           128      58.72%
+     3 Accepted -> Dissipation            94      43.12%
+     3 Accepted -> Expansion             111      50.92%
+     3 Accepted -> Peak                   29      13.30%
+     3 Accepted -> Climactic              20       9.17%
+     3 Accepted -> None                    0       0.00%
+     5 Accepted -> Accepted              112      51.38%
+     5 Accepted -> Compression           107      49.08%
+     5 Accepted -> Dissipation           100      45.87%
+     5 Accepted -> Expansion             121      55.50%
+     5 Accepted -> Peak                   49      22.48%
+     5 Accepted -> Climactic              24      11.01%
+     5 Accepted -> None                    0       0.00%
+
+Population B Transition Probability Effects
+-------------------------------------------
+Offset Transition                    SuccessMinusFailure   EffectSize
+     1 Accepted -> Accepted                      12.95%       0.2619
+     1 Accepted -> Compression                  -13.86%      -0.2811
+     1 Accepted -> Dissipation                    6.22%       0.1246
+     1 Accepted -> Expansion                      5.20%       0.1040
+     1 Accepted -> Peak                          -3.96%      -0.1099
+     1 Accepted -> Climactic                      5.06%       0.1803
+     1 Accepted -> None                           0.00%       0.0000
+     2 Accepted -> Accepted                      -0.67%      -0.0133
+     2 Accepted -> Compression                   -0.30%      -0.0060
+     2 Accepted -> Dissipation                    2.55%       0.0510
+     2 Accepted -> Expansion                      3.83%       0.0765
+     2 Accepted -> Peak                          -2.69%      -0.0740
+     2 Accepted -> Climactic                      6.79%       0.2430
+     2 Accepted -> None                           0.00%       0.0000
+     3 Accepted -> Accepted                       6.73%       0.1349
+     3 Accepted -> Compression                   -8.10%      -0.1629
+     3 Accepted -> Dissipation                    6.27%       0.1257
+     3 Accepted -> Expansion                      4.59%       0.0920
+     3 Accepted -> Peak                           4.66%       0.1278
+     3 Accepted -> Climactic                      0.62%       0.0212
+     3 Accepted -> None                           0.00%       0.0000
+     5 Accepted -> Accepted                     -10.15%      -0.2043
+     5 Accepted -> Compression                   10.10%       0.2034
+     5 Accepted -> Dissipation                    7.19%       0.1439
+     5 Accepted -> Expansion                     -9.38%      -0.1881
+     5 Accepted -> Peak                          -4.52%      -0.1127
+     5 Accepted -> Climactic                     -2.85%      -0.0969
+     5 Accepted -> None                           0.00%       0.0000
+
+Population B persistence measures immediate Accepted runs beginning at anchor +1.
+
+Population B Success-Anchor Persistence
+---------------------------------------
+RunLength     Count   MeanDRFwd5       Median  ContRate5  FailRate5
+1                67     0.000455     0.000300   100.00%     0.00%
+2                32     0.000750     0.000650   100.00%     0.00%
+3                17     0.000956     0.001000   100.00%     0.00%
+4                 5     0.000820     0.000600   100.00%     0.00%
+5+                4     0.000900     0.000800   100.00%     0.00%
+10+               0     0.000000     0.000000     0.00%     0.00%
+
+Population B Failure-Anchor Persistence
+---------------------------------------
+RunLength     Count   MeanDRFwd5       Median  ContRate5  FailRate5
+1                47    -0.000462    -0.000350     0.00%   100.00%
+2                18    -0.000572    -0.000300     0.00%   100.00%
+3                 7    -0.000921    -0.000650     0.00%   100.00%
+4                 3    -0.000400    -0.000500     0.00%   100.00%
+5+                8    -0.000594    -0.000550     0.00%   100.00%
+10+               0     0.000000     0.000000     0.00%     0.00%
+
+Population B Success Most Common Sequences
+------------------------------------------
+Sequence                        Count   MeanDRFwd5  ContRate5  FailRate5
+C->A                              125     0.000628   100.00%     0.00%
+C->C                              120     0.000421   100.00%     0.00%
+C->A->C                            67     0.000455   100.00%     0.00%
+C->C->C                            65     0.000402   100.00%     0.00%
+C->A->A                            58     0.000827   100.00%     0.00%
+C->C->A                            55     0.000445   100.00%     0.00%
+C->A->C->C                         37     0.000377   100.00%     0.00%
+C->C->C->A                         37     0.000457   100.00%     0.00%
+C->A->A->C                         32     0.000750   100.00%     0.00%
+C->A->C->A                         30     0.000552   100.00%     0.00%
+C->C->A->A                         28     0.000593   100.00%     0.00%
+C->C->C->C                         28     0.000329   100.00%     0.00%
+C->C->A->C                         27     0.000291   100.00%     0.00%
+C->A->A->A                         26     0.000921   100.00%     0.00%
+C->A->A->C->A                      24     0.000785   100.00%     0.00%
+C->C->C->A->C                      24     0.000404   100.00%     0.00%
+C->A->C->A->C                      21     0.000481   100.00%     0.00%
+
+Population B Success Highest Continuation Sequences
+---------------------------------------------------
+Sequence                        Count   MeanDRFwd5  ContRate5  FailRate5
+C->A                              125     0.000628   100.00%     0.00%
+C->C                              120     0.000421   100.00%     0.00%
+C->A->C                            67     0.000455   100.00%     0.00%
+C->C->C                            65     0.000402   100.00%     0.00%
+C->A->A                            58     0.000827   100.00%     0.00%
+C->C->A                            55     0.000445   100.00%     0.00%
+C->A->C->C                         37     0.000377   100.00%     0.00%
+C->C->C->A                         37     0.000457   100.00%     0.00%
+C->A->A->C                         32     0.000750   100.00%     0.00%
+C->A->C->A                         30     0.000552   100.00%     0.00%
+C->C->A->A                         28     0.000593   100.00%     0.00%
+C->C->C->C                         28     0.000329   100.00%     0.00%
+C->C->A->C                         27     0.000291   100.00%     0.00%
+C->A->A->A                         26     0.000921   100.00%     0.00%
+C->A->A->C->A                      24     0.000785   100.00%     0.00%
+C->C->C->A->C                      24     0.000404   100.00%     0.00%
+C->A->C->A->C                      21     0.000481   100.00%     0.00%
+
+Population B Success Highest Failure Sequences
+----------------------------------------------
+Sequence                        Count   MeanDRFwd5  ContRate5  FailRate5
+C->A                              125     0.000628   100.00%     0.00%
+C->C                              120     0.000421   100.00%     0.00%
+C->A->C                            67     0.000455   100.00%     0.00%
+C->C->C                            65     0.000402   100.00%     0.00%
+C->A->A                            58     0.000827   100.00%     0.00%
+C->C->A                            55     0.000445   100.00%     0.00%
+C->A->C->C                         37     0.000377   100.00%     0.00%
+C->C->C->A                         37     0.000457   100.00%     0.00%
+C->A->A->C                         32     0.000750   100.00%     0.00%
+C->A->C->A                         30     0.000552   100.00%     0.00%
+C->C->A->A                         28     0.000593   100.00%     0.00%
+C->C->C->C                         28     0.000329   100.00%     0.00%
+C->C->A->C                         27     0.000291   100.00%     0.00%
+C->A->A->A                         26     0.000921   100.00%     0.00%
+C->A->A->C->A                      24     0.000785   100.00%     0.00%
+C->C->C->A->C                      24     0.000404   100.00%     0.00%
+C->A->C->A->C                      21     0.000481   100.00%     0.00%
+
+Population B Failure Most Common Sequences
+------------------------------------------
+Sequence                        Count   MeanDRFwd5  ContRate5  FailRate5
+C->C                              135    -0.000443     0.00%   100.00%
+C->A                               83    -0.000535     0.00%   100.00%
+C->C->C                            69    -0.000359     0.00%   100.00%
+C->C->A                            66    -0.000531     0.00%   100.00%
+C->A->C                            47    -0.000462     0.00%   100.00%
+C->C->C->C                         40    -0.000280     0.00%   100.00%
+C->A->A                            36    -0.000631     0.00%   100.00%
+C->C->A->C                         35    -0.000420     0.00%   100.00%
+C->A->C->C                         32    -0.000458     0.00%   100.00%
+C->C->A->A                         31    -0.000656     0.00%   100.00%
+C->C->C->A                         29    -0.000469     0.00%   100.00%
+C->C->C->C->C                      24    -0.000231     0.00%   100.00%
+C->C->A->C->C                      20    -0.000347     0.00%   100.00%
+
+Population B Failure Highest Continuation Sequences
+---------------------------------------------------
+Sequence                        Count   MeanDRFwd5  ContRate5  FailRate5
+C->C                              135    -0.000443     0.00%   100.00%
+C->A                               83    -0.000535     0.00%   100.00%
+C->C->C                            69    -0.000359     0.00%   100.00%
+C->C->A                            66    -0.000531     0.00%   100.00%
+C->A->C                            47    -0.000462     0.00%   100.00%
+C->C->C->C                         40    -0.000280     0.00%   100.00%
+C->A->A                            36    -0.000631     0.00%   100.00%
+C->C->A->C                         35    -0.000420     0.00%   100.00%
+C->A->C->C                         32    -0.000458     0.00%   100.00%
+C->C->A->A                         31    -0.000656     0.00%   100.00%
+C->C->C->A                         29    -0.000469     0.00%   100.00%
+C->C->C->C->C                      24    -0.000231     0.00%   100.00%
+C->C->A->C->C                      20    -0.000347     0.00%   100.00%
+
+Population B Failure Highest Failure Sequences
+----------------------------------------------
+Sequence                        Count   MeanDRFwd5  ContRate5  FailRate5
+C->C                              135    -0.000443     0.00%   100.00%
+C->A                               83    -0.000535     0.00%   100.00%
+C->C->C                            69    -0.000359     0.00%   100.00%
+C->C->A                            66    -0.000531     0.00%   100.00%
+C->A->C                            47    -0.000462     0.00%   100.00%
+C->C->C->C                         40    -0.000280     0.00%   100.00%
+C->A->A                            36    -0.000631     0.00%   100.00%
+C->C->A->C                         35    -0.000420     0.00%   100.00%
+C->A->C->C                         32    -0.000458     0.00%   100.00%
+C->C->A->A                         31    -0.000656     0.00%   100.00%
+C->C->C->A                         29    -0.000469     0.00%   100.00%
+C->C->C->C->C                      24    -0.000231     0.00%   100.00%
+C->C->A->C->C                      20    -0.000347     0.00%   100.00%
+
+Section 6 - Acceptance Hub Test
+-------------------------------
+
+Acceptance Hub Probabilities
+----------------------------
+Offset Transition                      Count  Probability
+     1 Accepted -> Accepted             6551      41.65%
+     1 Accepted -> Compression          9274      58.96%
+     1 Accepted -> Dissipation          8297      52.75%
+     1 Accepted -> Expansion            7039      44.75%
+     1 Accepted -> Peak                 3375      21.46%
+     1 Accepted -> Climactic            1644      10.45%
+     1 Accepted -> None                    0       0.00%
+     2 Accepted -> Accepted             7015      44.60%
+     2 Accepted -> Compression          8806      55.98%
+     2 Accepted -> Dissipation          7906      50.26%
+     2 Accepted -> Expansion            7934      50.44%
+     2 Accepted -> Peak                 3176      20.19%
+     2 Accepted -> Climactic            1376       8.75%
+     2 Accepted -> None                    0       0.00%
+     3 Accepted -> Accepted             7008      44.55%
+     3 Accepted -> Compression          8808      55.99%
+     3 Accepted -> Dissipation          7739      49.20%
+     3 Accepted -> Expansion            7955      50.57%
+     3 Accepted -> Peak                 3107      19.75%
+     3 Accepted -> Climactic            1335       8.49%
+     3 Accepted -> None                    0       0.00%
+     5 Accepted -> Accepted             7038      44.75%
+     5 Accepted -> Compression          8790      55.88%
+     5 Accepted -> Dissipation          7733      49.16%
+     5 Accepted -> Expansion            7839      49.84%
+     5 Accepted -> Peak                 2955      18.79%
+     5 Accepted -> Climactic            1355       8.61%
+     5 Accepted -> None                    0       0.00%
+
+Section 7 - Graph-Oriented Summary
+----------------------------------
+
+Accepted outgoing graph at +1:
+  -> Compression  (p=58.96%, n=9274)
+  -> Dissipation  (p=52.75%, n=8297)
+  -> Expansion    (p=44.75%, n=7039)
+  -> Accepted     (p=41.65%, n=6551)
+  -> Peak         (p=21.46%, n=3375)
+  -> Climactic    (p=10.45%, n=1644)
+  -> None         (p=0.00%, n=0)
+
+Accepted outgoing graph at +2:
+  -> Compression  (p=55.98%, n=8806)
+  -> Expansion    (p=50.44%, n=7934)
+  -> Dissipation  (p=50.26%, n=7906)
+  -> Accepted     (p=44.60%, n=7015)
+  -> Peak         (p=20.19%, n=3176)
+  -> Climactic    (p=8.75%, n=1376)
+  -> None         (p=0.00%, n=0)
+
+Accepted outgoing graph at +3:
+  -> Compression  (p=55.99%, n=8808)
+  -> Expansion    (p=50.57%, n=7955)
+  -> Dissipation  (p=49.20%, n=7739)
+  -> Accepted     (p=44.55%, n=7008)
+  -> Peak         (p=19.75%, n=3107)
+  -> Climactic    (p=8.49%, n=1335)
+  -> None         (p=0.00%, n=0)
+
+Accepted outgoing graph at +5:
+  -> Compression  (p=55.88%, n=8790)
+  -> Expansion    (p=49.84%, n=7839)
+  -> Dissipation  (p=49.16%, n=7733)
+  -> Accepted     (p=44.75%, n=7038)
+  -> Peak         (p=18.79%, n=2955)
+  -> Climactic    (p=8.61%, n=1355)
+  -> None         (p=0.00%, n=0)
+
+Research Notes
+==============
+- Accepted -> Accepted at +1: p=41.65%, n=6551.
+- Accepted -> Dissipation at +1: p=52.75%, n=8297.
+- Accepted -> Expansion at +1: p=44.75%, n=7039.
+- Accepted -> Compression at +1: p=58.96%, n=9274.
+- Largest outgoing probability: +1 Accepted -> Compression, p=58.96%.
+- Classification as state, transition, hub, or terminal condition is intentionally left unresolved.

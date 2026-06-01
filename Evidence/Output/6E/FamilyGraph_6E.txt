@@ -1,0 +1,297 @@
+APVA Family Graph Study v0.1 - 6E
+================================
+Instrument: 6E
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_20260531_apva_bar_evidence_v01.csv
+Total rows: 35260
+Valid polarity rows: 31107
+Study 30 family precedence reused exactly: A, then B, then C, then D, then N.
+Edge probabilities are conditional on source family; weighted lifts are edge-count weighted.
+Return means first reappearance of the same family within the next original bars.
+
+Section 1 - Node Statistics
+===========================
+Family      Count      Freq    Runs   MeanDur    Median      P90    Max  Persist1  Persist5
+A             181    0.51%     181    1.0000    1.0000   1.0000      1    0.00%    1.66%
+B            3069    8.70%    2618    1.1723    1.0000   2.0000      6   14.70%   10.49%
+C            5456   15.47%    4089    1.3343    1.0000   2.0000      8   25.06%   18.61%
+D            6497   18.43%    5736    1.1327    1.0000   2.0000      5   11.71%   18.72%
+N           20057   56.88%    8740    2.2949    2.0000   5.0000     18   56.42%   57.51%
+
+Section 2 - Inbound Connectivity
+================================
+Family      Total   MeanLift  WeightedLift    MaxLift StrongestSource 
+A             181     0.9583        1.1774     1.9281 C               
+  A->A       Count=0        Probability=   0.00% Lift=0.0000
+  B->A       Count=19       Probability=   0.62% Lift=1.2061
+  C->A       Count=54       Probability=   0.99% Lift=1.9281
+  D->A       Count=30       Probability=   0.46% Lift=0.8995
+  N->A       Count=78       Probability=   0.39% Lift=0.7576
+B            3069     1.2064        1.3225     2.1501 C               
+  A->B       Count=12       Probability=   6.63% Lift=0.7617
+  B->B       Count=451      Probability=  14.70% Lift=1.6884
+  C->B       Count=1021     Probability=  18.72% Lift=2.1501
+  D->B       Count=438      Probability=   6.74% Lift=0.7746
+  N->B       Count=1147     Probability=   5.72% Lift=0.6570
+C            5456     1.1840        1.1087     1.6193 C               
+  A->C       Count=33       Probability=  18.23% Lift=1.1783
+  B->C       Count=717      Probability=  23.36% Lift=1.5099
+  C->C       Count=1367     Probability=  25.06% Lift=1.6193
+  D->C       Count=798      Probability=  12.28% Lift=0.7938
+  N->C       Count=2541     Probability=  12.67% Lift=0.8188
+D            6497     0.7595        1.1681     1.3459 N               
+  A->D       Count=26       Probability=  14.36% Lift=0.7796
+  B->D       Count=393      Probability=  12.81% Lift=0.6950
+  C->D       Count=343      Probability=   6.29% Lift=0.3412
+  D->D       Count=761      Probability=  11.71% Lift=0.6357
+  N->D       Count=4974     Probability=  24.80% Lift=1.3459
+N           20056     0.9966        1.0130     1.2095 D               
+  A->N       Count=110      Probability=  60.77% Lift=1.0684
+  B->N       Count=1489     Probability=  48.52% Lift=0.8530
+  C->N       Count=2670     Probability=  48.95% Lift=0.8603
+  D->N       Count=4470     Probability=  68.80% Lift=1.2095
+  N->N       Count=11317    Probability=  56.42% Lift=0.9920
+Inbound edge probability is conditional on source family.
+
+Section 3 - Outbound Connectivity
+=================================
+Family      Total   MeanLift  WeightedLift    MaxLift StrongestTarget 
+A             181     0.7576        1.0266     1.1783 C               
+  A->A       Count=0        Probability=   0.00% Lift=0.0000
+  A->B       Count=12       Probability=   6.63% Lift=0.7617
+  A->C       Count=33       Probability=  18.23% Lift=1.1783
+  A->D       Count=26       Probability=  14.36% Lift=0.7796
+  A->N       Count=110      Probability=  60.77% Lift=1.0684
+B            3069     1.1905        1.1112     1.6884 B               
+  B->A       Count=19       Probability=   0.62% Lift=1.2061
+  B->B       Count=451      Probability=  14.70% Lift=1.6884
+  B->C       Count=717      Probability=  23.36% Lift=1.5099
+  B->D       Count=393      Probability=  12.81% Lift=0.6950
+  B->N       Count=1489     Probability=  48.52% Lift=0.8530
+C            5455     1.3798        1.2698     2.1501 B               
+  C->A       Count=54       Probability=   0.99% Lift=1.9281
+  C->B       Count=1021     Probability=  18.72% Lift=2.1501
+  C->C       Count=1367     Probability=  25.06% Lift=1.6193
+  C->D       Count=343      Probability=   6.29% Lift=0.3412
+  C->N       Count=2670     Probability=  48.95% Lift=0.8603
+D            6497     0.8626        1.0605     1.2095 N               
+  D->A       Count=30       Probability=   0.46% Lift=0.8995
+  D->B       Count=438      Probability=   6.74% Lift=0.7746
+  D->C       Count=798      Probability=  12.28% Lift=0.7938
+  D->D       Count=761      Probability=  11.71% Lift=0.6357
+  D->N       Count=4470     Probability=  68.80% Lift=1.2095
+N           20057     0.9143        1.0377     1.3459 D               
+  N->A       Count=78       Probability=   0.39% Lift=0.7576
+  N->B       Count=1147     Probability=   5.72% Lift=0.6570
+  N->C       Count=2541     Probability=  12.67% Lift=0.8188
+  N->D       Count=4974     Probability=  24.80% Lift=1.3459
+  N->N       Count=11317    Probability=  56.42% Lift=0.9920
+Outbound edge probability is conditional on source family.
+
+Section 4 - Attractor Analysis
+==============================
+Family     Incoming   Persist1   Outgoing    Attractor
+N            1.0130    56.42%     1.0377       0.5395
+B            1.3225    14.70%     1.1112       0.3583
+D            1.1681    11.71%     1.0605       0.2247
+A            1.1774     0.00%     1.0266       0.1508
+C            1.1087    25.06%     1.2698       0.0894
+
+Section 5 - Source Analysis
+===========================
+Family     Incoming   Persist1   Outgoing       Source
+C            1.1087    25.06%     1.2698       0.1612
+N            1.0130    56.42%     1.0377       0.0247
+D            1.1681    11.71%     1.0605      -0.1075
+A            1.1774     0.00%     1.0266      -0.1508
+B            1.3225    14.70%     1.1112      -0.2113
+
+Section 6 - Hub Analysis
+========================
+Family     Incoming   Persist1   Outgoing          Hub
+B            1.3225    14.70%     1.1112       2.2867
+A            1.1774     0.00%     1.0266       2.2041
+C            1.1087    25.06%     1.2698       2.1279
+D            1.1681    11.71%     1.0605       2.1114
+N            1.0130    56.42%     1.0377       1.4865
+
+Section 7 - Cycle Analysis
+==========================
+Cycle           Count  OutcomeN       OER   MeanDRFwd5  ContRate5  FailRate5
+B->C->B           143       118    3.4598     0.000057    50.00%    45.76%
+B->D->B            34        29    0.6908     0.000062    48.28%    48.28%
+B->N->B           110        90    0.7240     0.000027    44.44%    50.00%
+C->B->C           263       259    3.5793    -0.000109    41.31%    55.98%
+C->D->C            61        61    0.3922    -0.000039    44.26%    49.18%
+C->N->C           488       483    1.0162    -0.000085    44.51%    50.93%
+D->B->D            56        56    0.5375    -0.000106    41.07%    57.14%
+D->C->D            54        54    0.2915    -0.000088    38.89%    59.26%
+D->N->D          1096      1079    1.6096    -0.000036    43.56%    51.71%
+N->A->N            47        43    0.8026    -0.000166    37.21%    60.47%
+N->B->N           578       471    0.5821    -0.000058    41.61%    52.44%
+N->C->N          1314      1116    0.7444    -0.000013    46.24%    49.28%
+N->D->N          3451      2909    1.6417    -0.000007    46.75%    47.47%
+
+Section 8 - Return Probability
+==============================
+Family      Count    Return5   Return10   Return20   MedianBars
+A             181     3.87%     6.08%    11.60%       9.0000
+B            3069    44.18%    63.83%    80.42%       5.0000
+C            5456    64.41%    81.07%    93.16%       3.0000
+D            6497    65.08%    87.92%    98.29%       4.0000
+N           20057    98.01%    99.92%   100.00%       1.0000
+
+Section 9 - Constructive / Destructive / Neutral Graph
+=======================================================
+Transition                          Count  Probability      Lift  OutcomeN   MeanDRFwd5  ContRate5  FailRate5
+Constructive->Constructive            482      14.83%    1.6091       406    -0.000060    42.61%    51.48%
+Constructive->Destructive            1169      35.97%    1.0611      1156    -0.000043    43.77%    51.82%
+Constructive->Neutral                1599      49.20%    0.8650      1328    -0.000008    44.35%    50.38%
+Destructive->Constructive            1543      12.91%    1.4006      1307    -0.000009    46.06%    50.27%
+Destructive->Destructive             3269      27.35%    0.8068      3237    -0.000017    46.56%    48.78%
+Destructive->Neutral                 7140      59.74%    1.0501      6042    -0.000015    46.52%    48.23%
+Neutral->Constructive                1225       6.11%    0.6626      1008     0.000002    48.21%    47.32%
+Neutral->Destructive                 7515      37.47%    1.1053      7399    -0.000013    46.03%    48.80%
+Neutral->Neutral                    11317      56.42%    0.9920      9218    -0.000003    46.83%    47.85%
+
+Section 10 - Population B
+=========================
+Population B bars: 469
+
+Node Statistics
+---------------
+Family      Count      Freq    Runs   MeanDur    Median      P90    Max  Persist1  Persist5
+A               0    0.00%       0    0.0000    0.0000   0.0000      0    0.00%    0.00%
+B              78   16.63%      77    1.0130    1.0000   1.0000      2   12.50%   12.50%
+C               0    0.00%       0    0.0000    0.0000   0.0000      0    0.00%    0.00%
+D               0    0.00%       0    0.0000    0.0000   0.0000      0    0.00%    0.00%
+N             391   83.37%     370    1.0568    1.0000   1.0000      3   95.45%   80.00%
+
+Inbound Connectivity
+--------------------
+Family      Total   MeanLift  WeightedLift    MaxLift StrongestSource 
+A               0     0.0000        0.0000     0.0000 N               
+  A->A       Count=0        Probability=   0.00% Lift=N/A
+  B->A       Count=0        Probability=   0.00% Lift=N/A
+  C->A       Count=0        Probability=   0.00% Lift=N/A
+  D->A       Count=0        Probability=   0.00% Lift=N/A
+  N->A       Count=0        Probability=   0.00% Lift=N/A
+B               2     0.2891        0.7228     1.2051 B               
+  A->B       Count=0        Probability=   0.00% Lift=N/A
+  B->B       Count=1        Probability=  12.50% Lift=1.2051
+  C->B       Count=0        Probability=   0.00% Lift=N/A
+  D->B       Count=0        Probability=   0.00% Lift=N/A
+  N->B       Count=1        Probability=   4.55% Lift=0.2404
+C               0     0.0000        0.0000     0.0000 N               
+  A->C       Count=0        Probability=   0.00% Lift=N/A
+  B->C       Count=0        Probability=   0.00% Lift=N/A
+  C->C       Count=0        Probability=   0.00% Lift=N/A
+  D->C       Count=0        Probability=   0.00% Lift=N/A
+  N->C       Count=0        Probability=   0.00% Lift=N/A
+D               0     0.0000        0.0000     0.0000 N               
+  A->D       Count=0        Probability=   0.00% Lift=N/A
+  B->D       Count=0        Probability=   0.00% Lift=N/A
+  C->D       Count=0        Probability=   0.00% Lift=N/A
+  D->D       Count=0        Probability=   0.00% Lift=N/A
+  N->D       Count=0        Probability=   0.00% Lift=N/A
+N              28     0.5380        1.1761     1.6829 B               
+  A->N       Count=0        Probability=   0.00% Lift=N/A
+  B->N       Count=7        Probability=  87.50% Lift=1.6829
+  C->N       Count=0        Probability=   0.00% Lift=N/A
+  D->N       Count=0        Probability=   0.00% Lift=N/A
+  N->N       Count=21       Probability=  95.45% Lift=1.0071
+Inbound edge probability is conditional on source family.
+
+Outbound Connectivity
+---------------------
+Family      Total   MeanLift  WeightedLift    MaxLift StrongestTarget 
+A               0     0.0000        0.0000     0.0000 N               
+  A->A       Count=0        Probability=   0.00% Lift=N/A
+  A->B       Count=0        Probability=   0.00% Lift=N/A
+  A->C       Count=0        Probability=   0.00% Lift=N/A
+  A->D       Count=0        Probability=   0.00% Lift=N/A
+  A->N       Count=0        Probability=   0.00% Lift=N/A
+B               8     0.5776        1.6232     1.6829 N               
+  B->A       Count=0        Probability=   0.00% Lift=N/A
+  B->B       Count=1        Probability=  12.50% Lift=1.2051
+  B->C       Count=0        Probability=   0.00% Lift=N/A
+  B->D       Count=0        Probability=   0.00% Lift=N/A
+  B->N       Count=7        Probability=  87.50% Lift=1.6829
+C               0     0.0000        0.0000     0.0000 N               
+  C->A       Count=0        Probability=   0.00% Lift=N/A
+  C->B       Count=0        Probability=   0.00% Lift=N/A
+  C->C       Count=0        Probability=   0.00% Lift=N/A
+  C->D       Count=0        Probability=   0.00% Lift=N/A
+  C->N       Count=0        Probability=   0.00% Lift=N/A
+D               0     0.0000        0.0000     0.0000 N               
+  D->A       Count=0        Probability=   0.00% Lift=N/A
+  D->B       Count=0        Probability=   0.00% Lift=N/A
+  D->C       Count=0        Probability=   0.00% Lift=N/A
+  D->D       Count=0        Probability=   0.00% Lift=N/A
+  D->N       Count=0        Probability=   0.00% Lift=N/A
+N              22     0.2495        0.9723     1.0071 N               
+  N->A       Count=0        Probability=   0.00% Lift=N/A
+  N->B       Count=1        Probability=   4.55% Lift=0.2404
+  N->C       Count=0        Probability=   0.00% Lift=N/A
+  N->D       Count=0        Probability=   0.00% Lift=N/A
+  N->N       Count=21       Probability=  95.45% Lift=1.0071
+Outbound edge probability is conditional on source family.
+
+Attractor Ranking
+-----------------
+Family     Incoming   Persist1   Outgoing    Attractor
+N            1.1761    95.45%     0.9723       1.1583
+A            0.0000     0.00%     0.0000       0.0000
+C            0.0000     0.00%     0.0000       0.0000
+D            0.0000     0.00%     0.0000       0.0000
+B            0.7228    12.50%     1.6232      -0.7754
+
+Source Ranking
+--------------
+Family     Incoming   Persist1   Outgoing       Source
+B            0.7228    12.50%     1.6232       0.9004
+A            0.0000     0.00%     0.0000       0.0000
+C            0.0000     0.00%     0.0000       0.0000
+D            0.0000     0.00%     0.0000       0.0000
+N            1.1761    95.45%     0.9723      -0.2038
+
+Hub Ranking
+-----------
+Family     Incoming   Persist1   Outgoing          Hub
+B            0.7228    12.50%     1.6232       2.2209
+N            1.1761    95.45%     0.9723       1.1938
+A            0.0000     0.00%     0.0000       0.0000
+C            0.0000     0.00%     0.0000       0.0000
+D            0.0000     0.00%     0.0000       0.0000
+
+Return Probabilities
+--------------------
+Family      Count    Return5   Return10   Return20   MedianBars
+A               0     0.00%     0.00%     0.00%       0.0000
+B              78     7.69%     7.69%     7.69%       2.0000
+C               0     0.00%     0.00%     0.00%       0.0000
+D               0     0.00%     0.00%     0.00%       0.0000
+N             391    20.20%    25.83%    30.43%       3.0000
+
+Constructive / Destructive / Neutral Graph
+------------------------------------------
+Transition                          Count  Probability      Lift  OutcomeN   MeanDRFwd5  ContRate5  FailRate5
+Constructive->Constructive              1      12.50%    1.2051         1     0.000300   100.00%     0.00%
+Constructive->Destructive               0       0.00%       N/A         0     0.000000     0.00%     0.00%
+Constructive->Neutral                   7      87.50%    1.6829         7    -0.000014    57.14%    42.86%
+Destructive->Constructive               0       0.00%       N/A         0     0.000000     0.00%     0.00%
+Destructive->Destructive                0       0.00%       N/A         0     0.000000     0.00%     0.00%
+Destructive->Neutral                    0       0.00%       N/A         0     0.000000     0.00%     0.00%
+Neutral->Constructive                   1       4.55%    0.2404         1    -0.000300     0.00%   100.00%
+Neutral->Destructive                    0       0.00%       N/A         0     0.000000     0.00%     0.00%
+Neutral->Neutral                       21      95.45%    1.0071        21     0.000286    71.43%    28.57%
+
+Section 11 - Mechanical Research Notes
+======================================
+- Strongest attractor: Family N, AttractorScore=0.5395.
+- Strongest source: Family C, SourceScore=0.1612.
+- Strongest hub: Family B, HubScore=2.2867.
+- Family A returns: Return5=3.87%, Return10=6.08%, Return20=11.60%.
+- Family B returns: Return5=44.18%, Return10=63.83%, Return20=80.42%.
+- Family C returns: Return5=64.41%, Return10=81.07%, Return20=93.16%.
+- Family N returns: Return5=98.01%, Return10=99.92%, Return20=100.00%.
+- Graph scores are descriptive combinations of lift and persistence only.

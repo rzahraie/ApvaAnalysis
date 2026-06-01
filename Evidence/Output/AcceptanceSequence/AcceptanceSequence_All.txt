@@ -1,0 +1,195 @@
+APVA Acceptance Sequence Study v0.1 - Cross-Instrument Aggregate
+================================================================
+Input instruments: 6E, NQ, CL
+Sequence encoding precedence: A Accepted, C Compression, D Dissipation, E Expansion, P Peak, K Climactic, N None.
+
+Aggregate Transition Matrix
+===========================
+Transition                               P_6E       P_NQ       P_CL Valid PositiveAgreement  MeanProbability
++1 Accepted -> Accepted               41.65%    48.95%    43.76%     3                 3          44.78%
++1 Accepted -> Compression            58.96%    52.74%    57.13%     3                 3          56.28%
++1 Accepted -> Dissipation            52.75%    62.95%    53.26%     3                 3          56.32%
++1 Accepted -> Expansion              44.75%    44.95%    45.29%     3                 3          44.99%
++1 Accepted -> Peak                   21.46%    18.11%    23.69%     3                 3          21.08%
++1 Accepted -> Climactic              10.45%     8.11%     8.78%     3                 3           9.11%
++1 Accepted -> None                    0.00%     0.00%     0.00%     3                 0           0.00%
++2 Accepted -> Accepted               44.60%    50.26%    45.65%     3                 3          46.83%
++2 Accepted -> Compression            55.98%    51.00%    55.40%     3                 3          54.13%
++2 Accepted -> Dissipation            50.26%    59.22%    50.73%     3                 3          53.40%
++2 Accepted -> Expansion              50.44%    53.21%    51.37%     3                 3          51.67%
++2 Accepted -> Peak                   20.19%    16.23%    21.29%     3                 3          19.24%
++2 Accepted -> Climactic               8.75%     7.38%     7.58%     3                 3           7.90%
++2 Accepted -> None                    0.00%     0.00%     0.00%     3                 0           0.00%
++3 Accepted -> Accepted               44.55%    47.26%    47.42%     3                 3          46.41%
++3 Accepted -> Compression            55.99%    53.90%    53.63%     3                 3          54.51%
++3 Accepted -> Dissipation            49.20%    59.18%    51.53%     3                 3          53.30%
++3 Accepted -> Expansion              50.57%    52.22%    53.23%     3                 3          52.00%
++3 Accepted -> Peak                   19.75%    14.66%    19.76%     3                 3          18.06%
++3 Accepted -> Climactic               8.49%     7.28%     7.18%     3                 3           7.65%
++3 Accepted -> None                    0.00%     0.00%     0.00%     3                 0           0.00%
++5 Accepted -> Accepted               44.75%    46.94%    46.25%     3                 3          45.98%
++5 Accepted -> Compression            55.88%    54.11%    54.80%     3                 3          54.93%
++5 Accepted -> Dissipation            49.16%    56.33%    49.64%     3                 3          51.71%
++5 Accepted -> Expansion              49.84%    50.63%    52.06%     3                 3          50.84%
++5 Accepted -> Peak                   18.79%    13.82%    18.97%     3                 3          17.19%
++5 Accepted -> Climactic               8.61%     6.33%     7.18%     3                 3           7.38%
++5 Accepted -> None                    0.00%     0.00%     0.00%     3                 0           0.00%
+
+Most Common Transitions
+=======================
+   1 +1 Accepted -> Dissipation         MeanProbability=56.32%
+   2 +1 Accepted -> Compression         MeanProbability=56.28%
+   3 +5 Accepted -> Compression         MeanProbability=54.93%
+   4 +3 Accepted -> Compression         MeanProbability=54.51%
+   5 +2 Accepted -> Compression         MeanProbability=54.13%
+   6 +2 Accepted -> Dissipation         MeanProbability=53.40%
+   7 +3 Accepted -> Dissipation         MeanProbability=53.30%
+   8 +3 Accepted -> Expansion           MeanProbability=52.00%
+   9 +5 Accepted -> Dissipation         MeanProbability=51.71%
+  10 +2 Accepted -> Expansion           MeanProbability=51.67%
+  11 +5 Accepted -> Expansion           MeanProbability=50.84%
+  12 +2 Accepted -> Accepted            MeanProbability=46.83%
+  13 +3 Accepted -> Accepted            MeanProbability=46.41%
+  14 +5 Accepted -> Accepted            MeanProbability=45.98%
+  15 +1 Accepted -> Expansion           MeanProbability=44.99%
+  16 +1 Accepted -> Accepted            MeanProbability=44.78%
+  17 +1 Accepted -> Peak                MeanProbability=21.08%
+  18 +2 Accepted -> Peak                MeanProbability=19.24%
+  19 +3 Accepted -> Peak                MeanProbability=18.06%
+  20 +5 Accepted -> Peak                MeanProbability=17.19%
+  21 +1 Accepted -> Climactic           MeanProbability=9.11%
+  22 +2 Accepted -> Climactic           MeanProbability=7.90%
+  23 +3 Accepted -> Climactic           MeanProbability=7.65%
+  24 +5 Accepted -> Climactic           MeanProbability=7.38%
+  25 +1 Accepted -> None                MeanProbability=0.00%
+
+Aggregate Acceptance Persistence
+================================
+RunLength   MeanCount   MeanContRate5
+1             1947.33         40.16%
+2              845.00         42.27%
+3              351.67         34.84%
+4              141.00         41.99%
+5+             108.67         40.99%
+10+              1.33         44.44%
+
+Aggregate Acceptance Sequences
+==============================
+Sequence                     TotalCount Instruments  MeanContRate5  MeanFailRate5
+A->C                              10181           3        40.20%        57.65%
+A->A                               7391           3        55.02%        43.31%
+A->C->C                            5356           3        42.32%        55.13%
+A->C->A                            4825           3        38.12%        60.15%
+A->A->C                            4301           3        53.33%        44.64%
+A->A->A                            3090           3        56.60%        42.24%
+A->C->C->C                         2812           3        39.18%        58.03%
+A->C->A->C                         2806           3        39.45%        58.50%
+A->C->C->A                         2544           3        45.97%        51.62%
+A->A->C->C                         2277           3        55.28%        42.60%
+A->A->C->A                         2024           3        51.44%        46.67%
+A->C->A->A                         2019           3        36.74%        61.98%
+A->A->A->C                         1791           3        59.38%        39.23%
+A->C->A->C->C                      1490           3        37.40%        60.29%
+A->C->C->C->C                      1486           3        38.02%        58.59%
+A->C->C->A->C                      1413           3        46.75%        49.86%
+A->C->C->C->A                      1326           3        40.78%        57.13%
+A->C->A->C->A                      1316           3        41.71%        56.55%
+A->A->A->A                         1299           3        53.20%        46.02%
+A->A->C->C->C                      1216           3        59.24%        38.55%
+A->C->A->A->C                      1158           3        37.87%        60.50%
+A->A->C->A->C                      1152           3        51.34%        46.35%
+A->C->C->A->A                      1131           3        45.60%        52.92%
+A->A->C->C->A                      1061           3        50.33%        47.63%
+A->A->A->C->C                       951           3        66.18%        32.77%
+
+Most Persistent Acceptance Chains
+=================================
+   1 A->A->A->A->A                Count=    554 Instruments=3 ContRate5=51.31% FailRate5=47.74%
+   2 A->A->A->A                   Count=   1299 Instruments=3 ContRate5=53.20% FailRate5=46.02%
+   3 A->A->C->A->A                Count=    872 Instruments=3 ContRate5=51.51% FailRate5=47.11%
+   4 A->C->A->A->A                Count=    861 Instruments=3 ContRate5=35.94% FailRate5=63.24%
+   5 A->A->A->C->A                Count=    840 Instruments=3 ContRate5=52.57% FailRate5=45.64%
+   6 A->A->A->A->C                Count=    745 Instruments=3 ContRate5=54.97% FailRate5=44.45%
+   7 A->A->A                      Count=   3090 Instruments=3 ContRate5=56.60% FailRate5=42.24%
+   8 A->A->C->A                   Count=   2024 Instruments=3 ContRate5=51.44% FailRate5=46.67%
+   9 A->C->A->A                   Count=   2019 Instruments=3 ContRate5=36.74% FailRate5=61.98%
+  10 A->A->A->C                   Count=   1791 Instruments=3 ContRate5=59.38% FailRate5=39.23%
+  11 A->C->A->C->A                Count=   1316 Instruments=3 ContRate5=41.71% FailRate5=56.55%
+  12 A->C->A->A->C                Count=   1158 Instruments=3 ContRate5=37.87% FailRate5=60.50%
+  13 A->A->C->A->C                Count=   1152 Instruments=3 ContRate5=51.34% FailRate5=46.35%
+  14 A->C->C->A->A                Count=   1131 Instruments=3 ContRate5=45.60% FailRate5=52.92%
+  15 A->A->C->C->A                Count=   1061 Instruments=3 ContRate5=50.33% FailRate5=47.63%
+  16 A->A->A->C->C                Count=    951 Instruments=3 ContRate5=66.18% FailRate5=32.77%
+  17 A->A                         Count=   7391 Instruments=3 ContRate5=55.02% FailRate5=43.31%
+  18 A->C->A                      Count=   4825 Instruments=3 ContRate5=38.12% FailRate5=60.15%
+  19 A->A->C                      Count=   4301 Instruments=3 ContRate5=53.33% FailRate5=44.64%
+  20 A->C->A->C                   Count=   2806 Instruments=3 ContRate5=39.45% FailRate5=58.50%
+  21 A->C->C->A                   Count=   2544 Instruments=3 ContRate5=45.97% FailRate5=51.62%
+  22 A->A->C->C                   Count=   2277 Instruments=3 ContRate5=55.28% FailRate5=42.60%
+  23 A->C->A->C->C                Count=   1490 Instruments=3 ContRate5=37.40% FailRate5=60.29%
+  24 A->C->C->A->C                Count=   1413 Instruments=3 ContRate5=46.75% FailRate5=49.86%
+  25 A->C->C->C->A                Count=   1326 Instruments=3 ContRate5=40.78% FailRate5=57.13%
+
+Highest Continuation Chains
+===========================
+   1 A->A->A->C->C                Count=    951 Instruments=3 ContRate5=66.18% FailRate5=32.77%
+   2 A->A->A->C                   Count=   1791 Instruments=3 ContRate5=59.38% FailRate5=39.23%
+   3 A->A->C->C->C                Count=   1216 Instruments=3 ContRate5=59.24% FailRate5=38.55%
+   4 A->A->A                      Count=   3090 Instruments=3 ContRate5=56.60% FailRate5=42.24%
+   5 A->A->C->C                   Count=   2277 Instruments=3 ContRate5=55.28% FailRate5=42.60%
+   6 A->A                         Count=   7391 Instruments=3 ContRate5=55.02% FailRate5=43.31%
+   7 A->A->A->A->C                Count=    745 Instruments=3 ContRate5=54.97% FailRate5=44.45%
+   8 A->A->C                      Count=   4301 Instruments=3 ContRate5=53.33% FailRate5=44.64%
+   9 A->A->A->A                   Count=   1299 Instruments=3 ContRate5=53.20% FailRate5=46.02%
+  10 A->A->A->C->A                Count=    840 Instruments=3 ContRate5=52.57% FailRate5=45.64%
+  11 A->A->C->A->A                Count=    872 Instruments=3 ContRate5=51.51% FailRate5=47.11%
+  12 A->A->C->A                   Count=   2024 Instruments=3 ContRate5=51.44% FailRate5=46.67%
+  13 A->A->C->A->C                Count=   1152 Instruments=3 ContRate5=51.34% FailRate5=46.35%
+  14 A->A->A->A->A                Count=    554 Instruments=3 ContRate5=51.31% FailRate5=47.74%
+  15 A->A->C->C->A                Count=   1061 Instruments=3 ContRate5=50.33% FailRate5=47.63%
+  16 A->C->C->A->C                Count=   1413 Instruments=3 ContRate5=46.75% FailRate5=49.86%
+  17 A->C->C->A                   Count=   2544 Instruments=3 ContRate5=45.97% FailRate5=51.62%
+  18 A->C->C->A->A                Count=   1131 Instruments=3 ContRate5=45.60% FailRate5=52.92%
+  19 A->C->C                      Count=   5356 Instruments=3 ContRate5=42.32% FailRate5=55.13%
+  20 A->C->A->C->A                Count=   1316 Instruments=3 ContRate5=41.71% FailRate5=56.55%
+  21 A->C->C->C->A                Count=   1326 Instruments=3 ContRate5=40.78% FailRate5=57.13%
+  22 A->C                         Count=  10181 Instruments=3 ContRate5=40.20% FailRate5=57.65%
+  23 A->C->A->C                   Count=   2806 Instruments=3 ContRate5=39.45% FailRate5=58.50%
+  24 A->C->C->C                   Count=   2812 Instruments=3 ContRate5=39.18% FailRate5=58.03%
+  25 A->C->A                      Count=   4825 Instruments=3 ContRate5=38.12% FailRate5=60.15%
+
+Highest Failure Chains
+======================
+   1 A->C->A->A->A                Count=    861 Instruments=3 ContRate5=35.94% FailRate5=63.24%
+   2 A->C->A->A                   Count=   2019 Instruments=3 ContRate5=36.74% FailRate5=61.98%
+   3 A->C->A->A->C                Count=   1158 Instruments=3 ContRate5=37.87% FailRate5=60.50%
+   4 A->C->A->C->C                Count=   1490 Instruments=3 ContRate5=37.40% FailRate5=60.29%
+   5 A->C->A                      Count=   4825 Instruments=3 ContRate5=38.12% FailRate5=60.15%
+   6 A->C->C->C->C                Count=   1486 Instruments=3 ContRate5=38.02% FailRate5=58.59%
+   7 A->C->A->C                   Count=   2806 Instruments=3 ContRate5=39.45% FailRate5=58.50%
+   8 A->C->C->C                   Count=   2812 Instruments=3 ContRate5=39.18% FailRate5=58.03%
+   9 A->C                         Count=  10181 Instruments=3 ContRate5=40.20% FailRate5=57.65%
+  10 A->C->C->C->A                Count=   1326 Instruments=3 ContRate5=40.78% FailRate5=57.13%
+  11 A->C->A->C->A                Count=   1316 Instruments=3 ContRate5=41.71% FailRate5=56.55%
+  12 A->C->C                      Count=   5356 Instruments=3 ContRate5=42.32% FailRate5=55.13%
+  13 A->C->C->A->A                Count=   1131 Instruments=3 ContRate5=45.60% FailRate5=52.92%
+  14 A->C->C->A                   Count=   2544 Instruments=3 ContRate5=45.97% FailRate5=51.62%
+  15 A->C->C->A->C                Count=   1413 Instruments=3 ContRate5=46.75% FailRate5=49.86%
+  16 A->A->A->A->A                Count=    554 Instruments=3 ContRate5=51.31% FailRate5=47.74%
+  17 A->A->C->C->A                Count=   1061 Instruments=3 ContRate5=50.33% FailRate5=47.63%
+  18 A->A->C->A->A                Count=    872 Instruments=3 ContRate5=51.51% FailRate5=47.11%
+  19 A->A->C->A                   Count=   2024 Instruments=3 ContRate5=51.44% FailRate5=46.67%
+  20 A->A->C->A->C                Count=   1152 Instruments=3 ContRate5=51.34% FailRate5=46.35%
+  21 A->A->A->A                   Count=   1299 Instruments=3 ContRate5=53.20% FailRate5=46.02%
+  22 A->A->A->C->A                Count=    840 Instruments=3 ContRate5=52.57% FailRate5=45.64%
+  23 A->A->C                      Count=   4301 Instruments=3 ContRate5=53.33% FailRate5=44.64%
+  24 A->A->A->A->C                Count=    745 Instruments=3 ContRate5=54.97% FailRate5=44.45%
+  25 A->A                         Count=   7391 Instruments=3 ContRate5=55.02% FailRate5=43.31%
+
+Cross-Instrument Research Notes
+===============================
+- +1 Accepted -> Accepted MeanProbability=44.78%.
+- +1 Accepted -> Dissipation MeanProbability=56.32%.
+- +1 Accepted -> Expansion MeanProbability=44.99%.
+- +1 Accepted -> Compression MeanProbability=56.28%.
+- State, transition, hub, and terminal-condition labels remain mechanical questions, not conclusions.
