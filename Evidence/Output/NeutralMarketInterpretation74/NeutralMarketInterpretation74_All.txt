@@ -1,0 +1,360 @@
+APVA Neutral Market Interpretation Study v2.0 - Aggregate
+============================================================================================================
+Instruments: 6E, CL, NQ
+Real OHLC available: True
+Real Volume available: True
+
+1. Neutral Lifecycle Inventory
+Node | Count | Occupancy | ReplicationCount | MemoryStrength | BranchEntropy | NecessityScore
+NeutralProcessing_Age1 | 6415 | 16.09% | 3 | 0.2174 | 1.2648 | 0.0000
+NeutralProcessing_Age2 | 3633 | 9.11% | 3 | 0.2672 | 1.2303 | 0.1420
+NeutralProcessing_Age3 | 2006 | 5.03% | 3 | 0.3518 | 0.8421 | 0.1993
+NeutralProcessing_Age4 | 1501 | 3.76% | 3 | 0.3656 | 0.4478 | 0.7015
+NeutralProcessing_Age5 | 1367 | 3.43% | 3 | 0.3142 | 0.7548 | 0.9862
+NeutralProcessing_Age6-10 | 3284 | 8.24% | 3 | 0.2213 | 1.1786 | 0.3457
+NeutralProcessing_Age11-20 | 958 | 2.40% | 3 | 0.2809 | 0.9558 | 0.0077
+NeutralProcessing_Age21+ | 82 | 0.21% | 1 | 0.3218 | 0.7959 | 0.0016
+
+2. Real Price Profile
+Node | MeanBarRange | MedianBarRange | MeanBody | MedianBody | MeanTrueRange | MedianTrueRange | MeanCloseLocation | MeanDirectionalMove | StdDevRange | StdDevBody | StdDevTrueRange
+NeutralProcessing_Age1 | 1.4914 | 0.0003 | 0.5743 | 0.0001 | 1.4917 | 0.0003 | 0.4972 | 0.0463 | 7.8068 | 3.3778 | 7.8073
+NeutralProcessing_Age2 | 1.4428 | 0.0003 | 0.5374 | 0.0001 | 1.4434 | 0.0003 | 0.4936 | 0.0782 | 7.2629 | 3.2608 | 7.2656
+NeutralProcessing_Age3 | 1.5543 | 0.0002 | 0.5525 | 0.0001 | 1.5548 | 0.0002 | 0.5086 | 0.0643 | 7.6101 | 3.1528 | 7.6113
+NeutralProcessing_Age4 | 1.6378 | 0.0003 | 0.6150 | 0.0001 | 1.6385 | 0.0003 | 0.4853 | 0.1010 | 7.8225 | 3.7099 | 7.8236
+NeutralProcessing_Age5 | 1.8334 | 0.0003 | 0.9015 | 0.0001 | 1.8342 | 0.0003 | 0.5212 | 0.1397 | 8.4381 | 5.4096 | 8.4390
+NeutralProcessing_Age6-10 | 1.8394 | 0.0003 | 0.8892 | 0.0001 | 1.8402 | 0.0003 | 0.4987 | -0.1119 | 9.1699 | 5.4555 | 9.1723
+NeutralProcessing_Age11-20 | 1.1298 | 0.0002 | 0.4929 | 0.0001 | 1.1299 | 0.0002 | 0.5045 | 0.0551 | 7.4391 | 3.8233 | 7.4391
+NeutralProcessing_Age21+ | 0.0002 | 0.0002 | 0.0001 | 0.0001 | 0.0002 | 0.0002 | 0.4963 | -0.0000 | 0.0001 | 0.0001 | 0.0001
+
+3. Real Volume Profile
+Node | MeanVolume | MedianVolume | VolumeRelativeToPrevious | VolumeRelativeToSessionMean | VolumeRelativeToRollingMean | VolumeExpansionRate | VolumeContractionRate | ParticipationLabel
+NeutralProcessing_Age1 | 722.9231 | 351.0000 | 0.9246 | 0.6728 | 0.7659 | 30.13% | 69.59% | DecliningParticipation
+NeutralProcessing_Age2 | 630.4897 | 308.0000 | 1.0444 | 0.5803 | 0.6505 | 39.19% | 60.48% | DecliningParticipation
+NeutralProcessing_Age3 | 606.8709 | 300.0000 | 1.1532 | 0.5429 | 0.6176 | 45.33% | 54.27% | DecliningParticipation
+NeutralProcessing_Age4 | 658.7402 | 305.0000 | 1.4743 | 0.6137 | 0.7324 | 51.13% | 48.53% | DecliningParticipation
+NeutralProcessing_Age5 | 683.4104 | 344.0000 | 1.4357 | 0.6345 | 0.7528 | 55.43% | 43.98% | DecliningParticipation
+NeutralProcessing_Age6-10 | 666.1498 | 301.5000 | 1.3429 | 0.5836 | 0.7065 | 47.34% | 52.35% | DecliningParticipation
+NeutralProcessing_Age11-20 | 567.8727 | 218.0000 | 1.4823 | 0.5272 | 0.6927 | 46.92% | 52.87% | DecliningParticipation
+NeutralProcessing_Age21+ | 196.7805 | 131.0000 | 1.5113 | 0.2743 | 0.6872 | 52.44% | 47.56% | DecliningParticipation
+
+4. Range Expansion Profile
+Node | RangeExpansionRate | RangeContractionRate | MeanRangeRelativeToPrevious | MeanBodyRelativeToPrevious | MeanTrueRangeRelativeToPrevious
+NeutralProcessing_Age1 | 17.41% | 71.51% | 0.8150 | 0.8195 | 0.8191
+NeutralProcessing_Age2 | 26.28% | 57.61% | 0.9454 | 1.0168 | 0.9513
+NeutralProcessing_Age3 | 28.91% | 52.43% | 0.9800 | 1.1809 | 0.9797
+NeutralProcessing_Age4 | 45.69% | 40.88% | 1.2419 | 1.6980 | 1.2336
+NeutralProcessing_Age5 | 50.63% | 39.04% | 1.3280 | 2.1262 | 1.3188
+NeutralProcessing_Age6-10 | 36.76% | 50.61% | 1.1258 | 1.5313 | 1.1227
+NeutralProcessing_Age11-20 | 36.67% | 45.63% | 1.1844 | 1.5190 | 1.1924
+NeutralProcessing_Age21+ | 33.33% | 45.68% | 1.1821 | 1.1432 | 1.1921
+
+5. Price Efficiency
+Node | MeanEfficiency | MedianEfficiency
+NeutralProcessing_Age1 | 0.4156 | 0.4000
+NeutralProcessing_Age2 | 0.4078 | 0.3750
+NeutralProcessing_Age3 | 0.4027 | 0.3561
+NeutralProcessing_Age4 | 0.4381 | 0.4000
+NeutralProcessing_Age5 | 0.4802 | 0.5000
+NeutralProcessing_Age6-10 | 0.4608 | 0.5000
+NeutralProcessing_Age11-20 | 0.4623 | 0.5000
+NeutralProcessing_Age21+ | 0.5023 | 0.5000
+
+6. Volume Efficiency
+Node | RangeVolumeRatio | VolumeRangeRatio | RangeVsVolumeCorrelation
+NeutralProcessing_Age1 | 0.0004 | 99143886902.1665 | 0.7861
+NeutralProcessing_Age2 | 0.0005 | 102120652110.2096 | 0.7726
+NeutralProcessing_Age3 | 0.0006 | 59821705981.7572 | 0.8197
+NeutralProcessing_Age4 | 0.0006 | 122586103390.8211 | 0.7666
+NeutralProcessing_Age5 | 0.0006 | 10242553376.5082 | 0.7970
+NeutralProcessing_Age6-10 | 0.0006 | 77041351307.8889 | 0.7929
+NeutralProcessing_Age11-20 | 0.0003 | 102297585537.3564 | 0.7127
+NeutralProcessing_Age21+ | 0.0000 | 500001005597.4026 | 0.6136
+
+7. Polarity Structure
+Node | BlackRate | RedRate | PolarityFlipRate | SamePolarityRate
+NeutralProcessing_Age1 | 42.32% | 42.48% | 65.02% | 34.98%
+NeutralProcessing_Age2 | 41.59% | 43.08% | 65.95% | 34.05%
+NeutralProcessing_Age3 | 42.67% | 40.53% | 64.91% | 35.09%
+NeutralProcessing_Age4 | 43.24% | 42.57% | 62.89% | 37.11%
+NeutralProcessing_Age5 | 45.57% | 43.09% | 63.64% | 36.36%
+NeutralProcessing_Age6-10 | 42.69% | 43.64% | 63.70% | 36.30%
+NeutralProcessing_Age11-20 | 44.05% | 37.58% | 66.60% | 33.40%
+NeutralProcessing_Age21+ | 39.02% | 43.90% | 67.07% | 32.93%
+
+8. Excursion Risk
+Node | ExitNeutralWithin1 | ExitNeutralWithin2 | ExitNeutralWithin3 | ExitNeutralWithin5 | ExpectedBarsToExit
+NeutralProcessing_Age1 | 43.37% | 68.73% | 76.60% | 82.65% | 2.9389
+NeutralProcessing_Age2 | 44.78% | 58.68% | 62.37% | 76.63% | 3.4543
+NeutralProcessing_Age3 | 25.17% | 31.85% | 44.52% | 70.49% | 4.4666
+NeutralProcessing_Age4 | 8.93% | 25.85% | 43.44% | 72.42% | 4.6946
+NeutralProcessing_Age5 | 18.58% | 37.89% | 56.69% | 76.66% | 4.0706
+NeutralProcessing_Age6-10 | 26.43% | 46.29% | 60.02% | 76.61% | 3.8659
+NeutralProcessing_Age11-20 | 23.59% | 42.69% | 56.05% | 74.11% | 4.0750
+NeutralProcessing_Age21+ | 21.95% | 37.80% | 52.44% | 68.29% | 4.9878
+
+9. Excursion Destination
+NeutralNode | DestinationFamily | Count | Probability | ReplicationCount
+NeutralProcessing_Age1 | Mixed | 951 | 34.18% | 3
+NeutralProcessing_Age1 | Compression | 901 | 32.39% | 3
+NeutralProcessing_Age2 | Mixed | 653 | 40.14% | 3
+NeutralProcessing_Age1 | Reassertion | 638 | 22.93% | 3
+NeutralProcessing_Age2 | Reassertion | 464 | 28.52% | 3
+NeutralProcessing_Age2 | Compression | 454 | 27.90% | 3
+NeutralProcessing_Age6-10 | Reassertion | 319 | 36.75% | 3
+NeutralProcessing_Age6-10 | Mixed | 315 | 36.29% | 3
+NeutralProcessing_Age1 | Destructive | 265 | 9.53% | 3
+NeutralProcessing_Age3 | Mixed | 213 | 42.18% | 3
+NeutralProcessing_Age3 | Reassertion | 176 | 34.85% | 3
+NeutralProcessing_Age6-10 | Compression | 146 | 16.82% | 3
+NeutralProcessing_Age3 | Compression | 112 | 22.18% | 3
+NeutralProcessing_Age5 | Mixed | 89 | 35.04% | 3
+NeutralProcessing_Age11-20 | Mixed | 87 | 38.50% | 3
+NeutralProcessing_Age11-20 | Reassertion | 69 | 30.53% | 3
+NeutralProcessing_Age5 | Reassertion | 66 | 25.98% | 3
+NeutralProcessing_Age5 | Compression | 61 | 24.02% | 3
+NeutralProcessing_Age6-10 | Exhaustion | 51 | 5.88% | 3
+NeutralProcessing_Age11-20 | Compression | 50 | 22.12% | 3
+NeutralProcessing_Age2 | Destructive | 47 | 2.89% | 3
+NeutralProcessing_Age4 | Mixed | 36 | 26.87% | 2
+NeutralProcessing_Age1 | Constructive | 27 | 0.97% | 3
+NeutralProcessing_Age4 | Compression | 26 | 19.40% | 1
+NeutralProcessing_Age6-10 | Recovery | 26 | 3.00% | 3
+NeutralProcessing_Age4 | Reassertion | 25 | 18.66% | 3
+NeutralProcessing_Age4 | Exhaustion | 24 | 17.91% | 3
+NeutralProcessing_Age4 | Recovery | 21 | 15.67% | 1
+NeutralProcessing_Age5 | Exhaustion | 21 | 8.27% | 2
+NeutralProcessing_Age5 | Recovery | 14 | 5.51% | 1
+NeutralProcessing_Age6-10 | Constructive | 11 | 1.27% | 3
+NeutralProcessing_Age11-20 | Exhaustion | 9 | 3.98% | 3
+NeutralProcessing_Age11-20 | Recovery | 9 | 3.98% | 1
+NeutralProcessing_Age2 | Constructive | 9 | 0.55% | 2
+NeutralProcessing_Age21+ | Mixed | 7 | 38.89% | 1
+NeutralProcessing_Age21+ | Reassertion | 6 | 33.33% | 1
+NeutralProcessing_Age21+ | Compression | 4 | 22.22% | 1
+NeutralProcessing_Age3 | Constructive | 4 | 0.79% | 1
+NeutralProcessing_Age5 | Constructive | 3 | 1.18% | 1
+NeutralProcessing_Age11-20 | Constructive | 2 | 0.88% | 2
+NeutralProcessing_Age4 | Constructive | 2 | 1.49% | 2
+NeutralProcessing_Age21+ | Exhaustion | 1 | 5.56% | 1
+
+10. Lifecycle Evolution
+Transition | DeltaRange | DeltaBody | DeltaTrueRange | DeltaVolume | DeltaEfficiency | DeltaMemory | DeltaEntropy | DeltaExcursionRisk
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 | -0.0486 | -0.0369 | -0.0482 | -92.4335 | -0.0079 | 0.0498 | -0.0345 | -6.02%
+NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 0.1115 | 0.0152 | 0.1114 | -23.6188 | -0.0051 | 0.0846 | -0.3881 | -6.14%
+NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 0.0835 | 0.0624 | 0.0837 | 51.8693 | 0.0355 | 0.0138 | -0.3943 | 1.93%
+NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 0.1956 | 0.2865 | 0.1956 | 24.6702 | 0.0420 | -0.0514 | 0.3070 | 4.25%
+NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 0.0060 | -0.0123 | 0.0060 | -17.2606 | -0.0194 | -0.0929 | 0.4238 | -0.05%
+NeutralProcessing_Age6-10 -> NeutralProcessing_Age11-20 | -0.7096 | -0.3963 | -0.7103 | -98.2772 | 0.0016 | 0.0595 | -0.2228 | -2.50%
+NeutralProcessing_Age11-20 -> NeutralProcessing_Age21+ | -1.1297 | -0.4928 | -1.1297 | -371.0922 | 0.0399 | 0.0410 | -0.1599 | -5.82%
+
+11. Equilibrium Audit
+Node | EquilibriumScore | Components
+NeutralProcessing_Age21+ | 0.7496 | InverseBranchEntropy=0.5739, MemoryStrength=0.7047, InverseExcursionRisk=1.0000, VolumeStability=0.4693, RangeStability=1.0000
+NeutralProcessing_Age4 | 0.7268 | InverseBranchEntropy=1.0000, MemoryStrength=1.0000, InverseExcursionRisk=0.7126, VolumeStability=0.7744, RangeStability=0.1469
+NeutralProcessing_Age5 | 0.5372 | InverseBranchEntropy=0.6242, MemoryStrength=0.6531, InverseExcursionRisk=0.4169, VolumeStability=0.9118, RangeStability=0.0798
+NeutralProcessing_Age3 | 0.4883 | InverseBranchEntropy=0.5173, MemoryStrength=0.9068, InverseExcursionRisk=0.8471, VolumeStability=0.0000, RangeStability=0.1701
+NeutralProcessing_Age11-20 | 0.4192 | InverseBranchEntropy=0.3782, MemoryStrength=0.4284, InverseExcursionRisk=0.5946, VolumeStability=0.5062, RangeStability=0.1888
+NeutralProcessing_Age2 | 0.2455 | InverseBranchEntropy=0.0423, MemoryStrength=0.3363, InverseExcursionRisk=0.4192, VolumeStability=0.2216, RangeStability=0.2080
+NeutralProcessing_Age6-10 | 0.2303 | InverseBranchEntropy=0.1054, MemoryStrength=0.0266, InverseExcursionRisk=0.4204, VolumeStability=0.5992, RangeStability=0.0000
+NeutralProcessing_Age1 | 0.2297 | InverseBranchEntropy=0.0000, MemoryStrength=0.0000, InverseExcursionRisk=0.0000, VolumeStability=1.0000, RangeStability=0.1486
+
+12. Staleness Audit
+Node | StalenessScore | Components
+NeutralProcessing_Age6-10 | 0.4953 | ExcursionRisk=0.5796, EntropyGrowth=1.0000, VolumeDecay=0.4015, RangeDecay=0.0000
+NeutralProcessing_Age2 | 0.4059 | ExcursionRisk=0.5808, EntropyGrowth=0.0000, VolumeDecay=1.0000, RangeDecay=0.0430
+NeutralProcessing_Age5 | 0.3269 | ExcursionRisk=0.5831, EntropyGrowth=0.7244, VolumeDecay=0.0000, RangeDecay=0.0000
+NeutralProcessing_Age11-20 | 0.2883 | ExcursionRisk=0.4054, EntropyGrowth=0.0000, VolumeDecay=0.1195, RangeDecay=0.6281
+NeutralProcessing_Age21+ | 0.2618 | ExcursionRisk=0.0000, EntropyGrowth=0.0000, VolumeDecay=0.0473, RangeDecay=1.0000
+NeutralProcessing_Age1 | 0.2500 | ExcursionRisk=1.0000, EntropyGrowth=0.0000, VolumeDecay=0.0000, RangeDecay=0.0000
+NeutralProcessing_Age3 | 0.1094 | ExcursionRisk=0.1529, EntropyGrowth=0.0000, VolumeDecay=0.2847, RangeDecay=0.0000
+NeutralProcessing_Age4 | 0.0718 | ExcursionRisk=0.2874, EntropyGrowth=0.0000, VolumeDecay=0.0000, RangeDecay=0.0000
+
+13. Gateway Audit
+Node | GatewayScore | Components
+NeutralProcessing_Age1 | 0.8235 | IncomingCount=1.0000, OutgoingCount=0.3333, LowNecessity=1.0000, HighTurnover=0.9605
+NeutralProcessing_Age11-20 | 0.6096 | IncomingCount=0.0370, OutgoingCount=1.0000, LowNecessity=0.9922, HighTurnover=0.4089
+NeutralProcessing_Age2 | 0.5473 | IncomingCount=0.0000, OutgoingCount=0.3333, LowNecessity=0.8560, HighTurnover=1.0000
+NeutralProcessing_Age6-10 | 0.5437 | IncomingCount=0.0370, OutgoingCount=1.0000, LowNecessity=0.6494, HighTurnover=0.4882
+NeutralProcessing_Age21+ | 0.3497 | IncomingCount=0.0370, OutgoingCount=0.0000, LowNecessity=0.9984, HighTurnover=0.3632
+NeutralProcessing_Age3 | 0.3128 | IncomingCount=0.0000, OutgoingCount=0.0000, LowNecessity=0.7979, HighTurnover=0.4531
+NeutralProcessing_Age4 | 0.2388 | IncomingCount=0.0000, OutgoingCount=0.6667, LowNecessity=0.2886, HighTurnover=0.0000
+NeutralProcessing_Age5 | 0.2340 | IncomingCount=0.0000, OutgoingCount=0.6667, LowNecessity=0.0000, HighTurnover=0.2692
+
+14. Market Interpretation
+Node | Interpretation | SupportingEvidence
+NeutralProcessing_Age1 | Gateway | Equilibrium=0.2297, Staleness=0.2500, Gateway=0.8235, Exit5=82.65%, Volume=DecliningParticipation, RangeExpansion=17.41%, Efficiency=0.4156
+NeutralProcessing_Age2 | EarlyStabilization | Equilibrium=0.2455, Staleness=0.4059, Gateway=0.5473, Exit5=76.63%, Volume=DecliningParticipation, RangeExpansion=26.28%, Efficiency=0.4078
+NeutralProcessing_Age3 | HealthyStabilization | Equilibrium=0.4883, Staleness=0.1094, Gateway=0.3128, Exit5=70.49%, Volume=DecliningParticipation, RangeExpansion=28.91%, Efficiency=0.4027
+NeutralProcessing_Age4 | LateEquilibrium | Equilibrium=0.7268, Staleness=0.0718, Gateway=0.2388, Exit5=72.42%, Volume=DecliningParticipation, RangeExpansion=45.69%, Efficiency=0.4381
+NeutralProcessing_Age5 | LateEquilibrium | Equilibrium=0.5372, Staleness=0.3269, Gateway=0.2340, Exit5=76.66%, Volume=DecliningParticipation, RangeExpansion=50.63%, Efficiency=0.4802
+NeutralProcessing_Age6-10 | StaleEquilibrium | Equilibrium=0.2303, Staleness=0.4953, Gateway=0.5437, Exit5=76.61%, Volume=DecliningParticipation, RangeExpansion=36.76%, Efficiency=0.4608
+NeutralProcessing_Age11-20 | LongDrift | Equilibrium=0.4192, Staleness=0.2883, Gateway=0.6096, Exit5=74.11%, Volume=DecliningParticipation, RangeExpansion=36.67%, Efficiency=0.4623
+NeutralProcessing_Age21+ | MaximumEquilibrium | Equilibrium=0.7496, Staleness=0.2618, Gateway=0.3497, Exit5=68.29%, Volume=DecliningParticipation, RangeExpansion=33.33%, Efficiency=0.5023
+
+15. Cross-Instrument Replication
+Node | Interpretation | ReplicationCount
+NeutralProcessing_Age1 | Gateway | 3
+NeutralProcessing_Age2 | EarlyStabilization | 3
+NeutralProcessing_Age3 | HealthyStabilization | 3
+NeutralProcessing_Age4 | LateEquilibrium | 3
+NeutralProcessing_Age5 | LateEquilibrium | 3
+NeutralProcessing_Age6-10 | StaleEquilibrium | 3
+NeutralProcessing_Age11-20 | LongDrift | 3
+NeutralProcessing_Age21+ | MaximumEquilibrium | 1
+
+16. Outcome Diagnostics
+Node | DRFwd1 | DRFwd3 | DRFwd5 | DRFwd10 | ContinuationRate1 | ContinuationRate3 | ContinuationRate5 | ContinuationRate10 | FailureRate5 | FlatRate5
+NeutralProcessing_Age1 | -4.9266 | -4.8971 | -10.0049 | -4.7617 | 43.44% | 46.12% | 46.62% | 48.07% | 48.62% | 4.76%
+NeutralProcessing_Age2 | 0.1948 | -0.0507 | 8.7785 | 17.4634 | 44.73% | 46.16% | 47.56% | 47.46% | 48.70% | 3.74%
+NeutralProcessing_Age3 | 0.0802 | 17.0222 | 17.1590 | 17.1638 | 45.42% | 48.35% | 49.40% | 48.02% | 44.78% | 5.82%
+NeutralProcessing_Age4 | -0.4411 | -0.4509 | -0.3738 | -0.7385 | 41.46% | 46.51% | 47.40% | 49.42% | 47.71% | 4.90%
+NeutralProcessing_Age5 | 0.0644 | -0.2797 | -0.1306 | -0.8586 | 42.08% | 45.00% | 45.00% | 47.56% | 49.46% | 5.53%
+NeutralProcessing_Age6-10 | 0.1890 | -0.1722 | -0.0580 | -0.2379 | 43.01% | 45.89% | 46.28% | 48.61% | 49.59% | 4.13%
+NeutralProcessing_Age11-20 | -0.2355 | -0.5222 | -0.2078 | -0.0327 | 41.18% | 47.44% | 47.19% | 50.00% | 45.91% | 6.91%
+NeutralProcessing_Age21+ | -0.0000 | 0.0000 | -0.0000 | -0.0000 | 42.65% | 44.12% | 45.59% | 50.00% | 48.53% | 5.88%
+
+17. Neutral Lifecycle Recommendation
+Classification: NeutralLifecycleMarketConfirmed
+EquilibriumNode: NeutralProcessing_Age21+
+StaleEquilibriumNode: NeutralProcessing_Age6-10
+GatewayNode: NeutralProcessing_Age1
+ElevatedExcursionRiskNode: NeutralProcessing_Age1
+Study72ConfirmedOrStrengthenedCount: 6
+Reason: Real OHLCV metrics support the lifecycle when gateway, stabilization, equilibrium, staleness, and drift labels align with Study72 buckets.
+
+18. Comparison With Study 72
+Node | Study72Interpretation | Study74Interpretation | Result | Reason
+NeutralProcessing_Age1 | Gateway | Gateway | Confirmed | Study74 OHLCV interpretation matches the Study72 lifecycle bucket.
+NeutralProcessing_Age2 | Gateway | EarlyStabilization | Rejected | Study74 OHLCV interpretation does not match the Study72 lifecycle bucket.
+NeutralProcessing_Age3 | Stabilization | HealthyStabilization | Strengthened | Study74 OHLCV interpretation matches the Study72 lifecycle bucket.
+NeutralProcessing_Age4 | Equilibrium | LateEquilibrium | Confirmed | Study74 OHLCV interpretation matches the Study72 lifecycle bucket.
+NeutralProcessing_Age5 | Equilibrium | LateEquilibrium | Confirmed | Study74 OHLCV interpretation matches the Study72 lifecycle bucket.
+NeutralProcessing_Age6-10 | StaleEquilibrium | StaleEquilibrium | Confirmed | Study74 OHLCV interpretation matches the Study72 lifecycle bucket.
+NeutralProcessing_Age11-20 | LongDrift | LongDrift | Confirmed | Study74 OHLCV interpretation matches the Study72 lifecycle bucket.
+NeutralProcessing_Age21+ | LongDrift | MaximumEquilibrium | Rejected | Study74 OHLCV interpretation does not match the Study72 lifecycle bucket.
+
+19. Low-DoF Audit
+Uses real OHLCV observables.
+No new APVA states.
+No new APVA families.
+No optimization.
+No fitting.
+No machine learning.
+No trading logic.
+
+RESEARCH NOTES
+Mechanical only.
+Main question: Did Study 72 discover a genuine market lifecycle, or merely a graph lifecycle?
+Study 74 answers with real OHLCV behavior from the upgraded shared loader.
+
+Aggregate Cross-Instrument Interpretation Table
+Node | Interpretation_6E | Interpretation_CL | Interpretation_NQ | ReplicationCount
+NeutralProcessing_Age1 | Gateway | Gateway | Gateway | 3
+NeutralProcessing_Age2 | EarlyStabilization | EarlyStabilization | EarlyStabilization | 3
+NeutralProcessing_Age3 | HealthyStabilization | HealthyStabilization | HealthyStabilization | 3
+NeutralProcessing_Age4 | MaximumEquilibrium | LateEquilibrium | MaximumEquilibrium | 1
+NeutralProcessing_Age5 | LateEquilibrium | LateEquilibrium | LateEquilibrium | 3
+NeutralProcessing_Age6-10 | StaleEquilibrium | StaleEquilibrium | StaleEquilibrium | 3
+NeutralProcessing_Age11-20 | LongDrift | PreExcursion | PreExcursion | 1
+NeutralProcessing_Age21+ | LongDrift | MaximumEquilibrium | StaleEquilibrium | 1
+
+AGGREGATE RANKINGS
+
+1. Highest equilibrium nodes
+NeutralProcessing_Age21+ | 0.7496
+NeutralProcessing_Age4 | 0.7268
+NeutralProcessing_Age5 | 0.5372
+NeutralProcessing_Age3 | 0.4883
+NeutralProcessing_Age11-20 | 0.4192
+NeutralProcessing_Age2 | 0.2455
+NeutralProcessing_Age6-10 | 0.2303
+NeutralProcessing_Age1 | 0.2297
+
+2. Highest staleness nodes
+NeutralProcessing_Age6-10 | 0.4953
+NeutralProcessing_Age2 | 0.4059
+NeutralProcessing_Age5 | 0.3269
+NeutralProcessing_Age11-20 | 0.2883
+NeutralProcessing_Age21+ | 0.2618
+NeutralProcessing_Age1 | 0.2500
+NeutralProcessing_Age3 | 0.1094
+NeutralProcessing_Age4 | 0.0718
+
+3. Highest gateway nodes
+NeutralProcessing_Age1 | 0.8235
+NeutralProcessing_Age11-20 | 0.6096
+NeutralProcessing_Age2 | 0.5473
+NeutralProcessing_Age6-10 | 0.5437
+NeutralProcessing_Age21+ | 0.3497
+NeutralProcessing_Age3 | 0.3128
+NeutralProcessing_Age4 | 0.2388
+NeutralProcessing_Age5 | 0.2340
+
+4. Highest real range nodes
+NeutralProcessing_Age6-10 | 1.8394
+NeutralProcessing_Age5 | 1.8334
+NeutralProcessing_Age4 | 1.6378
+NeutralProcessing_Age3 | 1.5543
+NeutralProcessing_Age1 | 1.4914
+NeutralProcessing_Age2 | 1.4428
+NeutralProcessing_Age11-20 | 1.1298
+NeutralProcessing_Age21+ | 0.0002
+
+5. Highest real volume nodes
+NeutralProcessing_Age1 | 722.9231
+NeutralProcessing_Age5 | 683.4104
+NeutralProcessing_Age6-10 | 666.1498
+NeutralProcessing_Age4 | 658.7402
+NeutralProcessing_Age2 | 630.4897
+NeutralProcessing_Age3 | 606.8709
+NeutralProcessing_Age11-20 | 567.8727
+NeutralProcessing_Age21+ | 196.7805
+
+6. Highest efficiency nodes
+NeutralProcessing_Age21+ | 0.5023
+NeutralProcessing_Age5 | 0.4802
+NeutralProcessing_Age11-20 | 0.4623
+NeutralProcessing_Age6-10 | 0.4608
+NeutralProcessing_Age4 | 0.4381
+NeutralProcessing_Age1 | 0.4156
+NeutralProcessing_Age2 | 0.4078
+NeutralProcessing_Age3 | 0.4027
+
+7. Highest excursion-risk nodes
+NeutralProcessing_Age1 | 82.65%
+NeutralProcessing_Age5 | 76.66%
+NeutralProcessing_Age2 | 76.63%
+NeutralProcessing_Age6-10 | 76.61%
+NeutralProcessing_Age11-20 | 74.11%
+NeutralProcessing_Age4 | 72.42%
+NeutralProcessing_Age3 | 70.49%
+NeutralProcessing_Age21+ | 68.29%
+
+8. Study72 comparison
+NeutralProcessing_Age1 | Confirmed
+NeutralProcessing_Age2 | Rejected
+NeutralProcessing_Age3 | Strengthened
+NeutralProcessing_Age4 | Confirmed
+NeutralProcessing_Age5 | Confirmed
+NeutralProcessing_Age6-10 | Confirmed
+NeutralProcessing_Age11-20 | Confirmed
+NeutralProcessing_Age21+ | Rejected
+
+9. Strongest outcome diagnostics
+NeutralProcessing_Age3 | DRFwd5=17.1590 | Continuation5=49.40%
+NeutralProcessing_Age2 | DRFwd5=8.7785 | Continuation5=47.56%
+NeutralProcessing_Age21+ | DRFwd5=-0.0000 | Continuation5=45.59%
+NeutralProcessing_Age6-10 | DRFwd5=-0.0580 | Continuation5=46.28%
+NeutralProcessing_Age5 | DRFwd5=-0.1306 | Continuation5=45.00%
+NeutralProcessing_Age11-20 | DRFwd5=-0.2078 | Continuation5=47.19%
+NeutralProcessing_Age4 | DRFwd5=-0.3738 | Continuation5=47.40%
+NeutralProcessing_Age1 | DRFwd5=-10.0049 | Continuation5=46.62%
+
+10. Recommended Neutral lifecycle model
+Classification: NeutralLifecycleMarketConfirmed
+EquilibriumNode: NeutralProcessing_Age21+
+StaleEquilibriumNode: NeutralProcessing_Age6-10
+GatewayNode: NeutralProcessing_Age1
+ElevatedExcursionRiskNode: NeutralProcessing_Age1
+Study72ConfirmedOrStrengthenedCount: 6
+Reason: Real OHLCV metrics support the lifecycle when gateway, stabilization, equilibrium, staleness, and drift labels align with Study72 buckets.
