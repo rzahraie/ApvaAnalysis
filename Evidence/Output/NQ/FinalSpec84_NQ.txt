@@ -1,0 +1,192 @@
+APVA Final Specification Study v1.0 - NQ
+================================================================================================
+Instrument: NQ
+Input path(s): .\Evidence\NQ\NQ_5 Minute_apva_bar_evidence_v01.csv
+Purpose: Freeze APVA v1.0 framework for NinjaTrader implementation, real-time operation, validation, and future Dynamics research.
+
+1. Executive Summary
+Original goal | Convert APVA from a retrospective StateAge research framework into a compact causal specification suitable for implementation.
+Major discoveries | Neutral is the loop attractor; APVA is best modeled as a diffuse closed loop; destination selection is causal once non-neutral appears; hard NeutralFailure should become a warning overlay.
+Rejected ideas | Large StateAge runtime hierarchy, graph-only model, market-only model, and hard NeutralFailure phase.
+Retained ideas | Six-state loop model, DestinationFamily, selected OHLCV-derived signals, and FailureWarningScore.
+Final architecture | NeutralFormation -> NeutralMaturation -> LateNeutral -> DestinationSelection -> Excursion -> ReturnToNeutral -> NeutralFormation, plus FailureWarningScore 0-6.
+Operational failure threshold | FailureWarningScore >= 3; detection 46.02%, false positives 22.83%, precision 25.12%.
+
+2. Study Conclusions Table
+Study | Question | Result | Confidence | Replication
+74 | Does the Neutral lifecycle map to real OHLCV behavior? | NeutralAsLifecycle: Age1 gateway, Age3 stabilization, Age4/5 equilibrium split, Age6-10 stale equilibrium, Age11+ drift. | Confirmed | ModerateReplication
+75 | What causes Neutral equilibrium to fail? | Neutral failure pressure is mainly range/true-range expansion, with final excursion pressure most associated with volume expansion. | Confirmed | ModerateReplication
+76 | Can destination family be distinguished before excursion? | Destination signatures exist, especially for major families after Neutral_Age6-10 failure. | Partially Confirmed | ModerateReplication
+77 | Are Study 76 destination signatures robust? | Major destination signatures survived robustness testing; sparse destinations remain constrained. | Confirmed | ModerateReplication
+78 | What happens after destination formation? | Destination families have distinct lifecycles; many excursions are brief and return to Neutral. | Confirmed | ModerateReplication
+79 | How is Neutral formed? | Neutral forms from non-neutral collapse/decay/compression pathways, with Mixed and Compression acting as routing regions. | Confirmed | ModerateReplication
+80 | Can APVA be represented as a closed loop? | DiffuseClosedLoop with 99.53% Neutral return completion; phase model outperformed full StateAge for next-phase prediction. | Confirmed | StrongReplication
+81 | What is the smallest useful signal set? | PracticalMinimalSet; state plus selected market observables retained most useful structure; graph-only and market-only were insufficient. | Confirmed | StrongReplication
+82 | Can APVA be represented causally in real time? | PracticalRealTimeMachine; destination detection is causal and strong, but hard NeutralFailure phase is weak. | Partially Confirmed | ModerateReplication
+83 | Can causal NeutralFailure timing improve? | WarningOverlayPreferred; NeutralFailure should be an overlay score rather than a hard phase. | Confirmed | ModerateReplication
+
+3. Final State Table
+State | Purpose | Entry | Exit | AllowedTransitions
+NeutralFormation | Initialize or reset the loop at NeutralProcessing_Age1. | Current StructuralState=NeutralProcessing and AgeBucket=1. | Age advances to NeutralMaturation or data ends. | NeutralMaturation
+NeutralMaturation | Track early neutral stabilization. | NeutralProcessing Age2-Age4 after formation. | Age enters LateNeutral or non-neutral state appears. | LateNeutral, DestinationSelection
+LateNeutral | Represent mature, stale, or long neutral equilibrium. | NeutralProcessing Age5, Age6-10, Age11-20, or Age21+. | Non-neutral state appears; FailureWarningScore may indicate pressure before exit. | DestinationSelection, NeutralMaturation
+DestinationSelection | Classify the first non-neutral family after Neutral. | First non-neutral bar after neutral context. | Subsequent non-neutral continuation or immediate return routing. | Excursion, ReturnToNeutral, NeutralFormation
+Excursion | Track non-neutral continuation after destination formation. | Non-neutral state after DestinationSelection. | DecayToNeutral, NeutralProcessing_Age1, or terminal data. | ReturnToNeutral, NeutralFormation, Excursion
+ReturnToNeutral | Represent final non-neutral routing before Neutral reset. | DecayToNeutral or final non-neutral context before NeutralProcessing_Age1. | NeutralProcessing_Age1 appears. | NeutralFormation
+
+4. Transition Matrix
+FromState | ToState | Count | Probability | ReplicationCount
+NeutralFormation | NeutralMaturation | 113 | 61.75% | 1
+DestinationSelection | Excursion | 100 | 54.64% | 1
+Excursion | NeutralFormation | 74 | 74.00% | 1
+NeutralFormation | DestinationSelection | 70 | 38.25% | 1
+DestinationSelection | NeutralFormation | 68 | 37.16% | 1
+NeutralMaturation | DestinationSelection | 55 | 48.67% | 1
+LateNeutral | DestinationSelection | 42 | 51.22% | 1
+ReturnToNeutral | NeutralFormation | 41 | 100.00% | 1
+Excursion | ReturnToNeutral | 26 | 26.00% | 1
+NeutralMaturation | LateNeutral | 22 | 19.47% | 1
+DestinationSelection | ReturnToNeutral | 15 | 8.20% | 1
+
+5. Failure Logic Table
+Component | Rule | ScoreContribution
+RangePressure | RangeRelativeToPrevious > 1 or TrueRangeRelativeToPrevious > 1 | 1
+BodyPressure | BodyRelativeToPrevious > 1 | 1
+VolumePressure | VolumeRelativeToRollingMean > 1 or VolumeRelativeToPrevious > 1 | 1
+EfficiencyPressure | EfficiencyRatio increasing vs prior bar or EfficiencyRatio >= 0.60 | 1
+CloseExtremePressure | CloseLocation <= 0.20 or CloseLocation >= 0.80 | 1
+PolarityInstability | VolumePolarity differs from prior bar | 1
+Threshold | DetectionRate | FalsePositiveRate | Precision | Recall
+>=3 | 46.02% | 22.83% | 25.12% | 46.02%
+
+6. Core Signal Table
+Signal | Class | Reason
+LoopPhase | CoreSignal | Primary compact representation of closed-loop position.
+DestinationFamily | Support/Core operational | Known causally once non-neutral state appears; required for excursion interpretation.
+BodyRelativeToPrevious | SupportSignal | Captures directional body expansion/collapse.
+VolumeRelativeToRollingMean | SupportSignal | Captures participation versus recent baseline.
+VolumeRelativeToPrevious | SupportSignal | Captures immediate participation change.
+EfficiencyRatio | CoreSignal | Directional efficiency; removal caused material loss in Study 81.
+CloseLocation | CoreSignal | Intrabar close pressure; removal caused material loss in Study 81.
+
+7. Support Signal Table
+Signal | Reason
+RangeRelativeToPrevious | Useful in failure pressure despite low standalone ablation necessity.
+VolumeRelativeToSessionMean | Useful participation context versus session baseline.
+
+8. Rejected Signal Table
+Signal | Reason
+MemoryStrength | Redundant in Study 81; graph-only model weak.
+BranchEntropy | Redundant in Study 81; graph-only model weak.
+FormationSourceFamily | Redundant for minimal signal set.
+MaxNeutralAgeReached | Future/completed-loop hindsight; not allowed in causal implementation.
+TrueRangeRelativeToPrevious | Useful diagnostically but redundant in final minimal set.
+
+9. Real-Time Performance Table
+Scope | Top1Agreement | Top2Agreement | DestinationAccuracy | FailureThreshold | FailureDetection | FailureFalsePositive | FailurePrecision
+NQ | 68.90% | 89.73% | 100.00% | >=3 | 46.02% | 22.83% | 25.12%
+
+10. Replication Table
+Area | 6E | CL | NQ | Classification
+State machine | 0.00% | 0.00% | 68.90% | StrongReplication
+Failure logic | 0.00% | 0.00% | 46.02% | ModerateReplication
+Destination detection | 0.00% | 0.00% | 100.00% | StrongReplication
+
+11. Final Loop Model Table
+Loop | Classification | Evidence
+NeutralFormation -> NeutralMaturation -> LateNeutral -> DestinationSelection -> Excursion -> ReturnToNeutral -> NeutralFormation | DiffuseClosedLoop | Study 80 completion rate 99.53%; high path entropy prevents StableClosedLoop.
+
+12. Rejected Concepts Table
+Concept | ReasonRemoved | Evidence
+GraphFamily importance | Removed as core implementation driver. | Graph-only Top1 was 47.59% and MemoryStrength/BranchEntropy were redundant.
+NeutralFailure hard phase | Removed from final state list. | Study 82 detection was 25.53%; Study 83 improved timing as overlay.
+Large StateAge hierarchy | Compressed away from final runtime state machine. | MinimalLoopPhase Top1 exceeded FullStateAge in Study 80.
+Market-only model | Rejected as complete representation. | MarketOnly Top1 was 40.26% in Study 81.
+Graph-only model | Rejected as complete representation. | GraphOnly Top1 was 47.59% in Study 81.
+
+13. Retained Concepts Table
+Concept | ReasonRetained
+Neutral attractor | Neutral return completion was 99.53% in Study 80.
+LoopPhase | Best compact causal backbone.
+Destination families | Causally known at first non-neutral bar and robustly useful.
+Failure pressure | Retained as FailureWarningScore overlay.
+Excursion lifecycle | Studies 78-79 closed destination-to-return behavior.
+State structure | State-only and state-market hybrid representations retained meaningful structure.
+
+14. Implementation Module Table
+Module | Responsibility
+State Classifier | Read APVA StructuralState/AgeBucket/StateAgeNode from live bars.
+Loop Phase Engine | Maintain final six-state loop phase machine causally.
+Destination Detector | Set DestinationFamily when first non-neutral state appears.
+Failure Warning Engine | Compute FailureWarningScore 0-6 and threshold overlay.
+State Machine Manager | Apply transition rules, persist current phase, and emit diagnostics.
+Export / Diagnostics | Write replay-safe state, warning, destination, and transition records.
+
+15. Data Structure Table
+Structure | Fields
+StateRecord | Timestamp, Instrument, StructuralState, AgeBucket, StateAgeNode, PreviousStateAgeNode.
+PhaseRecord | Timestamp, LoopPhase, PreviousLoopPhase, EntryReason, ExitReason.
+TransitionRecord | FromState, ToState, Count, Probability, Instrument.
+WarningRecord | FailureWarningScore, RangePressure, BodyPressure, VolumePressure, EfficiencyPressure, CloseExtremePressure, PolarityInstability.
+DestinationRecord | DestinationFamily, FirstDestinationNode, PriorNeutralAge, DetectionTimestamp.
+
+16. Testing Protocol Table
+TestClass | AcceptanceCriteria
+Unit tests | Each state entry/exit rule and warning component must pass fixed examples.
+Transition tests | Allowed transition matrix must reject impossible phase jumps.
+Replay tests | Historical replay must match causal Study 82/83 outputs within expected tolerances.
+Cross-instrument tests | 6E, CL, and NQ reports must all generate and preserve replication class.
+Failure-warning tests | FailureWarningScore threshold >=3 must reproduce timing metrics from Study 83.
+Real-time tests | No NextNode, future state, or completed-loop information may be accessed.
+
+17. Known Limitations Table
+Limitation | Detail
+No DOM data | APVA v1.0 uses bar evidence only.
+No historical order book | No depth reconstruction is included.
+No delta | VolumePolarity is available, but true bid/ask delta is absent.
+No options flow | External derivative flow is not used.
+No external market structure | Framework is self-contained in APVA state/OHLCV evidence.
+Diffuse loop behavior | Study 80 classified the loop as DiffuseClosedLoop, not StableClosedLoop.
+Failure detection limitations | Warning overlay improves hard phase detection but remains noisy.
+
+18. Future Research Table
+Branch | QuestionOrStatus
+State Machine Research | Complete for APVA v1.0 implementation handoff.
+APVA Dynamics | What creates failure pressure?
+APVA Dynamics | Is Neutral an attractor in a deeper dynamical sense?
+APVA Dynamics | What is loop tension?
+APVA Dynamics | What generates destination selection?
+APVA Dynamics | What quantity, if any, is conserved through the loop?
+
+19. Final Recommendation Table
+ResearchConclusion | ImplementationRecommendation | DynamicsRecommendation | Reason
+ResearchSuccess | PrototypeOnly | Recommended | Framework is coherent but needs validation before production use.
+
+20. Low-DoF Audit
+No new states introduced.
+No new families introduced.
+No machine learning.
+No optimization.
+No fitting.
+No trading rules.
+No forward returns used in state definitions.
+
+RANKINGS
+1. Most important discoveries: Neutral attractor; DiffuseClosedLoop; causal destination detection; warning overlay failure logic; minimal signal set.
+2. Strongest replicated findings: Neutral loop closure; destination detection; practical real-time state machine.
+3. Most valuable retained signals: LoopPhase; DestinationFamily; EfficiencyRatio; CloseLocation; BodyRelativeToPrevious; VolumeRelativeToRollingMean.
+4. Most important rejected concepts: hard NeutralFailure phase; graph-only model; market-only model; full StateAge runtime hierarchy.
+5. Highest-confidence conclusions: Neutral is central; final model is causal; failure pressure must be overlayed.
+6. Biggest surprises: MinimalLoopPhase beat FullStateAge; graph signals were redundant; destination accuracy was 100% once non-neutral appeared.
+7. Largest simplifications: 40+ StateAge nodes reduced to six operational phases plus one warning score.
+8. Most important implementation priorities: causal state classifier; warning engine; replay diagnostics; no-lookahead tests.
+9. Highest-priority future research questions: loop tension; source of failure pressure; attractor dynamics; destination generation.
+10. Final APVA v1.0 summary: implement and validate a six-state real-time loop machine with FailureWarningScore overlay.
+
+RESEARCH NOTES
+This is the final APVA v1.0 consolidation study.
+No discovery.
+No expansion.
+Freeze the framework.
+Create the implementation handoff.
+Create the bridge to future APVA Dynamics work.
