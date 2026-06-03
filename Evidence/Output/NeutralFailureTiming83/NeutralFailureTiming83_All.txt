@@ -1,0 +1,357 @@
+APVA Neutral Failure Timing Study v0.1 - Aggregate
+================================================================================================
+Instrument: ALL
+Input path(s): .\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_20260531_apva_bar_evidence_v01.csv; .\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv; .\Evidence\NQ\NQ_5 Minute_apva_bar_evidence_v01.csv
+ReferenceFailureCount: 2331
+StableControlCount: 16494
+Purpose: Test causal NeutralFailure timing as a warning score overlay.
+
+1. Reference Failure Inventory
+FailureNode | Count | Count_6E | Count_CL | Count_NQ | Probability
+NeutralProcessing_Age2 | 1051 | 931 | 80 | 40 | 45.09%
+NeutralProcessing_Age6-10 | 586 | 507 | 40 | 39 | 25.14%
+NeutralProcessing_Age3 | 276 | 242 | 19 | 15 | 11.84%
+NeutralProcessing_Age5 | 166 | 145 | 14 | 7 | 7.12%
+NeutralProcessing_Age11-20 | 141 | 126 | 5 | 10 | 6.05%
+NeutralProcessing_Age4 | 100 | 90 | 8 | 2 | 4.29%
+NeutralProcessing_Age21+ | 11 | 11 | 0 | 0 | 0.47%
+
+2. Warning Window Signal Table
+FailureNode | AgeBucket | Horizon | Signal | FailureMean | ControlMean | EffectSize | ReplicationCount
+AllFailureNodes | 21+ | t-3 | EfficiencyRatio | 0.6377 | 0.3859 | 0.8633 | 1
+AllFailureNodes | 4 | t-0 | RangeRelativeToPrevious | 2.0152 | 1.1779 | 0.7929 | 2
+AllFailureNodes | 4 | t-0 | TrueRangeRelativeToPrevious | 1.9820 | 1.1698 | 0.7643 | 2
+AllFailureNodes | 3 | t-3 | RangeRelativeToPrevious | 1.7863 | 1.1265 | 0.7473 | 3
+AllFailureNodes | 3 | t-3 | TrueRangeRelativeToPrevious | 1.7540 | 1.1112 | 0.7472 | 3
+AllFailureNodes | 4 | t-0 | EfficiencyRatio | 0.6108 | 0.4111 | 0.7384 | 3
+AllFailureNodes | 21+ | t-1 | VolumeRelativeToRollingMean | 0.7412 | 0.4439 | 0.6900 | 1
+AllFailureNodes | 4 | t-0 | VolumeRelativeToRollingMean | 1.3010 | 0.6572 | 0.6736 | 2
+AllFailureNodes | 21+ | t-3 | BodyRelativeToPrevious | 2.2257 | 1.1000 | 0.6682 | 1
+AllFailureNodes | 21+ | t-3 | PolarityFlipFlag | 0.3636 | 0.6667 | -0.6363 | 1
+AllFailureNodes | 21+ | t-2 | TrueRangeRelativeToPrevious | 0.7782 | 1.1165 | -0.6112 | 1
+AllFailureNodes | 21+ | t-3 | TrueRangeRelativeToPrevious | 1.7424 | 1.1548 | 0.6044 | 1
+AllFailureNodes | 21+ | t-5 | BodyRelativeToPrevious | 0.5104 | 1.1979 | -0.6043 | 1
+AllFailureNodes | 4 | t-0 | BodyRelativeToPrevious | 3.7339 | 1.5005 | 0.5835 | 2
+AllFailureNodes | 21+ | t-2 | BodyRelativeToPrevious | 0.6783 | 1.2474 | -0.5406 | 1
+AllFailureNodes | 3 | t-3 | BodyRelativeToPrevious | 2.8010 | 1.4177 | 0.5141 | 2
+AllFailureNodes | 21+ | t-0 | VolumeRelativeToRollingMean | 0.8045 | 0.4881 | 0.5096 | 1
+AllFailureNodes | 21+ | t-5 | VolumeRelativeToPrevious | 0.8728 | 1.2846 | -0.4842 | 1
+AllFailureNodes | 21+ | t-1 | VolumeRelativeToSessionMean | 0.3321 | 0.2149 | 0.4818 | 1
+AllFailureNodes | 21+ | t-5 | RangeRelativeToPrevious | 0.8699 | 1.1212 | -0.4722 | 1
+AllFailureNodes | 4 | t-0 | VolumeRelativeToSessionMean | 0.9253 | 0.5780 | 0.4665 | 2
+AllFailureNodes | 21+ | t-5 | EfficiencyRatio | 0.2673 | 0.4167 | -0.4482 | 1
+AllFailureNodes | 21+ | t-0 | VolumeRelativeToSessionMean | 0.3330 | 0.2180 | 0.4391 | 1
+AllFailureNodes | 21+ | t-2 | RangeRelativeToPrevious | 0.8740 | 1.1141 | -0.4382 | 1
+AllFailureNodes | 4 | t-0 | VolumeRelativeToPrevious | 2.1893 | 1.3286 | 0.4303 | 2
+AllFailureNodes | 5 | t-0 | VolumeRelativeToRollingMean | 0.9151 | 0.6763 | 0.4260 | 3
+AllFailureNodes | 21+ | t-0 | BodyRelativeToPrevious | 0.7208 | 1.1887 | -0.4204 | 1
+AllFailureNodes | 3 | t-3 | VolumeRelativeToPrevious | 1.9080 | 1.2460 | 0.4133 | 3
+AllFailureNodes | 21+ | t-3 | RangeRelativeToPrevious | 1.5606 | 1.1520 | 0.4114 | 1
+AllFailureNodes | 3 | t-2 | TrueRangeRelativeToPrevious | 0.7542 | 0.8977 | -0.4057 | 3
+AllFailureNodes | 3 | t-2 | RangeRelativeToPrevious | 0.7540 | 0.8987 | -0.4046 | 3
+AllFailureNodes | 4 | t-0 | PolarityFlipFlag | 0.4600 | 0.6443 | -0.3771 | 3
+AllFailureNodes | 11-20 | t-5 | EfficiencyRatio | 0.3737 | 0.4873 | -0.3735 | 1
+AllFailureNodes | 4 | t-5 | RangeRelativeToPrevious | 1.6701 | 1.3473 | 0.3681 | 3
+AllFailureNodes | 4 | t-5 | EfficiencyRatio | 0.6301 | 0.5299 | 0.3653 | 2
+AllFailureNodes | 4 | t-5 | VolumeRelativeToRollingMean | 1.4012 | 1.0522 | 0.3615 | 3
+AllFailureNodes | 3 | t-3 | EfficiencyRatio | 0.5978 | 0.4999 | 0.3503 | 1
+AllFailureNodes | 5 | t-1 | EfficiencyRatio | 0.5056 | 0.4013 | 0.3476 | 3
+AllFailureNodes | 21+ | t-3 | CloseLocation | 0.6136 | 0.5139 | 0.3215 | 1
+AllFailureNodes | 5 | t-1 | TrueRangeRelativeToPrevious | 1.4908 | 1.1473 | 0.3190 | 2
+AllFailureNodes | 21+ | t-5 | VolumeRelativeToSessionMean | 0.2558 | 0.3396 | -0.3187 | 1
+AllFailureNodes | 5 | t-5 | VolumeRelativeToPrevious | 0.9067 | 1.1818 | -0.3157 | 2
+AllFailureNodes | 5 | t-0 | VolumeRelativeToSessionMean | 0.7821 | 0.5919 | 0.3124 | 2
+AllFailureNodes | 3 | t-3 | VolumeRelativeToRollingMean | 1.2098 | 0.9291 | 0.3114 | 2
+AllFailureNodes | 21+ | t-2 | VolumeRelativeToRollingMean | 0.5430 | 0.4240 | 0.3095 | 1
+AllFailureNodes | 21+ | t-0 | TrueRangeRelativeToPrevious | 0.9530 | 1.1436 | -0.3093 | 1
+AllFailureNodes | 4 | t-5 | TrueRangeRelativeToPrevious | 1.6116 | 1.3548 | 0.3093 | 3
+AllFailureNodes | 5 | t-1 | RangeRelativeToPrevious | 1.4894 | 1.1561 | 0.3070 | 2
+AllFailureNodes | 4 | t-1 | TrueRangeRelativeToPrevious | 0.8906 | 1.0207 | -0.3065 | 3
+AllFailureNodes | 21+ | t-5 | TrueRangeRelativeToPrevious | 0.9518 | 1.1288 | -0.3033 | 1
+AllFailureNodes | 6-10 | t-0 | VolumeRelativeToRollingMean | 0.8426 | 0.6433 | 0.2998 | 3
+AllFailureNodes | 4 | t-1 | RangeRelativeToPrevious | 0.8948 | 1.0265 | -0.2993 | 3
+AllFailureNodes | 21+ | t-0 | RangeRelativeToPrevious | 0.9530 | 1.1348 | -0.2988 | 1
+AllFailureNodes | 5 | t-1 | BodyRelativeToPrevious | 2.4805 | 1.4088 | 0.2977 | 2
+AllFailureNodes | 21+ | t-2 | VolumeRelativeToSessionMean | 0.3132 | 0.2258 | 0.2907 | 1
+AllFailureNodes | 21+ | t-1 | BodyRelativeToPrevious | 1.6000 | 1.1856 | 0.2885 | 1
+AllFailureNodes | 11-20 | t-3 | PolarityFlipFlag | 0.5887 | 0.7171 | -0.2724 | 2
+AllFailureNodes | 4 | t-3 | EfficiencyRatio | 0.3510 | 0.4220 | -0.2662 | 2
+AllFailureNodes | 21+ | t-1 | RangeRelativeToPrevious | 1.2916 | 1.1057 | 0.2601 | 1
+AllFailureNodes | 21+ | t-5 | VolumeRelativeToRollingMean | 0.4188 | 0.5226 | -0.2598 | 1
+AllFailureNodes | 3 | t-0 | RangeRelativeToPrevious | 0.9037 | 1.0194 | -0.2583 | 2
+AllFailureNodes | 21+ | t-1 | EfficiencyRatio | 0.5485 | 0.4590 | 0.2464 | 0
+AllFailureNodes | 6-10 | t-0 | VolumeRelativeToSessionMean | 0.6889 | 0.5386 | 0.2434 | 2
+AllFailureNodes | 3 | t-0 | TrueRangeRelativeToPrevious | 0.9079 | 1.0132 | -0.2429 | 1
+AllFailureNodes | All | t-3 | TrueRangeRelativeToPrevious | 1.3192 | 1.1317 | 0.2415 | 1
+AllFailureNodes | 3 | t-2 | BodyRelativeToPrevious | 0.6777 | 0.8977 | -0.2405 | 2
+AllFailureNodes | 3 | t-5 | VolumeRelativeToRollingMean | 0.8041 | 1.0069 | -0.2403 | 2
+AllFailureNodes | 11-20 | t-2 | BodyRelativeToPrevious | 2.5067 | 1.1866 | 0.2375 | 2
+AllFailureNodes | 21+ | t-2 | EfficiencyRatio | 0.4994 | 0.4265 | 0.2305 | 0
+AllFailureNodes | 6-10 | t-1 | VolumeRelativeToRollingMean | 0.7589 | 0.6332 | 0.2284 | 1
+AllFailureNodes | All | t-3 | RangeRelativeToPrevious | 1.3205 | 1.1390 | 0.2280 | 1
+AllFailureNodes | 2 | t-0 | RangeRelativeToPrevious | 0.8957 | 0.9958 | -0.2193 | 1
+AllFailureNodes | 2 | t-0 | TrueRangeRelativeToPrevious | 0.9043 | 1.0014 | -0.2185 | 1
+AllFailureNodes | 5 | t-5 | CloseLocation | 0.5515 | 0.4783 | 0.2180 | 1
+AllFailureNodes | 4 | t-3 | VolumeRelativeToRollingMean | 0.8216 | 0.7007 | 0.2169 | 2
+AllFailureNodes | 5 | t-5 | PolarityFlipFlag | 0.6928 | 0.5909 | 0.2137 | 1
+AllFailureNodes | 5 | t-0 | EfficiencyRatio | 0.5178 | 0.4543 | 0.2096 | 1
+AllFailureNodes | 4 | t-5 | BodyRelativeToPrevious | 2.6886 | 2.1351 | 0.2080 | 2
+AllFailureNodes | 3 | t-3 | VolumeRelativeToSessionMean | 1.0217 | 0.8292 | 0.2078 | 1
+AllFailureNodes | 4 | t-5 | VolumeRelativeToPrevious | 1.7058 | 1.4204 | 0.2072 | 1
+AllFailureNodes | 21+ | t-1 | TrueRangeRelativeToPrevious | 1.2760 | 1.1250 | 0.2066 | 0
+AllFailureNodes | 11-20 | t-5 | PolarityFlipFlag | 0.6170 | 0.7134 | -0.2053 | 0
+AllFailureNodes | 3 | t-5 | RangeRelativeToPrevious | 0.8303 | 0.9277 | -0.2036 | 0
+AllFailureNodes | 3 | t-5 | TrueRangeRelativeToPrevious | 0.8346 | 0.9342 | -0.2027 | 0
+AllFailureNodes | 5 | t-5 | BodyRelativeToPrevious | 1.1214 | 1.5482 | -0.1966 | 1
+AllFailureNodes | 5 | t-1 | VolumeRelativeToSessionMean | 0.7794 | 0.5595 | 0.1924 | 1
+AllFailureNodes | 6-10 | t-1 | BodyRelativeToPrevious | 2.1634 | 1.4395 | 0.1903 | 2
+AllFailureNodes | All | t-2 | VolumeRelativeToRollingMean | 0.8368 | 0.7007 | 0.1892 | 1
+AllFailureNodes | All | t-0 | VolumeRelativeToRollingMean | 0.7609 | 0.6418 | 0.1887 | 0
+AllFailureNodes | 21+ | t-2 | PolarityFlipFlag | 0.5455 | 0.6364 | -0.1857 | 0
+AllFailureNodes | 11-20 | t-2 | CloseLocation | 0.5564 | 0.4930 | 0.1847 | 1
+AllFailureNodes | 4 | t-3 | TrueRangeRelativeToPrevious | 0.9691 | 0.8966 | 0.1832 | 0
+AllFailureNodes | All | t-3 | BodyRelativeToPrevious | 2.0049 | 1.4414 | 0.1818 | 1
+AllFailureNodes | 6-10 | t-1 | VolumeRelativeToSessionMean | 0.6393 | 0.5396 | 0.1815 | 2
+AllFailureNodes | 4 | t-3 | RangeRelativeToPrevious | 0.9670 | 0.8952 | 0.1797 | 0
+AllFailureNodes | 2 | t-2 | TrueRangeRelativeToPrevious | 1.2051 | 1.0773 | 0.1794 | 2
+AllFailureNodes | 5 | t-1 | VolumeRelativeToRollingMean | 1.0166 | 0.6278 | 0.1791 | 2
+AllFailureNodes | 2 | t-2 | RangeRelativeToPrevious | 1.2227 | 1.0896 | 0.1775 | 2
+AllFailureNodes | 5 | t-1 | VolumeRelativeToPrevious | 2.1788 | 1.2648 | 0.1751 | 2
+AllFailureNodes | 4 | t-3 | VolumeRelativeToPrevious | 1.0490 | 0.9308 | 0.1711 | 0
+AllFailureNodes | 5 | t-3 | VolumeRelativeToRollingMean | 0.6848 | 0.6006 | 0.1704 | 2
+AllFailureNodes | 6-10 | t-1 | RangeRelativeToPrevious | 1.2737 | 1.1415 | 0.1665 | 2
+AllFailureNodes | 5 | t-2 | VolumeRelativeToRollingMean | 0.6672 | 0.5907 | 0.1661 | 0
+AllFailureNodes | 3 | t-2 | VolumeRelativeToRollingMean | 0.8043 | 0.7044 | 0.1658 | 1
+AllFailureNodes | 5 | t-3 | VolumeRelativeToPrevious | 1.1421 | 1.0104 | 0.1650 | 0
+AllFailureNodes | 11-20 | t-1 | VolumeRelativeToRollingMean | 0.7765 | 0.6464 | 0.1623 | 2
+AllFailureNodes | 3 | t-5 | BodyRelativeToPrevious | 0.8239 | 1.1434 | -0.1621 | 0
+AllFailureNodes | 11-20 | t-1 | VolumeRelativeToPrevious | 1.6513 | 1.3269 | 0.1606 | 1
+AllFailureNodes | 3 | t-5 | VolumeRelativeToSessionMean | 0.7237 | 0.8680 | -0.1597 | 2
+AllFailureNodes | 6-10 | t-1 | TrueRangeRelativeToPrevious | 1.2507 | 1.1342 | 0.1579 | 2
+AllFailureNodes | 3 | t-5 | PolarityFlipFlag | 0.6449 | 0.5688 | 0.1563 | 0
+AllFailureNodes | 4 | t-5 | CloseLocation | 0.5283 | 0.4739 | 0.1552 | 2
+AllFailureNodes | 11-20 | t-1 | BodyRelativeToPrevious | 1.9973 | 1.2943 | 0.1542 | 1
+AllFailureNodes | 11-20 | t-2 | PolarityFlipFlag | 0.6312 | 0.7034 | -0.1537 | 0
+AllFailureNodes | 4 | t-1 | PolarityFlipFlag | 0.7000 | 0.6280 | 0.1530 | 0
+AllFailureNodes | 11-20 | t-2 | RangeRelativeToPrevious | 1.3106 | 1.1193 | 0.1523 | 2
+AllFailureNodes | 21+ | t-0 | CloseLocation | 0.5561 | 0.5031 | 0.1522 | 0
+AllFailureNodes | 3 | t-2 | VolumeRelativeToPrevious | 0.8384 | 0.9292 | -0.1519 | 2
+AllFailureNodes | 11-20 | t-5 | CloseLocation | 0.4426 | 0.4926 | -0.1497 | 1
+AllFailureNodes | 2 | t-0 | BodyRelativeToPrevious | 0.9269 | 1.0970 | -0.1492 | 1
+
+3. Warning Score Distribution
+Score | FailureCount | ControlCount | FailurePercent | ControlPercent
+0 | 132 | 99 | 5.66% | 4.78%
+1 | 400 | 324 | 17.16% | 15.65%
+2 | 547 | 489 | 23.47% | 23.62%
+3 | 567 | 563 | 24.32% | 27.20%
+4 | 375 | 366 | 16.09% | 17.68%
+5 | 236 | 178 | 10.12% | 8.60%
+6 | 74 | 51 | 3.17% | 2.46%
+
+4. Threshold Performance Table
+Threshold | DetectionAtFailure | EarlyDetection1 | EarlyDetection2 | EarlyDetection3 | FalsePositiveRate | Precision | Recall
+>=1 | 94.34% | 99.91% | 100.00% | 100.00% | 40.24% | 29.87% | 94.34%
+>=2 | 77.18% | 97.04% | 99.74% | 100.00% | 33.75% | 29.35% | 77.18%
+>=3 | 53.71% | 82.20% | 94.29% | 99.27% | 23.84% | 29.04% | 53.71%
+>=4 | 29.39% | 52.72% | 72.16% | 89.62% | 12.74% | 29.53% | 29.39%
+
+5. Warning Score by Neutral Age Table
+AgeBucket | Threshold | DetectionRate | FalsePositiveRate | Precision | Recall
+2 | >=1 | 93.53% | 62.81% | 30.11% | 93.53%
+2 | >=2 | 75.64% | 51.58% | 29.79% | 75.64%
+2 | >=3 | 49.86% | 35.04% | 29.16% | 49.86%
+2 | >=4 | 21.98% | 15.85% | 28.62% | 21.98%
+3 | >=1 | 95.65% | 80.51% | 14.05% | 95.65%
+3 | >=2 | 75.36% | 67.95% | 13.24% | 75.36%
+3 | >=3 | 50.36% | 47.21% | 12.80% | 50.36%
+3 | >=4 | 21.74% | 23.18% | 11.43% | 21.74%
+4 | >=1 | 100.00% | 90.07% | 6.89% | 100.00%
+4 | >=2 | 99.00% | 76.62% | 7.93% | 99.00%
+4 | >=3 | 91.00% | 54.50% | 10.01% | 91.00%
+4 | >=4 | 75.00% | 31.45% | 13.71% | 75.00%
+5 | >=1 | 95.18% | 85.59% | 11.90% | 95.18%
+5 | >=2 | 82.53% | 75.05% | 11.78% | 82.53%
+5 | >=3 | 64.46% | 57.35% | 12.01% | 64.46%
+5 | >=4 | 48.80% | 37.97% | 13.50% | 48.80%
+6-10 | >=1 | 93.69% | 55.94% | 23.01% | 93.69%
+6-10 | >=2 | 75.26% | 46.59% | 22.37% | 75.26%
+6-10 | >=3 | 52.73% | 32.86% | 22.26% | 52.73%
+6-10 | >=4 | 30.55% | 19.37% | 21.96% | 30.55%
+11-20 | >=1 | 95.74% | 49.06% | 22.31% | 95.74%
+11-20 | >=2 | 78.01% | 41.23% | 21.78% | 78.01%
+11-20 | >=3 | 54.61% | 29.85% | 21.21% | 54.61%
+11-20 | >=4 | 39.72% | 16.91% | 25.69% | 39.72%
+21+ | >=1 | 90.91% | 54.88% | 18.18% | 90.91%
+21+ | >=2 | 81.82% | 48.78% | 18.37% | 81.82%
+21+ | >=3 | 45.45% | 37.80% | 13.89% | 45.45%
+21+ | >=4 | 27.27% | 20.73% | 15.00% | 27.27%
+
+6. Hard vs Warning Table
+Method | DetectionRate | FalsePositiveRate | Precision | Recall | PhaseAgreement
+HardNeutralFailurePhase | 25.53% | 2.41% | 49.54% | 25.53% | 66.12%
+FailureWarningScore>=3 | 53.71% | 23.84% | 29.04% | 53.71% | 66.12%
+
+7. Destination Conditioning Table
+DestinationFamily | MeanWarningScore | DetectionRate | TopSignal
+CompressionProcessing | 2.8187 | 58.50% | VolumeRelativeToRollingMean
+MixedStructure | 2.5756 | 51.00% | VolumeRelativeToRollingMean
+ReassertionProcessing | 2.4766 | 46.56% | VolumeRelativeToRollingMean
+RecoveryResolution | 4.5600 | 92.00% | VolumeRelativeToRollingMean
+ExhaustionPersistence | 4.4730 | 91.89% | VolumeRelativeToRollingMean
+ConstructiveEmergence | 3.4800 | 76.00% | VolumeRelativeToRollingMean
+DestructiveRotation | 2.3333 | 42.86% | VolumeRelativeToRollingMean
+DecayToNeutral | 0.0000 | 0.00% | N/A
+
+8. False Positive Anatomy Table
+AgeBucket | SignalPattern | Count | SubsequentPhase
+2 | EfficiencyPressure+CloseExtremePressure+PolarityInstability | 57 | NeutralProcessing_Age3
+2 | RangePressure+VolumePressure+PolarityInstability | 52 | NeutralProcessing_Age3
+3 | RangePressure+VolumePressure+PolarityInstability | 47 | NeutralProcessing_Age4
+6-10 | RangePressure+VolumePressure+PolarityInstability | 45 | NeutralProcessing_Age6-10
+6-10 | BodyPressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability | 41 | NeutralProcessing_Age6-10
+3 | EfficiencyPressure+CloseExtremePressure+PolarityInstability | 40 | NeutralProcessing_Age4
+2 | BodyPressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability | 39 | NeutralProcessing_Age3
+5 | EfficiencyPressure+CloseExtremePressure+PolarityInstability | 38 | NeutralProcessing_Age6-10
+6-10 | EfficiencyPressure+CloseExtremePressure+PolarityInstability | 38 | NeutralProcessing_Age6-10
+2 | BodyPressure+EfficiencyPressure+CloseExtremePressure | 36 | NeutralProcessing_Age3
+6-10 | RangePressure+BodyPressure+VolumePressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability | 35 | NeutralProcessing_Age6-10
+6-10 | BodyPressure+EfficiencyPressure+CloseExtremePressure | 33 | NeutralProcessing_Age6-10
+4 | RangePressure+VolumePressure+PolarityInstability | 33 | NeutralProcessing_Age5
+2 | BodyPressure+EfficiencyPressure+PolarityInstability | 31 | NeutralProcessing_Age3
+6-10 | RangePressure+VolumePressure+EfficiencyPressure+PolarityInstability | 30 | NeutralProcessing_Age6-10
+6-10 | RangePressure+VolumePressure+CloseExtremePressure+PolarityInstability | 30 | NeutralProcessing_Age6-10
+6-10 | RangePressure+BodyPressure+VolumePressure+EfficiencyPressure+CloseExtremePressure | 29 | NeutralProcessing_Age6-10
+4 | EfficiencyPressure+CloseExtremePressure+PolarityInstability | 28 | NeutralProcessing_Age5
+3 | BodyPressure+EfficiencyPressure+CloseExtremePressure | 26 | NeutralProcessing_Age4
+6-10 | VolumePressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability | 25 | NeutralProcessing_Age6-10
+5 | RangePressure+VolumePressure+PolarityInstability | 24 | NeutralProcessing_Age6-10
+2 | RangePressure+VolumePressure+CloseExtremePressure+PolarityInstability | 24 | NeutralProcessing_Age3
+6-10 | RangePressure+BodyPressure+VolumePressure+EfficiencyPressure+PolarityInstability | 24 | NeutralProcessing_Age6-10
+11-20 | EfficiencyPressure+CloseExtremePressure+PolarityInstability | 23 | NeutralProcessing_Age11-20
+6-10 | VolumePressure+CloseExtremePressure+PolarityInstability | 23 | NeutralProcessing_Age6-10
+5 | RangePressure+BodyPressure+VolumePressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability | 23 | NeutralProcessing_Age6-10
+4 | RangePressure+BodyPressure+VolumePressure+EfficiencyPressure+CloseExtremePressure | 23 | NeutralProcessing_Age5
+4 | RangePressure+VolumePressure+EfficiencyPressure+PolarityInstability | 22 | NeutralProcessing_Age5
+3 | VolumePressure+CloseExtremePressure+PolarityInstability | 22 | NeutralProcessing_Age4
+6-10 | RangePressure+VolumePressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability | 22 | NeutralProcessing_Age6-10
+2 | VolumePressure+CloseExtremePressure+PolarityInstability | 21 | NeutralProcessing_Age3
+3 | RangePressure+BodyPressure+VolumePressure+EfficiencyPressure+PolarityInstability | 21 | NeutralProcessing_Age4
+3 | BodyPressure+VolumePressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability | 20 | NeutralProcessing_Age4
+6-10 | RangePressure+BodyPressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability | 20 | NeutralProcessing_Age6-10
+3 | BodyPressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability | 20 | NeutralProcessing_Age4
+5 | RangePressure+BodyPressure+VolumePressure+EfficiencyPressure+PolarityInstability | 20 | NeutralProcessing_Age6-10
+2 | RangePressure+BodyPressure+VolumePressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability | 19 | NeutralProcessing_Age3
+5 | RangePressure+VolumePressure+EfficiencyPressure+PolarityInstability | 19 | NeutralProcessing_Age6-10
+4 | RangePressure+BodyPressure+VolumePressure+EfficiencyPressure+PolarityInstability | 19 | NeutralProcessing_Age5
+2 | VolumePressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability | 19 | NeutralProcessing_Age3
+
+9. Missed Failure Anatomy Table
+FailureNode | DestinationFamily | Count | TopMissingSignal
+NeutralProcessing_Age2 | MixedStructure | 130 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age2 | ReassertionProcessing | 107 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age6-10 | ReassertionProcessing | 93 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age2 | CompressionProcessing | 84 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age6-10 | MixedStructure | 79 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age2 | MixedStructure | 47 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age3 | ReassertionProcessing | 35 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age2 | ReassertionProcessing | 34 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age3 | MixedStructure | 31 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age2 | CompressionProcessing | 24 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age6-10 | ReassertionProcessing | 22 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age6-10 | MixedStructure | 21 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age6-10 | CompressionProcessing | 20 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age5 | ReassertionProcessing | 18 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age11-20 | MixedStructure | 17 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age3 | CompressionProcessing | 15 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age5 | MixedStructure | 15 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age11-20 | ReassertionProcessing | 14 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age2 | MixedStructure | 14 | BodyPressure+VolumePressure+EfficiencyPressure
+NeutralProcessing_Age3 | MixedStructure | 14 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age2 | ReassertionProcessing | 12 | BodyPressure+VolumePressure+EfficiencyPressure
+NeutralProcessing_Age3 | CompressionProcessing | 12 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age2 | MixedStructure | 9 | RangePressure+BodyPressure+CloseExtremePressure
+NeutralProcessing_Age2 | MixedStructure | 9 | RangePressure+VolumePressure+CloseExtremePressure
+NeutralProcessing_Age2 | CompressionProcessing | 8 | BodyPressure+EfficiencyPressure+CloseExtremePressure
+NeutralProcessing_Age11-20 | MixedStructure | 8 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age2 | MixedStructure | 8 | BodyPressure+EfficiencyPressure+CloseExtremePressure
+NeutralProcessing_Age3 | ReassertionProcessing | 8 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age11-20 | CompressionProcessing | 7 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age2 | DestructiveRotation | 7 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age2 | ReassertionProcessing | 7 | RangePressure+VolumePressure+CloseExtremePressure
+NeutralProcessing_Age5 | CompressionProcessing | 7 | RangePressure+BodyPressure+VolumePressure
+NeutralProcessing_Age6-10 | CompressionProcessing | 7 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age6-10 | ReassertionProcessing | 7 | BodyPressure+VolumePressure+EfficiencyPressure
+NeutralProcessing_Age5 | MixedStructure | 5 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age6-10 | MixedStructure | 5 | BodyPressure+VolumePressure+EfficiencyPressure
+NeutralProcessing_Age2 | CompressionProcessing | 5 | BodyPressure+VolumePressure+EfficiencyPressure
+NeutralProcessing_Age2 | ReassertionProcessing | 4 | RangePressure+BodyPressure+CloseExtremePressure
+NeutralProcessing_Age11-20 | ReassertionProcessing | 4 | RangePressure+BodyPressure+EfficiencyPressure
+NeutralProcessing_Age2 | CompressionProcessing | 4 | RangePressure+BodyPressure+CloseExtremePressure
+
+10. Cross-Instrument Replication Table
+Instrument | Threshold | DetectionRate | FalsePositiveRate | Precision | Recall
+6E | >=1 | 95.13% | 40.59% | 29.82% | 95.13%
+6E | >=2 | 78.36% | 34.13% | 29.39% | 78.36%
+6E | >=3 | 54.48% | 24.07% | 29.09% | 54.48%
+6E | >=4 | 29.58% | 12.79% | 29.54% | 29.58%
+CL | >=1 | 89.76% | 38.46% | 31.77% | 89.76%
+CL | >=2 | 68.07% | 30.53% | 30.79% | 68.07%
+CL | >=3 | 49.40% | 21.51% | 31.42% | 49.40%
+CL | >=4 | 31.93% | 12.62% | 33.54% | 31.93%
+NQ | >=1 | 86.73% | 36.52% | 28.32% | 86.73%
+NQ | >=2 | 69.03% | 31.52% | 26.71% | 69.03%
+NQ | >=3 | 46.02% | 22.83% | 25.12% | 46.02%
+NQ | >=4 | 22.12% | 12.08% | 23.36% | 22.12%
+
+11. Revised State Machine Table
+State | EntryRule | ExitRule | OverlayRule
+NeutralFormation | NeutralProcessing_Age1 | Age advances to mature Neutral | FailureWarningScore available but not state-defining
+NeutralMaturation | NeutralProcessing_Age2-4 | Age enters LateNeutral or non-neutral appears | Score >= threshold means FailurePressure
+LateNeutral | NeutralProcessing_Age5+ | Non-neutral state appears | Score >= threshold means FailurePressure
+DestinationSelection | First non-neutral state appears | Next non-neutral bar or return path | DestinationFamily becomes known causally
+Excursion | Non-neutral continuation after destination | DecayToNeutral or NeutralProcessing_Age1 | Score not used for phase assignment
+ReturnToNeutral | DecayToNeutral or final non-neutral reset context | NeutralProcessing_Age1 | Return pressure observed from state only
+
+12. Outcome Diagnostics Table
+WarningScore | Count | DRFwd1 | DRFwd3 | DRFwd5 | DRFwd10 | ContinuationRate5 | FailureRate5 | FlatRate5
+0 | 932 | -0.0587 | 0.3489 | -0.4266 | 0.0921 | 47.53% | 48.71% | 3.76%
+1 | 2572 | 0.0862 | -0.0616 | 0.3287 | 0.4199 | 47.98% | 47.71% | 4.32%
+2 | 3655 | 0.2279 | 0.2822 | 0.1816 | 0.1765 | 47.11% | 48.21% | 4.68%
+3 | 4200 | 0.0043 | -0.1197 | -0.1132 | -0.1640 | 48.00% | 47.21% | 4.79%
+4 | 3023 | 0.0455 | -0.0190 | 0.0076 | -0.1964 | 45.48% | 48.66% | 5.86%
+5 | 1511 | 0.1348 | -0.3362 | -0.0905 | -0.4615 | 45.73% | 50.10% | 4.17%
+6 | 467 | -0.7649 | -0.6512 | -0.7008 | -0.7629 | 44.11% | 52.03% | 3.85%
+
+13. Recommendation
+Classification | RecommendedFailureLogic | RecommendedThreshold | ReliableSignals | RejectedSignals | RecommendedNextStep | Reason
+WarningOverlayPreferred | Option C: keep loop phases, remove hard NeutralFailure from core machine, and add FailureWarningScore overlay. | >=3 | BodyRelativeToPrevious, EfficiencyRatio, PolarityFlipFlag, RangeRelativeToPrevious, TrueRangeRelativeToPrevious, VolumeRelativeToPrevious, VolumeRelativeToRollingMean, VolumeRelativeToSessionMean | CloseLocation | ReviseRealTimeMachine | Recommended warning threshold is 3 with recall 53.71%, precision 29.04%, and false positives 23.84%.
+
+14. Low-DoF Audit
+No future data used.
+No NextNode used.
+No future StructuralState used.
+No completed-loop hindsight used as predictor.
+No forward returns used in warning construction.
+No optimization.
+No fitting.
+No machine learning.
+No trading rules.
+
+RANKINGS
+1. Strongest causal failure signals: EfficiencyRatio@21+/t-3=0.8633; RangeRelativeToPrevious@4/t-0=0.7929; TrueRangeRelativeToPrevious@4/t-0=0.7643; RangeRelativeToPrevious@3/t-3=0.7473; TrueRangeRelativeToPrevious@3/t-3=0.7472; EfficiencyRatio@4/t-0=0.7384; VolumeRelativeToRollingMean@21+/t-1=0.6900; VolumeRelativeToRollingMean@4/t-0=0.6736
+2. Most replicated failure signals: RangeRelativeToPrevious@t-2=R3; TrueRangeRelativeToPrevious@t-2=R3; RangeRelativeToPrevious@t-3=R3; TrueRangeRelativeToPrevious@t-3=R3; VolumeRelativeToPrevious@t-3=R3; EfficiencyRatio@t-0=R3; PolarityFlipFlag@t-0=R3; RangeRelativeToPrevious@t-1=R3
+3. Best warning thresholds: >=1=Recall94.34%/FP40.24%; >=2=Recall77.18%/FP33.75%; >=3=Recall53.71%/FP23.84%; >=4=Recall29.39%/FP12.74%
+4. Best age-specific warning profiles: 4>=1=R100.00%; 4>=2=R99.00%; 11-20>=1=R95.74%; 3>=1=R95.65%; 5>=1=R95.18%; 6-10>=1=R93.69%; 2>=1=R93.53%; 4>=3=R91.00%
+5. Easiest destination failures to detect: RecoveryResolution=92.00%; ExhaustionPersistence=91.89%; ConstructiveEmergence=76.00%; CompressionProcessing=58.50%; MixedStructure=51.00%
+6. Hardest destination failures to detect: DecayToNeutral=0.00%; DestructiveRotation=42.86%; ReassertionProcessing=46.56%; MixedStructure=51.00%; CompressionProcessing=58.50%
+7. Most common false positive patterns: 2:EfficiencyPressure+CloseExtremePressure+PolarityInstability=57; 2:RangePressure+VolumePressure+PolarityInstability=52; 3:RangePressure+VolumePressure+PolarityInstability=47; 6-10:RangePressure+VolumePressure+PolarityInstability=45; 6-10:BodyPressure+EfficiencyPressure+CloseExtremePressure+PolarityInstability=41
+8. Most common missed failure patterns: NeutralProcessing_Age2->MixedStructure=130; NeutralProcessing_Age2->ReassertionProcessing=107; NeutralProcessing_Age6-10->ReassertionProcessing=93; NeutralProcessing_Age2->CompressionProcessing=84; NeutralProcessing_Age6-10->MixedStructure=79
+9. Recommended failure timing logic: WarningOverlayPreferred
+10. Recommended revised real-time state machine: NeutralFailure as warning overlay, not mandatory hard phase.
+
+RESEARCH NOTES
+Mechanical only.
+Is NeutralFailure a phase or a warning condition? WarningOverlayPreferred
+Can real-time failure detection be improved without lookahead? See threshold performance and hard-vs-warning tables.
+Can APVA proceed to a real trade timing audit? ReviseRealTimeMachine
