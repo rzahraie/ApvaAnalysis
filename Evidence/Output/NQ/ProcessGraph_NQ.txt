@@ -1,0 +1,927 @@
+APVA Process Graph Study v0.1
+============================================================================================
+Diagnostics
+Instrument: NQ
+Input path(s): .\Evidence\NQ\NQ_5 Minute_apva_bar_evidence_v01.csv
+Total rows: 1930
+Node count: 34
+Edge count: 154
+
+1. Directed Graph Summary
+SourceNode | DestinationNode | TransitionCount | TransitionProbability
+CompressionProcessing_Age1 | CompressionProcessing_Age2 | 51 | 57.30%
+CompressionProcessing_Age1 | NeutralProcessing_Age1 | 26 | 29.21%
+CompressionProcessing_Age1 | RecoveryResolution_Age1 | 5 | 5.62%
+CompressionProcessing_Age1 | ExhaustionPersistence_Age1 | 4 | 4.49%
+CompressionProcessing_Age1 | DecayToNeutral_Age1 | 1 | 1.12%
+CompressionProcessing_Age1 | DestructiveRotation_Age1 | 1 | 1.12%
+CompressionProcessing_Age1 | MixedStructure_Age1 | 1 | 1.12%
+CompressionProcessing_Age2 | CompressionProcessing_Age3 | 30 | 58.82%
+CompressionProcessing_Age2 | NeutralProcessing_Age1 | 15 | 29.41%
+CompressionProcessing_Age2 | ExhaustionPersistence_Age1 | 2 | 3.92%
+CompressionProcessing_Age2 | DecayToNeutral_Age1 | 1 | 1.96%
+CompressionProcessing_Age2 | MixedStructure_Age1 | 1 | 1.96%
+CompressionProcessing_Age2 | ReassertionProcessing_Age1 | 1 | 1.96%
+CompressionProcessing_Age2 | RecoveryResolution_Age1 | 1 | 1.96%
+CompressionProcessing_Age3 | CompressionProcessing_Age4 | 18 | 60.00%
+CompressionProcessing_Age3 | NeutralProcessing_Age1 | 5 | 16.67%
+CompressionProcessing_Age3 | DecayToNeutral_Age1 | 3 | 10.00%
+CompressionProcessing_Age3 | ExhaustionPersistence_Age1 | 2 | 6.67%
+CompressionProcessing_Age3 | RecoveryResolution_Age1 | 2 | 6.67%
+CompressionProcessing_Age4 | CompressionProcessing_Age5 | 8 | 44.44%
+CompressionProcessing_Age4 | DecayToNeutral_Age1 | 2 | 11.11%
+CompressionProcessing_Age4 | DestructiveRotation_Age1 | 2 | 11.11%
+CompressionProcessing_Age4 | MixedStructure_Age1 | 2 | 11.11%
+CompressionProcessing_Age4 | NeutralProcessing_Age1 | 2 | 11.11%
+CompressionProcessing_Age4 | ExhaustionPersistence_Age1 | 1 | 5.56%
+CompressionProcessing_Age4 | RecoveryResolution_Age1 | 1 | 5.56%
+CompressionProcessing_Age5 | CompressionProcessing_Age6-10 | 3 | 37.50%
+CompressionProcessing_Age5 | NeutralProcessing_Age1 | 3 | 37.50%
+CompressionProcessing_Age5 | MixedStructure_Age1 | 1 | 12.50%
+CompressionProcessing_Age5 | ReassertionProcessing_Age1 | 1 | 12.50%
+CompressionProcessing_Age6-10 | CompressionProcessing_Age6-10 | 6 | 66.67%
+CompressionProcessing_Age6-10 | NeutralProcessing_Age1 | 2 | 22.22%
+CompressionProcessing_Age6-10 | RecoveryResolution_Age1 | 1 | 11.11%
+ConstructiveEmergence_Age1 | MixedStructure_Age1 | 9 | 64.29%
+ConstructiveEmergence_Age1 | NeutralProcessing_Age1 | 4 | 28.57%
+ConstructiveEmergence_Age1 | DecayToNeutral_Age1 | 1 | 7.14%
+DecayToNeutral_Age1 | NeutralProcessing_Age1 | 57 | 66.28%
+DecayToNeutral_Age1 | MixedStructure_Age1 | 21 | 24.42%
+DecayToNeutral_Age1 | DestructiveRotation_Age1 | 6 | 6.98%
+DecayToNeutral_Age1 | CompressionProcessing_Age1 | 1 | 1.16%
+DecayToNeutral_Age1 | ConstructiveEmergence_Age1 | 1 | 1.16%
+DestructiveRotation_Age1 | DecayToNeutral_Age1 | 17 | 26.98%
+DestructiveRotation_Age1 | NeutralProcessing_Age1 | 16 | 25.40%
+DestructiveRotation_Age1 | DestructiveRotation_Age2 | 11 | 17.46%
+DestructiveRotation_Age1 | ExhaustionPersistence_Age1 | 8 | 12.70%
+DestructiveRotation_Age1 | ReassertionProcessing_Age1 | 5 | 7.94%
+DestructiveRotation_Age1 | CompressionProcessing_Age1 | 2 | 3.17%
+DestructiveRotation_Age1 | MixedStructure_Age1 | 2 | 3.17%
+DestructiveRotation_Age1 | RecoveryResolution_Age1 | 2 | 3.17%
+DestructiveRotation_Age2 | DestructiveRotation_Age3 | 5 | 45.45%
+DestructiveRotation_Age2 | DecayToNeutral_Age1 | 2 | 18.18%
+DestructiveRotation_Age2 | ExhaustionPersistence_Age1 | 2 | 18.18%
+DestructiveRotation_Age2 | NeutralProcessing_Age1 | 1 | 9.09%
+DestructiveRotation_Age2 | RecoveryResolution_Age1 | 1 | 9.09%
+DestructiveRotation_Age3 | DecayToNeutral_Age1 | 4 | 80.00%
+DestructiveRotation_Age3 | MixedStructure_Age1 | 1 | 20.00%
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age2 | 19 | 37.25%
+ExhaustionPersistence_Age1 | DecayToNeutral_Age1 | 11 | 21.57%
+ExhaustionPersistence_Age1 | RecoveryResolution_Age1 | 8 | 15.69%
+ExhaustionPersistence_Age1 | NeutralProcessing_Age1 | 6 | 11.76%
+ExhaustionPersistence_Age1 | DestructiveRotation_Age1 | 4 | 7.84%
+ExhaustionPersistence_Age1 | CompressionProcessing_Age1 | 3 | 5.88%
+ExhaustionPersistence_Age2 | ExhaustionPersistence_Age3 | 14 | 73.68%
+ExhaustionPersistence_Age2 | RecoveryResolution_Age1 | 5 | 26.32%
+ExhaustionPersistence_Age3 | ExhaustionPersistence_Age4 | 11 | 78.57%
+ExhaustionPersistence_Age3 | NeutralProcessing_Age1 | 3 | 21.43%
+ExhaustionPersistence_Age4 | ExhaustionPersistence_Age5 | 6 | 54.55%
+ExhaustionPersistence_Age4 | DestructiveRotation_Age1 | 2 | 18.18%
+ExhaustionPersistence_Age4 | CompressionProcessing_Age1 | 1 | 9.09%
+ExhaustionPersistence_Age4 | NeutralProcessing_Age1 | 1 | 9.09%
+ExhaustionPersistence_Age4 | RecoveryResolution_Age1 | 1 | 9.09%
+ExhaustionPersistence_Age5 | ExhaustionPersistence_Age6-10 | 4 | 66.67%
+ExhaustionPersistence_Age5 | CompressionProcessing_Age1 | 1 | 16.67%
+ExhaustionPersistence_Age5 | RecoveryResolution_Age1 | 1 | 16.67%
+ExhaustionPersistence_Age6-10 | DestructiveRotation_Age1 | 2 | 33.33%
+ExhaustionPersistence_Age6-10 | ExhaustionPersistence_Age6-10 | 2 | 33.33%
+ExhaustionPersistence_Age6-10 | DecayToNeutral_Age1 | 1 | 16.67%
+ExhaustionPersistence_Age6-10 | NeutralProcessing_Age1 | 1 | 16.67%
+MixedStructure_Age1 | NeutralProcessing_Age1 | 65 | 35.52%
+MixedStructure_Age1 | DecayToNeutral_Age1 | 35 | 19.13%
+MixedStructure_Age1 | MixedStructure_Age2 | 27 | 14.75%
+MixedStructure_Age1 | ExhaustionPersistence_Age1 | 24 | 13.11%
+MixedStructure_Age1 | ReassertionProcessing_Age1 | 13 | 7.10%
+MixedStructure_Age1 | RecoveryResolution_Age1 | 12 | 6.56%
+MixedStructure_Age1 | CompressionProcessing_Age1 | 4 | 2.19%
+MixedStructure_Age1 | DestructiveRotation_Age1 | 2 | 1.09%
+MixedStructure_Age1 | ConstructiveEmergence_Age1 | 1 | 0.55%
+MixedStructure_Age2 | NeutralProcessing_Age1 | 9 | 33.33%
+MixedStructure_Age2 | DecayToNeutral_Age1 | 7 | 25.93%
+MixedStructure_Age2 | MixedStructure_Age3 | 4 | 14.81%
+MixedStructure_Age2 | RecoveryResolution_Age1 | 4 | 14.81%
+MixedStructure_Age2 | ReassertionProcessing_Age1 | 2 | 7.41%
+MixedStructure_Age2 | DestructiveRotation_Age1 | 1 | 3.70%
+MixedStructure_Age3 | MixedStructure_Age4 | 2 | 50.00%
+MixedStructure_Age3 | DecayToNeutral_Age1 | 1 | 25.00%
+MixedStructure_Age3 | DestructiveRotation_Age1 | 1 | 25.00%
+MixedStructure_Age4 | DestructiveRotation_Age1 | 1 | 50.00%
+MixedStructure_Age4 | NeutralProcessing_Age1 | 1 | 50.00%
+NeutralProcessing_Age1 | NeutralProcessing_Age2 | 175 | 58.92%
+NeutralProcessing_Age1 | ReassertionProcessing_Age1 | 45 | 15.15%
+NeutralProcessing_Age1 | MixedStructure_Age1 | 39 | 13.13%
+NeutralProcessing_Age1 | CompressionProcessing_Age1 | 21 | 7.07%
+NeutralProcessing_Age1 | DestructiveRotation_Age1 | 13 | 4.38%
+NeutralProcessing_Age1 | ConstructiveEmergence_Age1 | 4 | 1.35%
+NeutralProcessing_Age11-20 | NeutralProcessing_Age11-20 | 25 | 67.57%
+NeutralProcessing_Age11-20 | MixedStructure_Age1 | 4 | 10.81%
+NeutralProcessing_Age11-20 | ReassertionProcessing_Age1 | 4 | 10.81%
+NeutralProcessing_Age11-20 | CompressionProcessing_Age1 | 2 | 5.41%
+NeutralProcessing_Age11-20 | ConstructiveEmergence_Age1 | 1 | 2.70%
+NeutralProcessing_Age11-20 | ExhaustionPersistence_Age1 | 1 | 2.70%
+NeutralProcessing_Age2 | NeutralProcessing_Age3 | 112 | 64.00%
+NeutralProcessing_Age2 | ReassertionProcessing_Age1 | 28 | 16.00%
+NeutralProcessing_Age2 | MixedStructure_Age1 | 26 | 14.86%
+NeutralProcessing_Age2 | CompressionProcessing_Age1 | 5 | 2.86%
+NeutralProcessing_Age2 | ConstructiveEmergence_Age1 | 2 | 1.14%
+NeutralProcessing_Age2 | DestructiveRotation_Age1 | 2 | 1.14%
+NeutralProcessing_Age3 | NeutralProcessing_Age4 | 83 | 74.11%
+NeutralProcessing_Age3 | ReassertionProcessing_Age1 | 18 | 16.07%
+NeutralProcessing_Age3 | MixedStructure_Age1 | 6 | 5.36%
+NeutralProcessing_Age3 | CompressionProcessing_Age1 | 5 | 4.46%
+NeutralProcessing_Age4 | NeutralProcessing_Age5 | 80 | 96.39%
+NeutralProcessing_Age4 | ConstructiveEmergence_Age1 | 1 | 1.20%
+NeutralProcessing_Age4 | ExhaustionPersistence_Age1 | 1 | 1.20%
+NeutralProcessing_Age4 | ReassertionProcessing_Age1 | 1 | 1.20%
+NeutralProcessing_Age5 | NeutralProcessing_Age6-10 | 70 | 87.50%
+NeutralProcessing_Age5 | MixedStructure_Age1 | 5 | 6.25%
+NeutralProcessing_Age5 | ReassertionProcessing_Age1 | 4 | 5.00%
+NeutralProcessing_Age5 | CompressionProcessing_Age1 | 1 | 1.25%
+NeutralProcessing_Age6-10 | NeutralProcessing_Age6-10 | 122 | 63.87%
+NeutralProcessing_Age6-10 | ReassertionProcessing_Age1 | 25 | 13.09%
+NeutralProcessing_Age6-10 | MixedStructure_Age1 | 17 | 8.90%
+NeutralProcessing_Age6-10 | NeutralProcessing_Age11-20 | 12 | 6.28%
+NeutralProcessing_Age6-10 | ExhaustionPersistence_Age1 | 6 | 3.14%
+NeutralProcessing_Age6-10 | CompressionProcessing_Age1 | 5 | 2.62%
+NeutralProcessing_Age6-10 | ConstructiveEmergence_Age1 | 2 | 1.05%
+NeutralProcessing_Age6-10 | RecoveryResolution_Age1 | 2 | 1.05%
+ReassertionProcessing_Age1 | NeutralProcessing_Age1 | 58 | 39.46%
+ReassertionProcessing_Age1 | MixedStructure_Age1 | 47 | 31.97%
+ReassertionProcessing_Age1 | ReassertionProcessing_Age2 | 31 | 21.09%
+ReassertionProcessing_Age1 | DestructiveRotation_Age1 | 6 | 4.08%
+ReassertionProcessing_Age1 | CompressionProcessing_Age1 | 3 | 2.04%
+ReassertionProcessing_Age1 | ConstructiveEmergence_Age1 | 2 | 1.36%
+ReassertionProcessing_Age2 | DestructiveRotation_Age1 | 19 | 61.29%
+ReassertionProcessing_Age2 | NeutralProcessing_Age1 | 9 | 29.03%
+ReassertionProcessing_Age2 | CompressionProcessing_Age1 | 2 | 6.45%
+ReassertionProcessing_Age2 | ReassertionProcessing_Age3 | 1 | 3.23%
+ReassertionProcessing_Age3 | DestructiveRotation_Age1 | 1 | 100.00%
+RecoveryResolution_Age1 | CompressionProcessing_Age1 | 26 | 56.52%
+RecoveryResolution_Age1 | RecoveryResolution_Age2 | 13 | 28.26%
+RecoveryResolution_Age1 | NeutralProcessing_Age1 | 7 | 15.22%
+RecoveryResolution_Age2 | RecoveryResolution_Age3 | 9 | 69.23%
+RecoveryResolution_Age2 | NeutralProcessing_Age1 | 4 | 30.77%
+RecoveryResolution_Age3 | CompressionProcessing_Age1 | 7 | 77.78%
+RecoveryResolution_Age3 | NeutralProcessing_Age1 | 2 | 22.22%
+
+2. Dominant Edges
+Node | Count | DominantDestination | DominantProbability | SecondDestination | SecondProbability | TransitionConfidence
+CompressionProcessing_Age1 | 89 | CompressionProcessing_Age2 | 57.30% | NeutralProcessing_Age1 | 29.21% | 28.09%
+CompressionProcessing_Age2 | 51 | CompressionProcessing_Age3 | 58.82% | NeutralProcessing_Age1 | 29.41% | 29.41%
+CompressionProcessing_Age3 | 30 | CompressionProcessing_Age4 | 60.00% | NeutralProcessing_Age1 | 16.67% | 43.33%
+CompressionProcessing_Age4 | 18 | CompressionProcessing_Age5 | 44.44% | DecayToNeutral_Age1 | 11.11% | 33.33%
+CompressionProcessing_Age5 | 8 | CompressionProcessing_Age6-10 | 37.50% | NeutralProcessing_Age1 | 37.50% | 0.00%
+CompressionProcessing_Age6-10 | 9 | CompressionProcessing_Age6-10 | 66.67% | NeutralProcessing_Age1 | 22.22% | 44.44%
+ConstructiveEmergence_Age1 | 14 | MixedStructure_Age1 | 64.29% | NeutralProcessing_Age1 | 28.57% | 35.71%
+DecayToNeutral_Age1 | 86 | NeutralProcessing_Age1 | 66.28% | MixedStructure_Age1 | 24.42% | 41.86%
+DestructiveRotation_Age1 | 63 | DecayToNeutral_Age1 | 26.98% | NeutralProcessing_Age1 | 25.40% | 1.59%
+DestructiveRotation_Age2 | 11 | DestructiveRotation_Age3 | 45.45% | DecayToNeutral_Age1 | 18.18% | 27.27%
+DestructiveRotation_Age3 | 5 | DecayToNeutral_Age1 | 80.00% | MixedStructure_Age1 | 20.00% | 60.00%
+ExhaustionPersistence_Age1 | 51 | ExhaustionPersistence_Age2 | 37.25% | DecayToNeutral_Age1 | 21.57% | 15.69%
+ExhaustionPersistence_Age2 | 19 | ExhaustionPersistence_Age3 | 73.68% | RecoveryResolution_Age1 | 26.32% | 47.37%
+ExhaustionPersistence_Age3 | 14 | ExhaustionPersistence_Age4 | 78.57% | NeutralProcessing_Age1 | 21.43% | 57.14%
+ExhaustionPersistence_Age4 | 11 | ExhaustionPersistence_Age5 | 54.55% | DestructiveRotation_Age1 | 18.18% | 36.36%
+ExhaustionPersistence_Age5 | 6 | ExhaustionPersistence_Age6-10 | 66.67% | CompressionProcessing_Age1 | 16.67% | 50.00%
+ExhaustionPersistence_Age6-10 | 6 | DestructiveRotation_Age1 | 33.33% | ExhaustionPersistence_Age6-10 | 33.33% | 0.00%
+MixedStructure_Age1 | 183 | NeutralProcessing_Age1 | 35.52% | DecayToNeutral_Age1 | 19.13% | 16.39%
+MixedStructure_Age2 | 27 | NeutralProcessing_Age1 | 33.33% | DecayToNeutral_Age1 | 25.93% | 7.41%
+MixedStructure_Age3 | 4 | MixedStructure_Age4 | 50.00% | DecayToNeutral_Age1 | 25.00% | 25.00%
+MixedStructure_Age4 | 2 | DestructiveRotation_Age1 | 50.00% | NeutralProcessing_Age1 | 50.00% | 0.00%
+NeutralProcessing_Age1 | 297 | NeutralProcessing_Age2 | 58.92% | ReassertionProcessing_Age1 | 15.15% | 43.77%
+NeutralProcessing_Age11-20 | 37 | NeutralProcessing_Age11-20 | 67.57% | MixedStructure_Age1 | 10.81% | 56.76%
+NeutralProcessing_Age2 | 175 | NeutralProcessing_Age3 | 64.00% | ReassertionProcessing_Age1 | 16.00% | 48.00%
+NeutralProcessing_Age3 | 112 | NeutralProcessing_Age4 | 74.11% | ReassertionProcessing_Age1 | 16.07% | 58.04%
+NeutralProcessing_Age4 | 83 | NeutralProcessing_Age5 | 96.39% | ConstructiveEmergence_Age1 | 1.20% | 95.18%
+NeutralProcessing_Age5 | 80 | NeutralProcessing_Age6-10 | 87.50% | MixedStructure_Age1 | 6.25% | 81.25%
+NeutralProcessing_Age6-10 | 192 | NeutralProcessing_Age6-10 | 63.87% | ReassertionProcessing_Age1 | 13.09% | 50.79%
+ReassertionProcessing_Age1 | 147 | NeutralProcessing_Age1 | 39.46% | MixedStructure_Age1 | 31.97% | 7.48%
+ReassertionProcessing_Age2 | 31 | DestructiveRotation_Age1 | 61.29% | NeutralProcessing_Age1 | 29.03% | 32.26%
+ReassertionProcessing_Age3 | 1 | DestructiveRotation_Age1 | 100.00% | N/A | 0.00% | 100.00%
+RecoveryResolution_Age1 | 46 | CompressionProcessing_Age1 | 56.52% | RecoveryResolution_Age2 | 28.26% | 28.26%
+RecoveryResolution_Age2 | 13 | RecoveryResolution_Age3 | 69.23% | NeutralProcessing_Age1 | 30.77% | 38.46%
+RecoveryResolution_Age3 | 9 | CompressionProcessing_Age1 | 77.78% | NeutralProcessing_Age1 | 22.22% | 55.56%
+
+3. Process Chains
+Depth | Chain | ChainProbability | ChainSupport
+2 | NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 84.34% | 70
+2 | NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 71.43% | 80
+2 | ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 | 57.89% | 11
+2 | NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 55.89% | 50
+2 | RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 | 53.85% | 7
+2 | DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 53.02% | 3
+2 | NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 47.43% | 83
+2 | NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 | 45.65% | 16
+2 | RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 | 44.57% | 3
+2 | CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 44.44% | 3
+2 | ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 | 42.86% | 6
+2 | NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 40.80% | 72
+2 | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 39.05% | 37
+2 | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 37.71% | 112
+2 | DestructiveRotation_Age2 -> DestructiveRotation_Age3 -> DecayToNeutral_Age1 | 36.36% | 4
+2 | ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 | 36.36% | 4
+2 | CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 35.29% | 18
+2 | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 | 33.71% | 30
+2 | RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 | 32.39% | 14
+2 | ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 | 27.45% | 14
+2 | ReassertionProcessing_Age3 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 26.98% | 0
+2 | CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 | 26.67% | 8
+2 | CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 25.00% | 3
+2 | MixedStructure_Age3 -> MixedStructure_Age4 -> DestructiveRotation_Age1 | 25.00% | 1
+2 | ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 23.25% | 38
+2 | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 22.83% | 3
+2 | ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 | 22.22% | 1
+2 | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 20.93% | 35
+2 | MixedStructure_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 19.64% | 3
+2 | DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 17.88% | 12
+2 | CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 | 16.67% | 3
+2 | ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 16.54% | 3
+2 | MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 13.49% | 0
+2 | ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 8.99% | 2
+3 | NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 62.50% | 70
+3 | NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 53.87% | 50
+3 | NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 45.71% | 80
+3 | NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 35.70% | 33
+3 | ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 | 31.58% | 6
+3 | DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 31.24% | 2
+3 | RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 | 30.86% | 3
+3 | NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 | 30.85% | 9
+3 | CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 29.63% | 2
+3 | ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 | 28.57% | 4
+3 | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 27.95% | 83
+3 | RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 | 26.22% | 1
+3 | NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 26.06% | 39
+3 | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 24.99% | 23
+3 | DestructiveRotation_Age2 -> DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 24.10% | 3
+3 | ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 | 21.57% | 11
+3 | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 20.22% | 18
+3 | RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 | 19.05% | 10
+3 | ReassertionProcessing_Age3 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 17.88% | 0
+3 | CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 16.67% | 1
+3 | CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 | 15.69% | 8
+3 | ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 14.88% | 26
+3 | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 13.45% | 3
+3 | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 13.39% | 20
+3 | MixedStructure_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 12.57% | 1
+3 | ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 | 12.12% | 1
+3 | CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 11.11% | 3
+3 | ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 10.96% | 1
+3 | DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 10.54% | 10
+3 | CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 | 10.00% | 3
+3 | MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 8.94% | 0
+3 | MixedStructure_Age3 -> MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 6.75% | 0
+3 | ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 6.00% | 1
+3 | ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 5.96% | 2
+4 | NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 40.00% | 70
+4 | NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 39.92% | 50
+4 | NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 34.41% | 33
+4 | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 26.94% | 80
+4 | NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 22.80% | 23
+4 | ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 | 21.05% | 4
+4 | NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 | 20.84% | 5
+4 | DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 20.00% | 2
+4 | CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 19.75% | 1
+4 | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 18.52% | 23
+4 | RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 | 18.15% | 1
+4 | NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 16.65% | 16
+4 | RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 15.73% | 0
+4 | DestructiveRotation_Age2 -> DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 14.20% | 2
+4 | ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 | 11.76% | 6
+4 | RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 11.43% | 9
+4 | CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 11.11% | 1
+4 | ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 11.03% | 14
+4 | ReassertionProcessing_Age3 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 10.54% | 0
+4 | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 9.93% | 13
+4 | ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 | 9.52% | 1
+4 | MixedStructure_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 9.32% | 1
+4 | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 | 8.99% | 8
+4 | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 8.61% | 2
+4 | CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 7.41% | 1
+4 | DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 6.74% | 6
+4 | CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 6.67% | 3
+4 | ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 6.46% | 1
+4 | CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 | 5.88% | 3
+4 | MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 5.27% | 0
+4 | MixedStructure_Age3 -> MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 4.47% | 0
+4 | ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 3.97% | 1
+4 | ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 3.51% | 2
+4 | ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 3.27% | 1
+5 | NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 25.55% | 50
+5 | NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 25.50% | 33
+5 | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 23.57% | 70
+5 | NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 21.98% | 23
+5 | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 17.85% | 20
+5 | DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 14.82% | 2
+5 | NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 14.57% | 16
+5 | NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 | 14.08% | 3
+5 | CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 13.17% | 0
+5 | RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 10.89% | 0
+5 | NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 10.63% | 0
+5 | ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 10.63% | 14
+5 | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 9.57% | 13
+5 | DestructiveRotation_Age2 -> DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 9.09% | 2
+5 | MixedStructure_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 8.98% | 1
+5 | ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 | 7.84% | 4
+5 | CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 7.41% | 1
+5 | ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 | 7.02% | 1
+5 | RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 | 6.99% | 0
+5 | ReassertionProcessing_Age3 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 6.74% | 0
+5 | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 6.38% | 2
+5 | RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 | 5.08% | 1
+5 | DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 5.00% | 6
+5 | CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 4.94% | 1
+5 | CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 4.44% | 1
+5 | ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 4.13% | 0
+5 | CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 3.92% | 3
+5 | MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 3.37% | 0
+5 | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 | 3.37% | 3
+5 | MixedStructure_Age3 -> MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 2.63% | 0
+5 | ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 2.57% | 1
+5 | ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 2.34% | 1
+5 | ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 2.25% | 2
+5 | ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 2.17% | 1
+
+4. Structural Cycles
+Cycle | CycleLength | Classification | CycleProbability | CycleSupport
+NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 2 | ShortCycle | 5.98% | 29
+DecayToNeutral_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 2 | ShortCycle | 4.67% | 24
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 | 2 | ShortCycle | 4.66% | 22
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 3 | MediumCycle | 3.72% | 41
+CompressionProcessing_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 2 | ShortCycle | 3.18% | 4
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 | 3 | MediumCycle | 3.11% | 29
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 4 | MediumCycle | 2.39% | 41
+MixedStructure_Age1 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 2 | ShortCycle | 2.27% | 18
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> CompressionProcessing_Age1 | 2 | ShortCycle | 2.07% | 9
+DecayToNeutral_Age1 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 2 | ShortCycle | 1.88% | 4
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 3 | MediumCycle | 1.72% | 22
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 3 | MediumCycle | 1.66% | 11
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 4 | MediumCycle | 1.27% | 2
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 7 | LongCycle | 1.22% | 4
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> NeutralProcessing_Age1 -> CompressionProcessing_Age1 | 3 | MediumCycle | 1.19% | 15
+DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> DestructiveRotation_Age1 | 2 | ShortCycle | 1.11% | 6
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 4 | MediumCycle | 1.11% | 2
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 4 | MediumCycle | 1.07% | 9
+DestructiveRotation_Age1 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 | 3 | MediumCycle | 1.03% | 3
+NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> NeutralProcessing_Age1 | 3 | MediumCycle | 0.93% | 2
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 3 | MediumCycle | 0.78% | 2
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> MixedStructure_Age1 | 7 | LongCycle | 0.75% | 5
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> MixedStructure_Age1 | 4 | MediumCycle | 0.72% | 6
+DecayToNeutral_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 | 3 | MediumCycle | 0.69% | 2
+MixedStructure_Age1 -> MixedStructure_Age2 -> NeutralProcessing_Age1 -> MixedStructure_Age1 | 3 | MediumCycle | 0.65% | 9
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 5 | MediumCycle | 0.64% | 4
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 3 | MediumCycle | 0.64% | 2
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> MixedStructure_Age1 | 6 | LongCycle | 0.60% | 2
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> NeutralProcessing_Age1 | 4 | MediumCycle | 0.58% | 13
+DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 | 4 | MediumCycle | 0.50% | 6
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> CompressionProcessing_Age1 | 4 | MediumCycle | 0.49% | 5
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> CompressionProcessing_Age1 | 3 | MediumCycle | 0.49% | 5
+MixedStructure_Age1 -> MixedStructure_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 | 4 | MediumCycle | 0.43% | 2
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 8 | LongCycle | 0.35% | 9
+MixedStructure_Age1 -> MixedStructure_Age2 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 3 | MediumCycle | 0.35% | 2
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 -> MixedStructure_Age2 -> DecayToNeutral_Age1 | 4 | MediumCycle | 0.33% | 2
+DestructiveRotation_Age1 -> ReassertionProcessing_Age1 -> DestructiveRotation_Age1 | 2 | ShortCycle | 0.32% | 5
+DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 | 5 | MediumCycle | 0.31% | 2
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> CompressionProcessing_Age1 | 4 | MediumCycle | 0.28% | 2
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 8 | LongCycle | 0.27% | 10
+CompressionProcessing_Age1 -> ExhaustionPersistence_Age1 -> CompressionProcessing_Age1 | 2 | ShortCycle | 0.26% | 2
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 7 | LongCycle | 0.21% | 6
+ExhaustionPersistence_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 | 3 | MediumCycle | 0.20% | 2
+DecayToNeutral_Age1 -> DestructiveRotation_Age1 -> ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 | 3 | MediumCycle | 0.19% | 3
+DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> DestructiveRotation_Age1 | 3 | MediumCycle | 0.17% | 2
+DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> DestructiveRotation_Age1 | 3 | MediumCycle | 0.16% | 4
+ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ConstructiveEmergence_Age1 | 4 | MediumCycle | 0.15% | 2
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 7 | LongCycle | 0.15% | 5
+MixedStructure_Age1 -> RecoveryResolution_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 | 3 | MediumCycle | 0.13% | 3
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 -> MixedStructure_Age2 -> DecayToNeutral_Age1 | 5 | MediumCycle | 0.12% | 2
+DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 | 9 | LongCycle | 0.10% | 2
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> CompressionProcessing_Age1 | 5 | MediumCycle | 0.09% | 2
+MixedStructure_Age1 -> RecoveryResolution_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 | 4 | MediumCycle | 0.09% | 2
+ExhaustionPersistence_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ExhaustionPersistence_Age1 | 7 | LongCycle | 0.09% | 6
+CompressionProcessing_Age1 -> RecoveryResolution_Age1 -> NeutralProcessing_Age1 -> CompressionProcessing_Age1 | 3 | MediumCycle | 0.06% | 2
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 8 | LongCycle | 0.05% | 2
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> MixedStructure_Age1 -> MixedStructure_Age2 -> DecayToNeutral_Age1 | 8 | LongCycle | 0.04% | 7
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> MixedStructure_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 7 | LongCycle | 0.04% | 3
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 | 9 | LongCycle | 0.04% | 2
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> CompressionProcessing_Age1 | 9 | LongCycle | 0.03% | 6
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 | 8 | LongCycle | 0.03% | 6
+ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> ConstructiveEmergence_Age1 | 7 | LongCycle | 0.03% | 2
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> DestructiveRotation_Age2 -> DecayToNeutral_Age1 | 7 | LongCycle | 0.03% | 2
+ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ConstructiveEmergence_Age1 | 9 | LongCycle | 0.02% | 4
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> MixedStructure_Age2 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 7 | LongCycle | 0.02% | 2
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 6 | LongCycle | 0.02% | 2
+CompressionProcessing_Age1 -> RecoveryResolution_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> CompressionProcessing_Age1 | 5 | MediumCycle | 0.01% | 2
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> MixedStructure_Age1 -> CompressionProcessing_Age1 | 5 | MediumCycle | 0.01% | 3
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 8 | LongCycle | 0.01% | 3
+DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> ReassertionProcessing_Age3 -> DestructiveRotation_Age1 | 7 | LongCycle | 0.01% | 2
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> DecayToNeutral_Age1 -> MixedStructure_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 5 | MediumCycle | 0.01% | 2
+CompressionProcessing_Age1 -> ExhaustionPersistence_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> CompressionProcessing_Age1 | 4 | MediumCycle | 0.01% | 2
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 9 | LongCycle | 0.01% | 4
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ExhaustionPersistence_Age1 -> RecoveryResolution_Age1 -> RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 | 11 | LongCycle | 0.01% | 6
+ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 | 12 | LongCycle | 0.00% | 2
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> CompressionProcessing_Age1 | 12 | LongCycle | 0.00% | 6
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> DestructiveRotation_Age1 -> DestructiveRotation_Age2 -> DecayToNeutral_Age1 | 7 | LongCycle | 0.00% | 2
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 11 | LongCycle | 0.00% | 4
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 -> DestructiveRotation_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 8 | LongCycle | 0.00% | 2
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> RecoveryResolution_Age1 -> RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 | 14 | LongCycle | 0.00% | 2
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> MixedStructure_Age1 -> MixedStructure_Age2 -> MixedStructure_Age3 -> MixedStructure_Age4 -> DestructiveRotation_Age1 -> DestructiveRotation_Age2 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 13 | LongCycle | 0.00% | 2
+ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> MixedStructure_Age2 -> DestructiveRotation_Age1 -> DestructiveRotation_Age2 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> ConstructiveEmergence_Age1 | 7 | LongCycle | 0.00% | 2
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> NeutralProcessing_Age1 -> DestructiveRotation_Age1 -> MixedStructure_Age1 -> CompressionProcessing_Age1 | 9 | LongCycle | 0.00% | 3
+
+5. Terminal Structures
+Node | PersistenceProbability | TransitionPressure | Entropy | TerminalScore
+DestructiveRotation_Age1 | 0.00% | 100.00% | 1.7980 | 1.7980
+MixedStructure_Age1 | 0.00% | 100.00% | 1.7607 | 1.7607
+CompressionProcessing_Age4 | 0.00% | 100.00% | 1.6581 | 1.6581
+ExhaustionPersistence_Age1 | 0.00% | 100.00% | 1.6073 | 1.6073
+MixedStructure_Age2 | 0.00% | 100.00% | 1.5968 | 1.5968
+DestructiveRotation_Age2 | 0.00% | 100.00% | 1.4143 | 1.4143
+ReassertionProcessing_Age1 | 0.00% | 100.00% | 1.3282 | 1.3282
+ExhaustionPersistence_Age4 | 0.00% | 100.00% | 1.2945 | 1.2945
+CompressionProcessing_Age5 | 0.00% | 100.00% | 1.2555 | 1.2555
+NeutralProcessing_Age1 | 0.00% | 100.00% | 1.2465 | 1.2465
+CompressionProcessing_Age3 | 0.00% | 100.00% | 1.1965 | 1.1965
+CompressionProcessing_Age1 | 0.00% | 100.00% | 1.1310 | 1.1310
+CompressionProcessing_Age2 | 0.00% | 100.00% | 1.1075 | 1.1075
+NeutralProcessing_Age2 | 0.00% | 100.00% | 1.0659 | 1.0659
+MixedStructure_Age3 | 0.00% | 100.00% | 1.0397 | 1.0397
+RecoveryResolution_Age1 | 0.00% | 100.00% | 0.9661 | 0.9661
+ReassertionProcessing_Age2 | 0.00% | 100.00% | 0.9467 | 0.9467
+DecayToNeutral_Age1 | 0.00% | 100.00% | 0.9062 | 0.9062
+ExhaustionPersistence_Age6-10 | 33.33% | 66.67% | 1.3297 | 0.8864
+ExhaustionPersistence_Age5 | 0.00% | 100.00% | 0.8676 | 0.8676
+ConstructiveEmergence_Age1 | 0.00% | 100.00% | 0.8305 | 0.8305
+NeutralProcessing_Age3 | 0.00% | 100.00% | 0.8115 | 0.8115
+MixedStructure_Age4 | 0.00% | 100.00% | 0.6931 | 0.6931
+RecoveryResolution_Age2 | 0.00% | 100.00% | 0.6172 | 0.6172
+ExhaustionPersistence_Age2 | 0.00% | 100.00% | 0.5763 | 0.5763
+RecoveryResolution_Age3 | 0.00% | 100.00% | 0.5297 | 0.5297
+ExhaustionPersistence_Age3 | 0.00% | 100.00% | 0.5196 | 0.5196
+DestructiveRotation_Age3 | 0.00% | 100.00% | 0.5004 | 0.5004
+NeutralProcessing_Age5 | 0.00% | 100.00% | 0.4947 | 0.4947
+NeutralProcessing_Age6-10 | 63.87% | 36.13% | 1.2412 | 0.4484
+NeutralProcessing_Age11-20 | 67.57% | 32.43% | 1.0988 | 0.3564
+CompressionProcessing_Age6-10 | 66.67% | 33.33% | 0.8487 | 0.2829
+NeutralProcessing_Age4 | 0.00% | 100.00% | 0.1952 | 0.1952
+ReassertionProcessing_Age3 | 0.00% | 100.00% | -0.0000 | -0.0000
+
+6. Structural Attractors
+Node | InboundProbability | OutboundProbability | NetFlow | AttractorScore
+NeutralProcessing_Age1 | 5.8996 | 1.0000 | 4.8996 | 4.8996
+DestructiveRotation_Age1 | 3.2926 | 1.0000 | 2.2926 | 2.2926
+DecayToNeutral_Age1 | 2.6479 | 1.0000 | 1.6479 | 1.6479
+MixedStructure_Age1 | 2.2985 | 1.0000 | 1.2985 | 1.2985
+CompressionProcessing_Age1 | 2.0462 | 1.0000 | 1.0462 | 1.0462
+NeutralProcessing_Age6-10 | 1.5137 | 1.0000 | 0.5137 | 0.5137
+RecoveryResolution_Age1 | 1.3336 | 1.0000 | 0.3336 | 0.3336
+ReassertionProcessing_Age1 | 1.1424 | 1.0000 | 0.1424 | 0.1424
+CompressionProcessing_Age6-10 | 1.0417 | 1.0000 | 0.0417 | 0.0417
+ExhaustionPersistence_Age6-10 | 1.0000 | 1.0000 | 0.0000 | 0.0000
+NeutralProcessing_Age5 | 0.9639 | 1.0000 | -0.0361 | -0.0361
+ExhaustionPersistence_Age4 | 0.7857 | 1.0000 | -0.2143 | -0.2143
+NeutralProcessing_Age4 | 0.7411 | 1.0000 | -0.2589 | -0.2589
+NeutralProcessing_Age11-20 | 0.7385 | 1.0000 | -0.2615 | -0.2615
+ExhaustionPersistence_Age3 | 0.7368 | 1.0000 | -0.2632 | -0.2632
+ExhaustionPersistence_Age1 | 0.7168 | 1.0000 | -0.2832 | -0.2832
+RecoveryResolution_Age3 | 0.6923 | 1.0000 | -0.3077 | -0.3077
+NeutralProcessing_Age3 | 0.6400 | 1.0000 | -0.3600 | -0.3600
+CompressionProcessing_Age4 | 0.6000 | 1.0000 | -0.4000 | -0.4000
+NeutralProcessing_Age2 | 0.5892 | 1.0000 | -0.4108 | -0.4108
+CompressionProcessing_Age3 | 0.5882 | 1.0000 | -0.4118 | -0.4118
+CompressionProcessing_Age2 | 0.5730 | 1.0000 | -0.4270 | -0.4270
+ExhaustionPersistence_Age5 | 0.5455 | 1.0000 | -0.4545 | -0.4545
+MixedStructure_Age4 | 0.5000 | 1.0000 | -0.5000 | -0.5000
+DestructiveRotation_Age3 | 0.4545 | 1.0000 | -0.5455 | -0.5455
+CompressionProcessing_Age5 | 0.4444 | 1.0000 | -0.5556 | -0.5556
+ExhaustionPersistence_Age2 | 0.3725 | 1.0000 | -0.6275 | -0.6275
+RecoveryResolution_Age2 | 0.2826 | 1.0000 | -0.7174 | -0.7174
+ReassertionProcessing_Age2 | 0.2109 | 1.0000 | -0.7891 | -0.7891
+DestructiveRotation_Age2 | 0.1746 | 1.0000 | -0.8254 | -0.8254
+MixedStructure_Age3 | 0.1481 | 1.0000 | -0.8519 | -0.8519
+MixedStructure_Age2 | 0.1475 | 1.0000 | -0.8525 | -0.8525
+ConstructiveEmergence_Age1 | 0.1051 | 1.0000 | -0.8949 | -0.8949
+ReassertionProcessing_Age3 | 0.0323 | 1.0000 | -0.9677 | -0.9677
+
+7. Structural Hubs
+Node | DistinctInboundCount | DistinctOutboundCount | TotalDegree | HubScore
+NeutralProcessing_Age1 | 22 | 6 | 28 | 28
+MixedStructure_Age1 | 15 | 9 | 24 | 24
+CompressionProcessing_Age1 | 16 | 7 | 23 | 23
+DestructiveRotation_Age1 | 15 | 8 | 23 | 23
+DecayToNeutral_Age1 | 13 | 5 | 18 | 18
+ReassertionProcessing_Age1 | 12 | 6 | 18 | 18
+RecoveryResolution_Age1 | 14 | 3 | 17 | 17
+ExhaustionPersistence_Age1 | 10 | 6 | 16 | 16
+ConstructiveEmergence_Age1 | 8 | 3 | 11 | 11
+NeutralProcessing_Age6-10 | 2 | 8 | 10 | 10
+CompressionProcessing_Age2 | 1 | 7 | 8 | 8
+CompressionProcessing_Age4 | 1 | 7 | 8 | 8
+NeutralProcessing_Age11-20 | 2 | 6 | 8 | 8
+MixedStructure_Age2 | 1 | 6 | 7 | 7
+NeutralProcessing_Age2 | 1 | 6 | 7 | 7
+CompressionProcessing_Age3 | 1 | 5 | 6 | 6
+DestructiveRotation_Age2 | 1 | 5 | 6 | 6
+ExhaustionPersistence_Age4 | 1 | 5 | 6 | 6
+ExhaustionPersistence_Age6-10 | 2 | 4 | 6 | 6
+CompressionProcessing_Age5 | 1 | 4 | 5 | 5
+CompressionProcessing_Age6-10 | 2 | 3 | 5 | 5
+NeutralProcessing_Age3 | 1 | 4 | 5 | 5
+NeutralProcessing_Age4 | 1 | 4 | 5 | 5
+NeutralProcessing_Age5 | 1 | 4 | 5 | 5
+ReassertionProcessing_Age2 | 1 | 4 | 5 | 5
+ExhaustionPersistence_Age5 | 1 | 3 | 4 | 4
+MixedStructure_Age3 | 1 | 3 | 4 | 4
+DestructiveRotation_Age3 | 1 | 2 | 3 | 3
+ExhaustionPersistence_Age2 | 1 | 2 | 3 | 3
+ExhaustionPersistence_Age3 | 1 | 2 | 3 | 3
+MixedStructure_Age4 | 1 | 2 | 3 | 3
+RecoveryResolution_Age2 | 1 | 2 | 3 | 3
+RecoveryResolution_Age3 | 1 | 2 | 3 | 3
+ReassertionProcessing_Age3 | 1 | 1 | 2 | 2
+
+8. Young / Middle / Late Graph
+StateZoneNode | DominantDestination | DominantProbability | PersistenceProbability | Entropy | TransitionConfidence
+CompressionProcessing_Late | CompressionProcessing_Late | 66.67% | 66.67% | 0.8487 | 44.44%
+CompressionProcessing_Middle | CompressionProcessing_Middle | 46.43% | 46.43% | 1.6976 | 28.57%
+CompressionProcessing_Young | CompressionProcessing_Young | 36.43% | 36.43% | 1.5196 | 7.14%
+ConstructiveEmergence_Young | MixedStructure_Young | 64.29% | 0.00% | 0.8305 | 35.71%
+DecayToNeutral_Young | NeutralProcessing_Young | 66.28% | 0.00% | 0.9062 | 41.86%
+DestructiveRotation_Middle | DecayToNeutral_Young | 80.00% | 0.00% | 0.5004 | 60.00%
+DestructiveRotation_Young | DecayToNeutral_Young | 25.68% | 14.86% | 1.9301 | 2.70%
+ExhaustionPersistence_Late | DestructiveRotation_Young | 33.33% | 33.33% | 1.3297 | 0.00%
+ExhaustionPersistence_Middle | ExhaustionPersistence_Middle | 54.84% | 54.84% | 1.3884 | 41.94%
+ExhaustionPersistence_Young | ExhaustionPersistence_Young | 27.14% | 27.14% | 1.7884 | 7.14%
+MixedStructure_Middle | DestructiveRotation_Young | 33.33% | 33.33% | 1.3297 | 0.00%
+MixedStructure_Young | NeutralProcessing_Young | 35.24% | 12.86% | 1.8228 | 15.24%
+NeutralProcessing_Late | NeutralProcessing_Late | 69.74% | 69.74% | 1.0457 | 57.02%
+NeutralProcessing_Middle | NeutralProcessing_Middle | 59.27% | 59.27% | 1.1189 | 33.82%
+NeutralProcessing_Young | NeutralProcessing_Young | 37.08% | 37.08% | 1.5957 | 13.35%
+ReassertionProcessing_Middle | DestructiveRotation_Young | 100.00% | 0.00% | -0.0000 | 100.00%
+ReassertionProcessing_Young | NeutralProcessing_Young | 37.64% | 17.42% | 1.4794 | 11.24%
+RecoveryResolution_Middle | CompressionProcessing_Young | 77.78% | 0.00% | 0.5297 | 55.56%
+RecoveryResolution_Young | CompressionProcessing_Young | 44.07% | 22.03% | 1.2944 | 22.03%
+
+Young / Middle / Late Chains
+Depth | Chain | ChainProbability | ChainSupport
+2 | DestructiveRotation_Middle -> DecayToNeutral_Young -> NeutralProcessing_Young | 53.02% | 3
+2 | NeutralProcessing_Late -> NeutralProcessing_Late -> NeutralProcessing_Late | 48.63% | 109
+2 | CompressionProcessing_Late -> CompressionProcessing_Late -> CompressionProcessing_Late | 44.44% | 3
+2 | NeutralProcessing_Middle -> NeutralProcessing_Middle -> NeutralProcessing_Middle | 35.13% | 80
+2 | ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle | 30.07% | 6
+2 | RecoveryResolution_Middle -> CompressionProcessing_Young -> CompressionProcessing_Young | 28.33% | 3
+2 | ReassertionProcessing_Middle -> DestructiveRotation_Young -> DecayToNeutral_Young | 25.68% | 0
+2 | DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 24.57% | 37
+2 | ConstructiveEmergence_Young -> MixedStructure_Young -> NeutralProcessing_Young | 22.65% | 3
+2 | CompressionProcessing_Middle -> CompressionProcessing_Middle -> CompressionProcessing_Middle | 21.56% | 8
+2 | DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young | 17.02% | 14
+2 | RecoveryResolution_Young -> CompressionProcessing_Young -> CompressionProcessing_Young | 16.05% | 14
+2 | ReassertionProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 13.96% | 44
+2 | NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 13.75% | 0
+2 | CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young | 13.27% | 0
+2 | MixedStructure_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 13.06% | 38
+2 | ExhaustionPersistence_Late -> DestructiveRotation_Young -> DecayToNeutral_Young | 8.56% | 2
+2 | MixedStructure_Middle -> DestructiveRotation_Young -> DecayToNeutral_Young | 8.56% | 0
+2 | ExhaustionPersistence_Young -> ExhaustionPersistence_Young -> ExhaustionPersistence_Young | 7.37% | 0
+3 | NeutralProcessing_Late -> NeutralProcessing_Late -> NeutralProcessing_Late -> NeutralProcessing_Late | 33.91% | 76
+3 | CompressionProcessing_Late -> CompressionProcessing_Late -> CompressionProcessing_Late -> CompressionProcessing_Late | 29.63% | 2
+3 | NeutralProcessing_Middle -> NeutralProcessing_Middle -> NeutralProcessing_Middle -> NeutralProcessing_Middle | 20.82% | 0
+3 | DestructiveRotation_Middle -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 19.66% | 2
+3 | ReassertionProcessing_Middle -> DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young | 17.02% | 0
+3 | ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle | 16.49% | 0
+3 | RecoveryResolution_Middle -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young | 10.32% | 0
+3 | CompressionProcessing_Middle -> CompressionProcessing_Middle -> CompressionProcessing_Middle -> CompressionProcessing_Middle | 10.01% | 0
+3 | DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 9.11% | 0
+3 | ConstructiveEmergence_Young -> MixedStructure_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 8.40% | 3
+3 | DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 6.31% | 11
+3 | RecoveryResolution_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young | 5.85% | 0
+3 | ExhaustionPersistence_Late -> DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young | 5.67% | 2
+3 | MixedStructure_Middle -> DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young | 5.67% | 0
+3 | ReassertionProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 5.17% | 0
+3 | NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 5.10% | 0
+3 | MixedStructure_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 4.84% | 0
+3 | CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young | 4.83% | 0
+3 | ExhaustionPersistence_Young -> ExhaustionPersistence_Young -> ExhaustionPersistence_Young -> ExhaustionPersistence_Young | 2.00% | 0
+4 | NeutralProcessing_Late -> NeutralProcessing_Late -> NeutralProcessing_Late -> NeutralProcessing_Late -> NeutralProcessing_Late | 23.65% | 53
+4 | CompressionProcessing_Late -> CompressionProcessing_Late -> CompressionProcessing_Late -> CompressionProcessing_Late -> CompressionProcessing_Late | 19.75% | 1
+4 | NeutralProcessing_Middle -> NeutralProcessing_Middle -> NeutralProcessing_Middle -> NeutralProcessing_Middle -> NeutralProcessing_Middle | 12.34% | 0
+4 | ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle | 9.04% | 0
+4 | DestructiveRotation_Middle -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 7.29% | 0
+4 | ReassertionProcessing_Middle -> DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 6.31% | 0
+4 | CompressionProcessing_Middle -> CompressionProcessing_Middle -> CompressionProcessing_Middle -> CompressionProcessing_Middle -> CompressionProcessing_Middle | 4.65% | 0
+4 | RecoveryResolution_Middle -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young | 3.76% | 0
+4 | DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 3.38% | 0
+4 | ConstructiveEmergence_Young -> MixedStructure_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 3.11% | 0
+4 | DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 2.34% | 0
+4 | RecoveryResolution_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young | 2.13% | 0
+4 | ExhaustionPersistence_Late -> DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 2.10% | 2
+4 | MixedStructure_Middle -> DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 2.10% | 0
+4 | ReassertionProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 1.92% | 0
+4 | NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 1.89% | 0
+4 | MixedStructure_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 1.80% | 0
+4 | CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young | 1.76% | 0
+4 | ExhaustionPersistence_Young -> ExhaustionPersistence_Young -> ExhaustionPersistence_Young -> ExhaustionPersistence_Young -> ExhaustionPersistence_Young | 0.54% | 0
+5 | NeutralProcessing_Late -> NeutralProcessing_Late -> NeutralProcessing_Late -> NeutralProcessing_Late -> NeutralProcessing_Late -> NeutralProcessing_Late | 16.49% | 37
+5 | CompressionProcessing_Late -> CompressionProcessing_Late -> CompressionProcessing_Late -> CompressionProcessing_Late -> CompressionProcessing_Late -> CompressionProcessing_Late | 13.17% | 0
+5 | NeutralProcessing_Middle -> NeutralProcessing_Middle -> NeutralProcessing_Middle -> NeutralProcessing_Middle -> NeutralProcessing_Middle -> NeutralProcessing_Middle | 7.32% | 0
+5 | ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle -> ExhaustionPersistence_Middle | 4.96% | 0
+5 | DestructiveRotation_Middle -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 2.70% | 0
+5 | ReassertionProcessing_Middle -> DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 2.34% | 0
+5 | CompressionProcessing_Middle -> CompressionProcessing_Middle -> CompressionProcessing_Middle -> CompressionProcessing_Middle -> CompressionProcessing_Middle -> CompressionProcessing_Middle | 2.16% | 0
+5 | RecoveryResolution_Middle -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young | 1.37% | 0
+5 | DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 1.25% | 0
+5 | ConstructiveEmergence_Young -> MixedStructure_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 1.15% | 0
+5 | DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 0.87% | 0
+5 | ExhaustionPersistence_Late -> DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 0.78% | 0
+5 | MixedStructure_Middle -> DestructiveRotation_Young -> DecayToNeutral_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 0.78% | 0
+5 | RecoveryResolution_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young | 0.78% | 0
+5 | ReassertionProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 0.71% | 0
+5 | NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 0.70% | 0
+5 | MixedStructure_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young -> NeutralProcessing_Young | 0.67% | 0
+5 | CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young -> CompressionProcessing_Young | 0.64% | 0
+5 | ExhaustionPersistence_Young -> ExhaustionPersistence_Young -> ExhaustionPersistence_Young -> ExhaustionPersistence_Young -> ExhaustionPersistence_Young -> ExhaustionPersistence_Young | 0.15% | 0
+
+9. Graph Compression
+ProbabilityMass | NodeCount | EdgeCount | CompressionRatio
+90.00% | 30 | 64 | 41.56%
+95.00% | 32 | 87 | 56.49%
+99.00% | 33 | 135 | 87.66%
+
+10. Outcome Diagnostics
+Diagnostic only. Forward outcomes are not used in graph construction.
+ItemType | Item | Count | MeanDRFwd5 | MedianDRFwd5 | ContinuationRate5 | FailureRate5 | FlatRate5 | OutcomeSkew
+Node | CompressionProcessing_Age1 | 87 | 2.2040 | 1.7500 | 50.57% | 49.43% | 0.00% | 1.15%
+Node | CompressionProcessing_Age2 | 51 | -7.0784 | -2.5000 | 45.10% | 54.90% | 0.00% | -9.80%
+Node | CompressionProcessing_Age3 | 30 | -11.9833 | 3.8750 | 53.33% | 43.33% | 3.33% | 10.00%
+Node | CompressionProcessing_Age4 | 18 | 9.3056 | 0.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Node | CompressionProcessing_Age5 | 8 | 6.4062 | -11.8750 | 25.00% | 75.00% | 0.00% | -50.00%
+Node | CompressionProcessing_Age6-10 | 9 | -9.8333 | -1.2500 | 33.33% | 66.67% | 0.00% | -33.33%
+Node | ConstructiveEmergence_Age1 | 14 | 0.3036 | 7.0000 | 64.29% | 35.71% | 0.00% | 28.57%
+Node | DecayToNeutral_Age1 | 84 | -13.4464 | -5.8750 | 42.86% | 55.95% | 1.19% | -13.10%
+Node | DestructiveRotation_Age1 | 63 | -6.5833 | -5.7500 | 47.62% | 50.79% | 1.59% | -3.17%
+Node | DestructiveRotation_Age2 | 11 | -19.8409 | -3.5000 | 36.36% | 63.64% | 0.00% | -27.27%
+Node | DestructiveRotation_Age3 | 5 | -29.8000 | -12.0000 | 40.00% | 60.00% | 0.00% | -20.00%
+Node | ExhaustionPersistence_Age1 | 51 | -2.5490 | -2.5000 | 45.10% | 52.94% | 1.96% | -7.84%
+Node | ExhaustionPersistence_Age2 | 19 | -25.0658 | -37.7500 | 26.32% | 73.68% | 0.00% | -47.37%
+Node | ExhaustionPersistence_Age3 | 14 | -39.6250 | -21.2500 | 35.71% | 64.29% | 0.00% | -28.57%
+Node | ExhaustionPersistence_Age4 | 11 | -17.0909 | -19.2500 | 27.27% | 72.73% | 0.00% | -45.45%
+Node | ExhaustionPersistence_Age5 | 6 | -25.7500 | 4.8750 | 66.67% | 33.33% | 0.00% | 33.33%
+Node | ExhaustionPersistence_Age6-10 | 6 | -46.9167 | -12.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Node | MixedStructure_Age1 | 183 | -11.4809 | -5.2500 | 43.72% | 56.28% | 0.00% | -12.57%
+Node | MixedStructure_Age2 | 27 | 1.2778 | -4.5000 | 40.74% | 55.56% | 3.70% | -14.81%
+Node | MixedStructure_Age3 | 4 | 19.1250 | 21.7500 | 50.00% | 50.00% | 0.00% | 0.00%
+Node | MixedStructure_Age4 | 2 | -35.1250 | -35.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Node | NeutralProcessing_Age1 | 297 | 0.0135 | 3.5000 | 53.20% | 46.46% | 0.34% | 6.73%
+Node | NeutralProcessing_Age11-20 | 37 | -4.4122 | 0.5000 | 51.35% | 48.65% | 0.00% | 2.70%
+Node | NeutralProcessing_Age2 | 173 | -1.3656 | 3.5000 | 54.34% | 45.66% | 0.00% | 8.67%
+Node | NeutralProcessing_Age3 | 111 | 12.1869 | 2.0000 | 53.15% | 46.85% | 0.00% | 6.31%
+Node | NeutralProcessing_Age4 | 82 | -6.0488 | -1.0000 | 48.78% | 51.22% | 0.00% | -2.44%
+Node | NeutralProcessing_Age5 | 79 | -1.7722 | 1.7500 | 53.16% | 46.84% | 0.00% | 6.33%
+Node | NeutralProcessing_Age6-10 | 188 | -0.7660 | -1.7500 | 48.40% | 51.60% | 0.00% | -3.19%
+Node | ReassertionProcessing_Age1 | 147 | -2.8554 | -4.7500 | 46.26% | 53.06% | 0.68% | -6.80%
+Node | ReassertionProcessing_Age2 | 31 | -14.4435 | -9.5000 | 38.71% | 61.29% | 0.00% | -22.58%
+Node | ReassertionProcessing_Age3 | 1 | -21.7500 | -21.7500 | 0.00% | 100.00% | 0.00% | -100.00%
+Node | RecoveryResolution_Age1 | 45 | 17.3667 | 17.7500 | 62.22% | 37.78% | 0.00% | 24.44%
+Node | RecoveryResolution_Age2 | 13 | -3.9615 | 21.0000 | 61.54% | 38.46% | 0.00% | 23.08%
+Node | RecoveryResolution_Age3 | 9 | 5.0000 | 10.5000 | 66.67% | 33.33% | 0.00% | 33.33%
+Chain | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 | 29 | 9.2931 | 9.5000 | 62.07% | 37.93% | 0.00% | 24.14%
+Chain | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 17 | -1.5000 | 8.2500 | 52.94% | 47.06% | 0.00% | 5.88%
+Chain | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 | 8 | -18.3750 | -3.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 | 3 | -83.5000 | -82.5000 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 18 | 2.4583 | 21.8750 | 55.56% | 44.44% | 0.00% | 11.11%
+Chain | CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 | 8 | -2.4688 | 25.0000 | 62.50% | 37.50% | 0.00% | 25.00%
+Chain | CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 | 3 | 13.4167 | 32.0000 | 66.67% | 33.33% | 0.00% | 33.33%
+Chain | CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 3 | 13.4167 | 32.0000 | 66.67% | 33.33% | 0.00% | 33.33%
+Chain | CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 | 8 | -8.1250 | 2.8750 | 50.00% | 37.50% | 12.50% | 12.50%
+Chain | CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 | 3 | 20.6667 | 0.0000 | 33.33% | 33.33% | 33.33% | 0.00%
+Chain | CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 3 | 20.6667 | 0.0000 | 33.33% | 33.33% | 33.33% | 0.00%
+Chain | CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 1 | 66.5000 | 66.5000 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 | 3 | -1.1667 | -3.5000 | 33.33% | 66.67% | 0.00% | -33.33%
+Chain | CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 3 | -1.1667 | -3.5000 | 33.33% | 66.67% | 0.00% | -33.33%
+Chain | CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 1 | -3.5000 | -3.5000 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 1 | -3.5000 | -3.5000 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 3 | -24.6667 | -26.5000 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 1 | -44.7500 | -44.7500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 1 | -44.7500 | -44.7500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | CompressionProcessing_Age5 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 1 | -44.7500 | -44.7500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 3 | 2.8333 | 2.2500 | 66.67% | 33.33% | 0.00% | 33.33%
+Chain | CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 2 | 9.8750 | 9.8750 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 1 | 17.5000 | 17.5000 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 -> CompressionProcessing_Age6-10 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 3 | 15.2500 | 13.2500 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 3 | 15.2500 | 13.2500 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 2 | 18.2500 | 18.2500 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 2 | 18.2500 | 18.2500 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 37 | -27.7230 | -6.0000 | 35.14% | 62.16% | 2.70% | -27.03%
+Chain | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 23 | -25.1848 | -14.0000 | 34.78% | 65.22% | 0.00% | -30.43%
+Chain | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 23 | -25.1848 | -14.0000 | 34.78% | 65.22% | 0.00% | -30.43%
+Chain | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 20 | -27.5125 | -11.7500 | 35.00% | 65.00% | 0.00% | -30.00%
+Chain | DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 12 | -9.4375 | 5.2500 | 58.33% | 41.67% | 0.00% | 16.67%
+Chain | DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 10 | -25.9250 | -0.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 6 | -17.8750 | -0.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 6 | -17.8750 | -0.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | DestructiveRotation_Age2 -> DestructiveRotation_Age3 -> DecayToNeutral_Age1 | 4 | 0.7500 | -2.2500 | 25.00% | 75.00% | 0.00% | -50.00%
+Chain | DestructiveRotation_Age2 -> DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 3 | 2.1667 | -1.0000 | 33.33% | 66.67% | 0.00% | -33.33%
+Chain | DestructiveRotation_Age2 -> DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 2 | 20.7500 | 20.7500 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | DestructiveRotation_Age2 -> DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 2 | 20.7500 | 20.7500 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 3 | 5.7500 | 14.2500 | 66.67% | 33.33% | 0.00% | 33.33%
+Chain | DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 2 | 1.5000 | 1.5000 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 2 | 1.5000 | 1.5000 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | DestructiveRotation_Age3 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 2 | 1.5000 | 1.5000 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 | 14 | 25.0000 | 4.2500 | 50.00% | 42.86% | 7.14% | 7.14%
+Chain | ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 | 11 | 21.5227 | 8.5000 | 54.55% | 36.36% | 9.09% | 18.18%
+Chain | ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 | 6 | 39.4167 | 28.1250 | 83.33% | 16.67% | 0.00% | 66.67%
+Chain | ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 | 4 | 41.6875 | 28.1250 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 | 11 | -32.5227 | -30.5000 | 27.27% | 72.73% | 0.00% | -45.45%
+Chain | ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 | 6 | -29.7917 | -21.3750 | 33.33% | 66.67% | 0.00% | -33.33%
+Chain | ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 | 4 | -41.9375 | -45.7500 | 25.00% | 75.00% | 0.00% | -50.00%
+Chain | ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 | 1 | 7.7500 | 7.7500 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 | 6 | -43.6250 | -32.3750 | 16.67% | 83.33% | 0.00% | -66.67%
+Chain | ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 | 4 | -49.2500 | -49.0000 | 25.00% | 75.00% | 0.00% | -50.00%
+Chain | ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 | 1 | 4.0000 | 4.0000 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 1 | 4.0000 | 4.0000 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 | 4 | -31.1250 | -22.7500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 | 1 | -12.2500 | -12.2500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 1 | -12.2500 | -12.2500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 1 | -12.2500 | -12.2500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 | 1 | 9.0000 | 9.0000 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 1 | 9.0000 | 9.0000 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 1 | 9.0000 | 9.0000 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | ExhaustionPersistence_Age5 -> ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 1 | 9.0000 | 9.0000 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 2 | -32.1250 | -32.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 2 | -32.1250 | -32.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 2 | -32.1250 | -32.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | ExhaustionPersistence_Age6-10 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 2 | -32.1250 | -32.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 35 | -18.9500 | -17.5000 | 25.71% | 74.29% | 0.00% | -48.57%
+Chain | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 20 | -7.2000 | -10.7500 | 30.00% | 70.00% | 0.00% | -40.00%
+Chain | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 13 | -12.7308 | -16.7500 | 30.77% | 69.23% | 0.00% | -38.46%
+Chain | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 13 | -12.7308 | -16.7500 | 30.77% | 69.23% | 0.00% | -38.46%
+Chain | MixedStructure_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 3 | -16.5000 | -5.2500 | 33.33% | 66.67% | 0.00% | -33.33%
+Chain | MixedStructure_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 1 | -5.2500 | -5.2500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | MixedStructure_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 1 | -5.2500 | -5.2500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | MixedStructure_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 1 | -5.2500 | -5.2500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | MixedStructure_Age3 -> MixedStructure_Age4 -> DestructiveRotation_Age1 | 1 | -38.0000 | -38.0000 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | MixedStructure_Age3 -> MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | MixedStructure_Age3 -> MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | MixedStructure_Age3 -> MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | MixedStructure_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 112 | -7.7679 | 4.0000 | 53.57% | 46.43% | 0.00% | 7.14%
+Chain | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 83 | -4.2530 | 3.2500 | 51.81% | 48.19% | 0.00% | 3.61%
+Chain | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 80 | -5.8625 | 1.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 70 | -5.7643 | 1.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 | 16 | 14.4688 | 10.3750 | 56.25% | 43.75% | 0.00% | 12.50%
+Chain | NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 | 9 | -0.9444 | 14.7500 | 55.56% | 44.44% | 0.00% | 11.11%
+Chain | NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 | 5 | -7.5500 | -12.0000 | 40.00% | 60.00% | 0.00% | -20.00%
+Chain | NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 | 3 | -3.7500 | -12.0000 | 33.33% | 66.67% | 0.00% | -33.33%
+Chain | NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 83 | -5.6084 | 3.2500 | 54.22% | 45.78% | 0.00% | 8.43%
+Chain | NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 80 | -5.8063 | 3.1250 | 53.75% | 46.25% | 0.00% | 7.50%
+Chain | NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 70 | -8.0750 | 1.1250 | 51.43% | 48.57% | 0.00% | 2.86%
+Chain | NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 50 | -9.6750 | 3.3750 | 58.00% | 42.00% | 0.00% | 16.00%
+Chain | NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 79 | 11.4272 | 1.7500 | 53.16% | 46.84% | 0.00% | 6.33%
+Chain | NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 69 | 13.3877 | 1.7500 | 53.62% | 46.38% | 0.00% | 7.25%
+Chain | NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 49 | 9.3827 | -0.5000 | 48.98% | 51.02% | 0.00% | -2.04%
+Chain | NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 33 | 3.1212 | -4.0000 | 42.42% | 57.58% | 0.00% | -15.15%
+Chain | NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 69 | -4.1304 | 3.7500 | 53.62% | 46.38% | 0.00% | 7.25%
+Chain | NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 49 | -12.2653 | -1.2500 | 48.98% | 51.02% | 0.00% | -2.04%
+Chain | NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 33 | 0.7727 | 4.0000 | 54.55% | 45.45% | 0.00% | 9.09%
+Chain | NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 23 | -4.4565 | 0.2500 | 52.17% | 47.83% | 0.00% | 4.35%
+Chain | NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 49 | 3.6173 | 2.2500 | 57.14% | 42.86% | 0.00% | 14.29%
+Chain | NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 33 | 3.1364 | 1.7500 | 54.55% | 45.45% | 0.00% | 9.09%
+Chain | NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 23 | 10.8261 | 4.0000 | 60.87% | 39.13% | 0.00% | 21.74%
+Chain | NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 16 | 8.7188 | 3.3750 | 62.50% | 37.50% | 0.00% | 25.00%
+Chain | NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 70 | -10.7179 | -9.0000 | 42.86% | 57.14% | 0.00% | -14.29%
+Chain | NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 38 | -24.8421 | -14.0000 | 31.58% | 68.42% | 0.00% | -36.84%
+Chain | NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 16 | -32.5938 | -27.0000 | 25.00% | 75.00% | 0.00% | -50.00%
+Chain | NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 38 | 14.2237 | 0.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Chain | ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 26 | 19.0096 | 6.0000 | 53.85% | 46.15% | 0.00% | 7.69%
+Chain | ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 14 | 11.4643 | 9.3750 | 64.29% | 35.71% | 0.00% | 28.57%
+Chain | ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 14 | 11.4643 | 9.3750 | 64.29% | 35.71% | 0.00% | 28.57%
+Chain | ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 3 | -52.9167 | -29.7500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 1 | -120.7500 | -120.7500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 1 | -120.7500 | -120.7500 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | ReassertionProcessing_Age3 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | ReassertionProcessing_Age3 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | ReassertionProcessing_Age3 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | ReassertionProcessing_Age3 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 | 13 | 21.3462 | 19.5000 | 69.23% | 30.77% | 0.00% | 38.46%
+Chain | RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 | 10 | 24.0750 | 21.8750 | 70.00% | 30.00% | 0.00% | 40.00%
+Chain | RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 9 | 21.3056 | 19.5000 | 66.67% | 33.33% | 0.00% | 33.33%
+Chain | RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 | 1 | -5.5000 | -5.5000 | 0.00% | 100.00% | 0.00% | -100.00%
+Chain | RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 | 7 | 16.5357 | 26.5000 | 57.14% | 42.86% | 0.00% | 14.29%
+Chain | RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 | 3 | -18.7500 | -16.0000 | 33.33% | 66.67% | 0.00% | -33.33%
+Chain | RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 | 1 | 88.2500 | 88.2500 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 | 3 | 46.9167 | 61.0000 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 | 1 | 77.7500 | 77.7500 | 100.00% | 0.00% | 0.00% | 100.00%
+Chain | RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Chain | RecoveryResolution_Age3 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> MixedStructure_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 3 | 31.5833 | 34.2500 | 66.67% | 33.33% | 0.00% | 33.33%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> CompressionProcessing_Age5 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> CompressionProcessing_Age1 | 6 | 1.3333 | -5.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 -> DestructiveRotation_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 2 | -17.1250 | -17.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 4 | 5.5000 | 35.5000 | 75.00% | 25.00% | 0.00% | 50.00%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> NeutralProcessing_Age1 -> DestructiveRotation_Age1 -> MixedStructure_Age1 -> CompressionProcessing_Age1 | 3 | -8.5833 | -4.0000 | 0.00% | 100.00% | 0.00% | -100.00%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> CompressionProcessing_Age1 | 2 | -18.1250 | -18.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> CompressionProcessing_Age1 | 6 | -8.2500 | -2.8750 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 2 | 38.8750 | 38.8750 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> DecayToNeutral_Age1 -> MixedStructure_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 2 | -0.3750 | -0.3750 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> NeutralProcessing_Age1 -> CompressionProcessing_Age1 | 15 | -14.9500 | -10.0000 | 33.33% | 66.67% | 0.00% | -33.33%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> CompressionProcessing_Age1 | 2 | -136.2500 | -136.2500 | 0.00% | 100.00% | 0.00% | -100.00%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> MixedStructure_Age2 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 2 | 176.0000 | 176.0000 | 100.00% | 0.00% | 0.00% | 100.00%
+Cycle | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 2 | -1.7500 | -1.7500 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> ExhaustionPersistence_Age1 -> CompressionProcessing_Age1 | 2 | -10.5000 | -10.5000 | 0.00% | 100.00% | 0.00% | -100.00%
+Cycle | CompressionProcessing_Age1 -> ExhaustionPersistence_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> CompressionProcessing_Age1 | 2 | 206.1250 | 206.1250 | 100.00% | 0.00% | 0.00% | 100.00%
+Cycle | CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> CompressionProcessing_Age1 | 9 | -45.0556 | -33.5000 | 33.33% | 66.67% | 0.00% | -33.33%
+Cycle | CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> CompressionProcessing_Age1 | 5 | -2.8500 | 1.7500 | 60.00% | 40.00% | 0.00% | 20.00%
+Cycle | CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> CompressionProcessing_Age1 | 4 | 24.9375 | 24.8750 | 100.00% | 0.00% | 0.00% | 100.00%
+Cycle | CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> MixedStructure_Age1 -> CompressionProcessing_Age1 | 3 | -3.2500 | -11.2500 | 33.33% | 66.67% | 0.00% | -33.33%
+Cycle | CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> ExhaustionPersistence_Age5 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 4 | 10.4375 | 23.1250 | 75.00% | 25.00% | 0.00% | 50.00%
+Cycle | CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> MixedStructure_Age1 -> MixedStructure_Age2 -> MixedStructure_Age3 -> MixedStructure_Age4 -> DestructiveRotation_Age1 -> DestructiveRotation_Age2 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 2 | -21.7500 | -21.7500 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ExhaustionPersistence_Age1 -> RecoveryResolution_Age1 -> RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 | 6 | 34.0833 | 30.7500 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> RecoveryResolution_Age1 -> RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> CompressionProcessing_Age1 | 2 | 32.5000 | 32.5000 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 4 | -5.1875 | -14.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> RecoveryResolution_Age1 -> NeutralProcessing_Age1 -> CompressionProcessing_Age1 | 2 | 4.0000 | 4.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | CompressionProcessing_Age1 -> RecoveryResolution_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> CompressionProcessing_Age1 | 2 | -29.5000 | -29.5000 | 0.00% | 100.00% | 0.00% | -100.00%
+Cycle | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> ConstructiveEmergence_Age1 | 2 | -0.6250 | -0.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ConstructiveEmergence_Age1 | 4 | -7.5000 | -10.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> MixedStructure_Age2 -> DestructiveRotation_Age1 -> DestructiveRotation_Age2 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> ConstructiveEmergence_Age1 | 2 | 18.3750 | 18.3750 | 100.00% | 0.00% | 0.00% | 100.00%
+Cycle | ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ConstructiveEmergence_Age1 | 2 | 8.2500 | 8.2500 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | DecayToNeutral_Age1 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 4 | -4.5625 | 2.7500 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | DecayToNeutral_Age1 -> DestructiveRotation_Age1 -> ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 | 3 | 37.4167 | 63.2500 | 66.67% | 33.33% | 0.00% | 33.33%
+Cycle | DecayToNeutral_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 24 | -16.5417 | -7.6250 | 37.50% | 62.50% | 0.00% | -25.00%
+Cycle | DecayToNeutral_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 | 2 | 127.8750 | 127.8750 | 100.00% | 0.00% | 0.00% | 100.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 2 | -10.3750 | -10.3750 | 0.00% | 100.00% | 0.00% | -100.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 11 | -1.0909 | 17.2500 | 63.64% | 36.36% | 0.00% | 27.27%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 3 | 77.5833 | 77.7500 | 100.00% | 0.00% | 0.00% | 100.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 -> MixedStructure_Age2 -> DecayToNeutral_Age1 | 2 | 12.7500 | 12.7500 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 2 | -13.8750 | -13.8750 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 2 | -1.0000 | -1.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> DestructiveRotation_Age1 -> DestructiveRotation_Age2 -> DecayToNeutral_Age1 | 2 | -44.0000 | -44.0000 | 0.00% | 100.00% | 0.00% | -100.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 4 | 42.6250 | 45.2500 | 100.00% | 0.00% | 0.00% | 100.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 6 | -14.7083 | -21.3750 | 33.33% | 66.67% | 0.00% | -33.33%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 | 6 | -2.7083 | 5.0000 | 66.67% | 33.33% | 0.00% | 33.33%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> MixedStructure_Age1 -> MixedStructure_Age2 -> DecayToNeutral_Age1 | 7 | -0.1786 | 2.2500 | 57.14% | 42.86% | 0.00% | 14.29%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 10 | 1.3000 | -9.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 | 2 | -33.8750 | -33.8750 | 0.00% | 100.00% | 0.00% | -100.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 2 | 17.2500 | 17.2500 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> DestructiveRotation_Age2 -> DecayToNeutral_Age1 | 2 | 36.5000 | 36.5000 | 100.00% | 0.00% | 0.00% | 100.00%
+Cycle | DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 -> MixedStructure_Age2 -> DecayToNeutral_Age1 | 2 | 15.3750 | 15.3750 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> DestructiveRotation_Age1 | 6 | -5.6667 | -20.7500 | 33.33% | 66.67% | 0.00% | -33.33%
+Cycle | DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> DestructiveRotation_Age1 | 2 | 5.3750 | 5.3750 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 | 2 | -8.8750 | -8.8750 | 0.00% | 100.00% | 0.00% | -100.00%
+Cycle | DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> ReassertionProcessing_Age3 -> DestructiveRotation_Age1 | 2 | 19.8750 | 19.8750 | 100.00% | 0.00% | 0.00% | 100.00%
+Cycle | DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 | 2 | 69.1250 | 69.1250 | 100.00% | 0.00% | 0.00% | 100.00%
+Cycle | DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> DestructiveRotation_Age1 | 4 | 10.0625 | 4.3750 | 75.00% | 0.00% | 25.00% | 75.00%
+Cycle | DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 | 6 | -14.0833 | -22.6250 | 33.33% | 66.67% | 0.00% | -33.33%
+Cycle | DestructiveRotation_Age1 -> ReassertionProcessing_Age1 -> DestructiveRotation_Age1 | 5 | 57.0000 | 20.7500 | 80.00% | 20.00% | 0.00% | 60.00%
+Cycle | DestructiveRotation_Age1 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 | 3 | 35.2500 | 40.0000 | 66.67% | 33.33% | 0.00% | 33.33%
+Cycle | ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 | 2 | 1.6250 | 1.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | ExhaustionPersistence_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 | 2 | -6.3750 | -6.3750 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | ExhaustionPersistence_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ExhaustionPersistence_Age1 | 6 | 4.7083 | 25.7500 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | MixedStructure_Age1 -> MixedStructure_Age2 -> NeutralProcessing_Age1 -> MixedStructure_Age1 | 9 | -10.9722 | -19.7500 | 44.44% | 55.56% | 0.00% | -11.11%
+Cycle | MixedStructure_Age1 -> MixedStructure_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 | 2 | 52.6250 | 52.6250 | 100.00% | 0.00% | 0.00% | 100.00%
+Cycle | MixedStructure_Age1 -> MixedStructure_Age2 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 2 | 32.6250 | 32.6250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | MixedStructure_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 | 22 | -8.2500 | 3.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 | 28 | 1.4554 | -2.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> MixedStructure_Age1 | 6 | 9.5833 | 8.5000 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> MixedStructure_Age1 | 2 | 12.1250 | 12.1250 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> MixedStructure_Age1 | 5 | 13.5500 | 21.7500 | 60.00% | 40.00% | 0.00% | 20.00%
+Cycle | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 9 | -34.8056 | -33.2500 | 22.22% | 77.78% | 0.00% | -55.56%
+Cycle | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 5 | -5.6000 | -15.5000 | 40.00% | 60.00% | 0.00% | -20.00%
+Cycle | MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 9 | -7.6667 | -10.2500 | 22.22% | 77.78% | 0.00% | -55.56%
+Cycle | MixedStructure_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 22 | -10.6250 | -6.6250 | 45.45% | 54.55% | 0.00% | -9.09%
+Cycle | MixedStructure_Age1 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 18 | -30.3472 | -11.8750 | 44.44% | 55.56% | 0.00% | -11.11%
+Cycle | MixedStructure_Age1 -> RecoveryResolution_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 | 3 | 24.2500 | 7.5000 | 66.67% | 33.33% | 0.00% | 33.33%
+Cycle | MixedStructure_Age1 -> RecoveryResolution_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 | 2 | -2.8750 | -2.8750 | 50.00% | 50.00% | 0.00% | 0.00%
+Cycle | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 4 | 0.9375 | -6.3750 | 25.00% | 75.00% | 0.00% | -50.00%
+Cycle | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 41 | -0.2500 | -5.0000 | 43.90% | 56.10% | 0.00% | -12.20%
+Cycle | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 41 | -3.2683 | -10.5000 | 43.90% | 56.10% | 0.00% | -12.20%
+Cycle | NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> NeutralProcessing_Age1 | 13 | -6.9231 | -10.2500 | 38.46% | 61.54% | 0.00% | -23.08%
+Cycle | NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 29 | 7.7328 | 11.0000 | 68.97% | 31.03% | 0.00% | 37.93%
+Cycle | NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> NeutralProcessing_Age1 | 2 | -21.8750 | -21.8750 | 0.00% | 100.00% | 0.00% | -100.00%
+
+11. Graph Recommendation
+Instrument-only diagnostic: FullAgeBucketGraph
+ProbabilityMassRetention=78.39%; MeanEntropyIncrease=24.19%; ValidInstrumentCount=1.
+The aggregate report applies the required cross-instrument rule.
+
+12. Low-DoF Audit
+Variables used:
+StructuralState
+AgeBucket
+
+No Context
+No Arbitration
+No Persistence
+No Phase
+No Optimization
+No Fitting
+No Machine Learning
+No Forward Returns used in graph construction
+
+13. Mechanical Research Notes
+- Every node is StructuralState + AgeBucket.
+- Every edge is an observed adjacent node transition.
+- Dominant chains and recurring observed simple cycles are constructed without forward price outcomes.
+- Outcome diagnostics remain separate from graph construction and recommendation.

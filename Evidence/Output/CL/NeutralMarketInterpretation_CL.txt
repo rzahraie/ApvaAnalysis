@@ -1,0 +1,243 @@
+APVA Neutral Market Interpretation Study v0.1
+============================================================================================================
+Instrument: CL
+Input path(s): .\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv
+Total rows: 2684
+Neutral rows: 1278
+OHLC available in loaded evidence rows: True
+Raw Volume available in loaded evidence rows: True
+
+1. Neutral Lifecycle Inventory
+Node | Count | Occupancy | ReplicationCount | MemoryStrength | BranchEntropy | NecessityScore
+NeutralProcessing_Age1 | 446 | 16.62% | 1 | 0.2042 | 1.2605 | 0.0000
+NeutralProcessing_Age2 | 253 | 9.43% | 1 | 0.2734 | 1.2109 | 0.1724
+NeutralProcessing_Age3 | 140 | 5.22% | 1 | 0.3509 | 0.7992 | 0.1905
+NeutralProcessing_Age4 | 106 | 3.95% | 1 | 0.3265 | 0.4644 | 0.9859
+NeutralProcessing_Age5 | 95 | 3.54% | 1 | 0.3357 | 0.7551 | 0.8718
+NeutralProcessing_Age6-10 | 208 | 7.75% | 1 | 0.2169 | 1.1917 | 0.2461
+NeutralProcessing_Age11-20 | 30 | 1.12% | 1 | 0.1926 | 1.1205 | 0.0000
+NeutralProcessing_Age21+ | 0 | 0.00% | 0 | 0.0000 | 0.0000 | 0.0000
+
+2. Price Behavior Profile
+Node | MeanRange | MeanBody | MeanCloseLocation | MeanDirection | MeanTrueRange
+NeutralProcessing_Age1 | 0.3597 | 0.1395 | 0.5022 | 0.0028 | 0.3808
+NeutralProcessing_Age2 | 0.3457 | 0.1073 | 0.4825 | -0.0090 | 0.3483
+NeutralProcessing_Age3 | 0.3286 | 0.1124 | 0.5354 | 0.0068 | 0.3287
+NeutralProcessing_Age4 | 0.3887 | 0.1525 | 0.4892 | 0.0130 | 0.3895
+NeutralProcessing_Age5 | 0.3938 | 0.1780 | 0.4982 | -0.0136 | 0.3941
+NeutralProcessing_Age6-10 | 0.3962 | 0.1639 | 0.4980 | -0.0038 | 0.4399
+NeutralProcessing_Age11-20 | 0.2970 | 0.1197 | 0.4280 | -0.0410 | 0.2973
+NeutralProcessing_Age21+ | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+
+3. Volume Behavior Profile
+Node | MeanVolume | MedianVolume | VolumePercentile | VolumeRelativeToPrevious | VolumeRelativeToSessionMean | BlackRate | RedRate | NeutralRate
+NeutralProcessing_Age1 | 1328.4664 | 1108.0000 | 42.43% | 0.8639 | 0.7968 | 47.09% | 49.78% | 3.14%
+NeutralProcessing_Age2 | 1183.3004 | 1013.0000 | 38.45% | 0.9433 | 0.7098 | 47.04% | 50.20% | 2.77%
+NeutralProcessing_Age3 | 1124.1429 | 939.0000 | 36.46% | 0.9723 | 0.6743 | 52.86% | 43.57% | 3.57%
+NeutralProcessing_Age4 | 1322.8208 | 1122.0000 | 42.84% | 1.2602 | 0.7935 | 50.00% | 48.11% | 1.89%
+NeutralProcessing_Age5 | 1282.1474 | 1061.0000 | 41.71% | 1.1412 | 0.7691 | 48.42% | 51.58% | 0.00%
+NeutralProcessing_Age6-10 | 1386.7692 | 1100.0000 | 41.81% | 1.2802 | 0.8318 | 49.52% | 47.60% | 2.88%
+NeutralProcessing_Age11-20 | 888.5000 | 717.0000 | 25.60% | 1.0278 | 0.5329 | 40.00% | 50.00% | 10.00%
+NeutralProcessing_Age21+ | 0.0000 | 0.0000 | 0.00% | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00%
+
+4. Range/Volume Coupling
+Node | RangeVolumeRatio | VolumeRangeRatio | RangeVolumeCorrelation
+NeutralProcessing_Age1 | 0.0003 | 3685.7173 | 0.6779
+NeutralProcessing_Age2 | 0.0003 | 3473.0284 | 0.7397
+NeutralProcessing_Age3 | 0.0003 | 3478.0735 | 0.7664
+NeutralProcessing_Age4 | 0.0003 | 3440.1441 | 0.8044
+NeutralProcessing_Age5 | 0.0004 | 3303.2798 | 0.6852
+NeutralProcessing_Age6-10 | 0.0003 | 3454.0429 | 0.9063
+NeutralProcessing_Age11-20 | 0.0004 | 2966.8007 | 0.8267
+NeutralProcessing_Age21+ | 0.0000 | 0.0000 | 0.0000
+
+5. Compression/Expansion Profile
+Node | CompressionLikeRate | ExpansionLikeRate | VolumeExpansionRate | VolumeContractionRate
+NeutralProcessing_Age1 | 79.15% | 19.51% | 23.09% | 76.91%
+NeutralProcessing_Age2 | 65.61% | 29.64% | 36.36% | 63.64%
+NeutralProcessing_Age3 | 60.00% | 37.14% | 41.43% | 57.86%
+NeutralProcessing_Age4 | 38.68% | 57.55% | 60.38% | 38.68%
+NeutralProcessing_Age5 | 44.21% | 52.63% | 45.26% | 54.74%
+NeutralProcessing_Age6-10 | 59.13% | 37.50% | 41.83% | 58.17%
+NeutralProcessing_Age11-20 | 63.33% | 36.67% | 40.00% | 56.67%
+NeutralProcessing_Age21+ | 0.00% | 0.00% | 0.00% | 0.00%
+
+6. Polarity Continuity
+Node | SamePolarityRate | PolarityFlipRate | BlackContinuationRate | RedContinuationRate
+NeutralProcessing_Age1 | 37.22% | 62.78% | 36.77% | 39.07%
+NeutralProcessing_Age2 | 43.08% | 56.92% | 43.09% | 45.53%
+NeutralProcessing_Age3 | 45.71% | 54.29% | 49.32% | 44.44%
+NeutralProcessing_Age4 | 48.11% | 51.89% | 51.72% | 48.84%
+NeutralProcessing_Age5 | 48.42% | 51.58% | 47.83% | 51.06%
+NeutralProcessing_Age6-10 | 42.31% | 57.69% | 42.42% | 44.23%
+NeutralProcessing_Age11-20 | 30.00% | 70.00% | 26.67% | 38.46%
+NeutralProcessing_Age21+ | 0.00% | 0.00% | 0.00% | 0.00%
+
+7. Excursion Risk
+Node | ExitWithin1 | ExitWithin2 | ExitWithin3 | ExitWithin5 | ExpectedBarsToExit
+NeutralProcessing_Age1 | 43.05% | 68.39% | 76.01% | 82.96% | 2.8697
+NeutralProcessing_Age2 | 44.66% | 58.10% | 62.45% | 77.87% | 3.2885
+NeutralProcessing_Age3 | 24.29% | 32.14% | 46.43% | 73.57% | 4.1357
+NeutralProcessing_Age4 | 10.38% | 29.25% | 47.17% | 78.30% | 4.1415
+NeutralProcessing_Age5 | 21.05% | 41.05% | 61.05% | 82.11% | 3.5053
+NeutralProcessing_Age6-10 | 30.77% | 53.85% | 69.23% | 87.02% | 3.0048
+NeutralProcessing_Age11-20 | 36.67% | 63.33% | 80.00% | 90.00% | 2.5333
+NeutralProcessing_Age21+ | 0.00% | 0.00% | 0.00% | 0.00% | 0.0000
+
+8. Excursion Destination
+NeutralNode | DestinationFamily | Count | Probability | ReplicationCount
+NeutralProcessing_Age1 | Mixed | 66 | 34.38% | 1
+NeutralProcessing_Age1 | Reassertion | 63 | 32.81% | 1
+NeutralProcessing_Age2 | Mixed | 54 | 47.79% | 1
+NeutralProcessing_Age1 | Compression | 45 | 23.44% | 1
+NeutralProcessing_Age6-10 | Reassertion | 31 | 48.44% | 1
+NeutralProcessing_Age2 | Reassertion | 30 | 26.55% | 1
+NeutralProcessing_Age2 | Compression | 24 | 21.24% | 1
+NeutralProcessing_Age6-10 | Mixed | 20 | 31.25% | 1
+NeutralProcessing_Age1 | Destructive | 15 | 7.81% | 1
+NeutralProcessing_Age3 | Mixed | 15 | 44.12% | 1
+NeutralProcessing_Age3 | Reassertion | 14 | 41.18% | 1
+NeutralProcessing_Age5 | Mixed | 10 | 50.00% | 1
+NeutralProcessing_Age6-10 | Compression | 7 | 10.94% | 1
+NeutralProcessing_Age5 | Reassertion | 6 | 30.00% | 1
+NeutralProcessing_Age2 | Destructive | 5 | 4.42% | 1
+NeutralProcessing_Age3 | Compression | 5 | 14.71% | 1
+NeutralProcessing_Age11-20 | Mixed | 4 | 36.36% | 1
+NeutralProcessing_Age11-20 | Reassertion | 4 | 36.36% | 1
+NeutralProcessing_Age4 | Reassertion | 4 | 36.36% | 1
+NeutralProcessing_Age4 | Mixed | 4 | 36.36% | 1
+NeutralProcessing_Age6-10 | Exhaustion | 4 | 6.25% | 1
+NeutralProcessing_Age1 | Constructive | 3 | 1.56% | 1
+NeutralProcessing_Age5 | Compression | 3 | 15.00% | 1
+NeutralProcessing_Age11-20 | Compression | 2 | 18.18% | 1
+NeutralProcessing_Age4 | Exhaustion | 2 | 18.18% | 1
+NeutralProcessing_Age11-20 | Exhaustion | 1 | 9.09% | 1
+NeutralProcessing_Age4 | Constructive | 1 | 9.09% | 1
+NeutralProcessing_Age5 | Exhaustion | 1 | 5.00% | 1
+NeutralProcessing_Age6-10 | Constructive | 1 | 1.56% | 1
+NeutralProcessing_Age6-10 | Recovery | 1 | 1.56% | 1
+
+9. Return Behavior
+NeutralNode | ReturnWithin1 | ReturnWithin2 | ReturnWithin3 | ReturnWithin5 | MeanExcursionLength | MedianExcursionLength | MaxExcursionLength
+NeutralProcessing_Age1 | 0.00% | 27.60% | 59.90% | 72.40% | 3.6979 | 2.0000 | 25
+NeutralProcessing_Age2 | 0.00% | 63.72% | 87.61% | 91.15% | 2.0354 | 1.0000 | 17
+NeutralProcessing_Age3 | 0.00% | 61.76% | 79.41% | 88.24% | 2.5000 | 1.0000 | 16
+NeutralProcessing_Age4 | 0.00% | 54.55% | 54.55% | 90.91% | 3.1818 | 1.0000 | 16
+NeutralProcessing_Age5 | 0.00% | 50.00% | 75.00% | 85.00% | 2.5000 | 1.5000 | 10
+NeutralProcessing_Age6-10 | 0.00% | 29.69% | 48.44% | 71.88% | 3.7500 | 3.0000 | 13
+NeutralProcessing_Age11-20 | 0.00% | 27.27% | 63.64% | 63.64% | 4.7273 | 2.0000 | 21
+NeutralProcessing_Age21+ | 0.00% | 0.00% | 0.00% | 0.00% | 0.0000 | 0.0000 | 0
+
+10. Neutral Age Transition Meaning
+Transition | DeltaRange | DeltaBody | DeltaVolume | DeltaMemory | DeltaEntropy | DeltaExcursionRisk
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 | -0.0140 | -0.0322 | -145.1660 | 0.0692 | -0.0497 | -5.09%
+NeutralProcessing_Age2 -> NeutralProcessing_Age3 | -0.0171 | 0.0051 | -59.1575 | 0.0775 | -0.4117 | -4.29%
+NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 0.0601 | 0.0401 | 198.6779 | -0.0244 | -0.3348 | 4.73%
+NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 0.0051 | 0.0255 | -40.6734 | 0.0092 | 0.2907 | 3.80%
+NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 0.0024 | -0.0141 | 104.6219 | -0.1188 | 0.4366 | 4.91%
+NeutralProcessing_Age6-10 -> NeutralProcessing_Age11-20 | -0.0992 | -0.0443 | -498.2692 | -0.0243 | -0.0712 | 2.98%
+NeutralProcessing_Age11-20 -> NeutralProcessing_Age21+ | -0.2970 | -0.1197 | -888.5000 | -0.1926 | -1.1205 | -90.00%
+
+11. Neutral Equilibrium Test
+Node | EquilibriumScore | MemoryStrength | InverseBranchEntropy | InverseExcursionRisk
+NeutralProcessing_Age21+ | 0.6667 | 0.0000 | 1.0000 | 1.0000
+NeutralProcessing_Age4 | 0.5640 | 0.9306 | 0.6316 | 0.1300
+NeutralProcessing_Age3 | 0.5162 | 1.0000 | 0.3660 | 0.1825
+NeutralProcessing_Age5 | 0.4818 | 0.9567 | 0.4010 | 0.0877
+NeutralProcessing_Age2 | 0.3178 | 0.7791 | 0.0394 | 0.1348
+NeutralProcessing_Age6-10 | 0.2353 | 0.6181 | 0.0546 | 0.0331
+NeutralProcessing_Age1 | 0.2201 | 0.5820 | 0.0000 | 0.0782
+NeutralProcessing_Age11-20 | 0.2200 | 0.5489 | 0.1111 | 0.0000
+
+12. Neutral Staleness Test
+Node | StalenessScore | MemoryChange | ExcursionRisk | VolumeEfficiencyChange
+NeutralProcessing_Age21+ | 0.6667 | 1.0000 | 0.0000 | 1.0000
+NeutralProcessing_Age6-10 | 0.5645 | 0.7268 | 0.9669 | 0.0000
+NeutralProcessing_Age11-20 | 0.5272 | 0.3769 | 1.0000 | 0.2046
+NeutralProcessing_Age4 | 0.4359 | 0.3771 | 0.8700 | 0.0605
+NeutralProcessing_Age5 | 0.4192 | 0.2530 | 0.9123 | 0.0923
+NeutralProcessing_Age1 | 0.4190 | 0.2869 | 0.9218 | 0.0484
+NeutralProcessing_Age2 | 0.3375 | 0.0308 | 0.8652 | 0.1166
+NeutralProcessing_Age3 | 0.2881 | 0.0000 | 0.8175 | 0.0467
+
+13. Neutral Gateway Test
+Node | GatewayScore | IncomingOutgoing | InverseNecessity | BranchEntropy
+NeutralProcessing_Age1 | 1.0000 | 1.0000 | 1.0000 | 1.0000
+NeutralProcessing_Age11-20 | 0.6528 | 0.0694 | 1.0000 | 0.8889
+NeutralProcessing_Age2 | 0.6068 | 0.0347 | 0.8252 | 0.9606
+NeutralProcessing_Age6-10 | 0.6023 | 0.1111 | 0.7503 | 0.9454
+NeutralProcessing_Age3 | 0.4895 | 0.0278 | 0.8068 | 0.6340
+NeutralProcessing_Age21+ | 0.3333 | 0.0000 | 1.0000 | 0.0000
+NeutralProcessing_Age5 | 0.2498 | 0.0347 | 0.1158 | 0.5990
+NeutralProcessing_Age4 | 0.1344 | 0.0347 | 0.0000 | 0.3684
+
+14. Price Outcome Diagnostics
+Node | DRFwd1 | DRFwd3 | DRFwd5 | DRFwd10 | ContinuationRate1 | ContinuationRate3 | ContinuationRate5 | ContinuationRate10
+NeutralProcessing_Age1 | 0.0446 | 0.0607 | 0.0650 | 0.0714 | 48.03% | 49.65% | 51.16% | 51.52%
+NeutralProcessing_Age2 | 0.0110 | 0.0107 | -0.0778 | -0.0867 | 53.66% | 49.59% | 45.71% | 46.72%
+NeutralProcessing_Age3 | 0.0104 | 0.0769 | 0.2383 | 0.0370 | 49.63% | 51.49% | 53.73% | 49.25%
+NeutralProcessing_Age4 | 0.0305 | 0.0524 | 0.1437 | 0.1065 | 50.96% | 50.96% | 66.35% | 53.85%
+NeutralProcessing_Age5 | -0.0499 | -0.0551 | -0.1906 | -0.2054 | 38.95% | 43.16% | 38.95% | 35.79%
+NeutralProcessing_Age6-10 | 0.0125 | -0.0604 | -0.1011 | -0.0971 | 52.48% | 45.54% | 48.02% | 49.01%
+NeutralProcessing_Age11-20 | 0.0389 | 0.1078 | 0.0289 | 0.1293 | 40.74% | 51.85% | 51.85% | 62.96%
+NeutralProcessing_Age21+ | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+
+15. Neutral Lifecycle Interpretation
+Node | Interpretation | Evidence
+NeutralProcessing_Age1 | Gateway | Equilibrium=0.2201, Staleness=0.4190, Gateway=1.0000, ExitWithin5=82.96%
+NeutralProcessing_Age2 | Gateway | Equilibrium=0.3178, Staleness=0.3375, Gateway=0.6068, ExitWithin5=77.87%
+NeutralProcessing_Age3 | Stabilizing | Equilibrium=0.5162, Staleness=0.2881, Gateway=0.4895, ExitWithin5=73.57%
+NeutralProcessing_Age4 | Equilibrium | Equilibrium=0.5640, Staleness=0.4359, Gateway=0.1344, ExitWithin5=78.30%
+NeutralProcessing_Age5 | Equilibrium | Equilibrium=0.4818, Staleness=0.4192, Gateway=0.2498, ExitWithin5=82.11%
+NeutralProcessing_Age6-10 | StaleEquilibrium | Equilibrium=0.2353, Staleness=0.5645, Gateway=0.6023, ExitWithin5=87.02%
+NeutralProcessing_Age11-20 | PreExcursion | Equilibrium=0.2200, Staleness=0.5272, Gateway=0.6528, ExitWithin5=90.00%
+NeutralProcessing_Age21+ | Equilibrium | Equilibrium=0.6667, Staleness=0.6667, Gateway=0.3333, ExitWithin5=0.00%
+
+16. Cross-Instrument Replication
+Node | Interpretation | ReplicationCount
+NeutralProcessing_Age1 | Gateway | 1
+NeutralProcessing_Age2 | Gateway | 1
+NeutralProcessing_Age3 | Stabilizing | 1
+NeutralProcessing_Age4 | Equilibrium | 1
+NeutralProcessing_Age5 | Equilibrium | 1
+NeutralProcessing_Age6-10 | StaleEquilibrium | 1
+NeutralProcessing_Age11-20 | PreExcursion | 1
+NeutralProcessing_Age21+ | Equilibrium | 0
+
+17. Neutral Market Model Recommendation
+Classification: NeutralAsLifecycle
+NeutralLifecycleDescription: Age1-2 Gateway/Reset; Age3 Stabilization; Age4-5 Equilibrium/Mature balance; Age6-10 Stale equilibrium; Age11+ Long neutral drift.
+EquilibriumNode: NeutralProcessing_Age21+
+StaleNode: NeutralProcessing_Age21+
+GatewayNode: NeutralProcessing_Age1
+PreExcursionNode: NeutralProcessing_Age11-20
+Reason: Interpretation uses fixed rank-based equilibrium, staleness, gateway, and excursion diagnostics from observable market behavior.
+
+18. Low-DoF Audit
+Variables used:
+StateAgeNode
+StructuralState
+AgeBucket
+OHLC
+Volume
+VolumePolarity
+PreviousNode
+CurrentNode
+NextNode
+MemoryStrength
+BranchProbability
+ExcursionFlag
+
+OHLC and raw Volume are used when present in loaded evidence rows; this script explicitly reports when the current loader does not expose them.
+
+No Context
+No Arbitration
+No Persistence
+No Phase
+No Optimization
+No Fitting
+No Machine Learning
+No Forward Returns used in market interpretation construction
+
+19. Mechanical Research Notes
+This study maps fixed NeutralProcessing stages to OHLC, volume, polarity, and excursion diagnostics. It does not use forward returns in interpretation construction.

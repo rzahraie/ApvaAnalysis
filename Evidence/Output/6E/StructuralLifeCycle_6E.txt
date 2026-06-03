@@ -1,0 +1,173 @@
+APVA Structural Life Cycle Study v0.1 - 6E
+================================================================
+
+Diagnostics
+===========
+Instrument: 6E
+Rows: 35260
+Sources:
+  .\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_20260531_apva_bar_evidence_v01.csv
+
+Structural State Counts
+=======================
+RecoveryResolution               1696      4.81%
+ExhaustionPersistence            1884      5.34%
+CompressionProcessing            6489     18.40%
+NeutralProcessing               16992     48.19%
+ReassertionProcessing            2011      5.70%
+DecayToNeutral                   1486      4.21%
+DestructiveRotation               948      2.69%
+ConstructiveEmergence              83      0.24%
+MixedStructure                   3671     10.41%
+
+Life Cycle Phase Counts
+=======================
+Terminal               10
+Birth                   6
+Maturity                6
+Decay                   6
+Growth                  4
+
+Life Cycle Table
+================
+State                        Age           N        P1        H1        P3        H3        P5        H5      Cont      Fail      Skew       MeanDR DeathTarget                   DeathProb Phase         
+RecoveryResolution           1          1079    31.42%    68.58%     3.89%    96.11%     7.41%    92.59%    45.67%    50.56%    -4.89%     -0.00003 CompressionProcessing            82.03% Birth         
+RecoveryResolution           2           339    74.04%    25.96%     6.19%    93.81%     7.67%    92.33%    42.90%    54.13%   -11.22%     -0.00003 NeutralProcessing               100.00% Maturity      
+RecoveryResolution           3           251     6.37%    93.63%     9.56%    90.44%     8.37%    91.63%    47.66%    50.64%    -2.98%      0.00002 CompressionProcessing            73.62% Terminal      
+RecoveryResolution           4            16    37.50%    62.50%     6.25%    93.75%     0.00%   100.00%    71.43%    28.57%    42.86%      0.00018 CompressionProcessing           100.00% Insufficient  
+RecoveryResolution           5             6    83.33%    16.67%    16.67%    83.33%     0.00%   100.00%    50.00%    16.67%    33.33%     -0.00005 NeutralProcessing               100.00% Insufficient  
+RecoveryResolution           6-10          5     0.00%   100.00%     0.00%   100.00%     0.00%   100.00%    50.00%    50.00%     0.00%      0.00011 CompressionProcessing            60.00% Insufficient  
+ExhaustionPersistence        1          1116    27.24%    72.76%    15.77%    84.23%     7.80%    92.20%    47.65%    46.56%     1.08%     -0.00001 RecoveryResolution               29.19% Birth         
+ExhaustionPersistence        2           304    76.97%    23.03%    19.41%    80.59%     9.87%    90.13%    42.47%    52.51%   -10.03%     -0.00007 RecoveryResolution               95.71% Maturity      
+ExhaustionPersistence        3           234    61.11%    38.89%    12.39%    87.61%     6.41%    93.59%    44.65%    52.09%    -7.44%     -0.00002 NeutralProcessing                78.02% Decay         
+ExhaustionPersistence        4           143    40.56%    59.44%    11.89%    88.11%     3.50%    96.50%    41.30%    55.80%   -14.49%     -0.00008 DecayToNeutral                   37.65% Decay         
+ExhaustionPersistence        5            58    31.03%    68.97%     5.17%    94.83%     6.90%    93.10%    49.09%    45.45%     3.64%      0.00002 DecayToNeutral                   35.00% Terminal      
+ExhaustionPersistence        6-10         29    37.93%    62.07%     3.45%    96.55%    10.34%    89.66%    32.14%    60.71%   -28.57%     -0.00021 DecayToNeutral                   50.00% Decay         
+CompressionProcessing        1          2928    56.66%    43.34%    42.59%    57.41%    21.31%    78.69%    46.94%    48.50%    -1.56%     -0.00001 NeutralProcessing                70.21% Birth         
+CompressionProcessing        2          1659    50.63%    49.37%    39.24%    60.76%    22.42%    77.58%    44.41%    50.64%    -6.23%     -0.00004 NeutralProcessing                67.03% Growth        
+CompressionProcessing        3           840    62.86%    37.14%    30.00%    70.00%    22.26%    77.74%    46.00%    50.59%    -4.59%     -0.00003 NeutralProcessing                56.73% Maturity      
+CompressionProcessing        4           528    53.41%    46.59%    28.60%    71.40%    20.27%    79.73%    46.22%    48.67%    -2.45%      0.00001 NeutralProcessing                57.72% Decay         
+CompressionProcessing        5           282    45.04%    54.96%    28.01%    71.99%    21.28%    78.72%    47.31%    48.46%    -1.15%      0.00001 NeutralProcessing                49.03% Terminal      
+CompressionProcessing        6-10        247    49.80%    50.20%    27.94%    72.06%    19.84%    80.16%    41.92%    51.53%    -9.61%     -0.00002 NeutralProcessing                50.81% Terminal      
+CompressionProcessing        11-20         5    40.00%    60.00%    20.00%    80.00%    20.00%    80.00%    40.00%    60.00%   -20.00%     -0.00010 ExhaustionPersistence            66.67% Insufficient  
+NeutralProcessing            1          5672    56.51%    43.49%    58.36%    41.64%    48.29%    51.71%    45.82%    48.77%    -2.95%     -0.00001 MixedStructure                   34.25% Birth         
+NeutralProcessing            2          3205    54.73%    45.27%    72.45%    27.55%    50.80%    49.20%    47.27%    48.48%    -1.20%     -0.00001 MixedStructure                   39.49% Growth        
+NeutralProcessing            3          1754    74.80%    25.20%    74.23%    25.77%    50.06%    49.94%    48.66%    44.73%     3.94%      0.00002 MixedStructure                   43.44% Growth        
+NeutralProcessing            4          1312    90.85%     9.15%    66.54%    33.46%    52.59%    47.41%    45.50%    48.77%    -3.27%     -0.00001 MixedStructure                   26.67% Maturity      
+NeutralProcessing            5          1192    81.21%    18.79%    55.70%    44.30%    51.34%    48.66%    44.94%    48.70%    -3.76%     -0.00002 MixedStructure                   33.04% Decay         
+NeutralProcessing            6-10       2884    74.10%    25.90%    60.68%    39.32%    51.49%    48.51%    45.97%    49.24%    -3.27%     -0.00001 MixedStructure                   37.22% Decay         
+NeutralProcessing            11-20       891    77.22%    22.78%    63.52%    36.48%    52.64%    47.36%    46.80%    45.82%     0.97%     -0.00001 MixedStructure                   38.92% Terminal      
+NeutralProcessing            21+          82    78.05%    21.95%    62.20%    37.80%    52.44%    47.56%    45.59%    48.53%    -2.94%     -0.00001 MixedStructure                   38.89% Terminal      
+ReassertionProcessing        1          1759    13.47%    86.53%    15.12%    84.88%     6.71%    93.29%    46.77%    48.15%    -1.39%      0.00000 NeutralProcessing                47.83% Terminal      
+ReassertionProcessing        2           237     6.33%    93.67%    17.72%    82.28%     6.33%    93.67%    44.26%    50.64%    -6.38%     -0.00006 DestructiveRotation              49.10% Terminal      
+ReassertionProcessing        3            15     0.00%   100.00%    13.33%    86.67%     0.00%   100.00%    53.33%    40.00%    13.33%     -0.00003 DestructiveRotation              93.33% Insufficient  
+DecayToNeutral               1          1486     0.00%   100.00%     4.71%    95.29%     4.78%    95.22%    47.75%    46.72%     1.03%     -0.00001 NeutralProcessing                54.58% Birth         
+DestructiveRotation          1           836    11.96%    88.04%     7.06%    92.94%     3.11%    96.89%    46.77%    49.68%    -2.92%     -0.00001 DecayToNeutral                   33.83% Terminal      
+DestructiveRotation          2           100    11.00%    89.00%    11.00%    89.00%     4.00%    96.00%    44.44%    49.49%    -5.05%     -0.00005 DecayToNeutral                   50.56% Maturity      
+DestructiveRotation          3            11     9.09%    90.91%     9.09%    90.91%     0.00%   100.00%    40.00%    50.00%   -10.00%      0.00001 DecayToNeutral                   70.00% Insufficient  
+DestructiveRotation          4             1     0.00%   100.00%     0.00%   100.00%     0.00%   100.00%     0.00%   100.00%  -100.00%     -0.00020 DecayToNeutral                  100.00% Insufficient  
+ConstructiveEmergence        1            83     0.00%   100.00%     0.00%   100.00%     0.00%   100.00%    51.22%    46.34%     4.88%     -0.00002 MixedStructure                   46.99% Birth         
+MixedStructure               1          3265    10.87%    89.13%    16.88%    83.12%     9.86%    90.14%    46.27%    48.30%    -2.03%     -0.00002 NeutralProcessing                41.90% Terminal      
+MixedStructure               2           355    11.83%    88.17%    16.06%    83.94%    11.55%    88.45%    45.45%    48.97%    -3.52%     -0.00002 NeutralProcessing                35.46% Growth        
+MixedStructure               3            42    19.05%    80.95%    16.67%    83.33%    16.67%    83.33%    50.00%    50.00%     0.00%     -0.00001 DecayToNeutral                   50.00% Maturity      
+MixedStructure               4             8    12.50%    87.50%    37.50%    62.50%    12.50%    87.50%    75.00%    25.00%    50.00%      0.00024 DecayToNeutral                   42.86% Insufficient  
+MixedStructure               5             1     0.00%   100.00%     0.00%   100.00%     0.00%   100.00%   100.00%     0.00%   100.00%      0.00010 DecayToNeutral                  100.00% Insufficient  
+
+State Life Cycle Summary
+========================
+
+RecoveryResolution
+------------------
+Most stable age: 2 | H1=25.96% | P1=74.04% | Phase=Maturity
+Most fragile age: 3 | H1=93.63% | P1=6.37% | Phase=Terminal
+Best skew age: 3 | Skew=-2.98% | MeanDR=0.00002
+Worst skew age: 2 | Skew=-11.22% | MeanDR=-0.00003
+Birth       : 1
+Maturity    : 2
+Terminal    : 3
+
+ExhaustionPersistence
+---------------------
+Most stable age: 2 | H1=23.03% | P1=76.97% | Phase=Maturity
+Most fragile age: 1 | H1=72.76% | P1=27.24% | Phase=Birth
+Best skew age: 5 | Skew=3.64% | MeanDR=0.00002
+Worst skew age: 6-10 | Skew=-28.57% | MeanDR=-0.00021
+Birth       : 1
+Maturity    : 2
+Decay       : 3, 4, 6-10
+Terminal    : 5
+
+CompressionProcessing
+---------------------
+Most stable age: 3 | H1=37.14% | P1=62.86% | Phase=Maturity
+Most fragile age: 5 | H1=54.96% | P1=45.04% | Phase=Terminal
+Best skew age: 5 | Skew=-1.15% | MeanDR=0.00001
+Worst skew age: 6-10 | Skew=-9.61% | MeanDR=-0.00002
+Birth       : 1
+Growth      : 2
+Maturity    : 3
+Decay       : 4
+Terminal    : 5, 6-10
+
+NeutralProcessing
+-----------------
+Most stable age: 4 | H1=9.15% | P1=90.85% | Phase=Maturity
+Most fragile age: 2 | H1=45.27% | P1=54.73% | Phase=Growth
+Best skew age: 3 | Skew=3.94% | MeanDR=0.00002
+Worst skew age: 5 | Skew=-3.76% | MeanDR=-0.00002
+Birth       : 1
+Growth      : 2, 3
+Maturity    : 4
+Decay       : 5, 6-10
+Terminal    : 11-20, 21+
+
+ReassertionProcessing
+---------------------
+Most stable age: 1 | H1=86.53% | P1=13.47% | Phase=Terminal
+Most fragile age: 2 | H1=93.67% | P1=6.33% | Phase=Terminal
+Best skew age: 1 | Skew=-1.39% | MeanDR=0.00000
+Worst skew age: 2 | Skew=-6.38% | MeanDR=-0.00006
+Terminal    : 1, 2
+
+DecayToNeutral
+--------------
+Most stable age: 1 | H1=100.00% | P1=0.00% | Phase=Birth
+Most fragile age: 1 | H1=100.00% | P1=0.00% | Phase=Birth
+Best skew age: 1 | Skew=1.03% | MeanDR=-0.00001
+Worst skew age: 1 | Skew=1.03% | MeanDR=-0.00001
+Birth       : 1
+
+DestructiveRotation
+-------------------
+Most stable age: 1 | H1=88.04% | P1=11.96% | Phase=Terminal
+Most fragile age: 2 | H1=89.00% | P1=11.00% | Phase=Maturity
+Best skew age: 1 | Skew=-2.92% | MeanDR=-0.00001
+Worst skew age: 2 | Skew=-5.05% | MeanDR=-0.00005
+Maturity    : 2
+Terminal    : 1
+
+ConstructiveEmergence
+---------------------
+Most stable age: 1 | H1=100.00% | P1=0.00% | Phase=Birth
+Most fragile age: 1 | H1=100.00% | P1=0.00% | Phase=Birth
+Best skew age: 1 | Skew=4.88% | MeanDR=-0.00002
+Worst skew age: 1 | Skew=4.88% | MeanDR=-0.00002
+Birth       : 1
+
+MixedStructure
+--------------
+Most stable age: 3 | H1=80.95% | P1=19.05% | Phase=Maturity
+Most fragile age: 1 | H1=89.13% | P1=10.87% | Phase=Terminal
+Best skew age: 3 | Skew=0.00% | MeanDR=-0.00001
+Worst skew age: 2 | Skew=-3.52% | MeanDR=-0.00002
+Growth      : 2
+Maturity    : 3
+Terminal    : 1
+
+Mechanical Research Notes
+=========================
+- Birth/Growth/Maturity/Decay/Terminal are mechanical labels inferred from t+1 hazard by state-age bucket.
+- Maturity generally corresponds to the lowest hazard age bucket for that structural state.
+- Terminal generally corresponds to high hazard or late/rising-hazard age buckets.
+- DeathTarget is the dominant next-bar state when the current state exits.
+- No price outcome is used to assign phase. Outcome is reported separately.

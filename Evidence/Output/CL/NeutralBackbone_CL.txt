@@ -1,0 +1,288 @@
+APVA Neutral Backbone Study v0.1
+============================================================================================================
+Instrument: CL
+Input path(s): .\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv
+Total rows: 2684
+
+1. Neutral Inventory
+Node | Count | PercentOfAllRows | ReplicationCount | NecessityScore | BranchEntropy | MemoryStrength
+NeutralProcessing_Age1 | 445 | 16.59% | 1 | 0.0000 | 1.2605 | 0.2042
+NeutralProcessing_Age2 | 253 | 9.43% | 1 | 0.1724 | 1.2109 | 0.2734
+NeutralProcessing_Age3 | 140 | 5.22% | 1 | 0.1905 | 0.7992 | 0.3509
+NeutralProcessing_Age4 | 106 | 3.95% | 1 | 0.9859 | 0.4644 | 0.3265
+NeutralProcessing_Age5 | 95 | 3.54% | 1 | 0.8718 | 0.7551 | 0.3357
+NeutralProcessing_Age6-10 | 208 | 7.75% | 1 | 0.2461 | 1.1917 | 0.2169
+NeutralProcessing_Age11-20 | 30 | 1.12% | 1 | 0.0000 | 1.1205 | 0.1926
+NeutralProcessing_Age21+ | 0 | 0.00% | 0 | 0.0000 | 0.0000 | 0.0000
+
+2. Occupancy
+NeutralOccupancy | 47.60%
+
+3. Entry Analysis
+NonNeutralNode | NeutralTarget | Count | Probability | ReplicationCount
+MixedStructure_Age1 | NeutralProcessing_Age1 | 115 | 100.00% | 1
+DecayToNeutral_Age1 | NeutralProcessing_Age1 | 63 | 100.00% | 1
+ReassertionProcessing_Age1 | NeutralProcessing_Age1 | 58 | 100.00% | 1
+CompressionProcessing_Age1 | NeutralProcessing_Age1 | 56 | 100.00% | 1
+CompressionProcessing_Age2 | NeutralProcessing_Age1 | 33 | 100.00% | 1
+DestructiveRotation_Age1 | NeutralProcessing_Age1 | 25 | 100.00% | 1
+ReassertionProcessing_Age2 | NeutralProcessing_Age1 | 12 | 100.00% | 1
+ExhaustionPersistence_Age1 | NeutralProcessing_Age1 | 11 | 100.00% | 1
+RecoveryResolution_Age2 | NeutralProcessing_Age1 | 11 | 100.00% | 1
+CompressionProcessing_Age3 | NeutralProcessing_Age1 | 10 | 100.00% | 1
+RecoveryResolution_Age1 | NeutralProcessing_Age1 | 10 | 100.00% | 1
+MixedStructure_Age2 | NeutralProcessing_Age1 | 7 | 100.00% | 1
+CompressionProcessing_Age4 | NeutralProcessing_Age1 | 5 | 100.00% | 1
+ExhaustionPersistence_Age3 | NeutralProcessing_Age1 | 5 | 100.00% | 1
+RecoveryResolution_Age3 | NeutralProcessing_Age1 | 5 | 100.00% | 1
+ConstructiveEmergence_Age1 | NeutralProcessing_Age1 | 4 | 100.00% | 1
+CompressionProcessing_Age6-10 | NeutralProcessing_Age1 | 3 | 100.00% | 1
+ExhaustionPersistence_Age4 | NeutralProcessing_Age1 | 3 | 100.00% | 1
+ExhaustionPersistence_Age5 | NeutralProcessing_Age1 | 3 | 100.00% | 1
+DestructiveRotation_Age2 | NeutralProcessing_Age1 | 2 | 100.00% | 1
+MixedStructure_Age4 | NeutralProcessing_Age1 | 2 | 100.00% | 1
+CompressionProcessing_Age5 | NeutralProcessing_Age1 | 1 | 100.00% | 1
+ExhaustionPersistence_Age2 | NeutralProcessing_Age1 | 1 | 100.00% | 1
+ExhaustionPersistence_Age6-10 | NeutralProcessing_Age1 | 1 | 100.00% | 1
+
+4. Exit Analysis
+NeutralNode | NonNeutralTarget | Count | Probability | ReplicationCount
+NeutralProcessing_Age1 | MixedStructure_Age1 | 66 | 34.38% | 1
+NeutralProcessing_Age1 | ReassertionProcessing_Age1 | 63 | 32.81% | 1
+NeutralProcessing_Age2 | MixedStructure_Age1 | 54 | 47.79% | 1
+NeutralProcessing_Age1 | CompressionProcessing_Age1 | 45 | 23.44% | 1
+NeutralProcessing_Age6-10 | ReassertionProcessing_Age1 | 31 | 48.44% | 1
+NeutralProcessing_Age2 | ReassertionProcessing_Age1 | 30 | 26.55% | 1
+NeutralProcessing_Age2 | CompressionProcessing_Age1 | 24 | 21.24% | 1
+NeutralProcessing_Age6-10 | MixedStructure_Age1 | 20 | 31.25% | 1
+NeutralProcessing_Age1 | DestructiveRotation_Age1 | 15 | 7.81% | 1
+NeutralProcessing_Age3 | MixedStructure_Age1 | 15 | 44.12% | 1
+NeutralProcessing_Age3 | ReassertionProcessing_Age1 | 14 | 41.18% | 1
+NeutralProcessing_Age5 | MixedStructure_Age1 | 10 | 50.00% | 1
+NeutralProcessing_Age6-10 | CompressionProcessing_Age1 | 7 | 10.94% | 1
+NeutralProcessing_Age5 | ReassertionProcessing_Age1 | 6 | 30.00% | 1
+NeutralProcessing_Age2 | DestructiveRotation_Age1 | 5 | 4.42% | 1
+NeutralProcessing_Age3 | CompressionProcessing_Age1 | 5 | 14.71% | 1
+NeutralProcessing_Age11-20 | MixedStructure_Age1 | 4 | 36.36% | 1
+NeutralProcessing_Age11-20 | ReassertionProcessing_Age1 | 4 | 36.36% | 1
+NeutralProcessing_Age4 | ReassertionProcessing_Age1 | 4 | 36.36% | 1
+NeutralProcessing_Age4 | MixedStructure_Age1 | 4 | 36.36% | 1
+NeutralProcessing_Age6-10 | ExhaustionPersistence_Age1 | 4 | 6.25% | 1
+NeutralProcessing_Age1 | ConstructiveEmergence_Age1 | 3 | 1.56% | 1
+NeutralProcessing_Age5 | CompressionProcessing_Age1 | 3 | 15.00% | 1
+NeutralProcessing_Age11-20 | CompressionProcessing_Age1 | 2 | 18.18% | 1
+NeutralProcessing_Age4 | ExhaustionPersistence_Age1 | 2 | 18.18% | 1
+NeutralProcessing_Age11-20 | ExhaustionPersistence_Age1 | 1 | 9.09% | 1
+NeutralProcessing_Age4 | ConstructiveEmergence_Age1 | 1 | 9.09% | 1
+NeutralProcessing_Age5 | ExhaustionPersistence_Age1 | 1 | 5.00% | 1
+NeutralProcessing_Age6-10 | ConstructiveEmergence_Age1 | 1 | 1.56% | 1
+NeutralProcessing_Age6-10 | RecoveryResolution_Age1 | 1 | 1.56% | 1
+
+5. Progression Chain
+Transition | Count | Probability | ReplicationCount
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 253 | 56.85% | 1
+NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 140 | 55.34% | 1
+NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 106 | 75.71% | 1
+NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 95 | 89.62% | 1
+NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 75 | 78.95% | 1
+NeutralProcessing_Age6-10 -> NeutralProcessing_Age11-20 | 11 | 5.29% | 1
+NeutralProcessing_Age11-20 -> NeutralProcessing_Age21+ | 0 | 0.00% | 1
+
+6. Return Analysis
+Family | ReturnWithin1 | ReturnWithin2 | ReturnWithin3 | ReturnWithin5
+Compression | 30.57% | 49.14% | 58.00% | 71.14%
+Recovery | 16.25% | 35.00% | 50.62% | 76.25%
+Mixed | 39.49% | 57.01% | 65.61% | 82.48%
+Reassertion | 33.82% | 64.25% | 72.95% | 84.06%
+Decay | 61.17% | 61.17% | 70.87% | 80.58%
+Exhaustion | 13.64% | 29.55% | 46.02% | 67.05%
+Constructive | 33.33% | 50.00% | 58.33% | 83.33%
+Destructive | 32.14% | 54.76% | 60.71% | 67.86%
+
+7. Residence Time
+NeutralNode | MeanResidence | MedianResidence | MaxResidence
+NeutralProcessing_Age1 | 1.0000 | 1.0000 | 1
+NeutralProcessing_Age2 | 1.0000 | 1.0000 | 1
+NeutralProcessing_Age3 | 1.0000 | 1.0000 | 1
+NeutralProcessing_Age4 | 1.0000 | 1.0000 | 1
+NeutralProcessing_Age5 | 1.0000 | 1.0000 | 1
+NeutralProcessing_Age6-10 | 2.7733 | 2.0000 | 5
+NeutralProcessing_Age11-20 | 2.7273 | 2.0000 | 8
+
+8. Necessity
+Node | NecessityScore | MemoryContribution | BranchContribution
+NeutralProcessing_Age1 | 0.0000 | -0.0916 | -0.1461
+NeutralProcessing_Age2 | 0.1724 | -0.1718 | 0.0242
+NeutralProcessing_Age3 | 0.1905 | -0.0359 | 0.0269
+NeutralProcessing_Age4 | 0.9859 | 0.0341 | 0.0566
+NeutralProcessing_Age5 | 0.8718 | 0.0290 | 0.0513
+NeutralProcessing_Age6-10 | 0.2461 | -0.0076 | 0.0310
+NeutralProcessing_Age11-20 | 0.0000 | -0.0095 | -0.0043
+NeutralProcessing_Age21+ | 0.0000 | 0.0000 | 0.0000
+
+9. Memory Contribution
+Node | MemoryTop1Contribution | MemoryBrierContribution
+NeutralProcessing_Age4 | 1.67% | 0.0174
+NeutralProcessing_Age5 | 1.44% | 0.0146
+NeutralProcessing_Age6-10 | 0.00% | 0.0000
+NeutralProcessing_Age11-20 | 0.00% | 0.0000
+NeutralProcessing_Age3 | 0.00% | 0.0000
+NeutralProcessing_Age1 | 0.00% | 0.0000
+NeutralProcessing_Age2 | 0.00% | 0.0000
+
+10. Branch Contribution
+Node | BranchTop1Contribution | BranchBrierContribution
+NeutralProcessing_Age4 | 2.80% | 0.0286
+NeutralProcessing_Age5 | 2.46% | 0.0267
+NeutralProcessing_Age6-10 | 1.75% | 0.0135
+NeutralProcessing_Age3 | 1.57% | 0.0112
+NeutralProcessing_Age2 | 2.22% | 0.0020
+NeutralProcessing_Age11-20 | 0.00% | 0.0000
+NeutralProcessing_Age1 | 0.00% | 0.0000
+
+11. Motifs
+Motif | Frequency | Replication | Contribution
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 140 | 1 | 0.0321
+NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 | 106 | 1 | 0.0339
+NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 95 | 1 | 0.0339
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 79 | 1 | 0.0227
+NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 77 | 1 | 0.0212
+NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 | 75 | 1 | 0.0242
+NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 | 56 | 1 | 0.0168
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 | 54 | 1 | 0.0000
+NeutralProcessing_Age2 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 36 | 1 | 0.0112
+ReassertionProcessing_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 36 | 1 | 0.0089
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> NeutralProcessing_Age1 | 33 | 1 | 0.0000
+NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 32 | 1 | 0.0078
+ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 31 | 1 | 0.0041
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 30 | 1 | 0.0030
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 | 30 | 1 | 0.0000
+MixedStructure_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 28 | 1 | 0.0048
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 25 | 1 | 0.0048
+CompressionProcessing_Age2 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 24 | 1 | 0.0060
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> CompressionProcessing_Age1 | 24 | 1 | 0.0000
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 | 22 | 1 | 0.0000
+NeutralProcessing_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 | 20 | 1 | 0.0004
+NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 | 20 | 1 | 0.0000
+ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 | 20 | 1 | 0.0000
+NeutralProcessing_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 19 | 1 | 0.0000
+NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 19 | 1 | 0.0048
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 | 18 | 1 | 0.0000
+NeutralProcessing_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 | 17 | 1 | 0.0011
+NeutralProcessing_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 17 | 1 | 0.0000
+NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> MixedStructure_Age1 | 15 | 1 | 0.0000
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 | 14 | 1 | 0.0000
+NeutralProcessing_Age1 -> CompressionProcessing_Age1 -> NeutralProcessing_Age1 | 14 | 1 | 0.0000
+NeutralProcessing_Age2 -> CompressionProcessing_Age1 -> NeutralProcessing_Age1 | 14 | 1 | 0.0034
+NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> ReassertionProcessing_Age1 | 14 | 1 | 0.0000
+NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> MixedStructure_Age1 | 14 | 1 | 0.0000
+NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 14 | 1 | 0.0011
+DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 13 | 1 | 0.0026
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> CompressionProcessing_Age1 | 12 | 1 | 0.0000
+DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 12 | 1 | 0.0015
+ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> NeutralProcessing_Age1 | 12 | 1 | 0.0000
+NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 11 | 1 | 0.0000
+NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 | 11 | 1 | 0.0030
+NeutralProcessing_Age5 -> NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 | 11 | 1 | 0.0000
+NeutralProcessing_Age6-10 -> NeutralProcessing_Age6-10 -> NeutralProcessing_Age11-20 | 11 | 1 | 0.0000
+NeutralProcessing_Age6-10 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 11 | 1 | 0.0000
+RecoveryResolution_Age1 -> RecoveryResolution_Age2 -> NeutralProcessing_Age1 | 11 | 1 | 0.0000
+CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> NeutralProcessing_Age1 | 10 | 1 | 0.0000
+NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 | 10 | 1 | 0.0000
+NeutralProcessing_Age3 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 10 | 1 | 0.0030
+NeutralProcessing_Age4 -> NeutralProcessing_Age5 -> MixedStructure_Age1 | 10 | 1 | 0.0000
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 | 9 | 1 | 0.0000
+NeutralProcessing_Age3 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 9 | 1 | 0.0019
+RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> NeutralProcessing_Age1 | 9 | 1 | 0.0000
+CompressionProcessing_Age2 -> NeutralProcessing_Age1 -> CompressionProcessing_Age1 | 8 | 1 | 0.0000
+DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> ReassertionProcessing_Age1 | 8 | 1 | 0.0000
+ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 8 | 1 | 0.0000
+NeutralProcessing_Age1 -> DestructiveRotation_Age1 -> NeutralProcessing_Age1 | 8 | 1 | 0.0019
+NeutralProcessing_Age6-10 -> NeutralProcessing_Age11-20 -> NeutralProcessing_Age11-20 | 8 | 1 | 0.0026
+ExhaustionPersistence_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 7 | 1 | 0.0011
+MixedStructure_Age1 -> MixedStructure_Age2 -> NeutralProcessing_Age1 | 7 | 1 | 0.0000
+NeutralProcessing_Age1 -> ReassertionProcessing_Age1 -> DestructiveRotation_Age1 | 7 | 1 | 0.0000
+
+12. Hub Analysis
+NeutralNode | IncomingNodeCount | OutgoingNodeCount | BranchFactor
+NeutralProcessing_Age1 | 24 | 6 | 144
+NeutralProcessing_Age6-10 | 2 | 8 | 16
+NeutralProcessing_Age11-20 | 2 | 5 | 10
+NeutralProcessing_Age2 | 1 | 5 | 5
+NeutralProcessing_Age4 | 1 | 5 | 5
+NeutralProcessing_Age5 | 1 | 5 | 5
+NeutralProcessing_Age3 | 1 | 4 | 4
+
+13. Excursions
+MeanLength | 3.1506
+MedianLength | 2.0000
+MaxLength | 25
+ReturnRate | 99.78%
+
+14. Backbone Test
+Model | Top1 | Top2 | Brier | Entropy
+FullAPVAGraph_Memory | 75.33% | 99.78% | 0.2957 | 0.8160
+NeutralBackbone_Memory | 67.69% | 99.70% | 0.3968 | 0.9170
+FullAPVAGraph_Branch | 55.09% | 76.41% | 0.5987 | 0.8160
+NeutralBackbone_Branch | 53.22% | 74.36% | 0.6184 | 0.9170
+
+15. Compression Ratio
+OriginalNodeCount | 35
+BackboneNodeCount | 15
+ReductionPercent | 57.14%
+ForecastLoss | 4.75%
+
+16. Replication
+Node | Count | ReplicationCount
+NeutralProcessing_Age1 | 445 | 1
+NeutralProcessing_Age2 | 253 | 1
+NeutralProcessing_Age3 | 140 | 1
+NeutralProcessing_Age4 | 106 | 1
+NeutralProcessing_Age5 | 95 | 1
+NeutralProcessing_Age6-10 | 208 | 1
+NeutralProcessing_Age11-20 | 30 | 1
+NeutralProcessing_Age21+ | 0 | 0
+
+17. Outcome Diagnostics
+NeutralNode | Count | MeanDRFwd5 | MedianDRFwd5 | ContinuationRate5 | FailureRate5 | FlatRate5
+NeutralProcessing_Age1 | 430 | 0.0650 | 0.0300 | 51.16% | 48.14% | 0.70%
+NeutralProcessing_Age2 | 245 | -0.0778 | -0.0600 | 45.71% | 53.47% | 0.82%
+NeutralProcessing_Age6-10 | 202 | -0.1011 | -0.0600 | 48.02% | 51.98% | 0.00%
+NeutralProcessing_Age3 | 134 | 0.2383 | 0.0450 | 53.73% | 44.03% | 2.24%
+NeutralProcessing_Age4 | 104 | 0.1437 | 0.1450 | 66.35% | 33.65% | 0.00%
+NeutralProcessing_Age5 | 95 | -0.1906 | -0.1100 | 38.95% | 60.00% | 1.05%
+NeutralProcessing_Age11-20 | 27 | 0.0289 | 0.0200 | 51.85% | 44.44% | 3.70%
+
+18. Recommendation
+Classification: StrongBackbone
+NeutralOccupancy: 47.60%
+NeutralNecessity: 0.3083
+NeutralContribution: 0.0317
+BackboneCompressionRatio: 57.14%
+ForecastRetention: 95.25%
+Reason: Classification uses fixed descriptive thresholds on occupancy, return behavior, and forecast retention after neutral-backbone compression.
+
+19. Low-DoF Audit
+Variables used:
+StateAgeNode
+StructuralState
+AgeBucket
+PreviousNode
+CurrentNode
+NextNode
+BranchProbability
+BranchEntropy
+NecessityScore
+MemoryStrength
+
+No Context
+No Arbitration
+No Persistence
+No Phase
+No Optimization
+No Fitting
+No Machine Learning
+No Forward Returns used in backbone scoring
+
+20. Mechanical Research Notes
+Neutral backbone scoring uses structural occupancy, necessity, transition, motif, return, and compressed graph retention only.

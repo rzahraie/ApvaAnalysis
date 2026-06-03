@@ -1,0 +1,126 @@
+APVA Interpretation Persistence Study v0.1 - Aggregate
+Decision-stability research only. Four fixed persistence regimes applied to Study 48 arbitration.
+Instruments: 6E, CL, NQ
+
+Aggregate Regime Table
+Regime | Name | ReplacementRate_6E | RunLength_6E | RiskRate_6E | Skew_6E | MeanDR_6E | ReplacementRate_CL | RunLength_CL | RiskRate_CL | Skew_CL | MeanDR_CL | ReplacementRate_NQ | RunLength_NQ | RiskRate_NQ | Skew_NQ | MeanDR_NQ | ValidInstrumentCount | MeanReplacementRate | MeanRunLength | MeanRiskRate | MeanSkew | MeanDR | AgreementCount | AgreementPercent | AgreementDirection
+A | Immediate Replacement | 91.74% | 1.0900 | 42.08% | -2.35% | -0.0000 | 88.64% | 1.1277 | 41.73% | -1.14% | -0.0048 | 83.47% | 1.1973 | 31.81% | -1.51% | -3.1775 | 3 | 87.95% | 1.1383 | 38.54% | -1.67% | -1.0607 | 3 of 3 | 100.00% | Negative
+B | Two-Bar Confirmation | 2.35% | 42.4819 | 0.04% | -2.35% | -0.0000 | 2.42% | 40.6667 | 0.19% | -1.14% | -0.0048 | 3.26% | 30.1562 | 0.10% | -1.51% | -3.1775 | 3 | 2.68% | 37.7683 | 0.11% | -1.67% | -1.0607 | 3 of 3 | 100.00% | Negative
+C | Margin Threshold | 59.99% | 1.6670 | 26.92% | -2.35% | -0.0000 | 47.95% | 2.0839 | 17.96% | -1.14% | -0.0048 | 42.75% | 2.3366 | 12.07% | -1.51% | -3.1775 | 3 | 50.23% | 2.0291 | 18.98% | -1.67% | -1.0607 | 3 of 3 | 100.00% | Negative
+D | Hybrid | 1.49% | 66.7803 | 0.00% | -2.35% | -0.0000 | 0.86% | 111.8333 | 0.04% | -1.14% | -0.0048 | 1.35% | 71.4815 | 0.00% | -1.51% | -3.1775 | 3 | 1.23% | 83.3650 | 0.01% | -1.67% | -1.0607 | 3 of 3 | 100.00% | Negative
+
+Aggregate Improvement Table
+Regime | RelativeTo | ReplacementReduction | RunLengthIncrease | RiskReduction | SkewImprovement | MeanDRImprovement
+A | Immediate Replacement | 0.00% | 0.0000 | 0.00% | 0.00% | 0.0000
+B | Immediate Replacement | 85.27% | 36.6300 | 38.43% | 0.00% | 0.0000
+C | Immediate Replacement | 37.72% | 0.8908 | 19.56% | 0.00% | 0.0000
+D | Immediate Replacement | 86.72% | 82.2267 | 38.53% | 0.00% | 0.0000
+
+Aggregate Conflict Table
+Regime | OverrideCount | OverrideRate | MeanOverrideRunLength | BarsSuppressed
+A | 0 | 0.00% | 0.0000 | 0
+B | 35831 | 89.86% | 17.7004 | 35831
+C | 12861 | 32.25% | 2.4389 | 12861
+D | 36569 | 91.71% | 26.2034 | 36569
+
+Aggregate Stability Table
+Regime | MeanRunLength | MedianRunLength | MaxRunLength | ReplacementRate | BarsPerReplacement
+A | 1.0972 | 1.0000 | 54 | 91.13% | 1.0973
+B | 41.5354 | 28.0000 | 280 | 2.40% | 41.6656
+C | 1.7138 | 1.0000 | 118 | 58.34% | 1.7141
+D | 68.8670 | 37.0000 | 1024 | 1.44% | 69.2257
+
+Aggregate Outcome Table
+Regime | Count_6E | Skew_6E | MeanDR_6E | Count_CL | Skew_CL | MeanDR_CL | Count_NQ | Skew_NQ | MeanDR_NQ | ValidInstrumentCount | MeanSkew | MeanDR
+A | 31102 | -2.35% | -0.0000 | 2627 | -1.14% | -0.0048 | 1916 | -1.51% | -3.1775 | 3 | -1.67% | -1.0607
+B | 31102 | -2.35% | -0.0000 | 2627 | -1.14% | -0.0048 | 1916 | -1.51% | -3.1775 | 3 | -1.67% | -1.0607
+C | 31102 | -2.35% | -0.0000 | 2627 | -1.14% | -0.0048 | 1916 | -1.51% | -3.1775 | 3 | -1.67% | -1.0607
+D | 31102 | -2.35% | -0.0000 | 2627 | -1.14% | -0.0048 | 1916 | -1.51% | -3.1775 | 3 | -1.67% | -1.0607
+
+Aggregate Fractal-Jump Table
+Regime | RiskCount_6E | RiskRate_6E | RiskCount_CL | RiskRate_CL | RiskCount_NQ | RiskRate_NQ | ValidInstrumentCount | MeanRiskRate
+A | 14836 | 42.08% | 1120 | 41.73% | 614 | 31.81% | 3 | 38.54%
+B | 14 | 0.04% | 5 | 0.19% | 2 | 0.10% | 3 | 0.11%
+C | 9492 | 26.92% | 482 | 17.96% | 233 | 12.07% | 3 | 18.98%
+D | 0 | 0.00% | 1 | 0.04% | 0 | 0.00% | 3 | 0.01%
+
+1. Lowest replacement rate
+D | Hybrid | ReplacementRate=1.23%
+B | Two-Bar Confirmation | ReplacementRate=2.68%
+C | Margin Threshold | ReplacementRate=50.23%
+A | Immediate Replacement | ReplacementRate=87.95%
+
+2. Longest interpretation persistence
+D | Hybrid | MeanRunLength=83.3650
+B | Two-Bar Confirmation | MeanRunLength=37.7683
+C | Margin Threshold | MeanRunLength=2.0291
+A | Immediate Replacement | MeanRunLength=1.1383
+
+3. Lowest fractal-jump risk
+D | Hybrid | RiskRate=0.01%
+B | Two-Bar Confirmation | RiskRate=0.11%
+C | Margin Threshold | RiskRate=18.98%
+A | Immediate Replacement | RiskRate=38.54%
+
+4. Highest outcome skew
+A | Immediate Replacement | OutcomeSkew=-1.67%
+B | Two-Bar Confirmation | OutcomeSkew=-1.67%
+C | Margin Threshold | OutcomeSkew=-1.67%
+D | Hybrid | OutcomeSkew=-1.67%
+
+5. Highest mean DR
+A | Immediate Replacement | MeanDR=-1.0607
+B | Two-Bar Confirmation | MeanDR=-1.0607
+C | Margin Threshold | MeanDR=-1.0607
+D | Hybrid | MeanDR=-1.0607
+
+6. Best replacement reduction
+D | Hybrid | Reduction=86.72%
+B | Two-Bar Confirmation | Reduction=85.27%
+C | Margin Threshold | Reduction=37.72%
+A | Immediate Replacement | Reduction=0.00%
+
+7. Best conflict suppression
+D | OverrideRate=88.53%
+B | OverrideRate=85.22%
+C | OverrideRate=39.19%
+A | OverrideRate=0.00%
+
+8. Most stable regime
+D | Hybrid | MeanRunLength=83.3650 | RiskRate=0.01%
+B | Two-Bar Confirmation | MeanRunLength=37.7683 | RiskRate=0.11%
+C | Margin Threshold | MeanRunLength=2.0291 | RiskRate=18.98%
+A | Immediate Replacement | MeanRunLength=1.1383 | RiskRate=38.54%
+
+9. Most instrument agreement
+A | Immediate Replacement | Agreement=100.00%
+B | Two-Bar Confirmation | Agreement=100.00%
+C | Margin Threshold | Agreement=100.00%
+D | Hybrid | Agreement=100.00%
+
+10. Best overall persistence regime
+D | Hybrid | ReplacementRate=1.23% | MeanRunLength=83.3650 | RiskRate=0.01%
+B | Two-Bar Confirmation | ReplacementRate=2.68% | MeanRunLength=37.7683 | RiskRate=0.11%
+C | Margin Threshold | ReplacementRate=50.23% | MeanRunLength=2.0291 | RiskRate=18.98%
+A | Immediate Replacement | ReplacementRate=87.95% | MeanRunLength=1.1383 | RiskRate=38.54%
+
+Low-DoF audit
+Allowed variables used:
+- CurrentState
+- AgeBucket
+- PreviousDistinctState
+- ValidatedContextFlag
+- ArbitrationScore
+- ScoreMargin
+- WinnerRunLength
+
+No new variables added.
+No optimization performed.
+No fitting performed.
+No machine learning used.
+No forward returns used in scoring.
+
+Mechanical research notes
+- All regimes reuse Study 48 scores exactly and alter only replacement timing.
+- Overall regime outcomes are diagnostic and remain equal because each regime labels the same bars.
+- Stability, risk, and override metrics measure decision persistence without adding APVA variables.

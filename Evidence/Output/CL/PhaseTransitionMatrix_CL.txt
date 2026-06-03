@@ -1,0 +1,1133 @@
+APVA Phase Transition Matrix Study v0.1 - CL
+=============================================
+Instrument: CL
+Input path(s): .\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv
+Total rows: 2684
+Structural state counts: {'MixedStructure': 314, 'NeutralProcessing': 1278, 'ReassertionProcessing': 207, 'CompressionProcessing': 350, 'DecayToNeutral': 103, 'ExhaustionPersistence': 176, 'DestructiveRotation': 84, 'RecoveryResolution': 160, 'ConstructiveEmergence': 12}
+Lifecycle phase counts: {'Terminal': 542, 'Maturity': 256, 'Insufficient': 79, 'Birth': 988, 'Growth': 516, 'Decay': 303}
+Valid phase observations: 2605
+
+Section 1 - Phase Counts
+========================
+Phase              Count  Frequency
+Birth                988     36.81%
+Growth               516     19.23%
+Maturity             256      9.54%
+Decay                303     11.29%
+Terminal             542     20.19%
+Insufficient          79      2.94%
+
+Section 2 - Phase -> NextState Tables
+=====================================
+Phase           H NextState                        Count  Probability      Lift
+Birth           1 RecoveryResolution                  84        8.51%     1.427
+Birth           1 ExhaustionPersistence               49        4.96%     0.757
+Birth           1 CompressionProcessing              193       19.55%     1.499
+Birth           1 NeutralProcessing                  418       42.35%     0.889
+Birth           1 ReassertionProcessing               66        6.69%     0.867
+Birth           1 DecayToNeutral                      37        3.75%     0.976
+Birth           1 DestructiveRotation                 40        4.05%     1.294
+Birth           1 ConstructiveEmergence                4        0.41%     0.906
+Birth           1 MixedStructure                      96        9.73%     0.834
+Growth          1 RecoveryResolution                  13        2.52%     0.422
+Growth          1 ExhaustionPersistence               31        6.01%     0.916
+Growth          1 CompressionProcessing               70       13.57%     1.040
+Growth          1 NeutralProcessing                  280       54.26%     1.139
+Growth          1 ReassertionProcessing               44        8.53%     1.105
+Growth          1 DecayToNeutral                       2        0.39%     0.101
+Growth          1 DestructiveRotation                  6        1.16%     0.371
+Growth          1 MixedStructure                      70       13.57%     1.163
+Maturity        1 RecoveryResolution                  32       12.50%     2.096
+Maturity        1 ExhaustionPersistence               29       11.33%     1.727
+Maturity        1 CompressionProcessing               35       13.67%     1.048
+Maturity        1 NeutralProcessing                  133       51.95%     1.091
+Maturity        1 ReassertionProcessing                6        2.34%     0.304
+Maturity        1 DecayToNeutral                      10        3.91%     1.018
+Maturity        1 ConstructiveEmergence                1        0.39%     0.873
+Maturity        1 MixedStructure                      10        3.91%     0.335
+Decay           1 RecoveryResolution                   1        0.33%     0.055
+Decay           1 ExhaustionPersistence                5        1.65%     0.252
+Decay           1 CompressionProcessing               10        3.30%     0.253
+Decay           1 NeutralProcessing                  219       72.28%     1.517
+Decay           1 ReassertionProcessing               37       12.21%     1.583
+Decay           1 ConstructiveEmergence                1        0.33%     0.738
+Decay           1 MixedStructure                      30        9.90%     0.849
+Terminal        1 RecoveryResolution                  26        4.80%     0.804
+Terminal        1 ExhaustionPersistence               44        8.12%     1.238
+Terminal        1 CompressionProcessing               31        5.72%     0.438
+Terminal        1 NeutralProcessing                  209       38.56%     0.810
+Terminal        1 ReassertionProcessing               54        9.96%     1.291
+Terminal        1 DecayToNeutral                      44        8.12%     2.115
+Terminal        1 DestructiveRotation                 32        5.90%     1.886
+Terminal        1 ConstructiveEmergence                4        0.74%     1.650
+Terminal        1 MixedStructure                      98       18.08%     1.550
+Insufficient    1 RecoveryResolution                   4        5.06%     0.849
+Insufficient    1 ExhaustionPersistence               18       22.78%     3.473
+Insufficient    1 CompressionProcessing               11       13.92%     1.067
+Insufficient    1 NeutralProcessing                   19       24.05%     0.505
+Insufficient    1 DecayToNeutral                      10       12.66%     3.297
+Insufficient    1 DestructiveRotation                  6        7.59%     2.426
+Insufficient    1 ConstructiveEmergence                2        2.53%     5.660
+Insufficient    1 MixedStructure                       9       11.39%     0.977
+Birth           2 RecoveryResolution                  89        9.03%     1.513
+Birth           2 ExhaustionPersistence               81        8.22%     1.252
+Birth           2 CompressionProcessing              158       16.02%     1.228
+Birth           2 NeutralProcessing                  365       37.02%     0.777
+Birth           2 ReassertionProcessing               62        6.29%     0.815
+Birth           2 DecayToNeutral                      47        4.77%     1.241
+Birth           2 DestructiveRotation                 43        4.36%     1.392
+Birth           2 ConstructiveEmergence                3        0.30%     0.680
+Birth           2 MixedStructure                     138       14.00%     1.203
+Growth          2 RecoveryResolution                  25        4.84%     0.812
+Growth          2 ExhaustionPersistence               32        6.20%     0.945
+Growth          2 CompressionProcessing               52       10.08%     0.772
+Growth          2 NeutralProcessing                  336       65.12%     1.367
+Growth          2 ReassertionProcessing               33        6.40%     0.829
+Growth          2 DestructiveRotation                  1        0.19%     0.062
+Growth          2 ConstructiveEmergence                2        0.39%     0.866
+Growth          2 MixedStructure                      35        6.78%     0.583
+Maturity        2 RecoveryResolution                  13        5.08%     0.851
+Maturity        2 ExhaustionPersistence               23        8.98%     1.369
+Maturity        2 CompressionProcessing               53       20.70%     1.586
+Maturity        2 NeutralProcessing                  122       47.66%     1.000
+Maturity        2 ReassertionProcessing               10        3.91%     0.506
+Maturity        2 DecayToNeutral                       4        1.56%     0.407
+Maturity        2 DestructiveRotation                  8        3.12%     0.998
+Maturity        2 ConstructiveEmergence                2        0.78%     1.746
+Maturity        2 MixedStructure                      21        8.20%     0.705
+Decay           2 RecoveryResolution                   8        2.64%     0.443
+Decay           2 ExhaustionPersistence               10        3.30%     0.503
+Decay           2 CompressionProcessing               15        4.95%     0.379
+Decay           2 NeutralProcessing                  181       59.74%     1.254
+Decay           2 ReassertionProcessing               38       12.54%     1.625
+Decay           2 DecayToNeutral                       8        2.64%     0.687
+Decay           2 ConstructiveEmergence                2        0.66%     1.475
+Decay           2 MixedStructure                      41       13.53%     1.163
+Terminal        2 RecoveryResolution                  23        4.24%     0.711
+Terminal        2 ExhaustionPersistence               22        4.06%     0.619
+Terminal        2 CompressionProcessing               59       10.89%     0.834
+Terminal        2 NeutralProcessing                  246       45.39%     0.952
+Terminal        2 ReassertionProcessing               63       11.62%     1.506
+Terminal        2 DecayToNeutral                      35        6.46%     1.681
+Terminal        2 DestructiveRotation                 28        5.17%     1.649
+Terminal        2 ConstructiveEmergence                2        0.37%     0.825
+Terminal        2 MixedStructure                      64       11.81%     1.015
+Insufficient    2 RecoveryResolution                   2        2.53%     0.424
+Insufficient    2 ExhaustionPersistence                8       10.13%     1.543
+Insufficient    2 CompressionProcessing               13       16.46%     1.261
+Insufficient    2 NeutralProcessing                   28       35.44%     0.744
+Insufficient    2 ReassertionProcessing                1        1.27%     0.164
+Insufficient    2 DecayToNeutral                       9       11.39%     2.966
+Insufficient    2 DestructiveRotation                  4        5.06%     1.617
+Insufficient    2 ConstructiveEmergence                1        1.27%     2.829
+Insufficient    2 MixedStructure                      13       16.46%     1.415
+Birth           3 RecoveryResolution                  75        7.61%     1.275
+Birth           3 ExhaustionPersistence               77        7.81%     1.190
+Birth           3 CompressionProcessing              162       16.43%     1.259
+Birth           3 NeutralProcessing                  459       46.55%     0.977
+Birth           3 ReassertionProcessing               52        5.27%     0.683
+Birth           3 DecayToNeutral                      34        3.45%     0.898
+Birth           3 DestructiveRotation                 31        3.14%     1.003
+Birth           3 ConstructiveEmergence                3        0.30%     0.680
+Birth           3 MixedStructure                      93        9.43%     0.813
+Growth          3 RecoveryResolution                  27        5.24%     0.878
+Growth          3 ExhaustionPersistence               25        4.85%     0.739
+Growth          3 CompressionProcessing               47        9.13%     0.699
+Growth          3 NeutralProcessing                  325       63.11%     1.324
+Growth          3 ReassertionProcessing               41        7.96%     1.031
+Growth          3 DecayToNeutral                       4        0.78%     0.202
+Growth          3 DestructiveRotation                  8        1.55%     0.496
+Growth          3 ConstructiveEmergence                1        0.19%     0.434
+Growth          3 MixedStructure                      37        7.18%     0.619
+Maturity        3 RecoveryResolution                  13        5.08%     0.851
+Maturity        3 ExhaustionPersistence               20        7.81%     1.190
+Maturity        3 CompressionProcessing               49       19.14%     1.466
+Maturity        3 NeutralProcessing                  114       44.53%     0.934
+Maturity        3 ReassertionProcessing               15        5.86%     0.759
+Maturity        3 DecayToNeutral                      12        4.69%     1.220
+Maturity        3 DestructiveRotation                  6        2.34%     0.748
+Maturity        3 MixedStructure                      27       10.55%     0.909
+Decay           3 RecoveryResolution                  11        3.63%     0.608
+Decay           3 ExhaustionPersistence               11        3.63%     0.553
+Decay           3 CompressionProcessing               26        8.58%     0.657
+Decay           3 NeutralProcessing                  153       50.50%     1.059
+Decay           3 ReassertionProcessing               38       12.54%     1.624
+Decay           3 DecayToNeutral                      10        3.30%     0.859
+Decay           3 DestructiveRotation                  8        2.64%     0.843
+Decay           3 ConstructiveEmergence                4        1.32%     2.949
+Decay           3 MixedStructure                      42       13.86%     1.195
+Terminal        3 RecoveryResolution                  29        5.35%     0.897
+Terminal        3 ExhaustionPersistence               32        5.90%     0.899
+Terminal        3 CompressionProcessing               59       10.89%     0.834
+Terminal        3 NeutralProcessing                  201       37.08%     0.778
+Terminal        3 ReassertionProcessing               56       10.33%     1.338
+Terminal        3 DecayToNeutral                      39        7.20%     1.873
+Terminal        3 DestructiveRotation                 28        5.17%     1.649
+Terminal        3 ConstructiveEmergence                4        0.74%     1.649
+Terminal        3 MixedStructure                      94       17.34%     1.495
+Insufficient    3 RecoveryResolution                   5        6.33%     1.061
+Insufficient    3 ExhaustionPersistence               11       13.92%     2.121
+Insufficient    3 CompressionProcessing                7        8.86%     0.679
+Insufficient    3 NeutralProcessing                   26       32.91%     0.690
+Insufficient    3 ReassertionProcessing                5        6.33%     0.820
+Insufficient    3 DecayToNeutral                       4        5.06%     1.318
+Insufficient    3 DestructiveRotation                  3        3.80%     1.212
+Insufficient    3 MixedStructure                      18       22.78%     1.964
+Birth           5 RecoveryResolution                  74        7.51%     1.258
+Birth           5 ExhaustionPersistence               79        8.02%     1.221
+Birth           5 CompressionProcessing              147       14.92%     1.142
+Birth           5 NeutralProcessing                  446       45.28%     0.950
+Birth           5 ReassertionProcessing               60        6.09%     0.788
+Birth           5 DecayToNeutral                      32        3.25%     0.845
+Birth           5 DestructiveRotation                 28        2.84%     0.907
+Birth           5 ConstructiveEmergence                4        0.41%     0.907
+Birth           5 MixedStructure                     115       11.68%     1.009
+Growth          5 RecoveryResolution                  25        4.86%     0.814
+Growth          5 ExhaustionPersistence               30        5.84%     0.888
+Growth          5 CompressionProcessing               64       12.45%     0.953
+Growth          5 NeutralProcessing                  247       48.05%     1.008
+Growth          5 ReassertionProcessing               52       10.12%     1.309
+Growth          5 DecayToNeutral                      17        3.31%     0.860
+Growth          5 DestructiveRotation                 18        3.50%     1.117
+Growth          5 ConstructiveEmergence                2        0.39%     0.869
+Growth          5 MixedStructure                      59       11.48%     0.992
+Maturity        5 RecoveryResolution                  17        6.64%     1.112
+Maturity        5 ExhaustionPersistence               14        5.47%     0.832
+Maturity        5 CompressionProcessing               35       13.67%     1.046
+Maturity        5 NeutralProcessing                  112       43.75%     0.918
+Maturity        5 ReassertionProcessing               26       10.16%     1.314
+Maturity        5 DecayToNeutral                      14        5.47%     1.422
+Maturity        5 DestructiveRotation                  7        2.73%     0.872
+Maturity        5 ConstructiveEmergence                1        0.39%     0.872
+Maturity        5 MixedStructure                      30       11.72%     1.013
+Decay           5 RecoveryResolution                  12        3.96%     0.663
+Decay           5 ExhaustionPersistence               14        4.62%     0.703
+Decay           5 CompressionProcessing               27        8.91%     0.682
+Decay           5 NeutralProcessing                  145       47.85%     1.004
+Decay           5 ReassertionProcessing               31       10.23%     1.324
+Decay           5 DecayToNeutral                      17        5.61%     1.459
+Decay           5 DestructiveRotation                 14        4.62%     1.474
+Decay           5 ConstructiveEmergence                2        0.66%     1.474
+Decay           5 MixedStructure                      41       13.53%     1.169
+Terminal        5 RecoveryResolution                  25        4.61%     0.772
+Terminal        5 ExhaustionPersistence               32        5.90%     0.899
+Terminal        5 CompressionProcessing               69       12.73%     0.974
+Terminal        5 NeutralProcessing                  289       53.32%     1.119
+Terminal        5 ReassertionProcessing               34        6.27%     0.812
+Terminal        5 DecayToNeutral                      21        3.87%     1.008
+Terminal        5 DestructiveRotation                 15        2.77%     0.883
+Terminal        5 ConstructiveEmergence                2        0.37%     0.824
+Terminal        5 MixedStructure                      55       10.15%     0.877
+Insufficient    5 RecoveryResolution                   7        8.86%     1.484
+Insufficient    5 ExhaustionPersistence                7        8.86%     1.349
+Insufficient    5 CompressionProcessing                8       10.13%     0.775
+Insufficient    5 NeutralProcessing                   38       48.10%     1.009
+Insufficient    5 ReassertionProcessing                4        5.06%     0.655
+Insufficient    5 DecayToNeutral                       2        2.53%     0.658
+Insufficient    5 DestructiveRotation                  2        2.53%     0.807
+Insufficient    5 ConstructiveEmergence                1        1.27%     2.826
+Insufficient    5 MixedStructure                      10       12.66%     1.094
+
+Section 3 - Phase -> Phase Tables
+=================================
+Phase           H NextPhase                        Count  Probability      Lift
+Birth           1 Birth                              395       40.02%     1.087
+Birth           1 Growth                             376       38.10%     1.981
+Birth           1 Maturity                            38        3.85%     0.404
+Birth           1 Terminal                           162       16.41%     0.814
+Birth           1 Insufficient                        16        1.62%     0.551
+Growth          1 Birth                               94       18.22%     0.495
+Growth          1 Growth                             140       27.13%     1.411
+Growth          1 Maturity                           168       32.56%     3.412
+Growth          1 Terminal                           114       22.09%     1.096
+Maturity        1 Birth                               67       26.17%     0.711
+Maturity        1 Maturity                            22        8.59%     0.901
+Maturity        1 Decay                               95       37.11%     3.286
+Maturity        1 Terminal                            38       14.84%     0.736
+Maturity        1 Insufficient                        34       13.28%     4.511
+Decay           1 Birth                               16        5.28%     0.143
+Decay           1 Decay                              208       68.65%     6.079
+Decay           1 Terminal                            78       25.74%     1.277
+Decay           1 Insufficient                         1        0.33%     0.112
+Terminal        1 Birth                              366       67.53%     1.834
+Terminal        1 Maturity                            28        5.17%     0.541
+Terminal        1 Terminal                           142       26.20%     1.299
+Terminal        1 Insufficient                         6        1.11%     0.376
+Insufficient    1 Birth                               50       63.29%     1.719
+Insufficient    1 Terminal                             7        8.86%     0.439
+Insufficient    1 Insufficient                        22       27.85%     9.458
+Birth           2 Birth                              374       37.93%     1.030
+Birth           2 Growth                             283       28.70%     1.492
+Birth           2 Maturity                            98        9.94%     1.045
+Birth           2 Terminal                           220       22.31%     1.106
+Birth           2 Insufficient                        11        1.12%     0.379
+Growth          2 Birth                              164       31.78%     0.863
+Growth          2 Growth                              34        6.59%     0.342
+Growth          2 Maturity                           145       28.10%     2.956
+Growth          2 Decay                               95       18.41%     1.630
+Growth          2 Terminal                            60       11.63%     0.576
+Growth          2 Insufficient                        18        3.49%     1.184
+Maturity        2 Birth                               98       38.28%     1.039
+Maturity        2 Growth                              24        9.38%     0.487
+Maturity        2 Decay                               75       29.30%     2.593
+Maturity        2 Terminal                            29       11.33%     0.562
+Maturity        2 Insufficient                        30       11.72%     3.978
+Decay           2 Birth                               64       21.12%     0.573
+Decay           2 Growth                               6        1.98%     0.103
+Decay           2 Maturity                             3        0.99%     0.104
+Decay           2 Decay                              133       43.89%     3.885
+Decay           2 Terminal                            95       31.35%     1.554
+Decay           2 Insufficient                         2        0.66%     0.224
+Terminal        2 Birth                              248       45.76%     1.242
+Terminal        2 Growth                             150       27.68%     1.438
+Terminal        2 Maturity                             7        1.29%     0.136
+Terminal        2 Terminal                           125       23.06%     1.143
+Terminal        2 Insufficient                        12        2.21%     0.752
+Insufficient    2 Birth                               40       50.63%     1.374
+Insufficient    2 Growth                              19       24.05%     1.250
+Insufficient    2 Maturity                             2        2.53%     0.266
+Insufficient    2 Terminal                            12       15.19%     0.753
+Insufficient    2 Insufficient                         6        7.59%     2.578
+Birth           3 Birth                              444       45.03%     1.222
+Birth           3 Growth                             178       18.05%     0.938
+Birth           3 Maturity                           186       18.86%     1.983
+Birth           3 Terminal                           150       15.21%     0.754
+Birth           3 Insufficient                        28        2.84%     0.976
+Growth          3 Birth                              143       27.77%     0.753
+Growth          3 Growth                              90       17.48%     0.908
+Growth          3 Maturity                             7        1.36%     0.143
+Growth          3 Decay                              170       33.01%     2.921
+Growth          3 Terminal                            82       15.92%     0.789
+Growth          3 Insufficient                        23        4.47%     1.535
+Maturity        3 Birth                               94       36.72%     0.996
+Maturity        3 Growth                              47       18.36%     0.954
+Maturity        3 Maturity                            13        5.08%     0.534
+Maturity        3 Decay                               56       21.88%     1.936
+Maturity        3 Terminal                            39       15.23%     0.755
+Maturity        3 Insufficient                         7        2.73%     0.940
+Decay           3 Birth                               89       29.37%     0.797
+Decay           3 Growth                              23        7.59%     0.394
+Decay           3 Maturity                             9        2.97%     0.312
+Decay           3 Decay                               77       25.41%     2.249
+Decay           3 Terminal                           101       33.33%     1.652
+Decay           3 Insufficient                         4        1.32%     0.454
+Terminal        3 Birth                              183       33.76%     0.916
+Terminal        3 Growth                             163       30.07%     1.563
+Terminal        3 Maturity                            31        5.72%     0.601
+Terminal        3 Terminal                           152       28.04%     1.390
+Terminal        3 Insufficient                        13        2.40%     0.824
+Insufficient    3 Birth                               35       44.30%     1.202
+Insufficient    3 Growth                              15       18.99%     0.987
+Insufficient    3 Maturity                             9       11.39%     1.198
+Insufficient    3 Terminal                            17       21.52%     1.066
+Insufficient    3 Insufficient                         3        3.80%     1.305
+Birth           5 Birth                              350       35.53%     0.964
+Birth           5 Growth                             219       22.23%     1.154
+Birth           5 Maturity                           100       10.15%     1.067
+Birth           5 Decay                              101       10.25%     0.907
+Birth           5 Terminal                           176       17.87%     0.885
+Birth           5 Insufficient                        39        3.96%     1.378
+Growth          5 Birth                              179       34.82%     0.945
+Growth          5 Growth                              66       12.84%     0.667
+Growth          5 Maturity                            46        8.95%     0.940
+Growth          5 Decay                              106       20.62%     1.823
+Growth          5 Terminal                           107       20.82%     1.031
+Growth          5 Insufficient                        10        1.95%     0.677
+Maturity        5 Birth                               92       35.94%     0.975
+Maturity        5 Growth                              46       17.97%     0.933
+Maturity        5 Maturity                            23        8.98%     0.944
+Maturity        5 Decay                               32       12.50%     1.105
+Maturity        5 Terminal                            56       21.88%     1.083
+Maturity        5 Insufficient                         7        2.73%     0.951
+Decay           5 Birth                              123       40.59%     1.102
+Decay           5 Growth                              44       14.52%     0.754
+Decay           5 Maturity                            19        6.27%     0.659
+Decay           5 Decay                               17        5.61%     0.496
+Decay           5 Terminal                            96       31.68%     1.569
+Decay           5 Insufficient                         4        1.32%     0.459
+Terminal        5 Birth                              212       39.11%     1.062
+Terminal        5 Growth                             122       22.51%     1.169
+Terminal        5 Maturity                            57       10.52%     1.105
+Terminal        5 Decay                               44        8.12%     0.718
+Terminal        5 Terminal                            92       16.97%     0.841
+Terminal        5 Insufficient                        15        2.77%     0.963
+Insufficient    5 Birth                               31       39.24%     1.065
+Insufficient    5 Growth                              19       24.05%     1.249
+Insufficient    5 Maturity                            10       12.66%     1.330
+Insufficient    5 Decay                                3        3.80%     0.336
+Insufficient    5 Terminal                            14       17.72%     0.878
+Insufficient    5 Insufficient                         2        2.53%     0.881
+
+Section 4 - State + Phase -> NextState Tables
+=============================================
+CurrentState                 Phase           H NextState                        Count  Probability      Lift
+RecoveryResolution           Birth           1 RecoveryResolution                  38       40.43%     6.779
+RecoveryResolution           Birth           1 CompressionProcessing               46       48.94%     3.751
+RecoveryResolution           Birth           1 NeutralProcessing                   10       10.64%     0.223
+RecoveryResolution           Maturity        1 RecoveryResolution                  27       71.05%    11.915
+RecoveryResolution           Maturity        1 NeutralProcessing                   11       28.95%     0.608
+RecoveryResolution           Terminal        1 RecoveryResolution                   1        3.70%     0.621
+RecoveryResolution           Terminal        1 ExhaustionPersistence                4       14.81%     2.258
+RecoveryResolution           Terminal        1 CompressionProcessing               17       62.96%     4.827
+RecoveryResolution           Terminal        1 NeutralProcessing                    5       18.52%     0.389
+RecoveryResolution           Insufficient    1 CompressionProcessing                1      100.00%     7.666
+ExhaustionPersistence        Birth           1 RecoveryResolution                  29       29.90%     5.013
+ExhaustionPersistence        Birth           1 ExhaustionPersistence               31       31.96%     4.872
+ExhaustionPersistence        Birth           1 CompressionProcessing                7        7.22%     0.553
+ExhaustionPersistence        Birth           1 NeutralProcessing                   11       11.34%     0.238
+ExhaustionPersistence        Birth           1 DecayToNeutral                      17       17.53%     4.565
+ExhaustionPersistence        Birth           1 DestructiveRotation                  2        2.06%     0.659
+ExhaustionPersistence        Growth          1 RecoveryResolution                   9       29.03%     4.868
+ExhaustionPersistence        Growth          1 ExhaustionPersistence               21       67.74%    10.327
+ExhaustionPersistence        Growth          1 NeutralProcessing                    1        3.23%     0.068
+ExhaustionPersistence        Maturity        1 ExhaustionPersistence               16       76.19%    11.615
+ExhaustionPersistence        Maturity        1 NeutralProcessing                    5       23.81%     0.500
+ExhaustionPersistence        Insufficient    1 RecoveryResolution                   1        3.70%     0.621
+ExhaustionPersistence        Insufficient    1 ExhaustionPersistence               11       40.74%     6.211
+ExhaustionPersistence        Insufficient    1 CompressionProcessing                2        7.41%     0.568
+ExhaustionPersistence        Insufficient    1 NeutralProcessing                    7       25.93%     0.544
+ExhaustionPersistence        Insufficient    1 DecayToNeutral                       3       11.11%     2.894
+ExhaustionPersistence        Insufficient    1 DestructiveRotation                  3       11.11%     3.549
+CompressionProcessing        Birth           1 RecoveryResolution                  13        7.34%     1.232
+CompressionProcessing        Birth           1 ExhaustionPersistence               13        7.34%     1.120
+CompressionProcessing        Birth           1 CompressionProcessing               92       51.98%     3.984
+CompressionProcessing        Birth           1 NeutralProcessing                   56       31.64%     0.664
+CompressionProcessing        Birth           1 MixedStructure                       3        1.69%     0.145
+CompressionProcessing        Growth          1 RecoveryResolution                   4        4.35%     0.729
+CompressionProcessing        Growth          1 ExhaustionPersistence               10       10.87%     1.657
+CompressionProcessing        Growth          1 CompressionProcessing               41       44.57%     3.416
+CompressionProcessing        Growth          1 NeutralProcessing                   33       35.87%     0.753
+CompressionProcessing        Growth          1 DecayToNeutral                       2        2.17%     0.566
+CompressionProcessing        Growth          1 DestructiveRotation                  1        1.09%     0.347
+CompressionProcessing        Growth          1 MixedStructure                       1        1.09%     0.093
+CompressionProcessing        Maturity        1 RecoveryResolution                   1        1.59%     0.266
+CompressionProcessing        Maturity        1 ExhaustionPersistence                8       12.70%     1.936
+CompressionProcessing        Maturity        1 CompressionProcessing               34       53.97%     4.137
+CompressionProcessing        Maturity        1 NeutralProcessing                   15       23.81%     0.500
+CompressionProcessing        Maturity        1 ReassertionProcessing                2        3.17%     0.411
+CompressionProcessing        Maturity        1 DecayToNeutral                       2        3.17%     0.827
+CompressionProcessing        Maturity        1 MixedStructure                       1        1.59%     0.136
+CompressionProcessing        Insufficient    1 RecoveryResolution                   1        5.56%     0.932
+CompressionProcessing        Insufficient    1 ExhaustionPersistence                4       22.22%     3.388
+CompressionProcessing        Insufficient    1 CompressionProcessing                6       33.33%     2.555
+CompressionProcessing        Insufficient    1 NeutralProcessing                    4       22.22%     0.467
+CompressionProcessing        Insufficient    1 DestructiveRotation                  1        5.56%     1.774
+CompressionProcessing        Insufficient    1 MixedStructure                       2       11.11%     0.952
+NeutralProcessing            Birth           1 CompressionProcessing               45       10.11%     0.775
+NeutralProcessing            Birth           1 NeutralProcessing                  253       56.85%     1.194
+NeutralProcessing            Birth           1 ReassertionProcessing               63       14.16%     1.835
+NeutralProcessing            Birth           1 DestructiveRotation                 15        3.37%     1.077
+NeutralProcessing            Birth           1 ConstructiveEmergence                3        0.67%     1.507
+NeutralProcessing            Birth           1 MixedStructure                      66       14.83%     1.271
+NeutralProcessing            Growth          1 CompressionProcessing               29        7.38%     0.566
+NeutralProcessing            Growth          1 NeutralProcessing                  246       62.60%     1.314
+NeutralProcessing            Growth          1 ReassertionProcessing               44       11.20%     1.451
+NeutralProcessing            Growth          1 DestructiveRotation                  5        1.27%     0.406
+NeutralProcessing            Growth          1 MixedStructure                      69       17.56%     1.505
+NeutralProcessing            Maturity        1 ExhaustionPersistence                2        1.89%     0.288
+NeutralProcessing            Maturity        1 NeutralProcessing                   95       89.62%     1.882
+NeutralProcessing            Maturity        1 ReassertionProcessing                4        3.77%     0.489
+NeutralProcessing            Maturity        1 ConstructiveEmergence                1        0.94%     2.109
+NeutralProcessing            Maturity        1 MixedStructure                       4        3.77%     0.323
+NeutralProcessing            Decay           1 RecoveryResolution                   1        0.33%     0.055
+NeutralProcessing            Decay           1 ExhaustionPersistence                5        1.65%     0.252
+NeutralProcessing            Decay           1 CompressionProcessing               10        3.30%     0.253
+NeutralProcessing            Decay           1 NeutralProcessing                  219       72.28%     1.517
+NeutralProcessing            Decay           1 ReassertionProcessing               37       12.21%     1.583
+NeutralProcessing            Decay           1 ConstructiveEmergence                1        0.33%     0.738
+NeutralProcessing            Decay           1 MixedStructure                      30        9.90%     0.849
+NeutralProcessing            Terminal        1 ExhaustionPersistence                1        3.33%     0.508
+NeutralProcessing            Terminal        1 CompressionProcessing                2        6.67%     0.511
+NeutralProcessing            Terminal        1 NeutralProcessing                   19       63.33%     1.330
+NeutralProcessing            Terminal        1 ReassertionProcessing                4       13.33%     1.728
+NeutralProcessing            Terminal        1 MixedStructure                       4       13.33%     1.143
+ReassertionProcessing        Terminal        1 CompressionProcessing                7        3.40%     0.260
+ReassertionProcessing        Terminal        1 NeutralProcessing                   70       33.98%     0.713
+ReassertionProcessing        Terminal        1 ReassertionProcessing               33       16.02%     2.076
+ReassertionProcessing        Terminal        1 DestructiveRotation                 29       14.08%     4.496
+ReassertionProcessing        Terminal        1 ConstructiveEmergence                1        0.49%     1.085
+ReassertionProcessing        Terminal        1 MixedStructure                      66       32.04%     2.746
+ReassertionProcessing        Insufficient    1 DestructiveRotation                  1      100.00%    31.940
+DecayToNeutral               Birth           1 CompressionProcessing                2        1.94%     0.149
+DecayToNeutral               Birth           1 NeutralProcessing                   63       61.17%     1.284
+DecayToNeutral               Birth           1 DestructiveRotation                 11       10.68%     3.411
+DecayToNeutral               Birth           1 ConstructiveEmergence                1        0.97%     2.171
+DecayToNeutral               Birth           1 MixedStructure                      26       25.24%     2.164
+DestructiveRotation          Birth           1 RecoveryResolution                   4        5.63%     0.945
+DestructiveRotation          Birth           1 ExhaustionPersistence                5        7.04%     1.074
+DestructiveRotation          Birth           1 CompressionProcessing                1        1.41%     0.108
+DestructiveRotation          Birth           1 NeutralProcessing                   25       35.21%     0.739
+DestructiveRotation          Birth           1 ReassertionProcessing                3        4.23%     0.548
+DestructiveRotation          Birth           1 DecayToNeutral                      20       28.17%     7.338
+DestructiveRotation          Birth           1 DestructiveRotation                 12       16.90%     5.398
+DestructiveRotation          Birth           1 MixedStructure                       1        1.41%     0.121
+DestructiveRotation          Insufficient    1 RecoveryResolution                   1        7.69%     1.290
+DestructiveRotation          Insufficient    1 ExhaustionPersistence                3       23.08%     3.518
+DestructiveRotation          Insufficient    1 CompressionProcessing                2       15.38%     1.179
+DestructiveRotation          Insufficient    1 NeutralProcessing                    2       15.38%     0.323
+DestructiveRotation          Insufficient    1 DecayToNeutral                       4       30.77%     8.015
+DestructiveRotation          Insufficient    1 DestructiveRotation                  1        7.69%     2.457
+ConstructiveEmergence        Insufficient    1 NeutralProcessing                    4       33.33%     0.700
+ConstructiveEmergence        Insufficient    1 DecayToNeutral                       3       25.00%     6.512
+ConstructiveEmergence        Insufficient    1 MixedStructure                       5       41.67%     3.572
+MixedStructure               Maturity        1 RecoveryResolution                   4       14.29%     2.396
+MixedStructure               Maturity        1 ExhaustionPersistence                3       10.71%     1.633
+MixedStructure               Maturity        1 CompressionProcessing                1        3.57%     0.274
+MixedStructure               Maturity        1 NeutralProcessing                    7       25.00%     0.525
+MixedStructure               Maturity        1 DecayToNeutral                       8       28.57%     7.442
+MixedStructure               Maturity        1 MixedStructure                       5       17.86%     1.531
+MixedStructure               Terminal        1 RecoveryResolution                  25        8.96%     1.503
+MixedStructure               Terminal        1 ExhaustionPersistence               39       13.98%     2.131
+MixedStructure               Terminal        1 CompressionProcessing                5        1.79%     0.137
+MixedStructure               Terminal        1 NeutralProcessing                  115       41.22%     0.865
+MixedStructure               Terminal        1 ReassertionProcessing               17        6.09%     0.790
+MixedStructure               Terminal        1 DecayToNeutral                      44       15.77%     4.108
+MixedStructure               Terminal        1 DestructiveRotation                  3        1.08%     0.343
+MixedStructure               Terminal        1 ConstructiveEmergence                3        1.08%     2.404
+MixedStructure               Terminal        1 MixedStructure                      28       10.04%     0.860
+MixedStructure               Insufficient    1 RecoveryResolution                   1       14.29%     2.396
+MixedStructure               Insufficient    1 NeutralProcessing                    2       28.57%     0.600
+MixedStructure               Insufficient    1 ConstructiveEmergence                2       28.57%    63.881
+MixedStructure               Insufficient    1 MixedStructure                       2       28.57%     2.449
+RecoveryResolution           Birth           2 RecoveryResolution                  30       31.91%     5.350
+RecoveryResolution           Birth           2 ExhaustionPersistence                3        3.19%     0.486
+RecoveryResolution           Birth           2 CompressionProcessing               34       36.17%     2.772
+RecoveryResolution           Birth           2 NeutralProcessing                   27       28.72%     0.603
+RecoveryResolution           Maturity        2 RecoveryResolution                   1        2.63%     0.441
+RecoveryResolution           Maturity        2 ExhaustionPersistence                4       10.53%     1.604
+RecoveryResolution           Maturity        2 CompressionProcessing               21       55.26%     4.235
+RecoveryResolution           Maturity        2 NeutralProcessing                   12       31.58%     0.663
+RecoveryResolution           Terminal        2 RecoveryResolution                   1        3.70%     0.621
+RecoveryResolution           Terminal        2 ExhaustionPersistence                3       11.11%     1.693
+RecoveryResolution           Terminal        2 CompressionProcessing               18       66.67%     5.109
+RecoveryResolution           Terminal        2 NeutralProcessing                    5       18.52%     0.389
+RecoveryResolution           Insufficient    2 CompressionProcessing                1      100.00%     7.663
+ExhaustionPersistence        Birth           2 RecoveryResolution                  38       39.18%     6.567
+ExhaustionPersistence        Birth           2 ExhaustionPersistence               21       21.65%     3.299
+ExhaustionPersistence        Birth           2 CompressionProcessing                4        4.12%     0.316
+ExhaustionPersistence        Birth           2 NeutralProcessing                   20       20.62%     0.433
+ExhaustionPersistence        Birth           2 DecayToNeutral                       1        1.03%     0.268
+ExhaustionPersistence        Birth           2 DestructiveRotation                 13       13.40%     4.279
+ExhaustionPersistence        Growth          2 RecoveryResolution                   9       29.03%     4.867
+ExhaustionPersistence        Growth          2 ExhaustionPersistence               16       51.61%     7.865
+ExhaustionPersistence        Growth          2 NeutralProcessing                    6       19.35%     0.406
+ExhaustionPersistence        Maturity        2 RecoveryResolution                   1        4.76%     0.798
+ExhaustionPersistence        Maturity        2 ExhaustionPersistence                8       38.10%     5.805
+ExhaustionPersistence        Maturity        2 CompressionProcessing                1        4.76%     0.365
+ExhaustionPersistence        Maturity        2 NeutralProcessing                    6       28.57%     0.600
+ExhaustionPersistence        Maturity        2 DecayToNeutral                       1        4.76%     1.240
+ExhaustionPersistence        Maturity        2 DestructiveRotation                  4       19.05%     6.082
+ExhaustionPersistence        Insufficient    2 ExhaustionPersistence                3       11.11%     1.693
+ExhaustionPersistence        Insufficient    2 CompressionProcessing                3       11.11%     0.851
+ExhaustionPersistence        Insufficient    2 NeutralProcessing                   12       44.44%     0.933
+ExhaustionPersistence        Insufficient    2 DecayToNeutral                       4       14.81%     3.858
+ExhaustionPersistence        Insufficient    2 DestructiveRotation                  2        7.41%     2.365
+ExhaustionPersistence        Insufficient    2 MixedStructure                       3       11.11%     0.955
+CompressionProcessing        Birth           2 RecoveryResolution                   8        4.55%     0.762
+CompressionProcessing        Birth           2 ExhaustionPersistence               13        7.39%     1.126
+CompressionProcessing        Birth           2 CompressionProcessing               66       37.50%     2.874
+CompressionProcessing        Birth           2 NeutralProcessing                   66       37.50%     0.787
+CompressionProcessing        Birth           2 ReassertionProcessing                9        5.11%     0.663
+CompressionProcessing        Birth           2 DecayToNeutral                       3        1.70%     0.444
+CompressionProcessing        Birth           2 DestructiveRotation                  3        1.70%     0.544
+CompressionProcessing        Birth           2 ConstructiveEmergence                1        0.57%     1.270
+CompressionProcessing        Birth           2 MixedStructure                       7        3.98%     0.342
+CompressionProcessing        Growth          2 RecoveryResolution                   3        3.26%     0.547
+CompressionProcessing        Growth          2 ExhaustionPersistence               10       10.87%     1.656
+CompressionProcessing        Growth          2 CompressionProcessing               39       42.39%     3.248
+CompressionProcessing        Growth          2 NeutralProcessing                   36       39.13%     0.821
+CompressionProcessing        Growth          2 ReassertionProcessing                1        1.09%     0.141
+CompressionProcessing        Growth          2 MixedStructure                       3        3.26%     0.280
+CompressionProcessing        Maturity        2 RecoveryResolution                   4        6.35%     1.064
+CompressionProcessing        Maturity        2 ExhaustionPersistence                9       14.29%     2.177
+CompressionProcessing        Maturity        2 CompressionProcessing               23       36.51%     2.798
+CompressionProcessing        Maturity        2 NeutralProcessing                   16       25.40%     0.533
+CompressionProcessing        Maturity        2 ReassertionProcessing                2        3.17%     0.411
+CompressionProcessing        Maturity        2 DecayToNeutral                       3        4.76%     1.240
+CompressionProcessing        Maturity        2 DestructiveRotation                  3        4.76%     1.520
+CompressionProcessing        Maturity        2 MixedStructure                       3        4.76%     0.409
+CompressionProcessing        Insufficient    2 RecoveryResolution                   2       11.11%     1.862
+CompressionProcessing        Insufficient    2 ExhaustionPersistence                3       16.67%     2.540
+CompressionProcessing        Insufficient    2 CompressionProcessing                4       22.22%     1.703
+CompressionProcessing        Insufficient    2 NeutralProcessing                    5       27.78%     0.583
+CompressionProcessing        Insufficient    2 DecayToNeutral                       1        5.56%     1.447
+CompressionProcessing        Insufficient    2 MixedStructure                       3       16.67%     1.433
+NeutralProcessing            Birth           2 RecoveryResolution                  10        2.25%     0.377
+NeutralProcessing            Birth           2 ExhaustionPersistence               28        6.29%     0.959
+NeutralProcessing            Birth           2 CompressionProcessing               45       10.11%     0.775
+NeutralProcessing            Birth           2 NeutralProcessing                  193       43.37%     0.910
+NeutralProcessing            Birth           2 ReassertionProcessing               40        8.99%     1.165
+NeutralProcessing            Birth           2 DecayToNeutral                      21        4.72%     1.229
+NeutralProcessing            Birth           2 DestructiveRotation                 15        3.37%     1.076
+NeutralProcessing            Birth           2 MixedStructure                      93       20.90%     1.796
+NeutralProcessing            Growth          2 RecoveryResolution                  13        3.31%     0.554
+NeutralProcessing            Growth          2 ExhaustionPersistence                6        1.53%     0.233
+NeutralProcessing            Growth          2 CompressionProcessing               13        3.31%     0.253
+NeutralProcessing            Growth          2 NeutralProcessing                  294       74.81%     1.570
+NeutralProcessing            Growth          2 ReassertionProcessing               32        8.14%     1.055
+NeutralProcessing            Growth          2 DestructiveRotation                  1        0.25%     0.081
+NeutralProcessing            Growth          2 ConstructiveEmergence                2        0.51%     1.137
+NeutralProcessing            Growth          2 MixedStructure                      32        8.14%     0.700
+NeutralProcessing            Maturity        2 RecoveryResolution                   4        3.77%     0.633
+NeutralProcessing            Maturity        2 ExhaustionPersistence                1        0.94%     0.144
+NeutralProcessing            Maturity        2 CompressionProcessing                3        2.83%     0.217
+NeutralProcessing            Maturity        2 NeutralProcessing                   81       76.42%     1.604
+NeutralProcessing            Maturity        2 ReassertionProcessing                6        5.66%     0.733
+NeutralProcessing            Maturity        2 DestructiveRotation                  1        0.94%     0.301
+NeutralProcessing            Maturity        2 MixedStructure                      10        9.43%     0.811
+NeutralProcessing            Decay           2 RecoveryResolution                   8        2.64%     0.443
+NeutralProcessing            Decay           2 ExhaustionPersistence               10        3.30%     0.503
+NeutralProcessing            Decay           2 CompressionProcessing               15        4.95%     0.379
+NeutralProcessing            Decay           2 NeutralProcessing                  181       59.74%     1.254
+NeutralProcessing            Decay           2 ReassertionProcessing               38       12.54%     1.625
+NeutralProcessing            Decay           2 DecayToNeutral                       8        2.64%     0.687
+NeutralProcessing            Decay           2 ConstructiveEmergence                2        0.66%     1.475
+NeutralProcessing            Decay           2 MixedStructure                      41       13.53%     1.163
+NeutralProcessing            Terminal        2 ExhaustionPersistence                1        3.33%     0.508
+NeutralProcessing            Terminal        2 CompressionProcessing                3       10.00%     0.766
+NeutralProcessing            Terminal        2 NeutralProcessing                   14       46.67%     0.979
+NeutralProcessing            Terminal        2 ReassertionProcessing                4       13.33%     1.728
+NeutralProcessing            Terminal        2 DecayToNeutral                       2        6.67%     1.736
+NeutralProcessing            Terminal        2 ConstructiveEmergence                1        3.33%     7.450
+NeutralProcessing            Terminal        2 MixedStructure                       5       16.67%     1.433
+ReassertionProcessing        Terminal        2 RecoveryResolution                   5        2.43%     0.407
+ReassertionProcessing        Terminal        2 ExhaustionPersistence                6        2.91%     0.444
+ReassertionProcessing        Terminal        2 CompressionProcessing                8        3.88%     0.298
+ReassertionProcessing        Terminal        2 NeutralProcessing                  101       49.03%     1.029
+ReassertionProcessing        Terminal        2 ReassertionProcessing               41       19.90%     2.579
+ReassertionProcessing        Terminal        2 DecayToNeutral                      10        4.85%     1.264
+ReassertionProcessing        Terminal        2 DestructiveRotation                 23       11.17%     3.565
+ReassertionProcessing        Terminal        2 MixedStructure                      12        5.83%     0.501
+ReassertionProcessing        Insufficient    2 DestructiveRotation                  1      100.00%    31.929
+DecayToNeutral               Birth           2 RecoveryResolution                   2        1.94%     0.325
+DecayToNeutral               Birth           2 ExhaustionPersistence                7        6.80%     1.036
+DecayToNeutral               Birth           2 CompressionProcessing                5        4.85%     0.372
+DecayToNeutral               Birth           2 NeutralProcessing                   30       29.13%     0.611
+DecayToNeutral               Birth           2 ReassertionProcessing                5        4.85%     0.629
+DecayToNeutral               Birth           2 DecayToNeutral                      18       17.48%     4.550
+DecayToNeutral               Birth           2 DestructiveRotation                  9        8.74%     2.790
+DecayToNeutral               Birth           2 ConstructiveEmergence                2        1.94%     4.340
+DecayToNeutral               Birth           2 MixedStructure                      25       24.27%     2.086
+DestructiveRotation          Birth           2 RecoveryResolution                   1        1.41%     0.236
+DestructiveRotation          Birth           2 ExhaustionPersistence                9       12.68%     1.932
+DestructiveRotation          Birth           2 CompressionProcessing                4        5.63%     0.432
+DestructiveRotation          Birth           2 NeutralProcessing                   29       40.85%     0.857
+DestructiveRotation          Birth           2 ReassertionProcessing                8       11.27%     1.460
+DestructiveRotation          Birth           2 DecayToNeutral                       4        5.63%     1.467
+DestructiveRotation          Birth           2 DestructiveRotation                  3        4.23%     1.349
+DestructiveRotation          Birth           2 MixedStructure                      13       18.31%     1.574
+DestructiveRotation          Insufficient    2 ExhaustionPersistence                2       15.38%     2.344
+DestructiveRotation          Insufficient    2 CompressionProcessing                4       30.77%     2.358
+DestructiveRotation          Insufficient    2 NeutralProcessing                    4       30.77%     0.646
+DestructiveRotation          Insufficient    2 DecayToNeutral                       1        7.69%     2.003
+DestructiveRotation          Insufficient    2 DestructiveRotation                  1        7.69%     2.456
+DestructiveRotation          Insufficient    2 ConstructiveEmergence                1        7.69%    17.192
+ConstructiveEmergence        Insufficient    2 NeutralProcessing                    4       33.33%     0.700
+ConstructiveEmergence        Insufficient    2 DecayToNeutral                       3       25.00%     6.510
+ConstructiveEmergence        Insufficient    2 MixedStructure                       5       41.67%     3.582
+MixedStructure               Maturity        2 RecoveryResolution                   3       10.71%     1.796
+MixedStructure               Maturity        2 ExhaustionPersistence                1        3.57%     0.544
+MixedStructure               Maturity        2 CompressionProcessing                5       17.86%     1.368
+MixedStructure               Maturity        2 NeutralProcessing                    7       25.00%     0.525
+MixedStructure               Maturity        2 ReassertionProcessing                2        7.14%     0.925
+MixedStructure               Maturity        2 ConstructiveEmergence                2        7.14%    15.964
+MixedStructure               Maturity        2 MixedStructure                       8       28.57%     2.456
+MixedStructure               Terminal        2 RecoveryResolution                  17        6.09%     1.021
+MixedStructure               Terminal        2 ExhaustionPersistence               12        4.30%     0.655
+MixedStructure               Terminal        2 CompressionProcessing               30       10.75%     0.824
+MixedStructure               Terminal        2 NeutralProcessing                  126       45.16%     0.948
+MixedStructure               Terminal        2 ReassertionProcessing               18        6.45%     0.836
+MixedStructure               Terminal        2 DecayToNeutral                      23        8.24%     2.147
+MixedStructure               Terminal        2 DestructiveRotation                  5        1.79%     0.572
+MixedStructure               Terminal        2 ConstructiveEmergence                1        0.36%     0.801
+MixedStructure               Terminal        2 MixedStructure                      47       16.85%     1.448
+MixedStructure               Insufficient    2 CompressionProcessing                1       14.29%     1.095
+MixedStructure               Insufficient    2 NeutralProcessing                    3       42.86%     0.899
+MixedStructure               Insufficient    2 ReassertionProcessing                1       14.29%     1.851
+MixedStructure               Insufficient    2 MixedStructure                       2       28.57%     2.456
+RecoveryResolution           Birth           3 RecoveryResolution                   4        4.26%     0.713
+RecoveryResolution           Birth           3 ExhaustionPersistence               10       10.64%     1.621
+RecoveryResolution           Birth           3 CompressionProcessing               53       56.38%     4.319
+RecoveryResolution           Birth           3 NeutralProcessing                   27       28.72%     0.603
+RecoveryResolution           Maturity        3 RecoveryResolution                   1        2.63%     0.441
+RecoveryResolution           Maturity        3 ExhaustionPersistence                3        7.89%     1.203
+RecoveryResolution           Maturity        3 CompressionProcessing               23       60.53%     4.636
+RecoveryResolution           Maturity        3 NeutralProcessing                   11       28.95%     0.607
+RecoveryResolution           Terminal        3 RecoveryResolution                   2        7.41%     1.241
+RecoveryResolution           Terminal        3 ExhaustionPersistence                3       11.11%     1.693
+RecoveryResolution           Terminal        3 CompressionProcessing                6       22.22%     1.702
+RecoveryResolution           Terminal        3 NeutralProcessing                   13       48.15%     1.010
+RecoveryResolution           Terminal        3 DecayToNeutral                       1        3.70%     0.964
+RecoveryResolution           Terminal        3 MixedStructure                       2        7.41%     0.639
+RecoveryResolution           Insufficient    3 CompressionProcessing                1      100.00%     7.660
+ExhaustionPersistence        Birth           3 RecoveryResolution                  31       31.96%     5.355
+ExhaustionPersistence        Birth           3 ExhaustionPersistence               19       19.59%     2.984
+ExhaustionPersistence        Birth           3 CompressionProcessing                1        1.03%     0.079
+ExhaustionPersistence        Birth           3 NeutralProcessing                   26       26.80%     0.562
+ExhaustionPersistence        Birth           3 DecayToNeutral                       7        7.22%     1.878
+ExhaustionPersistence        Birth           3 DestructiveRotation                 13       13.40%     4.277
+ExhaustionPersistence        Growth          3 RecoveryResolution                   8       25.81%     4.324
+ExhaustionPersistence        Growth          3 ExhaustionPersistence                8       25.81%     3.931
+ExhaustionPersistence        Growth          3 CompressionProcessing                1        3.23%     0.247
+ExhaustionPersistence        Growth          3 NeutralProcessing                    9       29.03%     0.609
+ExhaustionPersistence        Growth          3 DecayToNeutral                       1        3.23%     0.840
+ExhaustionPersistence        Growth          3 DestructiveRotation                  4       12.90%     4.118
+ExhaustionPersistence        Maturity        3 ExhaustionPersistence                1        4.76%     0.725
+ExhaustionPersistence        Maturity        3 CompressionProcessing                3       14.29%     1.094
+ExhaustionPersistence        Maturity        3 NeutralProcessing                   10       47.62%     0.999
+ExhaustionPersistence        Maturity        3 DecayToNeutral                       4       19.05%     4.958
+ExhaustionPersistence        Maturity        3 DestructiveRotation                  1        4.76%     1.520
+ExhaustionPersistence        Maturity        3 MixedStructure                       2        9.52%     0.821
+ExhaustionPersistence        Insufficient    3 ExhaustionPersistence                4       14.81%     2.257
+ExhaustionPersistence        Insufficient    3 NeutralProcessing                   13       48.15%     1.010
+ExhaustionPersistence        Insufficient    3 DestructiveRotation                  2        7.41%     2.364
+ExhaustionPersistence        Insufficient    3 MixedStructure                       8       29.63%     2.554
+CompressionProcessing        Birth           3 RecoveryResolution                   9        5.11%     0.857
+CompressionProcessing        Birth           3 ExhaustionPersistence               16        9.09%     1.385
+CompressionProcessing        Birth           3 CompressionProcessing               62       35.23%     2.698
+CompressionProcessing        Birth           3 NeutralProcessing                   60       34.09%     0.715
+CompressionProcessing        Birth           3 ReassertionProcessing                3        1.70%     0.221
+CompressionProcessing        Birth           3 DecayToNeutral                       5        2.84%     0.739
+CompressionProcessing        Birth           3 DestructiveRotation                  4        2.27%     0.725
+CompressionProcessing        Birth           3 MixedStructure                      17        9.66%     0.833
+CompressionProcessing        Growth          3 RecoveryResolution                   7        7.61%     1.275
+CompressionProcessing        Growth          3 ExhaustionPersistence               10       10.87%     1.656
+CompressionProcessing        Growth          3 CompressionProcessing               29       31.52%     2.415
+CompressionProcessing        Growth          3 NeutralProcessing                   34       36.96%     0.775
+CompressionProcessing        Growth          3 ReassertionProcessing                4        4.35%     0.563
+CompressionProcessing        Growth          3 DecayToNeutral                       3        3.26%     0.849
+CompressionProcessing        Growth          3 MixedStructure                       5        5.43%     0.469
+CompressionProcessing        Maturity        3 RecoveryResolution                   9       14.29%     2.394
+CompressionProcessing        Maturity        3 ExhaustionPersistence               11       17.46%     2.660
+CompressionProcessing        Maturity        3 CompressionProcessing               12       19.05%     1.459
+CompressionProcessing        Maturity        3 NeutralProcessing                   18       28.57%     0.599
+CompressionProcessing        Maturity        3 DecayToNeutral                       2        3.17%     0.826
+CompressionProcessing        Maturity        3 DestructiveRotation                  5        7.94%     2.533
+CompressionProcessing        Maturity        3 MixedStructure                       6        9.52%     0.821
+CompressionProcessing        Insufficient    3 RecoveryResolution                   3       16.67%     2.793
+CompressionProcessing        Insufficient    3 ExhaustionPersistence                2       11.11%     1.693
+CompressionProcessing        Insufficient    3 CompressionProcessing                3       16.67%     1.277
+CompressionProcessing        Insufficient    3 NeutralProcessing                    5       27.78%     0.583
+CompressionProcessing        Insufficient    3 ReassertionProcessing                1        5.56%     0.720
+CompressionProcessing        Insufficient    3 DecayToNeutral                       1        5.56%     1.446
+CompressionProcessing        Insufficient    3 DestructiveRotation                  1        5.56%     1.773
+CompressionProcessing        Insufficient    3 MixedStructure                       2       11.11%     0.958
+NeutralProcessing            Birth           3 RecoveryResolution                  21        4.72%     0.791
+NeutralProcessing            Birth           3 ExhaustionPersistence               13        2.92%     0.445
+NeutralProcessing            Birth           3 CompressionProcessing               31        6.97%     0.534
+NeutralProcessing            Birth           3 NeutralProcessing                  273       61.35%     1.287
+NeutralProcessing            Birth           3 ReassertionProcessing               41        9.21%     1.193
+NeutralProcessing            Birth           3 DecayToNeutral                       8        1.80%     0.468
+NeutralProcessing            Birth           3 DestructiveRotation                 11        2.47%     0.789
+NeutralProcessing            Birth           3 ConstructiveEmergence                2        0.45%     1.004
+NeutralProcessing            Birth           3 MixedStructure                      45       10.11%     0.872
+NeutralProcessing            Growth          3 RecoveryResolution                  12        3.06%     0.513
+NeutralProcessing            Growth          3 ExhaustionPersistence                7        1.79%     0.272
+NeutralProcessing            Growth          3 CompressionProcessing               17        4.34%     0.332
+NeutralProcessing            Growth          3 NeutralProcessing                  282       71.94%     1.509
+NeutralProcessing            Growth          3 ReassertionProcessing               37        9.44%     1.222
+NeutralProcessing            Growth          3 DestructiveRotation                  4        1.02%     0.326
+NeutralProcessing            Growth          3 ConstructiveEmergence                1        0.26%     0.570
+NeutralProcessing            Growth          3 MixedStructure                      32        8.16%     0.704
+NeutralProcessing            Maturity        3 RecoveryResolution                   1        0.94%     0.158
+NeutralProcessing            Maturity        3 ExhaustionPersistence                2        1.89%     0.287
+NeutralProcessing            Maturity        3 CompressionProcessing                6        5.66%     0.434
+NeutralProcessing            Maturity        3 NeutralProcessing                   68       64.15%     1.346
+NeutralProcessing            Maturity        3 ReassertionProcessing               14       13.21%     1.711
+NeutralProcessing            Maturity        3 DecayToNeutral                       3        2.83%     0.737
+NeutralProcessing            Maturity        3 MixedStructure                      12       11.32%     0.976
+NeutralProcessing            Decay           3 RecoveryResolution                  11        3.63%     0.608
+NeutralProcessing            Decay           3 ExhaustionPersistence               11        3.63%     0.553
+NeutralProcessing            Decay           3 CompressionProcessing               26        8.58%     0.657
+NeutralProcessing            Decay           3 NeutralProcessing                  153       50.50%     1.059
+NeutralProcessing            Decay           3 ReassertionProcessing               38       12.54%     1.624
+NeutralProcessing            Decay           3 DecayToNeutral                      10        3.30%     0.859
+NeutralProcessing            Decay           3 DestructiveRotation                  8        2.64%     0.843
+NeutralProcessing            Decay           3 ConstructiveEmergence                4        1.32%     2.949
+NeutralProcessing            Decay           3 MixedStructure                      42       13.86%     1.195
+NeutralProcessing            Terminal        3 RecoveryResolution                   1        3.33%     0.559
+NeutralProcessing            Terminal        3 ExhaustionPersistence                2        6.67%     1.016
+NeutralProcessing            Terminal        3 CompressionProcessing                2        6.67%     0.511
+NeutralProcessing            Terminal        3 NeutralProcessing                   14       46.67%     0.979
+NeutralProcessing            Terminal        3 ReassertionProcessing                3       10.00%     1.295
+NeutralProcessing            Terminal        3 DecayToNeutral                       1        3.33%     0.868
+NeutralProcessing            Terminal        3 MixedStructure                       7       23.33%     2.011
+ReassertionProcessing        Terminal        3 RecoveryResolution                   5        2.43%     0.407
+ReassertionProcessing        Terminal        3 ExhaustionPersistence                8        3.88%     0.592
+ReassertionProcessing        Terminal        3 CompressionProcessing               15        7.28%     0.558
+ReassertionProcessing        Terminal        3 NeutralProcessing                   83       40.29%     0.845
+ReassertionProcessing        Terminal        3 ReassertionProcessing               31       15.05%     1.949
+ReassertionProcessing        Terminal        3 DecayToNeutral                      15        7.28%     1.895
+ReassertionProcessing        Terminal        3 DestructiveRotation                 16        7.77%     2.479
+ReassertionProcessing        Terminal        3 MixedStructure                      33       16.02%     1.381
+ReassertionProcessing        Insufficient    3 ExhaustionPersistence                1      100.00%    15.233
+DecayToNeutral               Birth           3 RecoveryResolution                   5        4.85%     0.813
+DecayToNeutral               Birth           3 ExhaustionPersistence               11       10.68%     1.627
+DecayToNeutral               Birth           3 CompressionProcessing                9        8.74%     0.669
+DecayToNeutral               Birth           3 NeutralProcessing                   46       44.66%     0.937
+DecayToNeutral               Birth           3 ReassertionProcessing                2        1.94%     0.251
+DecayToNeutral               Birth           3 DecayToNeutral                       7        6.80%     1.769
+DecayToNeutral               Birth           3 DestructiveRotation                  2        1.94%     0.620
+DecayToNeutral               Birth           3 MixedStructure                      21       20.39%     1.758
+DestructiveRotation          Birth           3 RecoveryResolution                   5        7.04%     1.180
+DestructiveRotation          Birth           3 ExhaustionPersistence                8       11.27%     1.716
+DestructiveRotation          Birth           3 CompressionProcessing                6        8.45%     0.647
+DestructiveRotation          Birth           3 NeutralProcessing                   27       38.03%     0.798
+DestructiveRotation          Birth           3 ReassertionProcessing                6        8.45%     1.095
+DestructiveRotation          Birth           3 DecayToNeutral                       7        9.86%     2.566
+DestructiveRotation          Birth           3 DestructiveRotation                  1        1.41%     0.450
+DestructiveRotation          Birth           3 ConstructiveEmergence                1        1.41%     3.147
+DestructiveRotation          Birth           3 MixedStructure                      10       14.08%     1.214
+DestructiveRotation          Insufficient    3 RecoveryResolution                   2       15.38%     2.578
+DestructiveRotation          Insufficient    3 ExhaustionPersistence                2       15.38%     2.344
+DestructiveRotation          Insufficient    3 CompressionProcessing                2       15.38%     1.178
+DestructiveRotation          Insufficient    3 NeutralProcessing                    3       23.08%     0.484
+DestructiveRotation          Insufficient    3 ReassertionProcessing                1        7.69%     0.996
+DestructiveRotation          Insufficient    3 DecayToNeutral                       2       15.38%     4.004
+DestructiveRotation          Insufficient    3 MixedStructure                       1        7.69%     0.663
+ConstructiveEmergence        Insufficient    3 ExhaustionPersistence                2       16.67%     2.539
+ConstructiveEmergence        Insufficient    3 NeutralProcessing                    3       25.00%     0.524
+ConstructiveEmergence        Insufficient    3 MixedStructure                       7       58.33%     5.029
+MixedStructure               Maturity        3 RecoveryResolution                   2        7.14%     1.197
+MixedStructure               Maturity        3 ExhaustionPersistence                3       10.71%     1.632
+MixedStructure               Maturity        3 CompressionProcessing                5       17.86%     1.368
+MixedStructure               Maturity        3 NeutralProcessing                    7       25.00%     0.524
+MixedStructure               Maturity        3 ReassertionProcessing                1        3.57%     0.463
+MixedStructure               Maturity        3 DecayToNeutral                       3       10.71%     2.789
+MixedStructure               Maturity        3 MixedStructure                       7       25.00%     2.155
+MixedStructure               Terminal        3 RecoveryResolution                  21        7.53%     1.261
+MixedStructure               Terminal        3 ExhaustionPersistence               19        6.81%     1.037
+MixedStructure               Terminal        3 CompressionProcessing               36       12.90%     0.988
+MixedStructure               Terminal        3 NeutralProcessing                   91       32.62%     0.684
+MixedStructure               Terminal        3 ReassertionProcessing               22        7.89%     1.021
+MixedStructure               Terminal        3 DecayToNeutral                      22        7.89%     2.052
+MixedStructure               Terminal        3 DestructiveRotation                 12        4.30%     1.373
+MixedStructure               Terminal        3 ConstructiveEmergence                4        1.43%     3.203
+MixedStructure               Terminal        3 MixedStructure                      52       18.64%     1.607
+MixedStructure               Insufficient    3 CompressionProcessing                1       14.29%     1.094
+MixedStructure               Insufficient    3 NeutralProcessing                    2       28.57%     0.599
+MixedStructure               Insufficient    3 ReassertionProcessing                3       42.86%     5.551
+MixedStructure               Insufficient    3 DecayToNeutral                       1       14.29%     3.718
+RecoveryResolution           Birth           5 RecoveryResolution                  10       10.64%     1.781
+RecoveryResolution           Birth           5 ExhaustionPersistence               12       12.77%     1.943
+RecoveryResolution           Birth           5 CompressionProcessing               19       20.21%     1.547
+RecoveryResolution           Birth           5 NeutralProcessing                   38       40.43%     0.848
+RecoveryResolution           Birth           5 ReassertionProcessing                1        1.06%     0.138
+RecoveryResolution           Birth           5 DecayToNeutral                       4        4.26%     1.107
+RecoveryResolution           Birth           5 DestructiveRotation                  1        1.06%     0.339
+RecoveryResolution           Birth           5 ConstructiveEmergence                1        1.06%     2.375
+RecoveryResolution           Birth           5 MixedStructure                       8        8.51%     0.735
+RecoveryResolution           Maturity        5 ExhaustionPersistence                1        2.63%     0.401
+RecoveryResolution           Maturity        5 CompressionProcessing                7       18.42%     1.410
+RecoveryResolution           Maturity        5 NeutralProcessing                   21       55.26%     1.159
+RecoveryResolution           Maturity        5 ReassertionProcessing                3        7.89%     1.022
+RecoveryResolution           Maturity        5 DecayToNeutral                       1        2.63%     0.684
+RecoveryResolution           Maturity        5 MixedStructure                       5       13.16%     1.137
+RecoveryResolution           Terminal        5 CompressionProcessing                5       18.52%     1.417
+RecoveryResolution           Terminal        5 NeutralProcessing                   16       59.26%     1.243
+RecoveryResolution           Terminal        5 ReassertionProcessing                2        7.41%     0.959
+RecoveryResolution           Terminal        5 DecayToNeutral                       1        3.70%     0.963
+RecoveryResolution           Terminal        5 DestructiveRotation                  1        3.70%     1.181
+RecoveryResolution           Terminal        5 MixedStructure                       2        7.41%     0.640
+RecoveryResolution           Insufficient    5 NeutralProcessing                    1      100.00%     2.098
+ExhaustionPersistence        Birth           5 RecoveryResolution                   6        6.19%     1.036
+ExhaustionPersistence        Birth           5 ExhaustionPersistence                6        6.19%     0.942
+ExhaustionPersistence        Birth           5 CompressionProcessing               29       29.90%     2.288
+ExhaustionPersistence        Birth           5 NeutralProcessing                   40       41.24%     0.865
+ExhaustionPersistence        Birth           5 ReassertionProcessing                3        3.09%     0.400
+ExhaustionPersistence        Birth           5 DecayToNeutral                       6        6.19%     1.609
+ExhaustionPersistence        Birth           5 DestructiveRotation                  2        2.06%     0.658
+ExhaustionPersistence        Birth           5 MixedStructure                       5        5.15%     0.445
+ExhaustionPersistence        Growth          5 ExhaustionPersistence                4       12.90%     1.964
+ExhaustionPersistence        Growth          5 CompressionProcessing                6       19.35%     1.481
+ExhaustionPersistence        Growth          5 NeutralProcessing                   14       45.16%     0.947
+ExhaustionPersistence        Growth          5 ReassertionProcessing                1        3.23%     0.417
+ExhaustionPersistence        Growth          5 DestructiveRotation                  1        3.23%     1.029
+ExhaustionPersistence        Growth          5 MixedStructure                       5       16.13%     1.394
+ExhaustionPersistence        Maturity        5 RecoveryResolution                   3       14.29%     2.392
+ExhaustionPersistence        Maturity        5 ExhaustionPersistence                3       14.29%     2.175
+ExhaustionPersistence        Maturity        5 CompressionProcessing                3       14.29%     1.093
+ExhaustionPersistence        Maturity        5 NeutralProcessing                    5       23.81%     0.499
+ExhaustionPersistence        Maturity        5 DecayToNeutral                       2        9.52%     2.477
+ExhaustionPersistence        Maturity        5 DestructiveRotation                  1        4.76%     1.519
+ExhaustionPersistence        Maturity        5 MixedStructure                       4       19.05%     1.646
+ExhaustionPersistence        Insufficient    5 RecoveryResolution                   3       11.11%     1.860
+ExhaustionPersistence        Insufficient    5 ExhaustionPersistence                3       11.11%     1.691
+ExhaustionPersistence        Insufficient    5 CompressionProcessing                3       11.11%     0.850
+ExhaustionPersistence        Insufficient    5 NeutralProcessing                   12       44.44%     0.932
+ExhaustionPersistence        Insufficient    5 DecayToNeutral                       1        3.70%     0.963
+ExhaustionPersistence        Insufficient    5 MixedStructure                       5       18.52%     1.600
+CompressionProcessing        Birth           5 RecoveryResolution                  12        6.82%     1.142
+CompressionProcessing        Birth           5 ExhaustionPersistence               21       11.93%     1.816
+CompressionProcessing        Birth           5 CompressionProcessing               31       17.61%     1.348
+CompressionProcessing        Birth           5 NeutralProcessing                   70       39.77%     0.834
+CompressionProcessing        Birth           5 ReassertionProcessing               10        5.68%     0.735
+CompressionProcessing        Birth           5 DecayToNeutral                       6        3.41%     0.887
+CompressionProcessing        Birth           5 DestructiveRotation                  9        5.11%     1.631
+CompressionProcessing        Birth           5 ConstructiveEmergence                1        0.57%     1.268
+CompressionProcessing        Birth           5 MixedStructure                      16        9.09%     0.786
+CompressionProcessing        Growth          5 RecoveryResolution                   9        9.78%     1.638
+CompressionProcessing        Growth          5 ExhaustionPersistence                9        9.78%     1.489
+CompressionProcessing        Growth          5 CompressionProcessing               11       11.96%     0.915
+CompressionProcessing        Growth          5 NeutralProcessing                   45       48.91%     1.026
+CompressionProcessing        Growth          5 ReassertionProcessing                6        6.52%     0.844
+CompressionProcessing        Growth          5 DecayToNeutral                       3        3.26%     0.848
+CompressionProcessing        Growth          5 DestructiveRotation                  2        2.17%     0.693
+CompressionProcessing        Growth          5 MixedStructure                       7        7.61%     0.658
+CompressionProcessing        Maturity        5 RecoveryResolution                   7       11.11%     1.860
+CompressionProcessing        Maturity        5 ExhaustionPersistence                6        9.52%     1.450
+CompressionProcessing        Maturity        5 CompressionProcessing                8       12.70%     0.972
+CompressionProcessing        Maturity        5 NeutralProcessing                   28       44.44%     0.932
+CompressionProcessing        Maturity        5 ReassertionProcessing                2        3.17%     0.411
+CompressionProcessing        Maturity        5 DecayToNeutral                       3        4.76%     1.239
+CompressionProcessing        Maturity        5 DestructiveRotation                  2        3.17%     1.012
+CompressionProcessing        Maturity        5 MixedStructure                       7       11.11%     0.960
+CompressionProcessing        Insufficient    5 RecoveryResolution                   1        5.56%     0.930
+CompressionProcessing        Insufficient    5 ExhaustionPersistence                1        5.56%     0.846
+CompressionProcessing        Insufficient    5 CompressionProcessing                3       16.67%     1.276
+CompressionProcessing        Insufficient    5 NeutralProcessing                    7       38.89%     0.816
+CompressionProcessing        Insufficient    5 ReassertionProcessing                2       11.11%     1.438
+CompressionProcessing        Insufficient    5 DestructiveRotation                  1        5.56%     1.772
+CompressionProcessing        Insufficient    5 MixedStructure                       3       16.67%     1.440
+NeutralProcessing            Birth           5 RecoveryResolution                  30        6.76%     1.131
+NeutralProcessing            Birth           5 ExhaustionPersistence               25        5.63%     0.857
+NeutralProcessing            Birth           5 CompressionProcessing               52       11.71%     0.896
+NeutralProcessing            Birth           5 NeutralProcessing                  220       49.55%     1.039
+NeutralProcessing            Birth           5 ReassertionProcessing               36        8.11%     1.049
+NeutralProcessing            Birth           5 DecayToNeutral                      10        2.25%     0.586
+NeutralProcessing            Birth           5 DestructiveRotation                 10        2.25%     0.718
+NeutralProcessing            Birth           5 ConstructiveEmergence                1        0.23%     0.503
+NeutralProcessing            Birth           5 MixedStructure                      60       13.51%     1.168
+NeutralProcessing            Growth          5 RecoveryResolution                  16        4.09%     0.685
+NeutralProcessing            Growth          5 ExhaustionPersistence               17        4.35%     0.662
+NeutralProcessing            Growth          5 CompressionProcessing               47       12.02%     0.920
+NeutralProcessing            Growth          5 NeutralProcessing                  188       48.08%     1.009
+NeutralProcessing            Growth          5 ReassertionProcessing               45       11.51%     1.489
+NeutralProcessing            Growth          5 DecayToNeutral                      14        3.58%     0.931
+NeutralProcessing            Growth          5 DestructiveRotation                 15        3.84%     1.224
+NeutralProcessing            Growth          5 ConstructiveEmergence                2        0.51%     1.142
+NeutralProcessing            Growth          5 MixedStructure                      47       12.02%     1.039
+NeutralProcessing            Maturity        5 RecoveryResolution                   5        4.72%     0.790
+NeutralProcessing            Maturity        5 ExhaustionPersistence                4        3.77%     0.574
+NeutralProcessing            Maturity        5 CompressionProcessing               12       11.32%     0.867
+NeutralProcessing            Maturity        5 NeutralProcessing                   44       41.51%     0.871
+NeutralProcessing            Maturity        5 ReassertionProcessing               18       16.98%     2.198
+NeutralProcessing            Maturity        5 DecayToNeutral                       7        6.60%     1.718
+NeutralProcessing            Maturity        5 DestructiveRotation                  4        3.77%     1.204
+NeutralProcessing            Maturity        5 MixedStructure                      12       11.32%     0.978
+NeutralProcessing            Decay           5 RecoveryResolution                  12        3.96%     0.663
+NeutralProcessing            Decay           5 ExhaustionPersistence               14        4.62%     0.703
+NeutralProcessing            Decay           5 CompressionProcessing               27        8.91%     0.682
+NeutralProcessing            Decay           5 NeutralProcessing                  145       47.85%     1.004
+NeutralProcessing            Decay           5 ReassertionProcessing               31       10.23%     1.324
+NeutralProcessing            Decay           5 DecayToNeutral                      17        5.61%     1.459
+NeutralProcessing            Decay           5 DestructiveRotation                 14        4.62%     1.474
+NeutralProcessing            Decay           5 ConstructiveEmergence                2        0.66%     1.474
+NeutralProcessing            Decay           5 MixedStructure                      41       13.53%     1.169
+NeutralProcessing            Terminal        5 RecoveryResolution                   3       10.00%     1.674
+NeutralProcessing            Terminal        5 ExhaustionPersistence                7       23.33%     3.552
+NeutralProcessing            Terminal        5 CompressionProcessing                2        6.67%     0.510
+NeutralProcessing            Terminal        5 NeutralProcessing                   13       43.33%     0.909
+NeutralProcessing            Terminal        5 ReassertionProcessing                2        6.67%     0.863
+NeutralProcessing            Terminal        5 DecayToNeutral                       1        3.33%     0.867
+NeutralProcessing            Terminal        5 MixedStructure                       2        6.67%     0.576
+ReassertionProcessing        Terminal        5 RecoveryResolution                   8        3.88%     0.650
+ReassertionProcessing        Terminal        5 ExhaustionPersistence                8        3.88%     0.591
+ReassertionProcessing        Terminal        5 CompressionProcessing               19        9.22%     0.706
+ReassertionProcessing        Terminal        5 NeutralProcessing                  113       54.85%     1.151
+ReassertionProcessing        Terminal        5 ReassertionProcessing               14        6.80%     0.880
+ReassertionProcessing        Terminal        5 DecayToNeutral                      10        4.85%     1.263
+ReassertionProcessing        Terminal        5 DestructiveRotation                  8        3.88%     1.239
+ReassertionProcessing        Terminal        5 ConstructiveEmergence                2        0.97%     2.167
+ReassertionProcessing        Terminal        5 MixedStructure                      24       11.65%     1.007
+ReassertionProcessing        Insufficient    5 RecoveryResolution                   1      100.00%    16.744
+DecayToNeutral               Birth           5 RecoveryResolution                   6        5.83%     0.975
+DecayToNeutral               Birth           5 ExhaustionPersistence               11       10.68%     1.626
+DecayToNeutral               Birth           5 CompressionProcessing                8        7.77%     0.595
+DecayToNeutral               Birth           5 NeutralProcessing                   49       47.57%     0.998
+DecayToNeutral               Birth           5 ReassertionProcessing                6        5.83%     0.754
+DecayToNeutral               Birth           5 DecayToNeutral                       5        4.85%     1.263
+DecayToNeutral               Birth           5 DestructiveRotation                  2        1.94%     0.619
+DecayToNeutral               Birth           5 MixedStructure                      16       15.53%     1.342
+DestructiveRotation          Birth           5 RecoveryResolution                  10       14.08%     2.358
+DestructiveRotation          Birth           5 ExhaustionPersistence                4        5.63%     0.858
+DestructiveRotation          Birth           5 CompressionProcessing                8       11.27%     0.862
+DestructiveRotation          Birth           5 NeutralProcessing                   29       40.85%     0.857
+DestructiveRotation          Birth           5 ReassertionProcessing                4        5.63%     0.729
+DestructiveRotation          Birth           5 DecayToNeutral                       1        1.41%     0.366
+DestructiveRotation          Birth           5 DestructiveRotation                  4        5.63%     1.797
+DestructiveRotation          Birth           5 ConstructiveEmergence                1        1.41%     3.144
+DestructiveRotation          Birth           5 MixedStructure                      10       14.08%     1.217
+DestructiveRotation          Insufficient    5 RecoveryResolution                   2       15.38%     2.576
+DestructiveRotation          Insufficient    5 ExhaustionPersistence                3       23.08%     3.513
+DestructiveRotation          Insufficient    5 CompressionProcessing                2       15.38%     1.178
+DestructiveRotation          Insufficient    5 NeutralProcessing                    5       38.46%     0.807
+DestructiveRotation          Insufficient    5 MixedStructure                       1        7.69%     0.665
+ConstructiveEmergence        Insufficient    5 NeutralProcessing                    8       66.67%     1.399
+ConstructiveEmergence        Insufficient    5 ReassertionProcessing                1        8.33%     1.079
+ConstructiveEmergence        Insufficient    5 DestructiveRotation                  1        8.33%     2.658
+ConstructiveEmergence        Insufficient    5 ConstructiveEmergence                1        8.33%    18.604
+ConstructiveEmergence        Insufficient    5 MixedStructure                       1        8.33%     0.720
+MixedStructure               Maturity        5 RecoveryResolution                   2        7.14%     1.196
+MixedStructure               Maturity        5 CompressionProcessing                5       17.86%     1.367
+MixedStructure               Maturity        5 NeutralProcessing                   14       50.00%     1.049
+MixedStructure               Maturity        5 ReassertionProcessing                3       10.71%     1.387
+MixedStructure               Maturity        5 DecayToNeutral                       1        3.57%     0.929
+MixedStructure               Maturity        5 ConstructiveEmergence                1        3.57%     7.973
+MixedStructure               Maturity        5 MixedStructure                       2        7.14%     0.617
+MixedStructure               Terminal        5 RecoveryResolution                  14        5.02%     0.840
+MixedStructure               Terminal        5 ExhaustionPersistence               17        6.09%     0.927
+MixedStructure               Terminal        5 CompressionProcessing               43       15.41%     1.180
+MixedStructure               Terminal        5 NeutralProcessing                  147       52.69%     1.105
+MixedStructure               Terminal        5 ReassertionProcessing               16        5.73%     0.742
+MixedStructure               Terminal        5 DecayToNeutral                       9        3.23%     0.839
+MixedStructure               Terminal        5 DestructiveRotation                  6        2.15%     0.686
+MixedStructure               Terminal        5 MixedStructure                      27        9.68%     0.836
+MixedStructure               Insufficient    5 NeutralProcessing                    5       71.43%     1.498
+MixedStructure               Insufficient    5 ReassertionProcessing                1       14.29%     1.849
+MixedStructure               Insufficient    5 DecayToNeutral                       1       14.29%     3.716
+
+Section 5 - Entropy Analysis
+============================
+Phase           H     Count    Entropy  NormEntropy DominantDestination          DominantProb DominantLift
+Birth           1       987     1.7246       0.7849 NeutralProcessing                  42.35%        0.889
+Birth           2       986     1.8322       0.8339 NeutralProcessing                  37.02%        0.777
+Birth           3       986     1.6681       0.7592 NeutralProcessing                  46.55%        0.977
+Birth           5       985     1.6956       0.7717 NeutralProcessing                  45.28%        0.950
+Growth          1       516     1.4186       0.6822 NeutralProcessing                  54.26%        1.139
+Growth          2       516     1.2217       0.5875 NeutralProcessing                  65.12%        1.367
+Growth          3       515     1.3156       0.5988 NeutralProcessing                  63.11%        1.324
+Growth          5       514     1.6564       0.7539 NeutralProcessing                  48.05%        1.008
+Maturity        1       256     1.4819       0.7126 NeutralProcessing                  51.95%        1.091
+Maturity        2       256     1.5901       0.7237 NeutralProcessing                  47.66%        1.000
+Maturity        3       256     1.6621       0.7993 NeutralProcessing                  44.53%        0.934
+Maturity        5       256     1.7353       0.7898 NeutralProcessing                  43.75%        0.918
+Decay           1       303     0.9384       0.4823 NeutralProcessing                  72.28%        1.517
+Decay           2       303     1.3252       0.6373 NeutralProcessing                  59.74%        1.254
+Decay           3       303     1.5964       0.7266 NeutralProcessing                  50.50%        1.059
+Decay           5       303     1.6788       0.7641 NeutralProcessing                  47.85%        1.004
+Terminal        1       542     1.8268       0.8314 NeutralProcessing                  38.56%        0.810
+Terminal        2       542     1.7172       0.7815 NeutralProcessing                  45.39%        0.952
+Terminal        3       542     1.8500       0.8420 NeutralProcessing                  37.08%        0.778
+Terminal        5       542     1.5584       0.7093 NeutralProcessing                  53.32%        1.119
+Insufficient    1        79     1.9032       0.9153 NeutralProcessing                  24.05%        0.505
+Insufficient    2        79     1.7956       0.8172 NeutralProcessing                  35.44%        0.744
+Insufficient    3        79     1.8167       0.8736 NeutralProcessing                  32.91%        0.690
+Insufficient    5        79     1.6675       0.7589 NeutralProcessing                  48.10%        1.009
+
+Section 6 - Dominant Destinations
+=================================
+Phase           H DominantState                 Probability      Lift
+Birth           1 NeutralProcessing                  42.35%     0.889
+Birth           2 NeutralProcessing                  37.02%     0.777
+Birth           3 NeutralProcessing                  46.55%     0.977
+Birth           5 NeutralProcessing                  45.28%     0.950
+Growth          1 NeutralProcessing                  54.26%     1.139
+Growth          2 NeutralProcessing                  65.12%     1.367
+Growth          3 NeutralProcessing                  63.11%     1.324
+Growth          5 NeutralProcessing                  48.05%     1.008
+Maturity        1 NeutralProcessing                  51.95%     1.091
+Maturity        2 NeutralProcessing                  47.66%     1.000
+Maturity        3 NeutralProcessing                  44.53%     0.934
+Maturity        5 NeutralProcessing                  43.75%     0.918
+Decay           1 NeutralProcessing                  72.28%     1.517
+Decay           2 NeutralProcessing                  59.74%     1.254
+Decay           3 NeutralProcessing                  50.50%     1.059
+Decay           5 NeutralProcessing                  47.85%     1.004
+Terminal        1 NeutralProcessing                  38.56%     0.810
+Terminal        2 NeutralProcessing                  45.39%     0.952
+Terminal        3 NeutralProcessing                  37.08%     0.778
+Terminal        5 NeutralProcessing                  53.32%     1.119
+Insufficient    1 NeutralProcessing                  24.05%     0.505
+Insufficient    2 NeutralProcessing                  35.44%     0.744
+Insufficient    3 NeutralProcessing                  32.91%     0.690
+Insufficient    5 NeutralProcessing                  48.10%     1.009
+
+Section 7 - Phase vs Age Entropy Comparison
+===========================================
+State                         H  AgeEntropy  PhaseEntropy   Reduction
+RecoveryResolution            1      0.8737        0.8737      0.0000
+RecoveryResolution            2      1.1088        1.1088      0.0000
+RecoveryResolution            3      1.0897        1.0897      0.0000
+RecoveryResolution            5      1.5063        1.5063      0.0000
+ExhaustionPersistence         1      1.2572        1.2805     -0.0233
+ExhaustionPersistence         2      1.3750        1.4074     -0.0324
+ExhaustionPersistence         3      1.4679        1.4789     -0.0110
+ExhaustionPersistence         5      1.5627        1.5854     -0.0227
+CompressionProcessing         1      1.2134        1.2373     -0.0239
+CompressionProcessing         2      1.4617        1.4897     -0.0280
+CompressionProcessing         3      1.6160        1.6380     -0.0219
+CompressionProcessing         5      1.7100        1.7240     -0.0139
+NeutralProcessing             1      1.0515        1.0628     -0.0113
+NeutralProcessing             2      1.2872        1.2975     -0.0103
+NeutralProcessing             3      1.3056        1.3111     -0.0055
+NeutralProcessing             5      1.6401        1.6449     -0.0048
+ReassertionProcessing         1      1.2883        1.4347     -0.1463
+ReassertionProcessing         2      1.5149        1.5399     -0.0251
+ReassertionProcessing         3      1.6842        1.7326     -0.0484
+ReassertionProcessing         5      1.5336        1.5452     -0.0117
+DecayToNeutral                1      1.0086        1.0086      0.0000
+DecayToNeutral                2      1.8503        1.8503      0.0000
+DecayToNeutral                3      1.6188        1.6188      0.0000
+DecayToNeutral                5      1.6347        1.6347      0.0000
+DestructiveRotation           1      1.6089        1.6344     -0.0255
+DestructiveRotation           2      1.6720        1.6872     -0.0152
+DestructiveRotation           3      1.8238        1.8492     -0.0255
+DestructiveRotation           5      1.7058        1.7251     -0.0192
+ConstructiveEmergence         1      1.0776        1.0776      0.0000
+ConstructiveEmergence         2      1.0776        1.0776      0.0000
+ConstructiveEmergence         3      0.9596        0.9596      0.0000
+ConstructiveEmergence         5      1.0986        1.0986      0.0000
+MixedStructure                1      1.6908        1.7041     -0.0133
+MixedStructure                2      1.6693        1.6766     -0.0073
+MixedStructure                3      1.8841        1.8913     -0.0073
+MixedStructure                5      1.5061        1.5115     -0.0054
+
+Section 8 - Outcome Layer
+=========================
+Phase          StatePhase                       Count      MeanDR    MedianDR      Cont      Fail      Flat      Skew
+Birth                                             962    -0.02744     0.00000    49.48%    49.90%     0.62%    -0.42%
+Growth                                            499     0.02196    -0.05000    47.09%    51.90%     1.00%    -4.81%
+Maturity                                          252     0.11587     0.09000    56.75%    42.06%     1.19%    14.68%
+Decay                                             297    -0.12973    -0.07000    45.12%    54.55%     0.34%    -9.43%
+Terminal                                          538     0.00100    -0.01000    48.33%    50.93%     0.74%    -2.60%
+Insufficient                                       79     0.14823     0.05000    51.90%    48.10%     0.00%     3.80%
+Birth          RecoveryResolution                  90     0.35344     0.11000    52.22%    45.56%     2.22%     6.67%
+Maturity       RecoveryResolution                  37    -0.17405    -0.11000    45.95%    54.05%     0.00%    -8.11%
+Terminal       RecoveryResolution                  27     0.36074     0.13000    51.85%    48.15%     0.00%     3.70%
+Insufficient   RecoveryResolution                   1    -0.22000    -0.22000     0.00%   100.00%     0.00%  -100.00%
+Birth          ExhaustionPersistence               97    -0.43969    -0.16000    40.21%    59.79%     0.00%   -19.59%
+Growth         ExhaustionPersistence               31    -0.10129    -0.25000    41.94%    58.06%     0.00%   -16.13%
+Maturity       ExhaustionPersistence               21     0.09571     0.16000    52.38%    47.62%     0.00%     4.76%
+Insufficient   ExhaustionPersistence               27    -0.07852     0.08000    55.56%    44.44%     0.00%    11.11%
+Birth          CompressionProcessing              174    -0.01701    -0.03500    45.40%    54.02%     0.57%    -8.62%
+Growth         CompressionProcessing               89     0.01382    -0.12000    42.70%    57.30%     0.00%   -14.61%
+Maturity       CompressionProcessing               63     0.24444     0.03000    50.79%    44.44%     4.76%     6.35%
+Insufficient   CompressionProcessing               18    -0.30556    -0.22000    22.22%    77.78%     0.00%   -55.56%
+Birth          NeutralProcessing                  430     0.06498     0.03000    51.16%    48.14%     0.70%     3.02%
+Growth         NeutralProcessing                  379     0.03396    -0.01000    48.55%    50.13%     1.32%    -1.58%
+Maturity       NeutralProcessing                  104     0.14375     0.14500    66.35%    33.65%     0.00%    32.69%
+Decay          NeutralProcessing                  297    -0.12973    -0.07000    45.12%    54.55%     0.34%    -9.43%
+Terminal       NeutralProcessing                   27     0.02889     0.02000    51.85%    44.44%     3.70%     7.41%
+Terminal       ReassertionProcessing              206     0.00442    -0.01000    49.03%    50.49%     0.49%    -1.46%
+Insufficient   ReassertionProcessing                1     0.55000     0.55000   100.00%     0.00%     0.00%   100.00%
+Birth          DecayToNeutral                     101    -0.20267     0.09000    53.47%    46.53%     0.00%     6.93%
+Birth          DestructiveRotation                 70    -0.28671     0.07000    52.86%    47.14%     0.00%     5.71%
+Insufficient   DestructiveRotation                 13     1.21538     0.31000    61.54%    38.46%     0.00%    23.08%
+Insufficient   ConstructiveEmergence               12     0.00333     0.08500    58.33%    41.67%     0.00%    16.67%
+Maturity       MixedStructure                      27     0.12148     0.08000    51.85%    48.15%     0.00%     3.70%
+Terminal       MixedStructure                     278    -0.03917    -0.03000    47.12%    52.16%     0.72%    -5.04%
+Insufficient   MixedStructure                       7     0.45143     0.51000    85.71%    14.29%     0.00%    71.43%
+
+Section 9 - Population B
+========================
+Population B unavailable from Study 44 source bars.
+Required DissipationContained + Lateral + Mature + Aligned membership fields are not exposed by the reused Study 44 lifecycle loader.
+Skipped gracefully; no Population B membership was inferred.
+
+Section 10 - Mechanical Research Notes
+======================================
+- Lowest normalized phase entropy: Decay t+1 (0.4823).
+- Largest phase-vs-age entropy reduction: RecoveryResolution t+1 (0.0000).
+- Lifecycle phases are inherited from Study 44 hazard-only inference.
+- Outcomes are reported separately and are not used to define phase.

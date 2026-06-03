@@ -1,0 +1,557 @@
+APVA Node Importance Study v0.1
+========================================================================================================
+Diagnostics
+Instrument: CL
+Input path(s): .\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv
+Total rows: 2684
+Node count: 35
+
+1. Node Inventory
+StateAgeNode | Count | ReplicationCount | ReplicationPercent | Top1Accuracy | Top3Accuracy | ForecastConfidence | MemoryStrength | InformationHalfLife | EntropyGrowth | EntropySlope | ImportanceScore | ReliabilityScore | SampleClass | AttentionCategory
+CompressionProcessing_Age1 | 177 | 1 | 100.00% | 51.98% | 90.96% | 20.34% | 0.1697 | 2.00 | 1.7443 | 0.1938 | 0.4111 | 0.5333 | SmallSample | Weak Node
+CompressionProcessing_Age2 | 92 | 1 | 100.00% | 44.57% | 91.30% | 8.70% | 0.2168 | 3.00 | 1.6136 | 0.1793 | 0.4461 | 0.4306 | SmallSample | Secondary Node
+CompressionProcessing_Age3 | 41 | 1 | 100.00% | 53.66% | 92.68% | 29.27% | 0.1992 | 3.00 | 1.6727 | 0.1859 | 0.4383 | 0.4609 | Insufficient | Insufficient Node
+CompressionProcessing_Age4 | 22 | 1 | 100.00% | 54.55% | 86.36% | 31.82% | 0.2803 | 2.00 | 1.6596 | 0.1844 | 0.4127 | 0.4552 | Insufficient | Insufficient Node
+CompressionProcessing_Age5 | 12 | 1 | 100.00% | 41.67% | 83.33% | 8.33% | 0.2037 | 3.00 | 1.5518 | 0.1724 | 0.3943 | 0.3694 | Insufficient | Insufficient Node
+CompressionProcessing_Age6-10 | 6 | 1 | 100.00% | 50.00% | 83.33% | 33.33% | 0.2037 | 2.00 | 1.6561 | 0.1840 | 0.3483 | 0.4482 | Insufficient | Insufficient Node
+ConstructiveEmergence_Age1 | 12 | 1 | 100.00% | 41.67% | 100.00% | 8.33% | 0.1574 | 2.00 | 1.8191 | 0.2021 | 0.3008 | 0.3694 | Insufficient | Insufficient Node
+DecayToNeutral_Age1 | 103 | 1 | 100.00% | 61.17% | 97.09% | 35.92% | 0.1769 | 2.00 | 1.8881 | 0.2098 | 0.4077 | 0.5297 | SmallSample | Weak Node
+DestructiveRotation_Age1 | 71 | 1 | 100.00% | 35.21% | 80.28% | 7.04% | 0.1768 | 3.00 | 1.2713 | 0.1413 | 0.3872 | 0.4094 | SmallSample | Weak Node
+DestructiveRotation_Age2 | 12 | 1 | 100.00% | 33.33% | 75.00% | 8.33% | 0.2315 | 2.00 | 1.2700 | 0.1411 | 0.3204 | 0.3694 | Insufficient | Insufficient Node
+DestructiveRotation_Age3 | 1 | 1 | 100.00% | 100.00% | 100.00% | 100.00% | 0.1667 | 3.00 | 2.9021 | 0.3225 | 0.5312 | 0.6667 | Insufficient | Insufficient Node
+ExhaustionPersistence_Age1 | 97 | 1 | 100.00% | 31.96% | 79.38% | 2.06% | 0.1833 | 3.00 | 1.3577 | 0.1509 | 0.3936 | 0.4123 | SmallSample | Weak Node
+ExhaustionPersistence_Age2 | 31 | 1 | 100.00% | 67.74% | 100.00% | 38.71% | 0.2760 | 3.00 | 2.1685 | 0.2409 | 0.5178 | 0.4849 | Insufficient | Insufficient Node
+ExhaustionPersistence_Age3 | 21 | 1 | 100.00% | 76.19% | 100.00% | 52.38% | 0.1799 | 2.00 | 2.3520 | 0.2613 | 0.4145 | 0.5230 | Insufficient | Insufficient Node
+ExhaustionPersistence_Age4 | 16 | 1 | 100.00% | 50.00% | 81.25% | 31.25% | 0.2118 | 2.00 | 1.4612 | 0.1624 | 0.3575 | 0.4488 | Insufficient | Insufficient Node
+ExhaustionPersistence_Age5 | 8 | 1 | 100.00% | 37.50% | 75.00% | 12.50% | 0.2639 | 3.00 | 1.4080 | 0.1564 | 0.4158 | 0.3803 | Insufficient | Insufficient Node
+ExhaustionPersistence_Age6-10 | 3 | 1 | 100.00% | 66.67% | 100.00% | 33.33% | 0.1667 | 2.00 | 2.2687 | 0.2521 | 0.3721 | 0.4459 | Insufficient | Insufficient Node
+MixedStructure_Age1 | 279 | 1 | 100.00% | 41.22% | 70.97% | 25.45% | 0.1956 | 3.00 | 1.1813 | 0.1313 | 0.5086 | 0.6269 | MediumSample | Secondary Node
+MixedStructure_Age2 | 28 | 1 | 100.00% | 28.57% | 71.43% | 3.57% | 0.1567 | 5.00 | 1.2510 | 0.1390 | 0.4709 | 0.3655 | Insufficient | Insufficient Node
+MixedStructure_Age3 | 5 | 1 | 100.00% | 40.00% | 100.00% | 0.00% | 0.4000 | 3.00 | 1.8403 | 0.2045 | 0.5005 | 0.3363 | Insufficient | Insufficient Node
+MixedStructure_Age4 | 2 | 1 | 100.00% | 100.00% | 100.00% | 100.00% | 0.1111 | 2.00 | 2.8944 | 0.3216 | 0.4327 | 0.6674 | Insufficient | Insufficient Node
+NeutralProcessing_Age1 | 445 | 1 | 100.00% | 56.85% | 85.84% | 42.02% | 0.2042 | 3.00 | 1.6396 | 0.1822 | 0.6322 | 0.8067 | MediumSample | Core Node
+NeutralProcessing_Age11-20 | 30 | 1 | 100.00% | 63.33% | 90.00% | 50.00% | 0.1926 | 3.00 | 1.7961 | 0.1996 | 0.4566 | 0.5218 | Insufficient | Insufficient Node
+NeutralProcessing_Age2 | 253 | 1 | 100.00% | 55.34% | 88.54% | 33.99% | 0.2734 | 5.00 | 1.6917 | 0.1880 | 0.7149 | 0.6358 | MediumSample | Secondary Node
+NeutralProcessing_Age3 | 140 | 1 | 100.00% | 75.71% | 96.43% | 65.00% | 0.3509 | 5.00 | 2.1063 | 0.2340 | 0.7661 | 0.6544 | SmallSample | Core Node
+NeutralProcessing_Age4 | 106 | 1 | 100.00% | 89.62% | 97.17% | 85.85% | 0.3265 | 5.00 | 2.4430 | 0.2714 | 0.7756 | 0.6983 | SmallSample | Core Node
+NeutralProcessing_Age5 | 95 | 1 | 100.00% | 78.95% | 95.79% | 68.42% | 0.3357 | 3.00 | 2.1524 | 0.2392 | 0.6127 | 0.6320 | SmallSample | Secondary Node
+NeutralProcessing_Age6-10 | 208 | 1 | 100.00% | 63.94% | 88.46% | 49.04% | 0.2169 | 3.00 | 1.7158 | 0.1906 | 0.5526 | 0.6522 | SmallSample | Secondary Node
+ReassertionProcessing_Age1 | 174 | 1 | 100.00% | 37.93% | 89.66% | 4.60% | 0.1925 | 3.00 | 1.5318 | 0.1702 | 0.4503 | 0.4785 | SmallSample | Secondary Node
+ReassertionProcessing_Age2 | 32 | 1 | 100.00% | 56.25% | 96.88% | 18.75% | 0.2188 | 2.00 | 1.9893 | 0.2210 | 0.3862 | 0.4191 | Insufficient | Insufficient Node
+ReassertionProcessing_Age3 | 1 | 1 | 100.00% | 100.00% | 100.00% | 100.00% | 0.0556 | 2.00 | 2.8982 | 0.3220 | 0.4000 | 0.6667 | Insufficient | Insufficient Node
+RecoveryResolution_Age1 | 94 | 1 | 100.00% | 48.94% | 100.00% | 8.51% | 0.2234 | 5.00 | 1.9470 | 0.2163 | 0.5964 | 0.4315 | SmallSample | Secondary Node
+RecoveryResolution_Age2 | 38 | 1 | 100.00% | 71.05% | 100.00% | 42.11% | 0.2924 | 3.00 | 2.3012 | 0.2557 | 0.5398 | 0.5015 | Insufficient | Insufficient Node
+RecoveryResolution_Age3 | 27 | 1 | 100.00% | 62.96% | 96.30% | 44.44% | 0.2922 | 3.00 | 1.8948 | 0.2105 | 0.5121 | 0.5010 | Insufficient | Insufficient Node
+RecoveryResolution_Age4 | 1 | 1 | 100.00% | 100.00% | 100.00% | 100.00% | 0.3333 | 5.00 | 2.9021 | 0.3225 | 0.7613 | 0.6667 | Insufficient | Insufficient Node
+
+2. Forecastability Ranking
+Highest Top1Accuracy
+StateAgeNode | Value
+DestructiveRotation_Age3 | 100.00%
+MixedStructure_Age4 | 100.00%
+ReassertionProcessing_Age3 | 100.00%
+RecoveryResolution_Age4 | 100.00%
+NeutralProcessing_Age4 | 89.62%
+NeutralProcessing_Age5 | 78.95%
+ExhaustionPersistence_Age3 | 76.19%
+NeutralProcessing_Age3 | 75.71%
+RecoveryResolution_Age2 | 71.05%
+ExhaustionPersistence_Age2 | 67.74%
+ExhaustionPersistence_Age6-10 | 66.67%
+NeutralProcessing_Age6-10 | 63.94%
+NeutralProcessing_Age11-20 | 63.33%
+RecoveryResolution_Age3 | 62.96%
+DecayToNeutral_Age1 | 61.17%
+NeutralProcessing_Age1 | 56.85%
+ReassertionProcessing_Age2 | 56.25%
+NeutralProcessing_Age2 | 55.34%
+CompressionProcessing_Age4 | 54.55%
+CompressionProcessing_Age3 | 53.66%
+CompressionProcessing_Age1 | 51.98%
+CompressionProcessing_Age6-10 | 50.00%
+ExhaustionPersistence_Age4 | 50.00%
+RecoveryResolution_Age1 | 48.94%
+CompressionProcessing_Age2 | 44.57%
+CompressionProcessing_Age5 | 41.67%
+ConstructiveEmergence_Age1 | 41.67%
+MixedStructure_Age1 | 41.22%
+MixedStructure_Age3 | 40.00%
+ReassertionProcessing_Age1 | 37.93%
+ExhaustionPersistence_Age5 | 37.50%
+DestructiveRotation_Age1 | 35.21%
+DestructiveRotation_Age2 | 33.33%
+ExhaustionPersistence_Age1 | 31.96%
+MixedStructure_Age2 | 28.57%
+Highest Top3Accuracy
+StateAgeNode | Value
+ConstructiveEmergence_Age1 | 100.00%
+DestructiveRotation_Age3 | 100.00%
+ExhaustionPersistence_Age2 | 100.00%
+ExhaustionPersistence_Age3 | 100.00%
+ExhaustionPersistence_Age6-10 | 100.00%
+MixedStructure_Age3 | 100.00%
+MixedStructure_Age4 | 100.00%
+ReassertionProcessing_Age3 | 100.00%
+RecoveryResolution_Age1 | 100.00%
+RecoveryResolution_Age2 | 100.00%
+RecoveryResolution_Age4 | 100.00%
+NeutralProcessing_Age4 | 97.17%
+DecayToNeutral_Age1 | 97.09%
+ReassertionProcessing_Age2 | 96.88%
+NeutralProcessing_Age3 | 96.43%
+RecoveryResolution_Age3 | 96.30%
+NeutralProcessing_Age5 | 95.79%
+CompressionProcessing_Age3 | 92.68%
+CompressionProcessing_Age2 | 91.30%
+CompressionProcessing_Age1 | 90.96%
+NeutralProcessing_Age11-20 | 90.00%
+ReassertionProcessing_Age1 | 89.66%
+NeutralProcessing_Age2 | 88.54%
+NeutralProcessing_Age6-10 | 88.46%
+CompressionProcessing_Age4 | 86.36%
+NeutralProcessing_Age1 | 85.84%
+CompressionProcessing_Age5 | 83.33%
+CompressionProcessing_Age6-10 | 83.33%
+ExhaustionPersistence_Age4 | 81.25%
+DestructiveRotation_Age1 | 80.28%
+ExhaustionPersistence_Age1 | 79.38%
+DestructiveRotation_Age2 | 75.00%
+ExhaustionPersistence_Age5 | 75.00%
+MixedStructure_Age2 | 71.43%
+MixedStructure_Age1 | 70.97%
+Highest ForecastConfidence
+StateAgeNode | Value
+DestructiveRotation_Age3 | 100.00%
+MixedStructure_Age4 | 100.00%
+ReassertionProcessing_Age3 | 100.00%
+RecoveryResolution_Age4 | 100.00%
+NeutralProcessing_Age4 | 85.85%
+NeutralProcessing_Age5 | 68.42%
+NeutralProcessing_Age3 | 65.00%
+ExhaustionPersistence_Age3 | 52.38%
+NeutralProcessing_Age11-20 | 50.00%
+NeutralProcessing_Age6-10 | 49.04%
+RecoveryResolution_Age3 | 44.44%
+RecoveryResolution_Age2 | 42.11%
+NeutralProcessing_Age1 | 42.02%
+ExhaustionPersistence_Age2 | 38.71%
+DecayToNeutral_Age1 | 35.92%
+NeutralProcessing_Age2 | 33.99%
+CompressionProcessing_Age6-10 | 33.33%
+ExhaustionPersistence_Age6-10 | 33.33%
+CompressionProcessing_Age4 | 31.82%
+ExhaustionPersistence_Age4 | 31.25%
+CompressionProcessing_Age3 | 29.27%
+MixedStructure_Age1 | 25.45%
+CompressionProcessing_Age1 | 20.34%
+ReassertionProcessing_Age2 | 18.75%
+ExhaustionPersistence_Age5 | 12.50%
+CompressionProcessing_Age2 | 8.70%
+RecoveryResolution_Age1 | 8.51%
+CompressionProcessing_Age5 | 8.33%
+ConstructiveEmergence_Age1 | 8.33%
+DestructiveRotation_Age2 | 8.33%
+DestructiveRotation_Age1 | 7.04%
+ReassertionProcessing_Age1 | 4.60%
+MixedStructure_Age2 | 3.57%
+ExhaustionPersistence_Age1 | 2.06%
+MixedStructure_Age3 | 0.00%
+
+3. Memory Ranking
+Longest HalfLife
+StateAgeNode | InformationHalfLife
+MixedStructure_Age2 | 5.00
+NeutralProcessing_Age2 | 5.00
+NeutralProcessing_Age3 | 5.00
+NeutralProcessing_Age4 | 5.00
+RecoveryResolution_Age1 | 5.00
+RecoveryResolution_Age4 | 5.00
+CompressionProcessing_Age2 | 3.00
+CompressionProcessing_Age3 | 3.00
+CompressionProcessing_Age5 | 3.00
+DestructiveRotation_Age1 | 3.00
+DestructiveRotation_Age3 | 3.00
+ExhaustionPersistence_Age1 | 3.00
+ExhaustionPersistence_Age2 | 3.00
+ExhaustionPersistence_Age5 | 3.00
+MixedStructure_Age1 | 3.00
+MixedStructure_Age3 | 3.00
+NeutralProcessing_Age1 | 3.00
+NeutralProcessing_Age11-20 | 3.00
+NeutralProcessing_Age5 | 3.00
+NeutralProcessing_Age6-10 | 3.00
+ReassertionProcessing_Age1 | 3.00
+RecoveryResolution_Age2 | 3.00
+RecoveryResolution_Age3 | 3.00
+CompressionProcessing_Age1 | 2.00
+CompressionProcessing_Age4 | 2.00
+CompressionProcessing_Age6-10 | 2.00
+ConstructiveEmergence_Age1 | 2.00
+DecayToNeutral_Age1 | 2.00
+DestructiveRotation_Age2 | 2.00
+ExhaustionPersistence_Age3 | 2.00
+ExhaustionPersistence_Age4 | 2.00
+ExhaustionPersistence_Age6-10 | 2.00
+MixedStructure_Age4 | 2.00
+ReassertionProcessing_Age2 | 2.00
+ReassertionProcessing_Age3 | 2.00
+Strongest MemoryStrength
+StateAgeNode | MemoryStrength
+MixedStructure_Age3 | 0.4000
+NeutralProcessing_Age3 | 0.3509
+NeutralProcessing_Age5 | 0.3357
+RecoveryResolution_Age4 | 0.3333
+NeutralProcessing_Age4 | 0.3265
+RecoveryResolution_Age2 | 0.2924
+RecoveryResolution_Age3 | 0.2922
+CompressionProcessing_Age4 | 0.2803
+ExhaustionPersistence_Age2 | 0.2760
+NeutralProcessing_Age2 | 0.2734
+ExhaustionPersistence_Age5 | 0.2639
+DestructiveRotation_Age2 | 0.2315
+RecoveryResolution_Age1 | 0.2234
+ReassertionProcessing_Age2 | 0.2188
+NeutralProcessing_Age6-10 | 0.2169
+CompressionProcessing_Age2 | 0.2168
+ExhaustionPersistence_Age4 | 0.2118
+NeutralProcessing_Age1 | 0.2042
+CompressionProcessing_Age5 | 0.2037
+CompressionProcessing_Age6-10 | 0.2037
+CompressionProcessing_Age3 | 0.1992
+MixedStructure_Age1 | 0.1956
+NeutralProcessing_Age11-20 | 0.1926
+ReassertionProcessing_Age1 | 0.1925
+ExhaustionPersistence_Age1 | 0.1833
+ExhaustionPersistence_Age3 | 0.1799
+DecayToNeutral_Age1 | 0.1769
+DestructiveRotation_Age1 | 0.1768
+CompressionProcessing_Age1 | 0.1697
+DestructiveRotation_Age3 | 0.1667
+ExhaustionPersistence_Age6-10 | 0.1667
+ConstructiveEmergence_Age1 | 0.1574
+MixedStructure_Age2 | 0.1567
+MixedStructure_Age4 | 0.1111
+ReassertionProcessing_Age3 | 0.0556
+
+4. Entropy Ranking
+StateAgeNode | EntropyGrowth | EntropySlope
+MixedStructure_Age1 | 1.1813 | 0.1313
+MixedStructure_Age2 | 1.2510 | 0.1390
+DestructiveRotation_Age2 | 1.2700 | 0.1411
+DestructiveRotation_Age1 | 1.2713 | 0.1413
+ExhaustionPersistence_Age1 | 1.3577 | 0.1509
+ExhaustionPersistence_Age5 | 1.4080 | 0.1564
+ExhaustionPersistence_Age4 | 1.4612 | 0.1624
+ReassertionProcessing_Age1 | 1.5318 | 0.1702
+CompressionProcessing_Age5 | 1.5518 | 0.1724
+CompressionProcessing_Age2 | 1.6136 | 0.1793
+NeutralProcessing_Age1 | 1.6396 | 0.1822
+CompressionProcessing_Age6-10 | 1.6561 | 0.1840
+CompressionProcessing_Age4 | 1.6596 | 0.1844
+CompressionProcessing_Age3 | 1.6727 | 0.1859
+NeutralProcessing_Age2 | 1.6917 | 0.1880
+NeutralProcessing_Age6-10 | 1.7158 | 0.1906
+CompressionProcessing_Age1 | 1.7443 | 0.1938
+NeutralProcessing_Age11-20 | 1.7961 | 0.1996
+ConstructiveEmergence_Age1 | 1.8191 | 0.2021
+MixedStructure_Age3 | 1.8403 | 0.2045
+DecayToNeutral_Age1 | 1.8881 | 0.2098
+RecoveryResolution_Age3 | 1.8948 | 0.2105
+RecoveryResolution_Age1 | 1.9470 | 0.2163
+ReassertionProcessing_Age2 | 1.9893 | 0.2210
+NeutralProcessing_Age3 | 2.1063 | 0.2340
+NeutralProcessing_Age5 | 2.1524 | 0.2392
+ExhaustionPersistence_Age2 | 2.1685 | 0.2409
+ExhaustionPersistence_Age6-10 | 2.2687 | 0.2521
+RecoveryResolution_Age2 | 2.3012 | 0.2557
+ExhaustionPersistence_Age3 | 2.3520 | 0.2613
+NeutralProcessing_Age4 | 2.4430 | 0.2714
+MixedStructure_Age4 | 2.8944 | 0.3216
+ReassertionProcessing_Age3 | 2.8982 | 0.3220
+DestructiveRotation_Age3 | 2.9021 | 0.3225
+RecoveryResolution_Age4 | 2.9021 | 0.3225
+
+5. Replication Ranking
+StateAgeNode | ReplicationCount | ReplicationPercent
+CompressionProcessing_Age1 | 1 | 100.00%
+CompressionProcessing_Age2 | 1 | 100.00%
+CompressionProcessing_Age3 | 1 | 100.00%
+CompressionProcessing_Age4 | 1 | 100.00%
+CompressionProcessing_Age5 | 1 | 100.00%
+CompressionProcessing_Age6-10 | 1 | 100.00%
+ConstructiveEmergence_Age1 | 1 | 100.00%
+DecayToNeutral_Age1 | 1 | 100.00%
+DestructiveRotation_Age1 | 1 | 100.00%
+DestructiveRotation_Age2 | 1 | 100.00%
+DestructiveRotation_Age3 | 1 | 100.00%
+ExhaustionPersistence_Age1 | 1 | 100.00%
+ExhaustionPersistence_Age2 | 1 | 100.00%
+ExhaustionPersistence_Age3 | 1 | 100.00%
+ExhaustionPersistence_Age4 | 1 | 100.00%
+ExhaustionPersistence_Age5 | 1 | 100.00%
+ExhaustionPersistence_Age6-10 | 1 | 100.00%
+MixedStructure_Age1 | 1 | 100.00%
+MixedStructure_Age2 | 1 | 100.00%
+MixedStructure_Age3 | 1 | 100.00%
+MixedStructure_Age4 | 1 | 100.00%
+NeutralProcessing_Age1 | 1 | 100.00%
+NeutralProcessing_Age11-20 | 1 | 100.00%
+NeutralProcessing_Age2 | 1 | 100.00%
+NeutralProcessing_Age3 | 1 | 100.00%
+NeutralProcessing_Age4 | 1 | 100.00%
+NeutralProcessing_Age5 | 1 | 100.00%
+NeutralProcessing_Age6-10 | 1 | 100.00%
+ReassertionProcessing_Age1 | 1 | 100.00%
+ReassertionProcessing_Age2 | 1 | 100.00%
+ReassertionProcessing_Age3 | 1 | 100.00%
+RecoveryResolution_Age1 | 1 | 100.00%
+RecoveryResolution_Age2 | 1 | 100.00%
+RecoveryResolution_Age3 | 1 | 100.00%
+RecoveryResolution_Age4 | 1 | 100.00%
+
+6. Sample Sufficiency
+StateAgeNode | Count | SampleClass
+NeutralProcessing_Age1 | 445 | MediumSample
+MixedStructure_Age1 | 279 | MediumSample
+NeutralProcessing_Age2 | 253 | MediumSample
+NeutralProcessing_Age6-10 | 208 | SmallSample
+CompressionProcessing_Age1 | 177 | SmallSample
+ReassertionProcessing_Age1 | 174 | SmallSample
+NeutralProcessing_Age3 | 140 | SmallSample
+NeutralProcessing_Age4 | 106 | SmallSample
+DecayToNeutral_Age1 | 103 | SmallSample
+ExhaustionPersistence_Age1 | 97 | SmallSample
+NeutralProcessing_Age5 | 95 | SmallSample
+RecoveryResolution_Age1 | 94 | SmallSample
+CompressionProcessing_Age2 | 92 | SmallSample
+DestructiveRotation_Age1 | 71 | SmallSample
+CompressionProcessing_Age3 | 41 | Insufficient
+RecoveryResolution_Age2 | 38 | Insufficient
+ReassertionProcessing_Age2 | 32 | Insufficient
+ExhaustionPersistence_Age2 | 31 | Insufficient
+NeutralProcessing_Age11-20 | 30 | Insufficient
+MixedStructure_Age2 | 28 | Insufficient
+RecoveryResolution_Age3 | 27 | Insufficient
+CompressionProcessing_Age4 | 22 | Insufficient
+ExhaustionPersistence_Age3 | 21 | Insufficient
+ExhaustionPersistence_Age4 | 16 | Insufficient
+CompressionProcessing_Age5 | 12 | Insufficient
+ConstructiveEmergence_Age1 | 12 | Insufficient
+DestructiveRotation_Age2 | 12 | Insufficient
+ExhaustionPersistence_Age5 | 8 | Insufficient
+CompressionProcessing_Age6-10 | 6 | Insufficient
+MixedStructure_Age3 | 5 | Insufficient
+ExhaustionPersistence_Age6-10 | 3 | Insufficient
+MixedStructure_Age4 | 2 | Insufficient
+DestructiveRotation_Age3 | 1 | Insufficient
+ReassertionProcessing_Age3 | 1 | Insufficient
+RecoveryResolution_Age4 | 1 | Insufficient
+
+7. Importance Score
+StateAgeNode | ImportanceScore
+NeutralProcessing_Age4 | 0.7756
+NeutralProcessing_Age3 | 0.7661
+RecoveryResolution_Age4 | 0.7613
+NeutralProcessing_Age2 | 0.7149
+NeutralProcessing_Age1 | 0.6322
+NeutralProcessing_Age5 | 0.6127
+RecoveryResolution_Age1 | 0.5964
+NeutralProcessing_Age6-10 | 0.5526
+RecoveryResolution_Age2 | 0.5398
+DestructiveRotation_Age3 | 0.5312
+ExhaustionPersistence_Age2 | 0.5178
+RecoveryResolution_Age3 | 0.5121
+MixedStructure_Age1 | 0.5086
+MixedStructure_Age3 | 0.5005
+MixedStructure_Age2 | 0.4709
+NeutralProcessing_Age11-20 | 0.4566
+ReassertionProcessing_Age1 | 0.4503
+CompressionProcessing_Age2 | 0.4461
+CompressionProcessing_Age3 | 0.4383
+MixedStructure_Age4 | 0.4327
+ExhaustionPersistence_Age5 | 0.4158
+ExhaustionPersistence_Age3 | 0.4145
+CompressionProcessing_Age4 | 0.4127
+CompressionProcessing_Age1 | 0.4111
+DecayToNeutral_Age1 | 0.4077
+ReassertionProcessing_Age3 | 0.4000
+CompressionProcessing_Age5 | 0.3943
+ExhaustionPersistence_Age1 | 0.3936
+DestructiveRotation_Age1 | 0.3872
+ReassertionProcessing_Age2 | 0.3862
+ExhaustionPersistence_Age6-10 | 0.3721
+ExhaustionPersistence_Age4 | 0.3575
+CompressionProcessing_Age6-10 | 0.3483
+DestructiveRotation_Age2 | 0.3204
+ConstructiveEmergence_Age1 | 0.3008
+
+8. Reliability Score
+StateAgeNode | ReliabilityScore
+NeutralProcessing_Age1 | 0.8067
+NeutralProcessing_Age4 | 0.6983
+MixedStructure_Age4 | 0.6674
+DestructiveRotation_Age3 | 0.6667
+ReassertionProcessing_Age3 | 0.6667
+RecoveryResolution_Age4 | 0.6667
+NeutralProcessing_Age3 | 0.6544
+NeutralProcessing_Age6-10 | 0.6522
+NeutralProcessing_Age2 | 0.6358
+NeutralProcessing_Age5 | 0.6320
+MixedStructure_Age1 | 0.6269
+CompressionProcessing_Age1 | 0.5333
+DecayToNeutral_Age1 | 0.5297
+ExhaustionPersistence_Age3 | 0.5230
+NeutralProcessing_Age11-20 | 0.5218
+RecoveryResolution_Age2 | 0.5015
+RecoveryResolution_Age3 | 0.5010
+ExhaustionPersistence_Age2 | 0.4849
+ReassertionProcessing_Age1 | 0.4785
+CompressionProcessing_Age3 | 0.4609
+CompressionProcessing_Age4 | 0.4552
+ExhaustionPersistence_Age4 | 0.4488
+CompressionProcessing_Age6-10 | 0.4482
+ExhaustionPersistence_Age6-10 | 0.4459
+RecoveryResolution_Age1 | 0.4315
+CompressionProcessing_Age2 | 0.4306
+ReassertionProcessing_Age2 | 0.4191
+ExhaustionPersistence_Age1 | 0.4123
+DestructiveRotation_Age1 | 0.4094
+ExhaustionPersistence_Age5 | 0.3803
+CompressionProcessing_Age5 | 0.3694
+ConstructiveEmergence_Age1 | 0.3694
+DestructiveRotation_Age2 | 0.3694
+MixedStructure_Age2 | 0.3655
+MixedStructure_Age3 | 0.3363
+
+9. Attention Categories
+StateAgeNode | AttentionCategory | Reason
+NeutralProcessing_Age1 | Core Node | ImportanceScore and ReliabilityScore at or above 80th percentile.
+NeutralProcessing_Age3 | Core Node | ImportanceScore and ReliabilityScore at or above 80th percentile.
+NeutralProcessing_Age4 | Core Node | ImportanceScore and ReliabilityScore at or above 80th percentile.
+CompressionProcessing_Age3 | Insufficient Node | Count below 50.
+CompressionProcessing_Age4 | Insufficient Node | Count below 50.
+CompressionProcessing_Age5 | Insufficient Node | Count below 50.
+CompressionProcessing_Age6-10 | Insufficient Node | Count below 50.
+ConstructiveEmergence_Age1 | Insufficient Node | Count below 50.
+DestructiveRotation_Age2 | Insufficient Node | Count below 50.
+DestructiveRotation_Age3 | Insufficient Node | Count below 50.
+ExhaustionPersistence_Age2 | Insufficient Node | Count below 50.
+ExhaustionPersistence_Age3 | Insufficient Node | Count below 50.
+ExhaustionPersistence_Age4 | Insufficient Node | Count below 50.
+ExhaustionPersistence_Age5 | Insufficient Node | Count below 50.
+ExhaustionPersistence_Age6-10 | Insufficient Node | Count below 50.
+MixedStructure_Age2 | Insufficient Node | Count below 50.
+MixedStructure_Age3 | Insufficient Node | Count below 50.
+MixedStructure_Age4 | Insufficient Node | Count below 50.
+NeutralProcessing_Age11-20 | Insufficient Node | Count below 50.
+ReassertionProcessing_Age2 | Insufficient Node | Count below 50.
+ReassertionProcessing_Age3 | Insufficient Node | Count below 50.
+RecoveryResolution_Age2 | Insufficient Node | Count below 50.
+RecoveryResolution_Age3 | Insufficient Node | Count below 50.
+RecoveryResolution_Age4 | Insufficient Node | Count below 50.
+CompressionProcessing_Age2 | Secondary Node | ImportanceScore at or above 50th percentile.
+MixedStructure_Age1 | Secondary Node | ImportanceScore at or above 50th percentile.
+NeutralProcessing_Age2 | Secondary Node | ImportanceScore at or above 50th percentile.
+NeutralProcessing_Age5 | Secondary Node | ImportanceScore at or above 50th percentile.
+NeutralProcessing_Age6-10 | Secondary Node | ImportanceScore at or above 50th percentile.
+ReassertionProcessing_Age1 | Secondary Node | ImportanceScore at or above 50th percentile.
+RecoveryResolution_Age1 | Secondary Node | ImportanceScore at or above 50th percentile.
+CompressionProcessing_Age1 | Weak Node | Does not meet fixed Core, Secondary, Transition, or Insufficient criteria.
+DecayToNeutral_Age1 | Weak Node | Does not meet fixed Core, Secondary, Transition, or Insufficient criteria.
+DestructiveRotation_Age1 | Weak Node | Does not meet fixed Core, Secondary, Transition, or Insufficient criteria.
+ExhaustionPersistence_Age1 | Weak Node | Does not meet fixed Core, Secondary, Transition, or Insufficient criteria.
+
+10. State-Level Importance
+State | MeanImportance | MeanReliability | MeanMemoryStrength | MeanHalfLife | MeanReplication
+CompressionProcessing | 0.4085 | 0.4496 | 0.2122 | 2.50 | 100.00%
+ConstructiveEmergence | 0.3008 | 0.3694 | 0.1574 | 2.00 | 100.00%
+DecayToNeutral | 0.4077 | 0.5297 | 0.1769 | 2.00 | 100.00%
+DestructiveRotation | 0.4129 | 0.4818 | 0.1917 | 2.67 | 100.00%
+ExhaustionPersistence | 0.4119 | 0.4492 | 0.2136 | 2.50 | 100.00%
+MixedStructure | 0.4782 | 0.4990 | 0.2159 | 3.25 | 100.00%
+NeutralProcessing | 0.6444 | 0.6573 | 0.2714 | 3.86 | 100.00%
+ReassertionProcessing | 0.4122 | 0.5214 | 0.1556 | 2.33 | 100.00%
+RecoveryResolution | 0.6024 | 0.5252 | 0.2853 | 4.00 | 100.00%
+
+11. Young/Middle/Late Importance
+Zone | MeanImportance | MeanReliability | MeanMemoryStrength | MeanHalfLife
+Young | 0.4678 | 0.4878 | 0.2091 | 3.06
+Middle | 0.5150 | 0.5418 | 0.2474 | 3.07
+Late | 0.4324 | 0.5170 | 0.1950 | 2.50
+
+12. Node Reduction Test
+CoverageTarget | NodeCount | CoveragePercent | ReductionPercent
+50.00% | 14 | 50.31% | 60.00%
+75.00% | 24 | 75.98% | 31.43%
+90.00% | 31 | 92.17% | 11.43%
+
+13. Outcome Diagnostics
+Diagnostic only. Forward outcomes are not used in importance scoring.
+StateAgeNode | Count | MeanDRFwd5 | MedianDRFwd5 | ContinuationRate5 | FailureRate5 | FlatRate5 | OutcomeSkew
+CompressionProcessing_Age1 | 174 | -0.0170 | -0.0350 | 45.40% | 54.02% | 0.57% | -8.62%
+CompressionProcessing_Age2 | 89 | 0.0138 | -0.1200 | 42.70% | 57.30% | 0.00% | -14.61%
+CompressionProcessing_Age3 | 41 | 0.4024 | 0.1400 | 60.98% | 34.15% | 4.88% | 26.83%
+CompressionProcessing_Age4 | 22 | -0.0500 | -0.1200 | 31.82% | 63.64% | 4.55% | -31.82%
+CompressionProcessing_Age5 | 12 | -0.2667 | -0.2200 | 25.00% | 75.00% | 0.00% | -50.00%
+CompressionProcessing_Age6-10 | 6 | -0.3833 | -0.1850 | 16.67% | 83.33% | 0.00% | -66.67%
+ConstructiveEmergence_Age1 | 12 | 0.0033 | 0.0850 | 58.33% | 41.67% | 0.00% | 16.67%
+DecayToNeutral_Age1 | 101 | -0.2027 | 0.0900 | 53.47% | 46.53% | 0.00% | 6.93%
+DestructiveRotation_Age1 | 70 | -0.2867 | 0.0700 | 52.86% | 47.14% | 0.00% | 5.71%
+DestructiveRotation_Age2 | 12 | 1.0292 | 0.2350 | 58.33% | 41.67% | 0.00% | 16.67%
+DestructiveRotation_Age3 | 1 | 3.4500 | 3.4500 | 100.00% | 0.00% | 0.00% | 100.00%
+ExhaustionPersistence_Age1 | 97 | -0.4397 | -0.1600 | 40.21% | 59.79% | 0.00% | -19.59%
+ExhaustionPersistence_Age2 | 31 | -0.1013 | -0.2500 | 41.94% | 58.06% | 0.00% | -16.13%
+ExhaustionPersistence_Age3 | 21 | 0.0957 | 0.1600 | 52.38% | 47.62% | 0.00% | 4.76%
+ExhaustionPersistence_Age4 | 16 | -0.0475 | 0.0700 | 56.25% | 43.75% | 0.00% | 12.50%
+ExhaustionPersistence_Age5 | 8 | -0.0525 | 0.2200 | 62.50% | 37.50% | 0.00% | 25.00%
+ExhaustionPersistence_Age6-10 | 3 | -0.3133 | -0.4500 | 33.33% | 66.67% | 0.00% | -33.33%
+MixedStructure_Age1 | 278 | -0.0392 | -0.0300 | 47.12% | 52.16% | 0.72% | -5.04%
+MixedStructure_Age2 | 27 | 0.1215 | 0.0800 | 51.85% | 48.15% | 0.00% | 3.70%
+MixedStructure_Age3 | 5 | 0.4900 | 0.5100 | 100.00% | 0.00% | 0.00% | 100.00%
+MixedStructure_Age4 | 2 | 0.3550 | 0.3550 | 50.00% | 50.00% | 0.00% | 0.00%
+NeutralProcessing_Age1 | 430 | 0.0650 | 0.0300 | 51.16% | 48.14% | 0.70% | 3.02%
+NeutralProcessing_Age11-20 | 27 | 0.0289 | 0.0200 | 51.85% | 44.44% | 3.70% | 7.41%
+NeutralProcessing_Age2 | 245 | -0.0778 | -0.0600 | 45.71% | 53.47% | 0.82% | -7.76%
+NeutralProcessing_Age3 | 134 | 0.2383 | 0.0450 | 53.73% | 44.03% | 2.24% | 9.70%
+NeutralProcessing_Age4 | 104 | 0.1437 | 0.1450 | 66.35% | 33.65% | 0.00% | 32.69%
+NeutralProcessing_Age5 | 95 | -0.1906 | -0.1100 | 38.95% | 60.00% | 1.05% | -21.05%
+NeutralProcessing_Age6-10 | 202 | -0.1011 | -0.0600 | 48.02% | 51.98% | 0.00% | -3.96%
+ReassertionProcessing_Age1 | 174 | 0.0202 | -0.0050 | 49.43% | 50.00% | 0.57% | -0.57%
+ReassertionProcessing_Age2 | 32 | -0.0816 | -0.0100 | 46.88% | 53.12% | 0.00% | -6.25%
+ReassertionProcessing_Age3 | 1 | 0.5500 | 0.5500 | 100.00% | 0.00% | 0.00% | 100.00%
+RecoveryResolution_Age1 | 90 | 0.3534 | 0.1100 | 52.22% | 45.56% | 2.22% | 6.67%
+RecoveryResolution_Age2 | 37 | -0.1741 | -0.1100 | 45.95% | 54.05% | 0.00% | -8.11%
+RecoveryResolution_Age3 | 27 | 0.3607 | 0.1300 | 51.85% | 48.15% | 0.00% | 3.70%
+RecoveryResolution_Age4 | 1 | -0.2200 | -0.2200 | 0.00% | 100.00% | 0.00% | -100.00%
+
+14. Recommendation
+CoreUniverseSize: 24
+ExtendedUniverseSize: 31
+ReductionPercent: 31.43% for 75% importance coverage.
+
+15. Low-DoF Audit
+Variables used:
+StructuralState
+AgeBucket
+
+Derived metrics:
+Count
+Top1Accuracy
+MemoryStrength
+HalfLife
+ReplicationPercent
+
+No Context
+No Arbitration
+No Persistence
+No Phase
+No Optimization
+No Fitting
+No Machine Learning
+No Forward Returns used in node ranking
+
+16. Mechanical Research Notes
+- ImportanceScore is an equal-weight mean of five min-max normalized structural metrics.
+- ReliabilityScore is an equal-weight mean of three min-max normalized structural metrics.
+- Attention categories use the fixed percentile and count rules only.
+- Outcome diagnostics remain separate from node ranking.

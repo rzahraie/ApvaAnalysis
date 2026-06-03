@@ -1,0 +1,700 @@
+APVA State Transition Model Study v0.1
+========================================================================================
+Diagnostics
+Instrument: CL
+Input path(s): .\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv
+Total rows: 2684
+State counts: RecoveryResolution=160, ExhaustionPersistence=176, CompressionProcessing=350, NeutralProcessing=1278, ReassertionProcessing=207, DecayToNeutral=103, DestructiveRotation=84, ConstructiveEmergence=12, MixedStructure=314
+State-age counts: 35
+
+1. Transition Matrix
+State | AgeBucket | NextState | Count | TransitionCount | TransitionProbability
+CompressionProcessing | 1 | RecoveryResolution | 177 | 13 | 7.34%
+CompressionProcessing | 1 | ExhaustionPersistence | 177 | 13 | 7.34%
+CompressionProcessing | 1 | CompressionProcessing | 177 | 92 | 51.98%
+CompressionProcessing | 1 | NeutralProcessing | 177 | 56 | 31.64%
+CompressionProcessing | 1 | ReassertionProcessing | 177 | 0 | 0.00%
+CompressionProcessing | 1 | DecayToNeutral | 177 | 0 | 0.00%
+CompressionProcessing | 1 | DestructiveRotation | 177 | 0 | 0.00%
+CompressionProcessing | 1 | ConstructiveEmergence | 177 | 0 | 0.00%
+CompressionProcessing | 1 | MixedStructure | 177 | 3 | 1.69%
+CompressionProcessing | 2 | RecoveryResolution | 92 | 4 | 4.35%
+CompressionProcessing | 2 | ExhaustionPersistence | 92 | 10 | 10.87%
+CompressionProcessing | 2 | CompressionProcessing | 92 | 41 | 44.57%
+CompressionProcessing | 2 | NeutralProcessing | 92 | 33 | 35.87%
+CompressionProcessing | 2 | ReassertionProcessing | 92 | 0 | 0.00%
+CompressionProcessing | 2 | DecayToNeutral | 92 | 2 | 2.17%
+CompressionProcessing | 2 | DestructiveRotation | 92 | 1 | 1.09%
+CompressionProcessing | 2 | ConstructiveEmergence | 92 | 0 | 0.00%
+CompressionProcessing | 2 | MixedStructure | 92 | 1 | 1.09%
+CompressionProcessing | 3 | RecoveryResolution | 41 | 1 | 2.44%
+CompressionProcessing | 3 | ExhaustionPersistence | 41 | 6 | 14.63%
+CompressionProcessing | 3 | CompressionProcessing | 41 | 22 | 53.66%
+CompressionProcessing | 3 | NeutralProcessing | 41 | 10 | 24.39%
+CompressionProcessing | 3 | ReassertionProcessing | 41 | 1 | 2.44%
+CompressionProcessing | 3 | DecayToNeutral | 41 | 0 | 0.00%
+CompressionProcessing | 3 | DestructiveRotation | 41 | 0 | 0.00%
+CompressionProcessing | 3 | ConstructiveEmergence | 41 | 0 | 0.00%
+CompressionProcessing | 3 | MixedStructure | 41 | 1 | 2.44%
+CompressionProcessing | 4 | RecoveryResolution | 22 | 0 | 0.00%
+CompressionProcessing | 4 | ExhaustionPersistence | 22 | 2 | 9.09%
+CompressionProcessing | 4 | CompressionProcessing | 22 | 12 | 54.55%
+CompressionProcessing | 4 | NeutralProcessing | 22 | 5 | 22.73%
+CompressionProcessing | 4 | ReassertionProcessing | 22 | 1 | 4.55%
+CompressionProcessing | 4 | DecayToNeutral | 22 | 2 | 9.09%
+CompressionProcessing | 4 | DestructiveRotation | 22 | 0 | 0.00%
+CompressionProcessing | 4 | ConstructiveEmergence | 22 | 0 | 0.00%
+CompressionProcessing | 4 | MixedStructure | 22 | 0 | 0.00%
+CompressionProcessing | 5 | RecoveryResolution | 12 | 0 | 0.00%
+CompressionProcessing | 5 | ExhaustionPersistence | 12 | 4 | 33.33%
+CompressionProcessing | 5 | CompressionProcessing | 12 | 5 | 41.67%
+CompressionProcessing | 5 | NeutralProcessing | 12 | 1 | 8.33%
+CompressionProcessing | 5 | ReassertionProcessing | 12 | 0 | 0.00%
+CompressionProcessing | 5 | DecayToNeutral | 12 | 0 | 0.00%
+CompressionProcessing | 5 | DestructiveRotation | 12 | 1 | 8.33%
+CompressionProcessing | 5 | ConstructiveEmergence | 12 | 0 | 0.00%
+CompressionProcessing | 5 | MixedStructure | 12 | 1 | 8.33%
+CompressionProcessing | 6-10 | RecoveryResolution | 6 | 1 | 16.67%
+CompressionProcessing | 6-10 | ExhaustionPersistence | 6 | 0 | 0.00%
+CompressionProcessing | 6-10 | CompressionProcessing | 6 | 1 | 16.67%
+CompressionProcessing | 6-10 | NeutralProcessing | 6 | 3 | 50.00%
+CompressionProcessing | 6-10 | ReassertionProcessing | 6 | 0 | 0.00%
+CompressionProcessing | 6-10 | DecayToNeutral | 6 | 0 | 0.00%
+CompressionProcessing | 6-10 | DestructiveRotation | 6 | 0 | 0.00%
+CompressionProcessing | 6-10 | ConstructiveEmergence | 6 | 0 | 0.00%
+CompressionProcessing | 6-10 | MixedStructure | 6 | 1 | 16.67%
+ConstructiveEmergence | 1 | RecoveryResolution | 12 | 0 | 0.00%
+ConstructiveEmergence | 1 | ExhaustionPersistence | 12 | 0 | 0.00%
+ConstructiveEmergence | 1 | CompressionProcessing | 12 | 0 | 0.00%
+ConstructiveEmergence | 1 | NeutralProcessing | 12 | 4 | 33.33%
+ConstructiveEmergence | 1 | ReassertionProcessing | 12 | 0 | 0.00%
+ConstructiveEmergence | 1 | DecayToNeutral | 12 | 3 | 25.00%
+ConstructiveEmergence | 1 | DestructiveRotation | 12 | 0 | 0.00%
+ConstructiveEmergence | 1 | ConstructiveEmergence | 12 | 0 | 0.00%
+ConstructiveEmergence | 1 | MixedStructure | 12 | 5 | 41.67%
+DecayToNeutral | 1 | RecoveryResolution | 103 | 0 | 0.00%
+DecayToNeutral | 1 | ExhaustionPersistence | 103 | 0 | 0.00%
+DecayToNeutral | 1 | CompressionProcessing | 103 | 2 | 1.94%
+DecayToNeutral | 1 | NeutralProcessing | 103 | 63 | 61.17%
+DecayToNeutral | 1 | ReassertionProcessing | 103 | 0 | 0.00%
+DecayToNeutral | 1 | DecayToNeutral | 103 | 0 | 0.00%
+DecayToNeutral | 1 | DestructiveRotation | 103 | 11 | 10.68%
+DecayToNeutral | 1 | ConstructiveEmergence | 103 | 1 | 0.97%
+DecayToNeutral | 1 | MixedStructure | 103 | 26 | 25.24%
+DestructiveRotation | 1 | RecoveryResolution | 71 | 4 | 5.63%
+DestructiveRotation | 1 | ExhaustionPersistence | 71 | 5 | 7.04%
+DestructiveRotation | 1 | CompressionProcessing | 71 | 1 | 1.41%
+DestructiveRotation | 1 | NeutralProcessing | 71 | 25 | 35.21%
+DestructiveRotation | 1 | ReassertionProcessing | 71 | 3 | 4.23%
+DestructiveRotation | 1 | DecayToNeutral | 71 | 20 | 28.17%
+DestructiveRotation | 1 | DestructiveRotation | 71 | 12 | 16.90%
+DestructiveRotation | 1 | ConstructiveEmergence | 71 | 0 | 0.00%
+DestructiveRotation | 1 | MixedStructure | 71 | 1 | 1.41%
+DestructiveRotation | 2 | RecoveryResolution | 12 | 1 | 8.33%
+DestructiveRotation | 2 | ExhaustionPersistence | 12 | 3 | 25.00%
+DestructiveRotation | 2 | CompressionProcessing | 12 | 1 | 8.33%
+DestructiveRotation | 2 | NeutralProcessing | 12 | 2 | 16.67%
+DestructiveRotation | 2 | ReassertionProcessing | 12 | 0 | 0.00%
+DestructiveRotation | 2 | DecayToNeutral | 12 | 4 | 33.33%
+DestructiveRotation | 2 | DestructiveRotation | 12 | 1 | 8.33%
+DestructiveRotation | 2 | ConstructiveEmergence | 12 | 0 | 0.00%
+DestructiveRotation | 2 | MixedStructure | 12 | 0 | 0.00%
+DestructiveRotation | 3 | RecoveryResolution | 1 | 0 | 0.00%
+DestructiveRotation | 3 | ExhaustionPersistence | 1 | 0 | 0.00%
+DestructiveRotation | 3 | CompressionProcessing | 1 | 1 | 100.00%
+DestructiveRotation | 3 | NeutralProcessing | 1 | 0 | 0.00%
+DestructiveRotation | 3 | ReassertionProcessing | 1 | 0 | 0.00%
+DestructiveRotation | 3 | DecayToNeutral | 1 | 0 | 0.00%
+DestructiveRotation | 3 | DestructiveRotation | 1 | 0 | 0.00%
+DestructiveRotation | 3 | ConstructiveEmergence | 1 | 0 | 0.00%
+DestructiveRotation | 3 | MixedStructure | 1 | 0 | 0.00%
+ExhaustionPersistence | 1 | RecoveryResolution | 97 | 29 | 29.90%
+ExhaustionPersistence | 1 | ExhaustionPersistence | 97 | 31 | 31.96%
+ExhaustionPersistence | 1 | CompressionProcessing | 97 | 7 | 7.22%
+ExhaustionPersistence | 1 | NeutralProcessing | 97 | 11 | 11.34%
+ExhaustionPersistence | 1 | ReassertionProcessing | 97 | 0 | 0.00%
+ExhaustionPersistence | 1 | DecayToNeutral | 97 | 17 | 17.53%
+ExhaustionPersistence | 1 | DestructiveRotation | 97 | 2 | 2.06%
+ExhaustionPersistence | 1 | ConstructiveEmergence | 97 | 0 | 0.00%
+ExhaustionPersistence | 1 | MixedStructure | 97 | 0 | 0.00%
+ExhaustionPersistence | 2 | RecoveryResolution | 31 | 9 | 29.03%
+ExhaustionPersistence | 2 | ExhaustionPersistence | 31 | 21 | 67.74%
+ExhaustionPersistence | 2 | CompressionProcessing | 31 | 0 | 0.00%
+ExhaustionPersistence | 2 | NeutralProcessing | 31 | 1 | 3.23%
+ExhaustionPersistence | 2 | ReassertionProcessing | 31 | 0 | 0.00%
+ExhaustionPersistence | 2 | DecayToNeutral | 31 | 0 | 0.00%
+ExhaustionPersistence | 2 | DestructiveRotation | 31 | 0 | 0.00%
+ExhaustionPersistence | 2 | ConstructiveEmergence | 31 | 0 | 0.00%
+ExhaustionPersistence | 2 | MixedStructure | 31 | 0 | 0.00%
+ExhaustionPersistence | 3 | RecoveryResolution | 21 | 0 | 0.00%
+ExhaustionPersistence | 3 | ExhaustionPersistence | 21 | 16 | 76.19%
+ExhaustionPersistence | 3 | CompressionProcessing | 21 | 0 | 0.00%
+ExhaustionPersistence | 3 | NeutralProcessing | 21 | 5 | 23.81%
+ExhaustionPersistence | 3 | ReassertionProcessing | 21 | 0 | 0.00%
+ExhaustionPersistence | 3 | DecayToNeutral | 21 | 0 | 0.00%
+ExhaustionPersistence | 3 | DestructiveRotation | 21 | 0 | 0.00%
+ExhaustionPersistence | 3 | ConstructiveEmergence | 21 | 0 | 0.00%
+ExhaustionPersistence | 3 | MixedStructure | 21 | 0 | 0.00%
+ExhaustionPersistence | 4 | RecoveryResolution | 16 | 1 | 6.25%
+ExhaustionPersistence | 4 | ExhaustionPersistence | 16 | 8 | 50.00%
+ExhaustionPersistence | 4 | CompressionProcessing | 16 | 1 | 6.25%
+ExhaustionPersistence | 4 | NeutralProcessing | 16 | 3 | 18.75%
+ExhaustionPersistence | 4 | ReassertionProcessing | 16 | 0 | 0.00%
+ExhaustionPersistence | 4 | DecayToNeutral | 16 | 1 | 6.25%
+ExhaustionPersistence | 4 | DestructiveRotation | 16 | 2 | 12.50%
+ExhaustionPersistence | 4 | ConstructiveEmergence | 16 | 0 | 0.00%
+ExhaustionPersistence | 4 | MixedStructure | 16 | 0 | 0.00%
+ExhaustionPersistence | 5 | RecoveryResolution | 8 | 0 | 0.00%
+ExhaustionPersistence | 5 | ExhaustionPersistence | 8 | 1 | 12.50%
+ExhaustionPersistence | 5 | CompressionProcessing | 8 | 1 | 12.50%
+ExhaustionPersistence | 5 | NeutralProcessing | 8 | 3 | 37.50%
+ExhaustionPersistence | 5 | ReassertionProcessing | 8 | 0 | 0.00%
+ExhaustionPersistence | 5 | DecayToNeutral | 8 | 2 | 25.00%
+ExhaustionPersistence | 5 | DestructiveRotation | 8 | 1 | 12.50%
+ExhaustionPersistence | 5 | ConstructiveEmergence | 8 | 0 | 0.00%
+ExhaustionPersistence | 5 | MixedStructure | 8 | 0 | 0.00%
+ExhaustionPersistence | 6-10 | RecoveryResolution | 3 | 0 | 0.00%
+ExhaustionPersistence | 6-10 | ExhaustionPersistence | 3 | 2 | 66.67%
+ExhaustionPersistence | 6-10 | CompressionProcessing | 3 | 0 | 0.00%
+ExhaustionPersistence | 6-10 | NeutralProcessing | 3 | 1 | 33.33%
+ExhaustionPersistence | 6-10 | ReassertionProcessing | 3 | 0 | 0.00%
+ExhaustionPersistence | 6-10 | DecayToNeutral | 3 | 0 | 0.00%
+ExhaustionPersistence | 6-10 | DestructiveRotation | 3 | 0 | 0.00%
+ExhaustionPersistence | 6-10 | ConstructiveEmergence | 3 | 0 | 0.00%
+ExhaustionPersistence | 6-10 | MixedStructure | 3 | 0 | 0.00%
+MixedStructure | 1 | RecoveryResolution | 279 | 25 | 8.96%
+MixedStructure | 1 | ExhaustionPersistence | 279 | 39 | 13.98%
+MixedStructure | 1 | CompressionProcessing | 279 | 5 | 1.79%
+MixedStructure | 1 | NeutralProcessing | 279 | 115 | 41.22%
+MixedStructure | 1 | ReassertionProcessing | 279 | 17 | 6.09%
+MixedStructure | 1 | DecayToNeutral | 279 | 44 | 15.77%
+MixedStructure | 1 | DestructiveRotation | 279 | 3 | 1.08%
+MixedStructure | 1 | ConstructiveEmergence | 279 | 3 | 1.08%
+MixedStructure | 1 | MixedStructure | 279 | 28 | 10.04%
+MixedStructure | 2 | RecoveryResolution | 28 | 4 | 14.29%
+MixedStructure | 2 | ExhaustionPersistence | 28 | 3 | 10.71%
+MixedStructure | 2 | CompressionProcessing | 28 | 1 | 3.57%
+MixedStructure | 2 | NeutralProcessing | 28 | 7 | 25.00%
+MixedStructure | 2 | ReassertionProcessing | 28 | 0 | 0.00%
+MixedStructure | 2 | DecayToNeutral | 28 | 8 | 28.57%
+MixedStructure | 2 | DestructiveRotation | 28 | 0 | 0.00%
+MixedStructure | 2 | ConstructiveEmergence | 28 | 0 | 0.00%
+MixedStructure | 2 | MixedStructure | 28 | 5 | 17.86%
+MixedStructure | 3 | RecoveryResolution | 5 | 1 | 20.00%
+MixedStructure | 3 | ExhaustionPersistence | 5 | 0 | 0.00%
+MixedStructure | 3 | CompressionProcessing | 5 | 0 | 0.00%
+MixedStructure | 3 | NeutralProcessing | 5 | 0 | 0.00%
+MixedStructure | 3 | ReassertionProcessing | 5 | 0 | 0.00%
+MixedStructure | 3 | DecayToNeutral | 5 | 0 | 0.00%
+MixedStructure | 3 | DestructiveRotation | 5 | 0 | 0.00%
+MixedStructure | 3 | ConstructiveEmergence | 5 | 2 | 40.00%
+MixedStructure | 3 | MixedStructure | 5 | 2 | 40.00%
+MixedStructure | 4 | RecoveryResolution | 2 | 0 | 0.00%
+MixedStructure | 4 | ExhaustionPersistence | 2 | 0 | 0.00%
+MixedStructure | 4 | CompressionProcessing | 2 | 0 | 0.00%
+MixedStructure | 4 | NeutralProcessing | 2 | 2 | 100.00%
+MixedStructure | 4 | ReassertionProcessing | 2 | 0 | 0.00%
+MixedStructure | 4 | DecayToNeutral | 2 | 0 | 0.00%
+MixedStructure | 4 | DestructiveRotation | 2 | 0 | 0.00%
+MixedStructure | 4 | ConstructiveEmergence | 2 | 0 | 0.00%
+MixedStructure | 4 | MixedStructure | 2 | 0 | 0.00%
+NeutralProcessing | 1 | RecoveryResolution | 445 | 0 | 0.00%
+NeutralProcessing | 1 | ExhaustionPersistence | 445 | 0 | 0.00%
+NeutralProcessing | 1 | CompressionProcessing | 445 | 45 | 10.11%
+NeutralProcessing | 1 | NeutralProcessing | 445 | 253 | 56.85%
+NeutralProcessing | 1 | ReassertionProcessing | 445 | 63 | 14.16%
+NeutralProcessing | 1 | DecayToNeutral | 445 | 0 | 0.00%
+NeutralProcessing | 1 | DestructiveRotation | 445 | 15 | 3.37%
+NeutralProcessing | 1 | ConstructiveEmergence | 445 | 3 | 0.67%
+NeutralProcessing | 1 | MixedStructure | 445 | 66 | 14.83%
+NeutralProcessing | 11-20 | RecoveryResolution | 30 | 0 | 0.00%
+NeutralProcessing | 11-20 | ExhaustionPersistence | 30 | 1 | 3.33%
+NeutralProcessing | 11-20 | CompressionProcessing | 30 | 2 | 6.67%
+NeutralProcessing | 11-20 | NeutralProcessing | 30 | 19 | 63.33%
+NeutralProcessing | 11-20 | ReassertionProcessing | 30 | 4 | 13.33%
+NeutralProcessing | 11-20 | DecayToNeutral | 30 | 0 | 0.00%
+NeutralProcessing | 11-20 | DestructiveRotation | 30 | 0 | 0.00%
+NeutralProcessing | 11-20 | ConstructiveEmergence | 30 | 0 | 0.00%
+NeutralProcessing | 11-20 | MixedStructure | 30 | 4 | 13.33%
+NeutralProcessing | 2 | RecoveryResolution | 253 | 0 | 0.00%
+NeutralProcessing | 2 | ExhaustionPersistence | 253 | 0 | 0.00%
+NeutralProcessing | 2 | CompressionProcessing | 253 | 24 | 9.49%
+NeutralProcessing | 2 | NeutralProcessing | 253 | 140 | 55.34%
+NeutralProcessing | 2 | ReassertionProcessing | 253 | 30 | 11.86%
+NeutralProcessing | 2 | DecayToNeutral | 253 | 0 | 0.00%
+NeutralProcessing | 2 | DestructiveRotation | 253 | 5 | 1.98%
+NeutralProcessing | 2 | ConstructiveEmergence | 253 | 0 | 0.00%
+NeutralProcessing | 2 | MixedStructure | 253 | 54 | 21.34%
+NeutralProcessing | 3 | RecoveryResolution | 140 | 0 | 0.00%
+NeutralProcessing | 3 | ExhaustionPersistence | 140 | 0 | 0.00%
+NeutralProcessing | 3 | CompressionProcessing | 140 | 5 | 3.57%
+NeutralProcessing | 3 | NeutralProcessing | 140 | 106 | 75.71%
+NeutralProcessing | 3 | ReassertionProcessing | 140 | 14 | 10.00%
+NeutralProcessing | 3 | DecayToNeutral | 140 | 0 | 0.00%
+NeutralProcessing | 3 | DestructiveRotation | 140 | 0 | 0.00%
+NeutralProcessing | 3 | ConstructiveEmergence | 140 | 0 | 0.00%
+NeutralProcessing | 3 | MixedStructure | 140 | 15 | 10.71%
+NeutralProcessing | 4 | RecoveryResolution | 106 | 0 | 0.00%
+NeutralProcessing | 4 | ExhaustionPersistence | 106 | 2 | 1.89%
+NeutralProcessing | 4 | CompressionProcessing | 106 | 0 | 0.00%
+NeutralProcessing | 4 | NeutralProcessing | 106 | 95 | 89.62%
+NeutralProcessing | 4 | ReassertionProcessing | 106 | 4 | 3.77%
+NeutralProcessing | 4 | DecayToNeutral | 106 | 0 | 0.00%
+NeutralProcessing | 4 | DestructiveRotation | 106 | 0 | 0.00%
+NeutralProcessing | 4 | ConstructiveEmergence | 106 | 1 | 0.94%
+NeutralProcessing | 4 | MixedStructure | 106 | 4 | 3.77%
+NeutralProcessing | 5 | RecoveryResolution | 95 | 0 | 0.00%
+NeutralProcessing | 5 | ExhaustionPersistence | 95 | 1 | 1.05%
+NeutralProcessing | 5 | CompressionProcessing | 95 | 3 | 3.16%
+NeutralProcessing | 5 | NeutralProcessing | 95 | 75 | 78.95%
+NeutralProcessing | 5 | ReassertionProcessing | 95 | 6 | 6.32%
+NeutralProcessing | 5 | DecayToNeutral | 95 | 0 | 0.00%
+NeutralProcessing | 5 | DestructiveRotation | 95 | 0 | 0.00%
+NeutralProcessing | 5 | ConstructiveEmergence | 95 | 0 | 0.00%
+NeutralProcessing | 5 | MixedStructure | 95 | 10 | 10.53%
+NeutralProcessing | 6-10 | RecoveryResolution | 208 | 1 | 0.48%
+NeutralProcessing | 6-10 | ExhaustionPersistence | 208 | 4 | 1.92%
+NeutralProcessing | 6-10 | CompressionProcessing | 208 | 7 | 3.37%
+NeutralProcessing | 6-10 | NeutralProcessing | 208 | 144 | 69.23%
+NeutralProcessing | 6-10 | ReassertionProcessing | 208 | 31 | 14.90%
+NeutralProcessing | 6-10 | DecayToNeutral | 208 | 0 | 0.00%
+NeutralProcessing | 6-10 | DestructiveRotation | 208 | 0 | 0.00%
+NeutralProcessing | 6-10 | ConstructiveEmergence | 208 | 1 | 0.48%
+NeutralProcessing | 6-10 | MixedStructure | 208 | 20 | 9.62%
+ReassertionProcessing | 1 | RecoveryResolution | 174 | 0 | 0.00%
+ReassertionProcessing | 1 | ExhaustionPersistence | 174 | 0 | 0.00%
+ReassertionProcessing | 1 | CompressionProcessing | 174 | 6 | 3.45%
+ReassertionProcessing | 1 | NeutralProcessing | 174 | 58 | 33.33%
+ReassertionProcessing | 1 | ReassertionProcessing | 174 | 32 | 18.39%
+ReassertionProcessing | 1 | DecayToNeutral | 174 | 0 | 0.00%
+ReassertionProcessing | 1 | DestructiveRotation | 174 | 11 | 6.32%
+ReassertionProcessing | 1 | ConstructiveEmergence | 174 | 1 | 0.57%
+ReassertionProcessing | 1 | MixedStructure | 174 | 66 | 37.93%
+ReassertionProcessing | 2 | RecoveryResolution | 32 | 0 | 0.00%
+ReassertionProcessing | 2 | ExhaustionPersistence | 32 | 0 | 0.00%
+ReassertionProcessing | 2 | CompressionProcessing | 32 | 1 | 3.12%
+ReassertionProcessing | 2 | NeutralProcessing | 32 | 12 | 37.50%
+ReassertionProcessing | 2 | ReassertionProcessing | 32 | 1 | 3.12%
+ReassertionProcessing | 2 | DecayToNeutral | 32 | 0 | 0.00%
+ReassertionProcessing | 2 | DestructiveRotation | 32 | 18 | 56.25%
+ReassertionProcessing | 2 | ConstructiveEmergence | 32 | 0 | 0.00%
+ReassertionProcessing | 2 | MixedStructure | 32 | 0 | 0.00%
+ReassertionProcessing | 3 | RecoveryResolution | 1 | 0 | 0.00%
+ReassertionProcessing | 3 | ExhaustionPersistence | 1 | 0 | 0.00%
+ReassertionProcessing | 3 | CompressionProcessing | 1 | 0 | 0.00%
+ReassertionProcessing | 3 | NeutralProcessing | 1 | 0 | 0.00%
+ReassertionProcessing | 3 | ReassertionProcessing | 1 | 0 | 0.00%
+ReassertionProcessing | 3 | DecayToNeutral | 1 | 0 | 0.00%
+ReassertionProcessing | 3 | DestructiveRotation | 1 | 1 | 100.00%
+ReassertionProcessing | 3 | ConstructiveEmergence | 1 | 0 | 0.00%
+ReassertionProcessing | 3 | MixedStructure | 1 | 0 | 0.00%
+RecoveryResolution | 1 | RecoveryResolution | 94 | 38 | 40.43%
+RecoveryResolution | 1 | ExhaustionPersistence | 94 | 0 | 0.00%
+RecoveryResolution | 1 | CompressionProcessing | 94 | 46 | 48.94%
+RecoveryResolution | 1 | NeutralProcessing | 94 | 10 | 10.64%
+RecoveryResolution | 1 | ReassertionProcessing | 94 | 0 | 0.00%
+RecoveryResolution | 1 | DecayToNeutral | 94 | 0 | 0.00%
+RecoveryResolution | 1 | DestructiveRotation | 94 | 0 | 0.00%
+RecoveryResolution | 1 | ConstructiveEmergence | 94 | 0 | 0.00%
+RecoveryResolution | 1 | MixedStructure | 94 | 0 | 0.00%
+RecoveryResolution | 2 | RecoveryResolution | 38 | 27 | 71.05%
+RecoveryResolution | 2 | ExhaustionPersistence | 38 | 0 | 0.00%
+RecoveryResolution | 2 | CompressionProcessing | 38 | 0 | 0.00%
+RecoveryResolution | 2 | NeutralProcessing | 38 | 11 | 28.95%
+RecoveryResolution | 2 | ReassertionProcessing | 38 | 0 | 0.00%
+RecoveryResolution | 2 | DecayToNeutral | 38 | 0 | 0.00%
+RecoveryResolution | 2 | DestructiveRotation | 38 | 0 | 0.00%
+RecoveryResolution | 2 | ConstructiveEmergence | 38 | 0 | 0.00%
+RecoveryResolution | 2 | MixedStructure | 38 | 0 | 0.00%
+RecoveryResolution | 3 | RecoveryResolution | 27 | 1 | 3.70%
+RecoveryResolution | 3 | ExhaustionPersistence | 27 | 4 | 14.81%
+RecoveryResolution | 3 | CompressionProcessing | 27 | 17 | 62.96%
+RecoveryResolution | 3 | NeutralProcessing | 27 | 5 | 18.52%
+RecoveryResolution | 3 | ReassertionProcessing | 27 | 0 | 0.00%
+RecoveryResolution | 3 | DecayToNeutral | 27 | 0 | 0.00%
+RecoveryResolution | 3 | DestructiveRotation | 27 | 0 | 0.00%
+RecoveryResolution | 3 | ConstructiveEmergence | 27 | 0 | 0.00%
+RecoveryResolution | 3 | MixedStructure | 27 | 0 | 0.00%
+RecoveryResolution | 4 | RecoveryResolution | 1 | 0 | 0.00%
+RecoveryResolution | 4 | ExhaustionPersistence | 1 | 0 | 0.00%
+RecoveryResolution | 4 | CompressionProcessing | 1 | 1 | 100.00%
+RecoveryResolution | 4 | NeutralProcessing | 1 | 0 | 0.00%
+RecoveryResolution | 4 | ReassertionProcessing | 1 | 0 | 0.00%
+RecoveryResolution | 4 | DecayToNeutral | 1 | 0 | 0.00%
+RecoveryResolution | 4 | DestructiveRotation | 1 | 0 | 0.00%
+RecoveryResolution | 4 | ConstructiveEmergence | 1 | 0 | 0.00%
+RecoveryResolution | 4 | MixedStructure | 1 | 0 | 0.00%
+
+2. Dominant Destinations
+State | AgeBucket | Count | DominantDestination | DominantProbability | SecondDestination | SecondProbability | TransitionConfidence
+CompressionProcessing | 1 | 177 | CompressionProcessing | 51.98% | NeutralProcessing | 31.64% | 20.34%
+CompressionProcessing | 2 | 92 | CompressionProcessing | 44.57% | NeutralProcessing | 35.87% | 8.70%
+CompressionProcessing | 3 | 41 | CompressionProcessing | 53.66% | NeutralProcessing | 24.39% | 29.27%
+CompressionProcessing | 4 | 22 | CompressionProcessing | 54.55% | NeutralProcessing | 22.73% | 31.82%
+CompressionProcessing | 5 | 12 | CompressionProcessing | 41.67% | ExhaustionPersistence | 33.33% | 8.33%
+CompressionProcessing | 6-10 | 6 | NeutralProcessing | 50.00% | CompressionProcessing | 16.67% | 33.33%
+ConstructiveEmergence | 1 | 12 | MixedStructure | 41.67% | NeutralProcessing | 33.33% | 8.33%
+DecayToNeutral | 1 | 103 | NeutralProcessing | 61.17% | MixedStructure | 25.24% | 35.92%
+DestructiveRotation | 1 | 71 | NeutralProcessing | 35.21% | DecayToNeutral | 28.17% | 7.04%
+DestructiveRotation | 2 | 12 | DecayToNeutral | 33.33% | ExhaustionPersistence | 25.00% | 8.33%
+DestructiveRotation | 3 | 1 | CompressionProcessing | 100.00% | N/A | 0.00% | 100.00%
+ExhaustionPersistence | 1 | 97 | ExhaustionPersistence | 31.96% | RecoveryResolution | 29.90% | 2.06%
+ExhaustionPersistence | 2 | 31 | ExhaustionPersistence | 67.74% | RecoveryResolution | 29.03% | 38.71%
+ExhaustionPersistence | 3 | 21 | ExhaustionPersistence | 76.19% | NeutralProcessing | 23.81% | 52.38%
+ExhaustionPersistence | 4 | 16 | ExhaustionPersistence | 50.00% | NeutralProcessing | 18.75% | 31.25%
+ExhaustionPersistence | 5 | 8 | NeutralProcessing | 37.50% | DecayToNeutral | 25.00% | 12.50%
+ExhaustionPersistence | 6-10 | 3 | ExhaustionPersistence | 66.67% | NeutralProcessing | 33.33% | 33.33%
+MixedStructure | 1 | 279 | NeutralProcessing | 41.22% | DecayToNeutral | 15.77% | 25.45%
+MixedStructure | 2 | 28 | DecayToNeutral | 28.57% | NeutralProcessing | 25.00% | 3.57%
+MixedStructure | 3 | 5 | ConstructiveEmergence | 40.00% | MixedStructure | 40.00% | 0.00%
+MixedStructure | 4 | 2 | NeutralProcessing | 100.00% | N/A | 0.00% | 100.00%
+NeutralProcessing | 1 | 445 | NeutralProcessing | 56.85% | MixedStructure | 14.83% | 42.02%
+NeutralProcessing | 11-20 | 30 | NeutralProcessing | 63.33% | MixedStructure | 13.33% | 50.00%
+NeutralProcessing | 2 | 253 | NeutralProcessing | 55.34% | MixedStructure | 21.34% | 33.99%
+NeutralProcessing | 3 | 140 | NeutralProcessing | 75.71% | MixedStructure | 10.71% | 65.00%
+NeutralProcessing | 4 | 106 | NeutralProcessing | 89.62% | MixedStructure | 3.77% | 85.85%
+NeutralProcessing | 5 | 95 | NeutralProcessing | 78.95% | MixedStructure | 10.53% | 68.42%
+NeutralProcessing | 6-10 | 208 | NeutralProcessing | 69.23% | ReassertionProcessing | 14.90% | 54.33%
+ReassertionProcessing | 1 | 174 | MixedStructure | 37.93% | NeutralProcessing | 33.33% | 4.60%
+ReassertionProcessing | 2 | 32 | DestructiveRotation | 56.25% | NeutralProcessing | 37.50% | 18.75%
+ReassertionProcessing | 3 | 1 | DestructiveRotation | 100.00% | N/A | 0.00% | 100.00%
+RecoveryResolution | 1 | 94 | CompressionProcessing | 48.94% | RecoveryResolution | 40.43% | 8.51%
+RecoveryResolution | 2 | 38 | RecoveryResolution | 71.05% | NeutralProcessing | 28.95% | 42.11%
+RecoveryResolution | 3 | 27 | CompressionProcessing | 62.96% | NeutralProcessing | 18.52% | 44.44%
+RecoveryResolution | 4 | 1 | CompressionProcessing | 100.00% | N/A | 0.00% | 100.00%
+
+3. Age-Dependent Transition Laws
+State | AgeBucket | Count | DominantDestination | DominantProbability | TransitionConfidence | Entropy
+RecoveryResolution | 1 | 94 | CompressionProcessing | 48.94% | 8.51% | 0.9542
+RecoveryResolution | 2 | 38 | RecoveryResolution | 71.05% | 42.11% | 0.6017
+RecoveryResolution | 3 | 27 | CompressionProcessing | 62.96% | 44.44% | 1.0085
+RecoveryResolution | 4 | 1 | CompressionProcessing | 100.00% | 100.00% | -0.0000
+ExhaustionPersistence | 1 | 97 | ExhaustionPersistence | 31.96% | 2.06% | 1.5473
+ExhaustionPersistence | 2 | 31 | ExhaustionPersistence | 67.74% | 38.71% | 0.7337
+ExhaustionPersistence | 3 | 21 | ExhaustionPersistence | 76.19% | 52.38% | 0.5489
+ExhaustionPersistence | 4 | 16 | ExhaustionPersistence | 50.00% | 31.25% | 1.4402
+ExhaustionPersistence | 5 | 8 | NeutralProcessing | 37.50% | 12.50% | 1.4942
+ExhaustionPersistence | 6-10 | 3 | ExhaustionPersistence | 66.67% | 33.33% | 0.6365
+CompressionProcessing | 1 | 177 | CompressionProcessing | 51.98% | 20.34% | 1.1569
+CompressionProcessing | 2 | 92 | CompressionProcessing | 44.57% | 8.70% | 1.2870
+CompressionProcessing | 3 | 41 | CompressionProcessing | 53.66% | 29.27% | 1.2311
+CompressionProcessing | 4 | 22 | CompressionProcessing | 54.55% | 31.82% | 1.2438
+CompressionProcessing | 5 | 12 | CompressionProcessing | 41.67% | 8.33% | 1.3522
+CompressionProcessing | 6-10 | 6 | NeutralProcessing | 50.00% | 33.33% | 1.2425
+NeutralProcessing | 1 | 445 | NeutralProcessing | 56.85% | 42.02% | 1.2605
+NeutralProcessing | 2 | 253 | NeutralProcessing | 55.34% | 33.99% | 1.2109
+NeutralProcessing | 3 | 140 | NeutralProcessing | 75.71% | 65.00% | 0.7992
+NeutralProcessing | 4 | 106 | NeutralProcessing | 89.62% | 85.85% | 0.4644
+NeutralProcessing | 5 | 95 | NeutralProcessing | 78.95% | 68.42% | 0.7551
+NeutralProcessing | 6-10 | 208 | NeutralProcessing | 69.23% | 54.33% | 1.0049
+NeutralProcessing | 11-20 | 30 | NeutralProcessing | 63.33% | 50.00% | 1.1205
+ReassertionProcessing | 1 | 174 | MixedStructure | 37.93% | 4.60% | 1.3656
+ReassertionProcessing | 2 | 32 | DestructiveRotation | 56.25% | 18.75% | 0.9081
+ReassertionProcessing | 3 | 1 | DestructiveRotation | 100.00% | 100.00% | -0.0000
+DecayToNeutral | 1 | 103 | NeutralProcessing | 61.17% | 35.92% | 1.0086
+DestructiveRotation | 1 | 71 | NeutralProcessing | 35.21% | 7.04% | 1.6276
+DestructiveRotation | 2 | 12 | DecayToNeutral | 33.33% | 8.33% | 1.6326
+DestructiveRotation | 3 | 1 | CompressionProcessing | 100.00% | 100.00% | -0.0000
+ConstructiveEmergence | 1 | 12 | MixedStructure | 41.67% | 8.33% | 1.0776
+MixedStructure | 1 | 279 | NeutralProcessing | 41.22% | 25.45% | 1.7186
+MixedStructure | 2 | 28 | DecayToNeutral | 28.57% | 3.57% | 1.6485
+MixedStructure | 3 | 5 | ConstructiveEmergence | 40.00% | 0.00% | 1.0549
+MixedStructure | 4 | 2 | NeutralProcessing | 100.00% | 100.00% | -0.0000
+
+Transition Confidence Spread by State
+State | MinConfidenceAge | MinConfidence | MaxConfidenceAge | MaxConfidence | TransitionConfidenceSpread
+RecoveryResolution | 1 | 8.51% | 3 | 44.44% | 35.93%
+ExhaustionPersistence | 1 | 2.06% | 3 | 52.38% | 50.32%
+CompressionProcessing | 2 | 8.70% | 4 | 31.82% | 23.12%
+NeutralProcessing | 2 | 33.99% | 4 | 85.85% | 51.86%
+ReassertionProcessing | 1 | 4.60% | 2 | 18.75% | 14.15%
+DecayToNeutral | 1 | 35.92% | 1 | 35.92% | 0.00%
+DestructiveRotation | 1 | 7.04% | 1 | 7.04% | 0.00%
+ConstructiveEmergence | 1 | 8.33% | 1 | 8.33% | 0.00%
+MixedStructure | 2 | 3.57% | 1 | 25.45% | 21.88%
+
+4. Transition Entropy
+State | AgeBucket | Count | TransitionEntropy | NormalizedTransitionEntropy
+CompressionProcessing | 1 | 177 | 1.1569 | 0.7188
+CompressionProcessing | 2 | 92 | 1.2870 | 0.6614
+CompressionProcessing | 3 | 41 | 1.2311 | 0.6871
+CompressionProcessing | 4 | 22 | 1.2438 | 0.7728
+CompressionProcessing | 5 | 12 | 1.3522 | 0.8402
+CompressionProcessing | 6-10 | 6 | 1.2425 | 0.8962
+ConstructiveEmergence | 1 | 12 | 1.0776 | 0.9808
+DecayToNeutral | 1 | 103 | 1.0086 | 0.6267
+DestructiveRotation | 1 | 71 | 1.6276 | 0.7827
+DestructiveRotation | 2 | 12 | 1.6326 | 0.9112
+DestructiveRotation | 3 | 1 | -0.0000 | 0.0000
+ExhaustionPersistence | 1 | 97 | 1.5473 | 0.8636
+ExhaustionPersistence | 2 | 31 | 0.7337 | 0.6678
+ExhaustionPersistence | 3 | 21 | 0.5489 | 0.7919
+ExhaustionPersistence | 4 | 16 | 1.4402 | 0.8038
+ExhaustionPersistence | 5 | 8 | 1.4942 | 0.9284
+ExhaustionPersistence | 6-10 | 3 | 0.6365 | 0.9183
+MixedStructure | 1 | 279 | 1.7186 | 0.7822
+MixedStructure | 2 | 28 | 1.6485 | 0.9200
+MixedStructure | 3 | 5 | 1.0549 | 0.9602
+MixedStructure | 4 | 2 | -0.0000 | 0.0000
+NeutralProcessing | 1 | 445 | 1.2605 | 0.7035
+NeutralProcessing | 11-20 | 30 | 1.1205 | 0.6962
+NeutralProcessing | 2 | 253 | 1.2109 | 0.7524
+NeutralProcessing | 3 | 140 | 0.7992 | 0.5765
+NeutralProcessing | 4 | 106 | 0.4644 | 0.2886
+NeutralProcessing | 5 | 95 | 0.7551 | 0.4692
+NeutralProcessing | 6-10 | 208 | 1.0049 | 0.5164
+ReassertionProcessing | 1 | 174 | 1.3656 | 0.7622
+ReassertionProcessing | 2 | 32 | 0.9081 | 0.6550
+ReassertionProcessing | 3 | 1 | -0.0000 | 0.0000
+RecoveryResolution | 1 | 94 | 0.9542 | 0.8686
+RecoveryResolution | 2 | 38 | 0.6017 | 0.8680
+RecoveryResolution | 3 | 27 | 1.0085 | 0.7275
+RecoveryResolution | 4 | 1 | -0.0000 | 0.0000
+
+Lowest entropy buckets
+MixedStructure + 4 | Count=2 | Entropy=-0.0000
+RecoveryResolution + 4 | Count=1 | Entropy=-0.0000
+DestructiveRotation + 3 | Count=1 | Entropy=-0.0000
+ReassertionProcessing + 3 | Count=1 | Entropy=-0.0000
+NeutralProcessing + 4 | Count=106 | Entropy=0.4644
+ExhaustionPersistence + 3 | Count=21 | Entropy=0.5489
+RecoveryResolution + 2 | Count=38 | Entropy=0.6017
+ExhaustionPersistence + 6-10 | Count=3 | Entropy=0.6365
+ExhaustionPersistence + 2 | Count=31 | Entropy=0.7337
+NeutralProcessing + 5 | Count=95 | Entropy=0.7551
+NeutralProcessing + 3 | Count=140 | Entropy=0.7992
+ReassertionProcessing + 2 | Count=32 | Entropy=0.9081
+RecoveryResolution + 1 | Count=94 | Entropy=0.9542
+NeutralProcessing + 6-10 | Count=208 | Entropy=1.0049
+RecoveryResolution + 3 | Count=27 | Entropy=1.0085
+DecayToNeutral + 1 | Count=103 | Entropy=1.0086
+MixedStructure + 3 | Count=5 | Entropy=1.0549
+ConstructiveEmergence + 1 | Count=12 | Entropy=1.0776
+NeutralProcessing + 11-20 | Count=30 | Entropy=1.1205
+CompressionProcessing + 1 | Count=177 | Entropy=1.1569
+
+Highest entropy buckets
+MixedStructure + 1 | Count=279 | Entropy=1.7186
+MixedStructure + 2 | Count=28 | Entropy=1.6485
+DestructiveRotation + 2 | Count=12 | Entropy=1.6326
+DestructiveRotation + 1 | Count=71 | Entropy=1.6276
+ExhaustionPersistence + 1 | Count=97 | Entropy=1.5473
+ExhaustionPersistence + 5 | Count=8 | Entropy=1.4942
+ExhaustionPersistence + 4 | Count=16 | Entropy=1.4402
+ReassertionProcessing + 1 | Count=174 | Entropy=1.3656
+CompressionProcessing + 5 | Count=12 | Entropy=1.3522
+CompressionProcessing + 2 | Count=92 | Entropy=1.2870
+NeutralProcessing + 1 | Count=445 | Entropy=1.2605
+CompressionProcessing + 4 | Count=22 | Entropy=1.2438
+CompressionProcessing + 6-10 | Count=6 | Entropy=1.2425
+CompressionProcessing + 3 | Count=41 | Entropy=1.2311
+NeutralProcessing + 2 | Count=253 | Entropy=1.2109
+CompressionProcessing + 1 | Count=177 | Entropy=1.1569
+NeutralProcessing + 11-20 | Count=30 | Entropy=1.1205
+ConstructiveEmergence + 1 | Count=12 | Entropy=1.0776
+MixedStructure + 3 | Count=5 | Entropy=1.0549
+DecayToNeutral + 1 | Count=103 | Entropy=1.0086
+
+5. Structural Momentum
+State | AgeBucket | Count | PersistenceProbability | Classification
+CompressionProcessing | 1 | 177 | 51.98% | BalancedState
+CompressionProcessing | 2 | 92 | 44.57% | BalancedState
+CompressionProcessing | 3 | 41 | 53.66% | BalancedState
+CompressionProcessing | 4 | 22 | 54.55% | BalancedState
+CompressionProcessing | 5 | 12 | 41.67% | BalancedState
+CompressionProcessing | 6-10 | 6 | 16.67% | TransitionState
+ConstructiveEmergence | 1 | 12 | 0.00% | TransitionState
+DecayToNeutral | 1 | 103 | 0.00% | TransitionState
+DestructiveRotation | 1 | 71 | 16.90% | TransitionState
+DestructiveRotation | 2 | 12 | 8.33% | TransitionState
+DestructiveRotation | 3 | 1 | 0.00% | TransitionState
+ExhaustionPersistence | 1 | 97 | 31.96% | BalancedState
+ExhaustionPersistence | 2 | 31 | 67.74% | BalancedState
+ExhaustionPersistence | 3 | 21 | 76.19% | MomentumState
+ExhaustionPersistence | 4 | 16 | 50.00% | BalancedState
+ExhaustionPersistence | 5 | 8 | 12.50% | TransitionState
+ExhaustionPersistence | 6-10 | 3 | 66.67% | BalancedState
+MixedStructure | 1 | 279 | 10.04% | TransitionState
+MixedStructure | 2 | 28 | 17.86% | TransitionState
+MixedStructure | 3 | 5 | 40.00% | BalancedState
+MixedStructure | 4 | 2 | 0.00% | TransitionState
+NeutralProcessing | 1 | 445 | 56.85% | BalancedState
+NeutralProcessing | 11-20 | 30 | 63.33% | BalancedState
+NeutralProcessing | 2 | 253 | 55.34% | BalancedState
+NeutralProcessing | 3 | 140 | 75.71% | MomentumState
+NeutralProcessing | 4 | 106 | 89.62% | MomentumState
+NeutralProcessing | 5 | 95 | 78.95% | MomentumState
+NeutralProcessing | 6-10 | 208 | 69.23% | BalancedState
+ReassertionProcessing | 1 | 174 | 18.39% | TransitionState
+ReassertionProcessing | 2 | 32 | 3.12% | TransitionState
+ReassertionProcessing | 3 | 1 | 0.00% | TransitionState
+RecoveryResolution | 1 | 94 | 40.43% | BalancedState
+RecoveryResolution | 2 | 38 | 71.05% | MomentumState
+RecoveryResolution | 3 | 27 | 3.70% | TransitionState
+RecoveryResolution | 4 | 1 | 0.00% | TransitionState
+
+6. Transition Pressure
+State | AgeBucket | Count | TransitionPressure
+MixedStructure | 4 | 2 | 100.00%
+DecayToNeutral | 1 | 103 | 100.00%
+ConstructiveEmergence | 1 | 12 | 100.00%
+RecoveryResolution | 4 | 1 | 100.00%
+DestructiveRotation | 3 | 1 | 100.00%
+ReassertionProcessing | 3 | 1 | 100.00%
+ReassertionProcessing | 2 | 32 | 96.88%
+RecoveryResolution | 3 | 27 | 96.30%
+DestructiveRotation | 2 | 12 | 91.67%
+MixedStructure | 1 | 279 | 89.96%
+ExhaustionPersistence | 5 | 8 | 87.50%
+CompressionProcessing | 6-10 | 6 | 83.33%
+DestructiveRotation | 1 | 71 | 83.10%
+MixedStructure | 2 | 28 | 82.14%
+ReassertionProcessing | 1 | 174 | 81.61%
+ExhaustionPersistence | 1 | 97 | 68.04%
+MixedStructure | 3 | 5 | 60.00%
+RecoveryResolution | 1 | 94 | 59.57%
+CompressionProcessing | 5 | 12 | 58.33%
+CompressionProcessing | 2 | 92 | 55.43%
+ExhaustionPersistence | 4 | 16 | 50.00%
+CompressionProcessing | 1 | 177 | 48.02%
+CompressionProcessing | 3 | 41 | 46.34%
+CompressionProcessing | 4 | 22 | 45.45%
+NeutralProcessing | 2 | 253 | 44.66%
+NeutralProcessing | 1 | 445 | 43.15%
+NeutralProcessing | 11-20 | 30 | 36.67%
+ExhaustionPersistence | 6-10 | 3 | 33.33%
+ExhaustionPersistence | 2 | 31 | 32.26%
+NeutralProcessing | 6-10 | 208 | 30.77%
+RecoveryResolution | 2 | 38 | 28.95%
+NeutralProcessing | 3 | 140 | 24.29%
+ExhaustionPersistence | 3 | 21 | 23.81%
+NeutralProcessing | 5 | 95 | 21.05%
+NeutralProcessing | 4 | 106 | 10.38%
+
+7. Young / Middle / Late Transition Model
+State | Zone | Count | DominantDestination | DominantProbability | PersistenceProbability | TransitionEntropy
+CompressionProcessing | Late | 6 | NeutralProcessing | 50.00% | 16.67% | 1.2425
+CompressionProcessing | Middle | 75 | CompressionProcessing | 52.00% | 52.00% | 1.3679
+CompressionProcessing | Young | 269 | CompressionProcessing | 49.44% | 49.44% | 1.2188
+ConstructiveEmergence | Young | 12 | MixedStructure | 41.67% | 0.00% | 1.0776
+DecayToNeutral | Young | 103 | NeutralProcessing | 61.17% | 0.00% | 1.0086
+DestructiveRotation | Middle | 1 | CompressionProcessing | 100.00% | 0.00% | -0.0000
+DestructiveRotation | Young | 83 | NeutralProcessing | 32.53% | 15.66% | 1.6722
+ExhaustionPersistence | Late | 3 | ExhaustionPersistence | 66.67% | 66.67% | 0.6365
+ExhaustionPersistence | Middle | 45 | ExhaustionPersistence | 55.56% | 55.56% | 1.2550
+ExhaustionPersistence | Young | 128 | ExhaustionPersistence | 40.62% | 40.62% | 1.4404
+MixedStructure | Middle | 7 | ConstructiveEmergence | 28.57% | 28.57% | 1.3518
+MixedStructure | Young | 307 | NeutralProcessing | 39.74% | 10.75% | 1.7298
+NeutralProcessing | Late | 238 | NeutralProcessing | 68.49% | 68.49% | 1.0235
+NeutralProcessing | Middle | 341 | NeutralProcessing | 80.94% | 80.94% | 0.7143
+NeutralProcessing | Young | 698 | NeutralProcessing | 56.30% | 56.30% | 1.2486
+ReassertionProcessing | Middle | 1 | DestructiveRotation | 100.00% | 0.00% | -0.0000
+ReassertionProcessing | Young | 206 | NeutralProcessing | 33.98% | 16.02% | 1.4416
+RecoveryResolution | Middle | 28 | CompressionProcessing | 64.29% | 3.57% | 0.9887
+RecoveryResolution | Young | 132 | RecoveryResolution | 49.24% | 49.24% | 1.0087
+
+8. State vs State+Age Comparison
+Horizon | TransitionEntropy_StateOnly | TransitionEntropy_StateAge | EntropyReduction | PercentEntropyReduction | DominantProbabilityIncrease
+t+1 | 1.2712 | 1.1845 | 0.0867 | 6.82% | 1.86%
+
+9. Structural Process Chains
+StartStateAge | Chain | ChainProbability
+MixedStructure + 4 | MixedStructure + 4 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 42.45%
+NeutralProcessing + 4 | NeutralProcessing + 4 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 38.04%
+NeutralProcessing + 5 | NeutralProcessing + 5 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 33.51%
+NeutralProcessing + 3 | NeutralProcessing + 3 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 32.14%
+NeutralProcessing + 6-10 | NeutralProcessing + 6-10 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 29.39%
+NeutralProcessing + 11-20 | NeutralProcessing + 11-20 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 26.88%
+DecayToNeutral + 1 | DecayToNeutral + 1 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 25.96%
+RecoveryResolution + 4 | RecoveryResolution + 4 -> CompressionProcessing -> CompressionProcessing -> CompressionProcessing | 24.43%
+DestructiveRotation + 3 | DestructiveRotation + 3 -> CompressionProcessing -> CompressionProcessing -> CompressionProcessing | 24.43%
+NeutralProcessing + 1 | NeutralProcessing + 1 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 24.13%
+NeutralProcessing + 2 | NeutralProcessing + 2 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 23.49%
+CompressionProcessing + 6-10 | CompressionProcessing + 6-10 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 21.22%
+ReassertionProcessing + 3 | ReassertionProcessing + 3 -> DestructiveRotation -> NeutralProcessing -> NeutralProcessing | 20.94%
+MixedStructure + 1 | MixedStructure + 1 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 17.50%
+ExhaustionPersistence + 5 | ExhaustionPersistence + 5 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 15.92%
+RecoveryResolution + 3 | RecoveryResolution + 3 -> CompressionProcessing -> CompressionProcessing -> CompressionProcessing | 15.38%
+ExhaustionPersistence + 3 | ExhaustionPersistence + 3 -> ExhaustionPersistence -> ExhaustionPersistence -> ExhaustionPersistence | 15.35%
+DestructiveRotation + 1 | DestructiveRotation + 1 -> NeutralProcessing -> NeutralProcessing -> NeutralProcessing | 14.95%
+ExhaustionPersistence + 2 | ExhaustionPersistence + 2 -> ExhaustionPersistence -> ExhaustionPersistence -> ExhaustionPersistence | 13.65%
+ExhaustionPersistence + 6-10 | ExhaustionPersistence + 6-10 -> ExhaustionPersistence -> ExhaustionPersistence -> ExhaustionPersistence | 13.43%
+CompressionProcessing + 4 | CompressionProcessing + 4 -> CompressionProcessing -> CompressionProcessing -> CompressionProcessing | 13.33%
+DestructiveRotation + 2 | DestructiveRotation + 2 -> DecayToNeutral -> NeutralProcessing -> NeutralProcessing | 13.28%
+CompressionProcessing + 3 | CompressionProcessing + 3 -> CompressionProcessing -> CompressionProcessing -> CompressionProcessing | 13.11%
+CompressionProcessing + 1 | CompressionProcessing + 1 -> CompressionProcessing -> CompressionProcessing -> CompressionProcessing | 12.70%
+RecoveryResolution + 2 | RecoveryResolution + 2 -> RecoveryResolution -> RecoveryResolution -> RecoveryResolution | 12.09%
+RecoveryResolution + 1 | RecoveryResolution + 1 -> CompressionProcessing -> CompressionProcessing -> CompressionProcessing | 11.96%
+ReassertionProcessing + 2 | ReassertionProcessing + 2 -> DestructiveRotation -> NeutralProcessing -> NeutralProcessing | 11.78%
+MixedStructure + 2 | MixedStructure + 2 -> DecayToNeutral -> NeutralProcessing -> NeutralProcessing | 11.39%
+CompressionProcessing + 2 | CompressionProcessing + 2 -> CompressionProcessing -> CompressionProcessing -> CompressionProcessing | 10.89%
+ConstructiveEmergence + 1 | ConstructiveEmergence + 1 -> MixedStructure -> NeutralProcessing -> NeutralProcessing | 10.72%
+CompressionProcessing + 5 | CompressionProcessing + 5 -> CompressionProcessing -> CompressionProcessing -> CompressionProcessing | 10.18%
+ExhaustionPersistence + 4 | ExhaustionPersistence + 4 -> ExhaustionPersistence -> ExhaustionPersistence -> ExhaustionPersistence | 10.07%
+ReassertionProcessing + 1 | ReassertionProcessing + 1 -> MixedStructure -> NeutralProcessing -> NeutralProcessing | 9.76%
+MixedStructure + 3 | MixedStructure + 3 -> ConstructiveEmergence -> MixedStructure -> NeutralProcessing | 6.58%
+ExhaustionPersistence + 1 | ExhaustionPersistence + 1 -> ExhaustionPersistence -> ExhaustionPersistence -> ExhaustionPersistence | 6.44%
+
+10. Outcome Diagnostics
+Diagnostic only. Forward outcomes are not used in transition modeling.
+State | AgeBucket | Count | MeanDRFwd5 | MedianDRFwd5 | ContinuationRate5 | FailureRate5 | FlatRate5 | OutcomeSkew
+CompressionProcessing | 1 | 174 | -0.0170 | -0.0350 | 45.40% | 54.02% | 0.57% | -8.62%
+CompressionProcessing | 2 | 89 | 0.0138 | -0.1200 | 42.70% | 57.30% | 0.00% | -14.61%
+CompressionProcessing | 3 | 41 | 0.4024 | 0.1400 | 60.98% | 34.15% | 4.88% | 26.83%
+CompressionProcessing | 4 | 22 | -0.0500 | -0.1200 | 31.82% | 63.64% | 4.55% | -31.82%
+CompressionProcessing | 5 | 12 | -0.2667 | -0.2200 | 25.00% | 75.00% | 0.00% | -50.00%
+CompressionProcessing | 6-10 | 6 | -0.3833 | -0.1850 | 16.67% | 83.33% | 0.00% | -66.67%
+ConstructiveEmergence | 1 | 12 | 0.0033 | 0.0850 | 58.33% | 41.67% | 0.00% | 16.67%
+DecayToNeutral | 1 | 101 | -0.2027 | 0.0900 | 53.47% | 46.53% | 0.00% | 6.93%
+DestructiveRotation | 1 | 70 | -0.2867 | 0.0700 | 52.86% | 47.14% | 0.00% | 5.71%
+DestructiveRotation | 2 | 12 | 1.0292 | 0.2350 | 58.33% | 41.67% | 0.00% | 16.67%
+DestructiveRotation | 3 | 1 | 3.4500 | 3.4500 | 100.00% | 0.00% | 0.00% | 100.00%
+ExhaustionPersistence | 1 | 97 | -0.4397 | -0.1600 | 40.21% | 59.79% | 0.00% | -19.59%
+ExhaustionPersistence | 2 | 31 | -0.1013 | -0.2500 | 41.94% | 58.06% | 0.00% | -16.13%
+ExhaustionPersistence | 3 | 21 | 0.0957 | 0.1600 | 52.38% | 47.62% | 0.00% | 4.76%
+ExhaustionPersistence | 4 | 16 | -0.0475 | 0.0700 | 56.25% | 43.75% | 0.00% | 12.50%
+ExhaustionPersistence | 5 | 8 | -0.0525 | 0.2200 | 62.50% | 37.50% | 0.00% | 25.00%
+ExhaustionPersistence | 6-10 | 3 | -0.3133 | -0.4500 | 33.33% | 66.67% | 0.00% | -33.33%
+MixedStructure | 1 | 278 | -0.0392 | -0.0300 | 47.12% | 52.16% | 0.72% | -5.04%
+MixedStructure | 2 | 27 | 0.1215 | 0.0800 | 51.85% | 48.15% | 0.00% | 3.70%
+MixedStructure | 3 | 5 | 0.4900 | 0.5100 | 100.00% | 0.00% | 0.00% | 100.00%
+MixedStructure | 4 | 2 | 0.3550 | 0.3550 | 50.00% | 50.00% | 0.00% | 0.00%
+NeutralProcessing | 1 | 430 | 0.0650 | 0.0300 | 51.16% | 48.14% | 0.70% | 3.02%
+NeutralProcessing | 11-20 | 27 | 0.0289 | 0.0200 | 51.85% | 44.44% | 3.70% | 7.41%
+NeutralProcessing | 2 | 245 | -0.0778 | -0.0600 | 45.71% | 53.47% | 0.82% | -7.76%
+NeutralProcessing | 3 | 134 | 0.2383 | 0.0450 | 53.73% | 44.03% | 2.24% | 9.70%
+NeutralProcessing | 4 | 104 | 0.1437 | 0.1450 | 66.35% | 33.65% | 0.00% | 32.69%
+NeutralProcessing | 5 | 95 | -0.1906 | -0.1100 | 38.95% | 60.00% | 1.05% | -21.05%
+NeutralProcessing | 6-10 | 202 | -0.1011 | -0.0600 | 48.02% | 51.98% | 0.00% | -3.96%
+ReassertionProcessing | 1 | 174 | 0.0202 | -0.0050 | 49.43% | 50.00% | 0.57% | -0.57%
+ReassertionProcessing | 2 | 32 | -0.0816 | -0.0100 | 46.88% | 53.12% | 0.00% | -6.25%
+ReassertionProcessing | 3 | 1 | 0.5500 | 0.5500 | 100.00% | 0.00% | 0.00% | 100.00%
+RecoveryResolution | 1 | 90 | 0.3534 | 0.1100 | 52.22% | 45.56% | 2.22% | 6.67%
+RecoveryResolution | 2 | 37 | -0.1741 | -0.1100 | 45.95% | 54.05% | 0.00% | -8.11%
+RecoveryResolution | 3 | 27 | 0.3607 | 0.1300 | 51.85% | 48.15% | 0.00% | 3.70%
+RecoveryResolution | 4 | 1 | -0.2200 | -0.2200 | 0.00% | 100.00% | 0.00% | -100.00%
+
+11. State Machine Recommendation
+Instrument-only diagnostic: StateOnly
+MeanPercentEntropyReduction=6.82%; StatesWithTransitionConfidenceSpreadAbove0.20=5; ValidInstrumentCount=1.
+The aggregate report applies the required cross-instrument rule.
+
+12. Low-DoF Audit
+Variables used:
+StructuralState
+AgeBucket
+
+No Context
+No Arbitration
+No Persistence
+No Phase
+No Optimization
+No Fitting
+No Machine Learning
+No Forward Returns used in transition modeling
+
+13. Mechanical Research Notes
+- Transition probabilities are computed from StructuralState and AgeBucket only.
+- Every observed StateAgeKey reports a complete destination matrix, including zero-count destinations.
+- Process chains follow the dominant StateAge transition once, then state-only dominant transitions for two additional steps.
+- Outcome diagnostics remain separate from transition modeling.

@@ -1,0 +1,702 @@
+APVA State Compression Study v0.1 - Aggregate
+============================================================================================================
+Instruments: 6E, CL, NQ
+
+Aggregate Node Behavior Table
+Node | Count | DominantNextNode | DominantBranchProbability | BranchEntropy | MemoryStrength | ReplicationCount
+NeutralProcessing_Age1 | 6414 | NeutralProcessing_Age2 | 56.64% | 1.2648 | 0.2174 | 3
+MixedStructure_Age1 | 3726 | NeutralProcessing_Age1 | 37.55% | 1.7596 | 0.1798 | 3
+NeutralProcessing_Age2 | 3633 | NeutralProcessing_Age3 | 55.22% | 1.2303 | 0.2672 | 3
+NeutralProcessing_Age6-10 | 3283 | NeutralProcessing_Age6-10 | 66.13% | 1.1786 | 0.2213 | 3
+CompressionProcessing_Age1 | 3194 | CompressionProcessing_Age2 | 56.42% | 1.1164 | 0.2088 | 3
+ReassertionProcessing_Age1 | 2080 | NeutralProcessing_Age1 | 40.58% | 1.3785 | 0.1801 | 3
+NeutralProcessing_Age3 | 2006 | NeutralProcessing_Age4 | 74.83% | 0.8421 | 0.3518 | 3
+CompressionProcessing_Age2 | 1802 | CompressionProcessing_Age3 | 50.55% | 1.2375 | 0.2046 | 3
+DecayToNeutral_Age1 | 1675 | NeutralProcessing_Age1 | 55.58% | 1.1418 | 0.2123 | 3
+NeutralProcessing_Age4 | 1501 | NeutralProcessing_Age5 | 91.07% | 0.4478 | 0.3656 | 3
+NeutralProcessing_Age5 | 1367 | NeutralProcessing_Age6-10 | 81.42% | 0.7548 | 0.3142 | 3
+ExhaustionPersistence_Age1 | 1264 | ExhaustionPersistence_Age2 | 28.01% | 1.6768 | 0.1790 | 3
+RecoveryResolution_Age1 | 1219 | CompressionProcessing_Age1 | 55.70% | 0.9484 | 0.2470 | 3
+DestructiveRotation_Age1 | 970 | DecayToNeutral_Age1 | 29.48% | 1.8058 | 0.1730 | 3
+NeutralProcessing_Age11-20 | 958 | NeutralProcessing_Age11-20 | 74.53% | 0.9558 | 0.2809 | 3
+CompressionProcessing_Age3 | 911 | CompressionProcessing_Age4 | 62.35% | 1.1487 | 0.2158 | 3
+CompressionProcessing_Age4 | 568 | CompressionProcessing_Age5 | 53.17% | 1.3344 | 0.2024 | 3
+MixedStructure_Age2 | 410 | NeutralProcessing_Age1 | 30.98% | 1.6945 | 0.1850 | 3
+RecoveryResolution_Age2 | 390 | RecoveryResolution_Age3 | 73.59% | 0.5773 | 0.2839 | 3
+ExhaustionPersistence_Age2 | 354 | ExhaustionPersistence_Age3 | 75.99% | 0.5968 | 0.2466 | 3
+CompressionProcessing_Age5 | 302 | CompressionProcessing_Age6-10 | 44.70% | 1.5600 | 0.1955 | 3
+ReassertionProcessing_Age2 | 300 | DestructiveRotation_Age1 | 48.67% | 1.0143 | 0.1959 | 3
+RecoveryResolution_Age3 | 287 | CompressionProcessing_Age1 | 68.64% | 0.9500 | 0.2172 | 3
+ExhaustionPersistence_Age3 | 269 | ExhaustionPersistence_Age4 | 63.20% | 0.8673 | 0.1931 | 3
+CompressionProcessing_Age6-10 | 262 | CompressionProcessing_Age6-10 | 48.47% | 1.4805 | 0.1891 | 3
+ExhaustionPersistence_Age4 | 170 | ExhaustionPersistence_Age5 | 42.35% | 1.5489 | 0.1915 | 3
+DestructiveRotation_Age2 | 123 | DecayToNeutral_Age1 | 41.46% | 1.7173 | 0.2326 | 3
+ConstructiveEmergence_Age1 | 109 | MixedStructure_Age1 | 48.62% | 1.1479 | 0.1983 | 3
+NeutralProcessing_Age21+ | 82 | NeutralProcessing_Age21+ | 78.05% | 0.7959 | 0.3218 | 1
+ExhaustionPersistence_Age5 | 72 | ExhaustionPersistence_Age6-10 | 31.94% | 1.6549 | 0.1659 | 3
+MixedStructure_Age3 | 51 | DecayToNeutral_Age1 | 35.29% | 1.6710 | 0.2135 | 3
+ExhaustionPersistence_Age6-10 | 38 | ExhaustionPersistence_Age6-10 | 39.47% | 1.4974 | 0.1784 | 3
+DestructiveRotation_Age3 | 17 | DecayToNeutral_Age1 | 64.71% | 1.1185 | 0.2124 | 3
+ReassertionProcessing_Age3 | 17 | DestructiveRotation_Age1 | 94.12% | 0.2237 | 0.2092 | 3
+RecoveryResolution_Age4 | 17 | CompressionProcessing_Age1 | 64.71% | 0.6492 | 0.2484 | 2
+MixedStructure_Age4 | 12 | NeutralProcessing_Age1 | 41.67% | 1.4241 | 0.1991 | 3
+RecoveryResolution_Age5 | 6 | RecoveryResolution_Age6-10 | 83.33% | 0.4506 | 0.2407 | 1
+CompressionProcessing_Age11-20 | 5 | CompressionProcessing_Age11-20 | 40.00% | 1.0549 | 0.2556 | 1
+RecoveryResolution_Age6-10 | 5 | CompressionProcessing_Age1 | 60.00% | 0.6730 | 0.2444 | 1
+DestructiveRotation_Age4 | 1 | DecayToNeutral_Age1 | 100.00% | -0.0000 | 0.0556 | 1
+MixedStructure_Age5 | 1 | DecayToNeutral_Age1 | 100.00% | -0.0000 | 0.3333 | 1
+
+Aggregate Similarity Table
+NodeA | NodeB | TotalDistance | SimilarityClass
+MixedStructure_Age1 | MixedStructure_Age2 | 0.0784 | StrongMergeCandidate
+DestructiveRotation_Age1 | MixedStructure_Age2 | 0.0974 | StrongMergeCandidate
+RecoveryResolution_Age4 | RecoveryResolution_Age6-10 | 0.0982 | StrongMergeCandidate
+ConstructiveEmergence_Age1 | DecayToNeutral_Age1 | 0.1062 | ModerateMergeCandidate
+DestructiveRotation_Age1 | MixedStructure_Age1 | 0.1177 | ModerateMergeCandidate
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age5 | 0.1186 | ModerateMergeCandidate
+DestructiveRotation_Age2 | MixedStructure_Age3 | 0.1301 | ModerateMergeCandidate
+DestructiveRotation_Age1 | ExhaustionPersistence_Age5 | 0.1317 | ModerateMergeCandidate
+DecayToNeutral_Age1 | ReassertionProcessing_Age1 | 0.1366 | ModerateMergeCandidate
+CompressionProcessing_Age5 | CompressionProcessing_Age6-10 | 0.1366 | ModerateMergeCandidate
+MixedStructure_Age1 | MixedStructure_Age4 | 0.1389 | ModerateMergeCandidate
+ConstructiveEmergence_Age1 | ReassertionProcessing_Age1 | 0.1392 | ModerateMergeCandidate
+ConstructiveEmergence_Age1 | ReassertionProcessing_Age2 | 0.1436 | ModerateMergeCandidate
+DecayToNeutral_Age1 | ReassertionProcessing_Age2 | 0.1439 | ModerateMergeCandidate
+RecoveryResolution_Age1 | RecoveryResolution_Age3 | 0.1450 | ModerateMergeCandidate
+DestructiveRotation_Age1 | ExhaustionPersistence_Age1 | 0.1474 | ModerateMergeCandidate
+MixedStructure_Age2 | MixedStructure_Age4 | 0.1492 | ModerateMergeCandidate
+ExhaustionPersistence_Age1 | MixedStructure_Age2 | 0.1497 | ModerateMergeCandidate
+MixedStructure_Age4 | ReassertionProcessing_Age1 | 0.1539 | ModerateMergeCandidate
+ExhaustionPersistence_Age5 | MixedStructure_Age2 | 0.1560 | ModerateMergeCandidate
+CompressionProcessing_Age1 | CompressionProcessing_Age4 | 0.1605 | ModerateMergeCandidate
+ExhaustionPersistence_Age1 | MixedStructure_Age1 | 0.1611 | ModerateMergeCandidate
+RecoveryResolution_Age3 | RecoveryResolution_Age6-10 | 0.1641 | ModerateMergeCandidate
+NeutralProcessing_Age1 | NeutralProcessing_Age2 | 0.1652 | ModerateMergeCandidate
+CompressionProcessing_Age4 | CompressionProcessing_Age5 | 0.1662 | ModerateMergeCandidate
+ExhaustionPersistence_Age5 | MixedStructure_Age1 | 0.1686 | ModerateMergeCandidate
+DecayToNeutral_Age1 | NeutralProcessing_Age1 | 0.1686 | ModerateMergeCandidate
+ExhaustionPersistence_Age5 | ExhaustionPersistence_Age6-10 | 0.1691 | ModerateMergeCandidate
+RecoveryResolution_Age1 | RecoveryResolution_Age6-10 | 0.1721 | ModerateMergeCandidate
+RecoveryResolution_Age3 | RecoveryResolution_Age4 | 0.1733 | ModerateMergeCandidate
+CompressionProcessing_Age1 | CompressionProcessing_Age3 | 0.1777 | ModerateMergeCandidate
+CompressionProcessing_Age5 | ExhaustionPersistence_Age4 | 0.1787 | ModerateMergeCandidate
+CompressionProcessing_Age1 | DecayToNeutral_Age1 | 0.1829 | ModerateMergeCandidate
+ExhaustionPersistence_Age4 | MixedStructure_Age4 | 0.1847 | ModerateMergeCandidate
+ReassertionProcessing_Age1 | ReassertionProcessing_Age2 | 0.1879 | ModerateMergeCandidate
+CompressionProcessing_Age1 | ExhaustionPersistence_Age3 | 0.1920 | ModerateMergeCandidate
+DecayToNeutral_Age1 | NeutralProcessing_Age2 | 0.1933 | ModerateMergeCandidate
+CompressionProcessing_Age2 | MixedStructure_Age4 | 0.1934 | ModerateMergeCandidate
+ExhaustionPersistence_Age4 | ReassertionProcessing_Age1 | 0.1954 | ModerateMergeCandidate
+ConstructiveEmergence_Age1 | ExhaustionPersistence_Age4 | 0.1979 | ModerateMergeCandidate
+DestructiveRotation_Age3 | RecoveryResolution_Age3 | 0.2004 | NoMergeCandidate
+CompressionProcessing_Age4 | ConstructiveEmergence_Age1 | 0.2007 | NoMergeCandidate
+CompressionProcessing_Age3 | CompressionProcessing_Age4 | 0.2011 | NoMergeCandidate
+CompressionProcessing_Age1 | ConstructiveEmergence_Age1 | 0.2013 | NoMergeCandidate
+ExhaustionPersistence_Age4 | ExhaustionPersistence_Age6-10 | 0.2055 | NoMergeCandidate
+ConstructiveEmergence_Age1 | MixedStructure_Age4 | 0.2059 | NoMergeCandidate
+CompressionProcessing_Age3 | DestructiveRotation_Age3 | 0.2082 | NoMergeCandidate
+CompressionProcessing_Age5 | ConstructiveEmergence_Age1 | 0.2087 | NoMergeCandidate
+CompressionProcessing_Age3 | RecoveryResolution_Age3 | 0.2098 | NoMergeCandidate
+CompressionProcessing_Age5 | MixedStructure_Age4 | 0.2109 | NoMergeCandidate
+CompressionProcessing_Age1 | ReassertionProcessing_Age2 | 0.2113 | NoMergeCandidate
+RecoveryResolution_Age1 | RecoveryResolution_Age4 | 0.2116 | NoMergeCandidate
+CompressionProcessing_Age4 | DecayToNeutral_Age1 | 0.2129 | NoMergeCandidate
+NeutralProcessing_Age11-20 | NeutralProcessing_Age21+ | 0.2141 | NoMergeCandidate
+ExhaustionPersistence_Age6-10 | MixedStructure_Age4 | 0.2144 | NoMergeCandidate
+MixedStructure_Age4 | ReassertionProcessing_Age2 | 0.2149 | NoMergeCandidate
+DestructiveRotation_Age1 | MixedStructure_Age4 | 0.2152 | NoMergeCandidate
+MixedStructure_Age1 | ReassertionProcessing_Age1 | 0.2152 | NoMergeCandidate
+ExhaustionPersistence_Age6-10 | MixedStructure_Age1 | 0.2153 | NoMergeCandidate
+ExhaustionPersistence_Age4 | MixedStructure_Age1 | 0.2158 | NoMergeCandidate
+CompressionProcessing_Age6-10 | ExhaustionPersistence_Age6-10 | 0.2158 | NoMergeCandidate
+DecayToNeutral_Age1 | MixedStructure_Age4 | 0.2173 | NoMergeCandidate
+CompressionProcessing_Age1 | CompressionProcessing_Age5 | 0.2174 | NoMergeCandidate
+ConstructiveEmergence_Age1 | NeutralProcessing_Age1 | 0.2174 | NoMergeCandidate
+CompressionProcessing_Age5 | ReassertionProcessing_Age1 | 0.2185 | NoMergeCandidate
+CompressionProcessing_Age3 | ExhaustionPersistence_Age3 | 0.2197 | NoMergeCandidate
+RecoveryResolution_Age2 | RecoveryResolution_Age6-10 | 0.2210 | NoMergeCandidate
+ExhaustionPersistence_Age4 | MixedStructure_Age2 | 0.2223 | NoMergeCandidate
+ExhaustionPersistence_Age6-10 | MixedStructure_Age2 | 0.2225 | NoMergeCandidate
+CompressionProcessing_Age2 | MixedStructure_Age1 | 0.2236 | NoMergeCandidate
+CompressionProcessing_Age2 | ConstructiveEmergence_Age1 | 0.2265 | NoMergeCandidate
+ExhaustionPersistence_Age5 | MixedStructure_Age4 | 0.2268 | NoMergeCandidate
+CompressionProcessing_Age1 | RecoveryResolution_Age1 | 0.2268 | NoMergeCandidate
+CompressionProcessing_Age4 | ExhaustionPersistence_Age3 | 0.2278 | NoMergeCandidate
+ExhaustionPersistence_Age3 | ReassertionProcessing_Age2 | 0.2288 | NoMergeCandidate
+CompressionProcessing_Age2 | DecayToNeutral_Age1 | 0.2289 | NoMergeCandidate
+ExhaustionPersistence_Age4 | ReassertionProcessing_Age2 | 0.2306 | NoMergeCandidate
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age6-10 | 0.2307 | NoMergeCandidate
+CompressionProcessing_Age4 | ReassertionProcessing_Age2 | 0.2315 | NoMergeCandidate
+ConstructiveEmergence_Age1 | NeutralProcessing_Age2 | 0.2326 | NoMergeCandidate
+CompressionProcessing_Age5 | MixedStructure_Age3 | 0.2341 | NoMergeCandidate
+CompressionProcessing_Age3 | DecayToNeutral_Age1 | 0.2346 | NoMergeCandidate
+DestructiveRotation_Age2 | DestructiveRotation_Age3 | 0.2374 | NoMergeCandidate
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age4 | 0.2387 | NoMergeCandidate
+CompressionProcessing_Age5 | ReassertionProcessing_Age2 | 0.2393 | NoMergeCandidate
+NeutralProcessing_Age1 | ReassertionProcessing_Age1 | 0.2405 | NoMergeCandidate
+CompressionProcessing_Age2 | MixedStructure_Age2 | 0.2409 | NoMergeCandidate
+ExhaustionPersistence_Age4 | ExhaustionPersistence_Age5 | 0.2414 | NoMergeCandidate
+CompressionProcessing_Age5 | DestructiveRotation_Age2 | 0.2418 | NoMergeCandidate
+MixedStructure_Age2 | ReassertionProcessing_Age1 | 0.2425 | NoMergeCandidate
+DecayToNeutral_Age1 | ExhaustionPersistence_Age3 | 0.2428 | NoMergeCandidate
+ExhaustionPersistence_Age4 | MixedStructure_Age3 | 0.2430 | NoMergeCandidate
+NeutralProcessing_Age11-20 | NeutralProcessing_Age6-10 | 0.2430 | NoMergeCandidate
+ConstructiveEmergence_Age1 | ExhaustionPersistence_Age3 | 0.2438 | NoMergeCandidate
+CompressionProcessing_Age4 | ReassertionProcessing_Age1 | 0.2439 | NoMergeCandidate
+ExhaustionPersistence_Age1 | MixedStructure_Age4 | 0.2442 | NoMergeCandidate
+CompressionProcessing_Age2 | ReassertionProcessing_Age2 | 0.2463 | NoMergeCandidate
+CompressionProcessing_Age4 | ExhaustionPersistence_Age4 | 0.2464 | NoMergeCandidate
+CompressionProcessing_Age1 | DestructiveRotation_Age3 | 0.2464 | NoMergeCandidate
+DecayToNeutral_Age1 | ExhaustionPersistence_Age4 | 0.2471 | NoMergeCandidate
+CompressionProcessing_Age2 | CompressionProcessing_Age4 | 0.2482 | NoMergeCandidate
+ExhaustionPersistence_Age3 | RecoveryResolution_Age3 | 0.2486 | NoMergeCandidate
+CompressionProcessing_Age2 | ReassertionProcessing_Age1 | 0.2487 | NoMergeCandidate
+CompressionProcessing_Age4 | CompressionProcessing_Age6-10 | 0.2488 | NoMergeCandidate
+ExhaustionPersistence_Age6-10 | ReassertionProcessing_Age1 | 0.2489 | NoMergeCandidate
+CompressionProcessing_Age4 | MixedStructure_Age4 | 0.2493 | NoMergeCandidate
+CompressionProcessing_Age5 | MixedStructure_Age1 | 0.2494 | NoMergeCandidate
+ExhaustionPersistence_Age3 | RecoveryResolution_Age1 | 0.2496 | NoMergeCandidate
+CompressionProcessing_Age3 | RecoveryResolution_Age1 | 0.2499 | NoMergeCandidate
+CompressionProcessing_Age1 | RecoveryResolution_Age3 | 0.2508 | NoMergeCandidate
+CompressionProcessing_Age5 | DecayToNeutral_Age1 | 0.2519 | NoMergeCandidate
+MixedStructure_Age2 | MixedStructure_Age3 | 0.2527 | NoMergeCandidate
+CompressionProcessing_Age3 | ConstructiveEmergence_Age1 | 0.2528 | NoMergeCandidate
+CompressionProcessing_Age6-10 | MixedStructure_Age4 | 0.2529 | NoMergeCandidate
+DecayToNeutral_Age1 | RecoveryResolution_Age1 | 0.2544 | NoMergeCandidate
+CompressionProcessing_Age5 | MixedStructure_Age2 | 0.2545 | NoMergeCandidate
+DestructiveRotation_Age1 | ExhaustionPersistence_Age6-10 | 0.2553 | NoMergeCandidate
+RecoveryResolution_Age2 | RecoveryResolution_Age4 | 0.2556 | NoMergeCandidate
+CompressionProcessing_Age1 | CompressionProcessing_Age2 | 0.2573 | NoMergeCandidate
+NeutralProcessing_Age1 | ReassertionProcessing_Age2 | 0.2574 | NoMergeCandidate
+CompressionProcessing_Age3 | CompressionProcessing_Age5 | 0.2585 | NoMergeCandidate
+CompressionProcessing_Age4 | RecoveryResolution_Age1 | 0.2590 | NoMergeCandidate
+DestructiveRotation_Age3 | RecoveryResolution_Age6-10 | 0.2595 | NoMergeCandidate
+DestructiveRotation_Age3 | RecoveryResolution_Age1 | 0.2596 | NoMergeCandidate
+CompressionProcessing_Age4 | NeutralProcessing_Age1 | 0.2600 | NoMergeCandidate
+NeutralProcessing_Age5 | RecoveryResolution_Age2 | 0.2609 | NoMergeCandidate
+CompressionProcessing_Age1 | NeutralProcessing_Age1 | 0.2610 | NoMergeCandidate
+DestructiveRotation_Age2 | ExhaustionPersistence_Age4 | 0.2615 | NoMergeCandidate
+ConstructiveEmergence_Age1 | DestructiveRotation_Age3 | 0.2625 | NoMergeCandidate
+ReassertionProcessing_Age2 | RecoveryResolution_Age1 | 0.2652 | NoMergeCandidate
+CompressionProcessing_Age6-10 | ConstructiveEmergence_Age1 | 0.2653 | NoMergeCandidate
+CompressionProcessing_Age2 | CompressionProcessing_Age6-10 | 0.2668 | NoMergeCandidate
+NeutralProcessing_Age2 | RecoveryResolution_Age1 | 0.2670 | NoMergeCandidate
+CompressionProcessing_Age4 | DestructiveRotation_Age3 | 0.2678 | NoMergeCandidate
+DecayToNeutral_Age1 | DestructiveRotation_Age3 | 0.2680 | NoMergeCandidate
+MixedStructure_Age3 | MixedStructure_Age4 | 0.2681 | NoMergeCandidate
+CompressionProcessing_Age6-10 | ExhaustionPersistence_Age4 | 0.2691 | NoMergeCandidate
+CompressionProcessing_Age5 | ExhaustionPersistence_Age3 | 0.2692 | NoMergeCandidate
+ExhaustionPersistence_Age4 | NeutralProcessing_Age1 | 0.2693 | NoMergeCandidate
+DestructiveRotation_Age3 | ExhaustionPersistence_Age3 | 0.2695 | NoMergeCandidate
+CompressionProcessing_Age6-10 | ReassertionProcessing_Age1 | 0.2696 | NoMergeCandidate
+DestructiveRotation_Age3 | MixedStructure_Age3 | 0.2730 | NoMergeCandidate
+MixedStructure_Age1 | MixedStructure_Age3 | 0.2739 | NoMergeCandidate
+CompressionProcessing_Age2 | DestructiveRotation_Age1 | 0.2741 | NoMergeCandidate
+NeutralProcessing_Age2 | ReassertionProcessing_Age1 | 0.2751 | NoMergeCandidate
+DestructiveRotation_Age3 | RecoveryResolution_Age4 | 0.2752 | NoMergeCandidate
+CompressionProcessing_Age3 | ReassertionProcessing_Age2 | 0.2753 | NoMergeCandidate
+ConstructiveEmergence_Age1 | RecoveryResolution_Age1 | 0.2764 | NoMergeCandidate
+ExhaustionPersistence_Age2 | RecoveryResolution_Age2 | 0.2764 | NoMergeCandidate
+CompressionProcessing_Age6-10 | MixedStructure_Age1 | 0.2764 | NoMergeCandidate
+NeutralProcessing_Age4 | NeutralProcessing_Age5 | 0.2770 | NoMergeCandidate
+NeutralProcessing_Age1 | RecoveryResolution_Age1 | 0.2780 | NoMergeCandidate
+ExhaustionPersistence_Age3 | RecoveryResolution_Age6-10 | 0.2784 | NoMergeCandidate
+CompressionProcessing_Age1 | ReassertionProcessing_Age1 | 0.2784 | NoMergeCandidate
+CompressionProcessing_Age2 | CompressionProcessing_Age5 | 0.2794 | NoMergeCandidate
+ConstructiveEmergence_Age1 | MixedStructure_Age1 | 0.2819 | NoMergeCandidate
+ExhaustionPersistence_Age5 | ReassertionProcessing_Age1 | 0.2823 | NoMergeCandidate
+ExhaustionPersistence_Age2 | RecoveryResolution_Age3 | 0.2837 | NoMergeCandidate
+ExhaustionPersistence_Age2 | RecoveryResolution_Age4 | 0.2841 | NoMergeCandidate
+CompressionProcessing_Age6-10 | MixedStructure_Age2 | 0.2842 | NoMergeCandidate
+CompressionProcessing_Age4 | MixedStructure_Age3 | 0.2844 | NoMergeCandidate
+NeutralProcessing_Age2 | ReassertionProcessing_Age2 | 0.2846 | NoMergeCandidate
+DestructiveRotation_Age1 | ExhaustionPersistence_Age4 | 0.2850 | NoMergeCandidate
+CompressionProcessing_Age5 | ExhaustionPersistence_Age6-10 | 0.2858 | NoMergeCandidate
+CompressionProcessing_Age3 | RecoveryResolution_Age6-10 | 0.2858 | NoMergeCandidate
+CompressionProcessing_Age4 | RecoveryResolution_Age3 | 0.2859 | NoMergeCandidate
+CompressionProcessing_Age1 | MixedStructure_Age4 | 0.2862 | NoMergeCandidate
+DestructiveRotation_Age2 | MixedStructure_Age2 | 0.2864 | NoMergeCandidate
+CompressionProcessing_Age3 | NeutralProcessing_Age1 | 0.2868 | NoMergeCandidate
+DestructiveRotation_Age2 | MixedStructure_Age4 | 0.2880 | NoMergeCandidate
+ConstructiveEmergence_Age1 | MixedStructure_Age2 | 0.2883 | NoMergeCandidate
+CompressionProcessing_Age4 | NeutralProcessing_Age2 | 0.2892 | NoMergeCandidate
+CompressionProcessing_Age1 | NeutralProcessing_Age2 | 0.2893 | NoMergeCandidate
+CompressionProcessing_Age2 | ExhaustionPersistence_Age5 | 0.2898 | NoMergeCandidate
+CompressionProcessing_Age4 | DestructiveRotation_Age2 | 0.2902 | NoMergeCandidate
+CompressionProcessing_Age1 | ExhaustionPersistence_Age4 | 0.2903 | NoMergeCandidate
+DestructiveRotation_Age1 | ReassertionProcessing_Age1 | 0.2903 | NoMergeCandidate
+CompressionProcessing_Age1 | RecoveryResolution_Age6-10 | 0.2913 | NoMergeCandidate
+ExhaustionPersistence_Age1 | ReassertionProcessing_Age1 | 0.2915 | NoMergeCandidate
+NeutralProcessing_Age5 | RecoveryResolution_Age4 | 0.2916 | NoMergeCandidate
+CompressionProcessing_Age2 | NeutralProcessing_Age1 | 0.2917 | NoMergeCandidate
+CompressionProcessing_Age2 | ExhaustionPersistence_Age1 | 0.2936 | NoMergeCandidate
+DecayToNeutral_Age1 | RecoveryResolution_Age3 | 0.2947 | NoMergeCandidate
+CompressionProcessing_Age2 | ExhaustionPersistence_Age4 | 0.2950 | NoMergeCandidate
+DestructiveRotation_Age2 | MixedStructure_Age1 | 0.2950 | NoMergeCandidate
+MixedStructure_Age5 | NeutralProcessing_Age4 | 0.2952 | NoMergeCandidate
+DestructiveRotation_Age3 | NeutralProcessing_Age1 | 0.2962 | NoMergeCandidate
+ExhaustionPersistence_Age2 | RecoveryResolution_Age6-10 | 0.2977 | NoMergeCandidate
+CompressionProcessing_Age5 | NeutralProcessing_Age1 | 0.2978 | NoMergeCandidate
+CompressionProcessing_Age1 | CompressionProcessing_Age6-10 | 0.2987 | NoMergeCandidate
+ConstructiveEmergence_Age1 | ExhaustionPersistence_Age6-10 | 0.2993 | NoMergeCandidate
+MixedStructure_Age4 | NeutralProcessing_Age1 | 0.2995 | NoMergeCandidate
+CompressionProcessing_Age6-10 | ReassertionProcessing_Age2 | 0.3000 | NoMergeCandidate
+CompressionProcessing_Age6-10 | DecayToNeutral_Age1 | 0.3012 | NoMergeCandidate
+DecayToNeutral_Age1 | RecoveryResolution_Age6-10 | 0.3038 | NoMergeCandidate
+ExhaustionPersistence_Age4 | NeutralProcessing_Age2 | 0.3042 | NoMergeCandidate
+CompressionProcessing_Age5 | DestructiveRotation_Age1 | 0.3046 | NoMergeCandidate
+NeutralProcessing_Age5 | RecoveryResolution_Age6-10 | 0.3046 | NoMergeCandidate
+ReassertionProcessing_Age2 | RecoveryResolution_Age3 | 0.3055 | NoMergeCandidate
+MixedStructure_Age1 | ReassertionProcessing_Age2 | 0.3082 | NoMergeCandidate
+CompressionProcessing_Age2 | ExhaustionPersistence_Age6-10 | 0.3082 | NoMergeCandidate
+CompressionProcessing_Age3 | MixedStructure_Age3 | 0.3098 | NoMergeCandidate
+RecoveryResolution_Age2 | RecoveryResolution_Age3 | 0.3099 | NoMergeCandidate
+CompressionProcessing_Age2 | CompressionProcessing_Age3 | 0.3100 | NoMergeCandidate
+ExhaustionPersistence_Age2 | RecoveryResolution_Age1 | 0.3115 | NoMergeCandidate
+DecayToNeutral_Age1 | MixedStructure_Age1 | 0.3122 | NoMergeCandidate
+ExhaustionPersistence_Age2 | ExhaustionPersistence_Age3 | 0.3122 | NoMergeCandidate
+CompressionProcessing_Age3 | ExhaustionPersistence_Age2 | 0.3130 | NoMergeCandidate
+DestructiveRotation_Age3 | ReassertionProcessing_Age2 | 0.3137 | NoMergeCandidate
+ExhaustionPersistence_Age6-10 | MixedStructure_Age3 | 0.3144 | NoMergeCandidate
+ReassertionProcessing_Age2 | RecoveryResolution_Age6-10 | 0.3146 | NoMergeCandidate
+NeutralProcessing_Age1 | RecoveryResolution_Age3 | 0.3152 | NoMergeCandidate
+CompressionProcessing_Age3 | DestructiveRotation_Age2 | 0.3155 | NoMergeCandidate
+NeutralProcessing_Age4 | RecoveryResolution_Age2 | 0.3156 | NoMergeCandidate
+CompressionProcessing_Age3 | NeutralProcessing_Age2 | 0.3163 | NoMergeCandidate
+ConstructiveEmergence_Age1 | RecoveryResolution_Age3 | 0.3167 | NoMergeCandidate
+ExhaustionPersistence_Age3 | ReassertionProcessing_Age1 | 0.3168 | NoMergeCandidate
+ExhaustionPersistence_Age1 | MixedStructure_Age3 | 0.3172 | NoMergeCandidate
+ExhaustionPersistence_Age3 | NeutralProcessing_Age1 | 0.3175 | NoMergeCandidate
+DestructiveRotation_Age1 | MixedStructure_Age3 | 0.3182 | NoMergeCandidate
+CompressionProcessing_Age5 | RecoveryResolution_Age1 | 0.3184 | NoMergeCandidate
+ExhaustionPersistence_Age3 | ExhaustionPersistence_Age4 | 0.3189 | NoMergeCandidate
+ExhaustionPersistence_Age2 | NeutralProcessing_Age5 | 0.3199 | NoMergeCandidate
+CompressionProcessing_Age5 | DestructiveRotation_Age3 | 0.3199 | NoMergeCandidate
+CompressionProcessing_Age2 | NeutralProcessing_Age2 | 0.3205 | NoMergeCandidate
+NeutralProcessing_Age21+ | NeutralProcessing_Age6-10 | 0.3211 | NoMergeCandidate
+MixedStructure_Age5 | ReassertionProcessing_Age3 | 0.3212 | NoMergeCandidate
+CompressionProcessing_Age2 | ExhaustionPersistence_Age3 | 0.3220 | NoMergeCandidate
+CompressionProcessing_Age4 | MixedStructure_Age1 | 0.3222 | NoMergeCandidate
+NeutralProcessing_Age1 | NeutralProcessing_Age6-10 | 0.3225 | NoMergeCandidate
+CompressionProcessing_Age1 | MixedStructure_Age3 | 0.3232 | NoMergeCandidate
+DestructiveRotation_Age3 | ExhaustionPersistence_Age4 | 0.3233 | NoMergeCandidate
+CompressionProcessing_Age5 | ExhaustionPersistence_Age5 | 0.3243 | NoMergeCandidate
+CompressionProcessing_Age4 | MixedStructure_Age2 | 0.3251 | NoMergeCandidate
+DestructiveRotation_Age3 | NeutralProcessing_Age2 | 0.3257 | NoMergeCandidate
+CompressionProcessing_Age3 | ExhaustionPersistence_Age4 | 0.3263 | NoMergeCandidate
+CompressionProcessing_Age11-20 | DestructiveRotation_Age2 | 0.3267 | NoMergeCandidate
+MixedStructure_Age2 | ReassertionProcessing_Age2 | 0.3279 | NoMergeCandidate
+DestructiveRotation_Age3 | NeutralProcessing_Age6-10 | 0.3279 | NoMergeCandidate
+CompressionProcessing_Age5 | ExhaustionPersistence_Age1 | 0.3282 | NoMergeCandidate
+NeutralProcessing_Age5 | NeutralProcessing_Age6-10 | 0.3291 | NoMergeCandidate
+CompressionProcessing_Age6-10 | DestructiveRotation_Age1 | 0.3295 | NoMergeCandidate
+ExhaustionPersistence_Age6-10 | ReassertionProcessing_Age2 | 0.3298 | NoMergeCandidate
+NeutralProcessing_Age4 | ReassertionProcessing_Age3 | 0.3307 | NoMergeCandidate
+DestructiveRotation_Age3 | RecoveryResolution_Age2 | 0.3307 | NoMergeCandidate
+CompressionProcessing_Age5 | NeutralProcessing_Age2 | 0.3311 | NoMergeCandidate
+DestructiveRotation_Age3 | ExhaustionPersistence_Age2 | 0.3311 | NoMergeCandidate
+ExhaustionPersistence_Age5 | MixedStructure_Age3 | 0.3313 | NoMergeCandidate
+DecayToNeutral_Age1 | MixedStructure_Age2 | 0.3328 | NoMergeCandidate
+ConstructiveEmergence_Age1 | MixedStructure_Age3 | 0.3330 | NoMergeCandidate
+
+Aggregate Merge Candidate Table
+NodeA | NodeB | MergeType | TotalDistance | SimilarityClass | ReplicationCount
+MixedStructure_Age1 | MixedStructure_Age2 | AgeAdjacent | 0.0784 | StrongMergeCandidate | 3
+DestructiveRotation_Age1 | MixedStructure_Age2 | CrossState | 0.0974 | StrongMergeCandidate | 3
+RecoveryResolution_Age4 | RecoveryResolution_Age6-10 | SameStateNonadjacent | 0.0982 | StrongMergeCandidate | 1
+ConstructiveEmergence_Age1 | DecayToNeutral_Age1 | CrossState | 0.1062 | ModerateMergeCandidate | 3
+DestructiveRotation_Age1 | MixedStructure_Age1 | CrossState | 0.1177 | ModerateMergeCandidate | 3
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age5 | SameStateNonadjacent | 0.1186 | ModerateMergeCandidate | 3
+DestructiveRotation_Age2 | MixedStructure_Age3 | CrossState | 0.1301 | ModerateMergeCandidate | 3
+DestructiveRotation_Age1 | ExhaustionPersistence_Age5 | CrossState | 0.1317 | ModerateMergeCandidate | 3
+DecayToNeutral_Age1 | ReassertionProcessing_Age1 | CrossState | 0.1366 | ModerateMergeCandidate | 3
+CompressionProcessing_Age5 | CompressionProcessing_Age6-10 | AgeAdjacent | 0.1366 | ModerateMergeCandidate | 3
+MixedStructure_Age1 | MixedStructure_Age4 | SameStateNonadjacent | 0.1389 | ModerateMergeCandidate | 3
+ConstructiveEmergence_Age1 | ReassertionProcessing_Age1 | CrossState | 0.1392 | ModerateMergeCandidate | 3
+ConstructiveEmergence_Age1 | ReassertionProcessing_Age2 | CrossState | 0.1436 | ModerateMergeCandidate | 3
+DecayToNeutral_Age1 | ReassertionProcessing_Age2 | CrossState | 0.1439 | ModerateMergeCandidate | 3
+RecoveryResolution_Age1 | RecoveryResolution_Age3 | SameStateNonadjacent | 0.1450 | ModerateMergeCandidate | 3
+DestructiveRotation_Age1 | ExhaustionPersistence_Age1 | CrossState | 0.1474 | ModerateMergeCandidate | 3
+MixedStructure_Age2 | MixedStructure_Age4 | SameStateNonadjacent | 0.1492 | ModerateMergeCandidate | 3
+ExhaustionPersistence_Age1 | MixedStructure_Age2 | CrossState | 0.1497 | ModerateMergeCandidate | 3
+MixedStructure_Age4 | ReassertionProcessing_Age1 | CrossState | 0.1539 | ModerateMergeCandidate | 3
+ExhaustionPersistence_Age5 | MixedStructure_Age2 | CrossState | 0.1560 | ModerateMergeCandidate | 3
+CompressionProcessing_Age1 | CompressionProcessing_Age4 | SameStateNonadjacent | 0.1605 | ModerateMergeCandidate | 3
+ExhaustionPersistence_Age1 | MixedStructure_Age1 | CrossState | 0.1611 | ModerateMergeCandidate | 3
+RecoveryResolution_Age3 | RecoveryResolution_Age6-10 | SameStateNonadjacent | 0.1641 | ModerateMergeCandidate | 1
+NeutralProcessing_Age1 | NeutralProcessing_Age2 | AgeAdjacent | 0.1652 | ModerateMergeCandidate | 3
+CompressionProcessing_Age4 | CompressionProcessing_Age5 | AgeAdjacent | 0.1662 | ModerateMergeCandidate | 3
+ExhaustionPersistence_Age5 | MixedStructure_Age1 | CrossState | 0.1686 | ModerateMergeCandidate | 3
+DecayToNeutral_Age1 | NeutralProcessing_Age1 | CrossState | 0.1686 | ModerateMergeCandidate | 3
+ExhaustionPersistence_Age5 | ExhaustionPersistence_Age6-10 | AgeAdjacent | 0.1691 | ModerateMergeCandidate | 3
+RecoveryResolution_Age1 | RecoveryResolution_Age6-10 | SameStateNonadjacent | 0.1721 | ModerateMergeCandidate | 1
+RecoveryResolution_Age3 | RecoveryResolution_Age4 | AgeAdjacent | 0.1733 | ModerateMergeCandidate | 2
+CompressionProcessing_Age1 | CompressionProcessing_Age3 | SameStateNonadjacent | 0.1777 | ModerateMergeCandidate | 3
+CompressionProcessing_Age5 | ExhaustionPersistence_Age4 | CrossState | 0.1787 | ModerateMergeCandidate | 3
+CompressionProcessing_Age1 | DecayToNeutral_Age1 | CrossState | 0.1829 | ModerateMergeCandidate | 3
+ExhaustionPersistence_Age4 | MixedStructure_Age4 | CrossState | 0.1847 | ModerateMergeCandidate | 3
+ReassertionProcessing_Age1 | ReassertionProcessing_Age2 | AgeAdjacent | 0.1879 | ModerateMergeCandidate | 3
+CompressionProcessing_Age1 | ExhaustionPersistence_Age3 | CrossState | 0.1920 | ModerateMergeCandidate | 3
+DecayToNeutral_Age1 | NeutralProcessing_Age2 | CrossState | 0.1933 | ModerateMergeCandidate | 3
+CompressionProcessing_Age2 | MixedStructure_Age4 | CrossState | 0.1934 | ModerateMergeCandidate | 3
+ExhaustionPersistence_Age4 | ReassertionProcessing_Age1 | CrossState | 0.1954 | ModerateMergeCandidate | 3
+ConstructiveEmergence_Age1 | ExhaustionPersistence_Age4 | CrossState | 0.1979 | ModerateMergeCandidate | 3
+
+Aggregate Compression Scheme Table
+Scheme | OriginalKeyCount | CompressedKeyCount | KeyReductionPercent | SparseKeyRate
+SchemeA_NoCompression | 41 | 41 | 0.00% | 24.39%
+SchemeB_StrongOnly | 41 | 38 | 7.32% | 23.68%
+SchemeC_StrongModerate | 41 | 17 | 58.54% | 35.29%
+SchemeD_AgeAdjacentStrong | 41 | 40 | 2.44% | 25.00%
+SchemeE_LowCountAbsorption | 41 | 31 | 24.39% | 0.00%
+
+Aggregate Memory Forecast Compression Table
+Scheme | Top1Accuracy | Top2Accuracy | BrierScore | CalibrationError | ForecastEntropy | Top1Loss | BrierWorsening
+SchemeA_NoCompression | 71.36% | 99.18% | 0.3649 | 36.04% | 0.5425 | 0.00% | 0.0000
+SchemeB_StrongOnly | 71.36% | 99.18% | 0.3657 | 36.13% | 0.5459 | 0.00% | 0.0009
+SchemeC_StrongModerate | 66.96% | 98.92% | 0.4255 | 41.91% | 0.6313 | 4.40% | 0.0606
+SchemeD_AgeAdjacentStrong | 71.36% | 99.18% | 0.3649 | 36.04% | 0.5425 | 0.00% | 0.0000
+SchemeE_LowCountAbsorption | 71.36% | 99.17% | 0.3652 | 36.08% | 0.5435 | 0.00% | 0.0003
+
+Aggregate Branch Forecast Compression Table
+Scheme | Top1Accuracy | Top2Accuracy | Top3Accuracy | BrierScore | CalibrationError | ForecastEntropy | Top1Loss | BrierWorsening
+SchemeA_NoCompression | 56.16% | 76.02% | 86.40% | 0.5936 | 44.97% | 1.2167 | 0.00% | 0.0000
+SchemeB_StrongOnly | 56.11% | 77.52% | 87.76% | 0.5876 | 44.98% | 1.1819 | 0.04% | -0.0060
+SchemeC_StrongModerate | 83.68% | 95.05% | 98.52% | 0.2748 | 26.35% | 0.5542 | -27.52% | -0.3188
+SchemeD_AgeAdjacentStrong | 56.16% | 76.02% | 86.39% | 0.5940 | 44.98% | 1.2211 | 0.00% | 0.0004
+SchemeE_LowCountAbsorption | 56.07% | 75.89% | 86.27% | 0.5952 | 45.08% | 1.2239 | 0.09% | 0.0016
+
+Aggregate Information Loss Table
+Scheme | MemoryTop1Loss | BranchTop1Loss | MemoryBrierWorsening | BranchBrierWorsening | EntropyIncrease | InformationLoss
+SchemeA_NoCompression | 0.00% | 0.00% | 0.0000 | 0.0000 | 0.0000 | 0.0000
+SchemeB_StrongOnly | 0.00% | 0.04% | 0.0009 | -0.0060 | -0.0157 | 0.0003
+SchemeC_StrongModerate | 4.40% | -27.52% | 0.0606 | -0.3188 | -0.2868 | 0.0262
+SchemeD_AgeAdjacentStrong | 0.00% | 0.00% | 0.0000 | 0.0004 | 0.0022 | 0.0001
+SchemeE_LowCountAbsorption | 0.00% | 0.09% | 0.0003 | 0.0016 | 0.0041 | 0.0007
+
+Aggregate Compression Efficiency Table
+Scheme | KeyReductionPercent | InformationLoss | CompressionEfficiency
+SchemeC_StrongModerate | 58.54% | 0.0262 | 0.5704
+SchemeE_LowCountAbsorption | 24.39% | 0.0007 | 0.2437
+SchemeB_StrongOnly | 7.32% | 0.0003 | 0.0731
+SchemeD_AgeAdjacentStrong | 2.44% | 0.0001 | 0.0244
+SchemeA_NoCompression | 0.00% | 0.0000 | 0.0000
+
+Aggregate Group Inventory
+GroupID | Members | TotalCount | DominantNextNode | BranchEntropy | MeanMemoryStrength | ReplicationCount
+G_CompressionProcessing_Age1__CompressionProcessing_Age2__CompressionProcessing_Age3__CompressionProcessing_Age4__CompressionProcessing_Age5__CompressionProcessing_Age6-10__ConstructiveEmergence_Age1__DecayToNeutral_Age1__DestructiveRotation_Age1__ExhaustionPersistence_Age1__ExhaustionPersistence_Age3__ExhaustionPersistence_Age4__ExhaustionPersistence_Age5__ExhaustionPersistence_Age6-10__MixedStructure_Age1__MixedStructure_Age2__MixedStructure_Age4__NeutralProcessing_Age1__NeutralProcessing_Age2__ReassertionProcessing_Age1__ReassertionProcessing_Age2 | CompressionProcessing_Age1, CompressionProcessing_Age2, CompressionProcessing_Age3, CompressionProcessing_Age4, CompressionProcessing_Age5, CompressionProcessing_Age6-10, ConstructiveEmergence_Age1, DecayToNeutral_Age1, DestructiveRotation_Age1, ExhaustionPersistence_Age1, ExhaustionPersistence_Age3, ExhaustionPersistence_Age4, ExhaustionPersistence_Age5, ExhaustionPersistence_Age6-10, MixedStructure_Age1, MixedStructure_Age2, MixedStructure_Age4, NeutralProcessing_Age1, NeutralProcessing_Age2, ReassertionProcessing_Age1, ReassertionProcessing_Age2 | 28181 | NeutralProcessing_Age1 | 2.6141 | 0.1968 | 3
+G_NeutralProcessing_Age6-10 | NeutralProcessing_Age6-10 | 3283 | NeutralProcessing_Age6-10 | 1.1786 | 0.2213 | 3
+G_NeutralProcessing_Age3 | NeutralProcessing_Age3 | 2006 | NeutralProcessing_Age4 | 0.8421 | 0.3518 | 3
+G_RecoveryResolution_Age1__RecoveryResolution_Age3__RecoveryResolution_Age4__RecoveryResolution_Age6-10 | RecoveryResolution_Age1, RecoveryResolution_Age3, RecoveryResolution_Age4, RecoveryResolution_Age6-10 | 1528 | CompressionProcessing_Age1 | 1.0809 | 0.2393 | 3
+G_NeutralProcessing_Age4 | NeutralProcessing_Age4 | 1501 | NeutralProcessing_Age5 | 0.4478 | 0.3656 | 3
+G_NeutralProcessing_Age5 | NeutralProcessing_Age5 | 1367 | NeutralProcessing_Age6-10 | 0.7548 | 0.3142 | 3
+G_NeutralProcessing_Age11-20 | NeutralProcessing_Age11-20 | 958 | NeutralProcessing_Age11-20 | 0.9558 | 0.2809 | 3
+G_RecoveryResolution_Age2 | RecoveryResolution_Age2 | 390 | RecoveryResolution_Age3 | 0.5773 | 0.2839 | 3
+G_ExhaustionPersistence_Age2 | ExhaustionPersistence_Age2 | 354 | ExhaustionPersistence_Age3 | 0.5968 | 0.2466 | 3
+G_DestructiveRotation_Age2__MixedStructure_Age3 | DestructiveRotation_Age2, MixedStructure_Age3 | 174 | DecayToNeutral_Age1 | 1.8854 | 0.2231 | 3
+G_NeutralProcessing_Age21+ | NeutralProcessing_Age21+ | 82 | NeutralProcessing_Age21+ | 0.7959 | 0.3218 | 1
+G_DestructiveRotation_Age3 | DestructiveRotation_Age3 | 17 | DecayToNeutral_Age1 | 1.1185 | 0.2124 | 3
+G_ReassertionProcessing_Age3 | ReassertionProcessing_Age3 | 17 | DestructiveRotation_Age1 | 0.2237 | 0.2092 | 3
+G_RecoveryResolution_Age5 | RecoveryResolution_Age5 | 6 | RecoveryResolution_Age6-10 | 0.4506 | 0.2407 | 1
+G_CompressionProcessing_Age11-20 | CompressionProcessing_Age11-20 | 5 | CompressionProcessing_Age11-20 | 1.0549 | 0.2556 | 1
+G_DestructiveRotation_Age4 | DestructiveRotation_Age4 | 1 | DecayToNeutral_Age1 | -0.0000 | 0.0556 | 1
+G_MixedStructure_Age5 | MixedStructure_Age5 | 1 | DecayToNeutral_Age1 | -0.0000 | 0.3333 | 1
+
+Aggregate Unsafe Merge Table
+NodeA | NodeB | FailureReason
+CompressionProcessing_Age1 | CompressionProcessing_Age3 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age1 | CompressionProcessing_Age4 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age1 | CompressionProcessing_Age5 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age1 | ExhaustionPersistence_Age3 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age1 | RecoveryResolution_Age1 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | DestructiveRotation_Age1 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | DestructiveRotation_Age4 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | ExhaustionPersistence_Age1 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | ExhaustionPersistence_Age5 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | MixedStructure_Age1 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | MixedStructure_Age2 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | RecoveryResolution_Age5 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age3 | CompressionProcessing_Age4 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age3 | ExhaustionPersistence_Age2 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age3 | MixedStructure_Age3 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age3 | RecoveryResolution_Age1 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age3 | RecoveryResolution_Age3 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age4 | CompressionProcessing_Age5 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age4 | ExhaustionPersistence_Age3 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age4 | RecoveryResolution_Age1 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age5 | CompressionProcessing_Age6-10 | Similar BranchDistribution but different Memory
+CompressionProcessing_Age5 | ExhaustionPersistence_Age3 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age5 | RecoveryResolution_Age1 | Similar Memory but different BranchDistribution
+ConstructiveEmergence_Age1 | DecayToNeutral_Age1 | Similar Memory but different BranchDistribution
+ConstructiveEmergence_Age1 | ExhaustionPersistence_Age4 | Similar Memory but different BranchDistribution
+ConstructiveEmergence_Age1 | NeutralProcessing_Age1 | Similar Memory but different BranchDistribution
+ConstructiveEmergence_Age1 | NeutralProcessing_Age2 | Similar Memory but different BranchDistribution
+ConstructiveEmergence_Age1 | ReassertionProcessing_Age1 | Similar Memory but different BranchDistribution
+ConstructiveEmergence_Age1 | ReassertionProcessing_Age2 | Similar Memory but different BranchDistribution
+DecayToNeutral_Age1 | ExhaustionPersistence_Age4 | Similar Memory but different BranchDistribution
+DecayToNeutral_Age1 | NeutralProcessing_Age1 | Similar Memory but different BranchDistribution
+DecayToNeutral_Age1 | NeutralProcessing_Age2 | Similar Memory but different BranchDistribution
+DecayToNeutral_Age1 | ReassertionProcessing_Age2 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age1 | DestructiveRotation_Age4 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age1 | ExhaustionPersistence_Age1 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age1 | ExhaustionPersistence_Age5 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age2 | DestructiveRotation_Age3 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age2 | MixedStructure_Age5 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age2 | NeutralProcessing_Age4 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age2 | NeutralProcessing_Age5 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age2 | ReassertionProcessing_Age3 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age2 | RecoveryResolution_Age2 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age2 | RecoveryResolution_Age4 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age2 | RecoveryResolution_Age6-10 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age3 | MixedStructure_Age3 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age3 | RecoveryResolution_Age3 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age4 | ExhaustionPersistence_Age1 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age4 | ExhaustionPersistence_Age5 | Similar Memory but different BranchDistribution
+DestructiveRotation_Age4 | MixedStructure_Age5 | Similar BranchDistribution but different Memory
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age5 | Similar Memory but different BranchDistribution
+ExhaustionPersistence_Age2 | MixedStructure_Age3 | Similar Memory but different BranchDistribution
+ExhaustionPersistence_Age2 | RecoveryResolution_Age1 | Similar Memory but different BranchDistribution
+ExhaustionPersistence_Age2 | RecoveryResolution_Age3 | Similar Memory but different BranchDistribution
+ExhaustionPersistence_Age3 | RecoveryResolution_Age1 | Similar Memory but different BranchDistribution
+ExhaustionPersistence_Age4 | NeutralProcessing_Age1 | Similar Memory but different BranchDistribution
+ExhaustionPersistence_Age4 | NeutralProcessing_Age2 | Similar Memory but different BranchDistribution
+ExhaustionPersistence_Age4 | ReassertionProcessing_Age1 | Similar Memory but different BranchDistribution
+ExhaustionPersistence_Age4 | ReassertionProcessing_Age2 | Similar Memory but different BranchDistribution
+MixedStructure_Age1 | RecoveryResolution_Age5 | Similar Memory but different BranchDistribution
+MixedStructure_Age2 | MixedStructure_Age4 | Similar Memory but different BranchDistribution
+MixedStructure_Age2 | NeutralProcessing_Age3 | Similar Memory but different BranchDistribution
+MixedStructure_Age2 | RecoveryResolution_Age5 | Similar Memory but different BranchDistribution
+MixedStructure_Age3 | RecoveryResolution_Age3 | Similar Memory but different BranchDistribution
+MixedStructure_Age4 | NeutralProcessing_Age3 | Similar Memory but different BranchDistribution
+MixedStructure_Age4 | RecoveryResolution_Age5 | Similar Memory but different BranchDistribution
+MixedStructure_Age5 | NeutralProcessing_Age4 | Similar Memory but different BranchDistribution
+MixedStructure_Age5 | NeutralProcessing_Age5 | Similar Memory but different BranchDistribution
+MixedStructure_Age5 | ReassertionProcessing_Age3 | Similar Memory but different BranchDistribution
+MixedStructure_Age5 | RecoveryResolution_Age2 | Similar Memory but different BranchDistribution
+MixedStructure_Age5 | RecoveryResolution_Age4 | Similar Memory but different BranchDistribution
+MixedStructure_Age5 | RecoveryResolution_Age6-10 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age1 | NeutralProcessing_Age2 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age1 | ReassertionProcessing_Age1 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age1 | ReassertionProcessing_Age2 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age11-20 | NeutralProcessing_Age21+ | Similar Memory but different BranchDistribution
+NeutralProcessing_Age11-20 | NeutralProcessing_Age6-10 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age2 | ReassertionProcessing_Age1 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age2 | ReassertionProcessing_Age2 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age3 | RecoveryResolution_Age5 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age4 | NeutralProcessing_Age5 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age4 | ReassertionProcessing_Age3 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age4 | RecoveryResolution_Age2 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age4 | RecoveryResolution_Age4 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age4 | RecoveryResolution_Age6-10 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age5 | ReassertionProcessing_Age3 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age5 | RecoveryResolution_Age2 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age5 | RecoveryResolution_Age4 | Similar Memory but different BranchDistribution
+NeutralProcessing_Age5 | RecoveryResolution_Age6-10 | Similar Memory but different BranchDistribution
+ReassertionProcessing_Age1 | ReassertionProcessing_Age2 | Similar Memory but different BranchDistribution
+ReassertionProcessing_Age3 | RecoveryResolution_Age2 | Similar Memory but different BranchDistribution
+ReassertionProcessing_Age3 | RecoveryResolution_Age4 | Similar Memory but different BranchDistribution
+ReassertionProcessing_Age3 | RecoveryResolution_Age6-10 | Similar Memory but different BranchDistribution
+RecoveryResolution_Age2 | RecoveryResolution_Age4 | Similar Memory but different BranchDistribution
+RecoveryResolution_Age2 | RecoveryResolution_Age6-10 | Similar Memory but different BranchDistribution
+RecoveryResolution_Age4 | RecoveryResolution_Age6-10 | Similar Memory but different BranchDistribution
+
+Aggregate Low-Count Node Table
+Node | Count | NearestNeighbor | Distance | MergeRecommended
+MixedStructure_Age4 | 12 | ReassertionProcessing_Age1 | 0.1487 | True
+RecoveryResolution_Age6-10 | 5 | RecoveryResolution_Age3 | 0.1700 | True
+ExhaustionPersistence_Age6-10 | 38 | ExhaustionPersistence_Age5 | 0.1717 | True
+RecoveryResolution_Age4 | 17 | RecoveryResolution_Age3 | 0.1832 | True
+DestructiveRotation_Age3 | 17 | CompressionProcessing_Age3 | 0.2076 | False
+ReassertionProcessing_Age3 | 17 | NeutralProcessing_Age4 | 0.2787 | False
+CompressionProcessing_Age11-20 | 5 | CompressionProcessing_Age1 | 0.3131 | False
+MixedStructure_Age5 | 1 | NeutralProcessing_Age4 | 0.3139 | False
+RecoveryResolution_Age5 | 6 | NeutralProcessing_Age3 | 0.3345 | False
+DestructiveRotation_Age4 | 1 | NeutralProcessing_Age3 | 0.5284 | False
+
+Aggregate Outcome Table
+GroupID | Members | Count_6E | MeanDR_6E | Count_CL | MeanDR_CL | Count_NQ | MeanDR_NQ | ValidInstrumentCount
+G_CompressionProcessing_Age11-20 | CompressionProcessing_Age11-20 | 5 | -0.0001 | 0 | N/A | 0 | N/A | 1
+G_CompressionProcessing_Age1__CompressionProcessing_Age3__CompressionProcessing_Age4__CompressionProcessing_Age5__CompressionProcessing_Age6-10__ConstructiveEmergence_Age1__DecayToNeutral_Age1__DestructiveRotation_Age1__ExhaustionPersistence_Age1__ExhaustionPersistence_Age3__ExhaustionPersistence_Age4__ExhaustionPersistence_Age5__ExhaustionPersistence_Age6-10__MixedStructure_Age1__MixedStructure_Age2__MixedStructure_Age3__MixedStructure_Age4__NeutralProcessing_Age1__NeutralProcessing_Age2__ReassertionProcessing_Age1__ReassertionProcessing_Age2 | CompressionProcessing_Age1, CompressionProcessing_Age3, CompressionProcessing_Age4, CompressionProcessing_Age5, CompressionProcessing_Age6-10, ConstructiveEmergence_Age1, DecayToNeutral_Age1, DestructiveRotation_Age1, ExhaustionPersistence_Age1, ExhaustionPersistence_Age3, ExhaustionPersistence_Age4, ExhaustionPersistence_Age5, ExhaustionPersistence_Age6-10, MixedStructure_Age1, MixedStructure_Age2, MixedStructure_Age3, MixedStructure_Age4, NeutralProcessing_Age1, NeutralProcessing_Age2, ReassertionProcessing_Age1, ReassertionProcessing_Age2 | 20928 | -0.0000 | 0 | N/A | 0 | N/A | 1
+G_CompressionProcessing_Age1__CompressionProcessing_Age3__CompressionProcessing_Age6-10__ConstructiveEmergence_Age1__DecayToNeutral_Age1__DestructiveRotation_Age1__ExhaustionPersistence_Age1__MixedStructure_Age1__MixedStructure_Age2__ReassertionProcessing_Age1 | CompressionProcessing_Age1, CompressionProcessing_Age3, CompressionProcessing_Age6-10, ConstructiveEmergence_Age1, DecayToNeutral_Age1, DestructiveRotation_Age1, ExhaustionPersistence_Age1, MixedStructure_Age1, MixedStructure_Age2, ReassertionProcessing_Age1 | 0 | N/A | 980 | -0.0776 | 0 | N/A | 1
+G_CompressionProcessing_Age1__ConstructiveEmergence_Age1__ReassertionProcessing_Age2 | CompressionProcessing_Age1, ConstructiveEmergence_Age1, ReassertionProcessing_Age2 | 0 | N/A | 0 | N/A | 132 | -1.9072 | 1
+G_CompressionProcessing_Age2 | CompressionProcessing_Age2 | 1493 | -0.0000 | 0 | N/A | 51 | -7.0784 | 2
+G_CompressionProcessing_Age2__CompressionProcessing_Age5 | CompressionProcessing_Age2, CompressionProcessing_Age5 | 0 | N/A | 101 | -0.0195 | 0 | N/A | 1
+G_CompressionProcessing_Age3 | CompressionProcessing_Age3 | 0 | N/A | 0 | N/A | 30 | -11.9833 | 1
+G_CompressionProcessing_Age4 | CompressionProcessing_Age4 | 0 | N/A | 22 | -0.0500 | 18 | 9.3056 | 2
+G_CompressionProcessing_Age5__ReassertionProcessing_Age1 | CompressionProcessing_Age5, ReassertionProcessing_Age1 | 0 | N/A | 0 | N/A | 155 | -2.3774 | 1
+G_CompressionProcessing_Age6-10 | CompressionProcessing_Age6-10 | 0 | N/A | 0 | N/A | 9 | -9.8333 | 1
+G_DecayToNeutral_Age1__MixedStructure_Age4 | DecayToNeutral_Age1, MixedStructure_Age4 | 0 | N/A | 0 | N/A | 86 | -13.9506 | 1
+G_DestructiveRotation_Age1__ExhaustionPersistence_Age1__MixedStructure_Age1__MixedStructure_Age2 | DestructiveRotation_Age1, ExhaustionPersistence_Age1, MixedStructure_Age1, MixedStructure_Age2 | 0 | N/A | 0 | N/A | 324 | -8.0594 | 1
+G_DestructiveRotation_Age2 | DestructiveRotation_Age2 | 99 | -0.0000 | 0 | N/A | 11 | -19.8409 | 2
+G_DestructiveRotation_Age2__ExhaustionPersistence_Age5 | DestructiveRotation_Age2, ExhaustionPersistence_Age5 | 0 | N/A | 20 | 0.5965 | 0 | N/A | 1
+G_DestructiveRotation_Age3 | DestructiveRotation_Age3 | 10 | 0.0000 | 1 | 3.4500 | 5 | -29.8000 | 3
+G_DestructiveRotation_Age4 | DestructiveRotation_Age4 | 1 | -0.0002 | 0 | N/A | 0 | N/A | 1
+G_ExhaustionPersistence_Age2 | ExhaustionPersistence_Age2 | 299 | -0.0001 | 31 | -0.1013 | 19 | -25.0658 | 3
+G_ExhaustionPersistence_Age3 | ExhaustionPersistence_Age3 | 0 | N/A | 21 | 0.0957 | 0 | N/A | 1
+G_ExhaustionPersistence_Age3__RecoveryResolution_Age3 | ExhaustionPersistence_Age3, RecoveryResolution_Age3 | 0 | N/A | 0 | N/A | 23 | -22.1630 | 1
+G_ExhaustionPersistence_Age4 | ExhaustionPersistence_Age4 | 0 | N/A | 16 | -0.0475 | 11 | -17.0909 | 2
+G_ExhaustionPersistence_Age5 | ExhaustionPersistence_Age5 | 0 | N/A | 0 | N/A | 6 | -25.7500 | 1
+G_ExhaustionPersistence_Age6-10 | ExhaustionPersistence_Age6-10 | 0 | N/A | 3 | -0.3133 | 6 | -46.9167 | 2
+G_MixedStructure_Age3 | MixedStructure_Age3 | 0 | N/A | 5 | 0.4900 | 4 | 19.1250 | 2
+G_MixedStructure_Age4 | MixedStructure_Age4 | 0 | N/A | 2 | 0.3550 | 0 | N/A | 1
+G_MixedStructure_Age5 | MixedStructure_Age5 | 1 | 0.0001 | 0 | N/A | 0 | N/A | 1
+G_NeutralProcessing_Age1 | NeutralProcessing_Age1 | 0 | N/A | 0 | N/A | 297 | 0.0135 | 1
+G_NeutralProcessing_Age11-20 | NeutralProcessing_Age11-20 | 718 | -0.0000 | 0 | N/A | 0 | N/A | 1
+G_NeutralProcessing_Age11-20__NeutralProcessing_Age6-10 | NeutralProcessing_Age11-20, NeutralProcessing_Age6-10 | 0 | N/A | 229 | -0.0858 | 225 | -1.3656 | 2
+G_NeutralProcessing_Age1__NeutralProcessing_Age2 | NeutralProcessing_Age1, NeutralProcessing_Age2 | 0 | N/A | 675 | 0.0132 | 0 | N/A | 1
+G_NeutralProcessing_Age2 | NeutralProcessing_Age2 | 0 | N/A | 0 | N/A | 173 | -1.3656 | 1
+G_NeutralProcessing_Age21+ | NeutralProcessing_Age21+ | 68 | -0.0000 | 0 | N/A | 0 | N/A | 1
+G_NeutralProcessing_Age3 | NeutralProcessing_Age3 | 1422 | 0.0000 | 0 | N/A | 111 | 12.1869 | 2
+G_NeutralProcessing_Age3__NeutralProcessing_Age5 | NeutralProcessing_Age3, NeutralProcessing_Age5 | 0 | N/A | 229 | 0.0603 | 0 | N/A | 1
+G_NeutralProcessing_Age4 | NeutralProcessing_Age4 | 1101 | -0.0000 | 104 | 0.1437 | 82 | -6.0488 | 3
+G_NeutralProcessing_Age5 | NeutralProcessing_Age5 | 1037 | -0.0000 | 0 | N/A | 79 | -1.7722 | 2
+G_NeutralProcessing_Age6-10 | NeutralProcessing_Age6-10 | 2443 | -0.0000 | 0 | N/A | 0 | N/A | 1
+G_ReassertionProcessing_Age2 | ReassertionProcessing_Age2 | 0 | N/A | 32 | -0.0816 | 0 | N/A | 1
+G_ReassertionProcessing_Age3 | ReassertionProcessing_Age3 | 15 | -0.0000 | 1 | 0.5500 | 1 | -21.7500 | 3
+G_RecoveryResolution_Age1 | RecoveryResolution_Age1 | 0 | N/A | 90 | 0.3534 | 45 | 17.3667 | 2
+G_RecoveryResolution_Age1__RecoveryResolution_Age4__RecoveryResolution_Age6-10 | RecoveryResolution_Age1, RecoveryResolution_Age4, RecoveryResolution_Age6-10 | 918 | -0.0000 | 0 | N/A | 0 | N/A | 1
+G_RecoveryResolution_Age2 | RecoveryResolution_Age2 | 303 | -0.0000 | 37 | -0.1741 | 13 | -3.9615 | 3
+G_RecoveryResolution_Age3 | RecoveryResolution_Age3 | 235 | 0.0000 | 27 | 0.3607 | 0 | N/A | 2
+G_RecoveryResolution_Age4 | RecoveryResolution_Age4 | 0 | N/A | 1 | -0.2200 | 0 | N/A | 1
+G_RecoveryResolution_Age5 | RecoveryResolution_Age5 | 6 | -0.0001 | 0 | N/A | 0 | N/A | 1
+
+Aggregate Recommendation
+Classification: ModerateCompression
+RecommendedScheme: SchemeC_StrongModerate
+OriginalNodeCount: 41
+CompressedNodeCount: 17
+KeyReductionPercent: 58.54%
+InformationLoss: 0.0262
+Reason: MemoryTop1Loss=4.40%; BranchTop1Loss=-27.52%; Efficiency=0.5704.
+
+AGGREGATE RANKINGS
+
+1. Best merge candidates
+MixedStructure_Age1 | MixedStructure_Age2 | 0.0784 | StrongMergeCandidate | AgeAdjacent
+DestructiveRotation_Age1 | MixedStructure_Age2 | 0.0974 | StrongMergeCandidate | CrossState
+RecoveryResolution_Age4 | RecoveryResolution_Age6-10 | 0.0982 | StrongMergeCandidate | SameStateNonadjacent
+ConstructiveEmergence_Age1 | DecayToNeutral_Age1 | 0.1062 | ModerateMergeCandidate | CrossState
+DestructiveRotation_Age1 | MixedStructure_Age1 | 0.1177 | ModerateMergeCandidate | CrossState
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age5 | 0.1186 | ModerateMergeCandidate | SameStateNonadjacent
+DestructiveRotation_Age2 | MixedStructure_Age3 | 0.1301 | ModerateMergeCandidate | CrossState
+DestructiveRotation_Age1 | ExhaustionPersistence_Age5 | 0.1317 | ModerateMergeCandidate | CrossState
+DecayToNeutral_Age1 | ReassertionProcessing_Age1 | 0.1366 | ModerateMergeCandidate | CrossState
+CompressionProcessing_Age5 | CompressionProcessing_Age6-10 | 0.1366 | ModerateMergeCandidate | AgeAdjacent
+
+2. Best age-adjacent merges
+MixedStructure_Age1 | MixedStructure_Age2 | 0.0784 | StrongMergeCandidate | AgeAdjacent
+CompressionProcessing_Age5 | CompressionProcessing_Age6-10 | 0.1366 | ModerateMergeCandidate | AgeAdjacent
+NeutralProcessing_Age1 | NeutralProcessing_Age2 | 0.1652 | ModerateMergeCandidate | AgeAdjacent
+CompressionProcessing_Age4 | CompressionProcessing_Age5 | 0.1662 | ModerateMergeCandidate | AgeAdjacent
+ExhaustionPersistence_Age5 | ExhaustionPersistence_Age6-10 | 0.1691 | ModerateMergeCandidate | AgeAdjacent
+RecoveryResolution_Age3 | RecoveryResolution_Age4 | 0.1733 | ModerateMergeCandidate | AgeAdjacent
+ReassertionProcessing_Age1 | ReassertionProcessing_Age2 | 0.1879 | ModerateMergeCandidate | AgeAdjacent
+CompressionProcessing_Age3 | CompressionProcessing_Age4 | 0.2011 | NoMergeCandidate | AgeAdjacent
+NeutralProcessing_Age11-20 | NeutralProcessing_Age21+ | 0.2141 | NoMergeCandidate | AgeAdjacent
+DestructiveRotation_Age2 | DestructiveRotation_Age3 | 0.2374 | NoMergeCandidate | AgeAdjacent
+
+3. Best cross-state merges
+DestructiveRotation_Age1 | MixedStructure_Age2 | 0.0974 | StrongMergeCandidate | CrossState
+ConstructiveEmergence_Age1 | DecayToNeutral_Age1 | 0.1062 | ModerateMergeCandidate | CrossState
+DestructiveRotation_Age1 | MixedStructure_Age1 | 0.1177 | ModerateMergeCandidate | CrossState
+DestructiveRotation_Age2 | MixedStructure_Age3 | 0.1301 | ModerateMergeCandidate | CrossState
+DestructiveRotation_Age1 | ExhaustionPersistence_Age5 | 0.1317 | ModerateMergeCandidate | CrossState
+DecayToNeutral_Age1 | ReassertionProcessing_Age1 | 0.1366 | ModerateMergeCandidate | CrossState
+ConstructiveEmergence_Age1 | ReassertionProcessing_Age1 | 0.1392 | ModerateMergeCandidate | CrossState
+ConstructiveEmergence_Age1 | ReassertionProcessing_Age2 | 0.1436 | ModerateMergeCandidate | CrossState
+DecayToNeutral_Age1 | ReassertionProcessing_Age2 | 0.1439 | ModerateMergeCandidate | CrossState
+DestructiveRotation_Age1 | ExhaustionPersistence_Age1 | 0.1474 | ModerateMergeCandidate | CrossState
+
+4. Most unsafe merges
+CompressionProcessing_Age1 | CompressionProcessing_Age3 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age1 | CompressionProcessing_Age4 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age1 | CompressionProcessing_Age5 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age1 | ExhaustionPersistence_Age3 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age1 | RecoveryResolution_Age1 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | DestructiveRotation_Age1 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | DestructiveRotation_Age4 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | ExhaustionPersistence_Age1 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | ExhaustionPersistence_Age5 | Similar Memory but different BranchDistribution
+CompressionProcessing_Age2 | MixedStructure_Age1 | Similar Memory but different BranchDistribution
+
+5. Best compression schemes
+SchemeC_StrongModerate | Efficiency=0.5704
+SchemeE_LowCountAbsorption | Efficiency=0.2437
+SchemeB_StrongOnly | Efficiency=0.0731
+SchemeD_AgeAdjacentStrong | Efficiency=0.0244
+SchemeA_NoCompression | Efficiency=0.0000
+
+6. Worst compression schemes
+SchemeC_StrongModerate | InformationLoss=0.0262
+SchemeE_LowCountAbsorption | InformationLoss=0.0007
+SchemeB_StrongOnly | InformationLoss=0.0003
+SchemeD_AgeAdjacentStrong | InformationLoss=0.0001
+SchemeA_NoCompression | InformationLoss=0.0000
+
+7. Most compressible states
+CompressionProcessing | CandidatePairs=8
+ExhaustionPersistence | CandidatePairs=8
+DestructiveRotation | CandidatePairs=5
+RecoveryResolution | CandidatePairs=5
+ConstructiveEmergence | CandidatePairs=4
+DecayToNeutral | CandidatePairs=4
+MixedStructure | CandidatePairs=4
+NeutralProcessing | CandidatePairs=1
+ReassertionProcessing | CandidatePairs=1
+
+8. Least compressible states
+NeutralProcessing | CandidatePairs=1
+ReassertionProcessing | CandidatePairs=1
+ConstructiveEmergence | CandidatePairs=4
+DecayToNeutral | CandidatePairs=4
+MixedStructure | CandidatePairs=4
+DestructiveRotation | CandidatePairs=5
+RecoveryResolution | CandidatePairs=5
+CompressionProcessing | CandidatePairs=8
+ExhaustionPersistence | CandidatePairs=8
+
+9. Best low-count absorption candidates
+MixedStructure_Age4 -> ReassertionProcessing_Age1 | 0.1487
+RecoveryResolution_Age6-10 -> RecoveryResolution_Age3 | 0.1700
+ExhaustionPersistence_Age6-10 -> ExhaustionPersistence_Age5 | 0.1717
+RecoveryResolution_Age4 -> RecoveryResolution_Age3 | 0.1832
+DestructiveRotation_Age3 -> CompressionProcessing_Age3 | 0.2076
+ReassertionProcessing_Age3 -> NeutralProcessing_Age4 | 0.2787
+CompressionProcessing_Age11-20 -> CompressionProcessing_Age1 | 0.3131
+MixedStructure_Age5 -> NeutralProcessing_Age4 | 0.3139
+RecoveryResolution_Age5 -> NeutralProcessing_Age3 | 0.3345
+DestructiveRotation_Age4 -> NeutralProcessing_Age3 | 0.5284
+
+10. Recommended compressed APVA representation
+Classification: ModerateCompression
+RecommendedScheme: SchemeC_StrongModerate
+OriginalNodeCount: 41
+CompressedNodeCount: 17
+KeyReductionPercent: 58.54%
+InformationLoss: 0.0262
+Reason: MemoryTop1Loss=4.40%; BranchTop1Loss=-27.52%; Efficiency=0.5704.
+
+RESEARCH NOTES
+- StateAge compression is evaluated through fixed mechanical schemes.
+- Age fragmentation, cross-state redundancy, and rare-node absorption are audited separately.
+- Compression is accepted only by fixed information-loss thresholds.
+
+18. Low-DoF Audit
+Variables used:
+StateAgeNode
+StructuralState
+AgeBucket
+NextNode
+MemoryStrength
+BranchProbability
+BranchEntropy
+DominantNextNode
+
+No Context
+No Arbitration
+No Persistence
+No Phase
+No Optimization
+No Fitting
+No Machine Learning
+No Forward Returns used in compression construction

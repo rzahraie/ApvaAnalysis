@@ -1,0 +1,79 @@
+APVA Interpretation Persistence Study v0.1
+Decision-stability research only. No optimization, fitting, machine learning, parameter search, or outcome-based scoring.
+
+Diagnostics
+Instrument: NQ
+Input path(s): .\Evidence\NQ\NQ_5 Minute_apva_bar_evidence_v01.csv
+Total rows: 1930
+
+1. Baseline arbitration summary
+Regime A reproduces Study 48 immediate replacement.
+BaselineReplacementRate: 83.47%
+BaselineMeanRunLength: 1.1973
+BaselineFractalJumpRiskRate: 31.81%
+
+2. Persistence regime summaries
+Regime | Name | MeanRunLength | MedianRunLength | MaxRunLength | ReplacementCount | ReplacementRate | BarsPerReplacement | ReplacementReasons | LifetimeDistribution
+A | Immediate Replacement | 1.1973 | 1.0000 | 52 | 1611 | 83.47% | 1.1980 | HigherScore=1611, MarginExceeded=0, ConfirmationSatisfied=0, HybridSatisfied=0 | 1=1509, 2=36, 3=22, 4=18, 5=18, 6-10=6, 11-20=2, 21+=1
+B | Two-Bar Confirmation | 30.1562 | 23.5000 | 210 | 63 | 3.26% | 30.6349 | HigherScore=0, MarginExceeded=0, ConfirmationSatisfied=63, HybridSatisfied=0 | 1=0, 2=1, 3=1, 4=1, 5=8, 6-10=4, 11-20=14, 21+=35
+C | Margin Threshold | 2.3366 | 1.0000 | 111 | 825 | 42.75% | 2.3394 | HigherScore=0, MarginExceeded=825, ConfirmationSatisfied=0, HybridSatisfied=0 | 1=544, 2=84, 3=61, 4=25, 5=36, 6-10=63, 11-20=12, 21+=1
+D | Hybrid | 71.4815 | 26.0000 | 750 | 26 | 1.35% | 74.2308 | HigherScore=0, MarginExceeded=0, ConfirmationSatisfied=0, HybridSatisfied=26 | 1=0, 2=0, 3=0, 4=0, 5=4, 6-10=1, 11-20=7, 21+=15
+
+3. Stability analysis
+Regime | Name | MeanRunLength | MedianRunLength | MaxRunLength | ReplacementCount | ReplacementRate | BarsPerReplacement | ReplacementReasons | LifetimeDistribution
+A | Immediate Replacement | 1.1973 | 1.0000 | 52 | 1611 | 83.47% | 1.1980 | HigherScore=1611, MarginExceeded=0, ConfirmationSatisfied=0, HybridSatisfied=0 | 1=1509, 2=36, 3=22, 4=18, 5=18, 6-10=6, 11-20=2, 21+=1
+B | Two-Bar Confirmation | 30.1562 | 23.5000 | 210 | 63 | 3.26% | 30.6349 | HigherScore=0, MarginExceeded=0, ConfirmationSatisfied=63, HybridSatisfied=0 | 1=0, 2=1, 3=1, 4=1, 5=8, 6-10=4, 11-20=14, 21+=35
+C | Margin Threshold | 2.3366 | 1.0000 | 111 | 825 | 42.75% | 2.3394 | HigherScore=0, MarginExceeded=825, ConfirmationSatisfied=0, HybridSatisfied=0 | 1=544, 2=84, 3=61, 4=25, 5=36, 6-10=63, 11-20=12, 21+=1
+D | Hybrid | 71.4815 | 26.0000 | 750 | 26 | 1.35% | 74.2308 | HigherScore=0, MarginExceeded=0, ConfirmationSatisfied=0, HybridSatisfied=26 | 1=0, 2=0, 3=0, 4=0, 5=4, 6-10=1, 11-20=7, 21+=15
+
+4. Fractal-jump proxy
+Regime | RiskCount | RiskRate | MeanRiskRunLength | RiskReplacementRate | OutcomeSkewAfterRisk | MeanDRAfterRisk
+A | 614 | 31.81% | 1.0977 | 38.11% | -5.44% | -2.9914
+B | 2 | 0.10% | 2.5000 | 3.17% | -100.00% | -64.3750
+C | 233 | 12.07% | 1.4249 | 28.24% | -8.30% | -9.1932
+D | 0 | 0.00% | 0.0000 | 0.00% | 0.00% | 0.0000
+
+5. Conflict suppression
+Regime | OverrideCount | OverrideRate | OverrideDuration | MeanOverrideRunLength
+A | 0 | 0.00% | 0 | 0.0000
+B | 1537 | 79.64% | 1537 | 11.2190
+C | 849 | 43.99% | 849 | 2.8878
+D | 1629 | 84.40% | 1629 | 18.3034
+
+6. Outcome diagnostics
+Regime | Count | MeanDRFwd5 | MedianDRFwd5 | ContinuationRate5 | FailureRate5 | FlatRate5 | OutcomeSkew
+A | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+B | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+C | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+D | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+
+7. Regime comparison
+Regime | ReplacementRate | MeanRunLength | RiskRate | OutcomeSkew | MeanDR | BarsPerReplacement | OverrideRate | ReplacementReductionVsImmediate | RunLengthIncreaseVsImmediate | RiskReductionVsImmediate | SkewImprovementVsImmediate | MeanDRImprovementVsImmediate
+A | 83.47% | 1.1973 | 31.81% | -1.51% | -3.1775 | 1.1980 | 0.00% | 0.00% | 0.0000 | 0.00% | 0.00% | 0.0000
+B | 3.26% | 30.1562 | 0.10% | -1.51% | -3.1775 | 30.6349 | 79.64% | 80.21% | 28.9590 | 31.71% | 0.00% | 0.0000
+C | 42.75% | 2.3366 | 12.07% | -1.51% | -3.1775 | 2.3394 | 43.99% | 40.73% | 1.1393 | 19.74% | 0.00% | 0.0000
+D | 1.35% | 71.4815 | 0.00% | -1.51% | -3.1775 | 74.2308 | 84.40% | 82.12% | 70.2842 | 31.81% | 0.00% | 0.0000
+
+8. Low-DoF audit
+Allowed variables used:
+- CurrentState
+- AgeBucket
+- PreviousDistinctState
+- ValidatedContextFlag
+- ArbitrationScore
+- ScoreMargin
+- WinnerRunLength
+
+No new variables added.
+No optimization performed.
+No fitting performed.
+No machine learning used.
+No forward returns used in scoring.
+
+9. Mechanical research notes
+- Regime A follows Study 48's highest-scored interpretation immediately.
+- Regime B requires two consecutive highest-score bars before replacement.
+- Regime C requires the challenger score to exceed the active score by at least 0.20.
+- Regime D requires both fixed conditions.
+- Persistence changes active labels only. It never changes structural scores or uses outcomes.
+- Regime-level overall outcome diagnostics are expected to match because all regimes label the same market bars.

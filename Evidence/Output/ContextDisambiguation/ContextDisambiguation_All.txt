@@ -1,0 +1,157 @@
+APVA Context Disambiguation Study v0.1 - Aggregate
+Frozen candidate validation. Research only. No trades, optimization, fitting, machine learning, or parameter search.
+Instruments: 6E, CL, NQ
+
+Aggregate Candidate Table
+Candidate | Description | Count_6E | MeanDR_6E | Skew_6E | Entropy_6E | Count_CL | MeanDR_CL | Skew_CL | Entropy_CL | Count_NQ | MeanDR_NQ | Skew_NQ | Entropy_NQ | AgreementCount | AgreementPercent | AgreementDirection | MeanDR_All | Skew_All | Entropy_All
+A | NeutralProcessing -> CompressionProcessing Age 3 | 285 | -0.0000 | -2.81% | 1.3022 | 13 | 0.3908 | 61.54% | 1.1787 | 9 | -37.1389 | -11.11% | 1.1491 | 1 of 2 | 50.00% | Negative | -1.0722 | -0.33% | 1.3119
+B | RecoveryResolution -> CompressionProcessing Age 3 | 281 | -0.0000 | -2.14% | 0.9375 | 20 | 0.1160 | -5.00% | 1.1922 | 11 | -30.2273 | -36.36% | 0.6002 | 3 of 3 | 100.00% | Negative | -1.0583 | -3.53% | 0.9710
+C | RecoveryResolution -> NeutralProcessing Age 1 | 205 | 0.0000 | 2.93% | 0.6789 | 25 | 1.1644 | 52.00% | 0.6902 | 13 | 20.0577 | 53.85% | 0.6902 | 3 of 3 | 100.00% | Positive | 1.1928 | 10.70% | 0.6819
+D | DecayToNeutral -> NeutralProcessing Age 4 | 199 | 0.0000 | 9.05% | 0.6153 | 15 | 0.4960 | 60.00% | 0.6277 | 23 | -1.2935 | 4.35% | 0.5305 | 3 of 3 | 100.00% | Positive | -0.0941 | 11.81% | 0.6360
+E | Baseline CompressionProcessing Age 3 | 763 | -0.0000 | -4.59% | 1.1341 | 41 | 0.4024 | 26.83% | 1.2311 | 30 | -11.9833 | 10.00% | 1.1965 | 2 of 3 | 66.67% | Positive | -0.4113 | -2.52% | 1.1487
+F | Baseline NeutralProcessing Age 1 | 4710 | -0.0000 | -2.95% | 1.2623 | 430 | 0.0650 | 3.02% | 1.2605 | 297 | 0.0135 | 6.73% | 1.2465 | 2 of 3 | 66.67% | Positive | 0.0059 | -1.95% | 1.2648
+G | Baseline NeutralProcessing Age 4 | 1101 | -0.0000 | -3.27% | 0.4516 | 104 | 0.1437 | 32.69% | 0.4644 | 82 | -6.0488 | -2.44% | 0.1952 | 2 of 3 | 66.67% | Negative | -0.3738 | -0.31% | 0.4478
+
+Aggregate Baseline Comparison
+Candidate | Baseline | DeltaContinuationRate_All | DeltaFailureRate_All | DeltaOutcomeSkew_All | DeltaMeanDR_All | DeltaEntropy_All | DeltaDominantDestinationProbability_All | ReplicatedInstrumentCount
+A | E | 1.21% | -0.99% | 2.19% | -0.6609 | 0.1632 | -0.79% | 2
+B | E | -0.21% | 0.80% | -1.01% | -0.6470 | -0.1777 | 1.87% | 3
+C | F | 6.85% | -5.79% | 12.65% | 1.1870 | -0.5829 | 0.84% | 3
+D | G | 5.77% | -6.36% | 12.13% | 0.2797 | 0.1882 | -5.09% | 3
+
+Aggregate Bootstrap Table
+Candidate | MedianMeanDR | P05MeanDR | P95MeanDR | MedianSkew | P05Skew | P95Skew | MedianContinuation | P05Continuation | P95Continuation | MedianFailure | P05Failure | P95Failure
+A | -0.9760 | -2.5519 | -0.0051 | -0.33% | -8.49% | 8.79% | 48.21% | 43.97% | 52.77% | 48.53% | 43.96% | 52.77%
+B | -1.0152 | -2.0742 | -0.1793 | -3.53% | -12.84% | 5.46% | 46.79% | 41.99% | 51.60% | 50.32% | 45.82% | 54.81%
+C | 1.2446 | -0.8980 | 3.6173 | 10.70% | 0.00% | 20.99% | 53.50% | 48.15% | 58.85% | 42.80% | 37.86% | 48.15%
+D | 0.1433 | -4.0764 | 3.2527 | 11.39% | 1.27% | 22.36% | 53.16% | 48.10% | 58.65% | 41.35% | 35.86% | 46.84%
+E | -0.3855 | -1.1452 | 0.1993 | -2.52% | -8.15% | 3.36% | 47.00% | 44.24% | 49.88% | 49.64% | 46.52% | 52.40%
+F | 0.0015 | -0.4123 | 0.3408 | -1.78% | -3.97% | 0.22% | 46.74% | 45.61% | 47.75% | 48.52% | 47.49% | 49.64%
+G | -0.3579 | -1.2989 | 0.4074 | -0.31% | -4.66% | 4.35% | 47.40% | 45.22% | 49.81% | 47.71% | 45.22% | 49.88%
+
+Aggregate Randomization Table
+Candidate | ObservedMeanDR | RandomizedMeanDR | ObservedMinusRandomizedDR | ObservedSkew | RandomizedSkew | ObservedMinusRandomizedSkew | ObservedEntropy | RandomizedEntropy | ObservedMinusRandomizedEntropy
+A | -1.0722 | -0.4203 | -0.6520 | -0.33% | -1.53% | 1.20% | 1.3119 | 1.1374 | 0.1745
+B | -1.0583 | -0.3698 | -0.6885 | -3.53% | -0.97% | -2.55% | 0.9710 | 1.0758 | -0.1049
+C | 1.1928 | -0.0151 | 1.2080 | 10.70% | -2.43% | 13.13% | 0.6819 | 1.2591 | -0.5772
+D | -0.0941 | -0.5204 | 0.4263 | 11.81% | -2.21% | 14.02% | 0.6360 | 0.3971 | 0.2389
+E | -0.4113 | -0.4113 | 0.0000 | -2.52% | -2.52% | 0.00% | 1.1487 | 1.1487 | 0.0000
+F | 0.0059 | 0.0059 | 0.0000 | -1.95% | -1.95% | 0.00% | 1.2648 | 1.2648 | 0.0000
+G | -0.3738 | -0.3738 | 0.0000 | -0.31% | -0.31% | 0.00% | 0.4478 | 0.4478 | 0.0000
+
+Compression Age-3 Resolution Table
+Candidate | Description | Count | MeanDR | Skew | Entropy | DominantDestination | DominantProbability | ContinuationRate | FailureRate | BootstrapP05Skew | BootstrapP95Skew | ObservedMinusRandomizedSkew
+E | Baseline CompressionProcessing Age 3 | 834 | -0.4113 | -2.52% | 1.1487 | CompressionProcessing | 62.35% | 47.00% | 49.52% | -8.15% | 3.36% | 0.00%
+A | NeutralProcessing -> CompressionProcessing Age 3 | 307 | -1.0722 | -0.33% | 1.3119 | CompressionProcessing | 61.56% | 48.21% | 48.53% | -8.49% | 8.79% | 1.20%
+B | RecoveryResolution -> CompressionProcessing Age 3 | 312 | -1.0583 | -3.53% | 0.9710 | CompressionProcessing | 64.22% | 46.79% | 50.32% | -12.84% | 5.46% | -2.55%
+
+Instrument Stability
+Candidate | Instrument | Count | OutcomeSkew | MeanDR | Entropy | DominantDestination | DominantProbability | DirectionAgreement
+A | 6E | 285 | -2.81% | -0.0000 | 1.3022 | CompressionProcessing | 61.74% | Negative
+A | CL | 13 | 61.54% | 0.3908 | 1.1787 | CompressionProcessing | 61.54% | Positive
+A | NQ | 9 | -11.11% | -37.1389 | 1.1491 | CompressionProcessing | 55.56% | Negative
+B | 6E | 281 | -2.14% | -0.0000 | 0.9375 | CompressionProcessing | 64.84% | Negative
+B | CL | 20 | -5.00% | 0.1160 | 1.1922 | CompressionProcessing | 45.00% | Negative
+B | NQ | 11 | -36.36% | -30.2273 | 0.6002 | CompressionProcessing | 81.82% | Negative
+C | 6E | 205 | 2.93% | 0.0000 | 0.6789 | NeutralProcessing | 58.43% | Positive
+C | CL | 25 | 52.00% | 1.1644 | 0.6902 | NeutralProcessing | 53.85% | Positive
+C | NQ | 13 | 53.85% | 20.0577 | 0.6902 | CompressionProcessing | 53.85% | Positive
+D | 6E | 199 | 9.05% | 0.0000 | 0.6153 | NeutralProcessing | 86.27% | Positive
+D | CL | 15 | 60.00% | 0.4960 | 0.6277 | NeutralProcessing | 80.00% | Positive
+D | NQ | 23 | 4.35% | -1.2935 | 0.5305 | NeutralProcessing | 86.96% | Positive
+E | 6E | 763 | -4.59% | -0.0000 | 1.1341 | CompressionProcessing | 62.86% | Negative
+E | CL | 41 | 26.83% | 0.4024 | 1.2311 | CompressionProcessing | 53.66% | Positive
+E | NQ | 30 | 10.00% | -11.9833 | 1.1965 | CompressionProcessing | 60.00% | Positive
+F | 6E | 4710 | -2.95% | -0.0000 | 1.2623 | NeutralProcessing | 56.51% | Negative
+F | CL | 430 | 3.02% | 0.0650 | 1.2605 | NeutralProcessing | 56.85% | Positive
+F | NQ | 297 | 6.73% | 0.0135 | 1.2465 | NeutralProcessing | 58.92% | Positive
+G | 6E | 1101 | -3.27% | -0.0000 | 0.4516 | NeutralProcessing | 90.85% | Negative
+G | CL | 104 | 32.69% | 0.1437 | 0.4644 | NeutralProcessing | 89.62% | Positive
+G | NQ | 82 | -2.44% | -6.0488 | 0.1952 | NeutralProcessing | 96.39% | Negative
+
+Time Stability
+Candidate | EarlyCount | LateCount | DeltaOutcomeSkew | DeltaMeanDR | DeltaEntropy
+A | 149 | 158 | -5.85% | -0.7777 | 0.1755
+B | 163 | 149 | -6.10% | -0.6065 | 0.0539
+C | 118 | 125 | 2.68% | -1.5350 | 0.0168
+D | 113 | 124 | 7.36% | -5.8625 | 0.0104
+E | 423 | 411 | -8.47% | -0.8943 | 0.1284
+F | 2741 | 2696 | 2.69% | -0.4390 | 0.0029
+G | 650 | 637 | 3.41% | -1.0056 | 0.0275
+
+1. Strongest validated context candidate
+C | DeltaOutcomeSkew=12.65% | DeltaMeanDR=1.1870
+D | DeltaOutcomeSkew=12.13% | DeltaMeanDR=0.2797
+A | DeltaOutcomeSkew=2.19% | DeltaMeanDR=-0.6609
+B | DeltaOutcomeSkew=-1.01% | DeltaMeanDR=-0.6470
+
+2. Strongest instrument agreement
+B | 3 of 3 | Agreement=100.00% | Direction=Negative
+C | 3 of 3 | Agreement=100.00% | Direction=Positive
+D | 3 of 3 | Agreement=100.00% | Direction=Positive
+E | 2 of 3 | Agreement=66.67% | Direction=Positive
+F | 2 of 3 | Agreement=66.67% | Direction=Positive
+G | 2 of 3 | Agreement=66.67% | Direction=Negative
+A | 1 of 2 | Agreement=50.00% | Direction=Negative
+
+3. Strongest entropy reduction
+C | EntropyReduction=0.5829
+B | EntropyReduction=0.1777
+A | EntropyReduction=-0.1632
+D | EntropyReduction=-0.1882
+
+4. Strongest MeanDR improvement
+C | DeltaMeanDR=1.1870
+D | DeltaMeanDR=0.2797
+B | DeltaMeanDR=-0.6470
+A | DeltaMeanDR=-0.6609
+
+5. Strongest OutcomeSkew improvement
+C | DeltaOutcomeSkew=12.65%
+D | DeltaOutcomeSkew=12.13%
+A | DeltaOutcomeSkew=2.19%
+B | DeltaOutcomeSkew=-1.01%
+
+6. Most time-stable candidate
+C | AbsDeltaSkew=2.68% | AbsDeltaMeanDR=1.5350 | AbsDeltaEntropy=0.0168
+F | AbsDeltaSkew=2.69% | AbsDeltaMeanDR=0.4390 | AbsDeltaEntropy=0.0029
+G | AbsDeltaSkew=3.41% | AbsDeltaMeanDR=1.0056 | AbsDeltaEntropy=0.0275
+A | AbsDeltaSkew=5.85% | AbsDeltaMeanDR=0.7777 | AbsDeltaEntropy=0.1755
+B | AbsDeltaSkew=6.10% | AbsDeltaMeanDR=0.6065 | AbsDeltaEntropy=0.0539
+D | AbsDeltaSkew=7.36% | AbsDeltaMeanDR=5.8625 | AbsDeltaEntropy=0.0104
+E | AbsDeltaSkew=8.47% | AbsDeltaMeanDR=0.8943 | AbsDeltaEntropy=0.1284
+
+7. Most bootstrap-robust candidate
+A | SkewCI=[-8.49%, 8.79%] | MeanDRCI=[-2.5519, -0.0051]
+B | SkewCI=[-12.84%, 5.46%] | MeanDRCI=[-2.0742, -0.1793]
+C | SkewCI=[0.00%, 20.99%] | MeanDRCI=[-0.8980, 3.6173]
+D | SkewCI=[1.27%, 22.36%] | MeanDRCI=[-4.0764, 3.2527]
+E | SkewCI=[-8.15%, 3.36%] | MeanDRCI=[-1.1452, 0.1993]
+F | SkewCI=[-3.97%, 0.22%] | MeanDRCI=[-0.4123, 0.3408]
+G | SkewCI=[-4.66%, 4.35%] | MeanDRCI=[-1.2989, 0.4074]
+
+8. Strongest randomization separation
+D | DeltaSkew=14.02% | DeltaMeanDR=0.4263 | DeltaEntropy=0.2389
+C | DeltaSkew=13.13% | DeltaMeanDR=1.2080 | DeltaEntropy=-0.5772
+B | DeltaSkew=-2.55% | DeltaMeanDR=-0.6885 | DeltaEntropy=-0.1049
+A | DeltaSkew=1.20% | DeltaMeanDR=-0.6520 | DeltaEntropy=0.1745
+E | DeltaSkew=0.00% | DeltaMeanDR=0.0000 | DeltaEntropy=0.0000
+F | DeltaSkew=0.00% | DeltaMeanDR=0.0000 | DeltaEntropy=0.0000
+G | DeltaSkew=0.00% | DeltaMeanDR=0.0000 | DeltaEntropy=0.0000
+
+9. Best Compression Age-3 context
+A | Skew=-0.33% | MeanDR=-1.0722
+E | Skew=-2.52% | MeanDR=-0.4113
+B | Skew=-3.53% | MeanDR=-1.0583
+
+10. Worst Compression Age-3 context
+B | Skew=-3.53% | MeanDR=-1.0583
+E | Skew=-2.52% | MeanDR=-0.4113
+A | Skew=-0.33% | MeanDR=-1.0722
+
+Mechanical research notes
+- This study validates only the seven frozen candidates named in the specification.
+- Context candidates A-D are compared with their frozen state-age baselines E-G.
+- Instrument agreement, chronological stability, deterministic bootstrap intervals, and shuffled-label controls are reported separately.
+- Randomization shuffles PreviousDistinctState labels within instrument; it does not change structural state, age bucket, or price outcome.
+- Outcomes are downstream diagnostics and never define candidates.

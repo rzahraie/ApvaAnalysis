@@ -1,0 +1,153 @@
+APVA Excursion Trigger Study v0.1
+============================================================================================================
+Diagnostics
+Instrument: NQ
+Input path(s): .\Evidence\NQ\NQ_5 Minute_apva_bar_evidence_v01.csv
+Total rows: 1930
+Core node count: 5
+
+1. Core Node Inventory
+CoreNode | Count | ReplicationCount | ReplicationPercent
+NeutralProcessing_Age1 | 297 | 1 | 100.00%
+NeutralProcessing_Age2 | 175 | 1 | 100.00%
+NeutralProcessing_Age3 | 112 | 1 | 100.00%
+NeutralProcessing_Age4 | 83 | 1 | 100.00%
+NeutralProcessing_Age5 | 80 | 1 | 100.00%
+
+2. Excursion Definition
+Excursion: CurrentNodeCategory=Core and NodeCategory!=Core within H bars.
+Horizons: 1, 2, 3, 5
+
+3. Excursion Probability
+CoreNode | Count | P<=1 | P<=2 | P<=3 | P<=5 | MeanBars | MedianBars | MinBars | MaxBars
+NeutralProcessing_Age1 | 297 | 41.08% | 62.29% | 72.05% | 100.00% | 2.52 | 2.00 | 1 | 5
+NeutralProcessing_Age2 | 175 | 36.00% | 52.57% | 54.29% | 100.00% | 2.57 | 2.00 | 1 | 4
+NeutralProcessing_Age3 | 112 | 25.89% | 28.57% | 100.00% | 100.00% | 2.46 | 3.00 | 1 | 3
+NeutralProcessing_Age4 | 83 | 3.61% | 100.00% | 100.00% | 100.00% | 1.96 | 2.00 | 1 | 2
+NeutralProcessing_Age5 | 80 | 100.00% | 100.00% | 100.00% | 100.00% | 1.00 | 1.00 | 1 | 1
+
+4. Expected Time To Excursion
+NeutralProcessing_Age2 | 175 | 36.00% | 52.57% | 54.29% | 100.00% | 2.57 | 2.00 | 1 | 4
+NeutralProcessing_Age1 | 297 | 41.08% | 62.29% | 72.05% | 100.00% | 2.52 | 2.00 | 1 | 5
+NeutralProcessing_Age3 | 112 | 25.89% | 28.57% | 100.00% | 100.00% | 2.46 | 3.00 | 1 | 3
+NeutralProcessing_Age4 | 83 | 3.61% | 100.00% | 100.00% | 100.00% | 1.96 | 2.00 | 1 | 2
+NeutralProcessing_Age5 | 80 | 100.00% | 100.00% | 100.00% | 100.00% | 1.00 | 1.00 | 1 | 1
+
+5. Hazard Rate
+State | Age1 | Age2 | Age3 | Age4 | Age5 | Age6-10 | Age11-20 | Age21+
+NeutralProcessing | 41.08% | 36.00% | 25.89% | 3.61% | 100.00% | 0.00% | 0.00% | 0.00%
+
+6. Age Effect
+State | HazardSlope | CorrelationAgeBucketVsExcursionProbability
+NeutralProcessing | 0.0855 | 0.3773
+
+7. Pre-Excursion Sequences
+Sequence | Depth | Count | Probability
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 5 | 80 | 26.94%
+NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 4 | 80 | 26.94%
+NeutralProcessing_Age3 -> NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 3 | 80 | 26.94%
+NeutralProcessing_Age4 -> NeutralProcessing_Age5 | 2 | 80 | 26.94%
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 2 | 63 | 21.21%
+MixedStructure_Age1 -> NeutralProcessing_Age1 | 2 | 30 | 10.10%
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 3 | 29 | 9.76%
+NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 2 | 29 | 9.76%
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 2 | 20 | 6.73%
+ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 2 | 20 | 6.73%
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 3 | 15 | 5.05%
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 3 | 14 | 4.71%
+ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 3 | 12 | 4.04%
+ReassertionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 4 | 12 | 4.04%
+ReassertionProcessing_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 3 | 11 | 3.70%
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 | 2 | 10 | 3.37%
+CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> NeutralProcessing_Age1 | 3 | 9 | 3.03%
+CompressionProcessing_Age2 -> NeutralProcessing_Age1 | 2 | 9 | 3.03%
+MixedStructure_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 3 | 8 | 2.69%
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 4 | 8 | 2.69%
+NeutralProcessing_Age2 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 3 | 8 | 2.69%
+DestructiveRotation_Age1 -> NeutralProcessing_Age1 | 2 | 7 | 2.36%
+MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 4 | 7 | 2.36%
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 4 | 7 | 2.36%
+NeutralProcessing_Age2 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 3 | 7 | 2.36%
+ReassertionProcessing_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 4 | 7 | 2.36%
+MixedStructure_Age1 -> MixedStructure_Age2 -> NeutralProcessing_Age1 | 3 | 6 | 2.02%
+MixedStructure_Age2 -> NeutralProcessing_Age1 | 2 | 6 | 2.02%
+NeutralProcessing_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 3 | 6 | 2.02%
+NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 5 | 6 | 2.02%
+NeutralProcessing_Age2 -> NeutralProcessing_Age3 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 4 | 6 | 2.02%
+NeutralProcessing_Age3 -> ReassertionProcessing_Age1 -> NeutralProcessing_Age1 | 3 | 6 | 2.02%
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 4 | 5 | 1.68%
+NeutralProcessing_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> NeutralProcessing_Age1 | 4 | 5 | 1.68%
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 3 | 4 | 1.35%
+CompressionProcessing_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> NeutralProcessing_Age3 | 4 | 4 | 1.35%
+DecayToNeutral_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 | 4 | 4 | 1.35%
+DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 -> MixedStructure_Age1 -> NeutralProcessing_Age1 | 5 | 4 | 1.35%
+DestructiveRotation_Age1 -> DecayToNeutral_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 4 | 4 | 1.35%
+DestructiveRotation_Age1 -> NeutralProcessing_Age1 -> NeutralProcessing_Age2 | 3 | 4 | 1.35%
+
+8. Memory Effect
+MemoryStrength vs ExcursionProbability: 0.0000
+HalfLife vs ExcursionProbability: 0.0000
+
+9. Entropy Effect
+EntropyGrowth vs ExcursionProbability: 0.0000
+EntropyGrowth vs BarsToExcursion: -0.6493
+
+10. Cross-Instrument Replication
+See aggregate report.
+
+11. Core Stability Ranking
+CoreNode | StabilityScore
+NeutralProcessing_Age3 | 0.9714
+NeutralProcessing_Age4 | 0.9227
+NeutralProcessing_Age2 | 0.8753
+NeutralProcessing_Age1 | 0.5928
+NeutralProcessing_Age5 | 0.4869
+
+12. Instability Ranking
+CoreNode | InstabilityScore
+NeutralProcessing_Age4 | 1.0000
+NeutralProcessing_Age5 | 0.9056
+NeutralProcessing_Age3 | 0.8081
+NeutralProcessing_Age2 | 0.7266
+NeutralProcessing_Age1 | 0.6667
+
+13. Outcome Diagnostics
+Diagnostic only. Outcomes are not used in trigger calculations.
+CoreNode | Count | MeanDRFwd5 | MedianDRFwd5 | ContinuationRate5 | FailureRate5 | FlatRate5 | OutcomeSkew
+NeutralProcessing_Age1 | 297 | 0.0135 | 3.5000 | 53.20% | 46.46% | 0.34% | 0.0673
+NeutralProcessing_Age2 | 173 | -1.3656 | 3.5000 | 54.34% | 45.66% | 0.00% | 0.0867
+NeutralProcessing_Age3 | 111 | 12.1869 | 2.0000 | 53.15% | 46.85% | 0.00% | 0.0631
+NeutralProcessing_Age4 | 82 | -6.0488 | -1.0000 | 48.78% | 51.22% | 0.00% | -0.0244
+NeutralProcessing_Age5 | 79 | -1.7722 | 1.7500 | 53.16% | 46.84% | 0.00% | 0.0633
+
+14. Excursion Trigger Recommendation
+MostStableCoreNode: NeutralProcessing_Age3 | StabilityScore=0.9714
+MostLikelyToEscape: NeutralProcessing_Age4 | InstabilityScore=1.0000
+AgeEffect: MeanHazardSlope=0.0855
+MemoryEffect: CorrelationMemoryStrengthVsExcursionProbability=0.0000
+EntropyEffect: CorrelationEntropyGrowthVsExcursionProbability=0.0000
+PreExcursionSequence: NeutralProcessing_Age4 -> NeutralProcessing_Age5
+
+15. Low-DoF Audit
+Variables used:
+StructuralState
+AgeBucket
+
+Derived metrics:
+MemoryStrength
+HalfLife
+ImportanceScore
+AttentionCategory
+
+No Context
+No Arbitration
+No Persistence
+No Phase
+No Optimization
+No Fitting
+No Machine Learning
+
+16. Mechanical Research Notes
+- Trigger construction uses structural StateAge nodes and inherited Core membership only.
+- Forward outcomes are diagnostic only.
+- No trigger threshold is optimized.

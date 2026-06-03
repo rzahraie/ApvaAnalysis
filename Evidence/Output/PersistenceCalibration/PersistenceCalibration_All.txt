@@ -1,0 +1,214 @@
+APVA Persistence Calibration Study v0.1 - Aggregate
+Decision-calibration research only. Eight fixed persistence regimes.
+Instruments: 6E, CL, NQ
+
+Aggregate Regime Table
+Regime | Name | ReplacementRate_6E | RiskRate_6E | FalsePersistenceRate_6E | Lag_6E | ReplacementRate_CL | RiskRate_CL | FalsePersistenceRate_CL | Lag_CL | ReplacementRate_NQ | RiskRate_NQ | FalsePersistenceRate_NQ | Lag_NQ | ValidInstrumentCount | MeanReplacementRate | MeanRiskRate | MeanFalsePersistenceRate | MeanLag
+A | Immediate Replacement | 91.74% | 42.08% | 0.00% | 0.0000 | 88.64% | 41.73% | 0.00% | 0.0000 | 83.47% | 31.81% | 0.00% | 0.0000 | 3 | 87.95% | 38.54% | 0.00% | 0.0000
+B | One-Bar Hold | 2.34% | 0.04% | 90.05% | 1.0024 | 2.42% | 0.19% | 82.90% | 1.0000 | 3.26% | 0.10% | 76.63% | 1.0000 | 3 | 2.68% | 0.11% | 83.19% | 1.0008
+C | Two-Bar Confirmation | 2.34% | 0.04% | 90.05% | 1.0024 | 2.42% | 0.19% | 82.90% | 1.0000 | 3.26% | 0.10% | 76.63% | 1.0000 | 3 | 2.68% | 0.11% | 83.19% | 1.0008
+D | Three-Bar Confirmation | 1.59% | 0.00% | 92.16% | 2.0000 | 1.34% | 0.04% | 85.58% | 2.0000 | 2.07% | 0.00% | 80.10% | 2.0000 | 3 | 1.67% | 0.01% | 85.95% | 2.0000
+E | Margin 0.10 | 61.49% | 28.00% | 13.06% | 0.0006 | 50.89% | 19.23% | 21.68% | 0.0022 | 45.80% | 13.37% | 27.51% | 0.0079 | 3 | 52.73% | 20.20% | 20.75% | 0.0036
+F | Margin 0.20 | 59.99% | 26.92% | 14.65% | 0.0006 | 47.95% | 17.96% | 24.25% | 0.0016 | 42.75% | 12.07% | 30.62% | 0.0036 | 3 | 50.23% | 18.98% | 23.18% | 0.0019
+G | Hybrid | 1.49% | 0.00% | 91.83% | 1.0133 | 0.86% | 0.04% | 87.56% | 1.0870 | 1.35% | 0.00% | 82.80% | 1.0769 | 3 | 1.23% | 0.01% | 87.39% | 1.0591
+H | Hybrid+ | 1.01% | 0.00% | 93.18% | 2.0056 | 0.37% | 0.04% | 88.45% | 2.0000 | 1.14% | 0.05% | 82.38% | 2.1364 | 3 | 0.84% | 0.03% | 88.00% | 2.0473
+
+Aggregate Stability Table
+Regime | MeanRunLength | MedianRunLength | MaxRunLength | PersistenceHalfLife | BarsPerReplacement
+A | 1.0972 | 1.0000 | 54 | 1 | 1.0973
+B | 41.6656 | 28.0000 | 280 | 28 | 41.7966
+C | 41.6656 | 28.0000 | 280 | 28 | 41.7966
+D | 62.3031 | 41.0000 | 525 | 41 | 62.5965
+E | 1.6661 | 1.0000 | 74 | 1 | 1.6663
+F | 1.7138 | 1.0000 | 118 | 1 | 1.7141
+G | 68.8670 | 37.0000 | 1024 | 37 | 69.2257
+H | 101.9795 | 50.0000 | 1514 | 50 | 102.7680
+
+Aggregate Fractal-Jump Table
+Regime | RiskCount_6E | RiskCount_CL | RiskCount_NQ | MeanRiskRate
+A | 14836 | 1120 | 614 | 38.54%
+B | 14 | 5 | 2 | 0.11%
+C | 14 | 5 | 2 | 0.11%
+D | 1 | 1 | 0 | 0.01%
+E | 9874 | 516 | 258 | 20.20%
+F | 9492 | 482 | 233 | 18.98%
+G | 0 | 1 | 0 | 0.01%
+H | 0 | 1 | 1 | 0.03%
+
+Aggregate False Persistence Table
+Regime | FalsePersistenceCount_6E | FalsePersistenceCount_CL | FalsePersistenceCount_NQ | MeanFalsePersistenceRate | MeanFalsePersistenceLength | MaxFalsePersistenceLength
+A | 0 | 0 | 0 | 0.00% | 0.0000 | 0
+B | 925 | 107 | 94 | 83.19% | 31.4867 | 195
+C | 925 | 107 | 94 | 83.19% | 31.4867 | 195
+D | 744 | 98 | 75 | 85.95% | 39.6260 | 335
+E | 988 | 116 | 110 | 20.75% | 4.7092 | 23
+F | 1089 | 128 | 110 | 23.18% | 4.8297 | 26
+G | 752 | 68 | 64 | 87.39% | 41.0928 | 246
+H | 634 | 63 | 64 | 88.00% | 48.3824 | 335
+
+Aggregate Lag Table
+Regime | MeanLag_6E | MeanLag_CL | MeanLag_NQ | MeanLag | MedianLag | MaxLag
+A | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0
+B | 1.0024 | 1.0000 | 1.0000 | 1.0021 | 1.0000 | 2
+C | 1.0024 | 1.0000 | 1.0000 | 1.0021 | 1.0000 | 2
+D | 2.0000 | 2.0000 | 2.0000 | 2.0000 | 2.0000 | 2
+E | 0.0006 | 0.0022 | 0.0079 | 0.0009 | 0.0000 | 3
+F | 0.0006 | 0.0016 | 0.0036 | 0.0008 | 0.0000 | 3
+G | 1.0133 | 1.0870 | 1.0769 | 1.0191 | 1.0000 | 3
+H | 2.0056 | 2.0000 | 2.1364 | 2.0129 | 2.0000 | 4
+
+Aggregate Conflict Table
+Regime | OverrideCount | OverrideRate | MeanOverrideLength | BarsSuppressed
+A | 0 | 0.00% | 0.0000 | 0
+B | 35834 | 89.87% | 24.4768 | 35834
+C | 35834 | 89.87% | 24.4768 | 35834
+D | 36771 | 92.22% | 31.6446 | 36771
+E | 12208 | 30.62% | 2.0215 | 12208
+F | 12861 | 32.25% | 2.1265 | 12861
+G | 36569 | 91.71% | 33.1541 | 36569
+H | 37126 | 93.11% | 39.6645 | 37126
+
+Aggregate Outcome Table
+Regime | MeanSkew | MeanDR | ContinuationRate | FailureRate
+A | -1.67% | -1.0607 | 48.14% | 49.81%
+B | -1.67% | -1.0607 | 48.14% | 49.81%
+C | -1.67% | -1.0607 | 48.14% | 49.81%
+D | -1.67% | -1.0607 | 48.14% | 49.81%
+E | -1.67% | -1.0607 | 48.14% | 49.81%
+F | -1.67% | -1.0607 | 48.14% | 49.81%
+G | -1.67% | -1.0607 | 48.14% | 49.81%
+H | -1.67% | -1.0607 | 48.14% | 49.81%
+
+Aggregate Calibration Table
+Regime | ReplacementScore | RiskScore | FalsePersistenceScore | LagScore | CalibrationScore
+A | 0.0000 | 0.0000 | 1.0000 | 1.0000 | 2.0000
+B | 0.9696 | 0.9971 | 0.0547 | 0.5112 | 2.5326
+C | 0.9696 | 0.9971 | 0.0547 | 0.5112 | 2.5326
+D | 0.9810 | 0.9997 | 0.0234 | 0.0231 | 2.0272
+E | 0.4005 | 0.4759 | 0.7642 | 0.9983 | 2.6388
+F | 0.4289 | 0.5074 | 0.7366 | 0.9991 | 2.6720
+G | 0.9860 | 0.9997 | 0.0069 | 0.4827 | 2.4753
+H | 0.9904 | 0.9992 | 0.0000 | 0.0000 | 1.9897
+
+1. Lowest replacement rate
+H | Hybrid+ | ReplacementRate=0.84%
+G | Hybrid | ReplacementRate=1.23%
+D | Three-Bar Confirmation | ReplacementRate=1.67%
+B | One-Bar Hold | ReplacementRate=2.68%
+C | Two-Bar Confirmation | ReplacementRate=2.68%
+F | Margin 0.20 | ReplacementRate=50.23%
+E | Margin 0.10 | ReplacementRate=52.73%
+A | Immediate Replacement | ReplacementRate=87.95%
+
+2. Lowest fractal-jump risk
+G | Hybrid | RiskRate=0.01%
+D | Three-Bar Confirmation | RiskRate=0.01%
+H | Hybrid+ | RiskRate=0.03%
+B | One-Bar Hold | RiskRate=0.11%
+C | Two-Bar Confirmation | RiskRate=0.11%
+F | Margin 0.20 | RiskRate=18.98%
+E | Margin 0.10 | RiskRate=20.20%
+A | Immediate Replacement | RiskRate=38.54%
+
+3. Lowest false persistence rate
+A | Immediate Replacement | FalsePersistenceRate=0.00%
+E | Margin 0.10 | FalsePersistenceRate=20.75%
+F | Margin 0.20 | FalsePersistenceRate=23.18%
+B | One-Bar Hold | FalsePersistenceRate=83.19%
+C | Two-Bar Confirmation | FalsePersistenceRate=83.19%
+D | Three-Bar Confirmation | FalsePersistenceRate=85.95%
+G | Hybrid | FalsePersistenceRate=87.39%
+H | Hybrid+ | FalsePersistenceRate=88.00%
+
+4. Lowest lag
+A | Immediate Replacement | MeanLag=0.0000
+F | Margin 0.20 | MeanLag=0.0019
+E | Margin 0.10 | MeanLag=0.0036
+B | One-Bar Hold | MeanLag=1.0008
+C | Two-Bar Confirmation | MeanLag=1.0008
+G | Hybrid | MeanLag=1.0591
+D | Three-Bar Confirmation | MeanLag=2.0000
+H | Hybrid+ | MeanLag=2.0473
+
+5. Best conflict suppression
+H | Hybrid+ | OverrideRate=89.39%
+G | Hybrid | OverrideRate=88.53%
+D | Three-Bar Confirmation | OverrideRate=87.85%
+B | One-Bar Hold | OverrideRate=85.22%
+C | Two-Bar Confirmation | OverrideRate=85.22%
+F | Margin 0.20 | OverrideRate=39.19%
+E | Margin 0.10 | OverrideRate=36.89%
+A | Immediate Replacement | OverrideRate=0.00%
+
+6. Longest interpretation stability
+H | Hybrid+ | MeanRunLength=101.9795
+G | Hybrid | MeanRunLength=68.8670
+D | Three-Bar Confirmation | MeanRunLength=62.3031
+B | One-Bar Hold | MeanRunLength=41.6656
+C | Two-Bar Confirmation | MeanRunLength=41.6656
+F | Margin 0.20 | MeanRunLength=1.7138
+E | Margin 0.10 | MeanRunLength=1.6661
+A | Immediate Replacement | MeanRunLength=1.0972
+
+7. Best outcome skew
+A | Immediate Replacement | OutcomeSkew=-1.67%
+B | One-Bar Hold | OutcomeSkew=-1.67%
+C | Two-Bar Confirmation | OutcomeSkew=-1.67%
+D | Three-Bar Confirmation | OutcomeSkew=-1.67%
+E | Margin 0.10 | OutcomeSkew=-1.67%
+F | Margin 0.20 | OutcomeSkew=-1.67%
+G | Hybrid | OutcomeSkew=-1.67%
+H | Hybrid+ | OutcomeSkew=-1.67%
+
+8. Best mean DR
+A | Immediate Replacement | MeanDR=-1.0607
+B | One-Bar Hold | MeanDR=-1.0607
+C | Two-Bar Confirmation | MeanDR=-1.0607
+D | Three-Bar Confirmation | MeanDR=-1.0607
+E | Margin 0.10 | MeanDR=-1.0607
+F | Margin 0.20 | MeanDR=-1.0607
+G | Hybrid | MeanDR=-1.0607
+H | Hybrid+ | MeanDR=-1.0607
+
+9. Highest calibration score
+F | Margin 0.20 | CalibrationScore=2.6720
+E | Margin 0.10 | CalibrationScore=2.6388
+B | One-Bar Hold | CalibrationScore=2.5326
+C | Two-Bar Confirmation | CalibrationScore=2.5326
+G | Hybrid | CalibrationScore=2.4753
+D | Three-Bar Confirmation | CalibrationScore=2.0272
+A | Immediate Replacement | CalibrationScore=2.0000
+H | Hybrid+ | CalibrationScore=1.9897
+
+10. Best balanced persistence regime
+F | Margin 0.20 | CalibrationScore=2.6720
+E | Margin 0.10 | CalibrationScore=2.6388
+B | One-Bar Hold | CalibrationScore=2.5326
+C | Two-Bar Confirmation | CalibrationScore=2.5326
+G | Hybrid | CalibrationScore=2.4753
+D | Three-Bar Confirmation | CalibrationScore=2.0272
+A | Immediate Replacement | CalibrationScore=2.0000
+H | Hybrid+ | CalibrationScore=1.9897
+
+Low-DoF audit
+Allowed variables used:
+- CurrentState
+- AgeBucket
+- PreviousDistinctState
+- ValidatedContextFlag
+- ArbitrationScore
+- ScoreMargin
+- WinnerRunLength
+
+No new variables added.
+No optimization.
+No fitting.
+No machine learning.
+No forward returns in scoring.
+No outcome-based scoring.
+
+Mechanical research notes
+- Calibration is a fixed equal-weight diagnostic across the frozen regime set.
+- Lower replacement, risk, false persistence, and lag burdens score higher.
+- No regime was selected or tuned from forward return outcomes.
+- Outcome tables remain downstream diagnostics only.

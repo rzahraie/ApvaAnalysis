@@ -1,0 +1,809 @@
+APVA Interpretation Arbitration Study v0.1
+Research only. No optimization, fitting, machine learning, trading rules, or future leakage.
+
+Diagnostics
+Instrument: 6E
+Input path(s): .\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_20260531_apva_bar_evidence_v01.csv
+Total rows: 35260
+State counts: RecoveryResolution=1696, ExhaustionPersistence=1884, CompressionProcessing=6489, NeutralProcessing=16992, ReassertionProcessing=2011, DecayToNeutral=1486, DestructiveRotation=948, ConstructiveEmergence=83, MixedStructure=3671
+Age counts: 1=18224, 2=6199, 3=3147, 4=2008, 5=1539, 6-10=3165, 11-20=896, 21+=82
+Validated context counts: B=310, C=255, D=233
+Candidate interpretation counts: ValidatedContext=798, PreviousDistinctContext=35256, CurrentStateAge=35260
+
+1. Reliability tables
+InterpretationType | InterpretationKey | Count | PersistenceRate_t1 | ExitRate_t1 | Entropy_t1 | NormalizedEntropy_t1 | DominantDestination | DominantProbability_t1 | ReliabilityScore
+CurrentStateAge | CompressionProcessing+Age1 | 2928 | 56.66% | 43.34% | 1.1110 | 0.5343 | CompressionProcessing | 56.66% | 0.5989
+CurrentStateAge | CompressionProcessing+Age11-20 | 5 | 40.00% | 60.00% | 1.0549 | 0.9602 | CompressionProcessing | 40.00% | 0.0000
+CurrentStateAge | CompressionProcessing+Age2 | 1659 | 50.63% | 49.37% | 1.2356 | 0.5624 | CompressionProcessing | 50.63% | 0.4503
+CurrentStateAge | CompressionProcessing+Age3 | 840 | 62.86% | 37.14% | 1.1341 | 0.5454 | CompressionProcessing | 62.86% | 0.7117
+CurrentStateAge | CompressionProcessing+Age4 | 528 | 53.41% | 46.59% | 1.3071 | 0.6286 | CompressionProcessing | 53.41% | 0.4396
+CurrentStateAge | CompressionProcessing+Age5 | 282 | 45.04% | 54.96% | 1.5435 | 0.7423 | CompressionProcessing | 45.04% | 0.1584
+CurrentStateAge | CompressionProcessing+Age6-10 | 247 | 49.80% | 50.20% | 1.4301 | 0.6878 | CompressionProcessing | 49.80% | 0.3082
+CurrentStateAge | ConstructiveEmergence+Age1 | 83 | 0.00% | 100.00% | 1.1780 | 0.8497 | MixedStructure | 46.99% | -0.3798
+CurrentStateAge | DecayToNeutral+Age1 | 1486 | 0.00% | 100.00% | 1.1580 | 0.6463 | NeutralProcessing | 54.58% | -0.1005
+CurrentStateAge | DestructiveRotation+Age1 | 836 | 11.96% | 88.04% | 1.8149 | 0.8260 | DecayToNeutral | 29.78% | -0.4085
+CurrentStateAge | DestructiveRotation+Age2 | 100 | 11.00% | 89.00% | 1.6826 | 0.8092 | DecayToNeutral | 45.00% | -0.2492
+CurrentStateAge | DestructiveRotation+Age3 | 11 | 9.09% | 90.91% | 1.0336 | 0.7456 | DecayToNeutral | 63.64% | -0.0183
+CurrentStateAge | DestructiveRotation+Age4 | 1 | 0.00% | 100.00% | -0.0000 | 0.0000 | DecayToNeutral | 100.00% | 0.0000
+CurrentStateAge | ExhaustionPersistence+Age1 | 1116 | 27.24% | 72.76% | 1.6846 | 0.9402 | ExhaustionPersistence | 27.24% | -0.3954
+CurrentStateAge | ExhaustionPersistence+Age2 | 304 | 76.97% | 23.03% | 0.5803 | 0.5282 | ExhaustionPersistence | 76.97% | 1.0112
+CurrentStateAge | ExhaustionPersistence+Age3 | 234 | 61.11% | 38.89% | 0.9008 | 0.6498 | ExhaustionPersistence | 61.11% | 0.5724
+CurrentStateAge | ExhaustionPersistence+Age4 | 143 | 40.56% | 59.44% | 1.5370 | 0.8578 | ExhaustionPersistence | 40.56% | -0.0466
+CurrentStateAge | ExhaustionPersistence+Age5 | 58 | 31.03% | 68.97% | 1.6524 | 0.9222 | ExhaustionPersistence | 31.03% | -0.3015
+CurrentStateAge | ExhaustionPersistence+Age6-10 | 29 | 37.93% | 62.07% | 1.3934 | 0.8658 | ExhaustionPersistence | 37.93% | -0.1072
+CurrentStateAge | MixedStructure+Age1 | 3264 | 10.88% | 89.12% | 1.7605 | 0.8012 | NeutralProcessing | 37.35% | -0.3190
+CurrentStateAge | MixedStructure+Age2 | 355 | 11.83% | 88.17% | 1.6819 | 0.8088 | NeutralProcessing | 31.27% | -0.3778
+CurrentStateAge | MixedStructure+Age3 | 42 | 19.05% | 80.95% | 1.5287 | 0.8532 | DecayToNeutral | 40.48% | -0.2579
+CurrentStateAge | MixedStructure+Age4 | 8 | 12.50% | 87.50% | 1.3209 | 0.9528 | DecayToNeutral | 37.50% | 0.0000
+CurrentStateAge | MixedStructure+Age5 | 1 | 0.00% | 100.00% | -0.0000 | 0.0000 | DecayToNeutral | 100.00% | 0.0000
+CurrentStateAge | NeutralProcessing+Age1 | 5672 | 56.51% | 43.49% | 1.2623 | 0.7045 | NeutralProcessing | 56.51% | 0.4256
+CurrentStateAge | NeutralProcessing+Age11-20 | 891 | 77.22% | 22.78% | 0.8432 | 0.4333 | NeutralProcessing | 77.22% | 1.1110
+CurrentStateAge | NeutralProcessing+Age2 | 3205 | 54.73% | 45.27% | 1.2354 | 0.6895 | NeutralProcessing | 54.73% | 0.4050
+CurrentStateAge | NeutralProcessing+Age21+ | 82 | 78.05% | 21.95% | 0.7959 | 0.4945 | NeutralProcessing | 78.05% | 1.0664
+CurrentStateAge | NeutralProcessing+Age3 | 1754 | 74.80% | 25.20% | 0.8439 | 0.5243 | NeutralProcessing | 74.80% | 0.9717
+CurrentStateAge | NeutralProcessing+Age4 | 1312 | 90.85% | 9.15% | 0.4516 | 0.2520 | NeutralProcessing | 90.85% | 1.5650
+CurrentStateAge | NeutralProcessing+Age5 | 1192 | 81.21% | 18.79% | 0.7665 | 0.3939 | NeutralProcessing | 81.21% | 1.2303
+CurrentStateAge | NeutralProcessing+Age6-10 | 2884 | 74.10% | 25.90% | 0.9239 | 0.4748 | NeutralProcessing | 74.10% | 1.0072
+CurrentStateAge | ReassertionProcessing+Age1 | 1759 | 13.47% | 86.53% | 1.3784 | 0.7693 | NeutralProcessing | 41.39% | -0.2207
+CurrentStateAge | ReassertionProcessing+Age2 | 237 | 6.33% | 93.67% | 1.0276 | 0.7413 | DestructiveRotation | 45.99% | -0.2181
+CurrentStateAge | ReassertionProcessing+Age3 | 15 | 0.00% | 100.00% | 0.2449 | 0.3534 | DestructiveRotation | 93.33% | 0.5800
+CurrentStateAge | RecoveryResolution+Age1 | 1079 | 31.42% | 68.58% | 0.9454 | 0.8606 | CompressionProcessing | 56.26% | 0.0162
+CurrentStateAge | RecoveryResolution+Age2 | 339 | 74.04% | 25.96% | 0.5726 | 0.8261 | RecoveryResolution | 74.04% | 0.6547
+CurrentStateAge | RecoveryResolution+Age3 | 251 | 6.37% | 93.63% | 0.9486 | 0.6843 | CompressionProcessing | 68.92% | 0.0687
+CurrentStateAge | RecoveryResolution+Age4 | 16 | 37.50% | 62.50% | 0.6616 | 0.9544 | CompressionProcessing | 62.50% | 0.0456
+CurrentStateAge | RecoveryResolution+Age5 | 6 | 83.33% | 16.67% | 0.4506 | 0.6500 | RecoveryResolution | 83.33% | 0.0000
+CurrentStateAge | RecoveryResolution+Age6-10 | 5 | 0.00% | 100.00% | 0.6730 | 0.9710 | CompressionProcessing | 60.00% | 0.0000
+PreviousDistinctContext | CompressionProcessing->ConstructiveEmergence+Age1 | 1 | 0.00% | 100.00% | -0.0000 | 0.0000 | CompressionProcessing | 100.00% | 0.0000
+PreviousDistinctContext | CompressionProcessing->DecayToNeutral+Age1 | 109 | 0.00% | 100.00% | 1.1687 | 0.7261 | NeutralProcessing | 51.38% | -0.2124
+PreviousDistinctContext | CompressionProcessing->DestructiveRotation+Age1 | 52 | 15.38% | 84.62% | 1.7158 | 0.8251 | DecayToNeutral | 38.46% | -0.2867
+PreviousDistinctContext | CompressionProcessing->DestructiveRotation+Age2 | 8 | 0.00% | 100.00% | 0.9743 | 0.8869 | DecayToNeutral | 50.00% | 0.0000
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age1 | 433 | 29.56% | 70.44% | 1.5370 | 0.8578 | CompressionProcessing | 30.95% | -0.2527
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age2 | 128 | 73.44% | 26.56% | 0.5789 | 0.8351 | ExhaustionPersistence | 73.44% | 0.6336
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age3 | 94 | 63.83% | 36.17% | 0.8229 | 0.7491 | ExhaustionPersistence | 63.83% | 0.5275
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age4 | 60 | 46.67% | 53.33% | 1.4688 | 0.8197 | ExhaustionPersistence | 46.67% | 0.1136
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age5 | 28 | 32.14% | 67.86% | 1.5146 | 0.8453 | ExhaustionPersistence | 32.14% | -0.2025
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age6-10 | 13 | 30.77% | 69.23% | 1.0579 | 0.9629 | DecayToNeutral | 46.15% | -0.1937
+PreviousDistinctContext | CompressionProcessing->MixedStructure+Age1 | 115 | 9.57% | 90.43% | 1.7446 | 0.8390 | DecayToNeutral | 30.43% | -0.4390
+PreviousDistinctContext | CompressionProcessing->MixedStructure+Age2 | 11 | 9.09% | 90.91% | 1.2637 | 0.9115 | NeutralProcessing | 36.36% | -0.4570
+PreviousDistinctContext | CompressionProcessing->MixedStructure+Age3 | 1 | 100.00% | 0.00% | -0.0000 | 0.0000 | MixedStructure | 100.00% | 0.0000
+PreviousDistinctContext | CompressionProcessing->MixedStructure+Age4 | 1 | 100.00% | 0.00% | -0.0000 | 0.0000 | MixedStructure | 100.00% | 0.0000
+PreviousDistinctContext | CompressionProcessing->MixedStructure+Age5 | 1 | 0.00% | 100.00% | -0.0000 | 0.0000 | DecayToNeutral | 100.00% | 0.0000
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age1 | 1898 | 55.48% | 44.52% | 1.1485 | 0.6410 | NeutralProcessing | 55.48% | 0.4686
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age11-20 | 322 | 78.26% | 21.74% | 0.7915 | 0.4417 | NeutralProcessing | 78.26% | 1.1235
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age2 | 1053 | 53.37% | 46.63% | 1.1882 | 0.6631 | NeutralProcessing | 53.37% | 0.4043
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | 38 | 81.58% | 18.42% | 0.6538 | 0.4716 | NeutralProcessing | 81.58% | 1.1600
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age3 | 562 | 80.43% | 19.57% | 0.6950 | 0.5013 | NeutralProcessing | 80.43% | 1.1072
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age4 | 452 | 88.72% | 11.28% | 0.5264 | 0.2938 | NeutralProcessing | 88.72% | 1.4805
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age5 | 401 | 80.55% | 19.45% | 0.7817 | 0.4017 | NeutralProcessing | 80.55% | 1.2093
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age6-10 | 966 | 74.53% | 25.47% | 0.9200 | 0.4728 | NeutralProcessing | 74.53% | 1.0179
+PreviousDistinctContext | CompressionProcessing->ReassertionProcessing+Age1 | 35 | 8.57% | 91.43% | 1.4332 | 0.8905 | NeutralProcessing | 34.29% | -0.4619
+PreviousDistinctContext | CompressionProcessing->ReassertionProcessing+Age2 | 3 | 0.00% | 100.00% | 0.6365 | 0.9183 | CompressionProcessing | 66.67% | 0.0000
+PreviousDistinctContext | CompressionProcessing->RecoveryResolution+Age1 | 285 | 0.00% | 100.00% | 0.2805 | 0.4046 | CompressionProcessing | 91.93% | 0.5147
+PreviousDistinctContext | ConstructiveEmergence->CompressionProcessing+Age1 | 6 | 66.67% | 33.33% | 0.6365 | 0.9183 | CompressionProcessing | 66.67% | 0.0000
+PreviousDistinctContext | ConstructiveEmergence->CompressionProcessing+Age2 | 4 | 75.00% | 25.00% | 0.5623 | 0.8113 | CompressionProcessing | 75.00% | 0.0000
+PreviousDistinctContext | ConstructiveEmergence->CompressionProcessing+Age3 | 3 | 100.00% | 0.00% | -0.0000 | 0.0000 | CompressionProcessing | 100.00% | 0.0000
+PreviousDistinctContext | ConstructiveEmergence->CompressionProcessing+Age4 | 3 | 66.67% | 33.33% | 0.6365 | 0.9183 | CompressionProcessing | 66.67% | 0.0000
+PreviousDistinctContext | ConstructiveEmergence->CompressionProcessing+Age5 | 2 | 50.00% | 50.00% | 0.6931 | 1.0000 | NeutralProcessing | 50.00% | 0.0000
+PreviousDistinctContext | ConstructiveEmergence->CompressionProcessing+Age6-10 | 3 | 66.67% | 33.33% | 0.6365 | 0.9183 | CompressionProcessing | 66.67% | 0.0000
+PreviousDistinctContext | ConstructiveEmergence->DecayToNeutral+Age1 | 11 | 0.00% | 100.00% | 0.5860 | 0.8454 | NeutralProcessing | 72.73% | -0.1181
+PreviousDistinctContext | ConstructiveEmergence->MixedStructure+Age1 | 39 | 20.51% | 79.49% | 1.6498 | 0.8478 | NeutralProcessing | 35.90% | -0.2837
+PreviousDistinctContext | ConstructiveEmergence->MixedStructure+Age2 | 8 | 62.50% | 37.50% | 0.6616 | 0.9544 | MixedStructure | 62.50% | 0.0000
+PreviousDistinctContext | ConstructiveEmergence->MixedStructure+Age3 | 5 | 20.00% | 80.00% | 0.9503 | 0.8650 | NeutralProcessing | 60.00% | 0.0000
+PreviousDistinctContext | ConstructiveEmergence->MixedStructure+Age4 | 1 | 0.00% | 100.00% | -0.0000 | 0.0000 | NeutralProcessing | 100.00% | 0.0000
+PreviousDistinctContext | ConstructiveEmergence->NeutralProcessing+Age1 | 27 | 59.26% | 40.74% | 0.8691 | 0.7911 | NeutralProcessing | 59.26% | 0.3941
+PreviousDistinctContext | ConstructiveEmergence->NeutralProcessing+Age2 | 16 | 68.75% | 31.25% | 0.7775 | 0.7077 | NeutralProcessing | 68.75% | 0.6673
+PreviousDistinctContext | ConstructiveEmergence->NeutralProcessing+Age3 | 11 | 63.64% | 36.36% | 0.8600 | 0.7828 | NeutralProcessing | 63.64% | 0.4900
+PreviousDistinctContext | ConstructiveEmergence->NeutralProcessing+Age4 | 7 | 100.00% | 0.00% | -0.0000 | 0.0000 | NeutralProcessing | 100.00% | 0.0000
+PreviousDistinctContext | ConstructiveEmergence->NeutralProcessing+Age5 | 7 | 100.00% | 0.00% | -0.0000 | 0.0000 | NeutralProcessing | 100.00% | 0.0000
+PreviousDistinctContext | ConstructiveEmergence->NeutralProcessing+Age6-10 | 12 | 41.67% | 58.33% | 1.2367 | 0.8921 | NeutralProcessing | 41.67% | -0.0587
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age1 | 100 | 100.00% | 0.00% | -0.0000 | 0.0000 | CompressionProcessing | 100.00% | 2.0000
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age2 | 100 | 63.00% | 37.00% | 0.9442 | 0.6811 | CompressionProcessing | 63.00% | 0.5789
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age3 | 63 | 68.25% | 31.75% | 0.9457 | 0.6822 | CompressionProcessing | 68.25% | 0.6829
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age4 | 43 | 58.14% | 41.86% | 0.9539 | 0.6881 | CompressionProcessing | 58.14% | 0.4747
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age5 | 25 | 36.00% | 64.00% | 1.6069 | 0.8968 | CompressionProcessing | 36.00% | -0.1768
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age6-10 | 16 | 43.75% | 56.25% | 1.4014 | 0.8707 | CompressionProcessing | 43.75% | 0.0043
+PreviousDistinctContext | DecayToNeutral->ConstructiveEmergence+Age1 | 6 | 0.00% | 100.00% | 0.6931 | 1.0000 | DecayToNeutral | 50.00% | 0.0000
+PreviousDistinctContext | DecayToNeutral->DestructiveRotation+Age1 | 127 | 13.39% | 86.61% | 1.1970 | 0.6681 | DecayToNeutral | 62.20% | 0.0878
+PreviousDistinctContext | DecayToNeutral->DestructiveRotation+Age2 | 17 | 17.65% | 82.35% | 1.7275 | 0.9641 | DecayToNeutral | 29.41% | -0.4935
+PreviousDistinctContext | DecayToNeutral->DestructiveRotation+Age3 | 3 | 0.00% | 100.00% | -0.0000 | 0.0000 | DecayToNeutral | 100.00% | 0.0000
+PreviousDistinctContext | DecayToNeutral->MixedStructure+Age1 | 422 | 24.88% | 75.12% | 1.5157 | 0.7289 | DecayToNeutral | 46.21% | -0.0180
+PreviousDistinctContext | DecayToNeutral->MixedStructure+Age2 | 105 | 12.38% | 87.62% | 1.7689 | 0.9091 | DecayToNeutral | 27.62% | -0.5091
+PreviousDistinctContext | DecayToNeutral->MixedStructure+Age3 | 13 | 7.69% | 92.31% | 1.1570 | 0.8346 | DecayToNeutral | 53.85% | -0.2192
+PreviousDistinctContext | DecayToNeutral->MixedStructure+Age4 | 1 | 0.00% | 100.00% | -0.0000 | 0.0000 | DecayToNeutral | 100.00% | 0.0000
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age1 | 811 | 53.14% | 46.86% | 1.2651 | 0.7060 | NeutralProcessing | 53.14% | 0.3568
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age11-20 | 94 | 72.34% | 27.66% | 0.9546 | 0.5328 | NeutralProcessing | 72.34% | 0.9140
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age2 | 431 | 54.06% | 45.94% | 1.0959 | 0.6809 | NeutralProcessing | 54.06% | 0.4003
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age21+ | 14 | 85.71% | 14.29% | 0.4101 | 0.5917 | NeutralProcessing | 85.71% | 1.1226
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age3 | 233 | 100.00% | 0.00% | -0.0000 | 0.0000 | NeutralProcessing | 100.00% | 2.0000
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age4 | 233 | 86.27% | 13.73% | 0.6153 | 0.3434 | NeutralProcessing | 86.27% | 1.3819
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age5 | 201 | 76.62% | 23.38% | 0.8717 | 0.4865 | NeutralProcessing | 76.62% | 1.0459
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age6-10 | 429 | 70.63% | 29.37% | 1.0044 | 0.5606 | NeutralProcessing | 70.63% | 0.8520
+PreviousDistinctContext | DecayToNeutral->ReassertionProcessing+Age1 | 19 | 10.53% | 89.47% | 0.9551 | 0.8694 | MixedStructure | 47.37% | -0.2905
+PreviousDistinctContext | DecayToNeutral->ReassertionProcessing+Age2 | 2 | 0.00% | 100.00% | -0.0000 | 0.0000 | DestructiveRotation | 100.00% | 0.0000
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age1 | 28 | 92.86% | 7.14% | 0.2573 | 0.3712 | CompressionProcessing | 92.86% | 1.4859
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age2 | 26 | 50.00% | 50.00% | 0.9078 | 0.8263 | CompressionProcessing | 50.00% | 0.1737
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age3 | 13 | 84.62% | 15.38% | 0.5360 | 0.4879 | CompressionProcessing | 84.62% | 1.2045
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age4 | 11 | 63.64% | 36.36% | 0.8600 | 0.7828 | CompressionProcessing | 63.64% | 0.4900
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age5 | 7 | 14.29% | 85.71% | 0.7963 | 0.7248 | NeutralProcessing | 71.43% | 0.0000
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age6-10 | 3 | 66.67% | 33.33% | 0.6365 | 0.9183 | CompressionProcessing | 66.67% | 0.0000
+PreviousDistinctContext | DestructiveRotation->ConstructiveEmergence+Age1 | 3 | 0.00% | 100.00% | -0.0000 | 0.0000 | MixedStructure | 100.00% | 0.0000
+PreviousDistinctContext | DestructiveRotation->DecayToNeutral+Age1 | 302 | 0.00% | 100.00% | 1.2661 | 0.7066 | NeutralProcessing | 52.65% | -0.1801
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age1 | 110 | 23.64% | 76.36% | 1.5113 | 0.9390 | DecayToNeutral | 33.64% | -0.3663
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age2 | 26 | 73.08% | 26.92% | 0.5825 | 0.8404 | ExhaustionPersistence | 73.08% | 0.6212
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age3 | 19 | 52.63% | 47.37% | 0.9933 | 0.9041 | ExhaustionPersistence | 52.63% | 0.1485
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age4 | 10 | 40.00% | 60.00% | 1.2799 | 0.9232 | ExhaustionPersistence | 40.00% | -0.1232
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age5 | 4 | 50.00% | 50.00% | 1.0397 | 0.9464 | ExhaustionPersistence | 50.00% | 0.0000
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age6-10 | 3 | 33.33% | 66.67% | 1.0986 | 1.0000 | ExhaustionPersistence | 33.33% | 0.0000
+PreviousDistinctContext | DestructiveRotation->MixedStructure+Age1 | 47 | 10.64% | 89.36% | 1.7799 | 0.8559 | NeutralProcessing | 25.53% | -0.4942
+PreviousDistinctContext | DestructiveRotation->MixedStructure+Age2 | 5 | 0.00% | 100.00% | 1.3322 | 0.9610 | DecayToNeutral | 40.00% | 0.0000
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age1 | 240 | 54.58% | 45.42% | 1.2886 | 0.7192 | NeutralProcessing | 54.58% | 0.3725
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age11-20 | 25 | 76.00% | 24.00% | 0.7938 | 0.5726 | NeutralProcessing | 76.00% | 0.9474
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age2 | 131 | 52.67% | 47.33% | 1.1780 | 0.6574 | NeutralProcessing | 52.67% | 0.3960
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age3 | 69 | 76.81% | 23.19% | 0.7675 | 0.5536 | NeutralProcessing | 76.81% | 0.9826
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age4 | 53 | 90.57% | 9.43% | 0.3597 | 0.3274 | NeutralProcessing | 90.57% | 1.4839
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age5 | 48 | 77.08% | 22.92% | 0.8349 | 0.4660 | NeutralProcessing | 77.08% | 1.0757
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age6-10 | 104 | 70.19% | 29.81% | 1.0278 | 0.5736 | NeutralProcessing | 70.19% | 0.8302
+PreviousDistinctContext | DestructiveRotation->ReassertionProcessing+Age1 | 57 | 10.53% | 89.47% | 1.1500 | 0.8296 | DestructiveRotation | 54.39% | -0.1805
+PreviousDistinctContext | DestructiveRotation->ReassertionProcessing+Age2 | 6 | 0.00% | 100.00% | 0.4506 | 0.6500 | DestructiveRotation | 83.33% | 0.0000
+PreviousDistinctContext | DestructiveRotation->RecoveryResolution+Age1 | 49 | 0.00% | 100.00% | 0.4101 | 0.5917 | CompressionProcessing | 85.71% | 0.2655
+PreviousDistinctContext | ExhaustionPersistence->CompressionProcessing+Age1 | 167 | 44.91% | 55.09% | 1.1715 | 0.6538 | CompressionProcessing | 44.91% | 0.2444
+PreviousDistinctContext | ExhaustionPersistence->CompressionProcessing+Age2 | 75 | 42.67% | 57.33% | 1.5299 | 0.8538 | CompressionProcessing | 42.67% | -0.0005
+PreviousDistinctContext | ExhaustionPersistence->CompressionProcessing+Age3 | 32 | 50.00% | 50.00% | 0.8815 | 0.8024 | CompressionProcessing | 50.00% | 0.1976
+PreviousDistinctContext | ExhaustionPersistence->CompressionProcessing+Age4 | 16 | 68.75% | 31.25% | 0.9507 | 0.6858 | CompressionProcessing | 68.75% | 0.6892
+PreviousDistinctContext | ExhaustionPersistence->CompressionProcessing+Age5 | 11 | 54.55% | 45.45% | 0.6890 | 0.9940 | CompressionProcessing | 54.55% | 0.0969
+PreviousDistinctContext | ExhaustionPersistence->CompressionProcessing+Age6-10 | 14 | 57.14% | 42.86% | 1.0547 | 0.7608 | CompressionProcessing | 57.14% | 0.3820
+PreviousDistinctContext | ExhaustionPersistence->DecayToNeutral+Age1 | 275 | 0.00% | 100.00% | 1.0302 | 0.6401 | NeutralProcessing | 56.73% | -0.0729
+PreviousDistinctContext | ExhaustionPersistence->DestructiveRotation+Age1 | 59 | 23.73% | 76.27% | 1.0270 | 0.6381 | DecayToNeutral | 62.71% | 0.2263
+PreviousDistinctContext | ExhaustionPersistence->DestructiveRotation+Age2 | 14 | 7.14% | 92.86% | 1.1164 | 0.8053 | DecayToNeutral | 57.14% | -0.1624
+PreviousDistinctContext | ExhaustionPersistence->DestructiveRotation+Age3 | 1 | 0.00% | 100.00% | -0.0000 | 0.0000 | DecayToNeutral | 100.00% | 0.0000
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age1 | 275 | 49.09% | 50.91% | 0.9792 | 0.7063 | NeutralProcessing | 49.09% | 0.2755
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age11-20 | 41 | 73.17% | 26.83% | 0.9482 | 0.5292 | NeutralProcessing | 73.17% | 0.9342
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age2 | 135 | 60.74% | 39.26% | 1.0949 | 0.6803 | NeutralProcessing | 60.74% | 0.5345
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age3 | 82 | 71.95% | 28.05% | 0.6436 | 0.5858 | NeutralProcessing | 71.95% | 0.8532
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age4 | 59 | 88.14% | 11.86% | 0.5157 | 0.3204 | NeutralProcessing | 88.14% | 1.4423
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age5 | 52 | 84.62% | 15.38% | 0.6859 | 0.3525 | NeutralProcessing | 84.62% | 1.3398
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age6-10 | 134 | 75.37% | 24.63% | 0.8861 | 0.4554 | NeutralProcessing | 75.37% | 1.0521
+PreviousDistinctContext | ExhaustionPersistence->RecoveryResolution+Age1 | 340 | 99.71% | 0.29% | 0.0201 | 0.0290 | RecoveryResolution | 99.71% | 1.9651
+PreviousDistinctContext | ExhaustionPersistence->RecoveryResolution+Age2 | 339 | 74.04% | 25.96% | 0.5726 | 0.8261 | RecoveryResolution | 74.04% | 0.6547
+PreviousDistinctContext | ExhaustionPersistence->RecoveryResolution+Age3 | 251 | 6.37% | 93.63% | 0.9486 | 0.6843 | CompressionProcessing | 68.92% | 0.0687
+PreviousDistinctContext | ExhaustionPersistence->RecoveryResolution+Age4 | 16 | 37.50% | 62.50% | 0.6616 | 0.9544 | CompressionProcessing | 62.50% | 0.0456
+PreviousDistinctContext | ExhaustionPersistence->RecoveryResolution+Age5 | 6 | 83.33% | 16.67% | 0.4506 | 0.6500 | RecoveryResolution | 83.33% | 0.0000
+PreviousDistinctContext | ExhaustionPersistence->RecoveryResolution+Age6-10 | 5 | 0.00% | 100.00% | 0.6730 | 0.9710 | CompressionProcessing | 60.00% | 0.0000
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age1 | 98 | 83.67% | 16.33% | 0.4450 | 0.6421 | CompressionProcessing | 83.67% | 1.0314
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age2 | 82 | 63.41% | 36.59% | 0.7632 | 0.5506 | CompressionProcessing | 63.41% | 0.7177
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age3 | 52 | 53.85% | 46.15% | 1.0906 | 0.7867 | CompressionProcessing | 53.85% | 0.2902
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age4 | 28 | 78.57% | 21.43% | 0.7363 | 0.5311 | CompressionProcessing | 78.57% | 1.0403
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age5 | 22 | 36.36% | 63.64% | 1.6572 | 0.8516 | CompressionProcessing | 36.36% | -0.1243
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age6-10 | 15 | 46.67% | 53.33% | 1.0833 | 0.7814 | CompressionProcessing | 46.67% | 0.1519
+PreviousDistinctContext | MixedStructure->ConstructiveEmergence+Age1 | 20 | 0.00% | 100.00% | 1.2312 | 0.8881 | MixedStructure | 35.00% | -0.5381
+PreviousDistinctContext | MixedStructure->DecayToNeutral+Age1 | 789 | 0.00% | 100.00% | 0.9335 | 0.5800 | NeutralProcessing | 54.75% | -0.0325
+PreviousDistinctContext | MixedStructure->DestructiveRotation+Age1 | 70 | 27.14% | 72.86% | 1.3521 | 0.8401 | DecayToNeutral | 34.29% | -0.2259
+PreviousDistinctContext | MixedStructure->DestructiveRotation+Age2 | 19 | 26.32% | 73.68% | 1.6775 | 0.9362 | DecayToNeutral | 26.32% | -0.4099
+PreviousDistinctContext | MixedStructure->DestructiveRotation+Age3 | 5 | 20.00% | 80.00% | 1.3322 | 0.9610 | NeutralProcessing | 40.00% | 0.0000
+PreviousDistinctContext | MixedStructure->DestructiveRotation+Age4 | 1 | 0.00% | 100.00% | -0.0000 | 0.0000 | DecayToNeutral | 100.00% | 0.0000
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age1 | 452 | 25.00% | 75.00% | 1.5100 | 0.9382 | DecayToNeutral | 30.31% | -0.3851
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age2 | 113 | 83.19% | 16.81% | 0.4529 | 0.6534 | ExhaustionPersistence | 83.19% | 1.0103
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age3 | 94 | 61.70% | 38.30% | 0.8684 | 0.7904 | ExhaustionPersistence | 61.70% | 0.4436
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age4 | 58 | 34.48% | 65.52% | 1.5757 | 0.8794 | ExhaustionPersistence | 34.48% | -0.1898
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age5 | 20 | 25.00% | 75.00% | 1.5114 | 0.9391 | DecayToNeutral | 25.00% | -0.4391
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age6-10 | 8 | 37.50% | 62.50% | 1.3209 | 0.9528 | ExhaustionPersistence | 37.50% | 0.0000
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age1 | 1335 | 58.65% | 41.35% | 1.0773 | 0.6694 | NeutralProcessing | 58.65% | 0.5037
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age11-20 | 215 | 78.60% | 21.40% | 0.8099 | 0.4520 | NeutralProcessing | 78.60% | 1.1201
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age2 | 783 | 54.66% | 45.34% | 1.1333 | 0.7041 | NeutralProcessing | 54.66% | 0.3891
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age21+ | 18 | 77.78% | 22.22% | 0.6837 | 0.6224 | NeutralProcessing | 77.78% | 0.9332
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age3 | 428 | 63.32% | 36.68% | 1.0015 | 0.6223 | NeutralProcessing | 63.32% | 0.6441
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age4 | 271 | 93.73% | 6.27% | 0.3296 | 0.1840 | NeutralProcessing | 93.73% | 1.6906
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age5 | 254 | 83.46% | 16.54% | 0.6810 | 0.3801 | NeutralProcessing | 83.46% | 1.2892
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age6-10 | 632 | 74.37% | 25.63% | 0.8863 | 0.4947 | NeutralProcessing | 74.37% | 0.9927
+PreviousDistinctContext | MixedStructure->ReassertionProcessing+Age1 | 162 | 10.49% | 89.51% | 1.1612 | 0.7215 | MixedStructure | 62.96% | 0.0131
+PreviousDistinctContext | MixedStructure->ReassertionProcessing+Age2 | 17 | 5.88% | 94.12% | 0.4438 | 0.4039 | DestructiveRotation | 88.24% | 0.5373
+PreviousDistinctContext | MixedStructure->ReassertionProcessing+Age3 | 1 | 0.00% | 100.00% | -0.0000 | 0.0000 | DestructiveRotation | 100.00% | 0.0000
+PreviousDistinctContext | MixedStructure->RecoveryResolution+Age1 | 338 | 0.00% | 100.00% | 0.4853 | 0.7001 | CompressionProcessing | 81.07% | 0.1105
+PreviousDistinctContext | NeutralProcessing->CompressionProcessing+Age1 | 1629 | 47.64% | 52.36% | 1.1738 | 0.6032 | CompressionProcessing | 47.64% | 0.3495
+PreviousDistinctContext | NeutralProcessing->CompressionProcessing+Age11-20 | 1 | 0.00% | 100.00% | -0.0000 | 0.0000 | ExhaustionPersistence | 100.00% | 0.0000
+PreviousDistinctContext | NeutralProcessing->CompressionProcessing+Age2 | 776 | 40.08% | 59.92% | 1.2288 | 0.5592 | NeutralProcessing | 43.56% | 0.2771
+PreviousDistinctContext | NeutralProcessing->CompressionProcessing+Age3 | 311 | 61.74% | 38.26% | 1.3022 | 0.6262 | CompressionProcessing | 61.74% | 0.6085
+PreviousDistinctContext | NeutralProcessing->CompressionProcessing+Age4 | 192 | 61.46% | 38.54% | 0.9923 | 0.5538 | CompressionProcessing | 61.46% | 0.6753
+PreviousDistinctContext | NeutralProcessing->CompressionProcessing+Age5 | 118 | 37.29% | 62.71% | 1.6591 | 0.7979 | CompressionProcessing | 37.29% | -0.0521
+PreviousDistinctContext | NeutralProcessing->CompressionProcessing+Age6-10 | 78 | 44.87% | 55.13% | 1.4663 | 0.7535 | CompressionProcessing | 44.87% | 0.1439
+PreviousDistinctContext | NeutralProcessing->ConstructiveEmergence+Age1 | 43 | 0.00% | 100.00% | 1.0253 | 0.7396 | MixedStructure | 48.84% | -0.2512
+PreviousDistinctContext | NeutralProcessing->DestructiveRotation+Age1 | 277 | 7.94% | 92.06% | 1.6970 | 0.8721 | NeutralProcessing | 35.02% | -0.4425
+PreviousDistinctContext | NeutralProcessing->DestructiveRotation+Age2 | 22 | 9.09% | 90.91% | 1.7047 | 0.8761 | DecayToNeutral | 36.36% | -0.4215
+PreviousDistinctContext | NeutralProcessing->DestructiveRotation+Age3 | 2 | 0.00% | 100.00% | -0.0000 | 0.0000 | DecayToNeutral | 100.00% | 0.0000
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age1 | 90 | 26.67% | 73.33% | 1.1441 | 0.8253 | NeutralProcessing | 48.89% | -0.0697
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age2 | 24 | 87.50% | 12.50% | 0.3768 | 0.5436 | ExhaustionPersistence | 87.50% | 1.2064
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age3 | 21 | 61.90% | 38.10% | 0.8081 | 0.7355 | ExhaustionPersistence | 61.90% | 0.5026
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age4 | 13 | 30.77% | 69.23% | 1.2659 | 0.9131 | DecayToNeutral | 38.46% | -0.2208
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age5 | 4 | 25.00% | 75.00% | 1.0397 | 0.9464 | NeutralProcessing | 50.00% | 0.0000
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age6-10 | 2 | 50.00% | 50.00% | 0.6931 | 1.0000 | ExhaustionPersistence | 50.00% | 0.0000
+PreviousDistinctContext | NeutralProcessing->MixedStructure+Age1 | 2080 | 7.74% | 92.26% | 1.6588 | 0.7550 | NeutralProcessing | 42.07% | -0.2569
+PreviousDistinctContext | NeutralProcessing->MixedStructure+Age2 | 161 | 10.56% | 89.44% | 1.4696 | 0.7067 | NeutralProcessing | 49.07% | -0.1104
+PreviousDistinctContext | NeutralProcessing->MixedStructure+Age3 | 17 | 17.65% | 82.35% | 1.3854 | 0.8608 | DecayToNeutral | 47.06% | -0.2137
+PreviousDistinctContext | NeutralProcessing->MixedStructure+Age4 | 3 | 0.00% | 100.00% | 0.6365 | 0.9183 | ExhaustionPersistence | 66.67% | 0.0000
+PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age1 | 1486 | 14.06% | 85.94% | 1.3091 | 0.7306 | NeutralProcessing | 46.97% | -0.1202
+PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age2 | 209 | 6.70% | 93.30% | 0.9971 | 0.7193 | NeutralProcessing | 49.28% | -0.1595
+PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age3 | 14 | 0.00% | 100.00% | 0.2573 | 0.3712 | DestructiveRotation | 92.86% | 0.5573
+PreviousDistinctContext | NeutralProcessing->RecoveryResolution+Age1 | 67 | 0.00% | 100.00% | 0.6796 | 0.9805 | NeutralProcessing | 58.21% | -0.3984
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age1 | 107 | 75.70% | 24.30% | 0.5545 | 0.8000 | CompressionProcessing | 75.70% | 0.7140
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age2 | 81 | 69.14% | 30.86% | 0.8600 | 0.6204 | CompressionProcessing | 69.14% | 0.7623
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age3 | 56 | 60.71% | 39.29% | 0.9670 | 0.6975 | CompressionProcessing | 60.71% | 0.5167
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age4 | 34 | 64.71% | 35.29% | 0.9879 | 0.7126 | CompressionProcessing | 64.71% | 0.5815
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age5 | 22 | 36.36% | 63.64% | 1.5267 | 0.8521 | CompressionProcessing | 36.36% | -0.1248
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age6-10 | 16 | 50.00% | 50.00% | 1.1433 | 0.8247 | CompressionProcessing | 50.00% | 0.1753
+PreviousDistinctContext | ReassertionProcessing->ConstructiveEmergence+Age1 | 10 | 0.00% | 100.00% | 0.6931 | 1.0000 | NeutralProcessing | 50.00% | -0.5000
+PreviousDistinctContext | ReassertionProcessing->DestructiveRotation+Age1 | 251 | 7.97% | 92.03% | 1.7238 | 0.7845 | NeutralProcessing | 41.83% | -0.2865
+PreviousDistinctContext | ReassertionProcessing->DestructiveRotation+Age2 | 20 | 0.00% | 100.00% | 0.8954 | 0.5563 | DecayToNeutral | 75.00% | 0.1937
+PreviousDistinctContext | ReassertionProcessing->MixedStructure+Age1 | 560 | 11.43% | 88.57% | 1.5056 | 0.7240 | NeutralProcessing | 51.79% | -0.0919
+PreviousDistinctContext | ReassertionProcessing->MixedStructure+Age2 | 64 | 7.81% | 92.19% | 1.0809 | 0.6716 | DecayToNeutral | 62.50% | 0.0316
+PreviousDistinctContext | ReassertionProcessing->MixedStructure+Age3 | 5 | 20.00% | 80.00% | 1.0549 | 0.9602 | DecayToNeutral | 40.00% | 0.0000
+PreviousDistinctContext | ReassertionProcessing->MixedStructure+Age4 | 1 | 0.00% | 100.00% | -0.0000 | 0.0000 | DecayToNeutral | 100.00% | 0.0000
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age1 | 831 | 61.01% | 38.99% | 1.0785 | 0.6019 | NeutralProcessing | 61.01% | 0.6183
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age11-20 | 158 | 75.95% | 24.05% | 0.8531 | 0.4761 | NeutralProcessing | 75.95% | 1.0429
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age2 | 507 | 57.79% | 42.21% | 1.0893 | 0.6768 | NeutralProcessing | 57.79% | 0.4790
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age21+ | 5 | 40.00% | 60.00% | 0.6730 | 0.9710 | CompressionProcessing | 60.00% | 0.0000
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age3 | 293 | 60.75% | 39.25% | 1.0183 | 0.6327 | NeutralProcessing | 60.75% | 0.5823
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age4 | 178 | 100.00% | 0.00% | -0.0000 | 0.0000 | NeutralProcessing | 100.00% | 2.0000
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age5 | 178 | 85.96% | 14.04% | 0.6149 | 0.3432 | NeutralProcessing | 85.96% | 1.3759
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age6-10 | 503 | 77.73% | 22.27% | 0.8394 | 0.4313 | NeutralProcessing | 77.73% | 1.1233
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age1 | 793 | 64.94% | 35.06% | 0.9873 | 0.7122 | CompressionProcessing | 64.94% | 0.5867
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age11-20 | 4 | 50.00% | 50.00% | 1.0397 | 0.9464 | CompressionProcessing | 50.00% | 0.0000
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age2 | 515 | 60.19% | 39.81% | 1.1650 | 0.5603 | CompressionProcessing | 60.19% | 0.6436
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age3 | 310 | 64.84% | 35.16% | 0.9375 | 0.5232 | CompressionProcessing | 64.84% | 0.7735
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age4 | 201 | 37.31% | 62.69% | 1.6177 | 0.7780 | CompressionProcessing | 37.31% | -0.0317
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age5 | 75 | 66.67% | 33.33% | 1.0807 | 0.6031 | CompressionProcessing | 66.67% | 0.7302
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age6-10 | 102 | 52.94% | 47.06% | 1.4090 | 0.7241 | CompressionProcessing | 52.94% | 0.3347
+PreviousDistinctContext | RecoveryResolution->ExhaustionPersistence+Age1 | 31 | 41.94% | 58.06% | 1.0681 | 0.9722 | ExhaustionPersistence | 41.94% | -0.1335
+PreviousDistinctContext | RecoveryResolution->ExhaustionPersistence+Age2 | 13 | 46.15% | 53.85% | 1.0579 | 0.9629 | ExhaustionPersistence | 46.15% | -0.0399
+PreviousDistinctContext | RecoveryResolution->ExhaustionPersistence+Age3 | 6 | 33.33% | 66.67% | 1.0986 | 1.0000 | DecayToNeutral | 33.33% | 0.0000
+PreviousDistinctContext | RecoveryResolution->ExhaustionPersistence+Age4 | 2 | 100.00% | 0.00% | -0.0000 | 0.0000 | ExhaustionPersistence | 100.00% | 0.0000
+PreviousDistinctContext | RecoveryResolution->ExhaustionPersistence+Age5 | 2 | 50.00% | 50.00% | 0.6931 | 1.0000 | DestructiveRotation | 50.00% | 0.0000
+PreviousDistinctContext | RecoveryResolution->ExhaustionPersistence+Age6-10 | 3 | 66.67% | 33.33% | 0.6365 | 0.9183 | ExhaustionPersistence | 66.67% | 0.0000
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age1 | 255 | 58.43% | 41.57% | 0.6789 | 0.9794 | NeutralProcessing | 58.43% | 0.1892
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age11-20 | 36 | 83.33% | 16.67% | 0.6576 | 0.4086 | NeutralProcessing | 83.33% | 1.2581
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age2 | 149 | 51.01% | 48.99% | 0.8153 | 0.7421 | NeutralProcessing | 51.01% | 0.2780
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age21+ | 7 | 71.43% | 28.57% | 0.7963 | 0.7248 | NeutralProcessing | 71.43% | 0.0000
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age3 | 76 | 77.63% | 22.37% | 0.5315 | 0.7668 | NeutralProcessing | 77.63% | 0.7858
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age4 | 59 | 86.44% | 13.56% | 0.5760 | 0.3579 | NeutralProcessing | 86.44% | 1.3709
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age5 | 51 | 74.51% | 25.49% | 0.8373 | 0.6040 | NeutralProcessing | 74.51% | 0.8862
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age6-10 | 104 | 71.15% | 28.85% | 0.9382 | 0.5829 | NeutralProcessing | 71.15% | 0.8402
+ValidatedContext | B:RecoveryResolution->CompressionProcessing+Age3 | 310 | 64.84% | 35.16% | 0.9375 | 0.5232 | CompressionProcessing | 64.84% | 0.7735
+ValidatedContext | C:RecoveryResolution->NeutralProcessing+Age1 | 255 | 58.43% | 41.57% | 0.6789 | 0.9794 | NeutralProcessing | 58.43% | 0.1892
+ValidatedContext | D:DecayToNeutral->NeutralProcessing+Age4 | 233 | 86.27% | 13.73% | 0.6153 | 0.3434 | NeutralProcessing | 86.27% | 1.3819
+
+2. Interpretation scoring examples
+BarIndex | WinnerType | WinnerKey | WinnerScore | RunnerUpScore | ScoreMargin | DominanceRatio | AmbiguityClass
+54 | CurrentStateAge | NeutralProcessing+Age1 | 0.3827 | 0.0000 | 0.3827 | N/A | Moderate
+57 | CurrentStateAge | NeutralProcessing+Age1 | 0.4900 | 0.0000 | 0.4900 | N/A | Moderate
+60 | CurrentStateAge | NeutralProcessing+Age1 | 0.5833 | 0.0000 | 0.5833 | N/A | Clear
+64 | CurrentStateAge | NeutralProcessing+Age1 | 0.6653 | 0.0000 | 0.6653 | N/A | Clear
+68 | CurrentStateAge | NeutralProcessing+Age1 | 0.7378 | 0.0000 | 0.7378 | N/A | Clear
+69 | CurrentStateAge | NeutralProcessing+Age2 | -0.3350 | 0.0000 | -0.3350 | N/A | Unresolved
+73 | CurrentStateAge | NeutralProcessing+Age1 | 0.8023 | 0.0000 | 0.8023 | N/A | Clear
+74 | CurrentStateAge | NeutralProcessing+Age2 | -0.1849 | 0.0000 | -0.1849 | N/A | Unresolved
+77 | CurrentStateAge | NeutralProcessing+Age1 | 0.8602 | 0.0000 | 0.8602 | N/A | Clear
+78 | CurrentStateAge | NeutralProcessing+Age2 | -0.2760 | 0.0000 | -0.2760 | N/A | Unresolved
+88 | CurrentStateAge | CompressionProcessing+Age1 | 0.1573 | 0.0000 | 0.1573 | N/A | Ambiguous
+92 | CurrentStateAge | NeutralProcessing+Age1 | 0.9124 | 0.0000 | 0.9124 | N/A | Clear
+93 | CurrentStateAge | NeutralProcessing+Age2 | -0.3570 | 0.0000 | -0.3570 | N/A | Unresolved
+97 | CurrentStateAge | NeutralProcessing+Age1 | 0.9596 | 0.0000 | 0.9596 | N/A | Clear
+98 | CurrentStateAge | CompressionProcessing+Age1 | 0.2823 | 0.0000 | 0.2823 | N/A | Moderate
+102 | CurrentStateAge | NeutralProcessing+Age1 | 0.8292 | 0.0000 | 0.8292 | N/A | Clear
+112 | CurrentStateAge | CompressionProcessing+Age1 | 0.1352 | 0.0000 | 0.1352 | N/A | Ambiguous
+116 | CurrentStateAge | CompressionProcessing+Age1 | 0.2423 | 0.0000 | 0.2423 | N/A | Moderate
+117 | CurrentStateAge | NeutralProcessing+Age1 | 0.7716 | 0.0000 | 0.7716 | N/A | Clear
+118 | CurrentStateAge | NeutralProcessing+Age2 | -0.2375 | 0.0000 | -0.2375 | N/A | Unresolved
+126 | CurrentStateAge | NeutralProcessing+Age1 | 0.8182 | 0.0000 | 0.8182 | N/A | Clear
+127 | CurrentStateAge | NeutralProcessing+Age2 | -0.1285 | 0.0000 | -0.1285 | N/A | Unresolved
+135 | CurrentStateAge | ExhaustionPersistence+Age1 | -0.5675 | 0.0000 | -0.5675 | N/A | Unresolved
+139 | CurrentStateAge | MixedStructure+Age1 | -0.5696 | 0.0000 | -0.5696 | N/A | Unresolved
+141 | CurrentStateAge | MixedStructure+Age1 | -0.6096 | 0.0000 | -0.6096 | N/A | Unresolved
+143 | CurrentStateAge | NeutralProcessing+Age1 | 0.8612 | 0.0000 | 0.8612 | N/A | Clear
+144 | CurrentStateAge | NeutralProcessing+Age2 | -0.0292 | 0.0000 | -0.0292 | N/A | Unresolved
+145 | CurrentStateAge | MixedStructure+Age1 | -0.5411 | 0.0000 | -0.5411 | N/A | Unresolved
+146 | CurrentStateAge | NeutralProcessing+Age1 | 0.9010 | 0.0000 | 0.9010 | N/A | Clear
+148 | CurrentStateAge | MixedStructure+Age1 | -0.5633 | 0.0000 | -0.5633 | N/A | Unresolved
+149 | CurrentStateAge | NeutralProcessing+Age1 | 0.7802 | 0.0000 | 0.7802 | N/A | Clear
+151 | CurrentStateAge | NeutralProcessing+Age1 | 0.6829 | 0.0000 | 0.6829 | N/A | Clear
+152 | PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age1 | -0.1173 | -0.1173 | 0.0000 | N/A | Unresolved
+153 | CurrentStateAge | MixedStructure+Age1 | -0.5013 | 0.0000 | -0.5013 | N/A | Unresolved
+154 | CurrentStateAge | ReassertionProcessing+Age1 | -0.1978 | 0.0000 | -0.1978 | N/A | Unresolved
+155 | CurrentStateAge | MixedStructure+Age1 | -0.5300 | 0.0000 | -0.5300 | N/A | Unresolved
+156 | CurrentStateAge | NeutralProcessing+Age1 | 0.6015 | 0.0000 | 0.6015 | N/A | Clear
+157 | PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age1 | -0.1978 | -0.2527 | 0.0548 | N/A | Ambiguous
+158 | CurrentStateAge | MixedStructure+Age1 | -0.4716 | 0.0000 | -0.4716 | N/A | Unresolved
+159 | CurrentStateAge | ExhaustionPersistence+Age1 | -0.4872 | 0.0000 | -0.4872 | N/A | Unresolved
+164 | CurrentStateAge | CompressionProcessing+Age1 | 0.1553 | 0.0000 | 0.1553 | N/A | Ambiguous
+165 | CurrentStateAge | ExhaustionPersistence+Age1 | -0.5260 | 0.0000 | -0.5260 | N/A | Unresolved
+171 | CurrentStateAge | DecayToNeutral+Age1 | -0.5232 | 0.0000 | -0.5232 | N/A | Unresolved
+172 | CurrentStateAge | NeutralProcessing+Age1 | 0.5318 | 0.0000 | 0.5318 | N/A | Clear
+173 | CurrentStateAge | NeutralProcessing+Age2 | -0.0967 | 0.0000 | -0.0967 | N/A | Unresolved
+179 | CurrentStateAge | MixedStructure+Age1 | -0.4974 | 0.0000 | -0.4974 | N/A | Unresolved
+180 | CurrentStateAge | NeutralProcessing+Age1 | 0.5725 | 0.0000 | 0.5725 | N/A | Clear
+181 | CurrentStateAge | NeutralProcessing+Age2 | -0.0095 | 0.0000 | -0.0095 | N/A | Unresolved
+193 | CurrentStateAge | CompressionProcessing+Age1 | 0.0601 | 0.0000 | 0.0601 | N/A | Ambiguous
+197 | CurrentStateAge | ReassertionProcessing+Age1 | -0.2908 | 0.0000 | -0.2908 | N/A | Unresolved
+199 | CurrentStateAge | CompressionProcessing+Age1 | 0.1486 | 0.0000 | 0.1486 | N/A | Ambiguous
+207 | CurrentStateAge | NeutralProcessing+Age1 | 0.6110 | 0.0000 | 0.6110 | N/A | Clear
+208 | PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age1 | -0.2527 | -0.3427 | 0.0900 | N/A | Ambiguous
+209 | CurrentStateAge | NeutralProcessing+Age1 | 0.5502 | 0.0000 | 0.5502 | N/A | Clear
+210 | CurrentStateAge | NeutralProcessing+Age2 | 0.0708 | 0.0000 | 0.0708 | N/A | Ambiguous
+217 | PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age1 | -0.2021 | -0.3019 | 0.0998 | N/A | Ambiguous
+218 | CurrentStateAge | NeutralProcessing+Age1 | 0.5866 | 0.0000 | 0.5866 | N/A | Clear
+219 | CurrentStateAge | NeutralProcessing+Age2 | 0.1449 | 0.0000 | 0.1449 | N/A | Ambiguous
+220 | PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age1 | -0.1545 | -0.2619 | 0.1073 | N/A | Ambiguous
+221 | CurrentStateAge | NeutralProcessing+Age1 | 0.6211 | 0.0000 | 0.6211 | N/A | Clear
+222 | PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age1 | -0.1100 | -0.2232 | 0.1132 | N/A | Ambiguous
+223 | CurrentStateAge | MixedStructure+Age1 | -0.4452 | 0.0000 | -0.4452 | N/A | Unresolved
+224 | CurrentStateAge | ReassertionProcessing+Age1 | -0.2609 | 0.0000 | -0.2609 | N/A | Unresolved
+225 | CurrentStateAge | MixedStructure+Age1 | -0.4858 | 0.0000 | -0.4858 | N/A | Unresolved
+226 | CurrentStateAge | DecayToNeutral+Age1 | -0.5702 | 0.0000 | -0.5702 | N/A | Unresolved
+227 | CurrentStateAge | MixedStructure+Age1 | -0.5029 | 0.0000 | -0.5029 | N/A | Unresolved
+228 | CurrentStateAge | DecayToNeutral+Age1 | -0.5944 | 0.0000 | -0.5944 | N/A | Unresolved
+229 | CurrentStateAge | MixedStructure+Age1 | -0.5137 | 0.0000 | -0.5137 | N/A | Unresolved
+230 | CurrentStateAge | ReassertionProcessing+Age1 | -0.2905 | 0.0000 | -0.2905 | N/A | Unresolved
+232 | CurrentStateAge | DecayToNeutral+Age1 | -0.5285 | 0.0000 | -0.5285 | N/A | Unresolved
+233 | CurrentStateAge | NeutralProcessing+Age1 | 0.5670 | 0.0000 | 0.5670 | N/A | Clear
+234 | CurrentStateAge | NeutralProcessing+Age2 | 0.0856 | 0.0000 | 0.0856 | N/A | Ambiguous
+235 | CurrentStateAge | NeutralProcessing+Age3 | 0.6702 | 0.0000 | 0.6702 | N/A | Clear
+238 | CurrentStateAge | NeutralProcessing+Age6-10 | 1.0183 | 0.0000 | 1.0183 | N/A | Clear
+239 | CurrentStateAge | NeutralProcessing+Age6-10 | 1.0901 | 0.0000 | 1.0901 | N/A | Clear
+240 | CurrentStateAge | MixedStructure+Age1 | -0.5376 | 0.0000 | -0.5376 | N/A | Unresolved
+243 | CurrentStateAge | CompressionProcessing+Age1 | 0.2293 | 0.0000 | 0.2293 | N/A | Moderate
+244 | CurrentStateAge | NeutralProcessing+Age1 | 0.5998 | 0.0000 | 0.5998 | N/A | Clear
+245 | CurrentStateAge | CompressionProcessing+Age1 | 0.1621 | 0.0000 | 0.1621 | N/A | Ambiguous
+247 | CurrentStateAge | NeutralProcessing+Age1 | 0.5406 | 0.0000 | 0.5406 | N/A | Clear
+248 | CurrentStateAge | NeutralProcessing+Age2 | 0.1524 | 0.0000 | 0.1524 | N/A | Ambiguous
+249 | CurrentStateAge | NeutralProcessing+Age3 | 0.7632 | 0.0000 | 0.7632 | N/A | Clear
+252 | CurrentStateAge | NeutralProcessing+Age6-10 | 0.8433 | 0.0000 | 0.8433 | N/A | Clear
+253 | CurrentStateAge | NeutralProcessing+Age6-10 | 0.9130 | 0.0000 | 0.9130 | N/A | Clear
+254 | CurrentStateAge | NeutralProcessing+Age6-10 | 0.9743 | 0.0000 | 0.9743 | N/A | Clear
+255 | CurrentStateAge | NeutralProcessing+Age6-10 | 1.0286 | 0.0000 | 1.0286 | N/A | Clear
+256 | CurrentStateAge | NeutralProcessing+Age6-10 | 1.0771 | 0.0000 | 1.0771 | N/A | Clear
+265 | CurrentStateAge | NeutralProcessing+Age11-20 | 1.3310 | 0.0000 | 1.3310 | N/A | Clear
+266 | CurrentStateAge | NeutralProcessing+Age11-20 | 1.3787 | 0.0000 | 1.3787 | N/A | Clear
+277 | PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | 2.0000 | 2.0000 | 0.0000 | 1.0000 | Unresolved
+278 | PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | 2.0000 | 2.0000 | 0.0000 | 1.0000 | Unresolved
+279 | PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | 2.0000 | 2.0000 | 0.0000 | 1.0000 | Unresolved
+280 | PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | 2.0000 | 2.0000 | 0.0000 | 1.0000 | Unresolved
+281 | PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | 2.0000 | 2.0000 | 0.0000 | 1.0000 | Unresolved
+282 | PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | 2.0000 | 2.0000 | 0.0000 | 1.0000 | Unresolved
+283 | PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | 2.0000 | 2.0000 | 0.0000 | 1.0000 | Unresolved
+284 | PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | 2.0000 | 2.0000 | 0.0000 | 1.0000 | Unresolved
+285 | PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | 2.0000 | 2.0000 | 0.0000 | 1.0000 | Unresolved
+286 | CurrentStateAge | MixedStructure+Age1 | -0.5168 | 0.0000 | -0.5168 | N/A | Unresolved
+287 | CurrentStateAge | ExhaustionPersistence+Age1 | -0.5108 | 0.0000 | -0.5108 | N/A | Unresolved
+
+3. Arbitration summary
+TotalBars: 35260
+ResolvedBars: 34884
+UnresolvedBars: 376
+ClearCount: 1955
+ModerateCount: 7359
+AmbiguousCount: 15550
+UnresolvedCount: 10396
+MeanWinnerScore: 0.5006
+MeanScoreMargin: 0.1704
+MeanDominanceRatio: 16.4340
+
+4. Winner stability
+WinnerRunCount: 32349
+MeanWinnerRunLength: 1.0900
+MedianWinnerRunLength: 1.0000
+MaxWinnerRunLength: 54
+ReplacementRate: 91.74%
+
+5. Conflict analysis
+ConflictCount: 32843
+ConflictRate: 93.15%
+ContextOverrideCount: 18603
+ValidatedOverrideCount: 723
+ClearConflictCount: 1362
+AmbiguousConflictCount: 24410
+
+6. Outcome diagnostics
+WinnerType | WinnerKey | AmbiguityClass | Count | MeanDRFwd5 | MedianDRFwd5 | ContinuationRate5 | FailureRate5 | FlatRate5 | OutcomeSkew
+CurrentStateAge | CompressionProcessing+Age1 | Ambiguous | 47 | 0.0000 | 0.0000 | 53.19% | 42.55% | 4.26% | 10.64%
+CurrentStateAge | CompressionProcessing+Age1 | Clear | 31 | 0.0001 | 0.0000 | 51.61% | 45.16% | 3.23% | 6.45%
+CurrentStateAge | CompressionProcessing+Age1 | Moderate | 1591 | -0.0000 | 0.0000 | 47.45% | 48.02% | 4.53% | -0.57%
+CurrentStateAge | CompressionProcessing+Age1 | Unresolved | 409 | -0.0000 | -0.0000 | 43.77% | 51.34% | 4.89% | -7.58%
+CurrentStateAge | CompressionProcessing+Age2 | Ambiguous | 558 | -0.0001 | -0.0000 | 43.19% | 51.79% | 5.02% | -8.60%
+CurrentStateAge | CompressionProcessing+Age2 | Clear | 10 | -0.0001 | -0.0000 | 30.00% | 50.00% | 20.00% | -20.00%
+CurrentStateAge | CompressionProcessing+Age2 | Moderate | 264 | -0.0000 | -0.0000 | 43.94% | 50.00% | 6.06% | -6.06%
+CurrentStateAge | CompressionProcessing+Age2 | Unresolved | 12 | -0.0002 | -0.0001 | 33.33% | 58.33% | 8.33% | -25.00%
+CurrentStateAge | CompressionProcessing+Age3 | Ambiguous | 270 | -0.0000 | -0.0001 | 46.30% | 52.22% | 1.48% | -5.93%
+CurrentStateAge | CompressionProcessing+Age3 | Clear | 84 | 0.0000 | 0.0000 | 45.24% | 45.24% | 9.52% | 0.00%
+CurrentStateAge | CompressionProcessing+Age3 | Moderate | 62 | -0.0000 | -0.0000 | 43.55% | 50.00% | 6.45% | -6.45%
+CurrentStateAge | CompressionProcessing+Age3 | Unresolved | 39 | 0.0000 | -0.0000 | 41.03% | 51.28% | 7.69% | -10.26%
+CurrentStateAge | CompressionProcessing+Age4 | Ambiguous | 13 | 0.0001 | -0.0000 | 46.15% | 53.85% | 0.00% | -7.69%
+CurrentStateAge | CompressionProcessing+Age4 | Clear | 122 | 0.0001 | 0.0000 | 50.82% | 42.62% | 6.56% | 8.20%
+CurrentStateAge | CompressionProcessing+Age4 | Moderate | 95 | -0.0001 | -0.0000 | 42.11% | 51.58% | 6.32% | -9.47%
+CurrentStateAge | CompressionProcessing+Age4 | Unresolved | 21 | -0.0001 | -0.0001 | 28.57% | 66.67% | 4.76% | -38.10%
+CurrentStateAge | CompressionProcessing+Age5 | Ambiguous | 51 | -0.0000 | 0.0000 | 50.98% | 47.06% | 1.96% | 3.92%
+CurrentStateAge | CompressionProcessing+Age5 | Clear | 7 | -0.0002 | -0.0001 | 28.57% | 57.14% | 14.29% | -28.57%
+CurrentStateAge | CompressionProcessing+Age5 | Moderate | 134 | 0.0000 | -0.0000 | 44.78% | 50.75% | 4.48% | -5.97%
+CurrentStateAge | CompressionProcessing+Age5 | Unresolved | 1 | 0.0001 | 0.0001 | 100.00% | 0.00% | 0.00% | 100.00%
+CurrentStateAge | CompressionProcessing+Age6-10 | Ambiguous | 71 | -0.0000 | -0.0000 | 40.85% | 52.11% | 7.04% | -11.27%
+CurrentStateAge | CompressionProcessing+Age6-10 | Moderate | 67 | -0.0000 | -0.0001 | 38.81% | 55.22% | 5.97% | -16.42%
+CurrentStateAge | CompressionProcessing+Age6-10 | Unresolved | 13 | -0.0002 | -0.0002 | 30.77% | 69.23% | 0.00% | -38.46%
+CurrentStateAge | ConstructiveEmergence+Age1 | Ambiguous | 5 | -0.0000 | 0.0000 | 60.00% | 40.00% | 0.00% | 20.00%
+CurrentStateAge | ConstructiveEmergence+Age1 | Moderate | 3 | -0.0003 | -0.0002 | 33.33% | 66.67% | 0.00% | -33.33%
+CurrentStateAge | ConstructiveEmergence+Age1 | Unresolved | 31 | -0.0000 | -0.0001 | 38.71% | 54.84% | 6.45% | -16.13%
+CurrentStateAge | DecayToNeutral+Age1 | Ambiguous | 414 | 0.0000 | 0.0000 | 48.07% | 45.89% | 6.04% | 2.17%
+CurrentStateAge | DecayToNeutral+Age1 | Moderate | 4 | -0.0004 | -0.0006 | 25.00% | 75.00% | 0.00% | -50.00%
+CurrentStateAge | DecayToNeutral+Age1 | Unresolved | 105 | 0.0000 | -0.0001 | 43.81% | 52.38% | 3.81% | -8.57%
+CurrentStateAge | DestructiveRotation+Age1 | Ambiguous | 100 | 0.0000 | -0.0001 | 45.00% | 53.00% | 2.00% | -8.00%
+CurrentStateAge | DestructiveRotation+Age1 | Moderate | 5 | -0.0001 | -0.0002 | 40.00% | 60.00% | 0.00% | -20.00%
+CurrentStateAge | DestructiveRotation+Age1 | Unresolved | 195 | -0.0000 | 0.0000 | 47.18% | 49.23% | 3.59% | -2.05%
+CurrentStateAge | DestructiveRotation+Age2 | Ambiguous | 14 | -0.0003 | -0.0001 | 21.43% | 71.43% | 7.14% | -50.00%
+CurrentStateAge | DestructiveRotation+Age2 | Moderate | 10 | -0.0004 | -0.0003 | 40.00% | 60.00% | 0.00% | -20.00%
+CurrentStateAge | DestructiveRotation+Age2 | Unresolved | 48 | -0.0000 | 0.0000 | 52.08% | 45.83% | 2.08% | 6.25%
+CurrentStateAge | DestructiveRotation+Age3 | Ambiguous | 1 | 0.0000 | 0.0000 | 0.00% | 0.00% | 100.00% | 0.00%
+CurrentStateAge | ExhaustionPersistence+Age1 | Ambiguous | 4 | -0.0001 | -0.0001 | 25.00% | 75.00% | 0.00% | -50.00%
+CurrentStateAge | ExhaustionPersistence+Age1 | Unresolved | 65 | 0.0001 | 0.0001 | 56.92% | 40.00% | 3.08% | 16.92%
+CurrentStateAge | ExhaustionPersistence+Age2 | Ambiguous | 75 | -0.0001 | 0.0000 | 42.67% | 49.33% | 8.00% | -6.67%
+CurrentStateAge | ExhaustionPersistence+Age2 | Clear | 41 | -0.0001 | -0.0000 | 43.90% | 53.66% | 2.44% | -9.76%
+CurrentStateAge | ExhaustionPersistence+Age2 | Moderate | 84 | -0.0001 | -0.0001 | 39.29% | 55.95% | 4.76% | -16.67%
+CurrentStateAge | ExhaustionPersistence+Age2 | Unresolved | 35 | -0.0001 | -0.0000 | 42.86% | 51.43% | 5.71% | -8.57%
+CurrentStateAge | ExhaustionPersistence+Age3 | Ambiguous | 102 | 0.0000 | 0.0000 | 48.04% | 48.04% | 3.92% | 0.00%
+CurrentStateAge | ExhaustionPersistence+Age3 | Clear | 25 | -0.0002 | -0.0001 | 32.00% | 60.00% | 8.00% | -28.00%
+CurrentStateAge | ExhaustionPersistence+Age3 | Moderate | 46 | 0.0000 | -0.0001 | 43.48% | 56.52% | 0.00% | -13.04%
+CurrentStateAge | ExhaustionPersistence+Age3 | Unresolved | 14 | -0.0001 | 0.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+CurrentStateAge | ExhaustionPersistence+Age4 | Ambiguous | 47 | -0.0001 | 0.0000 | 48.94% | 48.94% | 2.13% | 0.00%
+CurrentStateAge | ExhaustionPersistence+Age4 | Unresolved | 25 | -0.0000 | -0.0001 | 40.00% | 52.00% | 8.00% | -12.00%
+CurrentStateAge | ExhaustionPersistence+Age5 | Ambiguous | 14 | -0.0000 | -0.0000 | 42.86% | 50.00% | 7.14% | -7.14%
+CurrentStateAge | ExhaustionPersistence+Age5 | Unresolved | 14 | 0.0001 | 0.0002 | 57.14% | 42.86% | 0.00% | 14.29%
+CurrentStateAge | ExhaustionPersistence+Age6-10 | Ambiguous | 3 | -0.0006 | -0.0008 | 33.33% | 66.67% | 0.00% | -33.33%
+CurrentStateAge | ExhaustionPersistence+Age6-10 | Moderate | 1 | -0.0008 | -0.0008 | 0.00% | 100.00% | 0.00% | -100.00%
+CurrentStateAge | ExhaustionPersistence+Age6-10 | Unresolved | 14 | -0.0001 | -0.0003 | 28.57% | 57.14% | 14.29% | -28.57%
+CurrentStateAge | MixedStructure+Age1 | Ambiguous | 87 | 0.0000 | 0.0000 | 45.98% | 47.13% | 6.90% | -1.15%
+CurrentStateAge | MixedStructure+Age1 | Moderate | 27 | 0.0001 | 0.0000 | 59.26% | 40.74% | 0.00% | 18.52%
+CurrentStateAge | MixedStructure+Age1 | Unresolved | 98 | -0.0000 | 0.0000 | 48.98% | 46.94% | 4.08% | 2.04%
+CurrentStateAge | MixedStructure+Age2 | Ambiguous | 69 | -0.0002 | -0.0001 | 40.58% | 52.17% | 7.25% | -11.59%
+CurrentStateAge | MixedStructure+Age2 | Moderate | 17 | -0.0000 | 0.0000 | 35.29% | 47.06% | 17.65% | -11.76%
+CurrentStateAge | MixedStructure+Age2 | Unresolved | 43 | 0.0001 | 0.0001 | 58.14% | 39.53% | 2.33% | 18.60%
+CurrentStateAge | MixedStructure+Age3 | Ambiguous | 3 | 0.0003 | -0.0003 | 33.33% | 66.67% | 0.00% | -33.33%
+CurrentStateAge | MixedStructure+Age3 | Unresolved | 22 | -0.0001 | -0.0001 | 45.45% | 54.55% | 0.00% | -9.09%
+CurrentStateAge | NeutralProcessing+Age1 | Ambiguous | 958 | -0.0000 | 0.0000 | 45.20% | 49.48% | 5.32% | -4.28%
+CurrentStateAge | NeutralProcessing+Age1 | Clear | 73 | -0.0001 | -0.0001 | 38.36% | 52.05% | 9.59% | -13.70%
+CurrentStateAge | NeutralProcessing+Age1 | Moderate | 216 | 0.0000 | 0.0000 | 48.61% | 43.98% | 7.41% | 4.63%
+CurrentStateAge | NeutralProcessing+Age1 | Unresolved | 1043 | -0.0000 | 0.0000 | 46.50% | 48.80% | 4.70% | -2.30%
+CurrentStateAge | NeutralProcessing+Age11-20 | Ambiguous | 204 | -0.0001 | -0.0000 | 42.65% | 50.98% | 6.37% | -8.33%
+CurrentStateAge | NeutralProcessing+Age11-20 | Clear | 55 | 0.0000 | 0.0000 | 45.45% | 41.82% | 12.73% | 3.64%
+CurrentStateAge | NeutralProcessing+Age11-20 | Moderate | 87 | 0.0001 | 0.0000 | 47.13% | 41.38% | 11.49% | 5.75%
+CurrentStateAge | NeutralProcessing+Age11-20 | Unresolved | 29 | -0.0000 | -0.0000 | 44.83% | 51.72% | 3.45% | -6.90%
+CurrentStateAge | NeutralProcessing+Age2 | Ambiguous | 565 | 0.0000 | 0.0000 | 48.85% | 47.79% | 3.36% | 1.06%
+CurrentStateAge | NeutralProcessing+Age2 | Clear | 2 | -0.0001 | -0.0001 | 50.00% | 50.00% | 0.00% | 0.00%
+CurrentStateAge | NeutralProcessing+Age2 | Moderate | 183 | 0.0001 | 0.0000 | 50.82% | 43.17% | 6.01% | 7.65%
+CurrentStateAge | NeutralProcessing+Age2 | Unresolved | 773 | -0.0000 | 0.0000 | 47.87% | 48.38% | 3.75% | -0.52%
+CurrentStateAge | NeutralProcessing+Age21+ | Ambiguous | 5 | -0.0001 | 0.0001 | 60.00% | 40.00% | 0.00% | 20.00%
+CurrentStateAge | NeutralProcessing+Age21+ | Clear | 28 | -0.0000 | 0.0000 | 46.43% | 46.43% | 7.14% | 0.00%
+CurrentStateAge | NeutralProcessing+Age21+ | Moderate | 2 | 0.0000 | 0.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+CurrentStateAge | NeutralProcessing+Age21+ | Unresolved | 1 | 0.0000 | 0.0000 | 100.00% | 0.00% | 0.00% | 100.00%
+CurrentStateAge | NeutralProcessing+Age3 | Ambiguous | 183 | -0.0000 | 0.0000 | 48.63% | 45.36% | 6.01% | 3.28%
+CurrentStateAge | NeutralProcessing+Age3 | Clear | 160 | 0.0000 | 0.0000 | 43.12% | 48.75% | 8.12% | -5.62%
+CurrentStateAge | NeutralProcessing+Age3 | Moderate | 429 | -0.0000 | 0.0000 | 46.39% | 46.39% | 7.23% | 0.00%
+CurrentStateAge | NeutralProcessing+Age3 | Unresolved | 88 | 0.0000 | 0.0000 | 48.86% | 44.32% | 6.82% | 4.55%
+CurrentStateAge | NeutralProcessing+Age4 | Ambiguous | 329 | -0.0000 | 0.0000 | 47.72% | 47.72% | 4.56% | 0.00%
+CurrentStateAge | NeutralProcessing+Age4 | Clear | 59 | 0.0000 | 0.0000 | 42.37% | 45.76% | 11.86% | -3.39%
+CurrentStateAge | NeutralProcessing+Age4 | Moderate | 37 | -0.0002 | -0.0001 | 35.14% | 62.16% | 2.70% | -27.03%
+CurrentStateAge | NeutralProcessing+Age4 | Unresolved | 151 | -0.0001 | -0.0001 | 39.07% | 52.98% | 7.95% | -13.91%
+CurrentStateAge | NeutralProcessing+Age5 | Ambiguous | 206 | -0.0000 | 0.0000 | 50.00% | 42.72% | 7.28% | 7.28%
+CurrentStateAge | NeutralProcessing+Age5 | Clear | 69 | 0.0001 | 0.0001 | 53.62% | 42.03% | 4.35% | 11.59%
+CurrentStateAge | NeutralProcessing+Age5 | Moderate | 103 | 0.0000 | 0.0000 | 48.54% | 44.66% | 6.80% | 3.88%
+CurrentStateAge | NeutralProcessing+Age5 | Unresolved | 175 | -0.0000 | -0.0000 | 42.86% | 50.86% | 6.29% | -8.00%
+CurrentStateAge | NeutralProcessing+Age6-10 | Ambiguous | 506 | -0.0000 | 0.0000 | 47.04% | 49.01% | 3.95% | -1.98%
+CurrentStateAge | NeutralProcessing+Age6-10 | Clear | 83 | 0.0000 | -0.0000 | 42.17% | 51.81% | 6.02% | -9.64%
+CurrentStateAge | NeutralProcessing+Age6-10 | Moderate | 158 | -0.0000 | -0.0000 | 46.20% | 50.63% | 3.16% | -4.43%
+CurrentStateAge | NeutralProcessing+Age6-10 | Unresolved | 579 | 0.0000 | 0.0000 | 48.01% | 48.01% | 3.97% | 0.00%
+CurrentStateAge | ReassertionProcessing+Age1 | Ambiguous | 25 | 0.0002 | 0.0000 | 52.00% | 32.00% | 16.00% | 20.00%
+CurrentStateAge | ReassertionProcessing+Age1 | Moderate | 2 | -0.0002 | -0.0002 | 50.00% | 50.00% | 0.00% | 0.00%
+CurrentStateAge | ReassertionProcessing+Age1 | Unresolved | 51 | 0.0001 | 0.0000 | 49.02% | 45.10% | 5.88% | 3.92%
+CurrentStateAge | ReassertionProcessing+Age2 | Ambiguous | 7 | 0.0000 | 0.0003 | 57.14% | 42.86% | 0.00% | 14.29%
+CurrentStateAge | ReassertionProcessing+Age2 | Moderate | 9 | 0.0002 | 0.0002 | 55.56% | 44.44% | 0.00% | 11.11%
+CurrentStateAge | ReassertionProcessing+Age2 | Unresolved | 24 | 0.0000 | 0.0001 | 58.33% | 37.50% | 4.17% | 20.83%
+CurrentStateAge | ReassertionProcessing+Age3 | Moderate | 1 | 0.0007 | 0.0007 | 100.00% | 0.00% | 0.00% | 100.00%
+CurrentStateAge | ReassertionProcessing+Age3 | Unresolved | 4 | -0.0001 | -0.0001 | 25.00% | 75.00% | 0.00% | -50.00%
+CurrentStateAge | RecoveryResolution+Age1 | Ambiguous | 17 | -0.0002 | -0.0000 | 47.06% | 52.94% | 0.00% | -5.88%
+CurrentStateAge | RecoveryResolution+Age1 | Clear | 1 | 0.0006 | 0.0006 | 100.00% | 0.00% | 0.00% | 100.00%
+CurrentStateAge | RecoveryResolution+Age1 | Moderate | 40 | -0.0000 | -0.0001 | 37.50% | 57.50% | 5.00% | -20.00%
+CurrentStateAge | RecoveryResolution+Age1 | Unresolved | 65 | 0.0000 | 0.0000 | 44.62% | 49.23% | 6.15% | -4.62%
+PreviousDistinctContext | CompressionProcessing->DecayToNeutral+Age1 | Unresolved | 1 | -0.0004 | -0.0004 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | CompressionProcessing->DestructiveRotation+Age1 | Ambiguous | 24 | 0.0002 | 0.0000 | 50.00% | 37.50% | 12.50% | 12.50%
+PreviousDistinctContext | CompressionProcessing->DestructiveRotation+Age1 | Clear | 2 | 0.0005 | 0.0005 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | CompressionProcessing->DestructiveRotation+Age1 | Moderate | 13 | 0.0000 | 0.0001 | 61.54% | 38.46% | 0.00% | 23.08%
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age1 | Ambiguous | 292 | 0.0000 | 0.0000 | 50.34% | 44.52% | 5.14% | 5.82%
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age1 | Moderate | 130 | -0.0000 | 0.0000 | 48.46% | 47.69% | 3.85% | 0.77%
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age2 | Unresolved | 2 | 0.0002 | 0.0002 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age3 | Ambiguous | 2 | 0.0006 | 0.0006 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age3 | Unresolved | 9 | -0.0004 | -0.0001 | 33.33% | 66.67% | 0.00% | -33.33%
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age4 | Ambiguous | 30 | -0.0000 | -0.0001 | 36.67% | 60.00% | 3.33% | -23.33%
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age4 | Moderate | 20 | -0.0002 | -0.0002 | 35.00% | 65.00% | 0.00% | -30.00%
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age5 | Ambiguous | 13 | 0.0002 | 0.0001 | 53.85% | 30.77% | 15.38% | 23.08%
+PreviousDistinctContext | CompressionProcessing->ExhaustionPersistence+Age5 | Unresolved | 2 | -0.0010 | -0.0010 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | CompressionProcessing->MixedStructure+Age1 | Unresolved | 17 | 0.0000 | 0.0000 | 52.94% | 47.06% | 0.00% | 5.88%
+PreviousDistinctContext | CompressionProcessing->MixedStructure+Age2 | Unresolved | 1 | -0.0007 | -0.0007 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age1 | Ambiguous | 159 | -0.0001 | -0.0000 | 37.11% | 52.83% | 10.06% | -15.72%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age1 | Moderate | 41 | 0.0000 | -0.0001 | 41.46% | 53.66% | 4.88% | -12.20%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age1 | Unresolved | 889 | 0.0000 | 0.0000 | 48.59% | 46.23% | 5.17% | 2.36%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age11-20 | Ambiguous | 144 | 0.0000 | 0.0000 | 49.31% | 47.22% | 3.47% | 2.08%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age11-20 | Clear | 1 | -0.0001 | -0.0001 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age11-20 | Moderate | 43 | 0.0000 | 0.0000 | 44.19% | 44.19% | 11.63% | 0.00%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age11-20 | Unresolved | 66 | 0.0000 | 0.0000 | 46.97% | 43.94% | 9.09% | 3.03%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age2 | Ambiguous | 115 | -0.0001 | -0.0001 | 38.26% | 53.04% | 8.70% | -14.78%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age2 | Unresolved | 457 | -0.0001 | -0.0000 | 44.20% | 51.64% | 4.16% | -7.44%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | Ambiguous | 12 | 0.0001 | 0.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age21+ | Unresolved | 10 | 0.0000 | 0.0000 | 50.00% | 40.00% | 10.00% | 10.00%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age3 | Ambiguous | 316 | 0.0001 | 0.0000 | 52.85% | 41.77% | 5.38% | 11.08%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age3 | Moderate | 2 | -0.0001 | -0.0001 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age3 | Unresolved | 34 | 0.0001 | 0.0000 | 52.94% | 44.12% | 2.94% | 8.82%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age4 | Ambiguous | 12 | -0.0003 | -0.0002 | 8.33% | 91.67% | 0.00% | -83.33%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age4 | Unresolved | 27 | 0.0001 | 0.0000 | 55.56% | 37.04% | 7.41% | 18.52%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age5 | Ambiguous | 73 | 0.0000 | -0.0001 | 42.47% | 52.05% | 5.48% | -9.59%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age5 | Clear | 1 | 0.0005 | 0.0005 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age5 | Moderate | 29 | -0.0001 | -0.0001 | 37.93% | 58.62% | 3.45% | -20.69%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age5 | Unresolved | 108 | -0.0001 | -0.0000 | 42.59% | 50.93% | 6.48% | -8.33%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age6-10 | Ambiguous | 74 | -0.0001 | -0.0001 | 39.19% | 55.41% | 5.41% | -16.22%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age6-10 | Clear | 3 | 0.0001 | 0.0002 | 66.67% | 33.33% | 0.00% | 33.33%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age6-10 | Moderate | 8 | 0.0000 | 0.0001 | 62.50% | 37.50% | 0.00% | 25.00%
+PreviousDistinctContext | CompressionProcessing->NeutralProcessing+Age6-10 | Unresolved | 166 | 0.0000 | 0.0000 | 48.19% | 45.78% | 6.02% | 2.41%
+PreviousDistinctContext | CompressionProcessing->ReassertionProcessing+Age1 | Unresolved | 1 | -0.0023 | -0.0023 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | CompressionProcessing->RecoveryResolution+Age1 | Ambiguous | 4 | 0.0000 | -0.0001 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | CompressionProcessing->RecoveryResolution+Age1 | Clear | 59 | 0.0000 | -0.0001 | 40.68% | 52.54% | 6.78% | -11.86%
+PreviousDistinctContext | CompressionProcessing->RecoveryResolution+Age1 | Moderate | 165 | 0.0001 | 0.0001 | 53.33% | 43.64% | 3.03% | 9.70%
+PreviousDistinctContext | CompressionProcessing->RecoveryResolution+Age1 | Unresolved | 1 | 0.0001 | 0.0001 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | ConstructiveEmergence->DecayToNeutral+Age1 | Ambiguous | 1 | -0.0005 | -0.0005 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | ConstructiveEmergence->MixedStructure+Age1 | Ambiguous | 28 | 0.0002 | 0.0001 | 53.57% | 39.29% | 7.14% | 14.29%
+PreviousDistinctContext | ConstructiveEmergence->MixedStructure+Age1 | Moderate | 1 | 0.0002 | 0.0002 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | ConstructiveEmergence->NeutralProcessing+Age1 | Ambiguous | 6 | 0.0001 | 0.0000 | 66.67% | 33.33% | 0.00% | 33.33%
+PreviousDistinctContext | ConstructiveEmergence->NeutralProcessing+Age1 | Moderate | 1 | 0.0000 | 0.0000 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | ConstructiveEmergence->NeutralProcessing+Age1 | Unresolved | 3 | -0.0001 | -0.0000 | 33.33% | 66.67% | 0.00% | -33.33%
+PreviousDistinctContext | ConstructiveEmergence->NeutralProcessing+Age2 | Ambiguous | 3 | 0.0003 | 0.0002 | 66.67% | 0.00% | 33.33% | 66.67%
+PreviousDistinctContext | ConstructiveEmergence->NeutralProcessing+Age2 | Unresolved | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age1 | Clear | 79 | -0.0001 | 0.0000 | 46.84% | 49.37% | 3.80% | -2.53%
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age2 | Ambiguous | 48 | 0.0001 | 0.0001 | 58.33% | 41.67% | 0.00% | 16.67%
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age2 | Moderate | 5 | -0.0000 | 0.0000 | 40.00% | 40.00% | 20.00% | 0.00%
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age2 | Unresolved | 5 | 0.0007 | 0.0005 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age3 | Ambiguous | 19 | -0.0001 | 0.0000 | 47.37% | 47.37% | 5.26% | 0.00%
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age3 | Moderate | 7 | -0.0002 | -0.0004 | 42.86% | 57.14% | 0.00% | -14.29%
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age3 | Unresolved | 1 | 0.0005 | 0.0005 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age4 | Ambiguous | 8 | -0.0003 | -0.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age4 | Moderate | 12 | 0.0001 | 0.0002 | 58.33% | 41.67% | 0.00% | 16.67%
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age4 | Unresolved | 3 | -0.0005 | -0.0001 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DecayToNeutral->CompressionProcessing+Age6-10 | Unresolved | 1 | 0.0006 | 0.0006 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | DecayToNeutral->DestructiveRotation+Age1 | Ambiguous | 9 | 0.0001 | 0.0002 | 55.56% | 33.33% | 11.11% | 22.22%
+PreviousDistinctContext | DecayToNeutral->DestructiveRotation+Age1 | Clear | 27 | 0.0001 | -0.0000 | 44.44% | 55.56% | 0.00% | -11.11%
+PreviousDistinctContext | DecayToNeutral->DestructiveRotation+Age1 | Moderate | 80 | 0.0000 | 0.0000 | 51.25% | 46.25% | 2.50% | 5.00%
+PreviousDistinctContext | DecayToNeutral->MixedStructure+Age1 | Clear | 5 | 0.0000 | 0.0000 | 40.00% | 40.00% | 20.00% | 0.00%
+PreviousDistinctContext | DecayToNeutral->MixedStructure+Age1 | Moderate | 400 | -0.0000 | -0.0000 | 44.00% | 51.25% | 4.75% | -7.25%
+PreviousDistinctContext | DecayToNeutral->MixedStructure+Age3 | Ambiguous | 3 | -0.0010 | -0.0010 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age1 | Ambiguous | 5 | -0.0002 | -0.0003 | 20.00% | 60.00% | 20.00% | -40.00%
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age1 | Clear | 5 | -0.0002 | -0.0001 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age1 | Moderate | 11 | -0.0001 | -0.0001 | 36.36% | 54.55% | 9.09% | -18.18%
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age1 | Unresolved | 24 | 0.0000 | 0.0001 | 62.50% | 33.33% | 4.17% | 29.17%
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age2 | Ambiguous | 1 | -0.0004 | -0.0004 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age2 | Moderate | 2 | 0.0001 | 0.0001 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age2 | Unresolved | 3 | 0.0001 | 0.0000 | 66.67% | 33.33% | 0.00% | 33.33%
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age21+ | Ambiguous | 1 | -0.0005 | -0.0005 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age21+ | Moderate | 2 | -0.0001 | -0.0001 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age3 | Clear | 181 | 0.0001 | 0.0000 | 50.83% | 41.44% | 7.73% | 9.39%
+PreviousDistinctContext | DecayToNeutral->NeutralProcessing+Age5 | Ambiguous | 1 | -0.0005 | -0.0005 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DecayToNeutral->ReassertionProcessing+Age1 | Unresolved | 1 | -0.0001 | -0.0001 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age1 | Clear | 16 | 0.0001 | 0.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age1 | Moderate | 2 | 0.0005 | 0.0005 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age2 | Ambiguous | 2 | -0.0002 | -0.0002 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age2 | Moderate | 4 | 0.0000 | 0.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age3 | Clear | 3 | -0.0001 | -0.0001 | 33.33% | 66.67% | 0.00% | -33.33%
+PreviousDistinctContext | DestructiveRotation->CompressionProcessing+Age4 | Moderate | 1 | -0.0006 | -0.0006 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DestructiveRotation->DecayToNeutral+Age1 | Ambiguous | 43 | -0.0000 | 0.0000 | 48.84% | 44.19% | 6.98% | 4.65%
+PreviousDistinctContext | DestructiveRotation->DecayToNeutral+Age1 | Unresolved | 44 | 0.0001 | 0.0000 | 45.45% | 47.73% | 6.82% | -2.27%
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age1 | Ambiguous | 67 | -0.0000 | 0.0000 | 46.27% | 47.76% | 5.97% | -1.49%
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age1 | Moderate | 2 | -0.0001 | -0.0001 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age1 | Unresolved | 29 | 0.0002 | 0.0001 | 58.62% | 31.03% | 10.34% | 27.59%
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age2 | Ambiguous | 3 | -0.0003 | -0.0005 | 33.33% | 66.67% | 0.00% | -33.33%
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age2 | Moderate | 4 | -0.0007 | -0.0004 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DestructiveRotation->ExhaustionPersistence+Age2 | Unresolved | 2 | 0.0003 | 0.0003 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | DestructiveRotation->MixedStructure+Age1 | Ambiguous | 1 | 0.0004 | 0.0004 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | DestructiveRotation->MixedStructure+Age1 | Unresolved | 1 | 0.0006 | 0.0006 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age1 | Unresolved | 4 | 0.0001 | 0.0001 | 75.00% | 25.00% | 0.00% | 50.00%
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age2 | Ambiguous | 1 | -0.0002 | -0.0002 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age2 | Unresolved | 19 | 0.0001 | 0.0001 | 63.16% | 36.84% | 0.00% | 26.32%
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age6-10 | Ambiguous | 3 | -0.0002 | -0.0001 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age6-10 | Moderate | 1 | -0.0001 | -0.0001 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | DestructiveRotation->NeutralProcessing+Age6-10 | Unresolved | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+PreviousDistinctContext | DestructiveRotation->ReassertionProcessing+Age1 | Ambiguous | 34 | -0.0001 | 0.0000 | 50.00% | 47.06% | 2.94% | 2.94%
+PreviousDistinctContext | DestructiveRotation->ReassertionProcessing+Age1 | Unresolved | 8 | 0.0001 | 0.0002 | 62.50% | 37.50% | 0.00% | 25.00%
+PreviousDistinctContext | DestructiveRotation->RecoveryResolution+Age1 | Ambiguous | 19 | 0.0000 | -0.0002 | 47.37% | 52.63% | 0.00% | -5.26%
+PreviousDistinctContext | DestructiveRotation->RecoveryResolution+Age1 | Moderate | 8 | -0.0001 | 0.0001 | 62.50% | 37.50% | 0.00% | 25.00%
+PreviousDistinctContext | DestructiveRotation->RecoveryResolution+Age1 | Unresolved | 4 | -0.0004 | -0.0003 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | ExhaustionPersistence->CompressionProcessing+Age4 | Ambiguous | 1 | -0.0005 | -0.0005 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | ExhaustionPersistence->CompressionProcessing+Age4 | Moderate | 4 | 0.0001 | 0.0002 | 50.00% | 25.00% | 25.00% | 25.00%
+PreviousDistinctContext | ExhaustionPersistence->CompressionProcessing+Age4 | Unresolved | 1 | -0.0005 | -0.0005 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | ExhaustionPersistence->CompressionProcessing+Age6-10 | Ambiguous | 2 | -0.0003 | -0.0003 | 0.00% | 50.00% | 50.00% | -50.00%
+PreviousDistinctContext | ExhaustionPersistence->CompressionProcessing+Age6-10 | Moderate | 2 | -0.0004 | -0.0004 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | ExhaustionPersistence->DecayToNeutral+Age1 | Unresolved | 84 | -0.0000 | 0.0000 | 51.19% | 47.62% | 1.19% | 3.57%
+PreviousDistinctContext | ExhaustionPersistence->DestructiveRotation+Age1 | Clear | 39 | -0.0002 | -0.0002 | 38.46% | 58.97% | 2.56% | -20.51%
+PreviousDistinctContext | ExhaustionPersistence->DestructiveRotation+Age1 | Moderate | 10 | 0.0003 | 0.0003 | 80.00% | 20.00% | 0.00% | 60.00%
+PreviousDistinctContext | ExhaustionPersistence->DestructiveRotation+Age2 | Ambiguous | 3 | 0.0006 | 0.0005 | 66.67% | 33.33% | 0.00% | 33.33%
+PreviousDistinctContext | ExhaustionPersistence->DestructiveRotation+Age2 | Moderate | 1 | 0.0000 | 0.0000 | 0.00% | 0.00% | 100.00% | 0.00%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age11-20 | Ambiguous | 4 | 0.0002 | 0.0002 | 75.00% | 25.00% | 0.00% | 50.00%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age11-20 | Unresolved | 3 | 0.0000 | 0.0001 | 66.67% | 33.33% | 0.00% | 33.33%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age2 | Ambiguous | 82 | -0.0000 | 0.0000 | 42.68% | 48.78% | 8.54% | -6.10%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age2 | Moderate | 3 | -0.0000 | -0.0001 | 33.33% | 66.67% | 0.00% | -33.33%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age2 | Unresolved | 10 | -0.0001 | -0.0001 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age3 | Ambiguous | 4 | 0.0002 | 0.0001 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age3 | Unresolved | 5 | 0.0002 | 0.0002 | 80.00% | 20.00% | 0.00% | 60.00%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age4 | Ambiguous | 6 | -0.0005 | -0.0006 | 0.00% | 83.33% | 16.67% | -83.33%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age4 | Unresolved | 2 | -0.0001 | -0.0001 | 0.00% | 50.00% | 50.00% | -50.00%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age5 | Ambiguous | 14 | -0.0000 | -0.0000 | 42.86% | 57.14% | 0.00% | -14.29%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age5 | Unresolved | 3 | 0.0003 | 0.0000 | 33.33% | 33.33% | 33.33% | 0.00%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age6-10 | Ambiguous | 35 | 0.0001 | 0.0000 | 48.57% | 48.57% | 2.86% | 0.00%
+PreviousDistinctContext | ExhaustionPersistence->NeutralProcessing+Age6-10 | Unresolved | 31 | 0.0001 | 0.0001 | 51.61% | 38.71% | 9.68% | 12.90%
+PreviousDistinctContext | ExhaustionPersistence->RecoveryResolution+Age1 | Clear | 283 | -0.0001 | -0.0001 | 43.11% | 53.00% | 3.89% | -9.89%
+PreviousDistinctContext | ExhaustionPersistence->RecoveryResolution+Age2 | Unresolved | 296 | -0.0000 | -0.0001 | 42.91% | 54.39% | 2.70% | -11.49%
+PreviousDistinctContext | ExhaustionPersistence->RecoveryResolution+Age3 | Unresolved | 225 | 0.0000 | -0.0000 | 48.00% | 50.67% | 1.33% | -2.67%
+PreviousDistinctContext | ExhaustionPersistence->RecoveryResolution+Age4 | Unresolved | 5 | 0.0002 | 0.0003 | 80.00% | 20.00% | 0.00% | 60.00%
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age1 | Ambiguous | 11 | 0.0003 | 0.0005 | 72.73% | 27.27% | 0.00% | 45.45%
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age1 | Moderate | 57 | 0.0000 | 0.0000 | 47.37% | 45.61% | 7.02% | 1.75%
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age2 | Ambiguous | 20 | -0.0001 | 0.0000 | 50.00% | 45.00% | 5.00% | 5.00%
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age2 | Moderate | 43 | 0.0001 | 0.0000 | 55.81% | 39.53% | 4.65% | 16.28%
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age4 | Clear | 7 | 0.0000 | -0.0002 | 28.57% | 71.43% | 0.00% | -42.86%
+PreviousDistinctContext | MixedStructure->CompressionProcessing+Age4 | Moderate | 10 | 0.0004 | -0.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | MixedStructure->ConstructiveEmergence+Age1 | Ambiguous | 1 | 0.0016 | 0.0016 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | MixedStructure->ConstructiveEmergence+Age1 | Moderate | 1 | -0.0003 | -0.0003 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | MixedStructure->DecayToNeutral+Age1 | Ambiguous | 458 | -0.0000 | 0.0000 | 46.72% | 46.72% | 6.55% | 0.00%
+PreviousDistinctContext | MixedStructure->DecayToNeutral+Age1 | Moderate | 3 | -0.0001 | -0.0003 | 33.33% | 66.67% | 0.00% | -33.33%
+PreviousDistinctContext | MixedStructure->DecayToNeutral+Age1 | Unresolved | 100 | 0.0001 | 0.0001 | 56.00% | 40.00% | 4.00% | 16.00%
+PreviousDistinctContext | MixedStructure->DestructiveRotation+Age1 | Ambiguous | 40 | -0.0001 | -0.0001 | 42.50% | 55.00% | 2.50% | -12.50%
+PreviousDistinctContext | MixedStructure->DestructiveRotation+Age1 | Moderate | 14 | 0.0003 | 0.0002 | 71.43% | 28.57% | 0.00% | 42.86%
+PreviousDistinctContext | MixedStructure->DestructiveRotation+Age1 | Unresolved | 4 | 0.0002 | 0.0003 | 75.00% | 25.00% | 0.00% | 50.00%
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age1 | Ambiguous | 32 | -0.0000 | 0.0001 | 56.25% | 34.38% | 9.38% | 21.88%
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age1 | Unresolved | 375 | -0.0000 | -0.0000 | 44.00% | 50.67% | 5.33% | -6.67%
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age2 | Ambiguous | 21 | 0.0002 | 0.0001 | 57.14% | 42.86% | 0.00% | 14.29%
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age2 | Moderate | 8 | 0.0001 | 0.0001 | 62.50% | 25.00% | 12.50% | 37.50%
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age2 | Unresolved | 8 | 0.0001 | -0.0000 | 37.50% | 62.50% | 0.00% | -25.00%
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age4 | Ambiguous | 5 | 0.0001 | 0.0003 | 60.00% | 40.00% | 0.00% | 20.00%
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age4 | Unresolved | 2 | -0.0002 | -0.0002 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | MixedStructure->ExhaustionPersistence+Age5 | Ambiguous | 2 | -0.0003 | -0.0003 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age1 | Ambiguous | 417 | -0.0000 | -0.0000 | 42.93% | 50.60% | 6.47% | -7.67%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age11-20 | Ambiguous | 11 | -0.0001 | 0.0000 | 54.55% | 36.36% | 9.09% | 18.18%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age11-20 | Unresolved | 47 | -0.0000 | 0.0001 | 55.32% | 40.43% | 4.26% | 14.89%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age2 | Ambiguous | 6 | -0.0001 | -0.0003 | 33.33% | 66.67% | 0.00% | -33.33%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age2 | Unresolved | 36 | -0.0000 | 0.0001 | 55.56% | 44.44% | 0.00% | 11.11%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age3 | Ambiguous | 2 | -0.0002 | -0.0002 | 0.00% | 50.00% | 50.00% | -50.00%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age3 | Moderate | 3 | 0.0003 | 0.0001 | 66.67% | 33.33% | 0.00% | 33.33%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age3 | Unresolved | 6 | -0.0006 | -0.0005 | 16.67% | 83.33% | 0.00% | -66.67%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age4 | Ambiguous | 102 | 0.0000 | 0.0000 | 48.04% | 45.10% | 6.86% | 2.94%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age4 | Unresolved | 58 | -0.0002 | -0.0001 | 44.83% | 53.45% | 1.72% | -8.62%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age5 | Ambiguous | 42 | -0.0000 | -0.0000 | 42.86% | 54.76% | 2.38% | -11.90%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age5 | Unresolved | 52 | -0.0001 | -0.0001 | 36.54% | 53.85% | 9.62% | -17.31%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age6-10 | Ambiguous | 108 | 0.0000 | 0.0000 | 48.15% | 45.37% | 6.48% | 2.78%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age6-10 | Clear | 1 | -0.0002 | -0.0002 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age6-10 | Moderate | 34 | 0.0001 | -0.0000 | 47.06% | 50.00% | 2.94% | -2.94%
+PreviousDistinctContext | MixedStructure->NeutralProcessing+Age6-10 | Unresolved | 277 | 0.0000 | 0.0000 | 47.29% | 46.93% | 5.78% | 0.36%
+PreviousDistinctContext | MixedStructure->ReassertionProcessing+Age1 | Ambiguous | 5 | 0.0001 | -0.0001 | 20.00% | 60.00% | 20.00% | -40.00%
+PreviousDistinctContext | MixedStructure->ReassertionProcessing+Age1 | Moderate | 144 | -0.0000 | 0.0000 | 51.39% | 46.53% | 2.08% | 4.86%
+PreviousDistinctContext | MixedStructure->ReassertionProcessing+Age1 | Unresolved | 2 | 0.0000 | 0.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | MixedStructure->ReassertionProcessing+Age2 | Clear | 7 | -0.0001 | -0.0004 | 28.57% | 71.43% | 0.00% | -42.86%
+PreviousDistinctContext | MixedStructure->RecoveryResolution+Age1 | Ambiguous | 163 | -0.0000 | -0.0001 | 42.94% | 53.99% | 3.07% | -11.04%
+PreviousDistinctContext | MixedStructure->RecoveryResolution+Age1 | Unresolved | 62 | -0.0000 | 0.0000 | 50.00% | 45.16% | 4.84% | 4.84%
+PreviousDistinctContext | NeutralProcessing->CompressionProcessing+Age4 | Ambiguous | 11 | -0.0001 | -0.0001 | 36.36% | 54.55% | 9.09% | -18.18%
+PreviousDistinctContext | NeutralProcessing->CompressionProcessing+Age4 | Clear | 21 | 0.0001 | 0.0001 | 66.67% | 33.33% | 0.00% | 33.33%
+PreviousDistinctContext | NeutralProcessing->CompressionProcessing+Age4 | Moderate | 136 | 0.0000 | -0.0000 | 45.59% | 50.00% | 4.41% | -4.41%
+PreviousDistinctContext | NeutralProcessing->ConstructiveEmergence+Age1 | Ambiguous | 24 | -0.0001 | 0.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | NeutralProcessing->ConstructiveEmergence+Age1 | Moderate | 3 | -0.0004 | 0.0000 | 66.67% | 33.33% | 0.00% | 33.33%
+PreviousDistinctContext | NeutralProcessing->ConstructiveEmergence+Age1 | Unresolved | 4 | 0.0003 | 0.0001 | 75.00% | 25.00% | 0.00% | 50.00%
+PreviousDistinctContext | NeutralProcessing->DestructiveRotation+Age1 | Ambiguous | 1 | -0.0002 | -0.0002 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | NeutralProcessing->DestructiveRotation+Age1 | Unresolved | 15 | -0.0001 | 0.0000 | 40.00% | 46.67% | 13.33% | -6.67%
+PreviousDistinctContext | NeutralProcessing->DestructiveRotation+Age2 | Ambiguous | 2 | 0.0004 | 0.0004 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | NeutralProcessing->DestructiveRotation+Age2 | Unresolved | 1 | 0.0007 | 0.0007 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age1 | Clear | 16 | 0.0000 | 0.0000 | 56.25% | 37.50% | 6.25% | 18.75%
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age1 | Moderate | 64 | -0.0001 | 0.0000 | 39.06% | 45.31% | 15.62% | -6.25%
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age2 | Ambiguous | 6 | -0.0003 | -0.0002 | 33.33% | 66.67% | 0.00% | -33.33%
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age2 | Unresolved | 1 | 0.0006 | 0.0006 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age3 | Ambiguous | 5 | 0.0002 | 0.0001 | 80.00% | 20.00% | 0.00% | 60.00%
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age3 | Moderate | 2 | 0.0005 | 0.0005 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | NeutralProcessing->ExhaustionPersistence+Age3 | Unresolved | 2 | -0.0007 | -0.0007 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | NeutralProcessing->MixedStructure+Age1 | Ambiguous | 1725 | -0.0000 | 0.0000 | 46.55% | 47.88% | 5.57% | -1.33%
+PreviousDistinctContext | NeutralProcessing->MixedStructure+Age1 | Unresolved | 272 | -0.0000 | -0.0000 | 44.12% | 50.00% | 5.88% | -5.88%
+PreviousDistinctContext | NeutralProcessing->MixedStructure+Age2 | Ambiguous | 101 | 0.0001 | -0.0000 | 46.53% | 50.50% | 2.97% | -3.96%
+PreviousDistinctContext | NeutralProcessing->MixedStructure+Age2 | Moderate | 45 | -0.0000 | -0.0001 | 40.00% | 53.33% | 6.67% | -13.33%
+PreviousDistinctContext | NeutralProcessing->MixedStructure+Age2 | Unresolved | 2 | 0.0003 | 0.0003 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | NeutralProcessing->MixedStructure+Age3 | Ambiguous | 3 | 0.0004 | 0.0003 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | NeutralProcessing->MixedStructure+Age3 | Unresolved | 1 | -0.0001 | -0.0001 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age1 | Ambiguous | 1430 | 0.0000 | 0.0000 | 46.36% | 48.39% | 5.24% | -2.03%
+PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age1 | Moderate | 18 | 0.0001 | 0.0000 | 50.00% | 44.44% | 5.56% | 5.56%
+PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age1 | Unresolved | 1 | -0.0004 | -0.0004 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age2 | Ambiguous | 149 | -0.0001 | -0.0001 | 38.93% | 55.03% | 6.04% | -16.11%
+PreviousDistinctContext | NeutralProcessing->ReassertionProcessing+Age2 | Unresolved | 30 | -0.0002 | 0.0001 | 56.67% | 36.67% | 6.67% | 20.00%
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age1 | Ambiguous | 36 | -0.0000 | -0.0001 | 36.11% | 58.33% | 5.56% | -22.22%
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age1 | Clear | 3 | 0.0000 | -0.0002 | 33.33% | 66.67% | 0.00% | -33.33%
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age1 | Moderate | 10 | 0.0001 | 0.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age1 | Unresolved | 17 | 0.0000 | 0.0000 | 47.06% | 47.06% | 5.88% | 0.00%
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age2 | Ambiguous | 18 | 0.0002 | -0.0000 | 44.44% | 50.00% | 5.56% | -5.56%
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age2 | Clear | 1 | -0.0005 | -0.0005 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age2 | Moderate | 33 | -0.0002 | -0.0001 | 33.33% | 54.55% | 12.12% | -21.21%
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age2 | Unresolved | 3 | 0.0001 | 0.0001 | 66.67% | 33.33% | 0.00% | 33.33%
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age4 | Ambiguous | 9 | 0.0000 | -0.0001 | 33.33% | 55.56% | 11.11% | -22.22%
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age4 | Moderate | 3 | 0.0006 | 0.0004 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | ReassertionProcessing->CompressionProcessing+Age4 | Unresolved | 1 | 0.0006 | 0.0006 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | ReassertionProcessing->DestructiveRotation+Age1 | Ambiguous | 183 | -0.0001 | -0.0001 | 44.81% | 51.91% | 3.28% | -7.10%
+PreviousDistinctContext | ReassertionProcessing->DestructiveRotation+Age1 | Unresolved | 20 | -0.0002 | -0.0002 | 30.00% | 60.00% | 10.00% | -30.00%
+PreviousDistinctContext | ReassertionProcessing->DestructiveRotation+Age2 | Ambiguous | 1 | 0.0001 | 0.0001 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | ReassertionProcessing->DestructiveRotation+Age2 | Moderate | 9 | -0.0002 | -0.0001 | 33.33% | 55.56% | 11.11% | -22.22%
+PreviousDistinctContext | ReassertionProcessing->MixedStructure+Age1 | Ambiguous | 90 | 0.0000 | -0.0000 | 44.44% | 50.00% | 5.56% | -5.56%
+PreviousDistinctContext | ReassertionProcessing->MixedStructure+Age1 | Moderate | 391 | -0.0000 | 0.0000 | 46.55% | 48.34% | 5.12% | -1.79%
+PreviousDistinctContext | ReassertionProcessing->MixedStructure+Age2 | Moderate | 53 | -0.0001 | 0.0000 | 47.17% | 47.17% | 5.66% | 0.00%
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age1 | Ambiguous | 556 | -0.0000 | -0.0000 | 44.60% | 50.54% | 4.86% | -5.94%
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age1 | Moderate | 91 | -0.0000 | -0.0000 | 40.66% | 54.95% | 4.40% | -14.29%
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age1 | Unresolved | 23 | 0.0001 | 0.0000 | 47.83% | 47.83% | 4.35% | 0.00%
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age2 | Ambiguous | 333 | 0.0000 | 0.0000 | 47.75% | 47.75% | 4.50% | 0.00%
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age2 | Unresolved | 8 | -0.0001 | -0.0001 | 37.50% | 62.50% | 0.00% | -25.00%
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age4 | Moderate | 130 | 0.0000 | -0.0000 | 45.38% | 50.00% | 4.62% | -4.62%
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age5 | Ambiguous | 76 | -0.0000 | -0.0001 | 36.84% | 56.58% | 6.58% | -19.74%
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age5 | Moderate | 72 | 0.0001 | 0.0000 | 52.78% | 38.89% | 8.33% | 13.89%
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age5 | Unresolved | 1 | -0.0004 | -0.0004 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age6-10 | Ambiguous | 321 | -0.0001 | -0.0001 | 38.94% | 54.83% | 6.23% | -15.89%
+PreviousDistinctContext | ReassertionProcessing->NeutralProcessing+Age6-10 | Unresolved | 45 | -0.0000 | -0.0000 | 44.44% | 51.11% | 4.44% | -6.67%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age1 | Ambiguous | 105 | 0.0000 | 0.0000 | 48.57% | 48.57% | 2.86% | 0.00%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age1 | Clear | 5 | -0.0002 | -0.0001 | 40.00% | 60.00% | 0.00% | -20.00%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age1 | Moderate | 31 | 0.0001 | 0.0001 | 51.61% | 38.71% | 9.68% | 12.90%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age1 | Unresolved | 171 | -0.0000 | 0.0000 | 45.61% | 49.12% | 5.26% | -3.51%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age2 | Ambiguous | 58 | -0.0001 | -0.0001 | 36.21% | 55.17% | 8.62% | -18.97%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age2 | Clear | 11 | -0.0002 | 0.0000 | 45.45% | 45.45% | 9.09% | 0.00%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age2 | Moderate | 388 | -0.0000 | -0.0000 | 45.62% | 51.29% | 3.09% | -5.67%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age5 | Ambiguous | 3 | 0.0004 | 0.0003 | 66.67% | 33.33% | 0.00% | 33.33%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age5 | Clear | 46 | 0.0001 | 0.0001 | 54.35% | 41.30% | 4.35% | 13.04%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age5 | Moderate | 7 | 0.0003 | 0.0001 | 57.14% | 42.86% | 0.00% | 14.29%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age5 | Unresolved | 1 | -0.0015 | -0.0015 | 0.00% | 100.00% | 0.00% | -100.00%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age6-10 | Ambiguous | 24 | 0.0001 | 0.0000 | 41.67% | 45.83% | 12.50% | -4.17%
+PreviousDistinctContext | RecoveryResolution->CompressionProcessing+Age6-10 | Unresolved | 39 | -0.0000 | 0.0000 | 48.72% | 48.72% | 2.56% | 0.00%
+PreviousDistinctContext | RecoveryResolution->ExhaustionPersistence+Age1 | Ambiguous | 14 | -0.0000 | 0.0000 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | RecoveryResolution->ExhaustionPersistence+Age1 | Moderate | 6 | -0.0005 | -0.0004 | 50.00% | 50.00% | 0.00% | 0.00%
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age11-20 | Ambiguous | 10 | 0.0002 | 0.0001 | 50.00% | 30.00% | 20.00% | 20.00%
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age11-20 | Moderate | 5 | -0.0001 | -0.0002 | 20.00% | 80.00% | 0.00% | -60.00%
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age11-20 | Unresolved | 1 | 0.0004 | 0.0004 | 100.00% | 0.00% | 0.00% | 100.00%
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age2 | Ambiguous | 19 | -0.0002 | -0.0002 | 31.58% | 68.42% | 0.00% | -36.84%
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age2 | Clear | 19 | 0.0001 | 0.0001 | 57.89% | 36.84% | 5.26% | 21.05%
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age2 | Moderate | 9 | 0.0001 | 0.0002 | 66.67% | 33.33% | 0.00% | 33.33%
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age2 | Unresolved | 0 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+PreviousDistinctContext | RecoveryResolution->NeutralProcessing+Age5 | Unresolved | 2 | -0.0002 | -0.0002 | 50.00% | 50.00% | 0.00% | 0.00%
+Unresolved | Unresolved | Unresolved | 348 | -0.0000 | 0.0000 | 46.26% | 47.70% | 6.03% | -1.44%
+ValidatedContext | B:RecoveryResolution->CompressionProcessing+Age3 | Ambiguous | 222 | -0.0000 | -0.0000 | 46.85% | 50.45% | 2.70% | -3.60%
+ValidatedContext | B:RecoveryResolution->CompressionProcessing+Age3 | Unresolved | 48 | -0.0000 | 0.0000 | 52.08% | 47.92% | 0.00% | 4.17%
+ValidatedContext | C:RecoveryResolution->NeutralProcessing+Age1 | Ambiguous | 44 | 0.0002 | 0.0001 | 59.09% | 38.64% | 2.27% | 20.45%
+ValidatedContext | C:RecoveryResolution->NeutralProcessing+Age1 | Moderate | 27 | -0.0000 | 0.0001 | 55.56% | 40.74% | 3.70% | 14.81%
+ValidatedContext | C:RecoveryResolution->NeutralProcessing+Age1 | Unresolved | 106 | -0.0000 | -0.0000 | 46.23% | 50.94% | 2.83% | -4.72%
+ValidatedContext | D:DecayToNeutral->NeutralProcessing+Age4 | Ambiguous | 120 | 0.0000 | 0.0000 | 52.50% | 42.50% | 5.00% | 10.00%
+ValidatedContext | D:DecayToNeutral->NeutralProcessing+Age4 | Moderate | 3 | -0.0002 | -0.0001 | 0.00% | 66.67% | 33.33% | -66.67%
+ValidatedContext | D:DecayToNeutral->NeutralProcessing+Age4 | Unresolved | 55 | 0.0001 | 0.0001 | 52.73% | 41.82% | 5.45% | 10.91%
+
+7. Fractal-jumping proxy
+FractalJumpRiskCount: 14836
+FractalJumpRiskRate: 42.08%
+OutcomeSkewAfterRisk: -1.49%
+MeanDRFwd5AfterRisk: -0.0000
+
+8. Low-DoF audit
+Allowed variables used:
+- CurrentState
+- AgeBucket
+- PreviousDistinctState
+- ValidatedContextFlag
+- PersistenceRate_t1
+- DominantDestinationProbability_t1
+- Entropy_t1
+
+Forbidden variables not used:
+- Phase
+- New contexts
+- Optimized weights
+- Forward returns in scoring
+- Price outcome in scoring
+- Machine learning
+
+9. Mechanical research notes
+- Arbitration scores are computed online from structural transitions already observed before each scored bar.
+- ReliabilityScore is zero until its interpretation key has at least 10 prior structural transitions.
+- A validated negative context receives an informational bonus, not a directional score.
+- Forward price returns are attached only after arbitration as outcome diagnostics.
+- Rapid winner-type replacement after short runs is reported as a mechanical fractal-jump proxy.

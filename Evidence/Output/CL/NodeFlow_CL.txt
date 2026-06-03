@@ -1,0 +1,2076 @@
+APVA Node Flow Study v0.1
+========================================================================================================
+Diagnostics
+Instrument: CL
+Input path(s): .\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv
+Total rows: 2684
+Node count: 35
+Category count: 4
+
+1. Node Category Assignment
+StateAgeNode | NodeCategory | ImportanceScore | ReliabilityScore
+CompressionProcessing_Age1 | Weak Node | 0.4111 | 0.5333
+CompressionProcessing_Age2 | Secondary Node | 0.4461 | 0.4306
+CompressionProcessing_Age3 | Insufficient Node | 0.4383 | 0.4609
+CompressionProcessing_Age4 | Insufficient Node | 0.4127 | 0.4552
+CompressionProcessing_Age5 | Insufficient Node | 0.3943 | 0.3694
+CompressionProcessing_Age6-10 | Insufficient Node | 0.3483 | 0.4482
+ConstructiveEmergence_Age1 | Insufficient Node | 0.3008 | 0.3694
+DecayToNeutral_Age1 | Weak Node | 0.4077 | 0.5297
+DestructiveRotation_Age1 | Weak Node | 0.3872 | 0.4094
+DestructiveRotation_Age2 | Insufficient Node | 0.3204 | 0.3694
+DestructiveRotation_Age3 | Insufficient Node | 0.5312 | 0.6667
+ExhaustionPersistence_Age1 | Weak Node | 0.3936 | 0.4123
+ExhaustionPersistence_Age2 | Insufficient Node | 0.5178 | 0.4849
+ExhaustionPersistence_Age3 | Insufficient Node | 0.4145 | 0.5230
+ExhaustionPersistence_Age4 | Insufficient Node | 0.3575 | 0.4488
+ExhaustionPersistence_Age5 | Insufficient Node | 0.4158 | 0.3803
+ExhaustionPersistence_Age6-10 | Insufficient Node | 0.3721 | 0.4459
+MixedStructure_Age1 | Secondary Node | 0.5086 | 0.6269
+MixedStructure_Age2 | Insufficient Node | 0.4709 | 0.3655
+MixedStructure_Age3 | Insufficient Node | 0.5005 | 0.3363
+MixedStructure_Age4 | Insufficient Node | 0.4327 | 0.6674
+NeutralProcessing_Age1 | Core Node | 0.6322 | 0.8067
+NeutralProcessing_Age11-20 | Insufficient Node | 0.4566 | 0.5218
+NeutralProcessing_Age2 | Secondary Node | 0.7149 | 0.6358
+NeutralProcessing_Age3 | Core Node | 0.7661 | 0.6544
+NeutralProcessing_Age4 | Core Node | 0.7756 | 0.6983
+NeutralProcessing_Age5 | Secondary Node | 0.6127 | 0.6320
+NeutralProcessing_Age6-10 | Secondary Node | 0.5526 | 0.6522
+ReassertionProcessing_Age1 | Secondary Node | 0.4503 | 0.4785
+ReassertionProcessing_Age2 | Insufficient Node | 0.3862 | 0.4191
+ReassertionProcessing_Age3 | Insufficient Node | 0.4000 | 0.6667
+RecoveryResolution_Age1 | Secondary Node | 0.5964 | 0.4315
+RecoveryResolution_Age2 | Insufficient Node | 0.5398 | 0.5015
+RecoveryResolution_Age3 | Insufficient Node | 0.5121 | 0.5010
+RecoveryResolution_Age4 | Insufficient Node | 0.7613 | 0.6667
+
+2. Node-to-Node Flow Matrix
+SourceNode | DestinationNode | TransitionCount | TransitionProbability
+CompressionProcessing_Age1 | CompressionProcessing_Age1 | 0 | 0.00%
+CompressionProcessing_Age1 | CompressionProcessing_Age2 | 92 | 51.98%
+CompressionProcessing_Age1 | CompressionProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age1 | CompressionProcessing_Age4 | 0 | 0.00%
+CompressionProcessing_Age1 | CompressionProcessing_Age5 | 0 | 0.00%
+CompressionProcessing_Age1 | CompressionProcessing_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age1 | ConstructiveEmergence_Age1 | 0 | 0.00%
+CompressionProcessing_Age1 | DecayToNeutral_Age1 | 0 | 0.00%
+CompressionProcessing_Age1 | DestructiveRotation_Age1 | 0 | 0.00%
+CompressionProcessing_Age1 | DestructiveRotation_Age2 | 0 | 0.00%
+CompressionProcessing_Age1 | DestructiveRotation_Age3 | 0 | 0.00%
+CompressionProcessing_Age1 | ExhaustionPersistence_Age1 | 13 | 7.34%
+CompressionProcessing_Age1 | ExhaustionPersistence_Age2 | 0 | 0.00%
+CompressionProcessing_Age1 | ExhaustionPersistence_Age3 | 0 | 0.00%
+CompressionProcessing_Age1 | ExhaustionPersistence_Age4 | 0 | 0.00%
+CompressionProcessing_Age1 | ExhaustionPersistence_Age5 | 0 | 0.00%
+CompressionProcessing_Age1 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age1 | MixedStructure_Age1 | 3 | 1.69%
+CompressionProcessing_Age1 | MixedStructure_Age2 | 0 | 0.00%
+CompressionProcessing_Age1 | MixedStructure_Age3 | 0 | 0.00%
+CompressionProcessing_Age1 | MixedStructure_Age4 | 0 | 0.00%
+CompressionProcessing_Age1 | NeutralProcessing_Age1 | 56 | 31.64%
+CompressionProcessing_Age1 | NeutralProcessing_Age11-20 | 0 | 0.00%
+CompressionProcessing_Age1 | NeutralProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age1 | NeutralProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age1 | NeutralProcessing_Age4 | 0 | 0.00%
+CompressionProcessing_Age1 | NeutralProcessing_Age5 | 0 | 0.00%
+CompressionProcessing_Age1 | NeutralProcessing_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age1 | ReassertionProcessing_Age1 | 0 | 0.00%
+CompressionProcessing_Age1 | ReassertionProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age1 | ReassertionProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age1 | RecoveryResolution_Age1 | 13 | 7.34%
+CompressionProcessing_Age1 | RecoveryResolution_Age2 | 0 | 0.00%
+CompressionProcessing_Age1 | RecoveryResolution_Age3 | 0 | 0.00%
+CompressionProcessing_Age1 | RecoveryResolution_Age4 | 0 | 0.00%
+CompressionProcessing_Age2 | CompressionProcessing_Age1 | 0 | 0.00%
+CompressionProcessing_Age2 | CompressionProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age2 | CompressionProcessing_Age3 | 41 | 44.57%
+CompressionProcessing_Age2 | CompressionProcessing_Age4 | 0 | 0.00%
+CompressionProcessing_Age2 | CompressionProcessing_Age5 | 0 | 0.00%
+CompressionProcessing_Age2 | CompressionProcessing_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age2 | ConstructiveEmergence_Age1 | 0 | 0.00%
+CompressionProcessing_Age2 | DecayToNeutral_Age1 | 2 | 2.17%
+CompressionProcessing_Age2 | DestructiveRotation_Age1 | 1 | 1.09%
+CompressionProcessing_Age2 | DestructiveRotation_Age2 | 0 | 0.00%
+CompressionProcessing_Age2 | DestructiveRotation_Age3 | 0 | 0.00%
+CompressionProcessing_Age2 | ExhaustionPersistence_Age1 | 10 | 10.87%
+CompressionProcessing_Age2 | ExhaustionPersistence_Age2 | 0 | 0.00%
+CompressionProcessing_Age2 | ExhaustionPersistence_Age3 | 0 | 0.00%
+CompressionProcessing_Age2 | ExhaustionPersistence_Age4 | 0 | 0.00%
+CompressionProcessing_Age2 | ExhaustionPersistence_Age5 | 0 | 0.00%
+CompressionProcessing_Age2 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age2 | MixedStructure_Age1 | 1 | 1.09%
+CompressionProcessing_Age2 | MixedStructure_Age2 | 0 | 0.00%
+CompressionProcessing_Age2 | MixedStructure_Age3 | 0 | 0.00%
+CompressionProcessing_Age2 | MixedStructure_Age4 | 0 | 0.00%
+CompressionProcessing_Age2 | NeutralProcessing_Age1 | 33 | 35.87%
+CompressionProcessing_Age2 | NeutralProcessing_Age11-20 | 0 | 0.00%
+CompressionProcessing_Age2 | NeutralProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age2 | NeutralProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age2 | NeutralProcessing_Age4 | 0 | 0.00%
+CompressionProcessing_Age2 | NeutralProcessing_Age5 | 0 | 0.00%
+CompressionProcessing_Age2 | NeutralProcessing_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age2 | ReassertionProcessing_Age1 | 0 | 0.00%
+CompressionProcessing_Age2 | ReassertionProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age2 | ReassertionProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age2 | RecoveryResolution_Age1 | 4 | 4.35%
+CompressionProcessing_Age2 | RecoveryResolution_Age2 | 0 | 0.00%
+CompressionProcessing_Age2 | RecoveryResolution_Age3 | 0 | 0.00%
+CompressionProcessing_Age2 | RecoveryResolution_Age4 | 0 | 0.00%
+CompressionProcessing_Age3 | CompressionProcessing_Age1 | 0 | 0.00%
+CompressionProcessing_Age3 | CompressionProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age3 | CompressionProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age3 | CompressionProcessing_Age4 | 22 | 53.66%
+CompressionProcessing_Age3 | CompressionProcessing_Age5 | 0 | 0.00%
+CompressionProcessing_Age3 | CompressionProcessing_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age3 | ConstructiveEmergence_Age1 | 0 | 0.00%
+CompressionProcessing_Age3 | DecayToNeutral_Age1 | 0 | 0.00%
+CompressionProcessing_Age3 | DestructiveRotation_Age1 | 0 | 0.00%
+CompressionProcessing_Age3 | DestructiveRotation_Age2 | 0 | 0.00%
+CompressionProcessing_Age3 | DestructiveRotation_Age3 | 0 | 0.00%
+CompressionProcessing_Age3 | ExhaustionPersistence_Age1 | 6 | 14.63%
+CompressionProcessing_Age3 | ExhaustionPersistence_Age2 | 0 | 0.00%
+CompressionProcessing_Age3 | ExhaustionPersistence_Age3 | 0 | 0.00%
+CompressionProcessing_Age3 | ExhaustionPersistence_Age4 | 0 | 0.00%
+CompressionProcessing_Age3 | ExhaustionPersistence_Age5 | 0 | 0.00%
+CompressionProcessing_Age3 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age3 | MixedStructure_Age1 | 1 | 2.44%
+CompressionProcessing_Age3 | MixedStructure_Age2 | 0 | 0.00%
+CompressionProcessing_Age3 | MixedStructure_Age3 | 0 | 0.00%
+CompressionProcessing_Age3 | MixedStructure_Age4 | 0 | 0.00%
+CompressionProcessing_Age3 | NeutralProcessing_Age1 | 10 | 24.39%
+CompressionProcessing_Age3 | NeutralProcessing_Age11-20 | 0 | 0.00%
+CompressionProcessing_Age3 | NeutralProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age3 | NeutralProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age3 | NeutralProcessing_Age4 | 0 | 0.00%
+CompressionProcessing_Age3 | NeutralProcessing_Age5 | 0 | 0.00%
+CompressionProcessing_Age3 | NeutralProcessing_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age3 | ReassertionProcessing_Age1 | 1 | 2.44%
+CompressionProcessing_Age3 | ReassertionProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age3 | ReassertionProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age3 | RecoveryResolution_Age1 | 1 | 2.44%
+CompressionProcessing_Age3 | RecoveryResolution_Age2 | 0 | 0.00%
+CompressionProcessing_Age3 | RecoveryResolution_Age3 | 0 | 0.00%
+CompressionProcessing_Age3 | RecoveryResolution_Age4 | 0 | 0.00%
+CompressionProcessing_Age4 | CompressionProcessing_Age1 | 0 | 0.00%
+CompressionProcessing_Age4 | CompressionProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age4 | CompressionProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age4 | CompressionProcessing_Age4 | 0 | 0.00%
+CompressionProcessing_Age4 | CompressionProcessing_Age5 | 12 | 54.55%
+CompressionProcessing_Age4 | CompressionProcessing_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age4 | ConstructiveEmergence_Age1 | 0 | 0.00%
+CompressionProcessing_Age4 | DecayToNeutral_Age1 | 2 | 9.09%
+CompressionProcessing_Age4 | DestructiveRotation_Age1 | 0 | 0.00%
+CompressionProcessing_Age4 | DestructiveRotation_Age2 | 0 | 0.00%
+CompressionProcessing_Age4 | DestructiveRotation_Age3 | 0 | 0.00%
+CompressionProcessing_Age4 | ExhaustionPersistence_Age1 | 2 | 9.09%
+CompressionProcessing_Age4 | ExhaustionPersistence_Age2 | 0 | 0.00%
+CompressionProcessing_Age4 | ExhaustionPersistence_Age3 | 0 | 0.00%
+CompressionProcessing_Age4 | ExhaustionPersistence_Age4 | 0 | 0.00%
+CompressionProcessing_Age4 | ExhaustionPersistence_Age5 | 0 | 0.00%
+CompressionProcessing_Age4 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age4 | MixedStructure_Age1 | 0 | 0.00%
+CompressionProcessing_Age4 | MixedStructure_Age2 | 0 | 0.00%
+CompressionProcessing_Age4 | MixedStructure_Age3 | 0 | 0.00%
+CompressionProcessing_Age4 | MixedStructure_Age4 | 0 | 0.00%
+CompressionProcessing_Age4 | NeutralProcessing_Age1 | 5 | 22.73%
+CompressionProcessing_Age4 | NeutralProcessing_Age11-20 | 0 | 0.00%
+CompressionProcessing_Age4 | NeutralProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age4 | NeutralProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age4 | NeutralProcessing_Age4 | 0 | 0.00%
+CompressionProcessing_Age4 | NeutralProcessing_Age5 | 0 | 0.00%
+CompressionProcessing_Age4 | NeutralProcessing_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age4 | ReassertionProcessing_Age1 | 1 | 4.55%
+CompressionProcessing_Age4 | ReassertionProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age4 | ReassertionProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age4 | RecoveryResolution_Age1 | 0 | 0.00%
+CompressionProcessing_Age4 | RecoveryResolution_Age2 | 0 | 0.00%
+CompressionProcessing_Age4 | RecoveryResolution_Age3 | 0 | 0.00%
+CompressionProcessing_Age4 | RecoveryResolution_Age4 | 0 | 0.00%
+CompressionProcessing_Age5 | CompressionProcessing_Age1 | 0 | 0.00%
+CompressionProcessing_Age5 | CompressionProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age5 | CompressionProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age5 | CompressionProcessing_Age4 | 0 | 0.00%
+CompressionProcessing_Age5 | CompressionProcessing_Age5 | 0 | 0.00%
+CompressionProcessing_Age5 | CompressionProcessing_Age6-10 | 5 | 41.67%
+CompressionProcessing_Age5 | ConstructiveEmergence_Age1 | 0 | 0.00%
+CompressionProcessing_Age5 | DecayToNeutral_Age1 | 0 | 0.00%
+CompressionProcessing_Age5 | DestructiveRotation_Age1 | 1 | 8.33%
+CompressionProcessing_Age5 | DestructiveRotation_Age2 | 0 | 0.00%
+CompressionProcessing_Age5 | DestructiveRotation_Age3 | 0 | 0.00%
+CompressionProcessing_Age5 | ExhaustionPersistence_Age1 | 4 | 33.33%
+CompressionProcessing_Age5 | ExhaustionPersistence_Age2 | 0 | 0.00%
+CompressionProcessing_Age5 | ExhaustionPersistence_Age3 | 0 | 0.00%
+CompressionProcessing_Age5 | ExhaustionPersistence_Age4 | 0 | 0.00%
+CompressionProcessing_Age5 | ExhaustionPersistence_Age5 | 0 | 0.00%
+CompressionProcessing_Age5 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age5 | MixedStructure_Age1 | 1 | 8.33%
+CompressionProcessing_Age5 | MixedStructure_Age2 | 0 | 0.00%
+CompressionProcessing_Age5 | MixedStructure_Age3 | 0 | 0.00%
+CompressionProcessing_Age5 | MixedStructure_Age4 | 0 | 0.00%
+CompressionProcessing_Age5 | NeutralProcessing_Age1 | 1 | 8.33%
+CompressionProcessing_Age5 | NeutralProcessing_Age11-20 | 0 | 0.00%
+CompressionProcessing_Age5 | NeutralProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age5 | NeutralProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age5 | NeutralProcessing_Age4 | 0 | 0.00%
+CompressionProcessing_Age5 | NeutralProcessing_Age5 | 0 | 0.00%
+CompressionProcessing_Age5 | NeutralProcessing_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age5 | ReassertionProcessing_Age1 | 0 | 0.00%
+CompressionProcessing_Age5 | ReassertionProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age5 | ReassertionProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age5 | RecoveryResolution_Age1 | 0 | 0.00%
+CompressionProcessing_Age5 | RecoveryResolution_Age2 | 0 | 0.00%
+CompressionProcessing_Age5 | RecoveryResolution_Age3 | 0 | 0.00%
+CompressionProcessing_Age5 | RecoveryResolution_Age4 | 0 | 0.00%
+CompressionProcessing_Age6-10 | CompressionProcessing_Age1 | 0 | 0.00%
+CompressionProcessing_Age6-10 | CompressionProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age6-10 | CompressionProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age6-10 | CompressionProcessing_Age4 | 0 | 0.00%
+CompressionProcessing_Age6-10 | CompressionProcessing_Age5 | 0 | 0.00%
+CompressionProcessing_Age6-10 | CompressionProcessing_Age6-10 | 1 | 16.67%
+CompressionProcessing_Age6-10 | ConstructiveEmergence_Age1 | 0 | 0.00%
+CompressionProcessing_Age6-10 | DecayToNeutral_Age1 | 0 | 0.00%
+CompressionProcessing_Age6-10 | DestructiveRotation_Age1 | 0 | 0.00%
+CompressionProcessing_Age6-10 | DestructiveRotation_Age2 | 0 | 0.00%
+CompressionProcessing_Age6-10 | DestructiveRotation_Age3 | 0 | 0.00%
+CompressionProcessing_Age6-10 | ExhaustionPersistence_Age1 | 0 | 0.00%
+CompressionProcessing_Age6-10 | ExhaustionPersistence_Age2 | 0 | 0.00%
+CompressionProcessing_Age6-10 | ExhaustionPersistence_Age3 | 0 | 0.00%
+CompressionProcessing_Age6-10 | ExhaustionPersistence_Age4 | 0 | 0.00%
+CompressionProcessing_Age6-10 | ExhaustionPersistence_Age5 | 0 | 0.00%
+CompressionProcessing_Age6-10 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age6-10 | MixedStructure_Age1 | 1 | 16.67%
+CompressionProcessing_Age6-10 | MixedStructure_Age2 | 0 | 0.00%
+CompressionProcessing_Age6-10 | MixedStructure_Age3 | 0 | 0.00%
+CompressionProcessing_Age6-10 | MixedStructure_Age4 | 0 | 0.00%
+CompressionProcessing_Age6-10 | NeutralProcessing_Age1 | 3 | 50.00%
+CompressionProcessing_Age6-10 | NeutralProcessing_Age11-20 | 0 | 0.00%
+CompressionProcessing_Age6-10 | NeutralProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age6-10 | NeutralProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age6-10 | NeutralProcessing_Age4 | 0 | 0.00%
+CompressionProcessing_Age6-10 | NeutralProcessing_Age5 | 0 | 0.00%
+CompressionProcessing_Age6-10 | NeutralProcessing_Age6-10 | 0 | 0.00%
+CompressionProcessing_Age6-10 | ReassertionProcessing_Age1 | 0 | 0.00%
+CompressionProcessing_Age6-10 | ReassertionProcessing_Age2 | 0 | 0.00%
+CompressionProcessing_Age6-10 | ReassertionProcessing_Age3 | 0 | 0.00%
+CompressionProcessing_Age6-10 | RecoveryResolution_Age1 | 1 | 16.67%
+CompressionProcessing_Age6-10 | RecoveryResolution_Age2 | 0 | 0.00%
+CompressionProcessing_Age6-10 | RecoveryResolution_Age3 | 0 | 0.00%
+CompressionProcessing_Age6-10 | RecoveryResolution_Age4 | 0 | 0.00%
+ConstructiveEmergence_Age1 | CompressionProcessing_Age1 | 0 | 0.00%
+ConstructiveEmergence_Age1 | CompressionProcessing_Age2 | 0 | 0.00%
+ConstructiveEmergence_Age1 | CompressionProcessing_Age3 | 0 | 0.00%
+ConstructiveEmergence_Age1 | CompressionProcessing_Age4 | 0 | 0.00%
+ConstructiveEmergence_Age1 | CompressionProcessing_Age5 | 0 | 0.00%
+ConstructiveEmergence_Age1 | CompressionProcessing_Age6-10 | 0 | 0.00%
+ConstructiveEmergence_Age1 | ConstructiveEmergence_Age1 | 0 | 0.00%
+ConstructiveEmergence_Age1 | DecayToNeutral_Age1 | 3 | 25.00%
+ConstructiveEmergence_Age1 | DestructiveRotation_Age1 | 0 | 0.00%
+ConstructiveEmergence_Age1 | DestructiveRotation_Age2 | 0 | 0.00%
+ConstructiveEmergence_Age1 | DestructiveRotation_Age3 | 0 | 0.00%
+ConstructiveEmergence_Age1 | ExhaustionPersistence_Age1 | 0 | 0.00%
+ConstructiveEmergence_Age1 | ExhaustionPersistence_Age2 | 0 | 0.00%
+ConstructiveEmergence_Age1 | ExhaustionPersistence_Age3 | 0 | 0.00%
+ConstructiveEmergence_Age1 | ExhaustionPersistence_Age4 | 0 | 0.00%
+ConstructiveEmergence_Age1 | ExhaustionPersistence_Age5 | 0 | 0.00%
+ConstructiveEmergence_Age1 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+ConstructiveEmergence_Age1 | MixedStructure_Age1 | 5 | 41.67%
+ConstructiveEmergence_Age1 | MixedStructure_Age2 | 0 | 0.00%
+ConstructiveEmergence_Age1 | MixedStructure_Age3 | 0 | 0.00%
+ConstructiveEmergence_Age1 | MixedStructure_Age4 | 0 | 0.00%
+ConstructiveEmergence_Age1 | NeutralProcessing_Age1 | 4 | 33.33%
+ConstructiveEmergence_Age1 | NeutralProcessing_Age11-20 | 0 | 0.00%
+ConstructiveEmergence_Age1 | NeutralProcessing_Age2 | 0 | 0.00%
+ConstructiveEmergence_Age1 | NeutralProcessing_Age3 | 0 | 0.00%
+ConstructiveEmergence_Age1 | NeutralProcessing_Age4 | 0 | 0.00%
+ConstructiveEmergence_Age1 | NeutralProcessing_Age5 | 0 | 0.00%
+ConstructiveEmergence_Age1 | NeutralProcessing_Age6-10 | 0 | 0.00%
+ConstructiveEmergence_Age1 | ReassertionProcessing_Age1 | 0 | 0.00%
+ConstructiveEmergence_Age1 | ReassertionProcessing_Age2 | 0 | 0.00%
+ConstructiveEmergence_Age1 | ReassertionProcessing_Age3 | 0 | 0.00%
+ConstructiveEmergence_Age1 | RecoveryResolution_Age1 | 0 | 0.00%
+ConstructiveEmergence_Age1 | RecoveryResolution_Age2 | 0 | 0.00%
+ConstructiveEmergence_Age1 | RecoveryResolution_Age3 | 0 | 0.00%
+ConstructiveEmergence_Age1 | RecoveryResolution_Age4 | 0 | 0.00%
+DecayToNeutral_Age1 | CompressionProcessing_Age1 | 2 | 1.94%
+DecayToNeutral_Age1 | CompressionProcessing_Age2 | 0 | 0.00%
+DecayToNeutral_Age1 | CompressionProcessing_Age3 | 0 | 0.00%
+DecayToNeutral_Age1 | CompressionProcessing_Age4 | 0 | 0.00%
+DecayToNeutral_Age1 | CompressionProcessing_Age5 | 0 | 0.00%
+DecayToNeutral_Age1 | CompressionProcessing_Age6-10 | 0 | 0.00%
+DecayToNeutral_Age1 | ConstructiveEmergence_Age1 | 1 | 0.97%
+DecayToNeutral_Age1 | DecayToNeutral_Age1 | 0 | 0.00%
+DecayToNeutral_Age1 | DestructiveRotation_Age1 | 11 | 10.68%
+DecayToNeutral_Age1 | DestructiveRotation_Age2 | 0 | 0.00%
+DecayToNeutral_Age1 | DestructiveRotation_Age3 | 0 | 0.00%
+DecayToNeutral_Age1 | ExhaustionPersistence_Age1 | 0 | 0.00%
+DecayToNeutral_Age1 | ExhaustionPersistence_Age2 | 0 | 0.00%
+DecayToNeutral_Age1 | ExhaustionPersistence_Age3 | 0 | 0.00%
+DecayToNeutral_Age1 | ExhaustionPersistence_Age4 | 0 | 0.00%
+DecayToNeutral_Age1 | ExhaustionPersistence_Age5 | 0 | 0.00%
+DecayToNeutral_Age1 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+DecayToNeutral_Age1 | MixedStructure_Age1 | 26 | 25.24%
+DecayToNeutral_Age1 | MixedStructure_Age2 | 0 | 0.00%
+DecayToNeutral_Age1 | MixedStructure_Age3 | 0 | 0.00%
+DecayToNeutral_Age1 | MixedStructure_Age4 | 0 | 0.00%
+DecayToNeutral_Age1 | NeutralProcessing_Age1 | 63 | 61.17%
+DecayToNeutral_Age1 | NeutralProcessing_Age11-20 | 0 | 0.00%
+DecayToNeutral_Age1 | NeutralProcessing_Age2 | 0 | 0.00%
+DecayToNeutral_Age1 | NeutralProcessing_Age3 | 0 | 0.00%
+DecayToNeutral_Age1 | NeutralProcessing_Age4 | 0 | 0.00%
+DecayToNeutral_Age1 | NeutralProcessing_Age5 | 0 | 0.00%
+DecayToNeutral_Age1 | NeutralProcessing_Age6-10 | 0 | 0.00%
+DecayToNeutral_Age1 | ReassertionProcessing_Age1 | 0 | 0.00%
+DecayToNeutral_Age1 | ReassertionProcessing_Age2 | 0 | 0.00%
+DecayToNeutral_Age1 | ReassertionProcessing_Age3 | 0 | 0.00%
+DecayToNeutral_Age1 | RecoveryResolution_Age1 | 0 | 0.00%
+DecayToNeutral_Age1 | RecoveryResolution_Age2 | 0 | 0.00%
+DecayToNeutral_Age1 | RecoveryResolution_Age3 | 0 | 0.00%
+DecayToNeutral_Age1 | RecoveryResolution_Age4 | 0 | 0.00%
+DestructiveRotation_Age1 | CompressionProcessing_Age1 | 1 | 1.41%
+DestructiveRotation_Age1 | CompressionProcessing_Age2 | 0 | 0.00%
+DestructiveRotation_Age1 | CompressionProcessing_Age3 | 0 | 0.00%
+DestructiveRotation_Age1 | CompressionProcessing_Age4 | 0 | 0.00%
+DestructiveRotation_Age1 | CompressionProcessing_Age5 | 0 | 0.00%
+DestructiveRotation_Age1 | CompressionProcessing_Age6-10 | 0 | 0.00%
+DestructiveRotation_Age1 | ConstructiveEmergence_Age1 | 0 | 0.00%
+DestructiveRotation_Age1 | DecayToNeutral_Age1 | 20 | 28.17%
+DestructiveRotation_Age1 | DestructiveRotation_Age1 | 0 | 0.00%
+DestructiveRotation_Age1 | DestructiveRotation_Age2 | 12 | 16.90%
+DestructiveRotation_Age1 | DestructiveRotation_Age3 | 0 | 0.00%
+DestructiveRotation_Age1 | ExhaustionPersistence_Age1 | 5 | 7.04%
+DestructiveRotation_Age1 | ExhaustionPersistence_Age2 | 0 | 0.00%
+DestructiveRotation_Age1 | ExhaustionPersistence_Age3 | 0 | 0.00%
+DestructiveRotation_Age1 | ExhaustionPersistence_Age4 | 0 | 0.00%
+DestructiveRotation_Age1 | ExhaustionPersistence_Age5 | 0 | 0.00%
+DestructiveRotation_Age1 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+DestructiveRotation_Age1 | MixedStructure_Age1 | 1 | 1.41%
+DestructiveRotation_Age1 | MixedStructure_Age2 | 0 | 0.00%
+DestructiveRotation_Age1 | MixedStructure_Age3 | 0 | 0.00%
+DestructiveRotation_Age1 | MixedStructure_Age4 | 0 | 0.00%
+DestructiveRotation_Age1 | NeutralProcessing_Age1 | 25 | 35.21%
+DestructiveRotation_Age1 | NeutralProcessing_Age11-20 | 0 | 0.00%
+DestructiveRotation_Age1 | NeutralProcessing_Age2 | 0 | 0.00%
+DestructiveRotation_Age1 | NeutralProcessing_Age3 | 0 | 0.00%
+DestructiveRotation_Age1 | NeutralProcessing_Age4 | 0 | 0.00%
+DestructiveRotation_Age1 | NeutralProcessing_Age5 | 0 | 0.00%
+DestructiveRotation_Age1 | NeutralProcessing_Age6-10 | 0 | 0.00%
+DestructiveRotation_Age1 | ReassertionProcessing_Age1 | 3 | 4.23%
+DestructiveRotation_Age1 | ReassertionProcessing_Age2 | 0 | 0.00%
+DestructiveRotation_Age1 | ReassertionProcessing_Age3 | 0 | 0.00%
+DestructiveRotation_Age1 | RecoveryResolution_Age1 | 4 | 5.63%
+DestructiveRotation_Age1 | RecoveryResolution_Age2 | 0 | 0.00%
+DestructiveRotation_Age1 | RecoveryResolution_Age3 | 0 | 0.00%
+DestructiveRotation_Age1 | RecoveryResolution_Age4 | 0 | 0.00%
+DestructiveRotation_Age2 | CompressionProcessing_Age1 | 1 | 8.33%
+DestructiveRotation_Age2 | CompressionProcessing_Age2 | 0 | 0.00%
+DestructiveRotation_Age2 | CompressionProcessing_Age3 | 0 | 0.00%
+DestructiveRotation_Age2 | CompressionProcessing_Age4 | 0 | 0.00%
+DestructiveRotation_Age2 | CompressionProcessing_Age5 | 0 | 0.00%
+DestructiveRotation_Age2 | CompressionProcessing_Age6-10 | 0 | 0.00%
+DestructiveRotation_Age2 | ConstructiveEmergence_Age1 | 0 | 0.00%
+DestructiveRotation_Age2 | DecayToNeutral_Age1 | 4 | 33.33%
+DestructiveRotation_Age2 | DestructiveRotation_Age1 | 0 | 0.00%
+DestructiveRotation_Age2 | DestructiveRotation_Age2 | 0 | 0.00%
+DestructiveRotation_Age2 | DestructiveRotation_Age3 | 1 | 8.33%
+DestructiveRotation_Age2 | ExhaustionPersistence_Age1 | 3 | 25.00%
+DestructiveRotation_Age2 | ExhaustionPersistence_Age2 | 0 | 0.00%
+DestructiveRotation_Age2 | ExhaustionPersistence_Age3 | 0 | 0.00%
+DestructiveRotation_Age2 | ExhaustionPersistence_Age4 | 0 | 0.00%
+DestructiveRotation_Age2 | ExhaustionPersistence_Age5 | 0 | 0.00%
+DestructiveRotation_Age2 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+DestructiveRotation_Age2 | MixedStructure_Age1 | 0 | 0.00%
+DestructiveRotation_Age2 | MixedStructure_Age2 | 0 | 0.00%
+DestructiveRotation_Age2 | MixedStructure_Age3 | 0 | 0.00%
+DestructiveRotation_Age2 | MixedStructure_Age4 | 0 | 0.00%
+DestructiveRotation_Age2 | NeutralProcessing_Age1 | 2 | 16.67%
+DestructiveRotation_Age2 | NeutralProcessing_Age11-20 | 0 | 0.00%
+DestructiveRotation_Age2 | NeutralProcessing_Age2 | 0 | 0.00%
+DestructiveRotation_Age2 | NeutralProcessing_Age3 | 0 | 0.00%
+DestructiveRotation_Age2 | NeutralProcessing_Age4 | 0 | 0.00%
+DestructiveRotation_Age2 | NeutralProcessing_Age5 | 0 | 0.00%
+DestructiveRotation_Age2 | NeutralProcessing_Age6-10 | 0 | 0.00%
+DestructiveRotation_Age2 | ReassertionProcessing_Age1 | 0 | 0.00%
+DestructiveRotation_Age2 | ReassertionProcessing_Age2 | 0 | 0.00%
+DestructiveRotation_Age2 | ReassertionProcessing_Age3 | 0 | 0.00%
+DestructiveRotation_Age2 | RecoveryResolution_Age1 | 1 | 8.33%
+DestructiveRotation_Age2 | RecoveryResolution_Age2 | 0 | 0.00%
+DestructiveRotation_Age2 | RecoveryResolution_Age3 | 0 | 0.00%
+DestructiveRotation_Age2 | RecoveryResolution_Age4 | 0 | 0.00%
+DestructiveRotation_Age3 | CompressionProcessing_Age1 | 1 | 100.00%
+DestructiveRotation_Age3 | CompressionProcessing_Age2 | 0 | 0.00%
+DestructiveRotation_Age3 | CompressionProcessing_Age3 | 0 | 0.00%
+DestructiveRotation_Age3 | CompressionProcessing_Age4 | 0 | 0.00%
+DestructiveRotation_Age3 | CompressionProcessing_Age5 | 0 | 0.00%
+DestructiveRotation_Age3 | CompressionProcessing_Age6-10 | 0 | 0.00%
+DestructiveRotation_Age3 | ConstructiveEmergence_Age1 | 0 | 0.00%
+DestructiveRotation_Age3 | DecayToNeutral_Age1 | 0 | 0.00%
+DestructiveRotation_Age3 | DestructiveRotation_Age1 | 0 | 0.00%
+DestructiveRotation_Age3 | DestructiveRotation_Age2 | 0 | 0.00%
+DestructiveRotation_Age3 | DestructiveRotation_Age3 | 0 | 0.00%
+DestructiveRotation_Age3 | ExhaustionPersistence_Age1 | 0 | 0.00%
+DestructiveRotation_Age3 | ExhaustionPersistence_Age2 | 0 | 0.00%
+DestructiveRotation_Age3 | ExhaustionPersistence_Age3 | 0 | 0.00%
+DestructiveRotation_Age3 | ExhaustionPersistence_Age4 | 0 | 0.00%
+DestructiveRotation_Age3 | ExhaustionPersistence_Age5 | 0 | 0.00%
+DestructiveRotation_Age3 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+DestructiveRotation_Age3 | MixedStructure_Age1 | 0 | 0.00%
+DestructiveRotation_Age3 | MixedStructure_Age2 | 0 | 0.00%
+DestructiveRotation_Age3 | MixedStructure_Age3 | 0 | 0.00%
+DestructiveRotation_Age3 | MixedStructure_Age4 | 0 | 0.00%
+DestructiveRotation_Age3 | NeutralProcessing_Age1 | 0 | 0.00%
+DestructiveRotation_Age3 | NeutralProcessing_Age11-20 | 0 | 0.00%
+DestructiveRotation_Age3 | NeutralProcessing_Age2 | 0 | 0.00%
+DestructiveRotation_Age3 | NeutralProcessing_Age3 | 0 | 0.00%
+DestructiveRotation_Age3 | NeutralProcessing_Age4 | 0 | 0.00%
+DestructiveRotation_Age3 | NeutralProcessing_Age5 | 0 | 0.00%
+DestructiveRotation_Age3 | NeutralProcessing_Age6-10 | 0 | 0.00%
+DestructiveRotation_Age3 | ReassertionProcessing_Age1 | 0 | 0.00%
+DestructiveRotation_Age3 | ReassertionProcessing_Age2 | 0 | 0.00%
+DestructiveRotation_Age3 | ReassertionProcessing_Age3 | 0 | 0.00%
+DestructiveRotation_Age3 | RecoveryResolution_Age1 | 0 | 0.00%
+DestructiveRotation_Age3 | RecoveryResolution_Age2 | 0 | 0.00%
+DestructiveRotation_Age3 | RecoveryResolution_Age3 | 0 | 0.00%
+DestructiveRotation_Age3 | RecoveryResolution_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age1 | CompressionProcessing_Age1 | 7 | 7.22%
+ExhaustionPersistence_Age1 | CompressionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age1 | CompressionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age1 | CompressionProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age1 | CompressionProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age1 | CompressionProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age1 | ConstructiveEmergence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age1 | DecayToNeutral_Age1 | 17 | 17.53%
+ExhaustionPersistence_Age1 | DestructiveRotation_Age1 | 2 | 2.06%
+ExhaustionPersistence_Age1 | DestructiveRotation_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age1 | DestructiveRotation_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age2 | 31 | 31.96%
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age1 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age1 | MixedStructure_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age1 | MixedStructure_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age1 | MixedStructure_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age1 | MixedStructure_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age1 | NeutralProcessing_Age1 | 11 | 11.34%
+ExhaustionPersistence_Age1 | NeutralProcessing_Age11-20 | 0 | 0.00%
+ExhaustionPersistence_Age1 | NeutralProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age1 | NeutralProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age1 | NeutralProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age1 | NeutralProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age1 | NeutralProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age1 | ReassertionProcessing_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age1 | ReassertionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age1 | ReassertionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age1 | RecoveryResolution_Age1 | 29 | 29.90%
+ExhaustionPersistence_Age1 | RecoveryResolution_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age1 | RecoveryResolution_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age1 | RecoveryResolution_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age2 | CompressionProcessing_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age2 | CompressionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age2 | CompressionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age2 | CompressionProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age2 | CompressionProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age2 | CompressionProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age2 | ConstructiveEmergence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age2 | DecayToNeutral_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age2 | DestructiveRotation_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age2 | DestructiveRotation_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age2 | DestructiveRotation_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age2 | ExhaustionPersistence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age2 | ExhaustionPersistence_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age2 | ExhaustionPersistence_Age3 | 21 | 67.74%
+ExhaustionPersistence_Age2 | ExhaustionPersistence_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age2 | ExhaustionPersistence_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age2 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age2 | MixedStructure_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age2 | MixedStructure_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age2 | MixedStructure_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age2 | MixedStructure_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age2 | NeutralProcessing_Age1 | 1 | 3.23%
+ExhaustionPersistence_Age2 | NeutralProcessing_Age11-20 | 0 | 0.00%
+ExhaustionPersistence_Age2 | NeutralProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age2 | NeutralProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age2 | NeutralProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age2 | NeutralProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age2 | NeutralProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age2 | ReassertionProcessing_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age2 | ReassertionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age2 | ReassertionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age2 | RecoveryResolution_Age1 | 9 | 29.03%
+ExhaustionPersistence_Age2 | RecoveryResolution_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age2 | RecoveryResolution_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age2 | RecoveryResolution_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age3 | CompressionProcessing_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age3 | CompressionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age3 | CompressionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age3 | CompressionProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age3 | CompressionProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age3 | CompressionProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age3 | ConstructiveEmergence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age3 | DecayToNeutral_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age3 | DestructiveRotation_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age3 | DestructiveRotation_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age3 | DestructiveRotation_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age3 | ExhaustionPersistence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age3 | ExhaustionPersistence_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age3 | ExhaustionPersistence_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age3 | ExhaustionPersistence_Age4 | 16 | 76.19%
+ExhaustionPersistence_Age3 | ExhaustionPersistence_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age3 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age3 | MixedStructure_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age3 | MixedStructure_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age3 | MixedStructure_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age3 | MixedStructure_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age3 | NeutralProcessing_Age1 | 5 | 23.81%
+ExhaustionPersistence_Age3 | NeutralProcessing_Age11-20 | 0 | 0.00%
+ExhaustionPersistence_Age3 | NeutralProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age3 | NeutralProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age3 | NeutralProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age3 | NeutralProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age3 | NeutralProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age3 | ReassertionProcessing_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age3 | ReassertionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age3 | ReassertionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age3 | RecoveryResolution_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age3 | RecoveryResolution_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age3 | RecoveryResolution_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age3 | RecoveryResolution_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age4 | CompressionProcessing_Age1 | 1 | 6.25%
+ExhaustionPersistence_Age4 | CompressionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age4 | CompressionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age4 | CompressionProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age4 | CompressionProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age4 | CompressionProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age4 | ConstructiveEmergence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age4 | DecayToNeutral_Age1 | 1 | 6.25%
+ExhaustionPersistence_Age4 | DestructiveRotation_Age1 | 2 | 12.50%
+ExhaustionPersistence_Age4 | DestructiveRotation_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age4 | DestructiveRotation_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age4 | ExhaustionPersistence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age4 | ExhaustionPersistence_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age4 | ExhaustionPersistence_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age4 | ExhaustionPersistence_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age4 | ExhaustionPersistence_Age5 | 8 | 50.00%
+ExhaustionPersistence_Age4 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age4 | MixedStructure_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age4 | MixedStructure_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age4 | MixedStructure_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age4 | MixedStructure_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age4 | NeutralProcessing_Age1 | 3 | 18.75%
+ExhaustionPersistence_Age4 | NeutralProcessing_Age11-20 | 0 | 0.00%
+ExhaustionPersistence_Age4 | NeutralProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age4 | NeutralProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age4 | NeutralProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age4 | NeutralProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age4 | NeutralProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age4 | ReassertionProcessing_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age4 | ReassertionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age4 | ReassertionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age4 | RecoveryResolution_Age1 | 1 | 6.25%
+ExhaustionPersistence_Age4 | RecoveryResolution_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age4 | RecoveryResolution_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age4 | RecoveryResolution_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age5 | CompressionProcessing_Age1 | 1 | 12.50%
+ExhaustionPersistence_Age5 | CompressionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age5 | CompressionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age5 | CompressionProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age5 | CompressionProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age5 | CompressionProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age5 | ConstructiveEmergence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age5 | DecayToNeutral_Age1 | 2 | 25.00%
+ExhaustionPersistence_Age5 | DestructiveRotation_Age1 | 1 | 12.50%
+ExhaustionPersistence_Age5 | DestructiveRotation_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age5 | DestructiveRotation_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age5 | ExhaustionPersistence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age5 | ExhaustionPersistence_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age5 | ExhaustionPersistence_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age5 | ExhaustionPersistence_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age5 | ExhaustionPersistence_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age5 | ExhaustionPersistence_Age6-10 | 1 | 12.50%
+ExhaustionPersistence_Age5 | MixedStructure_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age5 | MixedStructure_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age5 | MixedStructure_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age5 | MixedStructure_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age5 | NeutralProcessing_Age1 | 3 | 37.50%
+ExhaustionPersistence_Age5 | NeutralProcessing_Age11-20 | 0 | 0.00%
+ExhaustionPersistence_Age5 | NeutralProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age5 | NeutralProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age5 | NeutralProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age5 | NeutralProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age5 | NeutralProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age5 | ReassertionProcessing_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age5 | ReassertionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age5 | ReassertionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age5 | RecoveryResolution_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age5 | RecoveryResolution_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age5 | RecoveryResolution_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age5 | RecoveryResolution_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | CompressionProcessing_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | CompressionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | CompressionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | CompressionProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | CompressionProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | CompressionProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | ConstructiveEmergence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | DecayToNeutral_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | DestructiveRotation_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | DestructiveRotation_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | DestructiveRotation_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | ExhaustionPersistence_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | ExhaustionPersistence_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | ExhaustionPersistence_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | ExhaustionPersistence_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | ExhaustionPersistence_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | ExhaustionPersistence_Age6-10 | 2 | 66.67%
+ExhaustionPersistence_Age6-10 | MixedStructure_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | MixedStructure_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | MixedStructure_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | MixedStructure_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | NeutralProcessing_Age1 | 1 | 33.33%
+ExhaustionPersistence_Age6-10 | NeutralProcessing_Age11-20 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | NeutralProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | NeutralProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | NeutralProcessing_Age4 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | NeutralProcessing_Age5 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | NeutralProcessing_Age6-10 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | ReassertionProcessing_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | ReassertionProcessing_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | ReassertionProcessing_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | RecoveryResolution_Age1 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | RecoveryResolution_Age2 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | RecoveryResolution_Age3 | 0 | 0.00%
+ExhaustionPersistence_Age6-10 | RecoveryResolution_Age4 | 0 | 0.00%
+MixedStructure_Age1 | CompressionProcessing_Age1 | 5 | 1.79%
+MixedStructure_Age1 | CompressionProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age1 | CompressionProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age1 | CompressionProcessing_Age4 | 0 | 0.00%
+MixedStructure_Age1 | CompressionProcessing_Age5 | 0 | 0.00%
+MixedStructure_Age1 | CompressionProcessing_Age6-10 | 0 | 0.00%
+MixedStructure_Age1 | ConstructiveEmergence_Age1 | 3 | 1.08%
+MixedStructure_Age1 | DecayToNeutral_Age1 | 44 | 15.77%
+MixedStructure_Age1 | DestructiveRotation_Age1 | 3 | 1.08%
+MixedStructure_Age1 | DestructiveRotation_Age2 | 0 | 0.00%
+MixedStructure_Age1 | DestructiveRotation_Age3 | 0 | 0.00%
+MixedStructure_Age1 | ExhaustionPersistence_Age1 | 39 | 13.98%
+MixedStructure_Age1 | ExhaustionPersistence_Age2 | 0 | 0.00%
+MixedStructure_Age1 | ExhaustionPersistence_Age3 | 0 | 0.00%
+MixedStructure_Age1 | ExhaustionPersistence_Age4 | 0 | 0.00%
+MixedStructure_Age1 | ExhaustionPersistence_Age5 | 0 | 0.00%
+MixedStructure_Age1 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+MixedStructure_Age1 | MixedStructure_Age1 | 0 | 0.00%
+MixedStructure_Age1 | MixedStructure_Age2 | 28 | 10.04%
+MixedStructure_Age1 | MixedStructure_Age3 | 0 | 0.00%
+MixedStructure_Age1 | MixedStructure_Age4 | 0 | 0.00%
+MixedStructure_Age1 | NeutralProcessing_Age1 | 115 | 41.22%
+MixedStructure_Age1 | NeutralProcessing_Age11-20 | 0 | 0.00%
+MixedStructure_Age1 | NeutralProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age1 | NeutralProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age1 | NeutralProcessing_Age4 | 0 | 0.00%
+MixedStructure_Age1 | NeutralProcessing_Age5 | 0 | 0.00%
+MixedStructure_Age1 | NeutralProcessing_Age6-10 | 0 | 0.00%
+MixedStructure_Age1 | ReassertionProcessing_Age1 | 17 | 6.09%
+MixedStructure_Age1 | ReassertionProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age1 | ReassertionProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age1 | RecoveryResolution_Age1 | 25 | 8.96%
+MixedStructure_Age1 | RecoveryResolution_Age2 | 0 | 0.00%
+MixedStructure_Age1 | RecoveryResolution_Age3 | 0 | 0.00%
+MixedStructure_Age1 | RecoveryResolution_Age4 | 0 | 0.00%
+MixedStructure_Age2 | CompressionProcessing_Age1 | 1 | 3.57%
+MixedStructure_Age2 | CompressionProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age2 | CompressionProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age2 | CompressionProcessing_Age4 | 0 | 0.00%
+MixedStructure_Age2 | CompressionProcessing_Age5 | 0 | 0.00%
+MixedStructure_Age2 | CompressionProcessing_Age6-10 | 0 | 0.00%
+MixedStructure_Age2 | ConstructiveEmergence_Age1 | 0 | 0.00%
+MixedStructure_Age2 | DecayToNeutral_Age1 | 8 | 28.57%
+MixedStructure_Age2 | DestructiveRotation_Age1 | 0 | 0.00%
+MixedStructure_Age2 | DestructiveRotation_Age2 | 0 | 0.00%
+MixedStructure_Age2 | DestructiveRotation_Age3 | 0 | 0.00%
+MixedStructure_Age2 | ExhaustionPersistence_Age1 | 3 | 10.71%
+MixedStructure_Age2 | ExhaustionPersistence_Age2 | 0 | 0.00%
+MixedStructure_Age2 | ExhaustionPersistence_Age3 | 0 | 0.00%
+MixedStructure_Age2 | ExhaustionPersistence_Age4 | 0 | 0.00%
+MixedStructure_Age2 | ExhaustionPersistence_Age5 | 0 | 0.00%
+MixedStructure_Age2 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+MixedStructure_Age2 | MixedStructure_Age1 | 0 | 0.00%
+MixedStructure_Age2 | MixedStructure_Age2 | 0 | 0.00%
+MixedStructure_Age2 | MixedStructure_Age3 | 5 | 17.86%
+MixedStructure_Age2 | MixedStructure_Age4 | 0 | 0.00%
+MixedStructure_Age2 | NeutralProcessing_Age1 | 7 | 25.00%
+MixedStructure_Age2 | NeutralProcessing_Age11-20 | 0 | 0.00%
+MixedStructure_Age2 | NeutralProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age2 | NeutralProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age2 | NeutralProcessing_Age4 | 0 | 0.00%
+MixedStructure_Age2 | NeutralProcessing_Age5 | 0 | 0.00%
+MixedStructure_Age2 | NeutralProcessing_Age6-10 | 0 | 0.00%
+MixedStructure_Age2 | ReassertionProcessing_Age1 | 0 | 0.00%
+MixedStructure_Age2 | ReassertionProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age2 | ReassertionProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age2 | RecoveryResolution_Age1 | 4 | 14.29%
+MixedStructure_Age2 | RecoveryResolution_Age2 | 0 | 0.00%
+MixedStructure_Age2 | RecoveryResolution_Age3 | 0 | 0.00%
+MixedStructure_Age2 | RecoveryResolution_Age4 | 0 | 0.00%
+MixedStructure_Age3 | CompressionProcessing_Age1 | 0 | 0.00%
+MixedStructure_Age3 | CompressionProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age3 | CompressionProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age3 | CompressionProcessing_Age4 | 0 | 0.00%
+MixedStructure_Age3 | CompressionProcessing_Age5 | 0 | 0.00%
+MixedStructure_Age3 | CompressionProcessing_Age6-10 | 0 | 0.00%
+MixedStructure_Age3 | ConstructiveEmergence_Age1 | 2 | 40.00%
+MixedStructure_Age3 | DecayToNeutral_Age1 | 0 | 0.00%
+MixedStructure_Age3 | DestructiveRotation_Age1 | 0 | 0.00%
+MixedStructure_Age3 | DestructiveRotation_Age2 | 0 | 0.00%
+MixedStructure_Age3 | DestructiveRotation_Age3 | 0 | 0.00%
+MixedStructure_Age3 | ExhaustionPersistence_Age1 | 0 | 0.00%
+MixedStructure_Age3 | ExhaustionPersistence_Age2 | 0 | 0.00%
+MixedStructure_Age3 | ExhaustionPersistence_Age3 | 0 | 0.00%
+MixedStructure_Age3 | ExhaustionPersistence_Age4 | 0 | 0.00%
+MixedStructure_Age3 | ExhaustionPersistence_Age5 | 0 | 0.00%
+MixedStructure_Age3 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+MixedStructure_Age3 | MixedStructure_Age1 | 0 | 0.00%
+MixedStructure_Age3 | MixedStructure_Age2 | 0 | 0.00%
+MixedStructure_Age3 | MixedStructure_Age3 | 0 | 0.00%
+MixedStructure_Age3 | MixedStructure_Age4 | 2 | 40.00%
+MixedStructure_Age3 | NeutralProcessing_Age1 | 0 | 0.00%
+MixedStructure_Age3 | NeutralProcessing_Age11-20 | 0 | 0.00%
+MixedStructure_Age3 | NeutralProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age3 | NeutralProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age3 | NeutralProcessing_Age4 | 0 | 0.00%
+MixedStructure_Age3 | NeutralProcessing_Age5 | 0 | 0.00%
+MixedStructure_Age3 | NeutralProcessing_Age6-10 | 0 | 0.00%
+MixedStructure_Age3 | ReassertionProcessing_Age1 | 0 | 0.00%
+MixedStructure_Age3 | ReassertionProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age3 | ReassertionProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age3 | RecoveryResolution_Age1 | 1 | 20.00%
+MixedStructure_Age3 | RecoveryResolution_Age2 | 0 | 0.00%
+MixedStructure_Age3 | RecoveryResolution_Age3 | 0 | 0.00%
+MixedStructure_Age3 | RecoveryResolution_Age4 | 0 | 0.00%
+MixedStructure_Age4 | CompressionProcessing_Age1 | 0 | 0.00%
+MixedStructure_Age4 | CompressionProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age4 | CompressionProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age4 | CompressionProcessing_Age4 | 0 | 0.00%
+MixedStructure_Age4 | CompressionProcessing_Age5 | 0 | 0.00%
+MixedStructure_Age4 | CompressionProcessing_Age6-10 | 0 | 0.00%
+MixedStructure_Age4 | ConstructiveEmergence_Age1 | 0 | 0.00%
+MixedStructure_Age4 | DecayToNeutral_Age1 | 0 | 0.00%
+MixedStructure_Age4 | DestructiveRotation_Age1 | 0 | 0.00%
+MixedStructure_Age4 | DestructiveRotation_Age2 | 0 | 0.00%
+MixedStructure_Age4 | DestructiveRotation_Age3 | 0 | 0.00%
+MixedStructure_Age4 | ExhaustionPersistence_Age1 | 0 | 0.00%
+MixedStructure_Age4 | ExhaustionPersistence_Age2 | 0 | 0.00%
+MixedStructure_Age4 | ExhaustionPersistence_Age3 | 0 | 0.00%
+MixedStructure_Age4 | ExhaustionPersistence_Age4 | 0 | 0.00%
+MixedStructure_Age4 | ExhaustionPersistence_Age5 | 0 | 0.00%
+MixedStructure_Age4 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+MixedStructure_Age4 | MixedStructure_Age1 | 0 | 0.00%
+MixedStructure_Age4 | MixedStructure_Age2 | 0 | 0.00%
+MixedStructure_Age4 | MixedStructure_Age3 | 0 | 0.00%
+MixedStructure_Age4 | MixedStructure_Age4 | 0 | 0.00%
+MixedStructure_Age4 | NeutralProcessing_Age1 | 2 | 100.00%
+MixedStructure_Age4 | NeutralProcessing_Age11-20 | 0 | 0.00%
+MixedStructure_Age4 | NeutralProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age4 | NeutralProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age4 | NeutralProcessing_Age4 | 0 | 0.00%
+MixedStructure_Age4 | NeutralProcessing_Age5 | 0 | 0.00%
+MixedStructure_Age4 | NeutralProcessing_Age6-10 | 0 | 0.00%
+MixedStructure_Age4 | ReassertionProcessing_Age1 | 0 | 0.00%
+MixedStructure_Age4 | ReassertionProcessing_Age2 | 0 | 0.00%
+MixedStructure_Age4 | ReassertionProcessing_Age3 | 0 | 0.00%
+MixedStructure_Age4 | RecoveryResolution_Age1 | 0 | 0.00%
+MixedStructure_Age4 | RecoveryResolution_Age2 | 0 | 0.00%
+MixedStructure_Age4 | RecoveryResolution_Age3 | 0 | 0.00%
+MixedStructure_Age4 | RecoveryResolution_Age4 | 0 | 0.00%
+NeutralProcessing_Age1 | CompressionProcessing_Age1 | 45 | 10.11%
+NeutralProcessing_Age1 | CompressionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age1 | CompressionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age1 | CompressionProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age1 | CompressionProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age1 | CompressionProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age1 | ConstructiveEmergence_Age1 | 3 | 0.67%
+NeutralProcessing_Age1 | DecayToNeutral_Age1 | 0 | 0.00%
+NeutralProcessing_Age1 | DestructiveRotation_Age1 | 15 | 3.37%
+NeutralProcessing_Age1 | DestructiveRotation_Age2 | 0 | 0.00%
+NeutralProcessing_Age1 | DestructiveRotation_Age3 | 0 | 0.00%
+NeutralProcessing_Age1 | ExhaustionPersistence_Age1 | 0 | 0.00%
+NeutralProcessing_Age1 | ExhaustionPersistence_Age2 | 0 | 0.00%
+NeutralProcessing_Age1 | ExhaustionPersistence_Age3 | 0 | 0.00%
+NeutralProcessing_Age1 | ExhaustionPersistence_Age4 | 0 | 0.00%
+NeutralProcessing_Age1 | ExhaustionPersistence_Age5 | 0 | 0.00%
+NeutralProcessing_Age1 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age1 | MixedStructure_Age1 | 66 | 14.83%
+NeutralProcessing_Age1 | MixedStructure_Age2 | 0 | 0.00%
+NeutralProcessing_Age1 | MixedStructure_Age3 | 0 | 0.00%
+NeutralProcessing_Age1 | MixedStructure_Age4 | 0 | 0.00%
+NeutralProcessing_Age1 | NeutralProcessing_Age1 | 0 | 0.00%
+NeutralProcessing_Age1 | NeutralProcessing_Age11-20 | 0 | 0.00%
+NeutralProcessing_Age1 | NeutralProcessing_Age2 | 253 | 56.85%
+NeutralProcessing_Age1 | NeutralProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age1 | NeutralProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age1 | NeutralProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age1 | NeutralProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age1 | ReassertionProcessing_Age1 | 63 | 14.16%
+NeutralProcessing_Age1 | ReassertionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age1 | ReassertionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age1 | RecoveryResolution_Age1 | 0 | 0.00%
+NeutralProcessing_Age1 | RecoveryResolution_Age2 | 0 | 0.00%
+NeutralProcessing_Age1 | RecoveryResolution_Age3 | 0 | 0.00%
+NeutralProcessing_Age1 | RecoveryResolution_Age4 | 0 | 0.00%
+NeutralProcessing_Age11-20 | CompressionProcessing_Age1 | 2 | 6.67%
+NeutralProcessing_Age11-20 | CompressionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age11-20 | CompressionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age11-20 | CompressionProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age11-20 | CompressionProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age11-20 | CompressionProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age11-20 | ConstructiveEmergence_Age1 | 0 | 0.00%
+NeutralProcessing_Age11-20 | DecayToNeutral_Age1 | 0 | 0.00%
+NeutralProcessing_Age11-20 | DestructiveRotation_Age1 | 0 | 0.00%
+NeutralProcessing_Age11-20 | DestructiveRotation_Age2 | 0 | 0.00%
+NeutralProcessing_Age11-20 | DestructiveRotation_Age3 | 0 | 0.00%
+NeutralProcessing_Age11-20 | ExhaustionPersistence_Age1 | 1 | 3.33%
+NeutralProcessing_Age11-20 | ExhaustionPersistence_Age2 | 0 | 0.00%
+NeutralProcessing_Age11-20 | ExhaustionPersistence_Age3 | 0 | 0.00%
+NeutralProcessing_Age11-20 | ExhaustionPersistence_Age4 | 0 | 0.00%
+NeutralProcessing_Age11-20 | ExhaustionPersistence_Age5 | 0 | 0.00%
+NeutralProcessing_Age11-20 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age11-20 | MixedStructure_Age1 | 4 | 13.33%
+NeutralProcessing_Age11-20 | MixedStructure_Age2 | 0 | 0.00%
+NeutralProcessing_Age11-20 | MixedStructure_Age3 | 0 | 0.00%
+NeutralProcessing_Age11-20 | MixedStructure_Age4 | 0 | 0.00%
+NeutralProcessing_Age11-20 | NeutralProcessing_Age1 | 0 | 0.00%
+NeutralProcessing_Age11-20 | NeutralProcessing_Age11-20 | 19 | 63.33%
+NeutralProcessing_Age11-20 | NeutralProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age11-20 | NeutralProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age11-20 | NeutralProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age11-20 | NeutralProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age11-20 | NeutralProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age11-20 | ReassertionProcessing_Age1 | 4 | 13.33%
+NeutralProcessing_Age11-20 | ReassertionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age11-20 | ReassertionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age11-20 | RecoveryResolution_Age1 | 0 | 0.00%
+NeutralProcessing_Age11-20 | RecoveryResolution_Age2 | 0 | 0.00%
+NeutralProcessing_Age11-20 | RecoveryResolution_Age3 | 0 | 0.00%
+NeutralProcessing_Age11-20 | RecoveryResolution_Age4 | 0 | 0.00%
+NeutralProcessing_Age2 | CompressionProcessing_Age1 | 24 | 9.49%
+NeutralProcessing_Age2 | CompressionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age2 | CompressionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age2 | CompressionProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age2 | CompressionProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age2 | CompressionProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age2 | ConstructiveEmergence_Age1 | 0 | 0.00%
+NeutralProcessing_Age2 | DecayToNeutral_Age1 | 0 | 0.00%
+NeutralProcessing_Age2 | DestructiveRotation_Age1 | 5 | 1.98%
+NeutralProcessing_Age2 | DestructiveRotation_Age2 | 0 | 0.00%
+NeutralProcessing_Age2 | DestructiveRotation_Age3 | 0 | 0.00%
+NeutralProcessing_Age2 | ExhaustionPersistence_Age1 | 0 | 0.00%
+NeutralProcessing_Age2 | ExhaustionPersistence_Age2 | 0 | 0.00%
+NeutralProcessing_Age2 | ExhaustionPersistence_Age3 | 0 | 0.00%
+NeutralProcessing_Age2 | ExhaustionPersistence_Age4 | 0 | 0.00%
+NeutralProcessing_Age2 | ExhaustionPersistence_Age5 | 0 | 0.00%
+NeutralProcessing_Age2 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age2 | MixedStructure_Age1 | 54 | 21.34%
+NeutralProcessing_Age2 | MixedStructure_Age2 | 0 | 0.00%
+NeutralProcessing_Age2 | MixedStructure_Age3 | 0 | 0.00%
+NeutralProcessing_Age2 | MixedStructure_Age4 | 0 | 0.00%
+NeutralProcessing_Age2 | NeutralProcessing_Age1 | 0 | 0.00%
+NeutralProcessing_Age2 | NeutralProcessing_Age11-20 | 0 | 0.00%
+NeutralProcessing_Age2 | NeutralProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age2 | NeutralProcessing_Age3 | 140 | 55.34%
+NeutralProcessing_Age2 | NeutralProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age2 | NeutralProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age2 | NeutralProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age2 | ReassertionProcessing_Age1 | 30 | 11.86%
+NeutralProcessing_Age2 | ReassertionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age2 | ReassertionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age2 | RecoveryResolution_Age1 | 0 | 0.00%
+NeutralProcessing_Age2 | RecoveryResolution_Age2 | 0 | 0.00%
+NeutralProcessing_Age2 | RecoveryResolution_Age3 | 0 | 0.00%
+NeutralProcessing_Age2 | RecoveryResolution_Age4 | 0 | 0.00%
+NeutralProcessing_Age3 | CompressionProcessing_Age1 | 5 | 3.57%
+NeutralProcessing_Age3 | CompressionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age3 | CompressionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age3 | CompressionProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age3 | CompressionProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age3 | CompressionProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age3 | ConstructiveEmergence_Age1 | 0 | 0.00%
+NeutralProcessing_Age3 | DecayToNeutral_Age1 | 0 | 0.00%
+NeutralProcessing_Age3 | DestructiveRotation_Age1 | 0 | 0.00%
+NeutralProcessing_Age3 | DestructiveRotation_Age2 | 0 | 0.00%
+NeutralProcessing_Age3 | DestructiveRotation_Age3 | 0 | 0.00%
+NeutralProcessing_Age3 | ExhaustionPersistence_Age1 | 0 | 0.00%
+NeutralProcessing_Age3 | ExhaustionPersistence_Age2 | 0 | 0.00%
+NeutralProcessing_Age3 | ExhaustionPersistence_Age3 | 0 | 0.00%
+NeutralProcessing_Age3 | ExhaustionPersistence_Age4 | 0 | 0.00%
+NeutralProcessing_Age3 | ExhaustionPersistence_Age5 | 0 | 0.00%
+NeutralProcessing_Age3 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age3 | MixedStructure_Age1 | 15 | 10.71%
+NeutralProcessing_Age3 | MixedStructure_Age2 | 0 | 0.00%
+NeutralProcessing_Age3 | MixedStructure_Age3 | 0 | 0.00%
+NeutralProcessing_Age3 | MixedStructure_Age4 | 0 | 0.00%
+NeutralProcessing_Age3 | NeutralProcessing_Age1 | 0 | 0.00%
+NeutralProcessing_Age3 | NeutralProcessing_Age11-20 | 0 | 0.00%
+NeutralProcessing_Age3 | NeutralProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age3 | NeutralProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age3 | NeutralProcessing_Age4 | 106 | 75.71%
+NeutralProcessing_Age3 | NeutralProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age3 | NeutralProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age3 | ReassertionProcessing_Age1 | 14 | 10.00%
+NeutralProcessing_Age3 | ReassertionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age3 | ReassertionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age3 | RecoveryResolution_Age1 | 0 | 0.00%
+NeutralProcessing_Age3 | RecoveryResolution_Age2 | 0 | 0.00%
+NeutralProcessing_Age3 | RecoveryResolution_Age3 | 0 | 0.00%
+NeutralProcessing_Age3 | RecoveryResolution_Age4 | 0 | 0.00%
+NeutralProcessing_Age4 | CompressionProcessing_Age1 | 0 | 0.00%
+NeutralProcessing_Age4 | CompressionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age4 | CompressionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age4 | CompressionProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age4 | CompressionProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age4 | CompressionProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age4 | ConstructiveEmergence_Age1 | 1 | 0.94%
+NeutralProcessing_Age4 | DecayToNeutral_Age1 | 0 | 0.00%
+NeutralProcessing_Age4 | DestructiveRotation_Age1 | 0 | 0.00%
+NeutralProcessing_Age4 | DestructiveRotation_Age2 | 0 | 0.00%
+NeutralProcessing_Age4 | DestructiveRotation_Age3 | 0 | 0.00%
+NeutralProcessing_Age4 | ExhaustionPersistence_Age1 | 2 | 1.89%
+NeutralProcessing_Age4 | ExhaustionPersistence_Age2 | 0 | 0.00%
+NeutralProcessing_Age4 | ExhaustionPersistence_Age3 | 0 | 0.00%
+NeutralProcessing_Age4 | ExhaustionPersistence_Age4 | 0 | 0.00%
+NeutralProcessing_Age4 | ExhaustionPersistence_Age5 | 0 | 0.00%
+NeutralProcessing_Age4 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age4 | MixedStructure_Age1 | 4 | 3.77%
+NeutralProcessing_Age4 | MixedStructure_Age2 | 0 | 0.00%
+NeutralProcessing_Age4 | MixedStructure_Age3 | 0 | 0.00%
+NeutralProcessing_Age4 | MixedStructure_Age4 | 0 | 0.00%
+NeutralProcessing_Age4 | NeutralProcessing_Age1 | 0 | 0.00%
+NeutralProcessing_Age4 | NeutralProcessing_Age11-20 | 0 | 0.00%
+NeutralProcessing_Age4 | NeutralProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age4 | NeutralProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age4 | NeutralProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age4 | NeutralProcessing_Age5 | 95 | 89.62%
+NeutralProcessing_Age4 | NeutralProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age4 | ReassertionProcessing_Age1 | 4 | 3.77%
+NeutralProcessing_Age4 | ReassertionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age4 | ReassertionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age4 | RecoveryResolution_Age1 | 0 | 0.00%
+NeutralProcessing_Age4 | RecoveryResolution_Age2 | 0 | 0.00%
+NeutralProcessing_Age4 | RecoveryResolution_Age3 | 0 | 0.00%
+NeutralProcessing_Age4 | RecoveryResolution_Age4 | 0 | 0.00%
+NeutralProcessing_Age5 | CompressionProcessing_Age1 | 3 | 3.16%
+NeutralProcessing_Age5 | CompressionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age5 | CompressionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age5 | CompressionProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age5 | CompressionProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age5 | CompressionProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age5 | ConstructiveEmergence_Age1 | 0 | 0.00%
+NeutralProcessing_Age5 | DecayToNeutral_Age1 | 0 | 0.00%
+NeutralProcessing_Age5 | DestructiveRotation_Age1 | 0 | 0.00%
+NeutralProcessing_Age5 | DestructiveRotation_Age2 | 0 | 0.00%
+NeutralProcessing_Age5 | DestructiveRotation_Age3 | 0 | 0.00%
+NeutralProcessing_Age5 | ExhaustionPersistence_Age1 | 1 | 1.05%
+NeutralProcessing_Age5 | ExhaustionPersistence_Age2 | 0 | 0.00%
+NeutralProcessing_Age5 | ExhaustionPersistence_Age3 | 0 | 0.00%
+NeutralProcessing_Age5 | ExhaustionPersistence_Age4 | 0 | 0.00%
+NeutralProcessing_Age5 | ExhaustionPersistence_Age5 | 0 | 0.00%
+NeutralProcessing_Age5 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age5 | MixedStructure_Age1 | 10 | 10.53%
+NeutralProcessing_Age5 | MixedStructure_Age2 | 0 | 0.00%
+NeutralProcessing_Age5 | MixedStructure_Age3 | 0 | 0.00%
+NeutralProcessing_Age5 | MixedStructure_Age4 | 0 | 0.00%
+NeutralProcessing_Age5 | NeutralProcessing_Age1 | 0 | 0.00%
+NeutralProcessing_Age5 | NeutralProcessing_Age11-20 | 0 | 0.00%
+NeutralProcessing_Age5 | NeutralProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age5 | NeutralProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age5 | NeutralProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age5 | NeutralProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age5 | NeutralProcessing_Age6-10 | 75 | 78.95%
+NeutralProcessing_Age5 | ReassertionProcessing_Age1 | 6 | 6.32%
+NeutralProcessing_Age5 | ReassertionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age5 | ReassertionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age5 | RecoveryResolution_Age1 | 0 | 0.00%
+NeutralProcessing_Age5 | RecoveryResolution_Age2 | 0 | 0.00%
+NeutralProcessing_Age5 | RecoveryResolution_Age3 | 0 | 0.00%
+NeutralProcessing_Age5 | RecoveryResolution_Age4 | 0 | 0.00%
+NeutralProcessing_Age6-10 | CompressionProcessing_Age1 | 7 | 3.37%
+NeutralProcessing_Age6-10 | CompressionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age6-10 | CompressionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age6-10 | CompressionProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age6-10 | CompressionProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age6-10 | CompressionProcessing_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age6-10 | ConstructiveEmergence_Age1 | 1 | 0.48%
+NeutralProcessing_Age6-10 | DecayToNeutral_Age1 | 0 | 0.00%
+NeutralProcessing_Age6-10 | DestructiveRotation_Age1 | 0 | 0.00%
+NeutralProcessing_Age6-10 | DestructiveRotation_Age2 | 0 | 0.00%
+NeutralProcessing_Age6-10 | DestructiveRotation_Age3 | 0 | 0.00%
+NeutralProcessing_Age6-10 | ExhaustionPersistence_Age1 | 4 | 1.92%
+NeutralProcessing_Age6-10 | ExhaustionPersistence_Age2 | 0 | 0.00%
+NeutralProcessing_Age6-10 | ExhaustionPersistence_Age3 | 0 | 0.00%
+NeutralProcessing_Age6-10 | ExhaustionPersistence_Age4 | 0 | 0.00%
+NeutralProcessing_Age6-10 | ExhaustionPersistence_Age5 | 0 | 0.00%
+NeutralProcessing_Age6-10 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+NeutralProcessing_Age6-10 | MixedStructure_Age1 | 20 | 9.62%
+NeutralProcessing_Age6-10 | MixedStructure_Age2 | 0 | 0.00%
+NeutralProcessing_Age6-10 | MixedStructure_Age3 | 0 | 0.00%
+NeutralProcessing_Age6-10 | MixedStructure_Age4 | 0 | 0.00%
+NeutralProcessing_Age6-10 | NeutralProcessing_Age1 | 0 | 0.00%
+NeutralProcessing_Age6-10 | NeutralProcessing_Age11-20 | 11 | 5.29%
+NeutralProcessing_Age6-10 | NeutralProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age6-10 | NeutralProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age6-10 | NeutralProcessing_Age4 | 0 | 0.00%
+NeutralProcessing_Age6-10 | NeutralProcessing_Age5 | 0 | 0.00%
+NeutralProcessing_Age6-10 | NeutralProcessing_Age6-10 | 133 | 63.94%
+NeutralProcessing_Age6-10 | ReassertionProcessing_Age1 | 31 | 14.90%
+NeutralProcessing_Age6-10 | ReassertionProcessing_Age2 | 0 | 0.00%
+NeutralProcessing_Age6-10 | ReassertionProcessing_Age3 | 0 | 0.00%
+NeutralProcessing_Age6-10 | RecoveryResolution_Age1 | 1 | 0.48%
+NeutralProcessing_Age6-10 | RecoveryResolution_Age2 | 0 | 0.00%
+NeutralProcessing_Age6-10 | RecoveryResolution_Age3 | 0 | 0.00%
+NeutralProcessing_Age6-10 | RecoveryResolution_Age4 | 0 | 0.00%
+ReassertionProcessing_Age1 | CompressionProcessing_Age1 | 6 | 3.45%
+ReassertionProcessing_Age1 | CompressionProcessing_Age2 | 0 | 0.00%
+ReassertionProcessing_Age1 | CompressionProcessing_Age3 | 0 | 0.00%
+ReassertionProcessing_Age1 | CompressionProcessing_Age4 | 0 | 0.00%
+ReassertionProcessing_Age1 | CompressionProcessing_Age5 | 0 | 0.00%
+ReassertionProcessing_Age1 | CompressionProcessing_Age6-10 | 0 | 0.00%
+ReassertionProcessing_Age1 | ConstructiveEmergence_Age1 | 1 | 0.57%
+ReassertionProcessing_Age1 | DecayToNeutral_Age1 | 0 | 0.00%
+ReassertionProcessing_Age1 | DestructiveRotation_Age1 | 11 | 6.32%
+ReassertionProcessing_Age1 | DestructiveRotation_Age2 | 0 | 0.00%
+ReassertionProcessing_Age1 | DestructiveRotation_Age3 | 0 | 0.00%
+ReassertionProcessing_Age1 | ExhaustionPersistence_Age1 | 0 | 0.00%
+ReassertionProcessing_Age1 | ExhaustionPersistence_Age2 | 0 | 0.00%
+ReassertionProcessing_Age1 | ExhaustionPersistence_Age3 | 0 | 0.00%
+ReassertionProcessing_Age1 | ExhaustionPersistence_Age4 | 0 | 0.00%
+ReassertionProcessing_Age1 | ExhaustionPersistence_Age5 | 0 | 0.00%
+ReassertionProcessing_Age1 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+ReassertionProcessing_Age1 | MixedStructure_Age1 | 66 | 37.93%
+ReassertionProcessing_Age1 | MixedStructure_Age2 | 0 | 0.00%
+ReassertionProcessing_Age1 | MixedStructure_Age3 | 0 | 0.00%
+ReassertionProcessing_Age1 | MixedStructure_Age4 | 0 | 0.00%
+ReassertionProcessing_Age1 | NeutralProcessing_Age1 | 58 | 33.33%
+ReassertionProcessing_Age1 | NeutralProcessing_Age11-20 | 0 | 0.00%
+ReassertionProcessing_Age1 | NeutralProcessing_Age2 | 0 | 0.00%
+ReassertionProcessing_Age1 | NeutralProcessing_Age3 | 0 | 0.00%
+ReassertionProcessing_Age1 | NeutralProcessing_Age4 | 0 | 0.00%
+ReassertionProcessing_Age1 | NeutralProcessing_Age5 | 0 | 0.00%
+ReassertionProcessing_Age1 | NeutralProcessing_Age6-10 | 0 | 0.00%
+ReassertionProcessing_Age1 | ReassertionProcessing_Age1 | 0 | 0.00%
+ReassertionProcessing_Age1 | ReassertionProcessing_Age2 | 32 | 18.39%
+ReassertionProcessing_Age1 | ReassertionProcessing_Age3 | 0 | 0.00%
+ReassertionProcessing_Age1 | RecoveryResolution_Age1 | 0 | 0.00%
+ReassertionProcessing_Age1 | RecoveryResolution_Age2 | 0 | 0.00%
+ReassertionProcessing_Age1 | RecoveryResolution_Age3 | 0 | 0.00%
+ReassertionProcessing_Age1 | RecoveryResolution_Age4 | 0 | 0.00%
+ReassertionProcessing_Age2 | CompressionProcessing_Age1 | 1 | 3.12%
+ReassertionProcessing_Age2 | CompressionProcessing_Age2 | 0 | 0.00%
+ReassertionProcessing_Age2 | CompressionProcessing_Age3 | 0 | 0.00%
+ReassertionProcessing_Age2 | CompressionProcessing_Age4 | 0 | 0.00%
+ReassertionProcessing_Age2 | CompressionProcessing_Age5 | 0 | 0.00%
+ReassertionProcessing_Age2 | CompressionProcessing_Age6-10 | 0 | 0.00%
+ReassertionProcessing_Age2 | ConstructiveEmergence_Age1 | 0 | 0.00%
+ReassertionProcessing_Age2 | DecayToNeutral_Age1 | 0 | 0.00%
+ReassertionProcessing_Age2 | DestructiveRotation_Age1 | 18 | 56.25%
+ReassertionProcessing_Age2 | DestructiveRotation_Age2 | 0 | 0.00%
+ReassertionProcessing_Age2 | DestructiveRotation_Age3 | 0 | 0.00%
+ReassertionProcessing_Age2 | ExhaustionPersistence_Age1 | 0 | 0.00%
+ReassertionProcessing_Age2 | ExhaustionPersistence_Age2 | 0 | 0.00%
+ReassertionProcessing_Age2 | ExhaustionPersistence_Age3 | 0 | 0.00%
+ReassertionProcessing_Age2 | ExhaustionPersistence_Age4 | 0 | 0.00%
+ReassertionProcessing_Age2 | ExhaustionPersistence_Age5 | 0 | 0.00%
+ReassertionProcessing_Age2 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+ReassertionProcessing_Age2 | MixedStructure_Age1 | 0 | 0.00%
+ReassertionProcessing_Age2 | MixedStructure_Age2 | 0 | 0.00%
+ReassertionProcessing_Age2 | MixedStructure_Age3 | 0 | 0.00%
+ReassertionProcessing_Age2 | MixedStructure_Age4 | 0 | 0.00%
+ReassertionProcessing_Age2 | NeutralProcessing_Age1 | 12 | 37.50%
+ReassertionProcessing_Age2 | NeutralProcessing_Age11-20 | 0 | 0.00%
+ReassertionProcessing_Age2 | NeutralProcessing_Age2 | 0 | 0.00%
+ReassertionProcessing_Age2 | NeutralProcessing_Age3 | 0 | 0.00%
+ReassertionProcessing_Age2 | NeutralProcessing_Age4 | 0 | 0.00%
+ReassertionProcessing_Age2 | NeutralProcessing_Age5 | 0 | 0.00%
+ReassertionProcessing_Age2 | NeutralProcessing_Age6-10 | 0 | 0.00%
+ReassertionProcessing_Age2 | ReassertionProcessing_Age1 | 0 | 0.00%
+ReassertionProcessing_Age2 | ReassertionProcessing_Age2 | 0 | 0.00%
+ReassertionProcessing_Age2 | ReassertionProcessing_Age3 | 1 | 3.12%
+ReassertionProcessing_Age2 | RecoveryResolution_Age1 | 0 | 0.00%
+ReassertionProcessing_Age2 | RecoveryResolution_Age2 | 0 | 0.00%
+ReassertionProcessing_Age2 | RecoveryResolution_Age3 | 0 | 0.00%
+ReassertionProcessing_Age2 | RecoveryResolution_Age4 | 0 | 0.00%
+ReassertionProcessing_Age3 | CompressionProcessing_Age1 | 0 | 0.00%
+ReassertionProcessing_Age3 | CompressionProcessing_Age2 | 0 | 0.00%
+ReassertionProcessing_Age3 | CompressionProcessing_Age3 | 0 | 0.00%
+ReassertionProcessing_Age3 | CompressionProcessing_Age4 | 0 | 0.00%
+ReassertionProcessing_Age3 | CompressionProcessing_Age5 | 0 | 0.00%
+ReassertionProcessing_Age3 | CompressionProcessing_Age6-10 | 0 | 0.00%
+ReassertionProcessing_Age3 | ConstructiveEmergence_Age1 | 0 | 0.00%
+ReassertionProcessing_Age3 | DecayToNeutral_Age1 | 0 | 0.00%
+ReassertionProcessing_Age3 | DestructiveRotation_Age1 | 1 | 100.00%
+ReassertionProcessing_Age3 | DestructiveRotation_Age2 | 0 | 0.00%
+ReassertionProcessing_Age3 | DestructiveRotation_Age3 | 0 | 0.00%
+ReassertionProcessing_Age3 | ExhaustionPersistence_Age1 | 0 | 0.00%
+ReassertionProcessing_Age3 | ExhaustionPersistence_Age2 | 0 | 0.00%
+ReassertionProcessing_Age3 | ExhaustionPersistence_Age3 | 0 | 0.00%
+ReassertionProcessing_Age3 | ExhaustionPersistence_Age4 | 0 | 0.00%
+ReassertionProcessing_Age3 | ExhaustionPersistence_Age5 | 0 | 0.00%
+ReassertionProcessing_Age3 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+ReassertionProcessing_Age3 | MixedStructure_Age1 | 0 | 0.00%
+ReassertionProcessing_Age3 | MixedStructure_Age2 | 0 | 0.00%
+ReassertionProcessing_Age3 | MixedStructure_Age3 | 0 | 0.00%
+ReassertionProcessing_Age3 | MixedStructure_Age4 | 0 | 0.00%
+ReassertionProcessing_Age3 | NeutralProcessing_Age1 | 0 | 0.00%
+ReassertionProcessing_Age3 | NeutralProcessing_Age11-20 | 0 | 0.00%
+ReassertionProcessing_Age3 | NeutralProcessing_Age2 | 0 | 0.00%
+ReassertionProcessing_Age3 | NeutralProcessing_Age3 | 0 | 0.00%
+ReassertionProcessing_Age3 | NeutralProcessing_Age4 | 0 | 0.00%
+ReassertionProcessing_Age3 | NeutralProcessing_Age5 | 0 | 0.00%
+ReassertionProcessing_Age3 | NeutralProcessing_Age6-10 | 0 | 0.00%
+ReassertionProcessing_Age3 | ReassertionProcessing_Age1 | 0 | 0.00%
+ReassertionProcessing_Age3 | ReassertionProcessing_Age2 | 0 | 0.00%
+ReassertionProcessing_Age3 | ReassertionProcessing_Age3 | 0 | 0.00%
+ReassertionProcessing_Age3 | RecoveryResolution_Age1 | 0 | 0.00%
+ReassertionProcessing_Age3 | RecoveryResolution_Age2 | 0 | 0.00%
+ReassertionProcessing_Age3 | RecoveryResolution_Age3 | 0 | 0.00%
+ReassertionProcessing_Age3 | RecoveryResolution_Age4 | 0 | 0.00%
+RecoveryResolution_Age1 | CompressionProcessing_Age1 | 46 | 48.94%
+RecoveryResolution_Age1 | CompressionProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age1 | CompressionProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age1 | CompressionProcessing_Age4 | 0 | 0.00%
+RecoveryResolution_Age1 | CompressionProcessing_Age5 | 0 | 0.00%
+RecoveryResolution_Age1 | CompressionProcessing_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age1 | ConstructiveEmergence_Age1 | 0 | 0.00%
+RecoveryResolution_Age1 | DecayToNeutral_Age1 | 0 | 0.00%
+RecoveryResolution_Age1 | DestructiveRotation_Age1 | 0 | 0.00%
+RecoveryResolution_Age1 | DestructiveRotation_Age2 | 0 | 0.00%
+RecoveryResolution_Age1 | DestructiveRotation_Age3 | 0 | 0.00%
+RecoveryResolution_Age1 | ExhaustionPersistence_Age1 | 0 | 0.00%
+RecoveryResolution_Age1 | ExhaustionPersistence_Age2 | 0 | 0.00%
+RecoveryResolution_Age1 | ExhaustionPersistence_Age3 | 0 | 0.00%
+RecoveryResolution_Age1 | ExhaustionPersistence_Age4 | 0 | 0.00%
+RecoveryResolution_Age1 | ExhaustionPersistence_Age5 | 0 | 0.00%
+RecoveryResolution_Age1 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age1 | MixedStructure_Age1 | 0 | 0.00%
+RecoveryResolution_Age1 | MixedStructure_Age2 | 0 | 0.00%
+RecoveryResolution_Age1 | MixedStructure_Age3 | 0 | 0.00%
+RecoveryResolution_Age1 | MixedStructure_Age4 | 0 | 0.00%
+RecoveryResolution_Age1 | NeutralProcessing_Age1 | 10 | 10.64%
+RecoveryResolution_Age1 | NeutralProcessing_Age11-20 | 0 | 0.00%
+RecoveryResolution_Age1 | NeutralProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age1 | NeutralProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age1 | NeutralProcessing_Age4 | 0 | 0.00%
+RecoveryResolution_Age1 | NeutralProcessing_Age5 | 0 | 0.00%
+RecoveryResolution_Age1 | NeutralProcessing_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age1 | ReassertionProcessing_Age1 | 0 | 0.00%
+RecoveryResolution_Age1 | ReassertionProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age1 | ReassertionProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age1 | RecoveryResolution_Age1 | 0 | 0.00%
+RecoveryResolution_Age1 | RecoveryResolution_Age2 | 38 | 40.43%
+RecoveryResolution_Age1 | RecoveryResolution_Age3 | 0 | 0.00%
+RecoveryResolution_Age1 | RecoveryResolution_Age4 | 0 | 0.00%
+RecoveryResolution_Age2 | CompressionProcessing_Age1 | 0 | 0.00%
+RecoveryResolution_Age2 | CompressionProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age2 | CompressionProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age2 | CompressionProcessing_Age4 | 0 | 0.00%
+RecoveryResolution_Age2 | CompressionProcessing_Age5 | 0 | 0.00%
+RecoveryResolution_Age2 | CompressionProcessing_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age2 | ConstructiveEmergence_Age1 | 0 | 0.00%
+RecoveryResolution_Age2 | DecayToNeutral_Age1 | 0 | 0.00%
+RecoveryResolution_Age2 | DestructiveRotation_Age1 | 0 | 0.00%
+RecoveryResolution_Age2 | DestructiveRotation_Age2 | 0 | 0.00%
+RecoveryResolution_Age2 | DestructiveRotation_Age3 | 0 | 0.00%
+RecoveryResolution_Age2 | ExhaustionPersistence_Age1 | 0 | 0.00%
+RecoveryResolution_Age2 | ExhaustionPersistence_Age2 | 0 | 0.00%
+RecoveryResolution_Age2 | ExhaustionPersistence_Age3 | 0 | 0.00%
+RecoveryResolution_Age2 | ExhaustionPersistence_Age4 | 0 | 0.00%
+RecoveryResolution_Age2 | ExhaustionPersistence_Age5 | 0 | 0.00%
+RecoveryResolution_Age2 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age2 | MixedStructure_Age1 | 0 | 0.00%
+RecoveryResolution_Age2 | MixedStructure_Age2 | 0 | 0.00%
+RecoveryResolution_Age2 | MixedStructure_Age3 | 0 | 0.00%
+RecoveryResolution_Age2 | MixedStructure_Age4 | 0 | 0.00%
+RecoveryResolution_Age2 | NeutralProcessing_Age1 | 11 | 28.95%
+RecoveryResolution_Age2 | NeutralProcessing_Age11-20 | 0 | 0.00%
+RecoveryResolution_Age2 | NeutralProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age2 | NeutralProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age2 | NeutralProcessing_Age4 | 0 | 0.00%
+RecoveryResolution_Age2 | NeutralProcessing_Age5 | 0 | 0.00%
+RecoveryResolution_Age2 | NeutralProcessing_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age2 | ReassertionProcessing_Age1 | 0 | 0.00%
+RecoveryResolution_Age2 | ReassertionProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age2 | ReassertionProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age2 | RecoveryResolution_Age1 | 0 | 0.00%
+RecoveryResolution_Age2 | RecoveryResolution_Age2 | 0 | 0.00%
+RecoveryResolution_Age2 | RecoveryResolution_Age3 | 27 | 71.05%
+RecoveryResolution_Age2 | RecoveryResolution_Age4 | 0 | 0.00%
+RecoveryResolution_Age3 | CompressionProcessing_Age1 | 17 | 62.96%
+RecoveryResolution_Age3 | CompressionProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age3 | CompressionProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age3 | CompressionProcessing_Age4 | 0 | 0.00%
+RecoveryResolution_Age3 | CompressionProcessing_Age5 | 0 | 0.00%
+RecoveryResolution_Age3 | CompressionProcessing_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age3 | ConstructiveEmergence_Age1 | 0 | 0.00%
+RecoveryResolution_Age3 | DecayToNeutral_Age1 | 0 | 0.00%
+RecoveryResolution_Age3 | DestructiveRotation_Age1 | 0 | 0.00%
+RecoveryResolution_Age3 | DestructiveRotation_Age2 | 0 | 0.00%
+RecoveryResolution_Age3 | DestructiveRotation_Age3 | 0 | 0.00%
+RecoveryResolution_Age3 | ExhaustionPersistence_Age1 | 4 | 14.81%
+RecoveryResolution_Age3 | ExhaustionPersistence_Age2 | 0 | 0.00%
+RecoveryResolution_Age3 | ExhaustionPersistence_Age3 | 0 | 0.00%
+RecoveryResolution_Age3 | ExhaustionPersistence_Age4 | 0 | 0.00%
+RecoveryResolution_Age3 | ExhaustionPersistence_Age5 | 0 | 0.00%
+RecoveryResolution_Age3 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age3 | MixedStructure_Age1 | 0 | 0.00%
+RecoveryResolution_Age3 | MixedStructure_Age2 | 0 | 0.00%
+RecoveryResolution_Age3 | MixedStructure_Age3 | 0 | 0.00%
+RecoveryResolution_Age3 | MixedStructure_Age4 | 0 | 0.00%
+RecoveryResolution_Age3 | NeutralProcessing_Age1 | 5 | 18.52%
+RecoveryResolution_Age3 | NeutralProcessing_Age11-20 | 0 | 0.00%
+RecoveryResolution_Age3 | NeutralProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age3 | NeutralProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age3 | NeutralProcessing_Age4 | 0 | 0.00%
+RecoveryResolution_Age3 | NeutralProcessing_Age5 | 0 | 0.00%
+RecoveryResolution_Age3 | NeutralProcessing_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age3 | ReassertionProcessing_Age1 | 0 | 0.00%
+RecoveryResolution_Age3 | ReassertionProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age3 | ReassertionProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age3 | RecoveryResolution_Age1 | 0 | 0.00%
+RecoveryResolution_Age3 | RecoveryResolution_Age2 | 0 | 0.00%
+RecoveryResolution_Age3 | RecoveryResolution_Age3 | 0 | 0.00%
+RecoveryResolution_Age3 | RecoveryResolution_Age4 | 1 | 3.70%
+RecoveryResolution_Age4 | CompressionProcessing_Age1 | 1 | 100.00%
+RecoveryResolution_Age4 | CompressionProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age4 | CompressionProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age4 | CompressionProcessing_Age4 | 0 | 0.00%
+RecoveryResolution_Age4 | CompressionProcessing_Age5 | 0 | 0.00%
+RecoveryResolution_Age4 | CompressionProcessing_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age4 | ConstructiveEmergence_Age1 | 0 | 0.00%
+RecoveryResolution_Age4 | DecayToNeutral_Age1 | 0 | 0.00%
+RecoveryResolution_Age4 | DestructiveRotation_Age1 | 0 | 0.00%
+RecoveryResolution_Age4 | DestructiveRotation_Age2 | 0 | 0.00%
+RecoveryResolution_Age4 | DestructiveRotation_Age3 | 0 | 0.00%
+RecoveryResolution_Age4 | ExhaustionPersistence_Age1 | 0 | 0.00%
+RecoveryResolution_Age4 | ExhaustionPersistence_Age2 | 0 | 0.00%
+RecoveryResolution_Age4 | ExhaustionPersistence_Age3 | 0 | 0.00%
+RecoveryResolution_Age4 | ExhaustionPersistence_Age4 | 0 | 0.00%
+RecoveryResolution_Age4 | ExhaustionPersistence_Age5 | 0 | 0.00%
+RecoveryResolution_Age4 | ExhaustionPersistence_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age4 | MixedStructure_Age1 | 0 | 0.00%
+RecoveryResolution_Age4 | MixedStructure_Age2 | 0 | 0.00%
+RecoveryResolution_Age4 | MixedStructure_Age3 | 0 | 0.00%
+RecoveryResolution_Age4 | MixedStructure_Age4 | 0 | 0.00%
+RecoveryResolution_Age4 | NeutralProcessing_Age1 | 0 | 0.00%
+RecoveryResolution_Age4 | NeutralProcessing_Age11-20 | 0 | 0.00%
+RecoveryResolution_Age4 | NeutralProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age4 | NeutralProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age4 | NeutralProcessing_Age4 | 0 | 0.00%
+RecoveryResolution_Age4 | NeutralProcessing_Age5 | 0 | 0.00%
+RecoveryResolution_Age4 | NeutralProcessing_Age6-10 | 0 | 0.00%
+RecoveryResolution_Age4 | ReassertionProcessing_Age1 | 0 | 0.00%
+RecoveryResolution_Age4 | ReassertionProcessing_Age2 | 0 | 0.00%
+RecoveryResolution_Age4 | ReassertionProcessing_Age3 | 0 | 0.00%
+RecoveryResolution_Age4 | RecoveryResolution_Age1 | 0 | 0.00%
+RecoveryResolution_Age4 | RecoveryResolution_Age2 | 0 | 0.00%
+RecoveryResolution_Age4 | RecoveryResolution_Age3 | 0 | 0.00%
+RecoveryResolution_Age4 | RecoveryResolution_Age4 | 0 | 0.00%
+
+3. Category Flow Matrix
+SourceCategory | DestinationCategory | Count | Probability
+Core Node | Core Node | 106 | 15.34%
+Core Node | Insufficient Node | 4 | 0.58%
+Core Node | Secondary Node | 514 | 74.38%
+Core Node | Transition Node | 0 | 0.00%
+Core Node | Weak Node | 67 | 9.70%
+Insufficient Node | Core Node | 75 | 21.49%
+Insufficient Node | Insufficient Node | 146 | 41.83%
+Insufficient Node | Secondary Node | 36 | 10.32%
+Insufficient Node | Transition Node | 0 | 0.00%
+Insufficient Node | Weak Node | 92 | 26.36%
+Secondary Node | Core Node | 356 | 29.79%
+Secondary Node | Insufficient Node | 155 | 12.97%
+Secondary Node | Secondary Node | 473 | 39.58%
+Secondary Node | Transition Node | 0 | 0.00%
+Secondary Node | Weak Node | 211 | 17.66%
+Transition Node | Core Node | 0 | 0.00%
+Transition Node | Insufficient Node | 0 | 0.00%
+Transition Node | Secondary Node | 0 | 0.00%
+Transition Node | Transition Node | 0 | 0.00%
+Transition Node | Weak Node | 0 | 0.00%
+Weak Node | Core Node | 155 | 34.60%
+Weak Node | Insufficient Node | 44 | 9.82%
+Weak Node | Secondary Node | 171 | 38.17%
+Weak Node | Transition Node | 0 | 0.00%
+Weak Node | Weak Node | 78 | 17.41%
+
+4. Flow Balance
+Category | InboundTransitions | OutboundTransitions | NetFlow
+Core Node | 692 | 691 | 1
+Secondary Node | 1194 | 1195 | -1
+Transition Node | 0 | 0 | 0
+Weak Node | 448 | 448 | 0
+Insufficient Node | 349 | 349 | 0
+
+5. Excursion Analysis
+ExcursionCount | ExcursionProbability | MeanExcursionDuration | MedianExcursionDuration | MaximumExcursionDuration
+514 | 74.38% | 3.36 | 2.00 | 29
+
+6. Return Analysis
+ReturnCount | ReturnProbability | MeanReturnDuration | MedianReturnDuration
+722 | 100.00% | 3.65 | 2.00
+
+7. Transition Pathways
+Depth | Path | PathCount | PathProbability
+2 | Core -> Secondary | 514 | 19.16%
+2 | Secondary -> Secondary | 473 | 17.63%
+2 | Secondary -> Core | 356 | 13.27%
+2 | Secondary -> Weak | 211 | 7.86%
+2 | Weak -> Secondary | 171 | 6.37%
+2 | Secondary -> Insufficient | 155 | 5.78%
+2 | Weak -> Core | 155 | 5.78%
+2 | Insufficient -> Insufficient | 146 | 5.44%
+2 | Core -> Core | 106 | 3.95%
+2 | Insufficient -> Weak | 92 | 3.43%
+2 | Weak -> Weak | 78 | 2.91%
+2 | Insufficient -> Core | 75 | 2.80%
+2 | Core -> Weak | 67 | 2.50%
+2 | Weak -> Insufficient | 44 | 1.64%
+2 | Insufficient -> Secondary | 36 | 1.34%
+2 | Core -> Insufficient | 4 | 0.15%
+3 | Secondary -> Secondary -> Secondary | 242 | 9.02%
+3 | Secondary -> Core -> Secondary | 228 | 8.50%
+3 | Core -> Secondary -> Secondary | 218 | 8.13%
+3 | Core -> Secondary -> Core | 193 | 7.20%
+3 | Weak -> Core -> Secondary | 127 | 4.74%
+3 | Secondary -> Secondary -> Core | 120 | 4.47%
+3 | Secondary -> Core -> Core | 106 | 3.95%
+3 | Core -> Core -> Secondary | 103 | 3.84%
+3 | Secondary -> Weak -> Secondary | 92 | 3.43%
+3 | Core -> Secondary -> Weak | 84 | 3.13%
+3 | Secondary -> Weak -> Core | 74 | 2.76%
+3 | Weak -> Secondary -> Insufficient | 74 | 2.76%
+3 | Secondary -> Secondary -> Weak | 64 | 2.39%
+3 | Secondary -> Insufficient -> Insufficient | 63 | 2.35%
+3 | Insufficient -> Insufficient -> Insufficient | 61 | 2.27%
+3 | Insufficient -> Core -> Secondary | 56 | 2.09%
+3 | Secondary -> Secondary -> Insufficient | 47 | 1.75%
+3 | Weak -> Secondary -> Weak | 47 | 1.75%
+3 | Insufficient -> Insufficient -> Weak | 43 | 1.60%
+3 | Secondary -> Insufficient -> Core | 42 | 1.57%
+3 | Secondary -> Insufficient -> Weak | 39 | 1.45%
+3 | Weak -> Secondary -> Core | 39 | 1.45%
+3 | Insufficient -> Weak -> Secondary | 34 | 1.27%
+3 | Secondary -> Weak -> Weak | 32 | 1.19%
+3 | Core -> Weak -> Secondary | 29 | 1.08%
+3 | Weak -> Weak -> Core | 29 | 1.08%
+3 | Insufficient -> Insufficient -> Core | 28 | 1.04%
+3 | Insufficient -> Weak -> Core | 27 | 1.01%
+3 | Core -> Weak -> Core | 25 | 0.93%
+3 | Weak -> Core -> Weak | 25 | 0.93%
+3 | Weak -> Insufficient -> Insufficient | 22 | 0.82%
+3 | Secondary -> Core -> Weak | 21 | 0.78%
+3 | Weak -> Weak -> Weak | 20 | 0.75%
+3 | Core -> Secondary -> Insufficient | 19 | 0.71%
+3 | Insufficient -> Core -> Weak | 19 | 0.71%
+3 | Insufficient -> Secondary -> Weak | 16 | 0.60%
+3 | Insufficient -> Weak -> Insufficient | 16 | 0.60%
+3 | Weak -> Weak -> Secondary | 16 | 0.60%
+3 | Insufficient -> Weak -> Weak | 15 | 0.56%
+3 | Insufficient -> Insufficient -> Secondary | 14 | 0.52%
+3 | Insufficient -> Secondary -> Insufficient | 14 | 0.52%
+3 | Secondary -> Weak -> Insufficient | 13 | 0.48%
+3 | Weak -> Weak -> Insufficient | 13 | 0.48%
+3 | Core -> Weak -> Weak | 11 | 0.41%
+3 | Secondary -> Insufficient -> Secondary | 11 | 0.41%
+3 | Weak -> Secondary -> Secondary | 11 | 0.41%
+3 | Weak -> Insufficient -> Secondary | 10 | 0.37%
+3 | Weak -> Insufficient -> Weak | 9 | 0.34%
+3 | Insufficient -> Secondary -> Core | 4 | 0.15%
+3 | Weak -> Insufficient -> Core | 3 | 0.11%
+3 | Core -> Core -> Weak | 2 | 0.07%
+3 | Core -> Insufficient -> Core | 2 | 0.07%
+3 | Core -> Weak -> Insufficient | 2 | 0.07%
+3 | Insufficient -> Secondary -> Secondary | 2 | 0.07%
+3 | Weak -> Core -> Insufficient | 2 | 0.07%
+3 | Core -> Core -> Insufficient | 1 | 0.04%
+3 | Core -> Insufficient -> Secondary | 1 | 0.04%
+3 | Core -> Insufficient -> Weak | 1 | 0.04%
+3 | Secondary -> Core -> Insufficient | 1 | 0.04%
+4 | Secondary -> Secondary -> Secondary -> Secondary | 145 | 5.41%
+4 | Secondary -> Secondary -> Core -> Secondary | 114 | 4.25%
+4 | Core -> Secondary -> Core -> Core | 106 | 3.95%
+4 | Secondary -> Core -> Secondary -> Core | 106 | 3.95%
+4 | Secondary -> Core -> Core -> Secondary | 103 | 3.84%
+4 | Core -> Secondary -> Secondary -> Secondary | 95 | 3.54%
+4 | Core -> Core -> Secondary -> Secondary | 94 | 3.51%
+4 | Core -> Secondary -> Secondary -> Core | 85 | 3.17%
+4 | Core -> Secondary -> Core -> Secondary | 80 | 2.98%
+4 | Secondary -> Core -> Secondary -> Secondary | 72 | 2.69%
+4 | Weak -> Core -> Secondary -> Core | 60 | 2.24%
+4 | Secondary -> Weak -> Core -> Secondary | 58 | 2.16%
+4 | Secondary -> Weak -> Secondary -> Insufficient | 45 | 1.68%
+4 | Weak -> Secondary -> Insufficient -> Insufficient | 42 | 1.57%
+4 | Secondary -> Core -> Secondary -> Weak | 40 | 1.49%
+4 | Weak -> Core -> Secondary -> Secondary | 40 | 1.49%
+4 | Secondary -> Secondary -> Secondary -> Weak | 39 | 1.45%
+4 | Core -> Secondary -> Weak -> Core | 38 | 1.42%
+4 | Secondary -> Insufficient -> Core -> Secondary | 35 | 1.31%
+4 | Secondary -> Secondary -> Weak -> Secondary | 34 | 1.27%
+4 | Secondary -> Secondary -> Secondary -> Core | 32 | 1.19%
+4 | Weak -> Secondary -> Core -> Secondary | 30 | 1.12%
+4 | Core -> Secondary -> Weak -> Secondary | 28 | 1.04%
+4 | Secondary -> Insufficient -> Insufficient -> Weak | 27 | 1.01%
+4 | Secondary -> Secondary -> Secondary -> Insufficient | 26 | 0.97%
+4 | Insufficient -> Weak -> Core -> Secondary | 25 | 0.93%
+4 | Weak -> Core -> Secondary -> Weak | 25 | 0.93%
+4 | Core -> Weak -> Core -> Secondary | 23 | 0.86%
+4 | Insufficient -> Core -> Secondary -> Core | 23 | 0.86%
+4 | Insufficient -> Insufficient -> Insufficient -> Insufficient | 23 | 0.86%
+4 | Secondary -> Insufficient -> Insufficient -> Insufficient | 22 | 0.82%
+4 | Secondary -> Secondary -> Insufficient -> Weak | 21 | 0.78%
+4 | Secondary -> Secondary -> Weak -> Core | 21 | 0.78%
+4 | Secondary -> Weak -> Secondary -> Weak | 21 | 0.78%
+4 | Weak -> Weak -> Core -> Secondary | 21 | 0.78%
+4 | Core -> Secondary -> Secondary -> Insufficient | 20 | 0.75%
+4 | Insufficient -> Insufficient -> Weak -> Secondary | 20 | 0.75%
+4 | Secondary -> Weak -> Secondary -> Core | 20 | 0.75%
+4 | Weak -> Secondary -> Insufficient -> Core | 20 | 0.75%
+4 | Weak -> Secondary -> Weak -> Secondary | 19 | 0.71%
+4 | Core -> Secondary -> Secondary -> Weak | 18 | 0.67%
+4 | Insufficient -> Insufficient -> Core -> Secondary | 16 | 0.60%
+4 | Secondary -> Weak -> Weak -> Core | 16 | 0.60%
+4 | Weak -> Insufficient -> Insufficient -> Insufficient | 16 | 0.60%
+4 | Insufficient -> Insufficient -> Insufficient -> Weak | 15 | 0.56%
+4 | Secondary -> Weak -> Core -> Weak | 15 | 0.56%
+4 | Insufficient -> Core -> Secondary -> Weak | 14 | 0.52%
+4 | Secondary -> Insufficient -> Weak -> Core | 14 | 0.52%
+4 | Core -> Secondary -> Weak -> Weak | 13 | 0.48%
+4 | Insufficient -> Insufficient -> Insufficient -> Core | 13 | 0.48%
+4 | Insufficient -> Weak -> Secondary -> Insufficient | 13 | 0.48%
+4 | Secondary -> Core -> Weak -> Secondary | 13 | 0.48%
+4 | Insufficient -> Core -> Secondary -> Secondary | 12 | 0.45%
+4 | Insufficient -> Insufficient -> Core -> Weak | 12 | 0.45%
+4 | Secondary -> Insufficient -> Weak -> Secondary | 12 | 0.45%
+4 | Core -> Weak -> Secondary -> Core | 11 | 0.41%
+4 | Insufficient -> Core -> Weak -> Core | 11 | 0.41%
+4 | Insufficient -> Secondary -> Weak -> Secondary | 11 | 0.41%
+4 | Insufficient -> Weak -> Secondary -> Weak | 11 | 0.41%
+4 | Weak -> Secondary -> Weak -> Core | 11 | 0.41%
+4 | Weak -> Secondary -> Weak -> Weak | 11 | 0.41%
+4 | Insufficient -> Insufficient -> Insufficient -> Secondary | 10 | 0.37%
+4 | Insufficient -> Insufficient -> Weak -> Core | 10 | 0.37%
+4 | Secondary -> Core -> Secondary -> Insufficient | 10 | 0.37%
+4 | Secondary -> Insufficient -> Insufficient -> Core | 10 | 0.37%
+4 | Secondary -> Secondary -> Insufficient -> Core | 10 | 0.37%
+4 | Secondary -> Secondary -> Insufficient -> Insufficient | 10 | 0.37%
+4 | Core -> Weak -> Secondary -> Insufficient | 9 | 0.34%
+4 | Core -> Weak -> Secondary -> Weak | 9 | 0.34%
+4 | Secondary -> Weak -> Insufficient -> Insufficient | 9 | 0.34%
+4 | Weak -> Core -> Weak -> Core | 9 | 0.34%
+4 | Weak -> Insufficient -> Secondary -> Insufficient | 9 | 0.34%
+4 | Weak -> Secondary -> Core -> Weak | 9 | 0.34%
+4 | Core -> Secondary -> Insufficient -> Core | 8 | 0.30%
+4 | Core -> Secondary -> Insufficient -> Weak | 8 | 0.30%
+4 | Insufficient -> Secondary -> Insufficient -> Insufficient | 8 | 0.30%
+4 | Insufficient -> Weak -> Secondary -> Core | 8 | 0.30%
+4 | Secondary -> Insufficient -> Secondary -> Weak | 8 | 0.30%
+4 | Secondary -> Weak -> Weak -> Weak | 8 | 0.30%
+4 | Weak -> Core -> Weak -> Secondary | 8 | 0.30%
+4 | Weak -> Secondary -> Insufficient -> Weak | 8 | 0.30%
+4 | Weak -> Weak -> Core -> Weak | 8 | 0.30%
+4 | Core -> Secondary -> Core -> Weak | 7 | 0.26%
+4 | Insufficient -> Core -> Secondary -> Insufficient | 7 | 0.26%
+4 | Insufficient -> Core -> Weak -> Secondary | 7 | 0.26%
+4 | Insufficient -> Insufficient -> Secondary -> Weak | 7 | 0.26%
+4 | Insufficient -> Insufficient -> Weak -> Insufficient | 7 | 0.26%
+4 | Insufficient -> Weak -> Insufficient -> Insufficient | 7 | 0.26%
+4 | Secondary -> Insufficient -> Core -> Weak | 7 | 0.26%
+4 | Secondary -> Insufficient -> Weak -> Weak | 7 | 0.26%
+4 | Secondary -> Secondary -> Weak -> Weak | 7 | 0.26%
+4 | Weak -> Core -> Weak -> Weak | 7 | 0.26%
+4 | Weak -> Secondary -> Secondary -> Weak | 7 | 0.26%
+4 | Weak -> Weak -> Secondary -> Insufficient | 7 | 0.26%
+4 | Weak -> Weak -> Weak -> Secondary | 7 | 0.26%
+4 | Insufficient -> Insufficient -> Weak -> Weak | 6 | 0.22%
+4 | Insufficient -> Weak -> Weak -> Core | 6 | 0.22%
+4 | Secondary -> Insufficient -> Weak -> Insufficient | 6 | 0.22%
+4 | Secondary -> Secondary -> Insufficient -> Secondary | 6 | 0.22%
+4 | Secondary -> Weak -> Secondary -> Secondary | 6 | 0.22%
+4 | Weak -> Secondary -> Weak -> Insufficient | 6 | 0.22%
+4 | Weak -> Weak -> Insufficient -> Insufficient | 6 | 0.22%
+4 | Weak -> Weak -> Secondary -> Weak | 6 | 0.22%
+4 | Weak -> Weak -> Weak -> Weak | 6 | 0.22%
+4 | Core -> Core -> Secondary -> Weak | 5 | 0.19%
+4 | Core -> Secondary -> Weak -> Insufficient | 5 | 0.19%
+4 | Core -> Weak -> Weak -> Core | 5 | 0.19%
+4 | Insufficient -> Weak -> Weak -> Weak | 5 | 0.19%
+4 | Secondary -> Secondary -> Core -> Weak | 5 | 0.19%
+4 | Secondary -> Weak -> Weak -> Secondary | 5 | 0.19%
+4 | Weak -> Insufficient -> Insufficient -> Core | 5 | 0.19%
+4 | Weak -> Weak -> Insufficient -> Weak | 5 | 0.19%
+4 | Weak -> Weak -> Weak -> Insufficient | 5 | 0.19%
+4 | Core -> Core -> Secondary -> Core | 4 | 0.15%
+4 | Insufficient -> Secondary -> Core -> Secondary | 4 | 0.15%
+4 | Insufficient -> Secondary -> Insufficient -> Core | 4 | 0.15%
+4 | Insufficient -> Secondary -> Weak -> Core | 4 | 0.15%
+4 | Insufficient -> Weak -> Insufficient -> Secondary | 4 | 0.15%
+4 | Insufficient -> Weak -> Insufficient -> Weak | 4 | 0.15%
+4 | Secondary -> Core -> Weak -> Core | 4 | 0.15%
+4 | Secondary -> Insufficient -> Insufficient -> Secondary | 4 | 0.15%
+4 | Secondary -> Weak -> Insufficient -> Secondary | 4 | 0.15%
+4 | Weak -> Secondary -> Insufficient -> Secondary | 4 | 0.15%
+4 | Core -> Weak -> Weak -> Insufficient | 3 | 0.11%
+4 | Insufficient -> Insufficient -> Secondary -> Core | 3 | 0.11%
+4 | Secondary -> Core -> Weak -> Weak | 3 | 0.11%
+4 | Secondary -> Weak -> Weak -> Insufficient | 3 | 0.11%
+4 | Weak -> Insufficient -> Core -> Secondary | 3 | 0.11%
+4 | Weak -> Insufficient -> Weak -> Insufficient | 3 | 0.11%
+4 | Weak -> Weak -> Secondary -> Secondary | 3 | 0.11%
+4 | Core -> Insufficient -> Core -> Secondary | 2 | 0.07%
+4 | Core -> Secondary -> Insufficient -> Insufficient | 2 | 0.07%
+4 | Core -> Weak -> Insufficient -> Core | 2 | 0.07%
+4 | Core -> Weak -> Weak -> Secondary | 2 | 0.07%
+4 | Insufficient -> Insufficient -> Secondary -> Insufficient | 2 | 0.07%
+4 | Insufficient -> Insufficient -> Secondary -> Secondary | 2 | 0.07%
+4 | Insufficient -> Secondary -> Insufficient -> Weak | 2 | 0.07%
+4 | Insufficient -> Weak -> Core -> Weak | 2 | 0.07%
+4 | Insufficient -> Weak -> Secondary -> Secondary | 2 | 0.07%
+4 | Insufficient -> Weak -> Weak -> Insufficient | 2 | 0.07%
+4 | Insufficient -> Weak -> Weak -> Secondary | 2 | 0.07%
+4 | Secondary -> Core -> Core -> Weak | 2 | 0.07%
+4 | Secondary -> Insufficient -> Secondary -> Insufficient | 2 | 0.07%
+4 | Secondary -> Secondary -> Weak -> Insufficient | 2 | 0.07%
+4 | Weak -> Core -> Secondary -> Insufficient | 2 | 0.07%
+4 | Weak -> Insufficient -> Weak -> Core | 2 | 0.07%
+4 | Weak -> Insufficient -> Weak -> Secondary | 2 | 0.07%
+4 | Weak -> Insufficient -> Weak -> Weak | 2 | 0.07%
+4 | Weak -> Secondary -> Secondary -> Core | 2 | 0.07%
+4 | Weak -> Weak -> Insufficient -> Secondary | 2 | 0.07%
+4 | Weak -> Weak -> Weak -> Core | 2 | 0.07%
+4 | Core -> Core -> Insufficient -> Core | 1 | 0.04%
+4 | Core -> Core -> Weak -> Core | 1 | 0.04%
+4 | Core -> Core -> Weak -> Secondary | 1 | 0.04%
+4 | Core -> Insufficient -> Secondary -> Insufficient | 1 | 0.04%
+4 | Core -> Insufficient -> Weak -> Core | 1 | 0.04%
+4 | Core -> Secondary -> Insufficient -> Secondary | 1 | 0.04%
+4 | Core -> Weak -> Core -> Insufficient | 1 | 0.04%
+4 | Core -> Weak -> Weak -> Weak | 1 | 0.04%
+4 | Insufficient -> Core -> Weak -> Weak | 1 | 0.04%
+4 | Insufficient -> Secondary -> Secondary -> Core | 1 | 0.04%
+4 | Insufficient -> Secondary -> Secondary -> Secondary | 1 | 0.04%
+4 | Insufficient -> Secondary -> Weak -> Weak | 1 | 0.04%
+4 | Insufficient -> Weak -> Insufficient -> Core | 1 | 0.04%
+4 | Secondary -> Core -> Core -> Insufficient | 1 | 0.04%
+4 | Secondary -> Core -> Insufficient -> Weak | 1 | 0.04%
+4 | Secondary -> Core -> Weak -> Insufficient | 1 | 0.04%
+4 | Secondary -> Insufficient -> Secondary -> Core | 1 | 0.04%
+4 | Secondary -> Secondary -> Core -> Insufficient | 1 | 0.04%
+4 | Secondary -> Weak -> Core -> Insufficient | 1 | 0.04%
+4 | Weak -> Core -> Insufficient -> Core | 1 | 0.04%
+4 | Weak -> Core -> Insufficient -> Secondary | 1 | 0.04%
+4 | Weak -> Core -> Weak -> Insufficient | 1 | 0.04%
+4 | Weak -> Insufficient -> Insufficient -> Weak | 1 | 0.04%
+4 | Weak -> Insufficient -> Secondary -> Weak | 1 | 0.04%
+4 | Weak -> Secondary -> Secondary -> Insufficient | 1 | 0.04%
+4 | Weak -> Secondary -> Secondary -> Secondary | 1 | 0.04%
+5 | Core -> Secondary -> Core -> Core -> Secondary | 103 | 3.84%
+5 | Secondary -> Core -> Core -> Secondary -> Secondary | 94 | 3.51%
+5 | Secondary -> Secondary -> Secondary -> Secondary -> Secondary | 83 | 3.10%
+5 | Core -> Secondary -> Secondary -> Core -> Secondary | 82 | 3.06%
+5 | Core -> Core -> Secondary -> Secondary -> Secondary | 76 | 2.84%
+5 | Core -> Secondary -> Secondary -> Secondary -> Secondary | 61 | 2.28%
+5 | Secondary -> Core -> Secondary -> Core -> Core | 57 | 2.13%
+5 | Secondary -> Secondary -> Core -> Secondary -> Core | 48 | 1.79%
+5 | Secondary -> Core -> Secondary -> Secondary -> Core | 44 | 1.64%
+5 | Secondary -> Core -> Secondary -> Core -> Secondary | 42 | 1.57%
+5 | Secondary -> Secondary -> Core -> Secondary -> Secondary | 40 | 1.49%
+5 | Core -> Secondary -> Core -> Secondary -> Core | 35 | 1.31%
+5 | Weak -> Core -> Secondary -> Core -> Core | 30 | 1.12%
+5 | Weak -> Core -> Secondary -> Core -> Secondary | 30 | 1.12%
+5 | Core -> Secondary -> Weak -> Core -> Secondary | 29 | 1.08%
+5 | Secondary -> Secondary -> Secondary -> Core -> Secondary | 29 | 1.08%
+5 | Core -> Secondary -> Core -> Secondary -> Secondary | 28 | 1.04%
+5 | Secondary -> Weak -> Core -> Secondary -> Core | 27 | 1.01%
+5 | Weak -> Core -> Secondary -> Secondary -> Core | 26 | 0.97%
+5 | Secondary -> Secondary -> Secondary -> Secondary -> Weak | 24 | 0.90%
+5 | Secondary -> Secondary -> Core -> Secondary -> Weak | 23 | 0.86%
+5 | Secondary -> Weak -> Secondary -> Insufficient -> Insufficient | 23 | 0.86%
+5 | Secondary -> Secondary -> Secondary -> Secondary -> Insufficient | 21 | 0.78%
+5 | Secondary -> Secondary -> Secondary -> Weak -> Secondary | 21 | 0.78%
+5 | Secondary -> Weak -> Core -> Secondary -> Secondary | 20 | 0.75%
+5 | Weak -> Secondary -> Core -> Secondary -> Core | 20 | 0.75%
+5 | Weak -> Secondary -> Insufficient -> Insufficient -> Weak | 20 | 0.75%
+5 | Insufficient -> Core -> Secondary -> Core -> Core | 19 | 0.71%
+5 | Secondary -> Secondary -> Weak -> Secondary -> Insufficient | 19 | 0.71%
+5 | Secondary -> Core -> Secondary -> Weak -> Core | 17 | 0.63%
+5 | Secondary -> Secondary -> Secondary -> Secondary -> Core | 17 | 0.63%
+5 | Secondary -> Secondary -> Weak -> Core -> Secondary | 16 | 0.60%
+5 | Core -> Secondary -> Secondary -> Secondary -> Core | 15 | 0.56%
+5 | Secondary -> Core -> Secondary -> Weak -> Secondary | 15 | 0.56%
+5 | Secondary -> Weak -> Secondary -> Core -> Secondary | 15 | 0.56%
+5 | Core -> Secondary -> Secondary -> Secondary -> Weak | 14 | 0.52%
+5 | Insufficient -> Weak -> Core -> Secondary -> Core | 14 | 0.52%
+5 | Secondary -> Insufficient -> Core -> Secondary -> Core | 14 | 0.52%
+5 | Secondary -> Insufficient -> Insufficient -> Weak -> Secondary | 14 | 0.52%
+5 | Secondary -> Weak -> Secondary -> Insufficient -> Core | 14 | 0.52%
+5 | Weak -> Secondary -> Insufficient -> Core -> Secondary | 14 | 0.52%
+5 | Secondary -> Core -> Secondary -> Secondary -> Insufficient | 13 | 0.49%
+5 | Secondary -> Insufficient -> Weak -> Core -> Secondary | 13 | 0.49%
+5 | Secondary -> Secondary -> Secondary -> Insufficient -> Weak | 13 | 0.49%
+5 | Secondary -> Secondary -> Secondary -> Weak -> Core | 13 | 0.49%
+5 | Core -> Secondary -> Weak -> Secondary -> Insufficient | 12 | 0.45%
+5 | Secondary -> Insufficient -> Core -> Secondary -> Weak | 12 | 0.45%
+5 | Weak -> Core -> Secondary -> Weak -> Core | 12 | 0.45%
+5 | Weak -> Secondary -> Insufficient -> Insufficient -> Insufficient | 12 | 0.45%
+5 | Weak -> Weak -> Core -> Secondary -> Core | 12 | 0.45%
+5 | Secondary -> Weak -> Weak -> Core -> Secondary | 11 | 0.41%
+5 | Core -> Secondary -> Core -> Secondary -> Weak | 10 | 0.37%
+5 | Core -> Weak -> Core -> Secondary -> Secondary | 10 | 0.37%
+5 | Insufficient -> Core -> Weak -> Core -> Secondary | 10 | 0.37%
+5 | Insufficient -> Insufficient -> Insufficient -> Core -> Secondary | 10 | 0.37%
+5 | Secondary -> Core -> Secondary -> Secondary -> Secondary | 10 | 0.37%
+5 | Secondary -> Secondary -> Insufficient -> Core -> Secondary | 10 | 0.37%
+5 | Secondary -> Weak -> Core -> Secondary -> Weak | 10 | 0.37%
+5 | Weak -> Secondary -> Weak -> Core -> Secondary | 10 | 0.37%
+5 | Weak -> Secondary -> Weak -> Secondary -> Insufficient | 10 | 0.37%
+5 | Core -> Secondary -> Secondary -> Weak -> Secondary | 9 | 0.34%
+5 | Core -> Weak -> Secondary -> Core -> Secondary | 9 | 0.34%
+5 | Insufficient -> Insufficient -> Weak -> Core -> Secondary | 9 | 0.34%
+5 | Weak -> Core -> Secondary -> Weak -> Secondary | 9 | 0.34%
+5 | Weak -> Core -> Weak -> Core -> Secondary | 9 | 0.34%
+5 | Weak -> Secondary -> Insufficient -> Insufficient -> Core | 9 | 0.34%
+5 | Core -> Core -> Secondary -> Secondary -> Core | 8 | 0.30%
+5 | Core -> Core -> Secondary -> Secondary -> Weak | 8 | 0.30%
+5 | Core -> Secondary -> Insufficient -> Core -> Secondary | 8 | 0.30%
+5 | Core -> Secondary -> Secondary -> Insufficient -> Core | 8 | 0.30%
+5 | Core -> Secondary -> Secondary -> Insufficient -> Weak | 8 | 0.30%
+5 | Core -> Secondary -> Weak -> Core -> Weak | 8 | 0.30%
+5 | Core -> Secondary -> Weak -> Secondary -> Core | 8 | 0.30%
+5 | Insufficient -> Insufficient -> Core -> Secondary -> Core | 8 | 0.30%
+5 | Insufficient -> Insufficient -> Core -> Weak -> Core | 8 | 0.30%
+5 | Insufficient -> Insufficient -> Insufficient -> Insufficient -> Insufficient | 8 | 0.30%
+5 | Secondary -> Secondary -> Secondary -> Insufficient -> Insufficient | 8 | 0.30%
+5 | Weak -> Insufficient -> Insufficient -> Insufficient -> Insufficient | 8 | 0.30%
+5 | Core -> Secondary -> Core -> Secondary -> Insufficient | 7 | 0.26%
+5 | Core -> Secondary -> Weak -> Weak -> Core | 7 | 0.26%
+5 | Core -> Weak -> Core -> Secondary -> Core | 7 | 0.26%
+5 | Insufficient -> Core -> Secondary -> Secondary -> Core | 7 | 0.26%
+5 | Insufficient -> Core -> Secondary -> Weak -> Core | 7 | 0.26%
+5 | Insufficient -> Insufficient -> Insufficient -> Insufficient -> Core | 7 | 0.26%
+5 | Insufficient -> Insufficient -> Weak -> Secondary -> Insufficient | 7 | 0.26%
+5 | Secondary -> Core -> Secondary -> Core -> Weak | 7 | 0.26%
+5 | Secondary -> Insufficient -> Insufficient -> Core -> Weak | 7 | 0.26%
+5 | Secondary -> Insufficient -> Insufficient -> Insufficient -> Insufficient | 7 | 0.26%
+5 | Secondary -> Secondary -> Insufficient -> Weak -> Core | 7 | 0.26%
+5 | Secondary -> Secondary -> Insufficient -> Weak -> Secondary | 7 | 0.26%
+5 | Secondary -> Secondary -> Weak -> Secondary -> Core | 7 | 0.26%
+5 | Secondary -> Weak -> Core -> Weak -> Secondary | 7 | 0.26%
+5 | Secondary -> Weak -> Secondary -> Insufficient -> Weak | 7 | 0.26%
+5 | Secondary -> Weak -> Secondary -> Weak -> Secondary | 7 | 0.26%
+5 | Weak -> Insufficient -> Secondary -> Insufficient -> Insufficient | 7 | 0.26%
+5 | Weak -> Secondary -> Weak -> Secondary -> Weak | 7 | 0.26%
+5 | Weak -> Weak -> Secondary -> Insufficient -> Insufficient | 7 | 0.26%
+5 | Core -> Weak -> Core -> Secondary -> Weak | 6 | 0.22%
+5 | Core -> Weak -> Secondary -> Insufficient -> Insufficient | 6 | 0.22%
+5 | Core -> Weak -> Secondary -> Weak -> Secondary | 6 | 0.22%
+5 | Insufficient -> Insufficient -> Weak -> Secondary -> Core | 6 | 0.22%
+5 | Insufficient -> Weak -> Secondary -> Core -> Secondary | 6 | 0.22%
+5 | Insufficient -> Weak -> Secondary -> Insufficient -> Insufficient | 6 | 0.22%
+5 | Secondary -> Core -> Secondary -> Weak -> Weak | 6 | 0.22%
+5 | Secondary -> Core -> Weak -> Secondary -> Insufficient | 6 | 0.22%
+5 | Secondary -> Insufficient -> Insufficient -> Insufficient -> Secondary | 6 | 0.22%
+5 | Secondary -> Insufficient -> Insufficient -> Insufficient -> Weak | 6 | 0.22%
+5 | Secondary -> Insufficient -> Insufficient -> Weak -> Core | 6 | 0.22%
+5 | Secondary -> Secondary -> Insufficient -> Insufficient -> Insufficient | 6 | 0.22%
+5 | Secondary -> Weak -> Insufficient -> Insufficient -> Insufficient | 6 | 0.22%
+5 | Secondary -> Weak -> Secondary -> Weak -> Core | 6 | 0.22%
+5 | Secondary -> Weak -> Secondary -> Weak -> Weak | 6 | 0.22%
+5 | Weak -> Core -> Secondary -> Secondary -> Secondary | 6 | 0.22%
+5 | Weak -> Secondary -> Core -> Secondary -> Weak | 6 | 0.22%
+5 | Weak -> Secondary -> Insufficient -> Core -> Weak | 6 | 0.22%
+5 | Weak -> Secondary -> Weak -> Weak -> Core | 6 | 0.22%
+5 | Core -> Secondary -> Core -> Weak -> Secondary | 5 | 0.19%
+5 | Core -> Secondary -> Insufficient -> Weak -> Core | 5 | 0.19%
+5 | Core -> Secondary -> Secondary -> Secondary -> Insufficient | 5 | 0.19%
+5 | Core -> Secondary -> Secondary -> Weak -> Core | 5 | 0.19%
+5 | Core -> Secondary -> Weak -> Secondary -> Weak | 5 | 0.19%
+5 | Insufficient -> Core -> Secondary -> Weak -> Weak | 5 | 0.19%
+5 | Insufficient -> Insufficient -> Insufficient -> Insufficient -> Weak | 5 | 0.19%
+5 | Insufficient -> Insufficient -> Insufficient -> Weak -> Secondary | 5 | 0.19%
+5 | Insufficient -> Insufficient -> Secondary -> Weak -> Secondary | 5 | 0.19%
+5 | Insufficient -> Insufficient -> Weak -> Insufficient -> Insufficient | 5 | 0.19%
+5 | Insufficient -> Insufficient -> Weak -> Secondary -> Weak | 5 | 0.19%
+5 | Insufficient -> Secondary -> Insufficient -> Insufficient -> Weak | 5 | 0.19%
+5 | Insufficient -> Weak -> Core -> Secondary -> Secondary | 5 | 0.19%
+5 | Insufficient -> Weak -> Core -> Secondary -> Weak | 5 | 0.19%
+5 | Insufficient -> Weak -> Insufficient -> Insufficient -> Insufficient | 5 | 0.19%
+5 | Insufficient -> Weak -> Secondary -> Insufficient -> Core | 5 | 0.19%
+5 | Secondary -> Core -> Core -> Secondary -> Weak | 5 | 0.19%
+5 | Secondary -> Core -> Secondary -> Insufficient -> Weak | 5 | 0.19%
+5 | Secondary -> Core -> Secondary -> Secondary -> Weak | 5 | 0.19%
+5 | Secondary -> Insufficient -> Core -> Secondary -> Secondary | 5 | 0.19%
+5 | Secondary -> Insufficient -> Insufficient -> Weak -> Insufficient | 5 | 0.19%
+5 | Secondary -> Insufficient -> Secondary -> Weak -> Secondary | 5 | 0.19%
+5 | Secondary -> Insufficient -> Weak -> Secondary -> Insufficient | 5 | 0.19%
+5 | Secondary -> Insufficient -> Weak -> Secondary -> Weak | 5 | 0.19%
+5 | Secondary -> Secondary -> Insufficient -> Secondary -> Weak | 5 | 0.19%
+5 | Secondary -> Secondary -> Insufficient -> Weak -> Weak | 5 | 0.19%
+5 | Secondary -> Secondary -> Weak -> Core -> Weak | 5 | 0.19%
+5 | Secondary -> Secondary -> Weak -> Secondary -> Weak | 5 | 0.19%
+5 | Secondary -> Weak -> Secondary -> Core -> Weak | 5 | 0.19%
+5 | Secondary -> Weak -> Weak -> Core -> Weak | 5 | 0.19%
+5 | Weak -> Secondary -> Core -> Weak -> Secondary | 5 | 0.19%
+5 | Weak -> Weak -> Core -> Secondary -> Secondary | 5 | 0.19%
+5 | Weak -> Weak -> Insufficient -> Insufficient -> Insufficient | 5 | 0.19%
+5 | Core -> Core -> Secondary -> Core -> Secondary | 4 | 0.15%
+5 | Core -> Weak -> Weak -> Core -> Secondary | 4 | 0.15%
+5 | Insufficient -> Core -> Secondary -> Core -> Secondary | 4 | 0.15%
+5 | Insufficient -> Core -> Secondary -> Insufficient -> Core | 4 | 0.15%
+5 | Insufficient -> Core -> Weak -> Secondary -> Core | 4 | 0.15%
+5 | Insufficient -> Insufficient -> Core -> Secondary -> Secondary | 4 | 0.15%
+5 | Insufficient -> Insufficient -> Core -> Weak -> Secondary | 4 | 0.15%
+5 | Insufficient -> Insufficient -> Insufficient -> Secondary -> Weak | 4 | 0.15%
+5 | Insufficient -> Insufficient -> Insufficient -> Weak -> Core | 4 | 0.15%
+5 | Insufficient -> Insufficient -> Insufficient -> Weak -> Weak | 4 | 0.15%
+5 | Insufficient -> Secondary -> Weak -> Secondary -> Insufficient | 4 | 0.15%
+5 | Insufficient -> Secondary -> Weak -> Secondary -> Weak | 4 | 0.15%
+5 | Insufficient -> Weak -> Secondary -> Weak -> Weak | 4 | 0.15%
+5 | Insufficient -> Weak -> Weak -> Core -> Secondary | 4 | 0.15%
+5 | Secondary -> Core -> Core -> Secondary -> Core | 4 | 0.15%
+5 | Secondary -> Core -> Secondary -> Insufficient -> Core | 4 | 0.15%
+5 | Secondary -> Core -> Weak -> Secondary -> Weak | 4 | 0.15%
+5 | Secondary -> Insufficient -> Core -> Secondary -> Insufficient | 4 | 0.15%
+5 | Secondary -> Secondary -> Secondary -> Weak -> Weak | 4 | 0.15%
+5 | Secondary -> Secondary -> Weak -> Weak -> Weak | 4 | 0.15%
+5 | Secondary -> Weak -> Core -> Weak -> Core | 4 | 0.15%
+5 | Secondary -> Weak -> Core -> Weak -> Weak | 4 | 0.15%
+5 | Secondary -> Weak -> Insufficient -> Secondary -> Insufficient | 4 | 0.15%
+5 | Weak -> Core -> Secondary -> Secondary -> Insufficient | 4 | 0.15%
+5 | Weak -> Core -> Secondary -> Secondary -> Weak | 4 | 0.15%
+5 | Weak -> Core -> Weak -> Secondary -> Core | 4 | 0.15%
+5 | Weak -> Insufficient -> Insufficient -> Insufficient -> Weak | 4 | 0.15%
+5 | Weak -> Secondary -> Core -> Secondary -> Secondary | 4 | 0.15%
+5 | Weak -> Secondary -> Insufficient -> Weak -> Secondary | 4 | 0.15%
+5 | Weak -> Secondary -> Secondary -> Weak -> Secondary | 4 | 0.15%
+5 | Weak -> Secondary -> Weak -> Insufficient -> Insufficient | 4 | 0.15%
+5 | Weak -> Weak -> Core -> Secondary -> Weak | 4 | 0.15%
+5 | Weak -> Weak -> Core -> Weak -> Core | 4 | 0.15%
+5 | Weak -> Weak -> Weak -> Insufficient -> Weak | 4 | 0.15%
+5 | Weak -> Weak -> Weak -> Secondary -> Weak | 4 | 0.15%
+5 | Weak -> Weak -> Weak -> Weak -> Secondary | 4 | 0.15%
+5 | Core -> Secondary -> Secondary -> Insufficient -> Secondary | 3 | 0.11%
+5 | Core -> Secondary -> Secondary -> Weak -> Weak | 3 | 0.11%
+5 | Core -> Secondary -> Weak -> Insufficient -> Insufficient | 3 | 0.11%
+5 | Core -> Secondary -> Weak -> Secondary -> Secondary | 3 | 0.11%
+5 | Core -> Secondary -> Weak -> Weak -> Weak | 3 | 0.11%
+5 | Insufficient -> Core -> Secondary -> Secondary -> Secondary | 3 | 0.11%
+5 | Insufficient -> Insufficient -> Insufficient -> Core -> Weak | 3 | 0.11%
+5 | Insufficient -> Insufficient -> Insufficient -> Insufficient -> Secondary | 3 | 0.11%
+5 | Insufficient -> Insufficient -> Insufficient -> Secondary -> Core | 3 | 0.11%
+5 | Insufficient -> Insufficient -> Secondary -> Core -> Secondary | 3 | 0.11%
+5 | Insufficient -> Secondary -> Core -> Secondary -> Core | 3 | 0.11%
+5 | Insufficient -> Secondary -> Insufficient -> Core -> Secondary | 3 | 0.11%
+5 | Insufficient -> Secondary -> Weak -> Core -> Secondary | 3 | 0.11%
+5 | Insufficient -> Secondary -> Weak -> Secondary -> Core | 3 | 0.11%
+5 | Insufficient -> Weak -> Insufficient -> Secondary -> Insufficient | 3 | 0.11%
+5 | Insufficient -> Weak -> Insufficient -> Weak -> Insufficient | 3 | 0.11%
+5 | Insufficient -> Weak -> Secondary -> Weak -> Core | 3 | 0.11%
+5 | Insufficient -> Weak -> Secondary -> Weak -> Secondary | 3 | 0.11%
+5 | Secondary -> Core -> Weak -> Core -> Secondary | 3 | 0.11%
+5 | Secondary -> Core -> Weak -> Secondary -> Core | 3 | 0.11%
+5 | Secondary -> Insufficient -> Core -> Weak -> Core | 3 | 0.11%
+5 | Secondary -> Insufficient -> Core -> Weak -> Secondary | 3 | 0.11%
+5 | Secondary -> Insufficient -> Insufficient -> Core -> Secondary | 3 | 0.11%
+5 | Secondary -> Insufficient -> Insufficient -> Insufficient -> Core | 3 | 0.11%
+5 | Secondary -> Insufficient -> Insufficient -> Secondary -> Weak | 3 | 0.11%
+5 | Secondary -> Insufficient -> Secondary -> Weak -> Core | 3 | 0.11%
+5 | Secondary -> Insufficient -> Weak -> Weak -> Core | 3 | 0.11%
+5 | Secondary -> Secondary -> Core -> Secondary -> Insufficient | 3 | 0.11%
+5 | Secondary -> Secondary -> Core -> Weak -> Secondary | 3 | 0.11%
+5 | Secondary -> Secondary -> Insufficient -> Insufficient -> Secondary | 3 | 0.11%
+5 | Secondary -> Secondary -> Secondary -> Core -> Weak | 3 | 0.11%
+5 | Secondary -> Secondary -> Secondary -> Insufficient -> Secondary | 3 | 0.11%
+5 | Secondary -> Secondary -> Weak -> Secondary -> Secondary | 3 | 0.11%
+5 | Secondary -> Secondary -> Weak -> Weak -> Core | 3 | 0.11%
+5 | Secondary -> Weak -> Secondary -> Secondary -> Weak | 3 | 0.11%
+5 | Secondary -> Weak -> Weak -> Secondary -> Insufficient | 3 | 0.11%
+5 | Secondary -> Weak -> Weak -> Weak -> Weak | 3 | 0.11%
+5 | Weak -> Core -> Secondary -> Weak -> Insufficient | 3 | 0.11%
+5 | Weak -> Core -> Weak -> Secondary -> Weak | 3 | 0.11%
+5 | Weak -> Core -> Weak -> Weak -> Core | 3 | 0.11%
+5 | Weak -> Core -> Weak -> Weak -> Insufficient | 3 | 0.11%
+5 | Weak -> Insufficient -> Insufficient -> Core -> Secondary | 3 | 0.11%
+5 | Weak -> Insufficient -> Insufficient -> Insufficient -> Core | 3 | 0.11%
+5 | Weak -> Secondary -> Core -> Weak -> Weak | 3 | 0.11%
+5 | Weak -> Secondary -> Secondary -> Weak -> Core | 3 | 0.11%
+5 | Weak -> Weak -> Secondary -> Secondary -> Weak | 3 | 0.11%
+5 | Weak -> Weak -> Secondary -> Weak -> Secondary | 3 | 0.11%
+5 | Core -> Core -> Secondary -> Secondary -> Insufficient | 2 | 0.07%
+5 | Core -> Core -> Secondary -> Weak -> Core | 2 | 0.07%
+5 | Core -> Core -> Secondary -> Weak -> Secondary | 2 | 0.07%
+5 | Core -> Secondary -> Core -> Core -> Weak | 2 | 0.07%
+5 | Core -> Secondary -> Core -> Weak -> Core | 2 | 0.07%
+5 | Core -> Secondary -> Insufficient -> Weak -> Insufficient | 2 | 0.07%
+5 | Core -> Secondary -> Secondary -> Core -> Weak | 2 | 0.07%
+5 | Core -> Secondary -> Weak -> Insufficient -> Secondary | 2 | 0.07%
+5 | Core -> Secondary -> Weak -> Weak -> Secondary | 2 | 0.07%
+5 | Core -> Weak -> Insufficient -> Core -> Secondary | 2 | 0.07%
+5 | Core -> Weak -> Secondary -> Core -> Weak | 2 | 0.07%
+5 | Core -> Weak -> Weak -> Insufficient -> Insufficient | 2 | 0.07%
+5 | Core -> Weak -> Weak -> Secondary -> Insufficient | 2 | 0.07%
+5 | Insufficient -> Core -> Secondary -> Insufficient -> Weak | 2 | 0.07%
+5 | Insufficient -> Core -> Secondary -> Weak -> Secondary | 2 | 0.07%
+5 | Insufficient -> Core -> Weak -> Secondary -> Weak | 2 | 0.07%
+5 | Insufficient -> Insufficient -> Core -> Secondary -> Insufficient | 2 | 0.07%
+5 | Insufficient -> Insufficient -> Core -> Secondary -> Weak | 2 | 0.07%
+5 | Insufficient -> Insufficient -> Insufficient -> Secondary -> Insufficient | 2 | 0.07%
+5 | Insufficient -> Insufficient -> Insufficient -> Weak -> Insufficient | 2 | 0.07%
+5 | Insufficient -> Insufficient -> Weak -> Secondary -> Secondary | 2 | 0.07%
+5 | Insufficient -> Insufficient -> Weak -> Weak -> Core | 2 | 0.07%
+5 | Insufficient -> Insufficient -> Weak -> Weak -> Weak | 2 | 0.07%
+5 | Insufficient -> Secondary -> Insufficient -> Insufficient -> Insufficient | 2 | 0.07%
+5 | Insufficient -> Weak -> Insufficient -> Insufficient -> Core | 2 | 0.07%
+5 | Insufficient -> Weak -> Secondary -> Core -> Weak | 2 | 0.07%
+5 | Insufficient -> Weak -> Secondary -> Insufficient -> Secondary | 2 | 0.07%
+5 | Insufficient -> Weak -> Weak -> Core -> Weak | 2 | 0.07%
+5 | Insufficient -> Weak -> Weak -> Insufficient -> Insufficient | 2 | 0.07%
+5 | Insufficient -> Weak -> Weak -> Weak -> Weak | 2 | 0.07%
+5 | Secondary -> Core -> Secondary -> Weak -> Insufficient | 2 | 0.07%
+5 | Secondary -> Insufficient -> Insufficient -> Weak -> Weak | 2 | 0.07%
+5 | Secondary -> Insufficient -> Weak -> Insufficient -> Insufficient | 2 | 0.07%
+5 | Secondary -> Insufficient -> Weak -> Insufficient -> Secondary | 2 | 0.07%
+5 | Secondary -> Insufficient -> Weak -> Insufficient -> Weak | 2 | 0.07%
+5 | Secondary -> Insufficient -> Weak -> Secondary -> Core | 2 | 0.07%
+5 | Secondary -> Insufficient -> Weak -> Weak -> Weak | 2 | 0.07%
+5 | Secondary -> Secondary -> Insufficient -> Weak -> Insufficient | 2 | 0.07%
+5 | Secondary -> Secondary -> Secondary -> Insufficient -> Core | 2 | 0.07%
+5 | Secondary -> Secondary -> Weak -> Insufficient -> Insufficient | 2 | 0.07%
+5 | Secondary -> Weak -> Insufficient -> Insufficient -> Core | 2 | 0.07%
+5 | Secondary -> Weak -> Secondary -> Secondary -> Core | 2 | 0.07%
+5 | Secondary -> Weak -> Secondary -> Weak -> Insufficient | 2 | 0.07%
+5 | Secondary -> Weak -> Weak -> Insufficient -> Insufficient | 2 | 0.07%
+5 | Secondary -> Weak -> Weak -> Weak -> Insufficient | 2 | 0.07%
+5 | Secondary -> Weak -> Weak -> Weak -> Secondary | 2 | 0.07%
+5 | Weak -> Insufficient -> Core -> Secondary -> Secondary | 2 | 0.07%
+5 | Weak -> Insufficient -> Insufficient -> Core -> Weak | 2 | 0.07%
+5 | Weak -> Insufficient -> Secondary -> Insufficient -> Core | 2 | 0.07%
+5 | Weak -> Insufficient -> Weak -> Core -> Secondary | 2 | 0.07%
+5 | Weak -> Insufficient -> Weak -> Insufficient -> Secondary | 2 | 0.07%
+5 | Weak -> Secondary -> Insufficient -> Secondary -> Weak | 2 | 0.07%
+5 | Weak -> Secondary -> Insufficient -> Weak -> Insufficient | 2 | 0.07%
+5 | Weak -> Secondary -> Secondary -> Core -> Secondary | 2 | 0.07%
+5 | Weak -> Secondary -> Weak -> Insufficient -> Secondary | 2 | 0.07%
+5 | Weak -> Secondary -> Weak -> Secondary -> Core | 2 | 0.07%
+5 | Weak -> Secondary -> Weak -> Weak -> Insufficient | 2 | 0.07%
+5 | Weak -> Secondary -> Weak -> Weak -> Secondary | 2 | 0.07%
+5 | Weak -> Weak -> Core -> Weak -> Weak | 2 | 0.07%
+5 | Weak -> Weak -> Insufficient -> Secondary -> Insufficient | 2 | 0.07%
+5 | Weak -> Weak -> Insufficient -> Weak -> Core | 2 | 0.07%
+5 | Weak -> Weak -> Insufficient -> Weak -> Weak | 2 | 0.07%
+5 | Weak -> Weak -> Secondary -> Weak -> Insufficient | 2 | 0.07%
+5 | Weak -> Weak -> Weak -> Core -> Secondary | 2 | 0.07%
+5 | Weak -> Weak -> Weak -> Secondary -> Secondary | 2 | 0.07%
+5 | Weak -> Weak -> Weak -> Weak -> Insufficient | 2 | 0.07%
+5 | Core -> Core -> Insufficient -> Core -> Secondary | 1 | 0.04%
+5 | Core -> Core -> Secondary -> Weak -> Weak | 1 | 0.04%
+5 | Core -> Core -> Weak -> Core -> Secondary | 1 | 0.04%
+5 | Core -> Core -> Weak -> Secondary -> Insufficient | 1 | 0.04%
+5 | Core -> Insufficient -> Core -> Secondary -> Insufficient | 1 | 0.04%
+5 | Core -> Insufficient -> Core -> Secondary -> Secondary | 1 | 0.04%
+5 | Core -> Insufficient -> Secondary -> Insufficient -> Insufficient | 1 | 0.04%
+5 | Core -> Insufficient -> Weak -> Core -> Secondary | 1 | 0.04%
+5 | Core -> Secondary -> Core -> Core -> Insufficient | 1 | 0.04%
+5 | Core -> Secondary -> Insufficient -> Insufficient -> Insufficient | 1 | 0.04%
+5 | Core -> Secondary -> Insufficient -> Insufficient -> Weak | 1 | 0.04%
+5 | Core -> Secondary -> Insufficient -> Secondary -> Weak | 1 | 0.04%
+5 | Core -> Secondary -> Insufficient -> Weak -> Secondary | 1 | 0.04%
+5 | Core -> Secondary -> Secondary -> Core -> Insufficient | 1 | 0.04%
+5 | Core -> Secondary -> Secondary -> Insufficient -> Insufficient | 1 | 0.04%
+5 | Core -> Secondary -> Secondary -> Weak -> Insufficient | 1 | 0.04%
+5 | Core -> Secondary -> Weak -> Core -> Insufficient | 1 | 0.04%
+5 | Core -> Secondary -> Weak -> Weak -> Insufficient | 1 | 0.04%
+5 | Core -> Weak -> Core -> Insufficient -> Secondary | 1 | 0.04%
+5 | Core -> Weak -> Secondary -> Insufficient -> Core | 1 | 0.04%
+5 | Core -> Weak -> Secondary -> Insufficient -> Secondary | 1 | 0.04%
+5 | Core -> Weak -> Secondary -> Insufficient -> Weak | 1 | 0.04%
+5 | Core -> Weak -> Secondary -> Weak -> Core | 1 | 0.04%
+5 | Core -> Weak -> Secondary -> Weak -> Insufficient | 1 | 0.04%
+5 | Core -> Weak -> Secondary -> Weak -> Weak | 1 | 0.04%
+5 | Core -> Weak -> Weak -> Core -> Weak | 1 | 0.04%
+5 | Core -> Weak -> Weak -> Insufficient -> Secondary | 1 | 0.04%
+5 | Core -> Weak -> Weak -> Weak -> Weak | 1 | 0.04%
+5 | Insufficient -> Core -> Secondary -> Insufficient -> Insufficient | 1 | 0.04%
+5 | Insufficient -> Core -> Secondary -> Secondary -> Insufficient | 1 | 0.04%
+5 | Insufficient -> Core -> Secondary -> Secondary -> Weak | 1 | 0.04%
+5 | Insufficient -> Core -> Weak -> Core -> Insufficient | 1 | 0.04%
+5 | Insufficient -> Core -> Weak -> Secondary -> Insufficient | 1 | 0.04%
+5 | Insufficient -> Core -> Weak -> Weak -> Core | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Insufficient -> Secondary -> Secondary | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Secondary -> Insufficient -> Core | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Secondary -> Insufficient -> Weak | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Secondary -> Secondary -> Core | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Secondary -> Secondary -> Secondary | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Secondary -> Weak -> Core | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Secondary -> Weak -> Weak | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Weak -> Core -> Weak | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Weak -> Insufficient -> Core | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Weak -> Insufficient -> Weak | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Weak -> Weak -> Insufficient | 1 | 0.04%
+5 | Insufficient -> Insufficient -> Weak -> Weak -> Secondary | 1 | 0.04%
+5 | Insufficient -> Secondary -> Core -> Secondary -> Weak | 1 | 0.04%
+5 | Insufficient -> Secondary -> Insufficient -> Core -> Weak | 1 | 0.04%
+5 | Insufficient -> Secondary -> Insufficient -> Insufficient -> Core | 1 | 0.04%
+5 | Insufficient -> Secondary -> Insufficient -> Weak -> Core | 1 | 0.04%
+5 | Insufficient -> Secondary -> Insufficient -> Weak -> Weak | 1 | 0.04%
+5 | Insufficient -> Secondary -> Secondary -> Core -> Secondary | 1 | 0.04%
+5 | Insufficient -> Secondary -> Secondary -> Secondary -> Weak | 1 | 0.04%
+5 | Insufficient -> Secondary -> Weak -> Core -> Weak | 1 | 0.04%
+5 | Insufficient -> Secondary -> Weak -> Weak -> Secondary | 1 | 0.04%
+5 | Insufficient -> Weak -> Core -> Secondary -> Insufficient | 1 | 0.04%
+5 | Insufficient -> Weak -> Core -> Weak -> Core | 1 | 0.04%
+5 | Insufficient -> Weak -> Core -> Weak -> Weak | 1 | 0.04%
+5 | Insufficient -> Weak -> Insufficient -> Core -> Secondary | 1 | 0.04%
+5 | Insufficient -> Weak -> Insufficient -> Secondary -> Weak | 1 | 0.04%
+5 | Insufficient -> Weak -> Insufficient -> Weak -> Secondary | 1 | 0.04%
+5 | Insufficient -> Weak -> Secondary -> Secondary -> Insufficient | 1 | 0.04%
+5 | Insufficient -> Weak -> Secondary -> Secondary -> Weak | 1 | 0.04%
+5 | Insufficient -> Weak -> Secondary -> Weak -> Insufficient | 1 | 0.04%
+5 | Insufficient -> Weak -> Weak -> Secondary -> Insufficient | 1 | 0.04%
+5 | Insufficient -> Weak -> Weak -> Secondary -> Weak | 1 | 0.04%
+5 | Insufficient -> Weak -> Weak -> Weak -> Core | 1 | 0.04%
+5 | Insufficient -> Weak -> Weak -> Weak -> Insufficient | 1 | 0.04%
+5 | Insufficient -> Weak -> Weak -> Weak -> Secondary | 1 | 0.04%
+5 | Secondary -> Core -> Core -> Insufficient -> Core | 1 | 0.04%
+5 | Secondary -> Core -> Core -> Weak -> Core | 1 | 0.04%
+5 | Secondary -> Core -> Core -> Weak -> Secondary | 1 | 0.04%
+5 | Secondary -> Core -> Insufficient -> Weak -> Core | 1 | 0.04%
+5 | Secondary -> Core -> Secondary -> Insufficient -> Secondary | 1 | 0.04%
+5 | Secondary -> Core -> Weak -> Insufficient -> Core | 1 | 0.04%
+5 | Secondary -> Core -> Weak -> Weak -> Core | 1 | 0.04%
+5 | Secondary -> Core -> Weak -> Weak -> Secondary | 1 | 0.04%
+5 | Secondary -> Core -> Weak -> Weak -> Weak | 1 | 0.04%
+5 | Secondary -> Insufficient -> Core -> Weak -> Weak | 1 | 0.04%
+5 | Secondary -> Insufficient -> Insufficient -> Secondary -> Secondary | 1 | 0.04%
+5 | Secondary -> Insufficient -> Secondary -> Core -> Secondary | 1 | 0.04%
+5 | Secondary -> Insufficient -> Secondary -> Insufficient -> Core | 1 | 0.04%
+5 | Secondary -> Insufficient -> Secondary -> Insufficient -> Weak | 1 | 0.04%
+5 | Secondary -> Insufficient -> Weak -> Core -> Weak | 1 | 0.04%
+5 | Secondary -> Insufficient -> Weak -> Weak -> Insufficient | 1 | 0.04%
+5 | Secondary -> Insufficient -> Weak -> Weak -> Secondary | 1 | 0.04%
+5 | Secondary -> Secondary -> Core -> Insufficient -> Weak | 1 | 0.04%
+5 | Secondary -> Secondary -> Core -> Weak -> Core | 1 | 0.04%
+5 | Secondary -> Secondary -> Core -> Weak -> Insufficient | 1 | 0.04%
+5 | Secondary -> Secondary -> Insufficient -> Insufficient -> Weak | 1 | 0.04%
+5 | Secondary -> Secondary -> Insufficient -> Secondary -> Insufficient | 1 | 0.04%
+5 | Secondary -> Secondary -> Secondary -> Weak -> Insufficient | 1 | 0.04%
+5 | Secondary -> Weak -> Core -> Insufficient -> Core | 1 | 0.04%
+5 | Secondary -> Weak -> Core -> Secondary -> Insufficient | 1 | 0.04%
+5 | Secondary -> Weak -> Insufficient -> Insufficient -> Weak | 1 | 0.04%
+5 | Secondary -> Weak -> Secondary -> Insufficient -> Secondary | 1 | 0.04%
+5 | Secondary -> Weak -> Secondary -> Secondary -> Secondary | 1 | 0.04%
+5 | Secondary -> Weak -> Weak -> Insufficient -> Weak | 1 | 0.04%
+5 | Secondary -> Weak -> Weak -> Secondary -> Secondary | 1 | 0.04%
+5 | Secondary -> Weak -> Weak -> Secondary -> Weak | 1 | 0.04%
+5 | Secondary -> Weak -> Weak -> Weak -> Core | 1 | 0.04%
+5 | Weak -> Core -> Insufficient -> Core -> Secondary | 1 | 0.04%
+5 | Weak -> Core -> Insufficient -> Secondary -> Insufficient | 1 | 0.04%
+5 | Weak -> Core -> Secondary -> Insufficient -> Insufficient | 1 | 0.04%
+5 | Weak -> Core -> Secondary -> Insufficient -> Weak | 1 | 0.04%
+5 | Weak -> Core -> Secondary -> Weak -> Weak | 1 | 0.04%
+5 | Weak -> Core -> Weak -> Insufficient -> Core | 1 | 0.04%
+5 | Weak -> Core -> Weak -> Secondary -> Insufficient | 1 | 0.04%
+5 | Weak -> Core -> Weak -> Weak -> Secondary | 1 | 0.04%
+5 | Weak -> Insufficient -> Core -> Secondary -> Core | 1 | 0.04%
+5 | Weak -> Insufficient -> Insufficient -> Insufficient -> Secondary | 1 | 0.04%
+5 | Weak -> Insufficient -> Insufficient -> Weak -> Secondary | 1 | 0.04%
+5 | Weak -> Insufficient -> Secondary -> Weak -> Secondary | 1 | 0.04%
+5 | Weak -> Insufficient -> Weak -> Insufficient -> Weak | 1 | 0.04%
+5 | Weak -> Insufficient -> Weak -> Secondary -> Insufficient | 1 | 0.04%
+5 | Weak -> Insufficient -> Weak -> Secondary -> Weak | 1 | 0.04%
+5 | Weak -> Insufficient -> Weak -> Weak -> Core | 1 | 0.04%
+5 | Weak -> Insufficient -> Weak -> Weak -> Weak | 1 | 0.04%
+5 | Weak -> Secondary -> Core -> Weak -> Core | 1 | 0.04%
+5 | Weak -> Secondary -> Insufficient -> Insufficient -> Secondary | 1 | 0.04%
+5 | Weak -> Secondary -> Insufficient -> Secondary -> Core | 1 | 0.04%
+5 | Weak -> Secondary -> Insufficient -> Secondary -> Insufficient | 1 | 0.04%
+5 | Weak -> Secondary -> Insufficient -> Weak -> Core | 1 | 0.04%
+5 | Weak -> Secondary -> Insufficient -> Weak -> Weak | 1 | 0.04%
+5 | Weak -> Secondary -> Secondary -> Insufficient -> Insufficient | 1 | 0.04%
+5 | Weak -> Secondary -> Secondary -> Secondary -> Secondary | 1 | 0.04%
+5 | Weak -> Secondary -> Weak -> Core -> Weak | 1 | 0.04%
+5 | Weak -> Secondary -> Weak -> Weak -> Weak | 1 | 0.04%
+5 | Weak -> Weak -> Core -> Weak -> Insufficient | 1 | 0.04%
+5 | Weak -> Weak -> Core -> Weak -> Secondary | 1 | 0.04%
+5 | Weak -> Weak -> Insufficient -> Insufficient -> Core | 1 | 0.04%
+5 | Weak -> Weak -> Insufficient -> Weak -> Secondary | 1 | 0.04%
+5 | Weak -> Weak -> Secondary -> Weak -> Core | 1 | 0.04%
+5 | Weak -> Weak -> Weak -> Insufficient -> Secondary | 1 | 0.04%
+5 | Weak -> Weak -> Weak -> Secondary -> Insufficient | 1 | 0.04%
+
+8. Residence Time
+Category | MeanResidenceTime | MedianResidenceTime | MaximumResidenceTime | ResidenceDistribution
+Core Node | 1.18 | 1.00 | 2 | 1:480, 2:106
+Secondary Node | 1.66 | 1.00 | 8 | 1:491, 2:134, 3:35, 4:14, 5:19, 6:24, 7:4, 8:1
+Transition Node | 0.00 | 0.00 | 0 | None
+Weak Node | 1.21 | 1.00 | 4 | 1:312, 2:44, 3:8, 4:6
+Insufficient Node | 1.72 | 1.00 | 8 | 1:118, 2:47, 3:23, 4:12, 5:1, 7:1, 8:1
+
+9. Flow Persistence
+Category | StayProbability | LeaveProbability | PersistenceRatio
+Core Node | 15.34% | 84.66% | 0.1812
+Secondary Node | 39.58% | 60.42% | 0.6551
+Transition Node | 0.00% | 100.00% | 0.0000
+Weak Node | 17.41% | 82.59% | 0.2108
+Insufficient Node | 41.83% | 58.17% | 0.7192
+
+10. Flow Entropy
+Category | TransitionEntropy | NormalizedEntropy
+Core Node | 0.7638 | 0.5509
+Secondary Node | 1.2987 | 0.9368
+Transition Node | 0.0000 | 0.0000
+Weak Node | 1.2671 | 0.9140
+Insufficient Node | 1.2808 | 0.9239
+
+11. Cross-Instrument Replication
+Instrument-only diagnostic. See aggregate report for category-flow replication.
+
+12. Core Dominance Test
+PercentTimeInCore | PercentTimeInSecondary | PercentTimeInTransition | PercentTimeInWeak | PercentTimeInInsufficient | CoreDominanceRatio
+25.78% | 44.52% | 0.00% | 16.69% | 13.00% | 0.3474
+
+13. Outcome Diagnostics
+Diagnostic only. Forward outcomes are not used in flow calculations.
+Category | Count | MeanDRFwd5 | MedianDRFwd5 | ContinuationRate5 | FailureRate5 | FlatRate5 | OutcomeSkew
+Core Node | 668 | 0.1120 | 0.0600 | 54.04% | 45.06% | 0.90% | 8.98%
+Insufficient Node | 344 | 0.0893 | 0.0000 | 49.71% | 49.13% | 1.16% | 0.58%
+Secondary Node | 1173 | -0.0272 | -0.0400 | 46.72% | 52.60% | 0.68% | -5.88%
+Weak Node | 442 | -0.1949 | -0.0400 | 47.29% | 52.49% | 0.23% | -5.20%
+
+14. Recommendation
+Instrument-only diagnostic: Weak Core Dominance
+MeanPercentTimeInCore=25.78%; MeanExcursionProbability=74.38%; MeanReturnProbability=100.00%; ValidInstrumentCount=1.
+The aggregate report applies the cross-instrument summary.
+
+15. Low-DoF Audit
+Variables used:
+StructuralState
+AgeBucket
+
+Derived metrics:
+ImportanceScore
+ReliabilityScore
+AttentionCategory
+
+No Context
+No Arbitration
+No Persistence
+No Phase
+No Optimization
+No Fitting
+No Machine Learning
+No Forward Returns used in flow construction
+
+16. Mechanical Research Notes
+- Node categories are reused exactly from Study 58.
+- Flow construction uses adjacent StateAge category transitions only.
+- Excursions start when Core enters Secondary or Transition.
+- Returns measure Secondary or Transition episodes that reach Core.
+- Outcome diagnostics remain separate from flow construction.

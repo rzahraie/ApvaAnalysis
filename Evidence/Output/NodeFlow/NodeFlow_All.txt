@@ -1,0 +1,969 @@
+APVA Node Flow Study v0.1 - Aggregate
+============================================================================================================
+Instruments: 6E, CL, NQ
+
+Aggregate Category Flow Table
+SourceCategory | DestinationCategory | Count_6E | Prob_6E | Count_CL | Prob_CL | Count_NQ | Prob_NQ | ReplicationCount | ReplicationPercent | MeanProbability | Classification
+Core Node | Core Node | 11238 | 66.46% | 832 | 65.15% | 679 | 69.64% | 3 | 100.00% | 67.08% | FullyReplicated
+Core Node | Secondary Node | 3854 | 22.79% | 268 | 20.99% | 146 | 14.97% | 3 | 100.00% | 19.58% | FullyReplicated
+Core Node | Transition Node | 0 | 0.00% | 0 | 0.00% | 0 | 0.00% | 0 | 0.00% | 0.00% | Absent
+Core Node | Weak Node | 1818 | 10.75% | 177 | 13.86% | 150 | 15.38% | 3 | 100.00% | 13.33% | FullyReplicated
+Core Node | Insufficient Node | 0 | 0.00% | 0 | 0.00% | 0 | 0.00% | 0 | 0.00% | 0.00% | Absent
+Secondary Node | Core Node | 4177 | 30.67% | 322 | 31.98% | 196 | 32.45% | 3 | 100.00% | 31.70% | FullyReplicated
+Secondary Node | Secondary Node | 8108 | 59.53% | 597 | 59.29% | 340 | 56.29% | 3 | 100.00% | 58.37% | FullyReplicated
+Secondary Node | Transition Node | 0 | 0.00% | 0 | 0.00% | 0 | 0.00% | 0 | 0.00% | 0.00% | Absent
+Secondary Node | Weak Node | 1320 | 9.69% | 87 | 8.64% | 68 | 11.26% | 3 | 100.00% | 9.86% | FullyReplicated
+Secondary Node | Insufficient Node | 16 | 0.12% | 1 | 0.10% | 0 | 0.00% | 2 | 66.67% | 0.07% | PartiallyReplicated
+Transition Node | Core Node | 103 | 43.46% | 12 | 37.50% | 9 | 29.03% | 3 | 100.00% | 36.66% | FullyReplicated
+Transition Node | Secondary Node | 10 | 4.22% | 1 | 3.12% | 2 | 6.45% | 3 | 100.00% | 4.60% | FullyReplicated
+Transition Node | Transition Node | 0 | 0.00% | 0 | 0.00% | 0 | 0.00% | 0 | 0.00% | 0.00% | Absent
+Transition Node | Weak Node | 109 | 45.99% | 18 | 56.25% | 19 | 61.29% | 3 | 100.00% | 54.51% | FullyReplicated
+Transition Node | Insufficient Node | 15 | 6.33% | 1 | 3.12% | 1 | 3.23% | 3 | 100.00% | 4.23% | FullyReplicated
+Weak Node | Core Node | 1381 | 31.43% | 109 | 30.36% | 90 | 29.51% | 3 | 100.00% | 30.43% | FullyReplicated
+Weak Node | Secondary Node | 1603 | 36.48% | 138 | 38.44% | 109 | 35.74% | 3 | 100.00% | 36.89% | FullyReplicated
+Weak Node | Transition Node | 237 | 5.39% | 32 | 8.91% | 31 | 10.16% | 3 | 100.00% | 8.16% | FullyReplicated
+Weak Node | Weak Node | 1133 | 25.79% | 76 | 21.17% | 64 | 20.98% | 3 | 100.00% | 22.65% | FullyReplicated
+Weak Node | Insufficient Node | 40 | 0.91% | 4 | 1.11% | 11 | 3.61% | 3 | 100.00% | 1.88% | FullyReplicated
+Insufficient Node | Core Node | 11 | 11.34% | 3 | 37.50% | 2 | 14.29% | 3 | 100.00% | 21.04% | FullyReplicated
+Insufficient Node | Secondary Node | 46 | 47.42% | 2 | 25.00% | 6 | 42.86% | 3 | 100.00% | 38.43% | FullyReplicated
+Insufficient Node | Transition Node | 0 | 0.00% | 0 | 0.00% | 0 | 0.00% | 0 | 0.00% | 0.00% | Absent
+Insufficient Node | Weak Node | 14 | 14.43% | 1 | 12.50% | 4 | 28.57% | 3 | 100.00% | 18.50% | FullyReplicated
+Insufficient Node | Insufficient Node | 26 | 26.80% | 2 | 25.00% | 2 | 14.29% | 3 | 100.00% | 22.03% | FullyReplicated
+
+Aggregate Flow Balance Table
+Category | Inbound | Outbound | NetFlow
+Core Node | 19164 | 19162 | 2
+Secondary Node | 15230 | 15232 | -2
+Transition Node | 300 | 300 | 0
+Weak Node | 5058 | 5058 | 0
+Insufficient Node | 119 | 119 | 0
+
+Aggregate Excursion Table
+Instrument | ExcursionCount | ExcursionProbability | MeanExcursionDuration | MedianExcursionDuration | MaximumExcursionDuration
+6E | 3854 | 22.79% | 3.38 | 2.00 | 28
+CL | 268 | 20.99% | 3.26 | 2.00 | 19
+NQ | 146 | 14.97% | 3.49 | 2.00 | 19
+
+Aggregate Return Table
+Instrument | ReturnCount | ReturnProbability | MeanReturnDuration | MedianReturnDuration
+6E | 5740 | 99.98% | 3.50 | 2.00
+CL | 441 | 100.00% | 3.57 | 2.00
+NQ | 293 | 100.00% | 3.39 | 2.00
+
+Aggregate Residence Table
+Category | MeanResidenceTime | MedianResidenceTime | MaximumResidenceTime
+Core Node | 2.99 | 2.00 | 20
+Secondary Node | 2.46 | 2.00 | 18
+Transition Node | 1.00 | 1.00 | 1
+Weak Node | 1.34 | 1.00 | 19
+Insufficient Node | 1.34 | 1.00 | 3
+
+Aggregate Persistence Table
+Category | StayProbability | LeaveProbability | PersistenceRatio
+Core Node | 67.08% | 32.92% | 2.0380
+Secondary Node | 58.37% | 41.63% | 1.4020
+Transition Node | 0.00% | 100.00% | 0.0000
+Weak Node | 22.65% | 77.35% | 0.2928
+Insufficient Node | 22.03% | 77.97% | 0.2825
+
+Aggregate Entropy Table
+Category | TransitionEntropy | NormalizedEntropy
+Core Node | 0.8511 | 0.7747
+Secondary Node | 0.9110 | 0.7160
+Transition Node | 0.9608 | 0.6931
+Weak Node | 1.3376 | 0.8311
+Insufficient Node | 1.2770 | 0.9211
+
+Aggregate Core Dominance Table
+Instrument | PercentTimeInCore | PercentTimeInSecondary | PercentTimeInTransition | PercentTimeInWeak | PercentTimeInInsufficient | CoreDominanceRatio
+6E | 47.96% | 38.63% | 0.67% | 12.46% | 0.28% | 0.9215
+CL | 47.62% | 37.52% | 1.19% | 13.38% | 0.30% | 0.9090
+NQ | 50.57% | 31.30% | 1.61% | 15.80% | 0.73% | 1.0231
+
+Aggregate Pathway Table
+Path | Probability_6E | Probability_CL | Probability_NQ | ReplicationCount | MeanProbability
+Core -> Core | 31.87% | 31.01% | 35.20% | 3 | 32.69%
+Core -> Core -> Core | 22.78% | 21.59% | 26.14% | 3 | 23.50%
+Core -> Core -> Core -> Core | 17.81% | 16.37% | 20.34% | 3 | 18.18%
+Core -> Core -> Core -> Core -> Core | 14.09% | 12.43% | 16.04% | 3 | 14.19%
+Core -> Core -> Core -> Core -> Secondary | 2.50% | 2.20% | 2.28% | 3 | 2.33%
+Core -> Core -> Core -> Core -> Weak | 1.22% | 1.75% | 1.97% | 3 | 1.65%
+Core -> Core -> Core -> Secondary | 3.34% | 2.95% | 2.85% | 3 | 3.05%
+Core -> Core -> Core -> Secondary -> Core | 1.51% | 1.16% | 0.73% | 3 | 1.13%
+Core -> Core -> Core -> Secondary -> Secondary | 1.74% | 1.72% | 2.02% | 3 | 1.83%
+Core -> Core -> Core -> Secondary -> Weak | 0.09% | 0.07% | 0.10% | 3 | 0.09%
+Core -> Core -> Core -> Weak | 1.64% | 2.28% | 2.91% | 3 | 2.27%
+Core -> Core -> Core -> Weak -> Core | 0.81% | 1.04% | 1.30% | 3 | 1.05%
+Core -> Core -> Core -> Weak -> Secondary | 0.53% | 0.75% | 1.04% | 3 | 0.77%
+Core -> Core -> Core -> Weak -> Transition | 0.23% | 0.41% | 0.52% | 3 | 0.39%
+Core -> Core -> Core -> Weak -> Weak | 0.08% | 0.07% | 0.05% | 3 | 0.07%
+Core -> Core -> Secondary | 6.17% | 5.85% | 4.46% | 3 | 5.49%
+Core -> Core -> Secondary -> Core | 3.15% | 3.02% | 1.61% | 3 | 2.59%
+Core -> Core -> Secondary -> Core -> Core | 1.83% | 1.68% | 0.78% | 3 | 1.43%
+Core -> Core -> Secondary -> Core -> Secondary | 1.00% | 0.75% | 0.47% | 3 | 0.74%
+Core -> Core -> Secondary -> Core -> Weak | 0.32% | 0.56% | 0.36% | 3 | 0.41%
+Core -> Core -> Secondary -> Secondary | 2.80% | 2.57% | 2.75% | 3 | 2.71%
+Core -> Core -> Secondary -> Secondary -> Core | 1.11% | 0.93% | 0.99% | 3 | 1.01%
+Core -> Core -> Secondary -> Secondary -> Secondary | 1.56% | 1.57% | 1.30% | 3 | 1.47%
+Core -> Core -> Secondary -> Secondary -> Weak | 0.13% | 0.07% | 0.47% | 3 | 0.23%
+Core -> Core -> Secondary -> Weak | 0.22% | 0.26% | 0.10% | 3 | 0.19%
+Core -> Core -> Secondary -> Weak -> Core | 0.11% | 0.11% | 0.05% | 3 | 0.09%
+Core -> Core -> Secondary -> Weak -> Secondary | 0.05% | 0.07% | N/A | 2 | 0.06%
+Core -> Core -> Secondary -> Weak -> Transition | 0.01% | 0.04% | 0.05% | 3 | 0.03%
+Core -> Core -> Secondary -> Weak -> Weak | 0.05% | 0.04% | N/A | 2 | 0.04%
+Core -> Core -> Weak | 2.92% | 3.58% | 4.56% | 3 | 3.69%
+Core -> Core -> Weak -> Core | 1.71% | 1.86% | 2.49% | 3 | 2.02%
+Core -> Core -> Weak -> Core -> Core | 1.04% | 0.97% | 1.61% | 3 | 1.20%
+Core -> Core -> Weak -> Core -> Secondary | 0.26% | 0.26% | 0.21% | 3 | 0.24%
+Core -> Core -> Weak -> Core -> Weak | 0.42% | 0.63% | 0.67% | 3 | 0.58%
+Core -> Core -> Weak -> Secondary | 0.73% | 1.01% | 1.19% | 3 | 0.98%
+Core -> Core -> Weak -> Secondary -> Core | 0.37% | 0.56% | 0.52% | 3 | 0.48%
+Core -> Core -> Weak -> Secondary -> Secondary | 0.29% | 0.26% | 0.42% | 3 | 0.32%
+Core -> Core -> Weak -> Secondary -> Weak | 0.07% | 0.19% | 0.26% | 3 | 0.17%
+Core -> Core -> Weak -> Transition | 0.40% | 0.63% | 0.83% | 3 | 0.62%
+Core -> Core -> Weak -> Transition -> Core | 0.22% | 0.37% | 0.42% | 3 | 0.34%
+Core -> Core -> Weak -> Transition -> Insufficient | 0.03% | N/A | 0.05% | 2 | 0.04%
+Core -> Core -> Weak -> Transition -> Secondary | 0.01% | N/A | 0.05% | 2 | 0.03%
+Core -> Core -> Weak -> Transition -> Weak | 0.14% | 0.26% | 0.31% | 3 | 0.24%
+Core -> Core -> Weak -> Weak | 0.09% | 0.07% | 0.05% | 3 | 0.07%
+Core -> Core -> Weak -> Weak -> Core | 0.01% | 0.04% | N/A | 2 | 0.02%
+Core -> Core -> Weak -> Weak -> Secondary | 0.03% | 0.04% | 0.05% | 3 | 0.04%
+Core -> Core -> Weak -> Weak -> Weak | 0.04% | N/A | N/A | 1 | 0.04%
+Core -> Secondary | 10.93% | 9.99% | 7.57% | 3 | 9.50%
+Core -> Secondary -> Core | 4.46% | 4.25% | 2.39% | 3 | 3.70%
+Core -> Secondary -> Core -> Core | 2.55% | 2.42% | 1.14% | 3 | 2.04%
+Core -> Secondary -> Core -> Core -> Core | 1.37% | 1.19% | 0.73% | 3 | 1.10%
+Core -> Secondary -> Core -> Core -> Secondary | 0.87% | 0.93% | 0.26% | 3 | 0.69%
+Core -> Secondary -> Core -> Core -> Weak | 0.32% | 0.30% | 0.16% | 3 | 0.26%
+Core -> Secondary -> Core -> Secondary | 1.49% | 0.97% | 0.67% | 3 | 1.04%
+Core -> Secondary -> Core -> Secondary -> Secondary | 1.46% | 0.93% | 0.67% | 3 | 1.02%
+Core -> Secondary -> Core -> Secondary -> Weak | 0.03% | 0.04% | N/A | 2 | 0.03%
+Core -> Secondary -> Core -> Weak | 0.42% | 0.82% | 0.57% | 3 | 0.60%
+Core -> Secondary -> Core -> Weak -> Secondary | 0.35% | 0.75% | 0.47% | 3 | 0.52%
+Core -> Secondary -> Core -> Weak -> Transition | 0.04% | 0.07% | 0.05% | 3 | 0.06%
+Core -> Secondary -> Core -> Weak -> Weak | 0.02% | N/A | 0.05% | 2 | 0.04%
+Core -> Secondary -> Secondary | 6.15% | 5.44% | 5.03% | 3 | 5.54%
+Core -> Secondary -> Secondary -> Core | 2.39% | 2.05% | 1.97% | 3 | 2.14%
+Core -> Secondary -> Secondary -> Core -> Core | 1.32% | 1.08% | 1.04% | 3 | 1.15%
+Core -> Secondary -> Secondary -> Core -> Secondary | 0.85% | 0.67% | 0.83% | 3 | 0.78%
+Core -> Secondary -> Secondary -> Core -> Weak | 0.22% | 0.30% | 0.10% | 3 | 0.21%
+Core -> Secondary -> Secondary -> Secondary | 3.55% | 3.21% | 2.49% | 3 | 3.08%
+Core -> Secondary -> Secondary -> Secondary -> Core | 0.46% | 0.34% | 0.36% | 3 | 0.39%
+Core -> Secondary -> Secondary -> Secondary -> Secondary | 2.16% | 2.13% | 1.51% | 3 | 1.93%
+Core -> Secondary -> Secondary -> Secondary -> Weak | 0.93% | 0.75% | 0.62% | 3 | 0.77%
+Core -> Secondary -> Secondary -> Weak | 0.20% | 0.19% | 0.57% | 3 | 0.32%
+Core -> Secondary -> Secondary -> Weak -> Core | 0.02% | N/A | 0.05% | 2 | 0.04%
+Core -> Secondary -> Secondary -> Weak -> Insufficient | 0.01% | N/A | 0.05% | 2 | 0.03%
+Core -> Secondary -> Secondary -> Weak -> Secondary | 0.11% | 0.11% | 0.16% | 3 | 0.13%
+Core -> Secondary -> Secondary -> Weak -> Transition | 0.00% | N/A | N/A | 1 | 0.00%
+Core -> Secondary -> Secondary -> Weak -> Weak | 0.06% | 0.07% | 0.31% | 3 | 0.15%
+Core -> Secondary -> Weak | 0.32% | 0.30% | 0.16% | 3 | 0.26%
+Core -> Secondary -> Weak -> Core | 0.16% | 0.11% | 0.05% | 3 | 0.11%
+Core -> Secondary -> Weak -> Core -> Core | 0.09% | 0.04% | N/A | 2 | 0.06%
+Core -> Secondary -> Weak -> Core -> Secondary | 0.02% | N/A | N/A | 1 | 0.02%
+Core -> Secondary -> Weak -> Core -> Weak | 0.05% | 0.07% | 0.05% | 3 | 0.06%
+Core -> Secondary -> Weak -> Secondary | 0.08% | 0.07% | N/A | 2 | 0.08%
+Core -> Secondary -> Weak -> Secondary -> Core | 0.02% | N/A | N/A | 1 | 0.02%
+Core -> Secondary -> Weak -> Secondary -> Secondary | 0.04% | 0.07% | N/A | 2 | 0.06%
+Core -> Secondary -> Weak -> Secondary -> Weak | 0.02% | N/A | N/A | 1 | 0.02%
+Core -> Secondary -> Weak -> Transition | 0.01% | 0.04% | 0.05% | 3 | 0.03%
+Core -> Secondary -> Weak -> Transition -> Secondary | N/A | 0.04% | N/A | 1 | 0.04%
+Core -> Secondary -> Weak -> Transition -> Weak | 0.01% | N/A | 0.05% | 2 | 0.03%
+Core -> Secondary -> Weak -> Weak | 0.07% | 0.07% | 0.05% | 3 | 0.07%
+Core -> Secondary -> Weak -> Weak -> Insufficient | 0.01% | 0.04% | 0.05% | 3 | 0.03%
+Core -> Secondary -> Weak -> Weak -> Secondary | 0.05% | 0.04% | N/A | 2 | 0.04%
+Core -> Secondary -> Weak -> Weak -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Core -> Weak | 5.16% | 6.60% | 7.78% | 3 | 6.51%
+Core -> Weak -> Core | 2.29% | 2.61% | 3.42% | 3 | 2.77%
+Core -> Weak -> Core -> Core | 1.38% | 1.45% | 2.39% | 3 | 1.74%
+Core -> Weak -> Core -> Core -> Core | 0.81% | 0.90% | 1.71% | 3 | 1.14%
+Core -> Weak -> Core -> Core -> Secondary | 0.23% | 0.22% | 0.26% | 3 | 0.24%
+Core -> Weak -> Core -> Core -> Weak | 0.34% | 0.34% | 0.42% | 3 | 0.36%
+Core -> Weak -> Core -> Secondary | 0.38% | 0.37% | 0.21% | 3 | 0.32%
+Core -> Weak -> Core -> Secondary -> Secondary | 0.37% | 0.37% | 0.21% | 3 | 0.32%
+Core -> Weak -> Core -> Secondary -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Core -> Weak -> Core -> Weak | 0.53% | 0.78% | 0.83% | 3 | 0.71%
+Core -> Weak -> Core -> Weak -> Secondary | 0.43% | 0.56% | 0.57% | 3 | 0.52%
+Core -> Weak -> Core -> Weak -> Transition | 0.06% | 0.07% | 0.21% | 3 | 0.11%
+Core -> Weak -> Core -> Weak -> Weak | 0.04% | 0.15% | 0.05% | 3 | 0.08%
+Core -> Weak -> Secondary | 1.97% | 2.57% | 2.75% | 3 | 2.43%
+Core -> Weak -> Secondary -> Core | 0.92% | 1.49% | 1.30% | 3 | 1.24%
+Core -> Weak -> Secondary -> Core -> Core | 0.54% | 1.08% | 0.93% | 3 | 0.85%
+Core -> Weak -> Secondary -> Core -> Secondary | 0.24% | 0.26% | 0.10% | 3 | 0.20%
+Core -> Weak -> Secondary -> Core -> Weak | 0.14% | 0.15% | 0.26% | 3 | 0.18%
+Core -> Weak -> Secondary -> Secondary | 0.82% | 0.75% | 1.04% | 3 | 0.87%
+Core -> Weak -> Secondary -> Secondary -> Core | 0.09% | 0.07% | 0.26% | 3 | 0.14%
+Core -> Weak -> Secondary -> Secondary -> Secondary | 0.65% | 0.60% | 0.73% | 3 | 0.66%
+Core -> Weak -> Secondary -> Secondary -> Weak | 0.08% | 0.07% | 0.05% | 3 | 0.07%
+Core -> Weak -> Secondary -> Weak | 0.22% | 0.34% | 0.42% | 3 | 0.32%
+Core -> Weak -> Secondary -> Weak -> Secondary | 0.20% | 0.22% | 0.26% | 3 | 0.23%
+Core -> Weak -> Secondary -> Weak -> Transition | 0.02% | 0.11% | 0.16% | 3 | 0.09%
+Core -> Weak -> Secondary -> Weak -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Core -> Weak -> Transition | 0.59% | 1.01% | 1.30% | 3 | 0.97%
+Core -> Weak -> Transition -> Core | 0.29% | 0.45% | 0.47% | 3 | 0.40%
+Core -> Weak -> Transition -> Core -> Core | 0.19% | 0.26% | 0.31% | 3 | 0.25%
+Core -> Weak -> Transition -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Core -> Weak -> Transition -> Core -> Weak | 0.10% | 0.19% | 0.16% | 3 | 0.15%
+Core -> Weak -> Transition -> Insufficient | 0.04% | 0.04% | 0.05% | 3 | 0.04%
+Core -> Weak -> Transition -> Insufficient -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Core -> Weak -> Transition -> Insufficient -> Weak | 0.04% | 0.04% | 0.05% | 3 | 0.04%
+Core -> Weak -> Transition -> Secondary | 0.02% | N/A | 0.10% | 2 | 0.06%
+Core -> Weak -> Transition -> Secondary -> Secondary | 0.02% | N/A | 0.10% | 2 | 0.06%
+Core -> Weak -> Transition -> Weak | 0.24% | 0.52% | 0.67% | 3 | 0.48%
+Core -> Weak -> Transition -> Weak -> Core | 0.11% | 0.26% | 0.21% | 3 | 0.19%
+Core -> Weak -> Transition -> Weak -> Secondary | 0.06% | 0.19% | 0.21% | 3 | 0.15%
+Core -> Weak -> Transition -> Weak -> Weak | 0.08% | 0.07% | 0.26% | 3 | 0.14%
+Core -> Weak -> Weak | 0.31% | 0.41% | 0.31% | 3 | 0.34%
+Core -> Weak -> Weak -> Core | 0.10% | 0.22% | 0.10% | 3 | 0.14%
+Core -> Weak -> Weak -> Core -> Core | 0.05% | 0.11% | N/A | 2 | 0.08%
+Core -> Weak -> Weak -> Core -> Secondary | 0.02% | 0.07% | N/A | 2 | 0.05%
+Core -> Weak -> Weak -> Core -> Weak | 0.03% | 0.04% | 0.10% | 3 | 0.06%
+Core -> Weak -> Weak -> Insufficient | 0.01% | N/A | N/A | 1 | 0.01%
+Core -> Weak -> Weak -> Insufficient -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Core -> Weak -> Weak -> Secondary | 0.13% | 0.07% | 0.16% | 3 | 0.12%
+Core -> Weak -> Weak -> Secondary -> Core | 0.03% | 0.07% | N/A | 2 | 0.05%
+Core -> Weak -> Weak -> Secondary -> Secondary | 0.10% | N/A | 0.16% | 2 | 0.13%
+Core -> Weak -> Weak -> Secondary -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Core -> Weak -> Weak -> Weak | 0.07% | 0.11% | 0.05% | 3 | 0.08%
+Core -> Weak -> Weak -> Weak -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Core -> Weak -> Weak -> Weak -> Secondary | 0.04% | 0.11% | 0.05% | 3 | 0.07%
+Core -> Weak -> Weak -> Weak -> Transition | 0.00% | N/A | N/A | 1 | 0.00%
+Core -> Weak -> Weak -> Weak -> Weak | 0.02% | N/A | N/A | 1 | 0.02%
+Insufficient -> Core | 0.03% | 0.11% | 0.10% | 3 | 0.08%
+Insufficient -> Core -> Core | 0.02% | 0.04% | 0.05% | 3 | 0.04%
+Insufficient -> Core -> Core -> Core | 0.02% | N/A | N/A | 1 | 0.02%
+Insufficient -> Core -> Core -> Core -> Core | 0.02% | N/A | N/A | 1 | 0.02%
+Insufficient -> Core -> Core -> Secondary | 0.00% | N/A | 0.05% | 2 | 0.03%
+Insufficient -> Core -> Core -> Secondary -> Core | 0.00% | N/A | 0.05% | 2 | 0.03%
+Insufficient -> Core -> Core -> Weak | N/A | 0.04% | N/A | 1 | 0.04%
+Insufficient -> Core -> Core -> Weak -> Core | N/A | 0.04% | N/A | 1 | 0.04%
+Insufficient -> Core -> Secondary | 0.00% | 0.04% | N/A | 2 | 0.02%
+Insufficient -> Core -> Secondary -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Core -> Secondary -> Core -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Core -> Secondary -> Secondary | N/A | 0.04% | N/A | 1 | 0.04%
+Insufficient -> Core -> Secondary -> Secondary -> Core | N/A | 0.04% | N/A | 1 | 0.04%
+Insufficient -> Core -> Weak | 0.01% | 0.04% | 0.05% | 3 | 0.03%
+Insufficient -> Core -> Weak -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Core -> Weak -> Core -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Core -> Weak -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Core -> Weak -> Secondary -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Core -> Weak -> Secondary -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Core -> Weak -> Transition | N/A | 0.04% | 0.05% | 2 | 0.04%
+Insufficient -> Core -> Weak -> Transition -> Core | N/A | 0.04% | N/A | 1 | 0.04%
+Insufficient -> Core -> Weak -> Transition -> Weak | N/A | N/A | 0.05% | 1 | 0.05%
+Insufficient -> Insufficient | 0.07% | 0.07% | 0.10% | 3 | 0.08%
+Insufficient -> Insufficient -> Core | 0.02% | 0.04% | N/A | 2 | 0.03%
+Insufficient -> Insufficient -> Core -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Insufficient -> Core -> Core -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Insufficient -> Core -> Secondary | 0.00% | 0.04% | N/A | 2 | 0.02%
+Insufficient -> Insufficient -> Core -> Secondary -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Insufficient -> Core -> Secondary -> Secondary | N/A | 0.04% | N/A | 1 | 0.04%
+Insufficient -> Insufficient -> Core -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Insufficient -> Core -> Weak -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Insufficient -> Core -> Weak -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Insufficient -> Insufficient | 0.02% | 0.04% | N/A | 2 | 0.03%
+Insufficient -> Insufficient -> Insufficient -> Core | 0.01% | 0.04% | N/A | 2 | 0.02%
+Insufficient -> Insufficient -> Insufficient -> Core -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Insufficient -> Insufficient -> Core -> Secondary | N/A | 0.04% | N/A | 1 | 0.04%
+Insufficient -> Insufficient -> Insufficient -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Insufficient -> Insufficient -> Secondary -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Insufficient -> Insufficient -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Insufficient -> Secondary | 0.03% | N/A | 0.05% | 2 | 0.04%
+Insufficient -> Insufficient -> Secondary -> Core | 0.01% | N/A | 0.05% | 2 | 0.03%
+Insufficient -> Insufficient -> Secondary -> Core -> Core | 0.01% | N/A | 0.05% | 2 | 0.03%
+Insufficient -> Insufficient -> Secondary -> Core -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Insufficient -> Secondary -> Core -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Insufficient -> Secondary -> Secondary | 0.02% | N/A | N/A | 1 | 0.02%
+Insufficient -> Insufficient -> Secondary -> Secondary -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Insufficient -> Secondary -> Secondary -> Secondary | 0.02% | N/A | N/A | 1 | 0.02%
+Insufficient -> Insufficient -> Secondary -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Insufficient -> Secondary -> Weak -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Insufficient -> Weak | N/A | N/A | 0.05% | 1 | 0.05%
+Insufficient -> Insufficient -> Weak -> Secondary | N/A | N/A | 0.05% | 1 | 0.05%
+Insufficient -> Insufficient -> Weak -> Secondary -> Core | N/A | N/A | 0.05% | 1 | 0.05%
+Insufficient -> Secondary | 0.13% | 0.07% | 0.31% | 3 | 0.17%
+Insufficient -> Secondary -> Core | 0.04% | N/A | 0.21% | 2 | 0.12%
+Insufficient -> Secondary -> Core -> Core | 0.02% | N/A | 0.16% | 2 | 0.09%
+Insufficient -> Secondary -> Core -> Core -> Core | 0.01% | N/A | 0.10% | 2 | 0.06%
+Insufficient -> Secondary -> Core -> Core -> Secondary | 0.01% | N/A | 0.05% | 2 | 0.03%
+Insufficient -> Secondary -> Core -> Core -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Secondary -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Secondary -> Core -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Secondary -> Core -> Weak | 0.01% | N/A | 0.05% | 2 | 0.03%
+Insufficient -> Secondary -> Core -> Weak -> Core | 0.00% | N/A | 0.05% | 2 | 0.03%
+Insufficient -> Secondary -> Core -> Weak -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Secondary -> Secondary | 0.07% | 0.07% | 0.10% | 3 | 0.08%
+Insufficient -> Secondary -> Secondary -> Core | 0.02% | N/A | N/A | 1 | 0.02%
+Insufficient -> Secondary -> Secondary -> Core -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Secondary -> Secondary -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Secondary -> Secondary -> Core -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Secondary -> Secondary -> Secondary | 0.05% | 0.07% | 0.10% | 3 | 0.07%
+Insufficient -> Secondary -> Secondary -> Secondary -> Core | 0.01% | 0.04% | N/A | 2 | 0.02%
+Insufficient -> Secondary -> Secondary -> Secondary -> Secondary | 0.02% | 0.04% | 0.10% | 3 | 0.05%
+Insufficient -> Secondary -> Secondary -> Secondary -> Weak | 0.02% | N/A | N/A | 1 | 0.02%
+Insufficient -> Secondary -> Secondary -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Secondary -> Secondary -> Weak -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Secondary -> Secondary -> Weak -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Secondary -> Weak | 0.02% | N/A | N/A | 1 | 0.02%
+Insufficient -> Secondary -> Weak -> Secondary | 0.02% | N/A | N/A | 1 | 0.02%
+Insufficient -> Secondary -> Weak -> Secondary -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Secondary -> Weak -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Weak | 0.04% | 0.04% | 0.21% | 3 | 0.09%
+Insufficient -> Weak -> Core | 0.01% | N/A | 0.05% | 2 | 0.03%
+Insufficient -> Weak -> Core -> Core | N/A | N/A | 0.05% | 1 | 0.05%
+Insufficient -> Weak -> Core -> Core -> Weak | N/A | N/A | 0.05% | 1 | 0.05%
+Insufficient -> Weak -> Core -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Weak -> Core -> Secondary -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Weak -> Core -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Weak -> Core -> Weak -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Weak -> Secondary | 0.01% | N/A | 0.10% | 2 | 0.06%
+Insufficient -> Weak -> Secondary -> Core | 0.00% | N/A | 0.10% | 2 | 0.05%
+Insufficient -> Weak -> Secondary -> Core -> Core | 0.00% | N/A | 0.10% | 2 | 0.05%
+Insufficient -> Weak -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Weak -> Secondary -> Secondary -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Weak -> Secondary -> Secondary -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Weak -> Weak | 0.02% | 0.04% | 0.05% | 3 | 0.04%
+Insufficient -> Weak -> Weak -> Secondary | 0.01% | 0.04% | 0.05% | 3 | 0.03%
+Insufficient -> Weak -> Weak -> Secondary -> Secondary | 0.01% | 0.04% | 0.05% | 3 | 0.03%
+Insufficient -> Weak -> Weak -> Transition | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Weak -> Weak -> Transition -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Weak -> Weak -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Insufficient -> Weak -> Weak -> Weak -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Insufficient -> Weak -> Weak -> Weak -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Core | 11.85% | 12.00% | 10.16% | 3 | 11.34%
+Secondary -> Core -> Core | 6.64% | 6.94% | 5.76% | 3 | 6.44%
+Secondary -> Core -> Core -> Core | 3.58% | 3.77% | 3.63% | 3 | 3.66%
+Secondary -> Core -> Core -> Core -> Core | 2.71% | 2.91% | 2.91% | 3 | 2.84%
+Secondary -> Core -> Core -> Core -> Secondary | 0.68% | 0.63% | 0.42% | 3 | 0.58%
+Secondary -> Core -> Core -> Core -> Weak | 0.19% | 0.22% | 0.31% | 3 | 0.24%
+Secondary -> Core -> Core -> Secondary | 2.35% | 2.42% | 1.19% | 3 | 1.99%
+Secondary -> Core -> Core -> Secondary -> Core | 1.37% | 1.64% | 0.67% | 3 | 1.23%
+Secondary -> Core -> Core -> Secondary -> Secondary | 0.88% | 0.63% | 0.52% | 3 | 0.68%
+Secondary -> Core -> Core -> Secondary -> Weak | 0.10% | 0.15% | N/A | 2 | 0.12%
+Secondary -> Core -> Core -> Weak | 0.71% | 0.75% | 0.93% | 3 | 0.80%
+Secondary -> Core -> Core -> Weak -> Core | 0.51% | 0.49% | 0.67% | 3 | 0.56%
+Secondary -> Core -> Core -> Weak -> Secondary | 0.10% | 0.15% | 0.05% | 3 | 0.10%
+Secondary -> Core -> Core -> Weak -> Transition | 0.09% | 0.11% | 0.21% | 3 | 0.14%
+Secondary -> Core -> Core -> Weak -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Core -> Secondary | 3.95% | 3.47% | 2.85% | 3 | 3.42%
+Secondary -> Core -> Secondary -> Core | 1.10% | 1.04% | 0.73% | 3 | 0.96%
+Secondary -> Core -> Secondary -> Core -> Core | 0.61% | 0.60% | 0.31% | 3 | 0.51%
+Secondary -> Core -> Secondary -> Core -> Secondary | 0.41% | 0.22% | 0.21% | 3 | 0.28%
+Secondary -> Core -> Secondary -> Core -> Weak | 0.08% | 0.22% | 0.21% | 3 | 0.17%
+Secondary -> Core -> Secondary -> Secondary | 2.76% | 2.39% | 2.08% | 3 | 2.41%
+Secondary -> Core -> Secondary -> Secondary -> Core | 1.06% | 1.01% | 0.93% | 3 | 1.00%
+Secondary -> Core -> Secondary -> Secondary -> Secondary | 1.65% | 1.34% | 1.04% | 3 | 1.34%
+Secondary -> Core -> Secondary -> Secondary -> Weak | 0.06% | 0.04% | 0.10% | 3 | 0.07%
+Secondary -> Core -> Secondary -> Weak | 0.09% | 0.04% | 0.05% | 3 | 0.06%
+Secondary -> Core -> Secondary -> Weak -> Core | 0.04% | N/A | N/A | 1 | 0.04%
+Secondary -> Core -> Secondary -> Weak -> Secondary | 0.03% | N/A | N/A | 1 | 0.03%
+Secondary -> Core -> Secondary -> Weak -> Weak | 0.02% | 0.04% | 0.05% | 3 | 0.04%
+Secondary -> Core -> Weak | 1.26% | 1.57% | 1.56% | 3 | 1.46%
+Secondary -> Core -> Weak -> Core | 0.41% | 0.45% | 0.62% | 3 | 0.49%
+Secondary -> Core -> Weak -> Core -> Core | 0.26% | 0.34% | 0.52% | 3 | 0.37%
+Secondary -> Core -> Weak -> Core -> Secondary | 0.08% | 0.04% | N/A | 2 | 0.06%
+Secondary -> Core -> Weak -> Core -> Weak | 0.08% | 0.07% | 0.10% | 3 | 0.09%
+Secondary -> Core -> Weak -> Secondary | 0.66% | 0.97% | 0.73% | 3 | 0.79%
+Secondary -> Core -> Weak -> Secondary -> Core | 0.31% | 0.60% | 0.26% | 3 | 0.39%
+Secondary -> Core -> Weak -> Secondary -> Secondary | 0.30% | 0.30% | 0.42% | 3 | 0.34%
+Secondary -> Core -> Weak -> Secondary -> Weak | 0.05% | 0.07% | 0.05% | 3 | 0.06%
+Secondary -> Core -> Weak -> Transition | 0.11% | 0.11% | 0.16% | 3 | 0.13%
+Secondary -> Core -> Weak -> Transition -> Core | 0.05% | 0.04% | 0.05% | 3 | 0.05%
+Secondary -> Core -> Weak -> Transition -> Insufficient | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Core -> Weak -> Transition -> Secondary | 0.01% | N/A | 0.05% | 2 | 0.03%
+Secondary -> Core -> Weak -> Transition -> Weak | 0.04% | 0.07% | 0.05% | 3 | 0.06%
+Secondary -> Core -> Weak -> Weak | 0.07% | 0.04% | 0.05% | 3 | 0.05%
+Secondary -> Core -> Weak -> Weak -> Core | 0.01% | 0.04% | N/A | 2 | 0.03%
+Secondary -> Core -> Weak -> Weak -> Insufficient | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Core -> Weak -> Weak -> Secondary | 0.05% | N/A | 0.05% | 2 | 0.05%
+Secondary -> Core -> Weak -> Weak -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Insufficient | 0.05% | 0.04% | N/A | 2 | 0.04%
+Secondary -> Insufficient -> Insufficient | 0.02% | N/A | N/A | 1 | 0.02%
+Secondary -> Insufficient -> Insufficient -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Insufficient -> Insufficient -> Core -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Insufficient -> Insufficient -> Insufficient | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Insufficient -> Insufficient -> Insufficient -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Insufficient -> Insufficient -> Insufficient -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Insufficient -> Secondary | 0.03% | 0.04% | N/A | 2 | 0.03%
+Secondary -> Insufficient -> Secondary -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Insufficient -> Secondary -> Core -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Insufficient -> Secondary -> Secondary | 0.03% | 0.04% | N/A | 2 | 0.03%
+Secondary -> Insufficient -> Secondary -> Secondary -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Insufficient -> Secondary -> Secondary -> Secondary | 0.02% | 0.04% | N/A | 2 | 0.03%
+Secondary -> Secondary | 23.00% | 22.25% | 17.63% | 3 | 20.96%
+Secondary -> Secondary -> Core | 5.60% | 5.48% | 5.13% | 3 | 5.41%
+Secondary -> Secondary -> Core -> Core | 3.05% | 2.98% | 2.85% | 3 | 2.96%
+Secondary -> Secondary -> Core -> Core -> Core | 1.65% | 1.60% | 1.92% | 3 | 1.72%
+Secondary -> Secondary -> Core -> Core -> Secondary | 1.17% | 1.12% | 0.62% | 3 | 0.97%
+Secondary -> Secondary -> Core -> Core -> Weak | 0.23% | 0.26% | 0.31% | 3 | 0.27%
+Secondary -> Secondary -> Core -> Secondary | 1.98% | 1.98% | 1.82% | 3 | 1.92%
+Secondary -> Secondary -> Core -> Secondary -> Core | 0.88% | 0.82% | 0.57% | 3 | 0.76%
+Secondary -> Secondary -> Core -> Secondary -> Secondary | 1.06% | 1.16% | 1.19% | 3 | 1.14%
+Secondary -> Secondary -> Core -> Secondary -> Weak | 0.04% | N/A | 0.05% | 2 | 0.04%
+Secondary -> Secondary -> Core -> Weak | 0.58% | 0.52% | 0.47% | 3 | 0.52%
+Secondary -> Secondary -> Core -> Weak -> Core | 0.26% | 0.34% | 0.26% | 3 | 0.28%
+Secondary -> Secondary -> Core -> Weak -> Secondary | 0.24% | 0.11% | 0.21% | 3 | 0.19%
+Secondary -> Secondary -> Core -> Weak -> Transition | 0.04% | 0.04% | N/A | 2 | 0.04%
+Secondary -> Secondary -> Core -> Weak -> Weak | 0.04% | 0.04% | N/A | 2 | 0.04%
+Secondary -> Secondary -> Insufficient | 0.05% | 0.04% | N/A | 2 | 0.04%
+Secondary -> Secondary -> Insufficient -> Insufficient | 0.02% | N/A | N/A | 1 | 0.02%
+Secondary -> Secondary -> Insufficient -> Insufficient -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Secondary -> Insufficient -> Insufficient -> Insufficient | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Secondary -> Insufficient -> Secondary | 0.03% | 0.04% | N/A | 2 | 0.03%
+Secondary -> Secondary -> Insufficient -> Secondary -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Secondary -> Insufficient -> Secondary -> Secondary | 0.03% | 0.04% | N/A | 2 | 0.03%
+Secondary -> Secondary -> Secondary | 14.41% | 14.39% | 9.85% | 3 | 12.89%
+Secondary -> Secondary -> Secondary -> Core | 2.76% | 3.13% | 2.49% | 3 | 2.80%
+Secondary -> Secondary -> Secondary -> Core -> Core | 1.50% | 1.75% | 1.56% | 3 | 1.60%
+Secondary -> Secondary -> Secondary -> Core -> Secondary | 0.97% | 1.19% | 0.73% | 3 | 0.96%
+Secondary -> Secondary -> Secondary -> Core -> Weak | 0.29% | 0.19% | 0.21% | 3 | 0.23%
+Secondary -> Secondary -> Secondary -> Insufficient | 0.05% | 0.04% | N/A | 2 | 0.04%
+Secondary -> Secondary -> Secondary -> Insufficient -> Insufficient | 0.02% | N/A | N/A | 1 | 0.02%
+Secondary -> Secondary -> Secondary -> Insufficient -> Secondary | 0.03% | 0.04% | N/A | 2 | 0.03%
+Secondary -> Secondary -> Secondary -> Secondary | 9.14% | 9.40% | 5.60% | 3 | 8.05%
+Secondary -> Secondary -> Secondary -> Secondary -> Core | 1.84% | 2.20% | 1.61% | 3 | 1.88%
+Secondary -> Secondary -> Secondary -> Secondary -> Insufficient | 0.04% | 0.04% | N/A | 2 | 0.04%
+Secondary -> Secondary -> Secondary -> Secondary -> Secondary | 5.99% | 6.16% | 3.22% | 3 | 5.12%
+Secondary -> Secondary -> Secondary -> Secondary -> Weak | 1.27% | 1.01% | 0.78% | 3 | 1.02%
+Secondary -> Secondary -> Secondary -> Weak | 2.46% | 1.83% | 1.76% | 3 | 2.02%
+Secondary -> Secondary -> Secondary -> Weak -> Core | 0.56% | 0.34% | 0.16% | 3 | 0.35%
+Secondary -> Secondary -> Secondary -> Weak -> Insufficient | 0.00% | 0.04% | N/A | 2 | 0.02%
+Secondary -> Secondary -> Secondary -> Weak -> Secondary | 0.68% | 0.34% | 0.73% | 3 | 0.58%
+Secondary -> Secondary -> Secondary -> Weak -> Transition | 0.02% | 0.04% | N/A | 2 | 0.03%
+Secondary -> Secondary -> Secondary -> Weak -> Weak | 1.20% | 1.08% | 0.88% | 3 | 1.05%
+Secondary -> Secondary -> Weak | 2.94% | 2.35% | 2.65% | 3 | 2.64%
+Secondary -> Secondary -> Weak -> Core | 0.62% | 0.37% | 0.26% | 3 | 0.42%
+Secondary -> Secondary -> Weak -> Core -> Core | 0.31% | 0.22% | 0.10% | 3 | 0.21%
+Secondary -> Secondary -> Weak -> Core -> Secondary | 0.18% | 0.07% | N/A | 2 | 0.13%
+Secondary -> Secondary -> Weak -> Core -> Weak | 0.12% | 0.07% | 0.16% | 3 | 0.12%
+Secondary -> Secondary -> Weak -> Insufficient | 0.02% | 0.07% | 0.10% | 3 | 0.07%
+Secondary -> Secondary -> Weak -> Insufficient -> Core | 0.01% | 0.07% | 0.05% | 3 | 0.04%
+Secondary -> Secondary -> Weak -> Insufficient -> Insufficient | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Secondary -> Weak -> Insufficient -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Secondary -> Weak -> Insufficient -> Weak | N/A | N/A | 0.05% | 1 | 0.05%
+Secondary -> Secondary -> Weak -> Secondary | 0.92% | 0.48% | 0.99% | 3 | 0.80%
+Secondary -> Secondary -> Weak -> Secondary -> Core | 0.27% | 0.11% | 0.36% | 3 | 0.25%
+Secondary -> Secondary -> Weak -> Secondary -> Secondary | 0.59% | 0.34% | 0.52% | 3 | 0.48%
+Secondary -> Secondary -> Weak -> Secondary -> Weak | 0.06% | 0.04% | 0.10% | 3 | 0.07%
+Secondary -> Secondary -> Weak -> Transition | 0.03% | 0.04% | N/A | 2 | 0.03%
+Secondary -> Secondary -> Weak -> Transition -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Secondary -> Weak -> Transition -> Weak | 0.02% | 0.04% | N/A | 2 | 0.03%
+Secondary -> Secondary -> Weak -> Weak | 1.35% | 1.38% | 1.30% | 3 | 1.34%
+Secondary -> Secondary -> Weak -> Weak -> Core | 0.30% | 0.19% | 0.31% | 3 | 0.27%
+Secondary -> Secondary -> Weak -> Weak -> Insufficient | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Secondary -> Weak -> Weak -> Secondary | 0.43% | 0.56% | 0.36% | 3 | 0.45%
+Secondary -> Secondary -> Weak -> Weak -> Transition | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Secondary -> Weak -> Weak -> Weak | 0.61% | 0.63% | 0.62% | 3 | 0.62%
+Secondary -> Weak | 3.74% | 3.24% | 3.53% | 3 | 3.50%
+Secondary -> Weak -> Core | 0.78% | 0.48% | 0.31% | 3 | 0.52%
+Secondary -> Weak -> Core -> Core | 0.41% | 0.26% | 0.10% | 3 | 0.26%
+Secondary -> Weak -> Core -> Core -> Core | 0.21% | 0.19% | 0.05% | 3 | 0.15%
+Secondary -> Weak -> Core -> Core -> Secondary | 0.12% | 0.07% | 0.05% | 3 | 0.08%
+Secondary -> Weak -> Core -> Core -> Weak | 0.08% | N/A | N/A | 1 | 0.08%
+Secondary -> Weak -> Core -> Secondary | 0.20% | 0.07% | N/A | 2 | 0.14%
+Secondary -> Weak -> Core -> Secondary -> Core | 0.10% | 0.04% | N/A | 2 | 0.07%
+Secondary -> Weak -> Core -> Secondary -> Secondary | 0.09% | 0.04% | N/A | 2 | 0.07%
+Secondary -> Weak -> Core -> Secondary -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Weak -> Core -> Weak | 0.17% | 0.15% | 0.21% | 3 | 0.18%
+Secondary -> Weak -> Core -> Weak -> Core | 0.06% | 0.07% | 0.05% | 3 | 0.06%
+Secondary -> Weak -> Core -> Weak -> Secondary | 0.08% | N/A | 0.10% | 2 | 0.09%
+Secondary -> Weak -> Core -> Weak -> Transition | 0.01% | 0.04% | N/A | 2 | 0.02%
+Secondary -> Weak -> Core -> Weak -> Weak | 0.03% | 0.04% | 0.05% | 3 | 0.04%
+Secondary -> Weak -> Insufficient | 0.02% | 0.07% | 0.10% | 3 | 0.07%
+Secondary -> Weak -> Insufficient -> Core | 0.01% | 0.07% | 0.05% | 3 | 0.04%
+Secondary -> Weak -> Insufficient -> Core -> Core | 0.00% | 0.04% | N/A | 2 | 0.02%
+Secondary -> Weak -> Insufficient -> Core -> Weak | 0.00% | 0.04% | 0.05% | 3 | 0.03%
+Secondary -> Weak -> Insufficient -> Insufficient | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Weak -> Insufficient -> Insufficient -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Weak -> Insufficient -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Weak -> Insufficient -> Secondary -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Weak -> Insufficient -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Weak -> Insufficient -> Weak | N/A | N/A | 0.05% | 1 | 0.05%
+Secondary -> Weak -> Insufficient -> Weak -> Weak | N/A | N/A | 0.05% | 1 | 0.05%
+Secondary -> Weak -> Secondary | 1.41% | 1.04% | 1.50% | 3 | 1.32%
+Secondary -> Weak -> Secondary -> Core | 0.49% | 0.22% | 0.67% | 3 | 0.46%
+Secondary -> Weak -> Secondary -> Core -> Core | 0.29% | 0.11% | 0.26% | 3 | 0.22%
+Secondary -> Weak -> Secondary -> Core -> Secondary | 0.13% | 0.11% | 0.21% | 3 | 0.15%
+Secondary -> Weak -> Secondary -> Core -> Weak | 0.07% | N/A | 0.21% | 2 | 0.14%
+Secondary -> Weak -> Secondary -> Secondary | 0.77% | 0.71% | 0.62% | 3 | 0.70%
+Secondary -> Weak -> Secondary -> Secondary -> Core | 0.16% | 0.11% | 0.16% | 3 | 0.14%
+Secondary -> Weak -> Secondary -> Secondary -> Secondary | 0.52% | 0.52% | 0.42% | 3 | 0.48%
+Secondary -> Weak -> Secondary -> Secondary -> Weak | 0.09% | 0.07% | 0.05% | 3 | 0.07%
+Secondary -> Weak -> Secondary -> Weak | 0.14% | 0.11% | 0.21% | 3 | 0.15%
+Secondary -> Weak -> Secondary -> Weak -> Secondary | 0.10% | 0.11% | 0.16% | 3 | 0.12%
+Secondary -> Weak -> Secondary -> Weak -> Transition | 0.00% | N/A | 0.05% | 2 | 0.03%
+Secondary -> Weak -> Secondary -> Weak -> Weak | 0.03% | N/A | N/A | 1 | 0.03%
+Secondary -> Weak -> Transition | 0.06% | 0.19% | 0.26% | 3 | 0.17%
+Secondary -> Weak -> Transition -> Insufficient | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Weak -> Transition -> Insufficient -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Weak -> Transition -> Secondary | 0.01% | 0.04% | N/A | 2 | 0.02%
+Secondary -> Weak -> Transition -> Secondary -> Secondary | 0.01% | 0.04% | N/A | 2 | 0.02%
+Secondary -> Weak -> Transition -> Weak | 0.05% | 0.15% | 0.26% | 3 | 0.15%
+Secondary -> Weak -> Transition -> Weak -> Core | 0.03% | N/A | 0.10% | 2 | 0.07%
+Secondary -> Weak -> Transition -> Weak -> Secondary | 0.01% | 0.11% | 0.10% | 3 | 0.07%
+Secondary -> Weak -> Transition -> Weak -> Weak | 0.02% | 0.04% | 0.05% | 3 | 0.04%
+Secondary -> Weak -> Weak | 1.48% | 1.45% | 1.35% | 3 | 1.43%
+Secondary -> Weak -> Weak -> Core | 0.32% | 0.19% | 0.31% | 3 | 0.27%
+Secondary -> Weak -> Weak -> Core -> Core | 0.17% | 0.15% | 0.21% | 3 | 0.18%
+Secondary -> Weak -> Weak -> Core -> Secondary | 0.10% | 0.04% | 0.05% | 3 | 0.06%
+Secondary -> Weak -> Weak -> Core -> Weak | 0.04% | N/A | 0.05% | 2 | 0.05%
+Secondary -> Weak -> Weak -> Insufficient | 0.03% | 0.04% | 0.05% | 3 | 0.04%
+Secondary -> Weak -> Weak -> Insufficient -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Weak -> Weak -> Insufficient -> Insufficient | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Weak -> Weak -> Insufficient -> Secondary | 0.02% | 0.04% | 0.05% | 3 | 0.04%
+Secondary -> Weak -> Weak -> Secondary | 0.49% | 0.60% | 0.36% | 3 | 0.48%
+Secondary -> Weak -> Weak -> Secondary -> Core | 0.15% | 0.15% | 0.10% | 3 | 0.14%
+Secondary -> Weak -> Weak -> Secondary -> Secondary | 0.30% | 0.41% | 0.26% | 3 | 0.32%
+Secondary -> Weak -> Weak -> Secondary -> Weak | 0.04% | 0.04% | N/A | 2 | 0.04%
+Secondary -> Weak -> Weak -> Transition | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Weak -> Weak -> Transition -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Secondary -> Weak -> Weak -> Weak | 0.64% | 0.63% | 0.62% | 3 | 0.63%
+Secondary -> Weak -> Weak -> Weak -> Core | 0.13% | 0.26% | N/A | 2 | 0.20%
+Secondary -> Weak -> Weak -> Weak -> Insufficient | 0.05% | 0.04% | 0.21% | 3 | 0.10%
+Secondary -> Weak -> Weak -> Weak -> Secondary | 0.20% | 0.26% | 0.21% | 3 | 0.22%
+Secondary -> Weak -> Weak -> Weak -> Transition | 0.01% | N/A | N/A | 1 | 0.01%
+Secondary -> Weak -> Weak -> Weak -> Weak | 0.24% | 0.07% | 0.21% | 3 | 0.18%
+Transition -> Core | 0.29% | 0.45% | 0.47% | 3 | 0.40%
+Transition -> Core -> Core | 0.19% | 0.26% | 0.31% | 3 | 0.25%
+Transition -> Core -> Core -> Core | 0.11% | 0.19% | 0.16% | 3 | 0.15%
+Transition -> Core -> Core -> Core -> Core | 0.07% | 0.15% | 0.16% | 3 | 0.12%
+Transition -> Core -> Core -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Core -> Core -> Core -> Weak | 0.03% | 0.04% | N/A | 2 | 0.03%
+Transition -> Core -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Core -> Core -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Core -> Core -> Weak | 0.08% | 0.07% | 0.16% | 3 | 0.10%
+Transition -> Core -> Core -> Weak -> Core | 0.05% | 0.07% | 0.16% | 3 | 0.09%
+Transition -> Core -> Core -> Weak -> Secondary | 0.02% | N/A | N/A | 1 | 0.02%
+Transition -> Core -> Core -> Weak -> Transition | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Core -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Core -> Secondary -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Core -> Weak | 0.10% | 0.19% | 0.16% | 3 | 0.15%
+Transition -> Core -> Weak -> Secondary | 0.02% | N/A | 0.05% | 2 | 0.03%
+Transition -> Core -> Weak -> Secondary -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Transition -> Core -> Weak -> Secondary -> Secondary | 0.01% | N/A | 0.05% | 2 | 0.03%
+Transition -> Core -> Weak -> Transition | 0.00% | 0.07% | N/A | 2 | 0.04%
+Transition -> Core -> Weak -> Transition -> Weak | 0.00% | 0.07% | N/A | 2 | 0.04%
+Transition -> Core -> Weak -> Weak | 0.08% | 0.11% | 0.10% | 3 | 0.10%
+Transition -> Core -> Weak -> Weak -> Core | 0.04% | 0.07% | 0.05% | 3 | 0.05%
+Transition -> Core -> Weak -> Weak -> Secondary | 0.03% | 0.04% | 0.05% | 3 | 0.04%
+Transition -> Core -> Weak -> Weak -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Insufficient | 0.04% | 0.04% | 0.05% | 3 | 0.04%
+Transition -> Insufficient -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Transition -> Insufficient -> Secondary -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Transition -> Insufficient -> Secondary -> Secondary -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Transition -> Insufficient -> Weak | 0.04% | 0.04% | 0.05% | 3 | 0.04%
+Transition -> Insufficient -> Weak -> Core | 0.01% | N/A | 0.05% | 2 | 0.03%
+Transition -> Insufficient -> Weak -> Core -> Core | N/A | N/A | 0.05% | 1 | 0.05%
+Transition -> Insufficient -> Weak -> Core -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Transition -> Insufficient -> Weak -> Core -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Transition -> Insufficient -> Weak -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Insufficient -> Weak -> Secondary -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Transition -> Insufficient -> Weak -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Insufficient -> Weak -> Weak | 0.02% | 0.04% | N/A | 2 | 0.03%
+Transition -> Insufficient -> Weak -> Weak -> Secondary | 0.01% | 0.04% | N/A | 2 | 0.02%
+Transition -> Insufficient -> Weak -> Weak -> Transition | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Insufficient -> Weak -> Weak -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Secondary | 0.03% | 0.04% | 0.10% | 3 | 0.06%
+Transition -> Secondary -> Secondary | 0.03% | 0.04% | 0.10% | 3 | 0.06%
+Transition -> Secondary -> Secondary -> Core | 0.01% | 0.04% | 0.05% | 3 | 0.03%
+Transition -> Secondary -> Secondary -> Core -> Core | 0.00% | 0.04% | N/A | 2 | 0.02%
+Transition -> Secondary -> Secondary -> Core -> Secondary | 0.00% | N/A | 0.05% | 2 | 0.03%
+Transition -> Secondary -> Secondary -> Secondary | 0.02% | N/A | 0.05% | 2 | 0.04%
+Transition -> Secondary -> Secondary -> Secondary -> Core | 0.01% | N/A | 0.05% | 2 | 0.03%
+Transition -> Secondary -> Secondary -> Secondary -> Weak | 0.02% | N/A | N/A | 1 | 0.02%
+Transition -> Weak | 0.31% | 0.67% | 0.98% | 3 | 0.65%
+Transition -> Weak -> Core | 0.15% | 0.26% | 0.36% | 3 | 0.26%
+Transition -> Weak -> Core -> Core | 0.09% | 0.07% | 0.16% | 3 | 0.11%
+Transition -> Weak -> Core -> Core -> Core | 0.04% | 0.07% | 0.05% | 3 | 0.06%
+Transition -> Weak -> Core -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Weak -> Core -> Core -> Weak | 0.04% | N/A | 0.10% | 2 | 0.07%
+Transition -> Weak -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Weak -> Core -> Secondary -> Core | 0.00% | N/A | N/A | 1 | 0.00%
+Transition -> Weak -> Core -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Weak -> Core -> Weak | 0.05% | 0.19% | 0.21% | 3 | 0.15%
+Transition -> Weak -> Core -> Weak -> Core | 0.03% | 0.11% | 0.05% | 3 | 0.07%
+Transition -> Weak -> Core -> Weak -> Secondary | 0.01% | 0.04% | 0.10% | 3 | 0.05%
+Transition -> Weak -> Core -> Weak -> Transition | 0.01% | 0.04% | 0.05% | 3 | 0.03%
+Transition -> Weak -> Secondary | 0.06% | 0.30% | 0.31% | 3 | 0.22%
+Transition -> Weak -> Secondary -> Core | 0.02% | 0.11% | 0.05% | 3 | 0.06%
+Transition -> Weak -> Secondary -> Core -> Core | 0.01% | 0.07% | 0.05% | 3 | 0.05%
+Transition -> Weak -> Secondary -> Core -> Secondary | 0.01% | 0.04% | N/A | 2 | 0.02%
+Transition -> Weak -> Secondary -> Secondary | 0.03% | 0.15% | 0.21% | 3 | 0.13%
+Transition -> Weak -> Secondary -> Secondary -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Transition -> Weak -> Secondary -> Secondary -> Secondary | 0.01% | 0.11% | 0.16% | 3 | 0.09%
+Transition -> Weak -> Secondary -> Secondary -> Weak | 0.01% | 0.04% | 0.05% | 3 | 0.03%
+Transition -> Weak -> Secondary -> Weak | 0.02% | 0.04% | 0.05% | 3 | 0.04%
+Transition -> Weak -> Secondary -> Weak -> Secondary | 0.02% | 0.04% | 0.05% | 3 | 0.04%
+Transition -> Weak -> Weak | 0.10% | 0.11% | 0.31% | 3 | 0.17%
+Transition -> Weak -> Weak -> Insufficient | N/A | N/A | 0.16% | 1 | 0.16%
+Transition -> Weak -> Weak -> Insufficient -> Secondary | N/A | N/A | 0.16% | 1 | 0.16%
+Transition -> Weak -> Weak -> Secondary | 0.05% | 0.11% | 0.05% | 3 | 0.07%
+Transition -> Weak -> Weak -> Secondary -> Core | 0.02% | N/A | 0.05% | 2 | 0.04%
+Transition -> Weak -> Weak -> Secondary -> Secondary | 0.03% | 0.07% | N/A | 2 | 0.05%
+Transition -> Weak -> Weak -> Secondary -> Weak | N/A | 0.04% | N/A | 1 | 0.04%
+Transition -> Weak -> Weak -> Weak | 0.05% | N/A | 0.10% | 2 | 0.08%
+Transition -> Weak -> Weak -> Weak -> Core | 0.03% | N/A | N/A | 1 | 0.03%
+Transition -> Weak -> Weak -> Weak -> Secondary | 0.02% | N/A | N/A | 1 | 0.02%
+Transition -> Weak -> Weak -> Weak -> Weak | 0.01% | N/A | 0.10% | 2 | 0.05%
+Weak -> Core | 3.92% | 4.06% | 4.67% | 3 | 4.21%
+Weak -> Core -> Core | 2.24% | 2.20% | 2.96% | 3 | 2.47%
+Weak -> Core -> Core -> Core | 1.27% | 1.27% | 2.02% | 3 | 1.52%
+Weak -> Core -> Core -> Core -> Core | 0.93% | 0.90% | 1.25% | 3 | 1.02%
+Weak -> Core -> Core -> Core -> Secondary | 0.14% | 0.11% | 0.16% | 3 | 0.13%
+Weak -> Core -> Core -> Core -> Weak | 0.21% | 0.26% | 0.62% | 3 | 0.36%
+Weak -> Core -> Core -> Secondary | 0.47% | 0.48% | 0.36% | 3 | 0.44%
+Weak -> Core -> Core -> Secondary -> Core | 0.27% | 0.22% | 0.16% | 3 | 0.22%
+Weak -> Core -> Core -> Secondary -> Secondary | 0.18% | 0.22% | 0.21% | 3 | 0.20%
+Weak -> Core -> Core -> Secondary -> Weak | 0.02% | 0.04% | N/A | 2 | 0.03%
+Weak -> Core -> Core -> Weak | 0.50% | 0.45% | 0.57% | 3 | 0.51%
+Weak -> Core -> Core -> Weak -> Core | 0.34% | 0.22% | 0.36% | 3 | 0.31%
+Weak -> Core -> Core -> Weak -> Secondary | 0.08% | 0.11% | 0.10% | 3 | 0.10%
+Weak -> Core -> Core -> Weak -> Transition | 0.08% | 0.11% | 0.10% | 3 | 0.10%
+Weak -> Core -> Core -> Weak -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Weak -> Core -> Secondary | 0.81% | 0.63% | 0.26% | 3 | 0.57%
+Weak -> Core -> Secondary -> Core | 0.20% | 0.19% | 0.05% | 3 | 0.15%
+Weak -> Core -> Secondary -> Core -> Core | 0.11% | 0.15% | 0.05% | 3 | 0.10%
+Weak -> Core -> Secondary -> Core -> Secondary | 0.08% | N/A | N/A | 1 | 0.08%
+Weak -> Core -> Secondary -> Core -> Weak | 0.01% | 0.04% | N/A | 2 | 0.03%
+Weak -> Core -> Secondary -> Secondary | 0.58% | 0.45% | 0.21% | 3 | 0.41%
+Weak -> Core -> Secondary -> Secondary -> Core | 0.23% | 0.07% | 0.05% | 3 | 0.12%
+Weak -> Core -> Secondary -> Secondary -> Secondary | 0.34% | 0.30% | 0.16% | 3 | 0.27%
+Weak -> Core -> Secondary -> Secondary -> Weak | 0.01% | 0.07% | N/A | 2 | 0.04%
+Weak -> Core -> Secondary -> Weak | 0.02% | N/A | N/A | 1 | 0.02%
+Weak -> Core -> Secondary -> Weak -> Core | 0.02% | N/A | N/A | 1 | 0.02%
+Weak -> Core -> Secondary -> Weak -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Weak -> Core -> Weak | 0.87% | 1.23% | 1.45% | 3 | 1.18%
+Weak -> Core -> Weak -> Core | 0.16% | 0.30% | 0.31% | 3 | 0.26%
+Weak -> Core -> Weak -> Core -> Core | 0.09% | 0.15% | 0.26% | 3 | 0.17%
+Weak -> Core -> Weak -> Core -> Secondary | 0.03% | 0.07% | N/A | 2 | 0.05%
+Weak -> Core -> Weak -> Core -> Weak | 0.04% | 0.07% | 0.05% | 3 | 0.05%
+Weak -> Core -> Weak -> Secondary | 0.55% | 0.60% | 0.78% | 3 | 0.64%
+Weak -> Core -> Weak -> Secondary -> Core | 0.24% | 0.34% | 0.52% | 3 | 0.36%
+Weak -> Core -> Weak -> Secondary -> Secondary | 0.22% | 0.19% | 0.16% | 3 | 0.19%
+Weak -> Core -> Weak -> Secondary -> Weak | 0.10% | 0.07% | 0.10% | 3 | 0.09%
+Weak -> Core -> Weak -> Transition | 0.08% | 0.15% | 0.26% | 3 | 0.16%
+Weak -> Core -> Weak -> Transition -> Core | 0.02% | N/A | N/A | 1 | 0.02%
+Weak -> Core -> Weak -> Transition -> Insufficient | N/A | 0.04% | N/A | 1 | 0.04%
+Weak -> Core -> Weak -> Transition -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Weak -> Core -> Weak -> Transition -> Weak | 0.06% | 0.11% | 0.26% | 3 | 0.14%
+Weak -> Core -> Weak -> Weak | 0.07% | 0.19% | 0.10% | 3 | 0.12%
+Weak -> Core -> Weak -> Weak -> Core | 0.03% | 0.07% | 0.05% | 3 | 0.05%
+Weak -> Core -> Weak -> Weak -> Secondary | 0.02% | N/A | N/A | 1 | 0.02%
+Weak -> Core -> Weak -> Weak -> Weak | 0.02% | 0.11% | 0.05% | 3 | 0.06%
+Weak -> Insufficient | 0.11% | 0.15% | 0.57% | 3 | 0.28%
+Weak -> Insufficient -> Core | 0.01% | 0.07% | 0.10% | 3 | 0.06%
+Weak -> Insufficient -> Core -> Core | 0.01% | 0.04% | 0.05% | 3 | 0.03%
+Weak -> Insufficient -> Core -> Core -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Insufficient -> Core -> Core -> Secondary | 0.00% | N/A | 0.05% | 2 | 0.03%
+Weak -> Insufficient -> Core -> Core -> Weak | N/A | 0.04% | N/A | 1 | 0.04%
+Weak -> Insufficient -> Core -> Weak | 0.00% | 0.04% | 0.05% | 3 | 0.03%
+Weak -> Insufficient -> Core -> Weak -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Weak -> Insufficient -> Core -> Weak -> Transition | N/A | 0.04% | 0.05% | 2 | 0.04%
+Weak -> Insufficient -> Insufficient | 0.03% | 0.04% | 0.10% | 3 | 0.06%
+Weak -> Insufficient -> Insufficient -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Insufficient -> Insufficient -> Core -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Insufficient -> Insufficient -> Insufficient | 0.01% | 0.04% | N/A | 2 | 0.02%
+Weak -> Insufficient -> Insufficient -> Insufficient -> Core | 0.00% | 0.04% | N/A | 2 | 0.02%
+Weak -> Insufficient -> Insufficient -> Insufficient -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Insufficient -> Insufficient -> Secondary | 0.02% | N/A | 0.05% | 2 | 0.04%
+Weak -> Insufficient -> Insufficient -> Secondary -> Core | 0.01% | N/A | 0.05% | 2 | 0.03%
+Weak -> Insufficient -> Insufficient -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Insufficient -> Insufficient -> Secondary -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Weak -> Insufficient -> Insufficient -> Weak | N/A | N/A | 0.05% | 1 | 0.05%
+Weak -> Insufficient -> Insufficient -> Weak -> Secondary | N/A | N/A | 0.05% | 1 | 0.05%
+Weak -> Insufficient -> Secondary | 0.07% | 0.04% | 0.26% | 3 | 0.12%
+Weak -> Insufficient -> Secondary -> Core | 0.03% | N/A | 0.16% | 2 | 0.09%
+Weak -> Insufficient -> Secondary -> Core -> Core | 0.01% | N/A | 0.10% | 2 | 0.06%
+Weak -> Insufficient -> Secondary -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Insufficient -> Secondary -> Core -> Weak | 0.00% | N/A | 0.05% | 2 | 0.03%
+Weak -> Insufficient -> Secondary -> Secondary | 0.03% | 0.04% | 0.10% | 3 | 0.06%
+Weak -> Insufficient -> Secondary -> Secondary -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Insufficient -> Secondary -> Secondary -> Secondary | 0.01% | 0.04% | 0.10% | 3 | 0.05%
+Weak -> Insufficient -> Secondary -> Secondary -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Insufficient -> Secondary -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Insufficient -> Secondary -> Weak -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Insufficient -> Weak | N/A | N/A | 0.10% | 1 | 0.10%
+Weak -> Insufficient -> Weak -> Secondary | N/A | N/A | 0.05% | 1 | 0.05%
+Weak -> Insufficient -> Weak -> Secondary -> Core | N/A | N/A | 0.05% | 1 | 0.05%
+Weak -> Insufficient -> Weak -> Weak | N/A | N/A | 0.05% | 1 | 0.05%
+Weak -> Insufficient -> Weak -> Weak -> Secondary | N/A | N/A | 0.05% | 1 | 0.05%
+Weak -> Secondary | 4.55% | 5.14% | 5.65% | 3 | 5.11%
+Weak -> Secondary -> Core | 1.75% | 2.27% | 2.44% | 3 | 2.15%
+Weak -> Secondary -> Core -> Core | 1.02% | 1.53% | 1.61% | 3 | 1.38%
+Weak -> Secondary -> Core -> Core -> Core | 0.55% | 0.97% | 0.88% | 3 | 0.80%
+Weak -> Secondary -> Core -> Core -> Secondary | 0.31% | 0.37% | 0.26% | 3 | 0.31%
+Weak -> Secondary -> Core -> Core -> Weak | 0.16% | 0.19% | 0.47% | 3 | 0.27%
+Weak -> Secondary -> Core -> Secondary | 0.47% | 0.52% | 0.36% | 3 | 0.45%
+Weak -> Secondary -> Core -> Secondary -> Core | 0.22% | 0.22% | 0.16% | 3 | 0.20%
+Weak -> Secondary -> Core -> Secondary -> Secondary | 0.23% | 0.30% | 0.21% | 3 | 0.25%
+Weak -> Secondary -> Core -> Secondary -> Weak | 0.02% | N/A | N/A | 1 | 0.02%
+Weak -> Secondary -> Core -> Weak | 0.26% | 0.22% | 0.47% | 3 | 0.32%
+Weak -> Secondary -> Core -> Weak -> Core | 0.15% | 0.11% | 0.31% | 3 | 0.19%
+Weak -> Secondary -> Core -> Weak -> Secondary | 0.07% | 0.11% | 0.05% | 3 | 0.08%
+Weak -> Secondary -> Core -> Weak -> Transition | 0.03% | N/A | 0.10% | 2 | 0.07%
+Weak -> Secondary -> Core -> Weak -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Secondary -> Secondary | 2.33% | 2.27% | 2.49% | 3 | 2.37%
+Weak -> Secondary -> Secondary -> Core | 0.42% | 0.26% | 0.62% | 3 | 0.43%
+Weak -> Secondary -> Secondary -> Core -> Core | 0.21% | 0.11% | 0.26% | 3 | 0.19%
+Weak -> Secondary -> Secondary -> Core -> Secondary | 0.15% | 0.11% | 0.21% | 3 | 0.16%
+Weak -> Secondary -> Secondary -> Core -> Weak | 0.07% | 0.04% | 0.16% | 3 | 0.09%
+Weak -> Secondary -> Secondary -> Secondary | 1.65% | 1.72% | 1.61% | 3 | 1.66%
+Weak -> Secondary -> Secondary -> Secondary -> Core | 0.45% | 0.56% | 0.47% | 3 | 0.49%
+Weak -> Secondary -> Secondary -> Secondary -> Insufficient | 0.00% | N/A | N/A | 1 | 0.00%
+Weak -> Secondary -> Secondary -> Secondary -> Secondary | 0.97% | 1.08% | 0.78% | 3 | 0.94%
+Weak -> Secondary -> Secondary -> Secondary -> Weak | 0.22% | 0.07% | 0.36% | 3 | 0.22%
+Weak -> Secondary -> Secondary -> Weak | 0.27% | 0.30% | 0.26% | 3 | 0.27%
+Weak -> Secondary -> Secondary -> Weak -> Core | 0.03% | 0.04% | 0.05% | 3 | 0.04%
+Weak -> Secondary -> Secondary -> Weak -> Insufficient | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Secondary -> Secondary -> Weak -> Secondary | 0.14% | 0.04% | 0.10% | 3 | 0.09%
+Weak -> Secondary -> Secondary -> Weak -> Transition | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Secondary -> Secondary -> Weak -> Weak | 0.09% | 0.22% | 0.10% | 3 | 0.14%
+Weak -> Secondary -> Weak | 0.47% | 0.60% | 0.73% | 3 | 0.60%
+Weak -> Secondary -> Weak -> Secondary | 0.38% | 0.48% | 0.52% | 3 | 0.46%
+Weak -> Secondary -> Weak -> Secondary -> Core | 0.19% | 0.11% | 0.31% | 3 | 0.21%
+Weak -> Secondary -> Weak -> Secondary -> Secondary | 0.13% | 0.30% | 0.10% | 3 | 0.18%
+Weak -> Secondary -> Weak -> Secondary -> Weak | 0.06% | 0.07% | 0.10% | 3 | 0.08%
+Weak -> Secondary -> Weak -> Transition | 0.03% | 0.11% | 0.21% | 3 | 0.12%
+Weak -> Secondary -> Weak -> Transition -> Insufficient | 0.00% | N/A | N/A | 1 | 0.00%
+Weak -> Secondary -> Weak -> Transition -> Weak | 0.02% | 0.11% | 0.21% | 3 | 0.11%
+Weak -> Secondary -> Weak -> Weak | 0.06% | N/A | N/A | 1 | 0.06%
+Weak -> Secondary -> Weak -> Weak -> Core | 0.02% | N/A | N/A | 1 | 0.02%
+Weak -> Secondary -> Weak -> Weak -> Insufficient | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Secondary -> Weak -> Weak -> Secondary | 0.02% | N/A | N/A | 1 | 0.02%
+Weak -> Secondary -> Weak -> Weak -> Weak | 0.02% | N/A | N/A | 1 | 0.02%
+Weak -> Transition | 0.67% | 1.19% | 1.61% | 3 | 1.16%
+Weak -> Transition -> Core | 0.29% | 0.45% | 0.47% | 3 | 0.40%
+Weak -> Transition -> Core -> Core | 0.19% | 0.26% | 0.31% | 3 | 0.25%
+Weak -> Transition -> Core -> Core -> Core | 0.11% | 0.19% | 0.16% | 3 | 0.15%
+Weak -> Transition -> Core -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Transition -> Core -> Core -> Weak | 0.08% | 0.07% | 0.16% | 3 | 0.10%
+Weak -> Transition -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Transition -> Core -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Transition -> Core -> Weak | 0.10% | 0.19% | 0.16% | 3 | 0.15%
+Weak -> Transition -> Core -> Weak -> Secondary | 0.02% | N/A | 0.05% | 2 | 0.03%
+Weak -> Transition -> Core -> Weak -> Transition | 0.00% | 0.07% | N/A | 2 | 0.04%
+Weak -> Transition -> Core -> Weak -> Weak | 0.08% | 0.11% | 0.10% | 3 | 0.10%
+Weak -> Transition -> Insufficient | 0.04% | 0.04% | 0.05% | 3 | 0.04%
+Weak -> Transition -> Insufficient -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Weak -> Transition -> Insufficient -> Secondary -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Weak -> Transition -> Insufficient -> Weak | 0.04% | 0.04% | 0.05% | 3 | 0.04%
+Weak -> Transition -> Insufficient -> Weak -> Core | 0.01% | N/A | 0.05% | 2 | 0.03%
+Weak -> Transition -> Insufficient -> Weak -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Transition -> Insufficient -> Weak -> Weak | 0.02% | 0.04% | N/A | 2 | 0.03%
+Weak -> Transition -> Secondary | 0.03% | 0.04% | 0.10% | 3 | 0.06%
+Weak -> Transition -> Secondary -> Secondary | 0.03% | 0.04% | 0.10% | 3 | 0.06%
+Weak -> Transition -> Secondary -> Secondary -> Core | 0.01% | 0.04% | 0.05% | 3 | 0.03%
+Weak -> Transition -> Secondary -> Secondary -> Secondary | 0.02% | N/A | 0.05% | 2 | 0.04%
+Weak -> Transition -> Weak | 0.31% | 0.67% | 0.99% | 3 | 0.66%
+Weak -> Transition -> Weak -> Core | 0.15% | 0.26% | 0.36% | 3 | 0.26%
+Weak -> Transition -> Weak -> Core -> Core | 0.09% | 0.07% | 0.16% | 3 | 0.11%
+Weak -> Transition -> Weak -> Core -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Transition -> Weak -> Core -> Weak | 0.05% | 0.19% | 0.21% | 3 | 0.15%
+Weak -> Transition -> Weak -> Secondary | 0.06% | 0.30% | 0.31% | 3 | 0.22%
+Weak -> Transition -> Weak -> Secondary -> Core | 0.02% | 0.11% | 0.05% | 3 | 0.06%
+Weak -> Transition -> Weak -> Secondary -> Secondary | 0.03% | 0.15% | 0.21% | 3 | 0.13%
+Weak -> Transition -> Weak -> Secondary -> Weak | 0.02% | 0.04% | 0.05% | 3 | 0.04%
+Weak -> Transition -> Weak -> Weak | 0.10% | 0.11% | 0.31% | 3 | 0.17%
+Weak -> Transition -> Weak -> Weak -> Insufficient | N/A | N/A | 0.16% | 1 | 0.16%
+Weak -> Transition -> Weak -> Weak -> Secondary | 0.05% | 0.11% | 0.05% | 3 | 0.07%
+Weak -> Transition -> Weak -> Weak -> Weak | 0.05% | N/A | 0.10% | 2 | 0.08%
+Weak -> Weak | 3.21% | 2.83% | 3.32% | 3 | 3.12%
+Weak -> Weak -> Core | 0.69% | 0.71% | 0.52% | 3 | 0.64%
+Weak -> Weak -> Core -> Core | 0.37% | 0.41% | 0.26% | 3 | 0.35%
+Weak -> Weak -> Core -> Core -> Core | 0.21% | 0.11% | 0.21% | 3 | 0.18%
+Weak -> Weak -> Core -> Core -> Secondary | 0.12% | 0.19% | 0.05% | 3 | 0.12%
+Weak -> Weak -> Core -> Core -> Weak | 0.04% | 0.11% | N/A | 2 | 0.08%
+Weak -> Weak -> Core -> Secondary | 0.21% | 0.19% | 0.05% | 3 | 0.15%
+Weak -> Weak -> Core -> Secondary -> Core | 0.10% | 0.15% | 0.05% | 3 | 0.10%
+Weak -> Weak -> Core -> Secondary -> Secondary | 0.10% | 0.04% | N/A | 2 | 0.07%
+Weak -> Weak -> Core -> Secondary -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Weak -> Core -> Weak | 0.11% | 0.11% | 0.21% | 3 | 0.14%
+Weak -> Weak -> Core -> Weak -> Core | 0.07% | 0.11% | 0.21% | 3 | 0.13%
+Weak -> Weak -> Core -> Weak -> Secondary | 0.03% | N/A | N/A | 1 | 0.03%
+Weak -> Weak -> Core -> Weak -> Transition | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Weak -> Core -> Weak -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Weak -> Insufficient | 0.09% | 0.07% | 0.47% | 3 | 0.21%
+Weak -> Weak -> Insufficient -> Core | 0.01% | N/A | 0.05% | 2 | 0.03%
+Weak -> Weak -> Insufficient -> Core -> Core | 0.01% | N/A | 0.05% | 2 | 0.03%
+Weak -> Weak -> Insufficient -> Insufficient | 0.03% | 0.04% | 0.10% | 3 | 0.06%
+Weak -> Weak -> Insufficient -> Insufficient -> Core | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Weak -> Insufficient -> Insufficient -> Insufficient | 0.01% | 0.04% | N/A | 2 | 0.02%
+Weak -> Weak -> Insufficient -> Insufficient -> Secondary | 0.02% | N/A | 0.05% | 2 | 0.03%
+Weak -> Weak -> Insufficient -> Insufficient -> Weak | N/A | N/A | 0.05% | 1 | 0.05%
+Weak -> Weak -> Insufficient -> Secondary | 0.05% | 0.04% | 0.26% | 3 | 0.12%
+Weak -> Weak -> Insufficient -> Secondary -> Core | 0.02% | N/A | 0.16% | 2 | 0.09%
+Weak -> Weak -> Insufficient -> Secondary -> Secondary | 0.02% | 0.04% | 0.10% | 3 | 0.05%
+Weak -> Weak -> Insufficient -> Secondary -> Weak | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Weak -> Insufficient -> Weak | N/A | N/A | 0.05% | 1 | 0.05%
+Weak -> Weak -> Insufficient -> Weak -> Secondary | N/A | N/A | 0.05% | 1 | 0.05%
+Weak -> Weak -> Secondary | 1.10% | 1.23% | 0.99% | 3 | 1.10%
+Weak -> Weak -> Secondary -> Core | 0.31% | 0.45% | 0.31% | 3 | 0.36%
+Weak -> Weak -> Secondary -> Core -> Core | 0.18% | 0.26% | 0.26% | 3 | 0.23%
+Weak -> Weak -> Secondary -> Core -> Secondary | 0.09% | 0.11% | 0.05% | 3 | 0.09%
+Weak -> Weak -> Secondary -> Core -> Weak | 0.04% | 0.07% | N/A | 2 | 0.06%
+Weak -> Weak -> Secondary -> Secondary | 0.70% | 0.67% | 0.62% | 3 | 0.66%
+Weak -> Weak -> Secondary -> Secondary -> Core | 0.15% | 0.07% | 0.21% | 3 | 0.14%
+Weak -> Weak -> Secondary -> Secondary -> Secondary | 0.47% | 0.49% | 0.31% | 3 | 0.42%
+Weak -> Weak -> Secondary -> Secondary -> Weak | 0.09% | 0.11% | 0.10% | 3 | 0.10%
+Weak -> Weak -> Secondary -> Weak | 0.09% | 0.11% | 0.05% | 3 | 0.08%
+Weak -> Weak -> Secondary -> Weak -> Secondary | 0.06% | 0.11% | 0.05% | 3 | 0.07%
+Weak -> Weak -> Secondary -> Weak -> Transition | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Weak -> Secondary -> Weak -> Weak | 0.02% | N/A | N/A | 1 | 0.02%
+Weak -> Weak -> Transition | 0.02% | N/A | 0.05% | 2 | 0.04%
+Weak -> Weak -> Transition -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Weak -> Transition -> Secondary -> Secondary | 0.01% | N/A | N/A | 1 | 0.01%
+Weak -> Weak -> Transition -> Weak | 0.01% | N/A | 0.05% | 2 | 0.03%
+Weak -> Weak -> Transition -> Weak -> Core | 0.01% | N/A | 0.05% | 2 | 0.03%
+Weak -> Weak -> Transition -> Weak -> Weak | 0.00% | N/A | N/A | 1 | 0.00%
+Weak -> Weak -> Weak | 1.31% | 0.82% | 1.30% | 3 | 1.14%
+Weak -> Weak -> Weak -> Core | 0.28% | 0.30% | 0.10% | 3 | 0.23%
+Weak -> Weak -> Weak -> Core -> Core | 0.15% | 0.15% | 0.05% | 3 | 0.12%
+Weak -> Weak -> Weak -> Core -> Secondary | 0.09% | 0.07% | N/A | 2 | 0.08%
+Weak -> Weak -> Weak -> Core -> Weak | 0.04% | 0.07% | 0.05% | 3 | 0.05%
+Weak -> Weak -> Weak -> Insufficient | 0.06% | 0.04% | 0.26% | 3 | 0.12%
+Weak -> Weak -> Weak -> Insufficient -> Core | 0.00% | N/A | 0.05% | 2 | 0.03%
+Weak -> Weak -> Weak -> Insufficient -> Insufficient | 0.03% | 0.04% | 0.10% | 3 | 0.06%
+Weak -> Weak -> Weak -> Insufficient -> Secondary | 0.03% | N/A | 0.05% | 2 | 0.04%
+Weak -> Weak -> Weak -> Insufficient -> Weak | N/A | N/A | 0.05% | 1 | 0.05%
+Weak -> Weak -> Weak -> Secondary | 0.42% | 0.41% | 0.36% | 3 | 0.40%
+Weak -> Weak -> Weak -> Secondary -> Core | 0.11% | 0.22% | 0.16% | 3 | 0.16%
+Weak -> Weak -> Weak -> Secondary -> Secondary | 0.27% | 0.15% | 0.16% | 3 | 0.19%
+Weak -> Weak -> Weak -> Secondary -> Weak | 0.04% | 0.04% | 0.05% | 3 | 0.04%
+Weak -> Weak -> Weak -> Transition | 0.01% | N/A | 0.05% | 2 | 0.03%
+Weak -> Weak -> Weak -> Transition -> Secondary | 0.00% | N/A | N/A | 1 | 0.00%
+Weak -> Weak -> Weak -> Transition -> Weak | 0.01% | N/A | 0.05% | 2 | 0.03%
+Weak -> Weak -> Weak -> Weak | 0.54% | 0.07% | 0.52% | 3 | 0.38%
+Weak -> Weak -> Weak -> Weak -> Core | 0.11% | 0.04% | 0.10% | 3 | 0.08%
+Weak -> Weak -> Weak -> Weak -> Insufficient | 0.01% | N/A | 0.05% | 2 | 0.03%
+Weak -> Weak -> Weak -> Weak -> Secondary | 0.15% | 0.04% | 0.10% | 3 | 0.10%
+Weak -> Weak -> Weak -> Weak -> Transition | 0.00% | N/A | 0.05% | 2 | 0.03%
+Weak -> Weak -> Weak -> Weak -> Weak | 0.27% | N/A | 0.21% | 2 | 0.24%
+
+Aggregate Outcome Table
+Category | Count_6E | MeanDR_6E | Count_CL | MeanDR_CL | Count_NQ | MeanDR_NQ | ValidInstrumentCount
+Core Node | 14088 | -0.0000 | 1237 | 0.0146 | 967 | 0.1833 | 3
+Secondary Node | 12489 | -0.0000 | 992 | -0.0242 | 599 | -5.9366 | 3
+Transition Node | 235 | -0.0001 | 32 | -0.0816 | 31 | -14.4435 | 3
+Weak Node | 4198 | -0.0000 | 358 | -0.0209 | 305 | -5.7016 | 3
+Insufficient Node | 92 | -0.0000 | 8 | 0.4437 | 14 | -37.3214 | 3
+
+Aggregate Recommendation
+CoreDominanceClassification: Moderate Core Dominance
+Reason: MeanPercentTimeInCore=48.71%; MeanExcursionProbability=19.58%; MeanReturnProbability=99.99%; ValidInstrumentCount=3.
+ExcursionBehavior: MeanProbability=19.58%; MeanDuration=3.37 bars.
+ReturnBehavior: MeanProbability=99.99%; MeanDuration=3.49 bars.
+MostCommonFlowPaths: Core -> Core, Core -> Core -> Core, Secondary -> Secondary, Core -> Core -> Core -> Core, Core -> Core -> Core -> Core -> Core, Secondary -> Secondary -> Secondary, Secondary -> Core, Core -> Secondary, Secondary -> Secondary -> Secondary -> Secondary, Core -> Weak
+ReplicationAssessment: 3 instruments evaluated.
+
+Aggregate Rankings
+
+1. Most common category flows
+Core Node -> Core Node | MeanProbability=67.08% | ReplicationCount=3
+Secondary Node -> Secondary Node | MeanProbability=58.37% | ReplicationCount=3
+Transition Node -> Weak Node | MeanProbability=54.51% | ReplicationCount=3
+Insufficient Node -> Secondary Node | MeanProbability=38.43% | ReplicationCount=3
+Weak Node -> Secondary Node | MeanProbability=36.89% | ReplicationCount=3
+Transition Node -> Core Node | MeanProbability=36.66% | ReplicationCount=3
+Secondary Node -> Core Node | MeanProbability=31.70% | ReplicationCount=3
+Weak Node -> Core Node | MeanProbability=30.43% | ReplicationCount=3
+Weak Node -> Weak Node | MeanProbability=22.65% | ReplicationCount=3
+Insufficient Node -> Insufficient Node | MeanProbability=22.03% | ReplicationCount=3
+Insufficient Node -> Core Node | MeanProbability=21.04% | ReplicationCount=3
+Core Node -> Secondary Node | MeanProbability=19.58% | ReplicationCount=3
+Insufficient Node -> Weak Node | MeanProbability=18.50% | ReplicationCount=3
+Core Node -> Weak Node | MeanProbability=13.33% | ReplicationCount=3
+Secondary Node -> Weak Node | MeanProbability=9.86% | ReplicationCount=3
+Weak Node -> Transition Node | MeanProbability=8.16% | ReplicationCount=3
+Transition Node -> Secondary Node | MeanProbability=4.60% | ReplicationCount=3
+Transition Node -> Insufficient Node | MeanProbability=4.23% | ReplicationCount=3
+Weak Node -> Insufficient Node | MeanProbability=1.88% | ReplicationCount=3
+Secondary Node -> Insufficient Node | MeanProbability=0.07% | ReplicationCount=2
+
+2. Strongest Core -> Secondary flows
+Core Node -> Secondary Node | MeanProbability=19.58%
+
+3. Strongest Secondary -> Core flows
+Secondary Node -> Core Node | MeanProbability=31.70%
+
+4. Longest excursions
+NQ | MeanExcursionDuration=3.49
+6E | MeanExcursionDuration=3.38
+CL | MeanExcursionDuration=3.26
+
+5. Fastest returns
+NQ | MeanReturnDuration=3.39
+6E | MeanReturnDuration=3.50
+CL | MeanReturnDuration=3.57
+
+6. Most persistent categories
+Core Node | MeanStayProbability=67.08%
+Secondary Node | MeanStayProbability=58.37%
+Weak Node | MeanStayProbability=22.65%
+Insufficient Node | MeanStayProbability=22.03%
+Transition Node | MeanStayProbability=0.00%
+
+7. Highest entropy categories
+Weak Node | MeanTransitionEntropy=1.3376
+Insufficient Node | MeanTransitionEntropy=1.2770
+Transition Node | MeanTransitionEntropy=0.9608
+Secondary Node | MeanTransitionEntropy=0.9110
+Core Node | MeanTransitionEntropy=0.8511
+
+8. Lowest entropy categories
+Core Node | MeanTransitionEntropy=0.8511
+Secondary Node | MeanTransitionEntropy=0.9110
+Transition Node | MeanTransitionEntropy=0.9608
+Insufficient Node | MeanTransitionEntropy=1.2770
+Weak Node | MeanTransitionEntropy=1.3376
+
+9. Strongest replicated pathways
+Core -> Core | ReplicationCount=3 | MeanProbability=32.69%
+Core -> Core -> Core | ReplicationCount=3 | MeanProbability=23.50%
+Secondary -> Secondary | ReplicationCount=3 | MeanProbability=20.96%
+Core -> Core -> Core -> Core | ReplicationCount=3 | MeanProbability=18.18%
+Core -> Core -> Core -> Core -> Core | ReplicationCount=3 | MeanProbability=14.19%
+Secondary -> Secondary -> Secondary | ReplicationCount=3 | MeanProbability=12.89%
+Secondary -> Core | ReplicationCount=3 | MeanProbability=11.34%
+Core -> Secondary | ReplicationCount=3 | MeanProbability=9.50%
+Secondary -> Secondary -> Secondary -> Secondary | ReplicationCount=3 | MeanProbability=8.05%
+Core -> Weak | ReplicationCount=3 | MeanProbability=6.51%
+Secondary -> Core -> Core | ReplicationCount=3 | MeanProbability=6.44%
+Core -> Secondary -> Secondary | ReplicationCount=3 | MeanProbability=5.54%
+Core -> Core -> Secondary | ReplicationCount=3 | MeanProbability=5.49%
+Secondary -> Secondary -> Core | ReplicationCount=3 | MeanProbability=5.41%
+Secondary -> Secondary -> Secondary -> Secondary -> Secondary | ReplicationCount=3 | MeanProbability=5.12%
+Weak -> Secondary | ReplicationCount=3 | MeanProbability=5.11%
+Weak -> Core | ReplicationCount=3 | MeanProbability=4.21%
+Core -> Secondary -> Core | ReplicationCount=3 | MeanProbability=3.70%
+Core -> Core -> Weak | ReplicationCount=3 | MeanProbability=3.69%
+Secondary -> Core -> Core -> Core | ReplicationCount=3 | MeanProbability=3.66%
+
+10. Recommended APVA flow model
+State+Age+NodeCategories+FlowDynamics: MeanPercentTimeInCore=48.71%; MeanExcursionProbability=19.58%; MeanReturnProbability=99.99%; ValidInstrumentCount=3.
+
+Low-DoF Audit
+Variables used:
+StructuralState
+AgeBucket
+
+Derived metrics:
+ImportanceScore
+ReliabilityScore
+AttentionCategory
+
+No Context
+No Arbitration
+No Persistence
+No Phase
+No Optimization
+No Fitting
+No Machine Learning
+No Forward Returns used in flow construction
+
+Research Notes
+- Is APVA fundamentally Core-dominated? See the fixed classification.
+- Are excursions rare or common, and do they return rapidly? See excursion and return tables.
+- What are the dominant pathways? See category flow and pathway rankings.
+- Does behavior replicate? See cross-instrument category-flow probabilities.
+- Can APVA be reduced to State + Age + Node Categories + Flow Dynamics? This report tests that mechanically.

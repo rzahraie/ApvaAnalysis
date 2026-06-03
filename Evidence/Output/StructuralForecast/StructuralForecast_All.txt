@@ -1,0 +1,249 @@
+APVA Structural Forecast Study v0.1 - Aggregate
+============================================================================================================
+Instruments: 6E, CL, NQ
+
+Aggregate Accuracy Table
+Horizon | Top1_6E | Top2_6E | Top3_6E | Top1_CL | Top2_CL | Top3_CL | Top1_NQ | Top2_NQ | Top3_NQ | ValidInstrumentCount | MeanTop1 | MeanTop2 | MeanTop3
+t+1 | 56.18% | 76.08% | 86.42% | 55.09% | 76.41% | 88.15% | 58.48% | 77.45% | 88.54% | 3 | 56.58% | 76.64% | 87.70%
+t+2 | 36.19% | 52.73% | 63.87% | 35.76% | 53.62% | 64.95% | 39.89% | 56.95% | 67.27% | 3 | 37.28% | 54.43% | 65.37%
+t+3 | 25.35% | 40.74% | 53.27% | 23.39% | 41.10% | 54.42% | 27.87% | 44.27% | 55.58% | 3 | 25.54% | 42.04% | 54.42%
+t+5 | 19.52% | 31.32% | 40.69% | 19.04% | 31.50% | 41.36% | 20.88% | 32.47% | 42.55% | 3 | 19.81% | 31.77% | 41.53%
+
+Cross-Instrument Replication
+Horizon | Accuracy_6E | Top2_6E | Top3_6E | Brier_6E | Accuracy_CL | Top2_CL | Top3_CL | Brier_CL | Accuracy_NQ | Top2_NQ | Top3_NQ | Brier_NQ | ValidInstrumentCount | MeanAccuracy | MeanBrier
+t+1 | 56.18% | 76.08% | 86.42% | 0.5932 | 55.09% | 76.41% | 88.15% | 0.5987 | 58.48% | 77.45% | 88.54% | 0.5660 | 3 | 56.58% | 0.5860
+t+2 | 36.19% | 52.73% | 63.87% | 0.7840 | 35.76% | 53.62% | 64.95% | 0.7873 | 39.89% | 56.95% | 67.27% | 0.7561 | 3 | 37.28% | 0.7758
+t+3 | 25.35% | 40.74% | 53.27% | 0.8555 | 23.39% | 41.10% | 54.42% | 0.8580 | 27.87% | 44.27% | 55.58% | 0.8375 | 3 | 25.54% | 0.8503
+t+5 | 19.52% | 31.32% | 40.69% | 0.9105 | 19.04% | 31.50% | 41.36% | 0.9114 | 20.88% | 32.47% | 42.55% | 0.9042 | 3 | 19.81% | 0.9087
+
+Aggregate Calibration Table
+ProbabilityBin | ForecastProbability_6E | ObservedFrequency_6E | CalibrationError_6E | ForecastProbability_CL | ObservedFrequency_CL | CalibrationError_CL | ForecastProbability_NQ | ObservedFrequency_NQ | CalibrationError_NQ | ForecastProbability_All | ObservedFrequency_All | CalibrationError_All
+0.0-0.1 | 0.00% | 0.00% | 0.00% | 0.00% | 0.00% | 0.00% | 0.00% | 0.00% | 0.00% | 0.00% | 0.00% | 0.00%
+0.1-0.2 | 17.60% | 17.28% | 0.32% | 17.62% | 16.56% | 1.06% | 16.95% | 16.72% | 0.23% | 17.57% | 17.20% | 0.37%
+0.2-0.3 | 23.92% | 24.07% | 0.15% | 24.13% | 24.83% | 0.70% | 24.86% | 24.81% | 0.05% | 23.99% | 24.16% | 0.17%
+0.3-0.4 | 33.71% | 34.43% | 0.73% | 34.19% | 34.08% | 0.11% | 36.31% | 36.66% | 0.35% | 33.87% | 34.53% | 0.66%
+0.4-0.5 | 43.49% | 43.35% | 0.14% | 42.80% | 42.93% | 0.13% | 44.53% | 43.49% | 1.04% | 43.48% | 43.32% | 0.16%
+0.5-0.6 | 55.27% | 55.81% | 0.54% | 54.61% | 55.29% | 0.68% | 57.37% | 58.99% | 1.62% | 55.30% | 55.88% | 0.58%
+0.6-0.7 | 66.18% | 66.20% | 0.02% | 64.58% | 64.58% | 0.00% | 64.03% | 64.03% | 0.00% | 65.86% | 65.87% | 0.01%
+0.7-0.8 | 74.73% | 74.73% | 0.00% | 74.75% | 74.75% | 0.00% | 73.31% | 73.31% | 0.00% | 74.66% | 74.66% | 0.00%
+0.8-0.9 | 81.22% | 81.22% | 0.00% | 89.62% | 89.62% | 0.00% | 85.71% | 85.71% | 0.00% | 82.34% | 82.34% | 0.00%
+0.9-1.0 | 90.90% | 90.90% | 0.00% | 100.00% | 100.00% | 0.00% | 96.43% | 96.43% | 0.00% | 91.26% | 91.26% | 0.00%
+
+Aggregate Brier Table
+Horizon | Brier_6E | Brier_CL | Brier_NQ | MeanBrier
+t+1 | 0.5932 | 0.5987 | 0.5660 | 0.5860
+t+2 | 0.7840 | 0.7873 | 0.7561 | 0.7758
+t+3 | 0.8555 | 0.8580 | 0.8375 | 0.8503
+t+5 | 0.9105 | 0.9114 | 0.9042 | 0.9087
+
+Aggregate Entropy Table
+EntropyBin | Accuracy_6E | Accuracy_CL | Accuracy_NQ | MeanAccuracy | CorrelationEntropyAccuracy
+0.0-0.5 | 90.86% | 90.09% | 92.07% | 90.93% | -0.3642
+0.5-1.0 | 72.15% | 68.50% | 71.27% | 71.86% | -0.3642
+1.0-1.5 | 57.43% | 56.04% | 58.93% | 57.40% | -0.3642
+1.5-2.0 | 43.11% | 42.09% | 42.87% | 43.03% | -0.3642
+2.0-2.5 | 26.36% | 25.74% | 29.24% | 26.44% | -0.3642
+2.5-3.0 | 18.49% | 17.47% | 19.19% | 18.46% | -0.3642
+3.0+ | 0.00% | 0.00% | 0.00% | 0.00% | -0.3642
+
+Aggregate State Forecast Table
+StateAgeNode | Count | Top1Accuracy | Top2Accuracy | Top3Accuracy | AverageConfidence | ReplicationCount
+MixedStructure_Age5 | 4 | 75.00% | 100.00% | 100.00% | 36.75% | 1
+NeutralProcessing_Age4 | 6003 | 62.34% | 70.63% | 76.43% | 50.81% | 3
+NeutralProcessing_Age3 | 8021 | 57.00% | 69.22% | 76.60% | 45.24% | 3
+NeutralProcessing_Age21+ | 328 | 54.88% | 64.94% | 75.91% | 43.37% | 1
+NeutralProcessing_Age5 | 5466 | 52.60% | 62.29% | 70.93% | 36.10% | 3
+NeutralProcessing_Age11-20 | 3832 | 47.05% | 58.32% | 66.49% | 37.91% | 3
+RecoveryResolution_Age2 | 1560 | 46.41% | 64.42% | 70.96% | 25.47% | 3
+RecoveryResolution_Age5 | 24 | 45.83% | 66.67% | 79.17% | 25.68% | 1
+RecoveryResolution_Age4 | 68 | 41.18% | 67.65% | 80.88% | 11.28% | 2
+ExhaustionPersistence_Age2 | 1416 | 40.40% | 57.13% | 62.29% | 22.34% | 3
+NeutralProcessing_Age2 | 14531 | 39.38% | 58.94% | 70.55% | 22.90% | 3
+RecoveryResolution_Age1 | 4876 | 36.89% | 55.46% | 72.48% | 11.13% | 3
+ReassertionProcessing_Age3 | 68 | 36.76% | 48.53% | 55.88% | 26.55% | 3
+RecoveryResolution_Age3 | 1148 | 36.67% | 52.26% | 62.63% | 20.15% | 3
+NeutralProcessing_Age6-10 | 13129 | 35.72% | 45.33% | 56.81% | 26.86% | 3
+CompressionProcessing_Age11-20 | 20 | 35.00% | 70.00% | 80.00% | 2.06% | 1
+DestructiveRotation_Age3 | 68 | 33.82% | 48.53% | 57.35% | 22.50% | 3
+CompressionProcessing_Age3 | 3644 | 32.74% | 49.20% | 58.59% | 16.40% | 3
+NeutralProcessing_Age1 | 25654 | 32.17% | 49.33% | 61.59% | 16.28% | 3
+DecayToNeutral_Age1 | 6697 | 31.76% | 46.51% | 59.37% | 12.64% | 3
+ExhaustionPersistence_Age3 | 1076 | 31.60% | 46.65% | 55.86% | 15.34% | 3
+MixedStructure_Age4 | 48 | 31.25% | 47.92% | 66.67% | 13.20% | 3
+CompressionProcessing_Age1 | 12773 | 30.51% | 48.95% | 59.97% | 10.83% | 3
+RecoveryResolution_Age6-10 | 20 | 30.00% | 55.00% | 70.00% | 10.25% | 1
+CompressionProcessing_Age2 | 7208 | 29.58% | 49.61% | 58.77% | 9.75% | 3
+CompressionProcessing_Age4 | 2272 | 28.92% | 45.99% | 55.28% | 11.53% | 3
+DestructiveRotation_Age2 | 492 | 28.25% | 43.90% | 54.27% | 13.78% | 3
+MixedStructure_Age3 | 204 | 27.94% | 44.61% | 58.82% | 12.59% | 3
+ConstructiveEmergence_Age1 | 436 | 27.29% | 48.17% | 60.32% | 9.11% | 3
+ExhaustionPersistence_Age6-10 | 152 | 26.97% | 46.05% | 54.61% | 8.37% | 3
+CompressionProcessing_Age6-10 | 1048 | 26.62% | 40.94% | 51.34% | 10.78% | 3
+CompressionProcessing_Age5 | 1208 | 25.99% | 42.22% | 52.81% | 8.22% | 3
+ReassertionProcessing_Age2 | 1200 | 25.50% | 45.25% | 54.75% | 7.56% | 3
+DestructiveRotation_Age4 | 4 | 25.00% | 25.00% | 50.00% | 36.75% | 1
+ExhaustionPersistence_Age4 | 680 | 24.26% | 38.38% | 50.00% | 11.72% | 3
+ExhaustionPersistence_Age5 | 288 | 23.61% | 39.93% | 52.43% | 8.87% | 3
+ReassertionProcessing_Age1 | 8320 | 23.44% | 45.34% | 57.56% | 5.81% | 3
+MixedStructure_Age1 | 14902 | 22.49% | 38.82% | 49.99% | 7.80% | 3
+MixedStructure_Age2 | 1640 | 20.98% | 37.80% | 52.50% | 5.13% | 3
+DestructiveRotation_Age1 | 3879 | 20.96% | 37.79% | 49.70% | 5.97% | 3
+ExhaustionPersistence_Age1 | 5056 | 20.53% | 36.41% | 46.60% | 6.41% | 3
+
+Aggregate Young/Middle/Late Table
+Zone | Top1Accuracy | Top2Accuracy | Top3Accuracy | Entropy | Brier
+Young | 30.61% | 51.41% | 65.34% | 2.0315 | 0.8138
+Middle | 39.33% | 57.81% | 67.19% | 1.8915 | 0.7672
+Late | 47.66% | 63.01% | 73.30% | 1.6861 | 0.6880
+
+Aggregate Outcome Table
+ForecastBucket | Count_6E | Skew_6E | MeanDR_6E | Count_CL | Skew_CL | MeanDR_CL | Count_NQ | Skew_NQ | MeanDR_NQ | ValidInstrumentCount | MeanSkew | MeanDR
+t+1 Correct | 17324 | -3.75% | -0.0000 | 1442 | -1.11% | -0.0611 | 1119 | -2.32% | -3.9587 | 3 | -2.40% | -1.3399
+t+1 Incorrect | 13778 | -0.58% | -0.0000 | 1185 | -1.18% | 0.0638 | 797 | -0.38% | -2.0806 | 3 | -0.71% | -0.6723
+t+2 Correct | 11086 | -5.58% | -0.0000 | 936 | -1.60% | -0.0285 | 762 | 2.23% | -2.5915 | 3 | -1.65% | -0.8733
+t+2 Incorrect | 20016 | -0.55% | -0.0000 | 1691 | -0.89% | 0.0084 | 1154 | -3.99% | -3.5643 | 3 | -1.81% | -1.1853
+t+3 Correct | 7648 | -5.71% | -0.0000 | 612 | -2.29% | -0.0596 | 533 | 0.38% | -5.3687 | 3 | -2.54% | -1.8094
+t+3 Incorrect | 23454 | -1.25% | -0.0000 | 2015 | -0.79% | 0.0119 | 1383 | -2.24% | -2.3330 | 3 | -1.43% | -0.7737
+t+5 Correct | 6080 | -4.61% | -0.0000 | 501 | -1.00% | -0.0126 | 401 | -6.98% | -4.8348 | 3 | -4.20% | -1.6158
+t+5 Incorrect | 25022 | -1.80% | -0.0000 | 2126 | -1.18% | -0.0029 | 1515 | -0.07% | -2.7388 | 3 | -1.01% | -0.9139
+
+Aggregate Structural Forecast Recommendation
+Classification: Weak Structural Forecast
+Reason: MeanTop1Accuracy=34.80%; MeanTop3Accuracy=62.26%; ValidInstrumentCount=3.
+Calibration: MeanAbsoluteCalibrationError=0.22%
+Brier: MeanBrier=0.7802
+CrossInstrumentReplication: 3 instruments
+
+Aggregate Rankings
+
+1. Most predictable nodes
+MixedStructure_Age5 | Top1Accuracy=75.00% | ReplicationCount=1 | Count=4
+NeutralProcessing_Age4 | Top1Accuracy=62.34% | ReplicationCount=3 | Count=6003
+NeutralProcessing_Age3 | Top1Accuracy=57.00% | ReplicationCount=3 | Count=8021
+NeutralProcessing_Age21+ | Top1Accuracy=54.88% | ReplicationCount=1 | Count=328
+NeutralProcessing_Age5 | Top1Accuracy=52.60% | ReplicationCount=3 | Count=5466
+NeutralProcessing_Age11-20 | Top1Accuracy=47.05% | ReplicationCount=3 | Count=3832
+RecoveryResolution_Age2 | Top1Accuracy=46.41% | ReplicationCount=3 | Count=1560
+RecoveryResolution_Age5 | Top1Accuracy=45.83% | ReplicationCount=1 | Count=24
+RecoveryResolution_Age4 | Top1Accuracy=41.18% | ReplicationCount=2 | Count=68
+ExhaustionPersistence_Age2 | Top1Accuracy=40.40% | ReplicationCount=3 | Count=1416
+NeutralProcessing_Age2 | Top1Accuracy=39.38% | ReplicationCount=3 | Count=14531
+RecoveryResolution_Age1 | Top1Accuracy=36.89% | ReplicationCount=3 | Count=4876
+ReassertionProcessing_Age3 | Top1Accuracy=36.76% | ReplicationCount=3 | Count=68
+RecoveryResolution_Age3 | Top1Accuracy=36.67% | ReplicationCount=3 | Count=1148
+NeutralProcessing_Age6-10 | Top1Accuracy=35.72% | ReplicationCount=3 | Count=13129
+CompressionProcessing_Age11-20 | Top1Accuracy=35.00% | ReplicationCount=1 | Count=20
+DestructiveRotation_Age3 | Top1Accuracy=33.82% | ReplicationCount=3 | Count=68
+CompressionProcessing_Age3 | Top1Accuracy=32.74% | ReplicationCount=3 | Count=3644
+NeutralProcessing_Age1 | Top1Accuracy=32.17% | ReplicationCount=3 | Count=25654
+DecayToNeutral_Age1 | Top1Accuracy=31.76% | ReplicationCount=3 | Count=6697
+
+2. Least predictable nodes
+ExhaustionPersistence_Age1 | Top1Accuracy=20.53% | ReplicationCount=3 | Count=5056
+DestructiveRotation_Age1 | Top1Accuracy=20.96% | ReplicationCount=3 | Count=3879
+MixedStructure_Age2 | Top1Accuracy=20.98% | ReplicationCount=3 | Count=1640
+MixedStructure_Age1 | Top1Accuracy=22.49% | ReplicationCount=3 | Count=14902
+ReassertionProcessing_Age1 | Top1Accuracy=23.44% | ReplicationCount=3 | Count=8320
+ExhaustionPersistence_Age5 | Top1Accuracy=23.61% | ReplicationCount=3 | Count=288
+ExhaustionPersistence_Age4 | Top1Accuracy=24.26% | ReplicationCount=3 | Count=680
+DestructiveRotation_Age4 | Top1Accuracy=25.00% | ReplicationCount=1 | Count=4
+ReassertionProcessing_Age2 | Top1Accuracy=25.50% | ReplicationCount=3 | Count=1200
+CompressionProcessing_Age5 | Top1Accuracy=25.99% | ReplicationCount=3 | Count=1208
+CompressionProcessing_Age6-10 | Top1Accuracy=26.62% | ReplicationCount=3 | Count=1048
+ExhaustionPersistence_Age6-10 | Top1Accuracy=26.97% | ReplicationCount=3 | Count=152
+ConstructiveEmergence_Age1 | Top1Accuracy=27.29% | ReplicationCount=3 | Count=436
+MixedStructure_Age3 | Top1Accuracy=27.94% | ReplicationCount=3 | Count=204
+DestructiveRotation_Age2 | Top1Accuracy=28.25% | ReplicationCount=3 | Count=492
+CompressionProcessing_Age4 | Top1Accuracy=28.92% | ReplicationCount=3 | Count=2272
+CompressionProcessing_Age2 | Top1Accuracy=29.58% | ReplicationCount=3 | Count=7208
+RecoveryResolution_Age6-10 | Top1Accuracy=30.00% | ReplicationCount=1 | Count=20
+CompressionProcessing_Age1 | Top1Accuracy=30.51% | ReplicationCount=3 | Count=12773
+MixedStructure_Age4 | Top1Accuracy=31.25% | ReplicationCount=3 | Count=48
+
+3. Highest confidence forecasts
+NeutralProcessing_Age4 | AverageConfidence=50.81% | ReplicationCount=3
+NeutralProcessing_Age3 | AverageConfidence=45.24% | ReplicationCount=3
+NeutralProcessing_Age21+ | AverageConfidence=43.37% | ReplicationCount=1
+NeutralProcessing_Age11-20 | AverageConfidence=37.91% | ReplicationCount=3
+DestructiveRotation_Age4 | AverageConfidence=36.75% | ReplicationCount=1
+MixedStructure_Age5 | AverageConfidence=36.75% | ReplicationCount=1
+NeutralProcessing_Age5 | AverageConfidence=36.10% | ReplicationCount=3
+NeutralProcessing_Age6-10 | AverageConfidence=26.86% | ReplicationCount=3
+ReassertionProcessing_Age3 | AverageConfidence=26.55% | ReplicationCount=3
+RecoveryResolution_Age5 | AverageConfidence=25.68% | ReplicationCount=1
+RecoveryResolution_Age2 | AverageConfidence=25.47% | ReplicationCount=3
+NeutralProcessing_Age2 | AverageConfidence=22.90% | ReplicationCount=3
+DestructiveRotation_Age3 | AverageConfidence=22.50% | ReplicationCount=3
+ExhaustionPersistence_Age2 | AverageConfidence=22.34% | ReplicationCount=3
+RecoveryResolution_Age3 | AverageConfidence=20.15% | ReplicationCount=3
+CompressionProcessing_Age3 | AverageConfidence=16.40% | ReplicationCount=3
+NeutralProcessing_Age1 | AverageConfidence=16.28% | ReplicationCount=3
+ExhaustionPersistence_Age3 | AverageConfidence=15.34% | ReplicationCount=3
+DestructiveRotation_Age2 | AverageConfidence=13.78% | ReplicationCount=3
+MixedStructure_Age4 | AverageConfidence=13.20% | ReplicationCount=3
+
+4. Best calibrated forecasts
+0.7-0.8 | CalibrationError=0.00% | ForecastCount=5348
+0.8-0.9 | CalibrationError=0.00% | ForecastCount=1472
+0.9-1.0 | CalibrationError=0.00% | ForecastCount=1418
+0.6-0.7 | CalibrationError=0.01% | ForecastCount=7328
+0.4-0.5 | CalibrationError=0.16% | ForecastCount=13361
+0.2-0.3 | CalibrationError=0.17% | ForecastCount=37637
+0.1-0.2 | CalibrationError=0.37% | ForecastCount=48063
+0.5-0.6 | CalibrationError=0.58% | ForecastCount=22702
+0.3-0.4 | CalibrationError=0.66% | ForecastCount=22134
+
+5. Best horizons
+t+1 | MeanTop1Accuracy=56.58%
+t+2 | MeanTop1Accuracy=37.28%
+t+3 | MeanTop1Accuracy=25.54%
+t+5 | MeanTop1Accuracy=19.81%
+
+6. Worst horizons
+t+5 | MeanTop1Accuracy=19.81%
+t+3 | MeanTop1Accuracy=25.54%
+t+2 | MeanTop1Accuracy=37.28%
+t+1 | MeanTop1Accuracy=56.58%
+
+7. Strongest age effects
+t+1 | StateAgeMinusStateOnlyTop1=0.76%
+t+2 | StateAgeMinusStateOnlyTop1=-12.68%
+t+3 | StateAgeMinusStateOnlyTop1=-23.30%
+t+5 | StateAgeMinusStateOnlyTop1=-29.02%
+
+8. Best Young/Middle/Late model
+Late | Top1Accuracy=47.66% | Brier=0.6880
+Middle | Top1Accuracy=39.33% | Brier=0.7672
+Young | Top1Accuracy=30.61% | Brier=0.8138
+
+9. Best cross-instrument replication
+t+1 | ValidInstrumentCount=3 | MeanTop1Accuracy=56.58%
+t+2 | ValidInstrumentCount=3 | MeanTop1Accuracy=37.28%
+t+3 | ValidInstrumentCount=3 | MeanTop1Accuracy=25.54%
+t+5 | ValidInstrumentCount=3 | MeanTop1Accuracy=19.81%
+
+10. Recommended APVA forecasting model
+State+Age+TransitionForecast: MeanTop1Accuracy=34.80%; MeanTop3Accuracy=62.26%; ValidInstrumentCount=3.
+
+Low-DoF Audit
+Variables used:
+StructuralState
+AgeBucket
+TransitionProbability
+
+No Context
+No Arbitration
+No Persistence
+No Phase
+No Optimization
+No Fitting
+No Machine Learning
+No Forward Returns used in forecast construction
+
+Research Notes
+- Can APVA forecast future structure? See the fixed aggregate classification above.
+- Which states are most predictable? See the replicated node rankings.
+- Does age improve forecasting? Compare State+Age to State-only accuracy by horizon.
+- Does lower entropy imply higher accuracy? See the entropy table and correlation.
+- Can Young/Middle/Late retain forecast power? Compare the fixed reduced model metrics.
+- Can APVA be reduced to State + Age + Transition Forecast? This report tests that representation mechanically.

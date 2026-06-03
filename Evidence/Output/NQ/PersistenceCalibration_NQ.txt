@@ -1,0 +1,122 @@
+APVA Persistence Calibration Study v0.1
+Decision-calibration research only. Eight fixed regimes. No optimization, fitting, machine learning, or outcome-based scoring.
+
+Diagnostics
+Instrument: NQ
+Input path(s): .\Evidence\NQ\NQ_5 Minute_apva_bar_evidence_v01.csv
+Total rows: 1930
+
+1. Arbitration baseline
+Regime A reproduces Study 48 immediate replacement.
+
+2. Persistence regime summaries
+Regime | Name | ReplacementRate | ReplacementCount | BarsPerReplacement | MeanRunLength | MedianRunLength | MaxRunLength | PersistenceHalfLife | RunLengthDistribution
+A | Immediate Replacement | 83.47% | 1611 | 1.1980 | 1.1973 | 1.0000 | 52 | 1 | 1=1509, 2=36, 3=22, 4=18, 5=18, 6-10=6, 11-20=2, 21+=1
+B | One-Bar Hold | 3.26% | 63 | 30.6349 | 30.1562 | 23.5000 | 210 | 23 | 1=0, 2=1, 3=1, 4=1, 5=8, 6-10=4, 11-20=14, 21+=35
+C | Two-Bar Confirmation | 3.26% | 63 | 30.6349 | 30.1562 | 23.5000 | 210 | 23 | 1=0, 2=1, 3=1, 4=1, 5=8, 6-10=4, 11-20=14, 21+=35
+D | Three-Bar Confirmation | 2.07% | 40 | 48.2500 | 47.0732 | 28.0000 | 211 | 28 | 1=0, 2=0, 3=0, 4=1, 5=4, 6-10=1, 11-20=7, 21+=28
+E | Margin 0.10 | 45.80% | 884 | 2.1833 | 2.1808 | 1.0000 | 74 | 1 | 1=584, 2=100, 3=66, 4=29, 5=37, 6-10=59, 11-20=8, 21+=2
+F | Margin 0.20 | 42.75% | 825 | 2.3394 | 2.3366 | 1.0000 | 111 | 1 | 1=544, 2=84, 3=61, 4=25, 5=36, 6-10=63, 11-20=12, 21+=1
+G | Hybrid | 1.35% | 26 | 74.2308 | 71.4815 | 26.0000 | 750 | 26 | 1=0, 2=0, 3=0, 4=0, 5=4, 6-10=1, 11-20=7, 21+=15
+H | Hybrid+ | 1.14% | 22 | 87.7273 | 83.9130 | 34.0000 | 677 | 34 | 1=0, 2=0, 3=1, 4=0, 5=4, 6-10=0, 11-20=4, 21+=14
+
+3. Stability analysis
+Regime | Name | ReplacementRate | ReplacementCount | BarsPerReplacement | MeanRunLength | MedianRunLength | MaxRunLength | PersistenceHalfLife | RunLengthDistribution
+A | Immediate Replacement | 83.47% | 1611 | 1.1980 | 1.1973 | 1.0000 | 52 | 1 | 1=1509, 2=36, 3=22, 4=18, 5=18, 6-10=6, 11-20=2, 21+=1
+B | One-Bar Hold | 3.26% | 63 | 30.6349 | 30.1562 | 23.5000 | 210 | 23 | 1=0, 2=1, 3=1, 4=1, 5=8, 6-10=4, 11-20=14, 21+=35
+C | Two-Bar Confirmation | 3.26% | 63 | 30.6349 | 30.1562 | 23.5000 | 210 | 23 | 1=0, 2=1, 3=1, 4=1, 5=8, 6-10=4, 11-20=14, 21+=35
+D | Three-Bar Confirmation | 2.07% | 40 | 48.2500 | 47.0732 | 28.0000 | 211 | 28 | 1=0, 2=0, 3=0, 4=1, 5=4, 6-10=1, 11-20=7, 21+=28
+E | Margin 0.10 | 45.80% | 884 | 2.1833 | 2.1808 | 1.0000 | 74 | 1 | 1=584, 2=100, 3=66, 4=29, 5=37, 6-10=59, 11-20=8, 21+=2
+F | Margin 0.20 | 42.75% | 825 | 2.3394 | 2.3366 | 1.0000 | 111 | 1 | 1=544, 2=84, 3=61, 4=25, 5=36, 6-10=63, 11-20=12, 21+=1
+G | Hybrid | 1.35% | 26 | 74.2308 | 71.4815 | 26.0000 | 750 | 26 | 1=0, 2=0, 3=0, 4=0, 5=4, 6-10=1, 11-20=7, 21+=15
+H | Hybrid+ | 1.14% | 22 | 87.7273 | 83.9130 | 34.0000 | 677 | 34 | 1=0, 2=0, 3=1, 4=0, 5=4, 6-10=0, 11-20=4, 21+=14
+
+4. Fractal-jump analysis
+Regime | RiskCount | RiskRate | MeanRiskRunLength | RiskReplacementRate
+A | 614 | 31.81% | 1.0977 | 38.11%
+B | 2 | 0.10% | 2.5000 | 3.17%
+C | 2 | 0.10% | 2.5000 | 3.17%
+D | 0 | 0.00% | 0.0000 | 0.00%
+E | 258 | 13.37% | 1.4419 | 29.19%
+F | 233 | 12.07% | 1.4249 | 28.24%
+G | 0 | 0.00% | 0.0000 | 0.00%
+H | 1 | 0.05% | 3.0000 | 4.55%
+
+5. False persistence analysis
+Regime | FalsePersistenceCount | FalsePersistenceRate | MeanFalsePersistenceLength | MaxFalsePersistenceLength
+A | 0 | 0.00% | 0.0000 | 0
+B | 94 | 76.63% | 15.7340 | 80
+C | 94 | 76.63% | 15.7340 | 80
+D | 75 | 80.10% | 20.6133 | 159
+E | 110 | 27.51% | 4.8273 | 12
+F | 110 | 30.62% | 5.3727 | 18
+G | 64 | 82.80% | 24.9688 | 126
+H | 64 | 82.38% | 24.8438 | 159
+
+6. Replacement lag analysis
+Regime | MeanLag | MedianLag | MaxLag | LagDistribution
+A | 0.0000 | 0.0000 | 0 | 1=0, 2=0, 3=0, 4=0, 5=0, 6-10=0, 11-20=0, 21+=0
+B | 1.0000 | 1.0000 | 1 | 1=63, 2=0, 3=0, 4=0, 5=0, 6-10=0, 11-20=0, 21+=0
+C | 1.0000 | 1.0000 | 1 | 1=63, 2=0, 3=0, 4=0, 5=0, 6-10=0, 11-20=0, 21+=0
+D | 2.0000 | 2.0000 | 2 | 1=0, 2=40, 3=0, 4=0, 5=0, 6-10=0, 11-20=0, 21+=0
+E | 0.0079 | 0.0000 | 3 | 1=2, 2=1, 3=1, 4=0, 5=0, 6-10=0, 11-20=0, 21+=0
+F | 0.0036 | 0.0000 | 2 | 1=1, 2=1, 3=0, 4=0, 5=0, 6-10=0, 11-20=0, 21+=0
+G | 1.0769 | 1.0000 | 3 | 1=25, 2=0, 3=1, 4=0, 5=0, 6-10=0, 11-20=0, 21+=0
+H | 2.1364 | 2.0000 | 4 | 1=0, 2=20, 3=1, 4=1, 5=0, 6-10=0, 11-20=0, 21+=0
+
+7. Conflict suppression
+Regime | OverrideCount | OverrideRate | MeanOverrideLength | MaxOverrideLength | BarsSuppressed
+A | 0 | 0.00% | 0.0000 | 0 | 0
+B | 1537 | 79.64% | 11.2190 | 80 | 1537
+C | 1537 | 79.64% | 11.2190 | 80 | 1537
+D | 1604 | 83.11% | 14.3214 | 159 | 1604
+E | 801 | 41.50% | 2.5756 | 12 | 801
+F | 849 | 43.99% | 2.8878 | 18 | 849
+G | 1629 | 84.40% | 18.3034 | 126 | 1629
+H | 1637 | 84.82% | 17.4149 | 159 | 1637
+
+8. Outcome diagnostics
+Regime | Count | MeanDRFwd5 | MedianDRFwd5 | ContinuationRate5 | FailureRate5 | FlatRate5 | OutcomeSkew
+A | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+B | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+C | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+D | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+E | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+F | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+G | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+H | 1916 | -3.1775 | -0.6250 | 49.06% | 50.57% | 0.37% | -1.51%
+
+9. Calibration analysis
+Regime | ReplacementScore | RiskScore | FalsePersistenceScore | LagScore | CalibrationScore
+A | 0.0000 | 0.0000 | 1.0000 | 1.0000 | 2.0000
+B | 0.9609 | 0.9967 | 0.0745 | 0.5319 | 2.5640
+C | 0.9609 | 0.9967 | 0.0745 | 0.5319 | 2.5640
+D | 0.9752 | 1.0000 | 0.0325 | 0.0638 | 2.0715
+E | 0.4513 | 0.5798 | 0.6677 | 0.9963 | 2.6951
+F | 0.4879 | 0.6205 | 0.6302 | 0.9983 | 2.7369
+G | 0.9839 | 1.0000 | 0.0000 | 0.4959 | 2.4798
+H | 0.9863 | 0.9984 | 0.0050 | 0.0000 | 1.9897
+
+10. Low-DoF audit
+Allowed variables used:
+- CurrentState
+- AgeBucket
+- PreviousDistinctState
+- ValidatedContextFlag
+- ArbitrationScore
+- ScoreMargin
+- WinnerRunLength
+
+No new variables added.
+No optimization.
+No fitting.
+No machine learning.
+No forward returns in scoring.
+No outcome-based scoring.
+
+11. Mechanical research notes
+- All persistence regimes are frozen in advance.
+- One-Bar Hold means one full additional challenger bar, so it replaces after two consecutive challenger bars.
+- False persistence is an override run lasting at least three bars.
+- Calibration normalization uses the maximum observed rate across the frozen regime set; lower burden scores higher.
+- Outcomes are diagnostics only and cannot affect scores or replacements.

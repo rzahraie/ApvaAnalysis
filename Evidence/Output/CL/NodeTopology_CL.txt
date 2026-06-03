@@ -1,0 +1,370 @@
+APVA Node Topology Study v0.1
+============================================================================================================
+Diagnostics
+Instrument: CL
+Input path(s): .\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv
+Total rows: 2684
+Node count: 35
+Branch count: 157
+
+1. Node Inventory
+Node | Count | ReplicationCount | ReplicationPercent | StructuralState | AgeBucket
+NeutralProcessing_Age1 | 445 | 1 | 100.00% | NeutralProcessing | Age1
+MixedStructure_Age1 | 279 | 1 | 100.00% | MixedStructure | Age1
+NeutralProcessing_Age2 | 253 | 1 | 100.00% | NeutralProcessing | Age2
+NeutralProcessing_Age6-10 | 208 | 1 | 100.00% | NeutralProcessing | Age6-10
+CompressionProcessing_Age1 | 177 | 1 | 100.00% | CompressionProcessing | Age1
+ReassertionProcessing_Age1 | 174 | 1 | 100.00% | ReassertionProcessing | Age1
+NeutralProcessing_Age3 | 140 | 1 | 100.00% | NeutralProcessing | Age3
+NeutralProcessing_Age4 | 106 | 1 | 100.00% | NeutralProcessing | Age4
+DecayToNeutral_Age1 | 103 | 1 | 100.00% | DecayToNeutral | Age1
+ExhaustionPersistence_Age1 | 97 | 1 | 100.00% | ExhaustionPersistence | Age1
+NeutralProcessing_Age5 | 95 | 1 | 100.00% | NeutralProcessing | Age5
+RecoveryResolution_Age1 | 94 | 1 | 100.00% | RecoveryResolution | Age1
+CompressionProcessing_Age2 | 92 | 1 | 100.00% | CompressionProcessing | Age2
+DestructiveRotation_Age1 | 71 | 1 | 100.00% | DestructiveRotation | Age1
+CompressionProcessing_Age3 | 41 | 1 | 100.00% | CompressionProcessing | Age3
+RecoveryResolution_Age2 | 38 | 1 | 100.00% | RecoveryResolution | Age2
+ReassertionProcessing_Age2 | 32 | 1 | 100.00% | ReassertionProcessing | Age2
+ExhaustionPersistence_Age2 | 31 | 1 | 100.00% | ExhaustionPersistence | Age2
+NeutralProcessing_Age11-20 | 30 | 1 | 100.00% | NeutralProcessing | Age11-20
+MixedStructure_Age2 | 28 | 1 | 100.00% | MixedStructure | Age2
+RecoveryResolution_Age3 | 27 | 1 | 100.00% | RecoveryResolution | Age3
+CompressionProcessing_Age4 | 22 | 1 | 100.00% | CompressionProcessing | Age4
+ExhaustionPersistence_Age3 | 21 | 1 | 100.00% | ExhaustionPersistence | Age3
+ExhaustionPersistence_Age4 | 16 | 1 | 100.00% | ExhaustionPersistence | Age4
+CompressionProcessing_Age5 | 12 | 1 | 100.00% | CompressionProcessing | Age5
+ConstructiveEmergence_Age1 | 12 | 1 | 100.00% | ConstructiveEmergence | Age1
+DestructiveRotation_Age2 | 12 | 1 | 100.00% | DestructiveRotation | Age2
+ExhaustionPersistence_Age5 | 8 | 1 | 100.00% | ExhaustionPersistence | Age5
+CompressionProcessing_Age6-10 | 6 | 1 | 100.00% | CompressionProcessing | Age6-10
+MixedStructure_Age3 | 5 | 1 | 100.00% | MixedStructure | Age3
+ExhaustionPersistence_Age6-10 | 3 | 1 | 100.00% | ExhaustionPersistence | Age6-10
+MixedStructure_Age4 | 2 | 1 | 100.00% | MixedStructure | Age4
+DestructiveRotation_Age3 | 1 | 1 | 100.00% | DestructiveRotation | Age3
+ReassertionProcessing_Age3 | 1 | 1 | 100.00% | ReassertionProcessing | Age3
+RecoveryResolution_Age4 | 1 | 1 | 100.00% | RecoveryResolution | Age4
+
+2. Branch Profile
+Node | OutgoingBranchCount | DominantNextNode | DominantBranchProbability | SecondBranchProbability | BranchConcentration
+NeutralProcessing_Age1 | 6 | NeutralProcessing_Age2 | 56.85% | 14.83% | 42.02%
+MixedStructure_Age1 | 9 | NeutralProcessing_Age1 | 41.22% | 15.77% | 25.45%
+NeutralProcessing_Age2 | 5 | NeutralProcessing_Age3 | 55.34% | 21.34% | 33.99%
+NeutralProcessing_Age6-10 | 8 | NeutralProcessing_Age6-10 | 63.94% | 14.90% | 49.04%
+CompressionProcessing_Age1 | 5 | CompressionProcessing_Age2 | 51.98% | 31.64% | 20.34%
+ReassertionProcessing_Age1 | 6 | MixedStructure_Age1 | 37.93% | 33.33% | 4.60%
+NeutralProcessing_Age3 | 4 | NeutralProcessing_Age4 | 75.71% | 10.71% | 65.00%
+NeutralProcessing_Age4 | 5 | NeutralProcessing_Age5 | 89.62% | 3.77% | 85.85%
+DecayToNeutral_Age1 | 5 | NeutralProcessing_Age1 | 61.17% | 25.24% | 35.92%
+ExhaustionPersistence_Age1 | 6 | ExhaustionPersistence_Age2 | 31.96% | 29.90% | 2.06%
+NeutralProcessing_Age5 | 5 | NeutralProcessing_Age6-10 | 78.95% | 10.53% | 68.42%
+RecoveryResolution_Age1 | 3 | CompressionProcessing_Age1 | 48.94% | 40.43% | 8.51%
+CompressionProcessing_Age2 | 7 | CompressionProcessing_Age3 | 44.57% | 35.87% | 8.70%
+DestructiveRotation_Age1 | 8 | NeutralProcessing_Age1 | 35.21% | 28.17% | 7.04%
+CompressionProcessing_Age3 | 6 | CompressionProcessing_Age4 | 53.66% | 24.39% | 29.27%
+RecoveryResolution_Age2 | 2 | RecoveryResolution_Age3 | 71.05% | 28.95% | 42.11%
+ReassertionProcessing_Age2 | 4 | DestructiveRotation_Age1 | 56.25% | 37.50% | 18.75%
+ExhaustionPersistence_Age2 | 3 | ExhaustionPersistence_Age3 | 67.74% | 29.03% | 38.71%
+NeutralProcessing_Age11-20 | 5 | NeutralProcessing_Age11-20 | 63.33% | 13.33% | 50.00%
+MixedStructure_Age2 | 6 | DecayToNeutral_Age1 | 28.57% | 25.00% | 3.57%
+RecoveryResolution_Age3 | 4 | CompressionProcessing_Age1 | 62.96% | 18.52% | 44.44%
+CompressionProcessing_Age4 | 5 | CompressionProcessing_Age5 | 54.55% | 22.73% | 31.82%
+ExhaustionPersistence_Age3 | 2 | ExhaustionPersistence_Age4 | 76.19% | 23.81% | 52.38%
+ExhaustionPersistence_Age4 | 6 | ExhaustionPersistence_Age5 | 50.00% | 18.75% | 31.25%
+CompressionProcessing_Age5 | 5 | CompressionProcessing_Age6-10 | 41.67% | 33.33% | 8.33%
+ConstructiveEmergence_Age1 | 3 | MixedStructure_Age1 | 41.67% | 33.33% | 8.33%
+DestructiveRotation_Age2 | 6 | DecayToNeutral_Age1 | 33.33% | 25.00% | 8.33%
+ExhaustionPersistence_Age5 | 5 | NeutralProcessing_Age1 | 37.50% | 25.00% | 12.50%
+CompressionProcessing_Age6-10 | 4 | NeutralProcessing_Age1 | 50.00% | 16.67% | 33.33%
+MixedStructure_Age3 | 3 | ConstructiveEmergence_Age1 | 40.00% | 40.00% | 0.00%
+ExhaustionPersistence_Age6-10 | 2 | ExhaustionPersistence_Age6-10 | 66.67% | 33.33% | 33.33%
+MixedStructure_Age4 | 1 | NeutralProcessing_Age1 | 100.00% | 0.00% | 100.00%
+DestructiveRotation_Age3 | 1 | CompressionProcessing_Age1 | 100.00% | 0.00% | 100.00%
+ReassertionProcessing_Age3 | 1 | DestructiveRotation_Age1 | 100.00% | 0.00% | 100.00%
+RecoveryResolution_Age4 | 1 | CompressionProcessing_Age1 | 100.00% | 0.00% | 100.00%
+
+3. Branch Entropy
+Node | BranchEntropy | NormalizedBranchEntropy
+DestructiveRotation_Age3 | -0.0000 | 0.00%
+MixedStructure_Age4 | -0.0000 | 0.00%
+ReassertionProcessing_Age3 | -0.0000 | 0.00%
+RecoveryResolution_Age4 | -0.0000 | 0.00%
+NeutralProcessing_Age4 | 0.4644 | 28.86%
+ExhaustionPersistence_Age3 | 0.5489 | 79.19%
+RecoveryResolution_Age2 | 0.6017 | 86.80%
+ExhaustionPersistence_Age6-10 | 0.6365 | 91.83%
+ExhaustionPersistence_Age2 | 0.7337 | 66.78%
+NeutralProcessing_Age5 | 0.7551 | 46.92%
+NeutralProcessing_Age3 | 0.7992 | 57.65%
+ReassertionProcessing_Age2 | 0.9081 | 65.50%
+RecoveryResolution_Age1 | 0.9542 | 86.86%
+RecoveryResolution_Age3 | 1.0085 | 72.75%
+DecayToNeutral_Age1 | 1.0086 | 62.67%
+MixedStructure_Age3 | 1.0549 | 96.02%
+ConstructiveEmergence_Age1 | 1.0776 | 98.08%
+NeutralProcessing_Age11-20 | 1.1205 | 69.62%
+CompressionProcessing_Age1 | 1.1569 | 71.88%
+NeutralProcessing_Age6-10 | 1.1917 | 57.31%
+NeutralProcessing_Age2 | 1.2109 | 75.24%
+CompressionProcessing_Age3 | 1.2311 | 68.71%
+CompressionProcessing_Age6-10 | 1.2425 | 89.62%
+CompressionProcessing_Age4 | 1.2438 | 77.28%
+NeutralProcessing_Age1 | 1.2605 | 70.35%
+CompressionProcessing_Age2 | 1.2870 | 66.14%
+CompressionProcessing_Age5 | 1.3522 | 84.02%
+ReassertionProcessing_Age1 | 1.3656 | 76.22%
+ExhaustionPersistence_Age4 | 1.4402 | 80.38%
+ExhaustionPersistence_Age5 | 1.4942 | 92.84%
+ExhaustionPersistence_Age1 | 1.5473 | 86.36%
+DestructiveRotation_Age1 | 1.6276 | 78.27%
+DestructiveRotation_Age2 | 1.6326 | 91.12%
+MixedStructure_Age2 | 1.6485 | 92.00%
+MixedStructure_Age1 | 1.7186 | 78.22%
+
+Highest entropy nodes
+MixedStructure_Age1 | 1.7186 | 78.22%
+MixedStructure_Age2 | 1.6485 | 92.00%
+DestructiveRotation_Age2 | 1.6326 | 91.12%
+DestructiveRotation_Age1 | 1.6276 | 78.27%
+ExhaustionPersistence_Age1 | 1.5473 | 86.36%
+ExhaustionPersistence_Age5 | 1.4942 | 92.84%
+ExhaustionPersistence_Age4 | 1.4402 | 80.38%
+ReassertionProcessing_Age1 | 1.3656 | 76.22%
+CompressionProcessing_Age5 | 1.3522 | 84.02%
+CompressionProcessing_Age2 | 1.2870 | 66.14%
+NeutralProcessing_Age1 | 1.2605 | 70.35%
+CompressionProcessing_Age4 | 1.2438 | 77.28%
+CompressionProcessing_Age6-10 | 1.2425 | 89.62%
+CompressionProcessing_Age3 | 1.2311 | 68.71%
+NeutralProcessing_Age2 | 1.2109 | 75.24%
+NeutralProcessing_Age6-10 | 1.1917 | 57.31%
+CompressionProcessing_Age1 | 1.1569 | 71.88%
+NeutralProcessing_Age11-20 | 1.1205 | 69.62%
+ConstructiveEmergence_Age1 | 1.0776 | 98.08%
+MixedStructure_Age3 | 1.0549 | 96.02%
+
+4. PreviousNode Gain
+Node | Model1Accuracy | Model2Accuracy | PreviousNodeGain
+RecoveryResolution_Age1 | 48.94% | 89.36% | 40.43%
+ConstructiveEmergence_Age1 | 41.67% | 75.00% | 33.33%
+DestructiveRotation_Age1 | 35.21% | 52.11% | 16.90%
+ReassertionProcessing_Age1 | 37.93% | 54.02% | 16.09%
+ExhaustionPersistence_Age1 | 31.96% | 46.39% | 14.43%
+MixedStructure_Age1 | 41.22% | 50.18% | 8.96%
+CompressionProcessing_Age1 | 51.98% | 58.76% | 6.78%
+NeutralProcessing_Age1 | 56.85% | 59.10% | 2.25%
+DecayToNeutral_Age1 | 61.17% | 63.11% | 1.94%
+CompressionProcessing_Age2 | 44.57% | 44.57% | 0.00%
+CompressionProcessing_Age3 | 53.66% | 53.66% | 0.00%
+CompressionProcessing_Age4 | 54.55% | 54.55% | 0.00%
+CompressionProcessing_Age5 | 41.67% | 41.67% | 0.00%
+CompressionProcessing_Age6-10 | 50.00% | 50.00% | 0.00%
+DestructiveRotation_Age2 | 33.33% | 33.33% | 0.00%
+DestructiveRotation_Age3 | 100.00% | 100.00% | 0.00%
+ExhaustionPersistence_Age2 | 67.74% | 67.74% | 0.00%
+ExhaustionPersistence_Age3 | 76.19% | 76.19% | 0.00%
+ExhaustionPersistence_Age4 | 50.00% | 50.00% | 0.00%
+ExhaustionPersistence_Age5 | 37.50% | 37.50% | 0.00%
+ExhaustionPersistence_Age6-10 | 66.67% | 66.67% | 0.00%
+MixedStructure_Age2 | 28.57% | 28.57% | 0.00%
+MixedStructure_Age3 | 40.00% | 40.00% | 0.00%
+MixedStructure_Age4 | 100.00% | 100.00% | 0.00%
+NeutralProcessing_Age11-20 | 63.33% | 63.33% | 0.00%
+NeutralProcessing_Age2 | 55.34% | 55.34% | 0.00%
+NeutralProcessing_Age3 | 75.71% | 75.71% | 0.00%
+NeutralProcessing_Age4 | 89.62% | 89.62% | 0.00%
+NeutralProcessing_Age5 | 78.95% | 78.95% | 0.00%
+NeutralProcessing_Age6-10 | 63.94% | 63.94% | 0.00%
+ReassertionProcessing_Age2 | 56.25% | 56.25% | 0.00%
+ReassertionProcessing_Age3 | 100.00% | 100.00% | 0.00%
+RecoveryResolution_Age2 | 71.05% | 71.05% | 0.00%
+RecoveryResolution_Age3 | 62.96% | 62.96% | 0.00%
+RecoveryResolution_Age4 | 100.00% | 100.00% | 0.00%
+
+5. Pipeline Classification
+Node | Count | DominantBranchProbability | BranchConcentration | PreviousNodeGain | BranchEntropy | ReplicationCount
+
+6. Junction Classification
+Node | Count | DominantBranchProbability | BranchConcentration | PreviousNodeGain | BranchEntropy | ReplicationCount
+
+7. Diffuse Classification
+Node | Count | DominantBranchProbability | BranchConcentration | PreviousNodeGain | BranchEntropy | ReplicationCount
+
+8. Ambiguous Classification
+Node | Count | DominantBranchProbability | BranchConcentration | PreviousNodeGain | BranchEntropy | ReplicationCount
+NeutralProcessing_Age1 | 445 | 56.85% | 42.02% | 2.25% | 1.2605 | 1
+MixedStructure_Age1 | 279 | 41.22% | 25.45% | 8.96% | 1.7186 | 1
+NeutralProcessing_Age2 | 253 | 55.34% | 33.99% | 0.00% | 1.2109 | 1
+NeutralProcessing_Age6-10 | 208 | 63.94% | 49.04% | 0.00% | 1.1917 | 1
+CompressionProcessing_Age1 | 177 | 51.98% | 20.34% | 6.78% | 1.1569 | 1
+ReassertionProcessing_Age1 | 174 | 37.93% | 4.60% | 16.09% | 1.3656 | 1
+NeutralProcessing_Age3 | 140 | 75.71% | 65.00% | 0.00% | 0.7992 | 1
+NeutralProcessing_Age4 | 106 | 89.62% | 85.85% | 0.00% | 0.4644 | 1
+DecayToNeutral_Age1 | 103 | 61.17% | 35.92% | 1.94% | 1.0086 | 1
+ExhaustionPersistence_Age1 | 97 | 31.96% | 2.06% | 14.43% | 1.5473 | 1
+NeutralProcessing_Age5 | 95 | 78.95% | 68.42% | 0.00% | 0.7551 | 1
+RecoveryResolution_Age1 | 94 | 48.94% | 8.51% | 40.43% | 0.9542 | 1
+CompressionProcessing_Age2 | 92 | 44.57% | 8.70% | 0.00% | 1.2870 | 1
+DestructiveRotation_Age1 | 71 | 35.21% | 7.04% | 16.90% | 1.6276 | 1
+CompressionProcessing_Age3 | 41 | 53.66% | 29.27% | 0.00% | 1.2311 | 1
+RecoveryResolution_Age2 | 38 | 71.05% | 42.11% | 0.00% | 0.6017 | 1
+ReassertionProcessing_Age2 | 32 | 56.25% | 18.75% | 0.00% | 0.9081 | 1
+ExhaustionPersistence_Age2 | 31 | 67.74% | 38.71% | 0.00% | 0.7337 | 1
+NeutralProcessing_Age11-20 | 30 | 63.33% | 50.00% | 0.00% | 1.1205 | 1
+MixedStructure_Age2 | 28 | 28.57% | 3.57% | 0.00% | 1.6485 | 1
+RecoveryResolution_Age3 | 27 | 62.96% | 44.44% | 0.00% | 1.0085 | 1
+CompressionProcessing_Age4 | 22 | 54.55% | 31.82% | 0.00% | 1.2438 | 1
+ExhaustionPersistence_Age3 | 21 | 76.19% | 52.38% | 0.00% | 0.5489 | 1
+ExhaustionPersistence_Age4 | 16 | 50.00% | 31.25% | 0.00% | 1.4402 | 1
+CompressionProcessing_Age5 | 12 | 41.67% | 8.33% | 0.00% | 1.3522 | 1
+ConstructiveEmergence_Age1 | 12 | 41.67% | 8.33% | 33.33% | 1.0776 | 1
+DestructiveRotation_Age2 | 12 | 33.33% | 8.33% | 0.00% | 1.6326 | 1
+ExhaustionPersistence_Age5 | 8 | 37.50% | 12.50% | 0.00% | 1.4942 | 1
+CompressionProcessing_Age6-10 | 6 | 50.00% | 33.33% | 0.00% | 1.2425 | 1
+MixedStructure_Age3 | 5 | 40.00% | 0.00% | 0.00% | 1.0549 | 1
+ExhaustionPersistence_Age6-10 | 3 | 66.67% | 33.33% | 0.00% | 0.6365 | 1
+MixedStructure_Age4 | 2 | 100.00% | 100.00% | 0.00% | -0.0000 | 1
+DestructiveRotation_Age3 | 1 | 100.00% | 100.00% | 0.00% | -0.0000 | 1
+ReassertionProcessing_Age3 | 1 | 100.00% | 100.00% | 0.00% | -0.0000 | 1
+RecoveryResolution_Age4 | 1 | 100.00% | 100.00% | 0.00% | -0.0000 | 1
+
+9. Topology Role Assignment
+Node | TopologyRole
+CompressionProcessing_Age1 | Ambiguous
+CompressionProcessing_Age2 | Ambiguous
+CompressionProcessing_Age3 | Ambiguous
+CompressionProcessing_Age4 | Ambiguous
+CompressionProcessing_Age5 | Ambiguous
+CompressionProcessing_Age6-10 | Ambiguous
+ConstructiveEmergence_Age1 | Ambiguous
+DecayToNeutral_Age1 | Ambiguous
+DestructiveRotation_Age1 | Ambiguous
+DestructiveRotation_Age2 | Ambiguous
+DestructiveRotation_Age3 | Ambiguous
+ExhaustionPersistence_Age1 | Ambiguous
+ExhaustionPersistence_Age2 | Ambiguous
+ExhaustionPersistence_Age3 | Ambiguous
+ExhaustionPersistence_Age4 | Ambiguous
+ExhaustionPersistence_Age5 | Ambiguous
+ExhaustionPersistence_Age6-10 | Ambiguous
+MixedStructure_Age1 | Ambiguous
+MixedStructure_Age2 | Ambiguous
+MixedStructure_Age3 | Ambiguous
+MixedStructure_Age4 | Ambiguous
+NeutralProcessing_Age1 | Ambiguous
+NeutralProcessing_Age11-20 | Ambiguous
+NeutralProcessing_Age2 | Ambiguous
+NeutralProcessing_Age3 | Ambiguous
+NeutralProcessing_Age4 | Ambiguous
+NeutralProcessing_Age5 | Ambiguous
+NeutralProcessing_Age6-10 | Ambiguous
+ReassertionProcessing_Age1 | Ambiguous
+ReassertionProcessing_Age2 | Ambiguous
+ReassertionProcessing_Age3 | Ambiguous
+RecoveryResolution_Age1 | Ambiguous
+RecoveryResolution_Age2 | Ambiguous
+RecoveryResolution_Age3 | Ambiguous
+RecoveryResolution_Age4 | Ambiguous
+
+10. Topology by State
+State | PipelineCount | JunctionCount | DiffuseCount | AmbiguousCount | DominantTopologyRole
+CompressionProcessing | 0 | 0 | 0 | 6 | Ambiguous
+ConstructiveEmergence | 0 | 0 | 0 | 1 | Ambiguous
+DecayToNeutral | 0 | 0 | 0 | 1 | Ambiguous
+DestructiveRotation | 0 | 0 | 0 | 3 | Ambiguous
+ExhaustionPersistence | 0 | 0 | 0 | 6 | Ambiguous
+MixedStructure | 0 | 0 | 0 | 4 | Ambiguous
+NeutralProcessing | 0 | 0 | 0 | 7 | Ambiguous
+ReassertionProcessing | 0 | 0 | 0 | 3 | Ambiguous
+RecoveryResolution | 0 | 0 | 0 | 4 | Ambiguous
+
+11. Topology by Age
+AgeBucket | PipelineCount | JunctionCount | DiffuseCount | AmbiguousCount | DominantTopologyRole
+Age1 | 0 | 0 | 0 | 9 | Ambiguous
+Age11-20 | 0 | 0 | 0 | 1 | Ambiguous
+Age2 | 0 | 0 | 0 | 7 | Ambiguous
+Age3 | 0 | 0 | 0 | 7 | Ambiguous
+Age4 | 0 | 0 | 0 | 5 | Ambiguous
+Age5 | 0 | 0 | 0 | 3 | Ambiguous
+Age6-10 | 0 | 0 | 0 | 3 | Ambiguous
+
+12. Topology Flow Matrix
+SourceRole | DestinationRole | Count | Probability
+Ambiguous | Ambiguous | 2682 | 100.00%
+Ambiguous | Diffuse | 0 | 0.00%
+Ambiguous | Junction | 0 | 0.00%
+Ambiguous | Pipeline | 0 | 0.00%
+Diffuse | Ambiguous | 0 | 0.00%
+Diffuse | Diffuse | 0 | 0.00%
+Diffuse | Junction | 0 | 0.00%
+Diffuse | Pipeline | 0 | 0.00%
+Junction | Ambiguous | 0 | 0.00%
+Junction | Diffuse | 0 | 0.00%
+Junction | Junction | 0 | 0.00%
+Junction | Pipeline | 0 | 0.00%
+Pipeline | Ambiguous | 0 | 0.00%
+Pipeline | Diffuse | 0 | 0.00%
+Pipeline | Junction | 0 | 0.00%
+Pipeline | Pipeline | 0 | 0.00%
+
+13. Topology Residence Time
+Role | MeanResidenceTime | MedianResidenceTime | MaxResidenceTime
+Pipeline | 0.00 | 0.00 | 0
+Junction | 0.00 | 0.00 | 0
+Diffuse | 0.00 | 0.00 | 0
+Ambiguous | 2683.00 | 2683.00 | 2683
+
+14. Topology Contribution
+Role | TotalContributionScore | MeanContributionScore | ContributionPercent
+Pipeline | 0.0000 | 0.0000 | 0.00%
+Junction | 0.0000 | 0.0000 | 0.00%
+Diffuse | 0.0000 | 0.0000 | 0.00%
+Ambiguous | 0.0562 | 0.0016 | 100.00%
+
+15. Topology Stability
+Role | MeanDominantBranchProbability | MeanBranchEntropy | MeanPreviousNodeGain | MeanBranchConcentration
+Pipeline | 0.00% | 0.0000 | 0.00% | 0.00%
+Junction | 0.00% | 0.0000 | 0.00% | 0.00%
+Diffuse | 0.00% | 0.0000 | 0.00% | 0.00%
+Ambiguous | 59.10% | 1.0092 | 4.03% | 37.24%
+
+16. Cross-Instrument Replication
+See aggregate report.
+
+17. Outcome Diagnostics
+TopologyRole | Count | MeanDRFwd5 | MedianDRFwd5 | ContinuationRate5 | FailureRate5 | FlatRate5 | OutcomeSkew
+Pipeline | 0 | N/A | N/A | N/A | N/A | N/A | N/A
+Junction | 0 | N/A | N/A | N/A | N/A | N/A | N/A
+Diffuse | 0 | N/A | N/A | N/A | N/A | N/A | N/A
+Ambiguous | 2627 | -0.0048 | -0.0100 | 49.07% | 50.21% | 0.72% | -0.0114
+
+18. Recommendation
+Classification: DiffuseUnresolved
+Reason: PipelineNodes=0; JunctionNodes=0; DiffuseNodes=0; AmbiguousNodes=35; AggregatePreviousNodeGain=5.40%.
+
+19. Low-DoF Audit
+Variables used:
+CurrentNode
+PreviousNode
+NextNode
+StructuralState
+AgeBucket
+BranchProbability
+BranchEntropy
+PreviousNodeGain
+DominantBranchProbability
+BranchConcentration
+
+No Context
+No Arbitration
+No Persistence
+No Phase
+No Optimization
+No Fitting
+No Machine Learning
+No Forward Returns used in topology classification
+
+20. Mechanical Research Notes
+- Node roles are assigned from fixed branch topology thresholds.
+- Junction has priority over Pipeline, Diffuse, and Ambiguous.
+- Outcomes remain diagnostic only.

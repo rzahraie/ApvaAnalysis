@@ -1,0 +1,1569 @@
+APVA State Age Analysis Study v0.1 - 6E
+=======================================
+Instrument: 6E
+Input: C:\Users\rz0\Documents\ApvaAnalysis\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_20260531_apva_bar_evidence_v01.csv
+Total rows: 35260
+Structural observations: 35260
+Structural state counts: {'MixedStructure': 90, 'NeutralProcessing': 11331, 'ReassertionProcessing': 6942, 'RecoveryResolution': 4873, 'CompressionProcessing': 6435, 'ExhaustionPersistence': 3652, 'DestructiveRotation': 682, 'DecayToNeutral': 1239, 'ConstructiveEmergence': 16}
+Structural state run counts: {'MixedStructure': 69, 'NeutralProcessing': 2383, 'ReassertionProcessing': 2241, 'RecoveryResolution': 1533, 'CompressionProcessing': 1987, 'ExhaustionPersistence': 1064, 'DestructiveRotation': 641, 'DecayToNeutral': 1013, 'ConstructiveEmergence': 16}
+
+Section 1 - State Count Table
+=============================
+State                           Count  Frequency     Runs
+RecoveryResolution               4873     13.82%     1533
+ExhaustionPersistence            3652     10.36%     1064
+CompressionProcessing            6435     18.25%     1987
+NeutralProcessing               11331     32.14%     2383
+ReassertionProcessing            6942     19.69%     2241
+DecayToNeutral                   1239      3.51%     1013
+DestructiveRotation               682      1.93%      641
+ConstructiveEmergence              16      0.05%       16
+MixedStructure                     90      0.26%       69
+
+Section 2 - State Run Summary
+=============================
+State                        RunCount    MeanLen  MedianLen   MaxLen
+RecoveryResolution               1533      3.179      4.000       11
+ExhaustionPersistence            1064      3.432      4.000       15
+CompressionProcessing            1987      3.239      3.000       17
+NeutralProcessing                2383      4.755      4.000       31
+ReassertionProcessing            2241      3.098      2.000       17
+DecayToNeutral                   1013      1.223      1.000        2
+DestructiveRotation               641      1.064      1.000        4
+ConstructiveEmergence              16      1.000      1.000        1
+MixedStructure                     69      1.304      1.000        4
+
+Section 3 - Age Bucket Distribution
+===================================
+State                        AgeBucket    Count
+RecoveryResolution           1            1533
+RecoveryResolution           2             982
+RecoveryResolution           3             970
+RecoveryResolution           4             969
+RecoveryResolution           5             130
+RecoveryResolution           6-10          284
+RecoveryResolution           11-20           5
+RecoveryResolution           21+             0
+ExhaustionPersistence        1            1064
+ExhaustionPersistence        2             815
+ExhaustionPersistence        3             702
+ExhaustionPersistence        4             597
+ExhaustionPersistence        5             208
+ExhaustionPersistence        6-10          255
+ExhaustionPersistence        11-20          11
+ExhaustionPersistence        21+             0
+CompressionProcessing        1            1987
+CompressionProcessing        2            1333
+CompressionProcessing        3            1103
+CompressionProcessing        4             934
+CompressionProcessing        5             580
+CompressionProcessing        6-10          472
+CompressionProcessing        11-20          26
+CompressionProcessing        21+             0
+NeutralProcessing            1            2383
+NeutralProcessing            2            1901
+NeutralProcessing            3            1640
+NeutralProcessing            4            1255
+NeutralProcessing            5             928
+NeutralProcessing            6-10         2279
+NeutralProcessing            11-20         888
+NeutralProcessing            21+            57
+ReassertionProcessing        1            2241
+ReassertionProcessing        2            1731
+ReassertionProcessing        3            1015
+ReassertionProcessing        4             737
+ReassertionProcessing        5             425
+ReassertionProcessing        6-10          726
+ReassertionProcessing        11-20          67
+ReassertionProcessing        21+             0
+DecayToNeutral               1            1013
+DecayToNeutral               2             226
+DecayToNeutral               3               0
+DecayToNeutral               4               0
+DecayToNeutral               5               0
+DecayToNeutral               6-10            0
+DecayToNeutral               11-20           0
+DecayToNeutral               21+             0
+DestructiveRotation          1             641
+DestructiveRotation          2              32
+DestructiveRotation          3               7
+DestructiveRotation          4               2
+DestructiveRotation          5               0
+DestructiveRotation          6-10            0
+DestructiveRotation          11-20           0
+DestructiveRotation          21+             0
+ConstructiveEmergence        1              16
+ConstructiveEmergence        2               0
+ConstructiveEmergence        3               0
+ConstructiveEmergence        4               0
+ConstructiveEmergence        5               0
+ConstructiveEmergence        6-10            0
+ConstructiveEmergence        11-20           0
+ConstructiveEmergence        21+             0
+MixedStructure               1              69
+MixedStructure               2              16
+MixedStructure               3               4
+MixedStructure               4               1
+MixedStructure               5               0
+MixedStructure               6-10            0
+MixedStructure               11-20           0
+MixedStructure               21+             0
+
+Section 4 - State Age Transition Table
+======================================
+State                        Age      NextState                     H    Count  Probability       Lift
+MixedStructure               1        RecoveryResolution            1        8       11.59%      0.839
+MixedStructure               1        ExhaustionPersistence         1        7       10.14%      0.979
+MixedStructure               1        CompressionProcessing         1        4        5.80%      0.318
+MixedStructure               1        NeutralProcessing             1       13       18.84%      0.586
+MixedStructure               1        ReassertionProcessing         1        1        1.45%      0.074
+MixedStructure               1        DecayToNeutral                1       20       28.99%      8.249
+MixedStructure               1        MixedStructure                1       16       23.19%     91.865
+MixedStructure               2        CompressionProcessing         1        1        6.25%      0.342
+MixedStructure               2        NeutralProcessing             1        5       31.25%      0.972
+MixedStructure               2        ReassertionProcessing         1        3       18.75%      0.952
+MixedStructure               2        DecayToNeutral                1        3       18.75%      5.336
+MixedStructure               2        MixedStructure                1        4       25.00%     99.042
+NeutralProcessing            1        RecoveryResolution            1       67        2.81%      0.203
+NeutralProcessing            1        ExhaustionPersistence         1       20        0.84%      0.081
+NeutralProcessing            1        CompressionProcessing         1       63        2.64%      0.145
+NeutralProcessing            1        NeutralProcessing             1     1901       79.77%      2.482
+NeutralProcessing            1        ReassertionProcessing         1      279       11.71%      0.595
+NeutralProcessing            1        DecayToNeutral                1        1        0.04%      0.012
+NeutralProcessing            1        DestructiveRotation           1       45        1.89%      0.976
+NeutralProcessing            1        ConstructiveEmergence         1        4        0.17%      3.699
+NeutralProcessing            1        MixedStructure                1        3        0.13%      0.499
+NeutralProcessing            2        RecoveryResolution            1       43        2.26%      0.164
+NeutralProcessing            2        ExhaustionPersistence         1       35        1.84%      0.178
+NeutralProcessing            2        CompressionProcessing         1       68        3.58%      0.196
+NeutralProcessing            2        NeutralProcessing             1     1640       86.27%      2.685
+NeutralProcessing            2        ReassertionProcessing         1       93        4.89%      0.248
+NeutralProcessing            2        DecayToNeutral                1        4        0.21%      0.060
+NeutralProcessing            2        DestructiveRotation           1       15        0.79%      0.408
+NeutralProcessing            2        MixedStructure                1        3        0.16%      0.625
+NeutralProcessing            3        RecoveryResolution            1       34        2.07%      0.150
+NeutralProcessing            3        ExhaustionPersistence         1       38        2.32%      0.224
+NeutralProcessing            3        CompressionProcessing         1       66        4.02%      0.221
+NeutralProcessing            3        NeutralProcessing             1     1255       76.52%      2.381
+NeutralProcessing            3        ReassertionProcessing         1      218       13.29%      0.675
+NeutralProcessing            3        DecayToNeutral                1        6        0.37%      0.104
+NeutralProcessing            3        DestructiveRotation           1       21        1.28%      0.662
+NeutralProcessing            3        MixedStructure                1        2        0.12%      0.483
+ReassertionProcessing        1        RecoveryResolution            1      108        4.82%      0.349
+ReassertionProcessing        1        ExhaustionPersistence         1       84        3.75%      0.362
+ReassertionProcessing        1        CompressionProcessing         1       73        3.26%      0.178
+ReassertionProcessing        1        NeutralProcessing             1      116        5.18%      0.161
+ReassertionProcessing        1        ReassertionProcessing         1     1731       77.24%      3.923
+ReassertionProcessing        1        DecayToNeutral                1      104        4.64%      1.321
+ReassertionProcessing        1        DestructiveRotation           1       16        0.71%      0.369
+ReassertionProcessing        1        MixedStructure                1        9        0.40%      1.591
+ReassertionProcessing        2        RecoveryResolution            1       89        5.14%      0.372
+ReassertionProcessing        2        ExhaustionPersistence         1       48        2.77%      0.268
+ReassertionProcessing        2        CompressionProcessing         1       29        1.68%      0.092
+ReassertionProcessing        2        NeutralProcessing             1      366       21.14%      0.658
+ReassertionProcessing        2        ReassertionProcessing         1     1015       58.64%      2.978
+ReassertionProcessing        2        DecayToNeutral                1      115        6.64%      1.891
+ReassertionProcessing        2        DestructiveRotation           1       60        3.47%      1.792
+ReassertionProcessing        2        MixedStructure                1        9        0.52%      2.060
+ReassertionProcessing        3        RecoveryResolution            1       33        3.25%      0.235
+ReassertionProcessing        3        ExhaustionPersistence         1       41        4.04%      0.390
+ReassertionProcessing        3        CompressionProcessing         1       38        3.74%      0.205
+ReassertionProcessing        3        NeutralProcessing             1      142       13.99%      0.435
+ReassertionProcessing        3        ReassertionProcessing         1      737       72.61%      3.688
+ReassertionProcessing        3        DecayToNeutral                1       14        1.38%      0.393
+ReassertionProcessing        3        DestructiveRotation           1        9        0.89%      0.458
+ReassertionProcessing        3        MixedStructure                1        1        0.10%      0.390
+NeutralProcessing            4        RecoveryResolution            1       20        1.59%      0.115
+NeutralProcessing            4        ExhaustionPersistence         1       17        1.35%      0.131
+NeutralProcessing            4        CompressionProcessing         1       54        4.30%      0.236
+NeutralProcessing            4        NeutralProcessing             1      928       73.94%      2.301
+NeutralProcessing            4        ReassertionProcessing         1      208       16.57%      0.842
+NeutralProcessing            4        DecayToNeutral                1        4        0.32%      0.091
+NeutralProcessing            4        DestructiveRotation           1       23        1.83%      0.947
+NeutralProcessing            4        MixedStructure                1        1        0.08%      0.316
+NeutralProcessing            5        RecoveryResolution            1       18        1.94%      0.140
+NeutralProcessing            5        ExhaustionPersistence         1       17        1.83%      0.177
+NeutralProcessing            5        CompressionProcessing         1       35        3.77%      0.207
+NeutralProcessing            5        NeutralProcessing             1      708       76.29%      2.374
+NeutralProcessing            5        ReassertionProcessing         1      131       14.12%      0.717
+NeutralProcessing            5        DecayToNeutral                1        3        0.32%      0.092
+NeutralProcessing            5        DestructiveRotation           1       15        1.62%      0.836
+NeutralProcessing            5        MixedStructure                1        1        0.11%      0.427
+NeutralProcessing            6-10     RecoveryResolution            1       35        1.54%      0.111
+NeutralProcessing            6-10     ExhaustionPersistence         1       47        2.06%      0.199
+NeutralProcessing            6-10     CompressionProcessing         1       73        3.20%      0.176
+NeutralProcessing            6-10     NeutralProcessing             1     1779       78.06%      2.429
+NeutralProcessing            6-10     ReassertionProcessing         1      299       13.12%      0.666
+NeutralProcessing            6-10     DecayToNeutral                1        7        0.31%      0.087
+NeutralProcessing            6-10     DestructiveRotation           1       39        1.71%      0.885
+RecoveryResolution           1        RecoveryResolution            1      982       64.06%      4.635
+RecoveryResolution           1        ExhaustionPersistence         1       36        2.35%      0.227
+RecoveryResolution           1        CompressionProcessing         1      480       31.31%      1.716
+RecoveryResolution           1        NeutralProcessing             1        5        0.33%      0.010
+RecoveryResolution           1        ReassertionProcessing         1       18        1.17%      0.060
+RecoveryResolution           1        DecayToNeutral                1        5        0.33%      0.093
+RecoveryResolution           1        MixedStructure                1        7        0.46%      1.809
+RecoveryResolution           2        RecoveryResolution            1      970       98.78%      7.147
+RecoveryResolution           2        CompressionProcessing         1       12        1.22%      0.067
+RecoveryResolution           3        RecoveryResolution            1      969       99.90%      7.228
+RecoveryResolution           3        CompressionProcessing         1        1        0.10%      0.006
+RecoveryResolution           4        RecoveryResolution            1      130       13.42%      0.971
+RecoveryResolution           4        ExhaustionPersistence         1      137       14.14%      1.365
+RecoveryResolution           4        CompressionProcessing         1      702       72.45%      3.969
+RecoveryResolution           5        RecoveryResolution            1      130      100.00%      7.236
+RecoveryResolution           6-10     RecoveryResolution            1      159       55.99%      4.051
+RecoveryResolution           6-10     ExhaustionPersistence         1       23        8.10%      0.782
+RecoveryResolution           6-10     CompressionProcessing         1      102       35.92%      1.968
+CompressionProcessing        1        RecoveryResolution            1      116        5.84%      0.422
+CompressionProcessing        1        ExhaustionPersistence         1       66        3.32%      0.321
+CompressionProcessing        1        CompressionProcessing         1     1333       67.09%      3.676
+CompressionProcessing        1        NeutralProcessing             1      251       12.63%      0.393
+CompressionProcessing        1        ReassertionProcessing         1      147        7.40%      0.376
+CompressionProcessing        1        DecayToNeutral                1       38        1.91%      0.544
+CompressionProcessing        1        DestructiveRotation           1       33        1.66%      0.859
+CompressionProcessing        1        MixedStructure                1        3        0.15%      0.598
+CompressionProcessing        2        RecoveryResolution            1       74        5.55%      0.402
+CompressionProcessing        2        ExhaustionPersistence         1       74        5.55%      0.536
+CompressionProcessing        2        CompressionProcessing         1     1103       82.75%      4.534
+CompressionProcessing        2        NeutralProcessing             1       39        2.93%      0.091
+CompressionProcessing        2        ReassertionProcessing         1       26        1.95%      0.099
+CompressionProcessing        2        DecayToNeutral                1        8        0.60%      0.171
+CompressionProcessing        2        DestructiveRotation           1        8        0.60%      0.310
+CompressionProcessing        2        MixedStructure                1        1        0.08%      0.297
+CompressionProcessing        3        RecoveryResolution            1       42        3.81%      0.276
+CompressionProcessing        3        ExhaustionPersistence         1       50        4.53%      0.438
+CompressionProcessing        3        CompressionProcessing         1      934       84.68%      4.640
+CompressionProcessing        3        NeutralProcessing             1       49        4.44%      0.138
+CompressionProcessing        3        ReassertionProcessing         1       12        1.09%      0.055
+CompressionProcessing        3        DecayToNeutral                1       12        1.09%      0.310
+CompressionProcessing        3        DestructiveRotation           1        4        0.36%      0.187
+CompressionProcessing        4        RecoveryResolution            1       43        4.60%      0.333
+CompressionProcessing        4        ExhaustionPersistence         1       44        4.71%      0.455
+CompressionProcessing        4        CompressionProcessing         1      580       62.10%      3.403
+CompressionProcessing        4        NeutralProcessing             1      152       16.27%      0.506
+CompressionProcessing        4        ReassertionProcessing         1       85        9.10%      0.462
+CompressionProcessing        4        DecayToNeutral                1       18        1.93%      0.548
+CompressionProcessing        4        DestructiveRotation           1       11        1.18%      0.609
+CompressionProcessing        4        MixedStructure                1        1        0.11%      0.424
+CompressionProcessing        5        RecoveryResolution            1       24        4.14%      0.299
+CompressionProcessing        5        ExhaustionPersistence         1       27        4.66%      0.449
+CompressionProcessing        5        CompressionProcessing         1      187       32.24%      1.767
+CompressionProcessing        5        NeutralProcessing             1      197       33.97%      1.057
+CompressionProcessing        5        ReassertionProcessing         1      107       18.45%      0.937
+CompressionProcessing        5        DecayToNeutral                1       23        3.97%      1.128
+CompressionProcessing        5        DestructiveRotation           1       14        2.41%      1.248
+CompressionProcessing        5        ConstructiveEmergence         1        1        0.17%      3.799
+ExhaustionPersistence        1        RecoveryResolution            1      227       21.33%      1.544
+ExhaustionPersistence        1        ExhaustionPersistence         1      815       76.60%      7.395
+ExhaustionPersistence        1        CompressionProcessing         1       20        1.88%      0.103
+ExhaustionPersistence        1        ReassertionProcessing         1        1        0.09%      0.005
+ExhaustionPersistence        1        DecayToNeutral                1        1        0.09%      0.027
+ExhaustionPersistence        2        RecoveryResolution            1       68        8.34%      0.604
+ExhaustionPersistence        2        ExhaustionPersistence         1      702       86.13%      8.316
+ExhaustionPersistence        2        CompressionProcessing         1        6        0.74%      0.040
+ExhaustionPersistence        2        NeutralProcessing             1       13        1.60%      0.050
+ExhaustionPersistence        2        ReassertionProcessing         1       15        1.84%      0.093
+ExhaustionPersistence        2        DecayToNeutral                1        9        1.10%      0.314
+ExhaustionPersistence        2        DestructiveRotation           1        2        0.25%      0.127
+ExhaustionPersistence        3        RecoveryResolution            1       85       12.11%      0.876
+ExhaustionPersistence        3        ExhaustionPersistence         1      597       85.04%      8.211
+ExhaustionPersistence        3        CompressionProcessing         1        2        0.28%      0.016
+ExhaustionPersistence        3        NeutralProcessing             1        7        1.00%      0.031
+ExhaustionPersistence        3        ReassertionProcessing         1        4        0.57%      0.029
+ExhaustionPersistence        3        DecayToNeutral                1        5        0.71%      0.203
+ExhaustionPersistence        3        DestructiveRotation           1        2        0.28%      0.147
+ExhaustionPersistence        4        RecoveryResolution            1       57        9.55%      0.691
+ExhaustionPersistence        4        ExhaustionPersistence         1      208       34.84%      3.364
+ExhaustionPersistence        4        CompressionProcessing         1       21        3.52%      0.193
+ExhaustionPersistence        4        NeutralProcessing             1      115       19.26%      0.599
+ExhaustionPersistence        4        ReassertionProcessing         1      115       19.26%      0.978
+ExhaustionPersistence        4        DecayToNeutral                1       63       10.55%      3.003
+ExhaustionPersistence        4        DestructiveRotation           1       17        2.85%      1.472
+ExhaustionPersistence        4        MixedStructure                1        1        0.17%      0.664
+ReassertionProcessing        4        RecoveryResolution            1       47        6.38%      0.461
+ReassertionProcessing        4        ExhaustionPersistence         1       29        3.93%      0.380
+ReassertionProcessing        4        CompressionProcessing         1        6        0.81%      0.045
+ReassertionProcessing        4        NeutralProcessing             1      115       15.60%      0.486
+ReassertionProcessing        4        ReassertionProcessing         1      425       57.67%      2.929
+ReassertionProcessing        4        DecayToNeutral                1       70        9.50%      2.703
+ReassertionProcessing        4        DestructiveRotation           1       43        5.83%      3.016
+ReassertionProcessing        4        MixedStructure                1        2        0.27%      1.075
+DestructiveRotation          1        RecoveryResolution            1      109       17.03%      1.232
+DestructiveRotation          1        ExhaustionPersistence         1      147       22.97%      2.218
+DestructiveRotation          1        CompressionProcessing         1        4        0.62%      0.034
+DestructiveRotation          1        NeutralProcessing             1        8        1.25%      0.039
+DestructiveRotation          1        ReassertionProcessing         1        5        0.78%      0.040
+DestructiveRotation          1        DecayToNeutral                1      332       51.88%     14.762
+DestructiveRotation          1        DestructiveRotation           1       32        5.00%      2.585
+DestructiveRotation          1        ConstructiveEmergence         1        3        0.47%     10.330
+ExhaustionPersistence        5        RecoveryResolution            1       16        7.69%      0.557
+ExhaustionPersistence        5        ExhaustionPersistence         1      107       51.44%      4.967
+ExhaustionPersistence        5        NeutralProcessing             1       38       18.27%      0.568
+ExhaustionPersistence        5        ReassertionProcessing         1       29       13.94%      0.708
+ExhaustionPersistence        5        DecayToNeutral                1       14        6.73%      1.915
+ExhaustionPersistence        5        DestructiveRotation           1        4        1.92%      0.994
+DecayToNeutral               1        RecoveryResolution            1       39        3.85%      0.279
+DecayToNeutral               1        CompressionProcessing         1       39        3.85%      0.211
+DecayToNeutral               1        NeutralProcessing             1      303       29.91%      0.931
+DecayToNeutral               1        ReassertionProcessing         1      216       21.32%      1.083
+DecayToNeutral               1        DecayToNeutral                1      226       22.31%      6.349
+DecayToNeutral               1        DestructiveRotation           1      176       17.37%      8.982
+DecayToNeutral               1        ConstructiveEmergence         1        5        0.49%     10.877
+DecayToNeutral               1        MixedStructure                1        9        0.89%      3.520
+ExhaustionPersistence        6-10     RecoveryResolution            1       25        9.80%      0.709
+ExhaustionPersistence        6-10     ExhaustionPersistence         1      152       59.61%      5.755
+ExhaustionPersistence        6-10     CompressionProcessing         1        5        1.96%      0.107
+ExhaustionPersistence        6-10     NeutralProcessing             1       28       10.98%      0.342
+ExhaustionPersistence        6-10     ReassertionProcessing         1       27       10.59%      0.538
+ExhaustionPersistence        6-10     DecayToNeutral                1       13        5.10%      1.451
+ExhaustionPersistence        6-10     DestructiveRotation           1        5        1.96%      1.014
+ReassertionProcessing        5        RecoveryResolution            1       19        4.47%      0.323
+ReassertionProcessing        5        ExhaustionPersistence         1       17        4.00%      0.386
+ReassertionProcessing        5        CompressionProcessing         1       14        3.29%      0.180
+ReassertionProcessing        5        NeutralProcessing             1       73       17.18%      0.534
+ReassertionProcessing        5        ReassertionProcessing         1      290       68.24%      3.466
+ReassertionProcessing        5        DecayToNeutral                1       10        2.35%      0.670
+ReassertionProcessing        5        DestructiveRotation           1        2        0.47%      0.243
+ReassertionProcessing        6-10     RecoveryResolution            1       30        4.13%      0.299
+ReassertionProcessing        6-10     ExhaustionPersistence         1       18        2.48%      0.239
+ReassertionProcessing        6-10     CompressionProcessing         1       14        1.93%      0.106
+ReassertionProcessing        6-10     NeutralProcessing             1      134       18.46%      0.574
+ReassertionProcessing        6-10     ReassertionProcessing         1      461       63.50%      3.225
+ReassertionProcessing        6-10     DecayToNeutral                1       52        7.16%      2.038
+ReassertionProcessing        6-10     DestructiveRotation           1       14        1.93%      0.997
+ReassertionProcessing        6-10     MixedStructure                1        3        0.41%      1.637
+ReassertionProcessing        11-20    RecoveryResolution            1        3        4.48%      0.324
+ReassertionProcessing        11-20    ExhaustionPersistence         1        2        2.99%      0.288
+ReassertionProcessing        11-20    CompressionProcessing         1        2        2.99%      0.164
+ReassertionProcessing        11-20    NeutralProcessing             1       14       20.90%      0.650
+ReassertionProcessing        11-20    ReassertionProcessing         1       42       62.69%      3.184
+ReassertionProcessing        11-20    DecayToNeutral                1        4        5.97%      1.699
+NeutralProcessing            11-20    RecoveryResolution            1       24        2.70%      0.196
+NeutralProcessing            11-20    ExhaustionPersistence         1       13        1.46%      0.141
+NeutralProcessing            11-20    CompressionProcessing         1       37        4.17%      0.228
+NeutralProcessing            11-20    NeutralProcessing             1      695       78.27%      2.435
+NeutralProcessing            11-20    ReassertionProcessing         1       97       10.92%      0.555
+NeutralProcessing            11-20    DecayToNeutral                1        5        0.56%      0.160
+NeutralProcessing            11-20    DestructiveRotation           1       16        1.80%      0.932
+NeutralProcessing            11-20    MixedStructure                1        1        0.11%      0.446
+CompressionProcessing        6-10     RecoveryResolution            1       21        4.45%      0.322
+CompressionProcessing        6-10     ExhaustionPersistence         1       20        4.24%      0.409
+CompressionProcessing        6-10     CompressionProcessing         1      298       63.14%      3.459
+CompressionProcessing        6-10     NeutralProcessing             1       69       14.62%      0.455
+CompressionProcessing        6-10     ReassertionProcessing         1       42        8.90%      0.452
+CompressionProcessing        6-10     DecayToNeutral                1       14        2.97%      0.844
+CompressionProcessing        6-10     DestructiveRotation           1        8        1.69%      0.876
+DestructiveRotation          2        RecoveryResolution            1        2        6.25%      0.452
+DestructiveRotation          2        ExhaustionPersistence         1        2        6.25%      0.603
+DestructiveRotation          2        DecayToNeutral                1       21       65.62%     18.675
+DestructiveRotation          2        DestructiveRotation           1        7       21.88%     11.309
+DecayToNeutral               2        RecoveryResolution            1        3        1.33%      0.096
+DecayToNeutral               2        CompressionProcessing         1       10        4.42%      0.242
+DecayToNeutral               2        NeutralProcessing             1      124       54.87%      1.707
+DecayToNeutral               2        ReassertionProcessing         1       48       21.24%      1.079
+DecayToNeutral               2        DestructiveRotation           1       34       15.04%      7.778
+DecayToNeutral               2        ConstructiveEmergence         1        3        1.33%     29.252
+DecayToNeutral               2        MixedStructure                1        4        1.77%      7.012
+RecoveryResolution           11-20    ExhaustionPersistence         1        1       20.00%      1.931
+RecoveryResolution           11-20    CompressionProcessing         1        4       80.00%      4.383
+ConstructiveEmergence        1        DecayToNeutral                1       10       62.50%     17.786
+ConstructiveEmergence        1        MixedStructure                1        6       37.50%    148.563
+NeutralProcessing            21+      RecoveryResolution            1        1        1.75%      0.127
+NeutralProcessing            21+      ExhaustionPersistence         1        2        3.51%      0.339
+NeutralProcessing            21+      CompressionProcessing         1        2        3.51%      0.192
+NeutralProcessing            21+      NeutralProcessing             1       42       73.68%      2.293
+NeutralProcessing            21+      ReassertionProcessing         1        8       14.04%      0.713
+NeutralProcessing            21+      DestructiveRotation           1        2        3.51%      1.814
+CompressionProcessing        11-20    RecoveryResolution            1        2        7.69%      0.557
+CompressionProcessing        11-20    CompressionProcessing         1       13       50.00%      2.740
+CompressionProcessing        11-20    NeutralProcessing             1        3       11.54%      0.359
+CompressionProcessing        11-20    ReassertionProcessing         1        5       19.23%      0.977
+CompressionProcessing        11-20    DestructiveRotation           1        3       11.54%      5.965
+MixedStructure               3        NeutralProcessing             1        2       50.00%      1.556
+MixedStructure               3        ReassertionProcessing         1        1       25.00%      1.270
+MixedStructure               3        MixedStructure                1        1       25.00%     99.042
+DestructiveRotation          3        RecoveryResolution            1        1       14.29%      1.034
+DestructiveRotation          3        ExhaustionPersistence         1        1       14.29%      1.379
+DestructiveRotation          3        DecayToNeutral                1        3       42.86%     12.196
+DestructiveRotation          3        DestructiveRotation           1        2       28.57%     14.771
+DestructiveRotation          4        ExhaustionPersistence         1        1       50.00%      4.827
+DestructiveRotation          4        DecayToNeutral                1        1       50.00%     14.229
+ExhaustionPersistence        11-20    ExhaustionPersistence         1        7       63.64%      6.144
+ExhaustionPersistence        11-20    NeutralProcessing             1        2       18.18%      0.566
+ExhaustionPersistence        11-20    ReassertionProcessing         1        1        9.09%      0.462
+ExhaustionPersistence        11-20    MixedStructure                1        1        9.09%     36.015
+MixedStructure               4        DecayToNeutral                1        1      100.00%     28.458
+MixedStructure               1        RecoveryResolution            3        9       13.04%      0.944
+MixedStructure               1        ExhaustionPersistence         3        6        8.70%      0.839
+MixedStructure               1        CompressionProcessing         3        7       10.14%      0.556
+MixedStructure               1        NeutralProcessing             3       22       31.88%      0.992
+MixedStructure               1        ReassertionProcessing         3       12       17.39%      0.883
+MixedStructure               1        DecayToNeutral                3        5        7.25%      2.062
+MixedStructure               1        DestructiveRotation           3        2        2.90%      1.498
+MixedStructure               1        ConstructiveEmergence         3        1        1.45%     31.936
+MixedStructure               1        MixedStructure                3        5        7.25%     29.032
+MixedStructure               2        CompressionProcessing         3        1        6.25%      0.342
+MixedStructure               2        NeutralProcessing             3       10       62.50%      1.945
+MixedStructure               2        ReassertionProcessing         3        3       18.75%      0.952
+MixedStructure               2        DecayToNeutral                3        2       12.50%      3.557
+NeutralProcessing            1        RecoveryResolution            3      137        5.75%      0.416
+NeutralProcessing            1        ExhaustionPersistence         3      126        5.29%      0.510
+NeutralProcessing            1        CompressionProcessing         3      269       11.29%      0.618
+NeutralProcessing            1        NeutralProcessing             3     1370       57.49%      1.789
+NeutralProcessing            1        ReassertionProcessing         3      405       17.00%      0.863
+NeutralProcessing            1        DecayToNeutral                3       33        1.38%      0.394
+NeutralProcessing            1        DestructiveRotation           3       38        1.59%      0.824
+NeutralProcessing            1        ConstructiveEmergence         3        1        0.04%      0.925
+NeutralProcessing            1        MixedStructure                3        4        0.17%      0.673
+NeutralProcessing            2        RecoveryResolution            3      120        6.31%      0.457
+NeutralProcessing            2        ExhaustionPersistence         3      103        5.42%      0.523
+NeutralProcessing            2        CompressionProcessing         3      220       11.57%      0.634
+NeutralProcessing            2        NeutralProcessing             3      948       49.87%      1.552
+NeutralProcessing            2        ReassertionProcessing         3      436       22.94%      1.165
+NeutralProcessing            2        DecayToNeutral                3       36        1.89%      0.539
+NeutralProcessing            2        DestructiveRotation           3       34        1.79%      0.925
+NeutralProcessing            2        MixedStructure                3        4        0.21%      0.843
+NeutralProcessing            3        RecoveryResolution            3      135        8.23%      0.596
+NeutralProcessing            3        ExhaustionPersistence         3       96        5.85%      0.565
+NeutralProcessing            3        CompressionProcessing         3      168       10.24%      0.561
+NeutralProcessing            3        NeutralProcessing             3      746       45.49%      1.416
+NeutralProcessing            3        ReassertionProcessing         3      404       24.63%      1.251
+NeutralProcessing            3        DecayToNeutral                3       60        3.66%      1.041
+NeutralProcessing            3        DestructiveRotation           3       29        1.77%      0.914
+NeutralProcessing            3        MixedStructure                3        2        0.12%      0.489
+ReassertionProcessing        1        RecoveryResolution            3      210        9.37%      0.678
+ReassertionProcessing        1        ExhaustionPersistence         3      168        7.50%      0.724
+ReassertionProcessing        1        CompressionProcessing         3      248       11.07%      0.606
+ReassertionProcessing        1        NeutralProcessing             3      562       25.08%      0.780
+ReassertionProcessing        1        ReassertionProcessing         3      918       40.96%      2.080
+ReassertionProcessing        1        DecayToNeutral                3       90        4.02%      1.143
+ReassertionProcessing        1        DestructiveRotation           3       39        1.74%      0.900
+ReassertionProcessing        1        MixedStructure                3        6        0.27%      1.073
+ReassertionProcessing        2        RecoveryResolution            3      181       10.46%      0.757
+ReassertionProcessing        2        ExhaustionPersistence         3      127        7.34%      0.709
+ReassertionProcessing        2        CompressionProcessing         3      156        9.02%      0.494
+ReassertionProcessing        2        NeutralProcessing             3      562       32.49%      1.011
+ReassertionProcessing        2        ReassertionProcessing         3      522       30.17%      1.532
+ReassertionProcessing        2        DecayToNeutral                3      119        6.88%      1.957
+ReassertionProcessing        2        DestructiveRotation           3       60        3.47%      1.793
+ReassertionProcessing        2        MixedStructure                3        3        0.17%      0.695
+ReassertionProcessing        3        RecoveryResolution            3       99        9.76%      0.706
+ReassertionProcessing        3        ExhaustionPersistence         3       87        8.58%      0.828
+ReassertionProcessing        3        CompressionProcessing         3       96        9.47%      0.519
+ReassertionProcessing        3        NeutralProcessing             3      346       34.12%      1.062
+ReassertionProcessing        3        ReassertionProcessing         3      321       31.66%      1.608
+ReassertionProcessing        3        DecayToNeutral                3       47        4.64%      1.319
+ReassertionProcessing        3        DestructiveRotation           3       14        1.38%      0.714
+ReassertionProcessing        3        ConstructiveEmergence         3        1        0.10%      2.173
+ReassertionProcessing        3        MixedStructure                3        3        0.30%      1.185
+NeutralProcessing            4        RecoveryResolution            3       90        7.17%      0.519
+NeutralProcessing            4        ExhaustionPersistence         3       73        5.82%      0.562
+NeutralProcessing            4        CompressionProcessing         3      132       10.52%      0.576
+NeutralProcessing            4        NeutralProcessing             3      606       48.29%      1.503
+NeutralProcessing            4        ReassertionProcessing         3      292       23.27%      1.182
+NeutralProcessing            4        DecayToNeutral                3       32        2.55%      0.726
+NeutralProcessing            4        DestructiveRotation           3       24        1.91%      0.989
+NeutralProcessing            4        ConstructiveEmergence         3        1        0.08%      1.756
+NeutralProcessing            4        MixedStructure                3        5        0.40%      1.596
+NeutralProcessing            5        RecoveryResolution            3       63        6.79%      0.491
+NeutralProcessing            5        ExhaustionPersistence         3       56        6.03%      0.583
+NeutralProcessing            5        CompressionProcessing         3       99       10.67%      0.584
+NeutralProcessing            5        NeutralProcessing             3      448       48.28%      1.502
+NeutralProcessing            5        ReassertionProcessing         3      217       23.38%      1.188
+NeutralProcessing            5        DecayToNeutral                3       25        2.69%      0.767
+NeutralProcessing            5        DestructiveRotation           3       17        1.83%      0.947
+NeutralProcessing            5        MixedStructure                3        3        0.32%      1.295
+NeutralProcessing            6-10     RecoveryResolution            3      169        7.42%      0.537
+NeutralProcessing            6-10     ExhaustionPersistence         3      133        5.84%      0.563
+NeutralProcessing            6-10     CompressionProcessing         3      183        8.03%      0.440
+NeutralProcessing            6-10     NeutralProcessing             3     1151       50.50%      1.572
+NeutralProcessing            6-10     ReassertionProcessing         3      522       22.90%      1.163
+NeutralProcessing            6-10     DecayToNeutral                3       75        3.29%      0.936
+NeutralProcessing            6-10     DestructiveRotation           3       45        1.97%      1.021
+NeutralProcessing            6-10     MixedStructure                3        1        0.04%      0.176
+RecoveryResolution           1        RecoveryResolution            3     1024       66.80%      4.833
+RecoveryResolution           1        ExhaustionPersistence         3       49        3.20%      0.309
+RecoveryResolution           1        CompressionProcessing         3      424       27.66%      1.515
+RecoveryResolution           1        NeutralProcessing             3       12        0.78%      0.024
+RecoveryResolution           1        ReassertionProcessing         3       14        0.91%      0.046
+RecoveryResolution           1        DecayToNeutral                3        5        0.33%      0.093
+RecoveryResolution           1        MixedStructure                3        5        0.33%      1.307
+RecoveryResolution           2        RecoveryResolution            3      130       13.24%      0.958
+RecoveryResolution           2        ExhaustionPersistence         3      141       14.36%      1.386
+RecoveryResolution           2        CompressionProcessing         3      711       72.40%      3.967
+RecoveryResolution           3        RecoveryResolution            3      186       19.18%      1.387
+RecoveryResolution           3        ExhaustionPersistence         3      144       14.85%      1.433
+RecoveryResolution           3        CompressionProcessing         3      227       23.40%      1.282
+RecoveryResolution           3        NeutralProcessing             3      223       22.99%      0.715
+RecoveryResolution           3        ReassertionProcessing         3      130       13.40%      0.681
+RecoveryResolution           3        DecayToNeutral                3       28        2.89%      0.821
+RecoveryResolution           3        DestructiveRotation           3       29        2.99%      1.546
+RecoveryResolution           3        MixedStructure                3        3        0.31%      1.239
+RecoveryResolution           4        RecoveryResolution            3      159       16.41%      1.187
+RecoveryResolution           4        ExhaustionPersistence         3      127       13.11%      1.265
+RecoveryResolution           4        CompressionProcessing         3      210       21.67%      1.187
+RecoveryResolution           4        NeutralProcessing             3      252       26.01%      0.809
+RecoveryResolution           4        ReassertionProcessing         3      152       15.69%      0.797
+RecoveryResolution           4        DecayToNeutral                3       43        4.44%      1.263
+RecoveryResolution           4        DestructiveRotation           3       20        2.06%      1.067
+RecoveryResolution           4        ConstructiveEmergence         3        2        0.21%      4.548
+RecoveryResolution           4        MixedStructure                3        4        0.41%      1.654
+RecoveryResolution           5        RecoveryResolution            3       52       40.00%      2.894
+RecoveryResolution           5        ExhaustionPersistence         3       17       13.08%      1.262
+RecoveryResolution           5        CompressionProcessing         3       38       29.23%      1.602
+RecoveryResolution           5        NeutralProcessing             3       11        8.46%      0.263
+RecoveryResolution           5        ReassertionProcessing         3        5        3.85%      0.195
+RecoveryResolution           5        DecayToNeutral                3        5        3.85%      1.094
+RecoveryResolution           5        DestructiveRotation           3        2        1.54%      0.795
+RecoveryResolution           6-10     RecoveryResolution            3       50       17.61%      1.274
+RecoveryResolution           6-10     ExhaustionPersistence         3       52       18.31%      1.768
+RecoveryResolution           6-10     CompressionProcessing         3       90       31.69%      1.736
+RecoveryResolution           6-10     NeutralProcessing             3       44       15.49%      0.482
+RecoveryResolution           6-10     ReassertionProcessing         3       31       10.92%      0.554
+RecoveryResolution           6-10     DecayToNeutral                3        8        2.82%      0.802
+RecoveryResolution           6-10     DestructiveRotation           3        8        2.82%      1.456
+RecoveryResolution           6-10     ConstructiveEmergence         3        1        0.35%      7.759
+CompressionProcessing        1        RecoveryResolution            3      225       11.32%      0.819
+CompressionProcessing        1        ExhaustionPersistence         3      187        9.41%      0.909
+CompressionProcessing        1        CompressionProcessing         3     1058       53.25%      2.917
+CompressionProcessing        1        NeutralProcessing             3      290       14.59%      0.454
+CompressionProcessing        1        ReassertionProcessing         3      160        8.05%      0.409
+CompressionProcessing        1        DecayToNeutral                3       38        1.91%      0.544
+CompressionProcessing        1        DestructiveRotation           3       27        1.36%      0.702
+CompressionProcessing        1        MixedStructure                3        2        0.10%      0.403
+CompressionProcessing        2        RecoveryResolution            3      167       12.53%      0.906
+CompressionProcessing        2        ExhaustionPersistence         3      135       10.13%      0.978
+CompressionProcessing        2        CompressionProcessing         3      632       47.41%      2.598
+CompressionProcessing        2        NeutralProcessing             3      233       17.48%      0.544
+CompressionProcessing        2        ReassertionProcessing         3      122        9.15%      0.465
+CompressionProcessing        2        DecayToNeutral                3       26        1.95%      0.555
+CompressionProcessing        2        DestructiveRotation           3       17        1.28%      0.659
+CompressionProcessing        2        MixedStructure                3        1        0.08%      0.301
+CompressionProcessing        3        RecoveryResolution            3      138       12.51%      0.905
+CompressionProcessing        3        ExhaustionPersistence         3      109        9.88%      0.954
+CompressionProcessing        3        CompressionProcessing         3      223       20.22%      1.108
+CompressionProcessing        3        NeutralProcessing             3      369       33.45%      1.041
+CompressionProcessing        3        ReassertionProcessing         3      200       18.13%      0.921
+CompressionProcessing        3        DecayToNeutral                3       39        3.54%      1.006
+CompressionProcessing        3        DestructiveRotation           3       22        1.99%      1.031
+CompressionProcessing        3        ConstructiveEmergence         3        2        0.18%      3.996
+CompressionProcessing        3        MixedStructure                3        1        0.09%      0.363
+CompressionProcessing        4        RecoveryResolution            3      116       12.42%      0.899
+CompressionProcessing        4        ExhaustionPersistence         3       79        8.46%      0.817
+CompressionProcessing        4        CompressionProcessing         3      165       17.67%      0.968
+CompressionProcessing        4        NeutralProcessing             3      334       35.76%      1.113
+CompressionProcessing        4        ReassertionProcessing         3      176       18.84%      0.957
+CompressionProcessing        4        DecayToNeutral                3       34        3.64%      1.036
+CompressionProcessing        4        DestructiveRotation           3       28        3.00%      1.550
+CompressionProcessing        4        MixedStructure                3        2        0.21%      0.858
+CompressionProcessing        5        RecoveryResolution            3       61       10.52%      0.761
+CompressionProcessing        5        ExhaustionPersistence         3       41        7.07%      0.682
+CompressionProcessing        5        CompressionProcessing         3      128       22.07%      1.209
+CompressionProcessing        5        NeutralProcessing             3      194       33.45%      1.041
+CompressionProcessing        5        ReassertionProcessing         3      104       17.93%      0.911
+CompressionProcessing        5        DecayToNeutral                3       27        4.66%      1.325
+CompressionProcessing        5        DestructiveRotation           3       24        4.14%      2.139
+CompressionProcessing        5        MixedStructure                3        1        0.17%      0.691
+ExhaustionPersistence        1        RecoveryResolution            3      359       33.74%      2.441
+ExhaustionPersistence        1        ExhaustionPersistence         3      615       57.80%      5.580
+ExhaustionPersistence        1        CompressionProcessing         3       39        3.67%      0.201
+ExhaustionPersistence        1        NeutralProcessing             3       30        2.82%      0.088
+ExhaustionPersistence        1        ReassertionProcessing         3       11        1.03%      0.053
+ExhaustionPersistence        1        DecayToNeutral                3        7        0.66%      0.187
+ExhaustionPersistence        1        DestructiveRotation           3        2        0.19%      0.097
+ExhaustionPersistence        1        MixedStructure                3        1        0.09%      0.377
+ExhaustionPersistence        2        RecoveryResolution            3      168       20.61%      1.491
+ExhaustionPersistence        2        ExhaustionPersistence         3      221       27.12%      2.618
+ExhaustionPersistence        2        CompressionProcessing         3       65        7.98%      0.437
+ExhaustionPersistence        2        NeutralProcessing             3      144       17.67%      0.550
+ExhaustionPersistence        2        ReassertionProcessing         3      125       15.34%      0.779
+ExhaustionPersistence        2        DecayToNeutral                3       70        8.59%      2.444
+ExhaustionPersistence        2        DestructiveRotation           3       19        2.33%      1.205
+ExhaustionPersistence        2        ConstructiveEmergence         3        1        0.12%      2.704
+ExhaustionPersistence        2        MixedStructure                3        2        0.25%      0.983
+ExhaustionPersistence        3        RecoveryResolution            3       95       13.53%      0.979
+ExhaustionPersistence        3        ExhaustionPersistence         3      132       18.80%      1.815
+ExhaustionPersistence        3        CompressionProcessing         3       88       12.54%      0.687
+ExhaustionPersistence        3        NeutralProcessing             3      204       29.06%      0.904
+ExhaustionPersistence        3        ReassertionProcessing         3      137       19.52%      0.991
+ExhaustionPersistence        3        DecayToNeutral                3       24        3.42%      0.973
+ExhaustionPersistence        3        DestructiveRotation           3       19        2.71%      1.399
+ExhaustionPersistence        3        ConstructiveEmergence         3        1        0.14%      3.139
+ExhaustionPersistence        3        MixedStructure                3        2        0.28%      1.141
+ExhaustionPersistence        4        RecoveryResolution            3       74       12.40%      0.897
+ExhaustionPersistence        4        ExhaustionPersistence         3      101       16.92%      1.633
+ExhaustionPersistence        4        CompressionProcessing         3       76       12.73%      0.697
+ExhaustionPersistence        4        NeutralProcessing             3      193       32.33%      1.006
+ExhaustionPersistence        4        ReassertionProcessing         3      120       20.10%      1.021
+ExhaustionPersistence        4        DecayToNeutral                3       23        3.85%      1.096
+ExhaustionPersistence        4        DestructiveRotation           3        9        1.51%      0.779
+ExhaustionPersistence        4        MixedStructure                3        1        0.17%      0.671
+ReassertionProcessing        4        RecoveryResolution            3       69        9.36%      0.677
+ReassertionProcessing        4        ExhaustionPersistence         3       57        7.73%      0.747
+ReassertionProcessing        4        CompressionProcessing         3       80       10.85%      0.595
+ReassertionProcessing        4        NeutralProcessing             3      233       31.61%      0.984
+ReassertionProcessing        4        ReassertionProcessing         3      237       32.16%      1.633
+ReassertionProcessing        4        DecayToNeutral                3       43        5.83%      1.660
+ReassertionProcessing        4        DestructiveRotation           3       17        2.31%      1.192
+ReassertionProcessing        4        MixedStructure                3        1        0.14%      0.544
+DestructiveRotation          1        RecoveryResolution            3      167       26.09%      1.888
+DestructiveRotation          1        ExhaustionPersistence         3      120       18.75%      1.810
+DestructiveRotation          1        CompressionProcessing         3       46        7.19%      0.394
+DestructiveRotation          1        NeutralProcessing             3       97       15.16%      0.472
+DestructiveRotation          1        ReassertionProcessing         3      105       16.41%      0.833
+DestructiveRotation          1        DecayToNeutral                3       55        8.59%      2.445
+DestructiveRotation          1        DestructiveRotation           3       43        6.72%      3.473
+DestructiveRotation          1        ConstructiveEmergence         3        3        0.47%     10.329
+DestructiveRotation          1        MixedStructure                3        4        0.62%      2.504
+ExhaustionPersistence        5        RecoveryResolution            3       35       16.83%      1.217
+ExhaustionPersistence        5        ExhaustionPersistence         3       49       23.56%      2.274
+ExhaustionPersistence        5        CompressionProcessing         3       15        7.21%      0.395
+ExhaustionPersistence        5        NeutralProcessing             3       58       27.88%      0.868
+ExhaustionPersistence        5        ReassertionProcessing         3       39       18.75%      0.952
+ExhaustionPersistence        5        DecayToNeutral                3        9        4.33%      1.231
+ExhaustionPersistence        5        DestructiveRotation           3        3        1.44%      0.746
+DecayToNeutral               1        RecoveryResolution            3      115       11.35%      0.821
+DecayToNeutral               1        ExhaustionPersistence         3       67        6.61%      0.639
+DecayToNeutral               1        CompressionProcessing         3      102       10.07%      0.552
+DecayToNeutral               1        NeutralProcessing             3      363       35.83%      1.115
+DecayToNeutral               1        ReassertionProcessing         3      252       24.88%      1.263
+DecayToNeutral               1        DecayToNeutral                3       91        8.98%      2.556
+DecayToNeutral               1        DestructiveRotation           3       15        1.48%      0.765
+DecayToNeutral               1        MixedStructure                3        8        0.79%      3.164
+ExhaustionPersistence        6-10     RecoveryResolution            3       25        9.80%      0.709
+ExhaustionPersistence        6-10     ExhaustionPersistence         3       53       20.78%      2.007
+ExhaustionPersistence        6-10     CompressionProcessing         3       31       12.16%      0.666
+ExhaustionPersistence        6-10     NeutralProcessing             3       80       31.37%      0.976
+ExhaustionPersistence        6-10     ReassertionProcessing         3       46       18.04%      0.916
+ExhaustionPersistence        6-10     DecayToNeutral                3       13        5.10%      1.451
+ExhaustionPersistence        6-10     DestructiveRotation           3        7        2.75%      1.419
+ReassertionProcessing        5        RecoveryResolution            3       30        7.06%      0.511
+ReassertionProcessing        5        ExhaustionPersistence         3       24        5.65%      0.545
+ReassertionProcessing        5        CompressionProcessing         3       50       11.76%      0.645
+ReassertionProcessing        5        NeutralProcessing             3      137       32.24%      1.003
+ReassertionProcessing        5        ReassertionProcessing         3      156       36.71%      1.864
+ReassertionProcessing        5        DecayToNeutral                3       18        4.24%      1.205
+ReassertionProcessing        5        DestructiveRotation           3        7        1.65%      0.851
+ReassertionProcessing        5        ConstructiveEmergence         3        1        0.24%      5.185
+ReassertionProcessing        5        MixedStructure                3        2        0.47%      1.885
+ReassertionProcessing        6-10     RecoveryResolution            3       61        8.40%      0.608
+ReassertionProcessing        6-10     ExhaustionPersistence         3       40        5.51%      0.532
+ReassertionProcessing        6-10     CompressionProcessing         3       67        9.23%      0.506
+ReassertionProcessing        6-10     NeutralProcessing             3      267       36.78%      1.144
+ReassertionProcessing        6-10     ReassertionProcessing         3      228       31.40%      1.595
+ReassertionProcessing        6-10     DecayToNeutral                3       45        6.20%      1.764
+ReassertionProcessing        6-10     DestructiveRotation           3       14        1.93%      0.997
+ReassertionProcessing        6-10     ConstructiveEmergence         3        1        0.14%      3.035
+ReassertionProcessing        6-10     MixedStructure                3        3        0.41%      1.656
+ReassertionProcessing        11-20    RecoveryResolution            3        5        7.46%      0.540
+ReassertionProcessing        11-20    ExhaustionPersistence         3        5        7.46%      0.720
+ReassertionProcessing        11-20    CompressionProcessing         3        7       10.45%      0.572
+ReassertionProcessing        11-20    NeutralProcessing             3       26       38.81%      1.208
+ReassertionProcessing        11-20    ReassertionProcessing         3       20       29.85%      1.516
+ReassertionProcessing        11-20    DecayToNeutral                3        3        4.48%      1.274
+ReassertionProcessing        11-20    DestructiveRotation           3        1        1.49%      0.772
+NeutralProcessing            11-20    RecoveryResolution            3       70        7.88%      0.570
+NeutralProcessing            11-20    ExhaustionPersistence         3       48        5.41%      0.522
+NeutralProcessing            11-20    CompressionProcessing         3      110       12.39%      0.679
+NeutralProcessing            11-20    NeutralProcessing             3      437       49.21%      1.531
+NeutralProcessing            11-20    ReassertionProcessing         3      174       19.59%      0.995
+NeutralProcessing            11-20    DecayToNeutral                3       27        3.04%      0.865
+NeutralProcessing            11-20    DestructiveRotation           3       19        2.14%      1.106
+NeutralProcessing            11-20    MixedStructure                3        3        0.34%      1.354
+CompressionProcessing        6-10     RecoveryResolution            3       57       12.08%      0.874
+CompressionProcessing        6-10     ExhaustionPersistence         3       43        9.11%      0.880
+CompressionProcessing        6-10     CompressionProcessing         3      122       25.85%      1.416
+CompressionProcessing        6-10     NeutralProcessing             3      130       27.54%      0.857
+CompressionProcessing        6-10     ReassertionProcessing         3       93       19.70%      1.001
+CompressionProcessing        6-10     DecayToNeutral                3       15        3.18%      0.904
+CompressionProcessing        6-10     DestructiveRotation           3       12        2.54%      1.314
+DestructiveRotation          2        RecoveryResolution            3        2        6.25%      0.452
+DestructiveRotation          2        ExhaustionPersistence         3        4       12.50%      1.207
+DestructiveRotation          2        CompressionProcessing         3        2        6.25%      0.342
+DestructiveRotation          2        NeutralProcessing             3        7       21.88%      0.681
+DestructiveRotation          2        ReassertionProcessing         3        5       15.62%      0.794
+DestructiveRotation          2        DecayToNeutral                3        8       25.00%      7.114
+DestructiveRotation          2        DestructiveRotation           3        4       12.50%      6.462
+DecayToNeutral               2        RecoveryResolution            3       12        5.31%      0.384
+DecayToNeutral               2        ExhaustionPersistence         3        7        3.10%      0.299
+DecayToNeutral               2        CompressionProcessing         3       34       15.04%      0.824
+DecayToNeutral               2        NeutralProcessing             3      142       62.83%      1.955
+DecayToNeutral               2        ReassertionProcessing         3       23       10.18%      0.517
+DecayToNeutral               2        DecayToNeutral                3        1        0.44%      0.126
+DecayToNeutral               2        DestructiveRotation           3        6        2.65%      1.372
+DecayToNeutral               2        MixedStructure                3        1        0.44%      1.773
+RecoveryResolution           11-20    CompressionProcessing         3        3       60.00%      3.287
+RecoveryResolution           11-20    NeutralProcessing             3        1       20.00%      0.622
+RecoveryResolution           11-20    DestructiveRotation           3        1       20.00%     10.339
+ConstructiveEmergence        1        RecoveryResolution            3        2       12.50%      0.904
+ConstructiveEmergence        1        ExhaustionPersistence         3        1        6.25%      0.603
+ConstructiveEmergence        1        CompressionProcessing         3        1        6.25%      0.342
+ConstructiveEmergence        1        NeutralProcessing             3        4       25.00%      0.778
+ConstructiveEmergence        1        ReassertionProcessing         3        2       12.50%      0.635
+ConstructiveEmergence        1        DecayToNeutral                3        2       12.50%      3.557
+ConstructiveEmergence        1        MixedStructure                3        4       25.00%    100.162
+NeutralProcessing            21+      RecoveryResolution            3        2        3.51%      0.254
+NeutralProcessing            21+      ExhaustionPersistence         3        3        5.26%      0.508
+NeutralProcessing            21+      CompressionProcessing         3        7       12.28%      0.673
+NeutralProcessing            21+      NeutralProcessing             3       29       50.88%      1.583
+NeutralProcessing            21+      ReassertionProcessing         3       11       19.30%      0.980
+NeutralProcessing            21+      DecayToNeutral                3        3        5.26%      1.498
+NeutralProcessing            21+      DestructiveRotation           3        2        3.51%      1.814
+CompressionProcessing        11-20    RecoveryResolution            3        1        3.85%      0.278
+CompressionProcessing        11-20    CompressionProcessing         3        5       19.23%      1.054
+CompressionProcessing        11-20    NeutralProcessing             3        7       26.92%      0.838
+CompressionProcessing        11-20    ReassertionProcessing         3        7       26.92%      1.367
+CompressionProcessing        11-20    DecayToNeutral                3        4       15.38%      4.378
+CompressionProcessing        11-20    DestructiveRotation           3        2        7.69%      3.977
+MixedStructure               3        NeutralProcessing             3        3       75.00%      2.334
+MixedStructure               3        DecayToNeutral                3        1       25.00%      7.114
+DestructiveRotation          3        RecoveryResolution            3        1       14.29%      1.034
+DestructiveRotation          3        ExhaustionPersistence         3        2       28.57%      2.758
+DestructiveRotation          3        NeutralProcessing             3        1       14.29%      0.445
+DestructiveRotation          3        ReassertionProcessing         3        2       28.57%      1.451
+DestructiveRotation          3        DestructiveRotation           3        1       14.29%      7.385
+DestructiveRotation          4        ExhaustionPersistence         3        2      100.00%      9.654
+ExhaustionPersistence        11-20    RecoveryResolution            3        2       18.18%      1.315
+ExhaustionPersistence        11-20    ExhaustionPersistence         3        2       18.18%      1.755
+ExhaustionPersistence        11-20    NeutralProcessing             3        3       27.27%      0.849
+ExhaustionPersistence        11-20    ReassertionProcessing         3        3       27.27%      1.385
+ExhaustionPersistence        11-20    MixedStructure                3        1        9.09%     36.423
+MixedStructure               4        NeutralProcessing             3        1      100.00%      3.112
+MixedStructure               1        RecoveryResolution            5        3        4.35%      0.315
+MixedStructure               1        ExhaustionPersistence         5        6        8.70%      0.839
+MixedStructure               1        CompressionProcessing         5       15       21.74%      1.191
+MixedStructure               1        NeutralProcessing             5       27       39.13%      1.218
+MixedStructure               1        ReassertionProcessing         5       12       17.39%      0.883
+MixedStructure               1        DecayToNeutral                5        3        4.35%      1.237
+MixedStructure               1        DestructiveRotation           5        1        1.45%      0.749
+MixedStructure               1        MixedStructure                5        2        2.90%     11.612
+MixedStructure               2        RecoveryResolution            5        2       12.50%      0.904
+MixedStructure               2        CompressionProcessing         5        1        6.25%      0.342
+MixedStructure               2        NeutralProcessing             5        7       43.75%      1.362
+MixedStructure               2        ReassertionProcessing         5        5       31.25%      1.587
+MixedStructure               2        ConstructiveEmergence         5        1        6.25%    137.715
+NeutralProcessing            1        RecoveryResolution            5      267       11.20%      0.811
+NeutralProcessing            1        ExhaustionPersistence         5      205        8.60%      0.830
+NeutralProcessing            1        CompressionProcessing         5      393       16.49%      0.904
+NeutralProcessing            1        NeutralProcessing             5      862       36.17%      1.126
+NeutralProcessing            1        ReassertionProcessing         5      527       22.11%      1.123
+NeutralProcessing            1        DecayToNeutral                5       88        3.69%      1.051
+NeutralProcessing            1        DestructiveRotation           5       38        1.59%      0.824
+NeutralProcessing            1        MixedStructure                5        3        0.13%      0.504
+NeutralProcessing            2        RecoveryResolution            5      211       11.10%      0.803
+NeutralProcessing            2        ExhaustionPersistence         5      165        8.68%      0.838
+NeutralProcessing            2        CompressionProcessing         5      318       16.73%      0.916
+NeutralProcessing            2        NeutralProcessing             5      705       37.09%      1.154
+NeutralProcessing            2        ReassertionProcessing         5      403       21.20%      1.077
+NeutralProcessing            2        DecayToNeutral                5       56        2.95%      0.838
+NeutralProcessing            2        DestructiveRotation           5       37        1.95%      1.006
+NeutralProcessing            2        ConstructiveEmergence         5        1        0.05%      1.159
+NeutralProcessing            2        MixedStructure                5        5        0.26%      1.054
+NeutralProcessing            3        RecoveryResolution            5      196       11.95%      0.865
+NeutralProcessing            3        ExhaustionPersistence         5      139        8.48%      0.818
+NeutralProcessing            3        CompressionProcessing         5      275       16.77%      0.919
+NeutralProcessing            3        NeutralProcessing             5      582       35.49%      1.104
+NeutralProcessing            3        ReassertionProcessing         5      368       22.44%      1.140
+NeutralProcessing            3        DecayToNeutral                5       45        2.74%      0.781
+NeutralProcessing            3        DestructiveRotation           5       28        1.71%      0.883
+NeutralProcessing            3        MixedStructure                5        7        0.43%      1.710
+ReassertionProcessing        1        RecoveryResolution            5      265       11.83%      0.856
+ReassertionProcessing        1        ExhaustionPersistence         5      207        9.24%      0.892
+ReassertionProcessing        1        CompressionProcessing         5      420       18.75%      1.027
+ReassertionProcessing        1        NeutralProcessing             5      783       34.96%      1.088
+ReassertionProcessing        1        ReassertionProcessing         5      457       20.40%      1.036
+ReassertionProcessing        1        DecayToNeutral                5       68        3.04%      0.864
+ReassertionProcessing        1        DestructiveRotation           5       33        1.47%      0.762
+ReassertionProcessing        1        ConstructiveEmergence         5        2        0.09%      1.967
+ReassertionProcessing        1        MixedStructure                5        5        0.22%      0.894
+ReassertionProcessing        2        RecoveryResolution            5      193       11.16%      0.807
+ReassertionProcessing        2        ExhaustionPersistence         5      148        8.55%      0.826
+ReassertionProcessing        2        CompressionProcessing         5      310       17.92%      0.982
+ReassertionProcessing        2        NeutralProcessing             5      590       34.10%      1.061
+ReassertionProcessing        2        ReassertionProcessing         5      398       23.01%      1.168
+ReassertionProcessing        2        DecayToNeutral                5       59        3.41%      0.970
+ReassertionProcessing        2        DestructiveRotation           5       29        1.68%      0.867
+ReassertionProcessing        2        MixedStructure                5        3        0.17%      0.695
+ReassertionProcessing        3        RecoveryResolution            5      110       10.85%      0.785
+ReassertionProcessing        3        ExhaustionPersistence         5       85        8.38%      0.809
+ReassertionProcessing        3        CompressionProcessing         5      179       17.65%      0.967
+ReassertionProcessing        3        NeutralProcessing             5      342       33.73%      1.050
+ReassertionProcessing        3        ReassertionProcessing         5      244       24.06%      1.222
+ReassertionProcessing        3        DecayToNeutral                5       34        3.35%      0.954
+ReassertionProcessing        3        DestructiveRotation           5       15        1.48%      0.765
+ReassertionProcessing        3        ConstructiveEmergence         5        1        0.10%      2.173
+ReassertionProcessing        3        MixedStructure                5        4        0.39%      1.580
+NeutralProcessing            4        RecoveryResolution            5      142       11.31%      0.819
+NeutralProcessing            4        ExhaustionPersistence         5      114        9.08%      0.877
+NeutralProcessing            4        CompressionProcessing         5      202       16.10%      0.882
+NeutralProcessing            4        NeutralProcessing             5      450       35.86%      1.116
+NeutralProcessing            4        ReassertionProcessing         5      292       23.27%      1.182
+NeutralProcessing            4        DecayToNeutral                5       38        3.03%      0.862
+NeutralProcessing            4        DestructiveRotation           5       16        1.27%      0.659
+NeutralProcessing            4        MixedStructure                5        1        0.08%      0.319
+NeutralProcessing            5        RecoveryResolution            5      114       12.28%      0.889
+NeutralProcessing            5        ExhaustionPersistence         5       80        8.62%      0.832
+NeutralProcessing            5        CompressionProcessing         5      133       14.33%      0.785
+NeutralProcessing            5        NeutralProcessing             5      331       35.67%      1.110
+NeutralProcessing            5        ReassertionProcessing         5      219       23.60%      1.198
+NeutralProcessing            5        DecayToNeutral                5       35        3.77%      1.073
+NeutralProcessing            5        DestructiveRotation           5       16        1.72%      0.891
+NeutralProcessing            6-10     RecoveryResolution            5      270       11.85%      0.857
+NeutralProcessing            6-10     ExhaustionPersistence         5      179        7.85%      0.758
+NeutralProcessing            6-10     CompressionProcessing         5      296       12.99%      0.712
+NeutralProcessing            6-10     NeutralProcessing             5      869       38.13%      1.187
+NeutralProcessing            6-10     ReassertionProcessing         5      532       23.34%      1.186
+NeutralProcessing            6-10     DecayToNeutral                5       86        3.77%      1.074
+NeutralProcessing            6-10     DestructiveRotation           5       44        1.93%      0.998
+NeutralProcessing            6-10     MixedStructure                5        3        0.13%      0.527
+RecoveryResolution           1        RecoveryResolution            5      293       19.11%      1.383
+RecoveryResolution           1        ExhaustionPersistence         5      207       13.50%      1.304
+RecoveryResolution           1        CompressionProcessing         5      338       22.05%      1.208
+RecoveryResolution           1        NeutralProcessing             5      386       25.18%      0.784
+RecoveryResolution           1        ReassertionProcessing         5      215       14.02%      0.712
+RecoveryResolution           1        DecayToNeutral                5       49        3.20%      0.910
+RecoveryResolution           1        DestructiveRotation           5       40        2.61%      1.349
+RecoveryResolution           1        MixedStructure                5        5        0.33%      1.307
+RecoveryResolution           2        RecoveryResolution            5      162       16.50%      1.194
+RecoveryResolution           2        ExhaustionPersistence         5      129       13.14%      1.268
+RecoveryResolution           2        CompressionProcessing         5      214       21.79%      1.194
+RecoveryResolution           2        NeutralProcessing             5      254       25.87%      0.805
+RecoveryResolution           2        ReassertionProcessing         5      154       15.68%      0.796
+RecoveryResolution           2        DecayToNeutral                5       43        4.38%      1.246
+RecoveryResolution           2        DestructiveRotation           5       20        2.04%      1.053
+RecoveryResolution           2        ConstructiveEmergence         5        2        0.20%      4.488
+RecoveryResolution           2        MixedStructure                5        4        0.41%      1.632
+RecoveryResolution           3        RecoveryResolution            5      170       17.53%      1.268
+RecoveryResolution           3        ExhaustionPersistence         5      123       12.68%      1.224
+RecoveryResolution           3        CompressionProcessing         5      195       20.10%      1.101
+RecoveryResolution           3        NeutralProcessing             5      268       27.63%      0.860
+RecoveryResolution           3        ReassertionProcessing         5      153       15.77%      0.801
+RecoveryResolution           3        DecayToNeutral                5       36        3.71%      1.056
+RecoveryResolution           3        DestructiveRotation           5       23        2.37%      1.226
+RecoveryResolution           3        MixedStructure                5        2        0.21%      0.826
+RecoveryResolution           4        RecoveryResolution            5      162       16.72%      1.210
+RecoveryResolution           4        ExhaustionPersistence         5      119       12.28%      1.186
+RecoveryResolution           4        CompressionProcessing         5      201       20.74%      1.136
+RecoveryResolution           4        NeutralProcessing             5      271       27.97%      0.870
+RecoveryResolution           4        ReassertionProcessing         5      163       16.82%      0.854
+RecoveryResolution           4        DecayToNeutral                5       32        3.30%      0.940
+RecoveryResolution           4        DestructiveRotation           5       17        1.75%      0.907
+RecoveryResolution           4        ConstructiveEmergence         5        2        0.21%      4.548
+RecoveryResolution           4        MixedStructure                5        2        0.21%      0.827
+RecoveryResolution           5        RecoveryResolution            5       25       19.23%      1.391
+RecoveryResolution           5        ExhaustionPersistence         5       23       17.69%      1.708
+RecoveryResolution           5        CompressionProcessing         5       29       22.31%      1.222
+RecoveryResolution           5        NeutralProcessing             5       30       23.08%      0.718
+RecoveryResolution           5        ReassertionProcessing         5       17       13.08%      0.664
+RecoveryResolution           5        DecayToNeutral                5        3        2.31%      0.657
+RecoveryResolution           5        DestructiveRotation           5        2        1.54%      0.795
+RecoveryResolution           5        MixedStructure                5        1        0.77%      3.082
+RecoveryResolution           6-10     RecoveryResolution            5       52       18.31%      1.325
+RecoveryResolution           6-10     ExhaustionPersistence         5       47       16.55%      1.598
+RecoveryResolution           6-10     CompressionProcessing         5       62       21.83%      1.196
+RecoveryResolution           6-10     NeutralProcessing             5       56       19.72%      0.614
+RecoveryResolution           6-10     ReassertionProcessing         5       36       12.68%      0.644
+RecoveryResolution           6-10     DecayToNeutral                5       16        5.63%      1.603
+RecoveryResolution           6-10     DestructiveRotation           5       15        5.28%      2.730
+CompressionProcessing        1        RecoveryResolution            5      340       17.11%      1.238
+CompressionProcessing        1        ExhaustionPersistence         5      218       10.97%      1.059
+CompressionProcessing        1        CompressionProcessing         5      422       21.24%      1.164
+CompressionProcessing        1        NeutralProcessing             5      568       28.59%      0.890
+CompressionProcessing        1        ReassertionProcessing         5      329       16.56%      0.841
+CompressionProcessing        1        DecayToNeutral                5       66        3.32%      0.945
+CompressionProcessing        1        DestructiveRotation           5       40        2.01%      1.041
+CompressionProcessing        1        ConstructiveEmergence         5        2        0.10%      2.218
+CompressionProcessing        1        MixedStructure                5        2        0.10%      0.403
+CompressionProcessing        2        RecoveryResolution            5      223       16.73%      1.210
+CompressionProcessing        2        ExhaustionPersistence         5      151       11.33%      1.094
+CompressionProcessing        2        CompressionProcessing         5      254       19.05%      1.044
+CompressionProcessing        2        NeutralProcessing             5      400       30.01%      0.934
+CompressionProcessing        2        ReassertionProcessing         5      224       16.80%      0.853
+CompressionProcessing        2        DecayToNeutral                5       44        3.30%      0.939
+CompressionProcessing        2        DestructiveRotation           5       35        2.63%      1.357
+CompressionProcessing        2        MixedStructure                5        2        0.15%      0.601
+CompressionProcessing        3        RecoveryResolution            5      169       15.32%      1.108
+CompressionProcessing        3        ExhaustionPersistence         5      125       11.33%      1.094
+CompressionProcessing        3        CompressionProcessing         5      196       17.77%      0.974
+CompressionProcessing        3        NeutralProcessing             5      337       30.55%      0.951
+CompressionProcessing        3        ReassertionProcessing         5      202       18.31%      0.930
+CompressionProcessing        3        DecayToNeutral                5       41        3.72%      1.058
+CompressionProcessing        3        DestructiveRotation           5       31        2.81%      1.453
+CompressionProcessing        3        MixedStructure                5        2        0.18%      0.726
+CompressionProcessing        4        RecoveryResolution            5      132       14.13%      1.022
+CompressionProcessing        4        ExhaustionPersistence         5       98       10.49%      1.013
+CompressionProcessing        4        CompressionProcessing         5      179       19.16%      1.050
+CompressionProcessing        4        NeutralProcessing             5      278       29.76%      0.926
+CompressionProcessing        4        ReassertionProcessing         5      193       20.66%      1.049
+CompressionProcessing        4        DecayToNeutral                5       33        3.53%      1.005
+CompressionProcessing        4        DestructiveRotation           5       18        1.93%      0.996
+CompressionProcessing        4        MixedStructure                5        3        0.32%      1.287
+CompressionProcessing        5        RecoveryResolution            5       81       13.97%      1.010
+CompressionProcessing        5        ExhaustionPersistence         5       48        8.28%      0.799
+CompressionProcessing        5        CompressionProcessing         5      117       20.17%      1.105
+CompressionProcessing        5        NeutralProcessing             5      181       31.21%      0.971
+CompressionProcessing        5        ReassertionProcessing         5      113       19.48%      0.989
+CompressionProcessing        5        DecayToNeutral                5       27        4.66%      1.325
+CompressionProcessing        5        DestructiveRotation           5       12        2.07%      1.070
+CompressionProcessing        5        MixedStructure                5        1        0.17%      0.691
+ExhaustionPersistence        1        RecoveryResolution            5      196       18.42%      1.333
+ExhaustionPersistence        1        ExhaustionPersistence         5      183       17.20%      1.660
+ExhaustionPersistence        1        CompressionProcessing         5      251       23.59%      1.292
+ExhaustionPersistence        1        NeutralProcessing             5      234       21.99%      0.684
+ExhaustionPersistence        1        ReassertionProcessing         5      146       13.72%      0.697
+ExhaustionPersistence        1        DecayToNeutral                5       30        2.82%      0.802
+ExhaustionPersistence        1        DestructiveRotation           5       21        1.97%      1.020
+ExhaustionPersistence        1        ConstructiveEmergence         5        1        0.09%      2.071
+ExhaustionPersistence        1        MixedStructure                5        2        0.19%      0.753
+ExhaustionPersistence        2        RecoveryResolution            5      144       17.67%      1.278
+ExhaustionPersistence        2        ExhaustionPersistence         5      123       15.09%      1.457
+ExhaustionPersistence        2        CompressionProcessing         5      158       19.39%      1.062
+ExhaustionPersistence        2        NeutralProcessing             5      219       26.87%      0.836
+ExhaustionPersistence        2        ReassertionProcessing         5      128       15.71%      0.798
+ExhaustionPersistence        2        DecayToNeutral                5       25        3.07%      0.873
+ExhaustionPersistence        2        DestructiveRotation           5       16        1.96%      1.015
+ExhaustionPersistence        2        MixedStructure                5        2        0.25%      0.983
+ExhaustionPersistence        3        RecoveryResolution            5      108       15.38%      1.113
+ExhaustionPersistence        3        ExhaustionPersistence         5       89       12.68%      1.224
+ExhaustionPersistence        3        CompressionProcessing         5      138       19.66%      1.077
+ExhaustionPersistence        3        NeutralProcessing             5      198       28.21%      0.878
+ExhaustionPersistence        3        ReassertionProcessing         5      124       17.66%      0.897
+ExhaustionPersistence        3        DecayToNeutral                5       28        3.99%      1.135
+ExhaustionPersistence        3        DestructiveRotation           5       13        1.85%      0.957
+ExhaustionPersistence        3        MixedStructure                5        4        0.57%      2.283
+ExhaustionPersistence        4        RecoveryResolution            5       82       13.74%      0.994
+ExhaustionPersistence        4        ExhaustionPersistence         5       61       10.22%      0.986
+ExhaustionPersistence        4        CompressionProcessing         5      104       17.42%      0.954
+ExhaustionPersistence        4        NeutralProcessing             5      192       32.16%      1.001
+ExhaustionPersistence        4        ReassertionProcessing         5      122       20.44%      1.038
+ExhaustionPersistence        4        DecayToNeutral                5       24        4.02%      1.144
+ExhaustionPersistence        4        DestructiveRotation           5        8        1.34%      0.693
+ExhaustionPersistence        4        ConstructiveEmergence         5        1        0.17%      3.691
+ExhaustionPersistence        4        MixedStructure                5        3        0.50%      2.013
+ReassertionProcessing        4        RecoveryResolution            5       87       11.80%      0.854
+ReassertionProcessing        4        ExhaustionPersistence         5       68        9.23%      0.891
+ReassertionProcessing        4        CompressionProcessing         5      128       17.37%      0.952
+ReassertionProcessing        4        NeutralProcessing             5      248       33.65%      1.047
+ReassertionProcessing        4        ReassertionProcessing         5      161       21.85%      1.109
+ReassertionProcessing        4        DecayToNeutral                5       31        4.21%      1.197
+ReassertionProcessing        4        DestructiveRotation           5        9        1.22%      0.631
+ReassertionProcessing        4        ConstructiveEmergence         5        1        0.14%      2.990
+ReassertionProcessing        4        MixedStructure                5        4        0.54%      2.174
+DestructiveRotation          1        RecoveryResolution            5      118       18.44%      1.334
+DestructiveRotation          1        ExhaustionPersistence         5       91       14.22%      1.373
+DestructiveRotation          1        CompressionProcessing         5      148       23.12%      1.267
+DestructiveRotation          1        NeutralProcessing             5      145       22.66%      0.705
+DestructiveRotation          1        ReassertionProcessing         5       94       14.69%      0.746
+DestructiveRotation          1        DecayToNeutral                5       20        3.12%      0.889
+DestructiveRotation          1        DestructiveRotation           5       20        3.12%      1.615
+DestructiveRotation          1        ConstructiveEmergence         5        1        0.16%      3.443
+DestructiveRotation          1        MixedStructure                5        3        0.47%      1.878
+ExhaustionPersistence        5        RecoveryResolution            5       23       11.11%      0.804
+ExhaustionPersistence        5        ExhaustionPersistence         5       25       12.08%      1.166
+ExhaustionPersistence        5        CompressionProcessing         5       31       14.98%      0.820
+ExhaustionPersistence        5        NeutralProcessing             5       72       34.78%      1.083
+ExhaustionPersistence        5        ReassertionProcessing         5       47       22.71%      1.153
+ExhaustionPersistence        5        DecayToNeutral                5        8        3.86%      1.100
+ExhaustionPersistence        5        DestructiveRotation           5        1        0.48%      0.250
+DecayToNeutral               1        RecoveryResolution            5      144       14.22%      1.028
+DecayToNeutral               1        ExhaustionPersistence         5      110       10.86%      1.048
+DecayToNeutral               1        CompressionProcessing         5      173       17.08%      0.936
+DecayToNeutral               1        NeutralProcessing             5      299       29.52%      0.919
+DecayToNeutral               1        ReassertionProcessing         5      216       21.32%      1.083
+DecayToNeutral               1        DecayToNeutral                5       36        3.55%      1.011
+DecayToNeutral               1        DestructiveRotation           5       27        2.67%      1.378
+DecayToNeutral               1        ConstructiveEmergence         5        1        0.10%      2.175
+DecayToNeutral               1        MixedStructure                5        7        0.69%      2.768
+ExhaustionPersistence        6-10     RecoveryResolution            5       26       10.20%      0.738
+ExhaustionPersistence        6-10     ExhaustionPersistence         5       42       16.47%      1.590
+ExhaustionPersistence        6-10     CompressionProcessing         5       44       17.25%      0.945
+ExhaustionPersistence        6-10     NeutralProcessing             5       76       29.80%      0.928
+ExhaustionPersistence        6-10     ReassertionProcessing         5       44       17.25%      0.876
+ExhaustionPersistence        6-10     DecayToNeutral                5       15        5.88%      1.674
+ExhaustionPersistence        6-10     DestructiveRotation           5        7        2.75%      1.419
+ExhaustionPersistence        6-10     MixedStructure                5        1        0.39%      1.571
+ReassertionProcessing        5        RecoveryResolution            5       47       11.06%      0.800
+ReassertionProcessing        5        ExhaustionPersistence         5       36        8.47%      0.818
+ReassertionProcessing        5        CompressionProcessing         5       72       16.94%      0.928
+ReassertionProcessing        5        NeutralProcessing             5      149       35.06%      1.091
+ReassertionProcessing        5        ReassertionProcessing         5       97       22.82%      1.159
+ReassertionProcessing        5        DecayToNeutral                5       16        3.76%      1.071
+ReassertionProcessing        5        DestructiveRotation           5        5        1.18%      0.608
+ReassertionProcessing        5        MixedStructure                5        3        0.71%      2.828
+ReassertionProcessing        6-10     RecoveryResolution            5       71        9.78%      0.708
+ReassertionProcessing        6-10     ExhaustionPersistence         5       51        7.02%      0.678
+ReassertionProcessing        6-10     CompressionProcessing         5      128       17.63%      0.966
+ReassertionProcessing        6-10     NeutralProcessing             5      284       39.12%      1.217
+ReassertionProcessing        6-10     ReassertionProcessing         5      162       22.31%      1.133
+ReassertionProcessing        6-10     DecayToNeutral                5       23        3.17%      0.901
+ReassertionProcessing        6-10     DestructiveRotation           5        7        0.96%      0.498
+ReassertionProcessing        11-20    RecoveryResolution            5        6        8.96%      0.648
+ReassertionProcessing        11-20    ExhaustionPersistence         5        8       11.94%      1.153
+ReassertionProcessing        11-20    CompressionProcessing         5       12       17.91%      0.981
+ReassertionProcessing        11-20    NeutralProcessing             5       28       41.79%      1.301
+ReassertionProcessing        11-20    ReassertionProcessing         5       11       16.42%      0.834
+ReassertionProcessing        11-20    DecayToNeutral                5        2        2.99%      0.849
+NeutralProcessing            11-20    RecoveryResolution            5      117       13.18%      0.953
+NeutralProcessing            11-20    ExhaustionPersistence         5       67        7.55%      0.728
+NeutralProcessing            11-20    CompressionProcessing         5      164       18.47%      1.012
+NeutralProcessing            11-20    NeutralProcessing             5      328       36.94%      1.150
+NeutralProcessing            11-20    ReassertionProcessing         5      159       17.91%      0.909
+NeutralProcessing            11-20    DecayToNeutral                5       34        3.83%      1.089
+NeutralProcessing            11-20    DestructiveRotation           5       18        2.03%      1.048
+NeutralProcessing            11-20    MixedStructure                5        1        0.11%      0.451
+CompressionProcessing        6-10     RecoveryResolution            5       78       16.53%      1.196
+CompressionProcessing        6-10     ExhaustionPersistence         5       47        9.96%      0.961
+CompressionProcessing        6-10     CompressionProcessing         5       75       15.89%      0.871
+CompressionProcessing        6-10     NeutralProcessing             5      149       31.57%      0.982
+CompressionProcessing        6-10     ReassertionProcessing         5       89       18.86%      0.958
+CompressionProcessing        6-10     DecayToNeutral                5       23        4.87%      1.387
+CompressionProcessing        6-10     DestructiveRotation           5       11        2.33%      1.205
+DestructiveRotation          2        RecoveryResolution            5        3        9.38%      0.678
+DestructiveRotation          2        ExhaustionPersistence         5        4       12.50%      1.207
+DestructiveRotation          2        CompressionProcessing         5        4       12.50%      0.685
+DestructiveRotation          2        NeutralProcessing             5       15       46.88%      1.459
+DestructiveRotation          2        ReassertionProcessing         5        4       12.50%      0.635
+DestructiveRotation          2        DecayToNeutral                5        2        6.25%      1.778
+DecayToNeutral               2        RecoveryResolution            5       29       12.83%      0.928
+DecayToNeutral               2        ExhaustionPersistence         5       20        8.85%      0.854
+DecayToNeutral               2        CompressionProcessing         5       36       15.93%      0.873
+DecayToNeutral               2        NeutralProcessing             5       66       29.20%      0.909
+DecayToNeutral               2        ReassertionProcessing         5       62       27.43%      1.393
+DecayToNeutral               2        DecayToNeutral                5        9        3.98%      1.133
+DecayToNeutral               2        DestructiveRotation           5        3        1.33%      0.686
+DecayToNeutral               2        MixedStructure                5        1        0.44%      1.773
+RecoveryResolution           11-20    RecoveryResolution            5        1       20.00%      1.447
+RecoveryResolution           11-20    ExhaustionPersistence         5        1       20.00%      1.931
+RecoveryResolution           11-20    CompressionProcessing         5        2       40.00%      2.191
+RecoveryResolution           11-20    DestructiveRotation           5        1       20.00%     10.339
+ConstructiveEmergence        1        RecoveryResolution            5        1        6.25%      0.452
+ConstructiveEmergence        1        ExhaustionPersistence         5        1        6.25%      0.603
+ConstructiveEmergence        1        CompressionProcessing         5        2       12.50%      0.685
+ConstructiveEmergence        1        NeutralProcessing             5        8       50.00%      1.556
+ConstructiveEmergence        1        ReassertionProcessing         5        1        6.25%      0.317
+ConstructiveEmergence        1        DecayToNeutral                5        3       18.75%      5.335
+NeutralProcessing            21+      RecoveryResolution            5        4        7.02%      0.508
+NeutralProcessing            21+      ExhaustionPersistence         5        5        8.77%      0.847
+NeutralProcessing            21+      CompressionProcessing         5       11       19.30%      1.057
+NeutralProcessing            21+      NeutralProcessing             5       19       33.33%      1.037
+NeutralProcessing            21+      ReassertionProcessing         5       12       21.05%      1.069
+NeutralProcessing            21+      DecayToNeutral                5        3        5.26%      1.498
+NeutralProcessing            21+      DestructiveRotation           5        3        5.26%      2.721
+CompressionProcessing        11-20    RecoveryResolution            5        2        7.69%      0.557
+CompressionProcessing        11-20    CompressionProcessing         5        4       15.38%      0.843
+CompressionProcessing        11-20    NeutralProcessing             5       11       42.31%      1.317
+CompressionProcessing        11-20    ReassertionProcessing         5        5       19.23%      0.977
+CompressionProcessing        11-20    DecayToNeutral                5        2        7.69%      2.189
+CompressionProcessing        11-20    DestructiveRotation           5        2        7.69%      3.976
+MixedStructure               3        RecoveryResolution            5        1       25.00%      1.809
+MixedStructure               3        NeutralProcessing             5        2       50.00%      1.556
+MixedStructure               3        DecayToNeutral                5        1       25.00%      7.114
+DestructiveRotation          3        ExhaustionPersistence         5        2       28.57%      2.758
+DestructiveRotation          3        CompressionProcessing         5        1       14.29%      0.783
+DestructiveRotation          3        NeutralProcessing             5        2       28.57%      0.889
+DestructiveRotation          3        ReassertionProcessing         5        2       28.57%      1.451
+DestructiveRotation          4        ExhaustionPersistence         5        2      100.00%      9.654
+ExhaustionPersistence        11-20    RecoveryResolution            5        3       27.27%      1.973
+ExhaustionPersistence        11-20    NeutralProcessing             5        6       54.55%      1.698
+ExhaustionPersistence        11-20    DecayToNeutral                5        2       18.18%      5.174
+MixedStructure               4        NeutralProcessing             5        1      100.00%      3.112
+
+Section 5 - State Age Outcome Table
+===================================
+State                        Age         Count      MeanDR    MedianDR     Cont5     Fail5     Flat5      Skew
+RecoveryResolution           1            1290    -0.00002     0.00000    45.58%    49.84%     4.57%    -4.26%
+RecoveryResolution           2             875    -0.00003    -0.00005    44.34%    51.31%     4.34%    -6.97%
+RecoveryResolution           3             861    -0.00000     0.00000    47.27%    49.48%     3.25%    -2.21%
+RecoveryResolution           4             869     0.00000     0.00000    47.64%    48.45%     3.91%    -0.81%
+RecoveryResolution           5             120    -0.00005     0.00000    48.33%    44.17%     7.50%     4.17%
+RecoveryResolution           6-10          253    -0.00004     0.00000    47.04%    49.80%     3.16%    -2.77%
+RecoveryResolution           11-20           3     0.00065     0.00060   100.00%     0.00%     0.00%   100.00%
+ExhaustionPersistence        1            1038    -0.00002     0.00000    45.76%    48.36%     5.88%    -2.60%
+ExhaustionPersistence        2             745    -0.00003     0.00000    46.58%    48.99%     4.43%    -2.42%
+ExhaustionPersistence        3             648    -0.00001     0.00000    45.99%    48.30%     5.71%    -2.31%
+ExhaustionPersistence        4             531     0.00002     0.00000    46.70%    48.96%     4.33%    -2.26%
+ExhaustionPersistence        5             184     0.00002     0.00000    48.37%    47.28%     4.35%     1.09%
+ExhaustionPersistence        6-10          229    -0.00008    -0.00010    42.36%    53.71%     3.93%   -11.35%
+ExhaustionPersistence        11-20          11     0.00010     0.00040    54.55%    45.45%     0.00%     9.09%
+CompressionProcessing        1            1715    -0.00001     0.00000    46.71%    49.21%     4.08%    -2.51%
+CompressionProcessing        2            1174    -0.00003     0.00000    44.97%    49.23%     5.79%    -4.26%
+CompressionProcessing        3             959     0.00001     0.00000    47.45%    47.97%     4.59%    -0.52%
+CompressionProcessing        4             816    -0.00002    -0.00005    44.73%    50.37%     4.90%    -5.64%
+CompressionProcessing        5             513     0.00002     0.00005    50.68%    44.44%     4.87%     6.24%
+CompressionProcessing        6-10          408    -0.00001    -0.00002    43.87%    50.00%     6.13%    -6.13%
+CompressionProcessing        11-20          24    -0.00022    -0.00023    16.67%    79.17%     4.17%   -62.50%
+NeutralProcessing            1            2002    -0.00000     0.00000    46.65%    48.30%     5.04%    -1.65%
+NeutralProcessing            2            1663    -0.00000     0.00000    47.38%    45.94%     6.67%     1.44%
+NeutralProcessing            3            1404     0.00000     0.00000    45.51%    48.93%     5.56%    -3.42%
+NeutralProcessing            4            1067    -0.00000     0.00000    46.30%    48.55%     5.15%    -2.25%
+NeutralProcessing            5             807     0.00001     0.00000    48.95%    46.96%     4.09%     1.98%
+NeutralProcessing            6-10         1954    -0.00003     0.00000    45.19%    49.39%     5.42%    -4.20%
+NeutralProcessing            11-20         732    -0.00000     0.00000    45.49%    46.99%     7.51%    -1.50%
+NeutralProcessing            21+            52     0.00003     0.00005    55.77%    36.54%     7.69%    19.23%
+ReassertionProcessing        1            2124     0.00000     0.00000    46.70%    47.98%     5.32%    -1.27%
+ReassertionProcessing        2            1548    -0.00001     0.00000    46.90%    47.55%     5.56%    -0.65%
+ReassertionProcessing        3             917    -0.00004     0.00000    46.35%    47.76%     5.89%    -1.42%
+ReassertionProcessing        4             636    -0.00001     0.00000    47.33%    48.27%     4.40%    -0.94%
+ReassertionProcessing        5             390    -0.00004    -0.00005    43.33%    51.03%     5.64%    -7.69%
+ReassertionProcessing        6-10          654    -0.00001     0.00000    45.72%    49.24%     5.05%    -3.52%
+ReassertionProcessing        11-20          60     0.00002    -0.00002    43.33%    50.00%     6.67%    -6.67%
+DecayToNeutral               1             866    -0.00001    -0.00005    45.50%    50.46%     4.04%    -4.97%
+DecayToNeutral               2             191    -0.00002    -0.00005    45.03%    51.31%     3.66%    -6.28%
+DestructiveRotation          1             630    -0.00005     0.00000    46.19%    49.52%     4.29%    -3.33%
+DestructiveRotation          2              32     0.00006     0.00005    56.25%    40.62%     3.12%    15.62%
+DestructiveRotation          3               6     0.00011     0.00005    50.00%    50.00%     0.00%     0.00%
+DestructiveRotation          4               2     0.00018     0.00018    50.00%    50.00%     0.00%     0.00%
+ConstructiveEmergence        1              16     0.00009     0.00015    56.25%    43.75%     0.00%    12.50%
+MixedStructure               1              65    -0.00013    -0.00010    43.08%    50.77%     6.15%    -7.69%
+MixedStructure               2              14    -0.00041    -0.00042    28.57%    64.29%     7.14%   -35.71%
+MixedStructure               3               3    -0.00023    -0.00030    33.33%    66.67%     0.00%   -33.33%
+MixedStructure               4               1    -0.00040    -0.00040     0.00%   100.00%     0.00%  -100.00%
+
+Section 6 - Aging Curves
+========================
+State                        Age         Count  Persist1     Exit1  Persist3     Exit3  Persist5     Exit5     Cont5     Fail5      Skew
+RecoveryResolution           1            1533    64.06%    35.94%    66.80%    33.20%    19.11%    80.89%    45.58%    49.84%    -4.26%
+RecoveryResolution           2             982    98.78%     1.22%    13.24%    86.76%    16.50%    83.50%    44.34%    51.31%    -6.97%
+RecoveryResolution           3             970    99.90%     0.10%    19.18%    80.82%    17.53%    82.47%    47.27%    49.48%    -2.21%
+RecoveryResolution           4             969    13.42%    86.58%    16.41%    83.59%    16.72%    83.28%    47.64%    48.45%    -0.81%
+RecoveryResolution           5             130   100.00%     0.00%    40.00%    60.00%    19.23%    80.77%    48.33%    44.17%     4.17%
+RecoveryResolution           6-10          284    55.99%    44.01%    17.61%    82.39%    18.31%    81.69%    47.04%    49.80%    -2.77%
+RecoveryResolution           11-20           5     0.00%   100.00%     0.00%   100.00%    20.00%    80.00%   100.00%     0.00%   100.00%
+ExhaustionPersistence        1            1064    76.60%    23.40%    57.80%    42.20%    17.20%    82.80%    45.76%    48.36%    -2.60%
+ExhaustionPersistence        2             815    86.13%    13.87%    27.12%    72.88%    15.09%    84.91%    46.58%    48.99%    -2.42%
+ExhaustionPersistence        3             702    85.04%    14.96%    18.80%    81.20%    12.68%    87.32%    45.99%    48.30%    -2.31%
+ExhaustionPersistence        4             597    34.84%    65.16%    16.92%    83.08%    10.22%    89.78%    46.70%    48.96%    -2.26%
+ExhaustionPersistence        5             208    51.44%    48.56%    23.56%    76.44%    12.08%    87.92%    48.37%    47.28%     1.09%
+ExhaustionPersistence        6-10          255    59.61%    40.39%    20.78%    79.22%    16.47%    83.53%    42.36%    53.71%   -11.35%
+ExhaustionPersistence        11-20          11    63.64%    36.36%    18.18%    81.82%     0.00%   100.00%    54.55%    45.45%     9.09%
+CompressionProcessing        1            1987    67.09%    32.91%    53.25%    46.75%    21.24%    78.76%    46.71%    49.21%    -2.51%
+CompressionProcessing        2            1333    82.75%    17.25%    47.41%    52.59%    19.05%    80.95%    44.97%    49.23%    -4.26%
+CompressionProcessing        3            1103    84.68%    15.32%    20.22%    79.78%    17.77%    82.23%    47.45%    47.97%    -0.52%
+CompressionProcessing        4             934    62.10%    37.90%    17.67%    82.33%    19.16%    80.84%    44.73%    50.37%    -5.64%
+CompressionProcessing        5             580    32.24%    67.76%    22.07%    77.93%    20.17%    79.83%    50.68%    44.44%     6.24%
+CompressionProcessing        6-10          472    63.14%    36.86%    25.85%    74.15%    15.89%    84.11%    43.87%    50.00%    -6.13%
+CompressionProcessing        11-20          26    50.00%    50.00%    19.23%    80.77%    15.38%    84.62%    16.67%    79.17%   -62.50%
+NeutralProcessing            1            2383    79.77%    20.23%    57.49%    42.51%    36.17%    63.83%    46.65%    48.30%    -1.65%
+NeutralProcessing            2            1901    86.27%    13.73%    49.87%    50.13%    37.09%    62.91%    47.38%    45.94%     1.44%
+NeutralProcessing            3            1640    76.52%    23.48%    45.49%    54.51%    35.49%    64.51%    45.51%    48.93%    -3.42%
+NeutralProcessing            4            1255    73.94%    26.06%    48.29%    51.71%    35.86%    64.14%    46.30%    48.55%    -2.25%
+NeutralProcessing            5             928    76.29%    23.71%    48.28%    51.72%    35.67%    64.33%    48.95%    46.96%     1.98%
+NeutralProcessing            6-10         2279    78.06%    21.94%    50.50%    49.50%    38.13%    61.87%    45.19%    49.39%    -4.20%
+NeutralProcessing            11-20         888    78.27%    21.73%    49.21%    50.79%    36.94%    63.06%    45.49%    46.99%    -1.50%
+NeutralProcessing            21+            57    73.68%    26.32%    50.88%    49.12%    33.33%    66.67%    55.77%    36.54%    19.23%
+ReassertionProcessing        1            2241    77.24%    22.76%    40.96%    59.04%    20.40%    79.60%    46.70%    47.98%    -1.27%
+ReassertionProcessing        2            1731    58.64%    41.36%    30.17%    69.83%    23.01%    76.99%    46.90%    47.55%    -0.65%
+ReassertionProcessing        3            1015    72.61%    27.39%    31.66%    68.34%    24.06%    75.94%    46.35%    47.76%    -1.42%
+ReassertionProcessing        4             737    57.67%    42.33%    32.16%    67.84%    21.85%    78.15%    47.33%    48.27%    -0.94%
+ReassertionProcessing        5             425    68.24%    31.76%    36.71%    63.29%    22.82%    77.18%    43.33%    51.03%    -7.69%
+ReassertionProcessing        6-10          726    63.50%    36.50%    31.40%    68.60%    22.31%    77.69%    45.72%    49.24%    -3.52%
+ReassertionProcessing        11-20          67    62.69%    37.31%    29.85%    70.15%    16.42%    83.58%    43.33%    50.00%    -6.67%
+DecayToNeutral               1            1013    22.31%    77.69%     8.98%    91.02%     3.55%    96.45%    45.50%    50.46%    -4.97%
+DecayToNeutral               2             226     0.00%   100.00%     0.44%    99.56%     3.98%    96.02%    45.03%    51.31%    -6.28%
+DestructiveRotation          1             641     5.00%    95.00%     6.72%    93.28%     3.12%    96.88%    46.19%    49.52%    -3.33%
+DestructiveRotation          2              32    21.88%    78.12%    12.50%    87.50%     0.00%   100.00%    56.25%    40.62%    15.62%
+DestructiveRotation          3               7    28.57%    71.43%    14.29%    85.71%     0.00%   100.00%    50.00%    50.00%     0.00%
+DestructiveRotation          4               2     0.00%   100.00%     0.00%   100.00%     0.00%   100.00%    50.00%    50.00%     0.00%
+ConstructiveEmergence        1              16     0.00%   100.00%     0.00%   100.00%     0.00%   100.00%    56.25%    43.75%    12.50%
+MixedStructure               1              69    23.19%    76.81%     7.25%    92.75%     2.90%    97.10%    43.08%    50.77%    -7.69%
+MixedStructure               2              16    25.00%    75.00%     0.00%   100.00%     0.00%   100.00%    28.57%    64.29%   -35.71%
+MixedStructure               3               4    25.00%    75.00%     0.00%   100.00%     0.00%   100.00%    33.33%    66.67%   -33.33%
+MixedStructure               4               1     0.00%   100.00%     0.00%   100.00%     0.00%   100.00%     0.00%   100.00%  -100.00%
+
+Section 7 - Young-vs-Old Maturation / Exhaustion
+================================================
+State                         YoungN    OldN  YoungCont    OldCont   dPersist      dExit      dSkew Classification
+RecoveryResolution              3485     289     45.70%     47.66%    -28.80%     28.80%      2.90% Exhausts+OutcomeImproves
+ExhaustionPersistence           2581     266     46.07%     42.92%    -22.13%     22.13%     -7.95% Exhausts+OutcomeDegrades
+CompressionProcessing           4423     498     46.36%     42.36%    -13.74%     13.74%     -6.71% Exhausts+OutcomeDegrades
+NeutralProcessing               5924    3224     46.58%     45.47%     -2.92%      2.92%     -1.91% Exhausts+OutcomeDegrades
+ReassertionProcessing           4987     793     46.70%     45.52%     -6.41%      6.41%     -2.69% Exhausts+OutcomeDegrades
+DecayToNeutral                  1239       0     45.41%      0.00%    -18.24%     18.24%      5.20% Exhausts+OutcomeImproves
+DestructiveRotation              680       0     46.71%      0.00%     -6.04%      6.04%      2.40% Exhausts+OutcomeImproves
+ConstructiveEmergence             16       0     56.25%      0.00%      0.00%      0.00%    -12.50% OutcomeDegrades
+MixedStructure                    89       0     40.24%      0.00%    -23.60%     23.60%     13.41% Exhausts+OutcomeImproves
+
+Section 8 - Age-Condition Interaction
+=====================================
+State                        Age         Count  Accepted  Compress  Dissipat  Expandin      Peak  Climacti
+RecoveryResolution           1            1533     3.72%   100.00%    54.92%    51.14%    96.93%    14.42%
+RecoveryResolution           2             982    43.08%    57.64%    59.37%    51.83%    34.42%    23.22%
+RecoveryResolution           3             970    45.88%    54.64%    53.51%    52.06%    28.14%    23.30%
+RecoveryResolution           4             969    43.96%    56.76%    48.09%    53.77%    24.05%    21.98%
+RecoveryResolution           5             130    37.69%    62.31%    51.54%    56.92%    54.62%    16.92%
+RecoveryResolution           6-10          284    46.48%    54.58%    56.34%    57.39%    25.35%    28.17%
+RecoveryResolution           11-20           5     0.00%   100.00%    60.00%    40.00%    20.00%    20.00%
+ExhaustionPersistence        1            1064    91.64%     8.55%    57.24%    75.28%    48.03%    60.71%
+ExhaustionPersistence        2             815    48.83%    52.39%    57.67%    53.50%    20.25%    35.71%
+ExhaustionPersistence        3             702    50.00%    50.43%    49.00%    56.84%    23.22%    27.35%
+ExhaustionPersistence        4             597    53.27%    46.90%    50.75%    54.10%    12.23%    22.11%
+ExhaustionPersistence        5             208    49.04%    50.96%    49.04%    49.52%    17.31%    30.77%
+ExhaustionPersistence        6-10          255    47.06%    52.94%    53.73%    54.90%    15.29%    27.84%
+ExhaustionPersistence        11-20          11    36.36%    72.73%    45.45%    36.36%     0.00%    27.27%
+CompressionProcessing        1            1987    31.15%    69.45%    44.09%    55.11%    45.50%    17.46%
+CompressionProcessing        2            1333    43.66%    56.64%    51.16%    49.66%    20.78%    19.58%
+CompressionProcessing        3            1103    43.25%    57.03%    48.87%    45.15%    14.96%    15.87%
+CompressionProcessing        4             934    44.11%    55.89%    45.61%    49.36%    16.27%    14.88%
+CompressionProcessing        5             580    45.86%    54.31%    46.72%    53.62%    16.72%    16.03%
+CompressionProcessing        6-10          472    41.53%    58.69%    48.52%    52.54%    17.16%    18.22%
+CompressionProcessing        11-20          26    42.31%    57.69%    50.00%    46.15%    15.38%    26.92%
+NeutralProcessing            1            2383    27.78%    72.26%    53.38%    35.42%     2.60%     5.67%
+NeutralProcessing            2            1901    42.45%    57.71%    43.71%    49.92%     5.05%     8.42%
+NeutralProcessing            3            1640    44.33%    55.91%    46.95%    46.77%     6.65%     8.72%
+NeutralProcessing            4            1255    39.04%    61.12%    45.42%    43.51%     5.50%     7.97%
+NeutralProcessing            5             928    37.18%    62.93%    48.17%    40.73%     5.28%     7.44%
+NeutralProcessing            6-10         2279    38.66%    61.47%    46.60%    43.00%     5.31%     8.29%
+NeutralProcessing            11-20         888    37.61%    62.61%    47.18%    42.57%     5.74%     6.76%
+NeutralProcessing            21+            57    42.11%    57.89%    43.86%    38.60%     7.02%     7.02%
+ReassertionProcessing        1            2241    78.22%    22.36%    39.05%    75.95%    10.93%    12.81%
+ReassertionProcessing        2            1731    45.58%    55.00%    51.18%    39.80%     8.32%    10.69%
+ReassertionProcessing        3            1015    57.54%    42.56%    47.39%    53.30%     9.36%    10.64%
+ReassertionProcessing        4             737    47.49%    52.92%    51.02%    44.23%    10.58%     9.23%
+ReassertionProcessing        5             425    61.65%    38.35%    45.65%    53.41%     6.35%     7.76%
+ReassertionProcessing        6-10          726    53.44%    47.11%    47.66%    51.10%     9.50%    10.06%
+ReassertionProcessing        11-20          67    61.19%    38.81%    61.19%    46.27%     5.97%    11.94%
+DecayToNeutral               1            1013    16.78%    83.22%    57.35%    23.79%     0.00%    12.54%
+DecayToNeutral               2             226    20.35%    79.65%    57.08%    29.65%     0.00%     8.41%
+DestructiveRotation          1             641    97.35%     2.65%    24.49%    87.83%    52.57%    58.81%
+DestructiveRotation          2              32    96.88%     3.12%    87.50%    93.75%    12.50%     9.38%
+DestructiveRotation          3               7    85.71%    14.29%    42.86%    85.71%    28.57%    42.86%
+DestructiveRotation          4               2   100.00%     0.00%    50.00%   100.00%    50.00%    50.00%
+ConstructiveEmergence        1              16   100.00%   100.00%   100.00%    25.00%     6.25%    12.50%
+MixedStructure               1              69    66.67%    33.33%    36.23%    68.12%    27.54%    28.99%
+MixedStructure               2              16    50.00%    56.25%    56.25%    37.50%     0.00%    12.50%
+MixedStructure               3               4    25.00%    75.00%   100.00%     0.00%     0.00%    25.00%
+MixedStructure               4               1   100.00%     0.00%   100.00%   100.00%     0.00%     0.00%
+
+Categorical state distributions
+State                        Age      Field                Distribution
+RecoveryResolution           1        ParticipationState   Climactic=0.26%, Falling=2.15%, Peak=96.93%, Rising=0.65%
+RecoveryResolution           1        ExpansionState       Absent=48.86%, Climactic=14.22%, Local=9.52%, Strong=27.40%
+RecoveryResolution           1        CompressionState     Clustered=45.47%, Local=54.53%
+RecoveryResolution           1        DissipationState     Absent=45.08%, Local=54.92%
+RecoveryResolution           1        AcceptanceState      Accepted=3.72%, Contained=63.99%, Unresolved=32.29%
+RecoveryResolution           2        ParticipationState   Climactic=10.39%, Falling=55.19%, Peak=34.42%
+RecoveryResolution           2        ExpansionState       Absent=48.17%, Climactic=19.14%, Local=9.57%, Strong=23.12%
+RecoveryResolution           2        CompressionState     Absent=42.36%, Clustered=28.41%, Local=29.23%
+RecoveryResolution           2        DissipationState     Absent=40.63%, Local=59.37%
+RecoveryResolution           2        AcceptanceState      Accepted=43.08%, Contained=34.62%, Unresolved=22.30%
+RecoveryResolution           3        ParticipationState   Climactic=12.37%, Falling=41.13%, Normal=0.31%, Peak=28.14%, Rising=18.04%
+RecoveryResolution           3        ExpansionState       Absent=47.94%, Climactic=16.80%, Local=12.68%, Strong=22.58%
+RecoveryResolution           3        CompressionState     Absent=45.36%, Clustered=25.15%, Local=29.48%
+RecoveryResolution           3        DissipationState     Absent=46.49%, Local=53.51%
+RecoveryResolution           3        AcceptanceState      Accepted=45.88%, Contained=34.43%, Unresolved=19.69%
+RecoveryResolution           4        ParticipationState   Climactic=12.80%, Falling=43.03%, Normal=0.21%, Peak=24.05%, Rising=19.92%
+RecoveryResolution           4        ExpansionState       Absent=46.23%, Climactic=16.20%, Local=15.89%, Strong=21.67%
+RecoveryResolution           4        CompressionState     Absent=43.24%, Clustered=28.79%, Local=27.97%
+RecoveryResolution           4        DissipationState     Absent=51.91%, Local=48.09%
+RecoveryResolution           4        AcceptanceState      Accepted=43.96%, Contained=33.33%, Unresolved=22.70%
+RecoveryResolution           5        ParticipationState   Climactic=6.92%, Falling=28.46%, Peak=54.62%, Rising=10.00%
+RecoveryResolution           5        ExpansionState       Absent=43.08%, Climactic=14.62%, Local=10.77%, Strong=31.54%
+RecoveryResolution           5        CompressionState     Absent=37.69%, Clustered=33.08%, Local=29.23%
+RecoveryResolution           5        DissipationState     Absent=48.46%, Local=51.54%
+RecoveryResolution           5        AcceptanceState      Accepted=37.69%, Contained=36.15%, Unresolved=26.15%
+RecoveryResolution           6-10     ParticipationState   Climactic=17.25%, Falling=42.61%, Normal=0.35%, Peak=25.35%, Rising=14.44%
+RecoveryResolution           6-10     ExpansionState       Absent=42.61%, Climactic=18.66%, Local=14.79%, Strong=23.94%
+RecoveryResolution           6-10     CompressionState     Absent=45.42%, Clustered=23.24%, Local=31.34%
+RecoveryResolution           6-10     DissipationState     Absent=43.66%, Local=56.34%
+RecoveryResolution           6-10     AcceptanceState      Accepted=46.48%, Contained=37.32%, Unresolved=16.20%
+RecoveryResolution           11-20    ParticipationState   Climactic=20.00%, Falling=40.00%, Normal=20.00%, Peak=20.00%
+RecoveryResolution           11-20    ExpansionState       Absent=60.00%, Local=20.00%, Strong=20.00%
+RecoveryResolution           11-20    CompressionState     Clustered=40.00%, Local=60.00%
+RecoveryResolution           11-20    DissipationState     Absent=40.00%, Local=60.00%
+RecoveryResolution           11-20    AcceptanceState      Contained=60.00%, Unresolved=40.00%
+ExhaustionPersistence        1        ParticipationState   Climactic=37.12%, Falling=13.25%, Peak=48.03%, Rising=1.60%
+ExhaustionPersistence        1        ExpansionState       Absent=24.72%, Climactic=46.33%, Local=2.91%, Strong=26.03%
+ExhaustionPersistence        1        CompressionState     Absent=91.45%, Clustered=5.08%, Local=3.48%
+ExhaustionPersistence        1        DissipationState     Absent=42.76%, Local=57.24%
+ExhaustionPersistence        1        AcceptanceState      Accepted=91.64%, Contained=4.04%, Unresolved=4.32%
+ExhaustionPersistence        2        ParticipationState   Climactic=23.31%, Falling=53.01%, Peak=20.25%, Rising=3.44%
+ExhaustionPersistence        2        ExpansionState       Absent=46.50%, Climactic=24.17%, Local=5.52%, Strong=23.80%
+ExhaustionPersistence        2        CompressionState     Absent=47.61%, Clustered=32.15%, Local=20.25%
+ExhaustionPersistence        2        DissipationState     Absent=42.33%, Local=57.67%
+ExhaustionPersistence        2        AcceptanceState      Accepted=48.83%, Contained=26.26%, Unresolved=24.91%
+ExhaustionPersistence        3        ParticipationState   Climactic=16.81%, Falling=41.17%, Peak=23.22%, Rising=18.80%
+ExhaustionPersistence        3        ExpansionState       Absent=43.16%, Climactic=19.09%, Local=13.53%, Strong=24.22%
+ExhaustionPersistence        3        CompressionState     Absent=49.57%, Clustered=25.07%, Local=25.36%
+ExhaustionPersistence        3        DissipationState     Absent=51.00%, Local=49.00%
+ExhaustionPersistence        3        AcceptanceState      Accepted=50.00%, Contained=29.77%, Unresolved=20.23%
+ExhaustionPersistence        4        ParticipationState   Climactic=15.58%, Falling=49.75%, Peak=12.23%, Rising=22.45%
+ExhaustionPersistence        4        ExpansionState       Absent=45.90%, Climactic=12.56%, Local=17.92%, Strong=23.62%
+ExhaustionPersistence        4        CompressionState     Absent=53.10%, Clustered=23.79%, Local=23.12%
+ExhaustionPersistence        4        DissipationState     Absent=49.25%, Local=50.75%
+ExhaustionPersistence        4        AcceptanceState      Accepted=53.27%, Contained=26.47%, Unresolved=20.27%
+ExhaustionPersistence        5        ParticipationState   Climactic=23.56%, Falling=45.19%, Peak=17.31%, Rising=13.94%
+ExhaustionPersistence        5        ExpansionState       Absent=50.48%, Climactic=17.79%, Local=9.62%, Strong=22.12%
+ExhaustionPersistence        5        CompressionState     Absent=49.04%, Clustered=28.37%, Local=22.60%
+ExhaustionPersistence        5        DissipationState     Absent=50.96%, Local=49.04%
+ExhaustionPersistence        5        AcceptanceState      Accepted=49.04%, Contained=25.96%, Unresolved=25.00%
+ExhaustionPersistence        6-10     ParticipationState   Climactic=20.39%, Falling=46.27%, Peak=15.29%, Rising=18.04%
+ExhaustionPersistence        6-10     ExpansionState       Absent=45.10%, Climactic=14.51%, Local=16.47%, Strong=23.92%
+ExhaustionPersistence        6-10     CompressionState     Absent=47.06%, Clustered=22.35%, Local=30.59%
+ExhaustionPersistence        6-10     DissipationState     Absent=46.27%, Local=53.73%
+ExhaustionPersistence        6-10     AcceptanceState      Accepted=47.06%, Contained=34.51%, Unresolved=18.43%
+ExhaustionPersistence        11-20    ParticipationState   Climactic=27.27%, Falling=63.64%, Rising=9.09%
+ExhaustionPersistence        11-20    ExpansionState       Absent=63.64%, Climactic=9.09%, Local=9.09%, Strong=18.18%
+ExhaustionPersistence        11-20    CompressionState     Absent=27.27%, Clustered=54.55%, Local=18.18%
+ExhaustionPersistence        11-20    DissipationState     Absent=54.55%, Local=45.45%
+ExhaustionPersistence        11-20    AcceptanceState      Accepted=36.36%, Contained=27.27%, Unresolved=36.36%
+CompressionProcessing        1        ParticipationState   Climactic=7.10%, Falling=35.13%, Normal=0.15%, Peak=45.50%, Rising=12.13%
+CompressionProcessing        1        ExpansionState       Absent=44.89%, Climactic=13.94%, Local=20.13%, Strong=21.04%
+CompressionProcessing        1        CompressionState     Absent=30.55%, Clustered=26.02%, Local=43.43%
+CompressionProcessing        1        DissipationState     Absent=55.91%, Local=44.09%
+CompressionProcessing        1        AcceptanceState      Accepted=31.15%, Contained=47.06%, Unresolved=21.79%
+CompressionProcessing        2        ParticipationState   Climactic=9.15%, Falling=57.39%, Normal=0.30%, Peak=20.78%, Rising=12.38%
+CompressionProcessing        2        ExpansionState       Absent=50.34%, Climactic=15.00%, Local=15.75%, Strong=18.90%
+CompressionProcessing        2        CompressionState     Absent=43.36%, Clustered=28.28%, Local=28.36%
+CompressionProcessing        2        DissipationState     Absent=48.84%, Local=51.16%
+CompressionProcessing        2        AcceptanceState      Accepted=43.66%, Contained=31.96%, Unresolved=24.38%
+CompressionProcessing        3        ParticipationState   Climactic=8.79%, Falling=51.22%, Normal=0.18%, Peak=14.96%, Rising=24.84%
+CompressionProcessing        3        ExpansionState       Absent=54.85%, Climactic=10.61%, Local=19.58%, Strong=14.96%
+CompressionProcessing        3        CompressionState     Absent=42.97%, Clustered=29.10%, Local=27.92%
+CompressionProcessing        3        DissipationState     Absent=51.13%, Local=48.87%
+CompressionProcessing        3        AcceptanceState      Accepted=43.25%, Contained=32.73%, Unresolved=24.03%
+CompressionProcessing        4        ParticipationState   Climactic=6.42%, Falling=47.32%, Normal=0.32%, Peak=16.27%, Rising=29.66%
+CompressionProcessing        4        ExpansionState       Absent=50.64%, Climactic=11.78%, Local=22.38%, Strong=15.20%
+CompressionProcessing        4        CompressionState     Absent=44.11%, Clustered=25.37%, Local=30.51%
+CompressionProcessing        4        DissipationState     Absent=54.39%, Local=45.61%
+CompressionProcessing        4        AcceptanceState      Accepted=44.11%, Contained=32.87%, Unresolved=23.02%
+CompressionProcessing        5        ParticipationState   Climactic=6.72%, Falling=48.28%, Peak=16.72%, Rising=28.28%
+CompressionProcessing        5        ExpansionState       Absent=46.38%, Climactic=13.79%, Local=25.00%, Strong=14.83%
+CompressionProcessing        5        CompressionState     Absent=45.69%, Clustered=22.24%, Local=32.07%
+CompressionProcessing        5        DissipationState     Absent=53.28%, Local=46.72%
+CompressionProcessing        5        AcceptanceState      Accepted=45.86%, Contained=33.62%, Unresolved=20.52%
+CompressionProcessing        6-10     ParticipationState   Climactic=9.53%, Falling=48.52%, Normal=0.21%, Peak=17.16%, Rising=24.58%
+CompressionProcessing        6-10     ExpansionState       Absent=47.46%, Climactic=13.77%, Local=21.19%, Strong=17.58%
+CompressionProcessing        6-10     CompressionState     Absent=41.31%, Clustered=27.33%, Local=31.36%
+CompressionProcessing        6-10     DissipationState     Absent=51.48%, Local=48.52%
+CompressionProcessing        6-10     AcceptanceState      Accepted=41.53%, Contained=34.32%, Unresolved=24.15%
+CompressionProcessing        11-20    ParticipationState   Climactic=11.54%, Falling=53.85%, Peak=15.38%, Rising=19.23%
+CompressionProcessing        11-20    ExpansionState       Absent=53.85%, Climactic=23.08%, Local=7.69%, Strong=15.38%
+CompressionProcessing        11-20    CompressionState     Absent=42.31%, Clustered=19.23%, Local=38.46%
+CompressionProcessing        11-20    DissipationState     Absent=50.00%, Local=50.00%
+CompressionProcessing        11-20    AcceptanceState      Accepted=42.31%, Contained=38.46%, Unresolved=19.23%
+NeutralProcessing            1        ParticipationState   Climactic=3.44%, Falling=54.09%, Normal=0.29%, Peak=2.60%, Rising=39.57%
+NeutralProcessing            1        ExpansionState       Absent=64.58%, Climactic=3.06%, Local=24.59%, Strong=7.76%
+NeutralProcessing            1        CompressionState     Absent=27.74%, Clustered=29.29%, Local=42.97%
+NeutralProcessing            1        DissipationState     Absent=46.62%, Local=53.38%
+NeutralProcessing            1        AcceptanceState      Accepted=27.78%, Contained=47.17%, Unresolved=25.05%
+NeutralProcessing            2        ParticipationState   Climactic=4.31%, Falling=46.13%, Normal=0.58%, Peak=5.05%, Rising=43.92%
+NeutralProcessing            2        ExpansionState       Absent=50.08%, Climactic=6.05%, Local=32.40%, Strong=11.47%
+NeutralProcessing            2        CompressionState     Absent=42.29%, Clustered=24.83%, Local=32.88%
+NeutralProcessing            2        DissipationState     Absent=56.29%, Local=43.71%
+NeutralProcessing            2        AcceptanceState      Accepted=42.45%, Contained=36.66%, Unresolved=20.88%
+NeutralProcessing            3        ParticipationState   Climactic=4.27%, Falling=49.45%, Normal=0.30%, Peak=6.65%, Rising=39.33%
+NeutralProcessing            3        ExpansionState       Absent=53.23%, Climactic=6.40%, Local=28.48%, Strong=11.89%
+NeutralProcessing            3        CompressionState     Absent=44.09%, Clustered=25.49%, Local=30.43%
+NeutralProcessing            3        DissipationState     Absent=53.05%, Local=46.95%
+NeutralProcessing            3        AcceptanceState      Accepted=44.33%, Contained=33.17%, Unresolved=22.50%
+NeutralProcessing            4        ParticipationState   Climactic=3.27%, Falling=48.69%, Normal=0.48%, Peak=5.50%, Rising=42.07%
+NeutralProcessing            4        ExpansionState       Absent=56.49%, Climactic=5.98%, Local=26.22%, Strong=11.31%
+NeutralProcessing            4        CompressionState     Absent=38.88%, Clustered=28.61%, Local=32.51%
+NeutralProcessing            4        DissipationState     Absent=54.58%, Local=45.42%
+NeutralProcessing            4        AcceptanceState      Accepted=39.04%, Contained=36.10%, Unresolved=24.86%
+NeutralProcessing            5        ParticipationState   Climactic=3.66%, Falling=52.16%, Normal=0.22%, Peak=5.28%, Rising=38.69%
+NeutralProcessing            5        ExpansionState       Absent=59.27%, Climactic=5.17%, Local=25.00%, Strong=10.56%
+NeutralProcessing            5        CompressionState     Absent=37.07%, Clustered=30.39%, Local=32.54%
+NeutralProcessing            5        DissipationState     Absent=51.83%, Local=48.17%
+NeutralProcessing            5        AcceptanceState      Accepted=37.18%, Contained=36.42%, Unresolved=26.40%
+NeutralProcessing            6-10     ParticipationState   Climactic=3.73%, Falling=47.87%, Normal=0.44%, Peak=5.31%, Rising=42.65%
+NeutralProcessing            6-10     ExpansionState       Absent=57.00%, Climactic=5.92%, Local=28.57%, Strong=8.51%
+NeutralProcessing            6-10     CompressionState     Absent=38.53%, Clustered=28.04%, Local=33.44%
+NeutralProcessing            6-10     DissipationState     Absent=53.40%, Local=46.60%
+NeutralProcessing            6-10     AcceptanceState      Accepted=38.66%, Contained=35.81%, Unresolved=25.54%
+NeutralProcessing            11-20    ParticipationState   Climactic=2.14%, Falling=52.14%, Normal=0.45%, Peak=5.74%, Rising=39.53%
+NeutralProcessing            11-20    ExpansionState       Absent=57.43%, Climactic=5.52%, Local=26.24%, Strong=10.81%
+NeutralProcessing            11-20    CompressionState     Absent=37.39%, Clustered=28.38%, Local=34.23%
+NeutralProcessing            11-20    DissipationState     Absent=52.82%, Local=47.18%
+NeutralProcessing            11-20    AcceptanceState      Accepted=37.61%, Contained=36.49%, Unresolved=25.90%
+NeutralProcessing            21+      ParticipationState   Climactic=1.75%, Falling=50.88%, Peak=7.02%, Rising=40.35%
+NeutralProcessing            21+      ExpansionState       Absent=61.40%, Climactic=7.02%, Local=28.07%, Strong=3.51%
+NeutralProcessing            21+      CompressionState     Absent=42.11%, Clustered=24.56%, Local=33.33%
+NeutralProcessing            21+      DissipationState     Absent=56.14%, Local=43.86%
+NeutralProcessing            21+      AcceptanceState      Accepted=42.11%, Contained=33.33%, Unresolved=24.56%
+ReassertionProcessing        1        ParticipationState   Climactic=5.31%, Falling=40.74%, Normal=0.13%, Peak=10.93%, Rising=42.88%
+ReassertionProcessing        1        ExpansionState       Absent=24.05%, Climactic=10.40%, Local=42.84%, Strong=22.71%
+ReassertionProcessing        1        CompressionState     Absent=77.64%, Clustered=13.57%, Local=8.79%
+ReassertionProcessing        1        DissipationState     Absent=60.95%, Local=39.05%
+ReassertionProcessing        1        AcceptanceState      Accepted=78.22%, Contained=10.53%, Unresolved=11.24%
+ReassertionProcessing        2        ParticipationState   Climactic=5.43%, Falling=52.46%, Normal=0.17%, Peak=8.32%, Rising=33.62%
+ReassertionProcessing        2        ExpansionState       Absent=60.20%, Climactic=7.80%, Local=16.70%, Strong=15.31%
+ReassertionProcessing        2        CompressionState     Absent=45.00%, Clustered=29.98%, Local=25.01%
+ReassertionProcessing        2        DissipationState     Absent=48.82%, Local=51.18%
+ReassertionProcessing        2        AcceptanceState      Accepted=45.58%, Contained=29.35%, Unresolved=25.07%
+ReassertionProcessing        3        ParticipationState   Climactic=5.12%, Falling=46.90%, Normal=0.30%, Peak=9.36%, Rising=38.33%
+ReassertionProcessing        3        ExpansionState       Absent=46.70%, Climactic=7.98%, Local=30.84%, Strong=14.48%
+ReassertionProcessing        3        CompressionState     Absent=57.44%, Clustered=21.48%, Local=21.08%
+ReassertionProcessing        3        DissipationState     Absent=52.61%, Local=47.39%
+ReassertionProcessing        3        AcceptanceState      Accepted=57.54%, Contained=24.43%, Unresolved=18.03%
+ReassertionProcessing        4        ParticipationState   Climactic=4.34%, Falling=52.92%, Normal=0.14%, Peak=10.58%, Rising=32.02%
+ReassertionProcessing        4        ExpansionState       Absent=55.77%, Climactic=6.65%, Local=24.56%, Strong=13.03%
+ReassertionProcessing        4        CompressionState     Absent=47.08%, Clustered=28.77%, Local=24.15%
+ReassertionProcessing        4        DissipationState     Absent=48.98%, Local=51.02%
+ReassertionProcessing        4        AcceptanceState      Accepted=47.49%, Contained=27.82%, Unresolved=24.69%
+ReassertionProcessing        5        ParticipationState   Climactic=3.76%, Falling=44.00%, Normal=0.24%, Peak=6.35%, Rising=45.65%
+ReassertionProcessing        5        ExpansionState       Absent=46.59%, Climactic=6.12%, Local=32.47%, Strong=14.82%
+ReassertionProcessing        5        CompressionState     Absent=61.65%, Clustered=19.53%, Local=18.82%
+ReassertionProcessing        5        DissipationState     Absent=54.35%, Local=45.65%
+ReassertionProcessing        5        AcceptanceState      Accepted=61.65%, Contained=21.65%, Unresolved=16.71%
+ReassertionProcessing        6-10     ParticipationState   Climactic=4.68%, Falling=48.35%, Normal=0.41%, Peak=9.50%, Rising=37.05%
+ReassertionProcessing        6-10     ExpansionState       Absent=48.90%, Climactic=8.13%, Local=27.96%, Strong=15.01%
+ReassertionProcessing        6-10     CompressionState     Absent=52.89%, Clustered=23.83%, Local=23.28%
+ReassertionProcessing        6-10     DissipationState     Absent=52.34%, Local=47.66%
+ReassertionProcessing        6-10     AcceptanceState      Accepted=53.44%, Contained=26.58%, Unresolved=19.97%
+ReassertionProcessing        11-20    ParticipationState   Climactic=8.96%, Falling=49.25%, Peak=5.97%, Rising=35.82%
+ReassertionProcessing        11-20    ExpansionState       Absent=53.73%, Climactic=7.46%, Local=25.37%, Strong=13.43%
+ReassertionProcessing        11-20    CompressionState     Absent=61.19%, Clustered=17.91%, Local=20.90%
+ReassertionProcessing        11-20    DissipationState     Absent=38.81%, Local=61.19%
+ReassertionProcessing        11-20    AcceptanceState      Accepted=61.19%, Contained=23.88%, Unresolved=14.93%
+DecayToNeutral               1        ParticipationState   Climactic=10.46%, Falling=74.73%, Normal=0.10%, Rising=14.71%
+DecayToNeutral               1        ExpansionState       Absent=76.21%, Climactic=5.23%, Local=7.80%, Strong=10.76%
+DecayToNeutral               1        CompressionState     Absent=16.78%, Clustered=46.00%, Local=37.22%
+DecayToNeutral               1        DissipationState     Absent=42.65%, Local=57.35%
+DecayToNeutral               1        AcceptanceState      Accepted=16.78%, Contained=43.34%, Unresolved=39.88%
+DecayToNeutral               2        ParticipationState   Climactic=7.52%, Falling=57.96%, Normal=1.33%, Rising=33.19%
+DecayToNeutral               2        ExpansionState       Absent=70.35%, Climactic=3.98%, Local=15.04%, Strong=10.62%
+DecayToNeutral               2        CompressionState     Absent=20.35%, Clustered=30.09%, Local=49.56%
+DecayToNeutral               2        DissipationState     Absent=42.92%, Local=57.08%
+DecayToNeutral               2        AcceptanceState      Accepted=20.35%, Contained=55.75%, Unresolved=23.89%
+DestructiveRotation          1        ParticipationState   Climactic=27.30%, Falling=9.98%, Normal=0.31%, Peak=52.57%, Rising=9.83%
+DestructiveRotation          1        ExpansionState       Absent=12.17%, Climactic=48.05%, Local=14.04%, Strong=25.74%
+DestructiveRotation          1        CompressionState     Absent=97.35%, Clustered=1.09%, Local=1.56%
+DestructiveRotation          1        DissipationState     Absent=75.51%, Local=24.49%
+DestructiveRotation          1        AcceptanceState      Accepted=97.35%, Contained=1.72%, Unresolved=0.94%
+DestructiveRotation          2        ParticipationState   Falling=84.38%, Peak=12.50%, Rising=3.12%
+DestructiveRotation          2        ExpansionState       Absent=6.25%, Climactic=9.38%, Local=34.38%, Strong=50.00%
+DestructiveRotation          2        CompressionState     Absent=96.88%, Local=3.12%
+DestructiveRotation          2        DissipationState     Absent=12.50%, Local=87.50%
+DestructiveRotation          2        AcceptanceState      Accepted=96.88%, Contained=3.12%
+DestructiveRotation          3        ParticipationState   Climactic=28.57%, Falling=28.57%, Peak=28.57%, Rising=14.29%
+DestructiveRotation          3        ExpansionState       Absent=14.29%, Climactic=42.86%, Local=14.29%, Strong=28.57%
+DestructiveRotation          3        CompressionState     Absent=85.71%, Local=14.29%
+DestructiveRotation          3        DissipationState     Absent=57.14%, Local=42.86%
+DestructiveRotation          3        AcceptanceState      Accepted=85.71%, Contained=14.29%
+DestructiveRotation          4        ParticipationState   Falling=50.00%, Peak=50.00%
+DestructiveRotation          4        ExpansionState       Climactic=50.00%, Local=50.00%
+DestructiveRotation          4        CompressionState     Absent=100.00%
+DestructiveRotation          4        DissipationState     Absent=50.00%, Local=50.00%
+DestructiveRotation          4        AcceptanceState      Accepted=100.00%
+ConstructiveEmergence        1        ParticipationState   Climactic=6.25%, Falling=81.25%, Peak=6.25%, Rising=6.25%
+ConstructiveEmergence        1        ExpansionState       Absent=75.00%, Climactic=6.25%, Strong=18.75%
+ConstructiveEmergence        1        CompressionState     Clustered=100.00%
+ConstructiveEmergence        1        DissipationState     Local=100.00%
+ConstructiveEmergence        1        AcceptanceState      Accepted=100.00%
+MixedStructure               1        ParticipationState   Climactic=17.39%, Falling=27.54%, Peak=27.54%, Rising=27.54%
+MixedStructure               1        ExpansionState       Absent=31.88%, Climactic=18.84%, Local=31.88%, Strong=17.39%
+MixedStructure               1        CompressionState     Absent=66.67%, Clustered=15.94%, Local=17.39%
+MixedStructure               1        DissipationState     Absent=63.77%, Local=36.23%
+MixedStructure               1        AcceptanceState      Accepted=66.67%, Contained=18.84%, Unresolved=14.49%
+MixedStructure               2        ParticipationState   Climactic=12.50%, Falling=56.25%, Rising=31.25%
+MixedStructure               2        ExpansionState       Absent=62.50%, Climactic=6.25%, Local=25.00%, Strong=6.25%
+MixedStructure               2        CompressionState     Absent=43.75%, Clustered=31.25%, Local=25.00%
+MixedStructure               2        DissipationState     Absent=43.75%, Local=56.25%
+MixedStructure               2        AcceptanceState      Accepted=50.00%, Contained=25.00%, Unresolved=25.00%
+MixedStructure               3        ParticipationState   Climactic=25.00%, Falling=25.00%, Rising=50.00%
+MixedStructure               3        ExpansionState       Absent=100.00%
+MixedStructure               3        CompressionState     Absent=25.00%, Clustered=25.00%, Local=50.00%
+MixedStructure               3        DissipationState     Local=100.00%
+MixedStructure               3        AcceptanceState      Accepted=25.00%, Contained=50.00%, Unresolved=25.00%
+MixedStructure               4        ParticipationState   Falling=100.00%
+MixedStructure               4        ExpansionState       Local=100.00%
+MixedStructure               4        CompressionState     Absent=100.00%
+MixedStructure               4        DissipationState     Local=100.00%
+MixedStructure               4        AcceptanceState      Accepted=100.00%
+
+Section 9 - Population B
+========================
+Population B observations: 0
+State                        AgeBucket    Count
+RecoveryResolution           1               0
+RecoveryResolution           2               0
+RecoveryResolution           3               0
+RecoveryResolution           4               0
+RecoveryResolution           5               0
+RecoveryResolution           6-10            0
+RecoveryResolution           11-20           0
+RecoveryResolution           21+             0
+ExhaustionPersistence        1               0
+ExhaustionPersistence        2               0
+ExhaustionPersistence        3               0
+ExhaustionPersistence        4               0
+ExhaustionPersistence        5               0
+ExhaustionPersistence        6-10            0
+ExhaustionPersistence        11-20           0
+ExhaustionPersistence        21+             0
+CompressionProcessing        1               0
+CompressionProcessing        2               0
+CompressionProcessing        3               0
+CompressionProcessing        4               0
+CompressionProcessing        5               0
+CompressionProcessing        6-10            0
+CompressionProcessing        11-20           0
+CompressionProcessing        21+             0
+NeutralProcessing            1               0
+NeutralProcessing            2               0
+NeutralProcessing            3               0
+NeutralProcessing            4               0
+NeutralProcessing            5               0
+NeutralProcessing            6-10            0
+NeutralProcessing            11-20           0
+NeutralProcessing            21+             0
+ReassertionProcessing        1               0
+ReassertionProcessing        2               0
+ReassertionProcessing        3               0
+ReassertionProcessing        4               0
+ReassertionProcessing        5               0
+ReassertionProcessing        6-10            0
+ReassertionProcessing        11-20           0
+ReassertionProcessing        21+             0
+DecayToNeutral               1               0
+DecayToNeutral               2               0
+DecayToNeutral               3               0
+DecayToNeutral               4               0
+DecayToNeutral               5               0
+DecayToNeutral               6-10            0
+DecayToNeutral               11-20           0
+DecayToNeutral               21+             0
+DestructiveRotation          1               0
+DestructiveRotation          2               0
+DestructiveRotation          3               0
+DestructiveRotation          4               0
+DestructiveRotation          5               0
+DestructiveRotation          6-10            0
+DestructiveRotation          11-20           0
+DestructiveRotation          21+             0
+ConstructiveEmergence        1               0
+ConstructiveEmergence        2               0
+ConstructiveEmergence        3               0
+ConstructiveEmergence        4               0
+ConstructiveEmergence        5               0
+ConstructiveEmergence        6-10            0
+ConstructiveEmergence        11-20           0
+ConstructiveEmergence        21+             0
+MixedStructure               1               0
+MixedStructure               2               0
+MixedStructure               3               0
+MixedStructure               4               0
+MixedStructure               5               0
+MixedStructure               6-10            0
+MixedStructure               11-20           0
+MixedStructure               21+             0
+State                        Age         Count  Persist1     Exit1  Persist3     Exit3  Persist5     Exit5     Cont5     Fail5      Skew
+State                         YoungN    OldN  YoungCont    OldCont   dPersist      dExit      dSkew Classification
+RecoveryResolution                 0       0      0.00%      0.00%      0.00%      0.00%      0.00% Mixed
+ExhaustionPersistence              0       0      0.00%      0.00%      0.00%      0.00%      0.00% Mixed
+CompressionProcessing              0       0      0.00%      0.00%      0.00%      0.00%      0.00% Mixed
+NeutralProcessing                  0       0      0.00%      0.00%      0.00%      0.00%      0.00% Mixed
+ReassertionProcessing              0       0      0.00%      0.00%      0.00%      0.00%      0.00% Mixed
+DecayToNeutral                     0       0      0.00%      0.00%      0.00%      0.00%      0.00% Mixed
+DestructiveRotation                0       0      0.00%      0.00%      0.00%      0.00%      0.00% Mixed
+ConstructiveEmergence              0       0      0.00%      0.00%      0.00%      0.00%      0.00% Mixed
+MixedStructure                     0       0      0.00%      0.00%      0.00%      0.00%      0.00% Mixed
+State                        Age         Count      MeanDR    MedianDR     Cont5     Fail5     Flat5      Skew
+
+Section 10 - Mechanical Research Notes
+======================================
+- Strongest old-minus-young persistence increase: ConstructiveEmergence (0.00%).
+- Strongest old-minus-young persistence decay: RecoveryResolution (-28.80%).
+- Structural states, families, paths, and Population B flags are inherited from Study 39.
+- Age curves and classifications are descriptive only.
