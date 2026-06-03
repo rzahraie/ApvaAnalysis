@@ -1,0 +1,624 @@
+APVA Destination Robustness Study v0.1 - 6E
+================================================================================================
+Instrument: 6E
+Input path(s): .\Evidence\6E\6E_JUN26_5_Minute_CME_FX_Futures_ETH_20251130_20260531_apva_bar_evidence_v01.csv
+Destination event count: 747
+
+1. Baseline Signature Table
+DestinationFamily | Signal | Horizon | EffectSize | ReplicationCount | Direction | Rank
+CompressionProcessing | VolumeRelativeToRollingMean | t-1 | 0.4371 | 1 | Positive | 1
+CompressionProcessing | RangeRelativeToPrevious | t-3 | -0.2574 | 1 | Negative | 2
+CompressionProcessing | VolumeRelativeToSessionMean | t-1 | 0.2336 | 0 | Positive | 3
+CompressionProcessing | TrueRangeRelativeToPrevious | t-3 | -0.2281 | 0 | Negative | 4
+CompressionProcessing | VolumeRelativeToRollingMean | t-2 | 0.2135 | 0 | Positive | 5
+CompressionProcessing | VolumeRelativeToPrevious | t-1 | 0.2113 | 0 | Positive | 6
+CompressionProcessing | BodyRelativeToPrevious | t-2 | -0.2013 | 0 | Negative | 7
+CompressionProcessing | EfficiencyRatio | t-2 | -0.1596 | 0 | Negative | 8
+CompressionProcessing | EfficiencyRatio | t-1 | -0.1485 | 0 | Negative | 9
+CompressionProcessing | BodyRelativeToPrevious | t-1 | -0.1472 | 0 | Negative | 10
+CompressionProcessing | PolarityFlipFlag | t-3 | -0.1168 | 0 | Negative | 11
+CompressionProcessing | EfficiencyRatio | t-5 | 0.1117 | 0 | Positive | 12
+CompressionProcessing | BodyRelativeToPrevious | t-3 | -0.0962 | 0 | Negative | 13
+CompressionProcessing | MemoryStrength | t-2 | 0.0909 | 0 | Positive | 14
+CompressionProcessing | BranchEntropy | t-2 | -0.0909 | 0 | Negative | 15
+CompressionProcessing | PolarityFlipFlag | t-2 | 0.0876 | 0 | Positive | 16
+CompressionProcessing | VolumeRelativeToSessionMean | t-5 | -0.0873 | 0 | Negative | 17
+CompressionProcessing | BodyRelativeToPrevious | t-5 | -0.0837 | 0 | Negative | 18
+CompressionProcessing | VolumeRelativeToRollingMean | t-3 | 0.0753 | 0 | Positive | 19
+CompressionProcessing | VolumeRelativeToPrevious | t-2 | 0.0738 | 0 | Positive | 20
+CompressionProcessing | RangeRelativeToPrevious | t-1 | 0.0627 | 0 | Positive | 21
+CompressionProcessing | MemoryStrength | t-5 | -0.0607 | 0 | Negative | 22
+CompressionProcessing | TrueRangeRelativeToPrevious | t-5 | -0.0524 | 0 | Negative | 23
+CompressionProcessing | PolarityFlipFlag | t-1 | 0.0500 | 0 | Positive | 24
+CompressionProcessing | CloseLocation | t-1 | 0.0461 | 0 | Positive | 25
+CompressionProcessing | CloseLocation | t-5 | 0.0423 | 0 | Positive | 26
+CompressionProcessing | VolumeRelativeToRollingMean | t-5 | 0.0403 | 0 | Positive | 27
+CompressionProcessing | VolumeRelativeToPrevious | t-3 | -0.0368 | 0 | Negative | 28
+CompressionProcessing | VolumeRelativeToPrevious | t-5 | -0.0345 | 0 | Negative | 29
+CompressionProcessing | RangeRelativeToPrevious | t-5 | -0.0312 | 0 | Negative | 30
+CompressionProcessing | VolumeRelativeToSessionMean | t-2 | 0.0311 | 0 | Positive | 31
+CompressionProcessing | BranchEntropy | t-5 | 0.0289 | 0 | Positive | 32
+CompressionProcessing | CloseLocation | t-3 | -0.0265 | 0 | Negative | 33
+CompressionProcessing | RangeRelativeToPrevious | t-2 | -0.0228 | 0 | Negative | 34
+CompressionProcessing | CloseLocation | t-2 | 0.0216 | 0 | Positive | 35
+CompressionProcessing | VolumeRelativeToSessionMean | t-3 | -0.0199 | 0 | Negative | 36
+CompressionProcessing | PolarityFlipFlag | t-5 | 0.0186 | 0 | Positive | 37
+CompressionProcessing | BranchEntropy | t-3 | -0.0172 | 0 | Negative | 38
+CompressionProcessing | TrueRangeRelativeToPrevious | t-1 | 0.0120 | 0 | Positive | 39
+CompressionProcessing | EfficiencyRatio | t-3 | 0.0096 | 0 | Positive | 40
+CompressionProcessing | MemoryStrength | t-3 | 0.0086 | 0 | Positive | 41
+CompressionProcessing | TrueRangeRelativeToPrevious | t-2 | 0.0045 | 0 | Positive | 42
+CompressionProcessing | MemoryStrength | t-1 | 0.0000 | 0 | Flat | 43
+CompressionProcessing | BranchEntropy | t-1 | 0.0000 | 0 | Flat | 44
+ConstructiveEmergence | VolumeRelativeToSessionMean | t-5 | 0.9903 | 1 | Positive | 1
+ConstructiveEmergence | VolumeRelativeToSessionMean | t-1 | 0.8523 | 1 | Positive | 2
+ConstructiveEmergence | VolumeRelativeToRollingMean | t-5 | 0.6831 | 1 | Positive | 3
+ConstructiveEmergence | VolumeRelativeToSessionMean | t-2 | 0.6340 | 1 | Positive | 4
+ConstructiveEmergence | PolarityFlipFlag | t-2 | -0.6209 | 1 | Negative | 5
+ConstructiveEmergence | BodyRelativeToPrevious | t-5 | -0.6124 | 1 | Negative | 6
+ConstructiveEmergence | CloseLocation | t-1 | 0.5677 | 1 | Positive | 7
+ConstructiveEmergence | TrueRangeRelativeToPrevious | t-1 | 0.5648 | 1 | Positive | 8
+ConstructiveEmergence | RangeRelativeToPrevious | t-1 | 0.5543 | 1 | Positive | 9
+ConstructiveEmergence | PolarityFlipFlag | t-3 | 0.5522 | 1 | Positive | 10
+ConstructiveEmergence | EfficiencyRatio | t-1 | -0.4683 | 1 | Negative | 11
+ConstructiveEmergence | VolumeRelativeToRollingMean | t-3 | -0.4507 | 1 | Negative | 12
+ConstructiveEmergence | MemoryStrength | t-2 | -0.4449 | 1 | Negative | 13
+ConstructiveEmergence | BranchEntropy | t-2 | 0.4449 | 1 | Positive | 14
+ConstructiveEmergence | BranchEntropy | t-5 | -0.3935 | 1 | Negative | 15
+ConstructiveEmergence | MemoryStrength | t-5 | 0.3438 | 1 | Positive | 16
+ConstructiveEmergence | BranchEntropy | t-3 | 0.3419 | 1 | Positive | 17
+ConstructiveEmergence | EfficiencyRatio | t-5 | -0.3240 | 1 | Negative | 18
+ConstructiveEmergence | MemoryStrength | t-3 | -0.3226 | 1 | Negative | 19
+ConstructiveEmergence | TrueRangeRelativeToPrevious | t-2 | 0.3222 | 1 | Positive | 20
+ConstructiveEmergence | VolumeRelativeToPrevious | t-5 | 0.3213 | 1 | Positive | 21
+ConstructiveEmergence | EfficiencyRatio | t-2 | 0.3151 | 1 | Positive | 22
+ConstructiveEmergence | EfficiencyRatio | t-3 | -0.3030 | 1 | Negative | 23
+ConstructiveEmergence | PolarityFlipFlag | t-1 | 0.2973 | 1 | Positive | 24
+ConstructiveEmergence | RangeRelativeToPrevious | t-2 | 0.2959 | 1 | Positive | 25
+ConstructiveEmergence | VolumeRelativeToSessionMean | t-3 | 0.2845 | 1 | Positive | 26
+ConstructiveEmergence | VolumeRelativeToPrevious | t-3 | -0.2756 | 1 | Negative | 27
+ConstructiveEmergence | VolumeRelativeToRollingMean | t-1 | 0.2690 | 1 | Positive | 28
+ConstructiveEmergence | TrueRangeRelativeToPrevious | t-5 | 0.2671 | 1 | Positive | 29
+ConstructiveEmergence | RangeRelativeToPrevious | t-5 | 0.2651 | 1 | Positive | 30
+ConstructiveEmergence | CloseLocation | t-3 | 0.1972 | 0 | Positive | 31
+ConstructiveEmergence | PolarityFlipFlag | t-5 | -0.1821 | 0 | Negative | 32
+ConstructiveEmergence | BodyRelativeToPrevious | t-3 | -0.1642 | 0 | Negative | 33
+ConstructiveEmergence | VolumeRelativeToPrevious | t-2 | 0.1616 | 0 | Positive | 34
+ConstructiveEmergence | VolumeRelativeToPrevious | t-1 | 0.1367 | 0 | Positive | 35
+ConstructiveEmergence | BodyRelativeToPrevious | t-2 | 0.1328 | 0 | Positive | 36
+ConstructiveEmergence | BodyRelativeToPrevious | t-1 | 0.1139 | 0 | Positive | 37
+ConstructiveEmergence | CloseLocation | t-2 | 0.1104 | 0 | Positive | 38
+ConstructiveEmergence | CloseLocation | t-5 | -0.1064 | 0 | Negative | 39
+ConstructiveEmergence | TrueRangeRelativeToPrevious | t-3 | -0.0306 | 0 | Negative | 40
+ConstructiveEmergence | RangeRelativeToPrevious | t-3 | 0.0229 | 0 | Positive | 41
+ConstructiveEmergence | VolumeRelativeToRollingMean | t-2 | -0.0078 | 0 | Negative | 42
+ConstructiveEmergence | MemoryStrength | t-1 | 0.0000 | 0 | Flat | 43
+ConstructiveEmergence | BranchEntropy | t-1 | 0.0000 | 0 | Flat | 44
+DecayToNeutral | RangeRelativeToPrevious | t-1 | 0.0000 | 0 | Flat | 1
+DecayToNeutral | RangeRelativeToPrevious | t-2 | 0.0000 | 0 | Flat | 2
+DecayToNeutral | RangeRelativeToPrevious | t-3 | 0.0000 | 0 | Flat | 3
+DecayToNeutral | RangeRelativeToPrevious | t-5 | 0.0000 | 0 | Flat | 4
+DecayToNeutral | BodyRelativeToPrevious | t-1 | 0.0000 | 0 | Flat | 5
+DecayToNeutral | BodyRelativeToPrevious | t-2 | 0.0000 | 0 | Flat | 6
+DecayToNeutral | BodyRelativeToPrevious | t-3 | 0.0000 | 0 | Flat | 7
+DecayToNeutral | BodyRelativeToPrevious | t-5 | 0.0000 | 0 | Flat | 8
+DecayToNeutral | TrueRangeRelativeToPrevious | t-1 | 0.0000 | 0 | Flat | 9
+DecayToNeutral | TrueRangeRelativeToPrevious | t-2 | 0.0000 | 0 | Flat | 10
+DecayToNeutral | TrueRangeRelativeToPrevious | t-3 | 0.0000 | 0 | Flat | 11
+DecayToNeutral | TrueRangeRelativeToPrevious | t-5 | 0.0000 | 0 | Flat | 12
+DecayToNeutral | VolumeRelativeToPrevious | t-1 | 0.0000 | 0 | Flat | 13
+DecayToNeutral | VolumeRelativeToPrevious | t-2 | 0.0000 | 0 | Flat | 14
+DecayToNeutral | VolumeRelativeToPrevious | t-3 | 0.0000 | 0 | Flat | 15
+DecayToNeutral | VolumeRelativeToPrevious | t-5 | 0.0000 | 0 | Flat | 16
+DecayToNeutral | VolumeRelativeToRollingMean | t-1 | 0.0000 | 0 | Flat | 17
+DecayToNeutral | VolumeRelativeToRollingMean | t-2 | 0.0000 | 0 | Flat | 18
+DecayToNeutral | VolumeRelativeToRollingMean | t-3 | 0.0000 | 0 | Flat | 19
+DecayToNeutral | VolumeRelativeToRollingMean | t-5 | 0.0000 | 0 | Flat | 20
+DecayToNeutral | VolumeRelativeToSessionMean | t-1 | 0.0000 | 0 | Flat | 21
+DecayToNeutral | VolumeRelativeToSessionMean | t-2 | 0.0000 | 0 | Flat | 22
+DecayToNeutral | VolumeRelativeToSessionMean | t-3 | 0.0000 | 0 | Flat | 23
+DecayToNeutral | VolumeRelativeToSessionMean | t-5 | 0.0000 | 0 | Flat | 24
+DecayToNeutral | EfficiencyRatio | t-1 | 0.0000 | 0 | Flat | 25
+DecayToNeutral | EfficiencyRatio | t-2 | 0.0000 | 0 | Flat | 26
+DecayToNeutral | EfficiencyRatio | t-3 | 0.0000 | 0 | Flat | 27
+DecayToNeutral | EfficiencyRatio | t-5 | 0.0000 | 0 | Flat | 28
+DecayToNeutral | CloseLocation | t-1 | 0.0000 | 0 | Flat | 29
+DecayToNeutral | CloseLocation | t-2 | 0.0000 | 0 | Flat | 30
+DecayToNeutral | CloseLocation | t-3 | 0.0000 | 0 | Flat | 31
+DecayToNeutral | CloseLocation | t-5 | 0.0000 | 0 | Flat | 32
+DecayToNeutral | MemoryStrength | t-1 | 0.0000 | 0 | Flat | 33
+DecayToNeutral | MemoryStrength | t-2 | 0.0000 | 0 | Flat | 34
+DecayToNeutral | MemoryStrength | t-3 | 0.0000 | 0 | Flat | 35
+DecayToNeutral | MemoryStrength | t-5 | 0.0000 | 0 | Flat | 36
+DecayToNeutral | BranchEntropy | t-1 | 0.0000 | 0 | Flat | 37
+DecayToNeutral | BranchEntropy | t-2 | 0.0000 | 0 | Flat | 38
+DecayToNeutral | BranchEntropy | t-3 | 0.0000 | 0 | Flat | 39
+DecayToNeutral | BranchEntropy | t-5 | 0.0000 | 0 | Flat | 40
+DecayToNeutral | PolarityFlipFlag | t-1 | 0.0000 | 0 | Flat | 41
+DecayToNeutral | PolarityFlipFlag | t-2 | 0.0000 | 0 | Flat | 42
+DecayToNeutral | PolarityFlipFlag | t-3 | 0.0000 | 0 | Flat | 43
+DecayToNeutral | PolarityFlipFlag | t-5 | 0.0000 | 0 | Flat | 44
+DestructiveRotation | RangeRelativeToPrevious | t-1 | 0.0000 | 0 | Flat | 1
+DestructiveRotation | RangeRelativeToPrevious | t-2 | 0.0000 | 0 | Flat | 2
+DestructiveRotation | RangeRelativeToPrevious | t-3 | 0.0000 | 0 | Flat | 3
+DestructiveRotation | RangeRelativeToPrevious | t-5 | 0.0000 | 0 | Flat | 4
+DestructiveRotation | BodyRelativeToPrevious | t-1 | 0.0000 | 0 | Flat | 5
+DestructiveRotation | BodyRelativeToPrevious | t-2 | 0.0000 | 0 | Flat | 6
+DestructiveRotation | BodyRelativeToPrevious | t-3 | 0.0000 | 0 | Flat | 7
+DestructiveRotation | BodyRelativeToPrevious | t-5 | 0.0000 | 0 | Flat | 8
+DestructiveRotation | TrueRangeRelativeToPrevious | t-1 | 0.0000 | 0 | Flat | 9
+DestructiveRotation | TrueRangeRelativeToPrevious | t-2 | 0.0000 | 0 | Flat | 10
+DestructiveRotation | TrueRangeRelativeToPrevious | t-3 | 0.0000 | 0 | Flat | 11
+DestructiveRotation | TrueRangeRelativeToPrevious | t-5 | 0.0000 | 0 | Flat | 12
+DestructiveRotation | VolumeRelativeToPrevious | t-1 | 0.0000 | 0 | Flat | 13
+DestructiveRotation | VolumeRelativeToPrevious | t-2 | 0.0000 | 0 | Flat | 14
+DestructiveRotation | VolumeRelativeToPrevious | t-3 | 0.0000 | 0 | Flat | 15
+DestructiveRotation | VolumeRelativeToPrevious | t-5 | 0.0000 | 0 | Flat | 16
+DestructiveRotation | VolumeRelativeToRollingMean | t-1 | 0.0000 | 0 | Flat | 17
+DestructiveRotation | VolumeRelativeToRollingMean | t-2 | 0.0000 | 0 | Flat | 18
+DestructiveRotation | VolumeRelativeToRollingMean | t-3 | 0.0000 | 0 | Flat | 19
+DestructiveRotation | VolumeRelativeToRollingMean | t-5 | 0.0000 | 0 | Flat | 20
+DestructiveRotation | VolumeRelativeToSessionMean | t-1 | 0.0000 | 0 | Flat | 21
+DestructiveRotation | VolumeRelativeToSessionMean | t-2 | 0.0000 | 0 | Flat | 22
+DestructiveRotation | VolumeRelativeToSessionMean | t-3 | 0.0000 | 0 | Flat | 23
+DestructiveRotation | VolumeRelativeToSessionMean | t-5 | 0.0000 | 0 | Flat | 24
+DestructiveRotation | EfficiencyRatio | t-1 | 0.0000 | 0 | Flat | 25
+DestructiveRotation | EfficiencyRatio | t-2 | 0.0000 | 0 | Flat | 26
+DestructiveRotation | EfficiencyRatio | t-3 | 0.0000 | 0 | Flat | 27
+DestructiveRotation | EfficiencyRatio | t-5 | 0.0000 | 0 | Flat | 28
+DestructiveRotation | CloseLocation | t-1 | 0.0000 | 0 | Flat | 29
+DestructiveRotation | CloseLocation | t-2 | 0.0000 | 0 | Flat | 30
+DestructiveRotation | CloseLocation | t-3 | 0.0000 | 0 | Flat | 31
+DestructiveRotation | CloseLocation | t-5 | 0.0000 | 0 | Flat | 32
+DestructiveRotation | MemoryStrength | t-1 | 0.0000 | 0 | Flat | 33
+DestructiveRotation | MemoryStrength | t-2 | 0.0000 | 0 | Flat | 34
+DestructiveRotation | MemoryStrength | t-3 | 0.0000 | 0 | Flat | 35
+DestructiveRotation | MemoryStrength | t-5 | 0.0000 | 0 | Flat | 36
+DestructiveRotation | BranchEntropy | t-1 | 0.0000 | 0 | Flat | 37
+DestructiveRotation | BranchEntropy | t-2 | 0.0000 | 0 | Flat | 38
+DestructiveRotation | BranchEntropy | t-3 | 0.0000 | 0 | Flat | 39
+DestructiveRotation | BranchEntropy | t-5 | 0.0000 | 0 | Flat | 40
+DestructiveRotation | PolarityFlipFlag | t-1 | 0.0000 | 0 | Flat | 41
+DestructiveRotation | PolarityFlipFlag | t-2 | 0.0000 | 0 | Flat | 42
+DestructiveRotation | PolarityFlipFlag | t-3 | 0.0000 | 0 | Flat | 43
+DestructiveRotation | PolarityFlipFlag | t-5 | 0.0000 | 0 | Flat | 44
+ExhaustionPersistence | TrueRangeRelativeToPrevious | t-1 | 1.5864 | 1 | Positive | 1
+ExhaustionPersistence | RangeRelativeToPrevious | t-1 | 1.4769 | 1 | Positive | 2
+ExhaustionPersistence | VolumeRelativeToRollingMean | t-1 | 1.3756 | 1 | Positive | 3
+ExhaustionPersistence | BodyRelativeToPrevious | t-1 | 1.3160 | 1 | Positive | 4
+ExhaustionPersistence | VolumeRelativeToSessionMean | t-1 | 1.0390 | 1 | Positive | 5
+ExhaustionPersistence | VolumeRelativeToPrevious | t-1 | 0.8750 | 1 | Positive | 6
+ExhaustionPersistence | EfficiencyRatio | t-1 | 0.6954 | 1 | Positive | 7
+ExhaustionPersistence | EfficiencyRatio | t-2 | -0.4971 | 1 | Negative | 8
+ExhaustionPersistence | MemoryStrength | t-5 | -0.4579 | 1 | Negative | 9
+ExhaustionPersistence | BodyRelativeToPrevious | t-3 | -0.4258 | 1 | Negative | 10
+ExhaustionPersistence | BodyRelativeToPrevious | t-2 | -0.3949 | 1 | Negative | 11
+ExhaustionPersistence | VolumeRelativeToPrevious | t-3 | -0.3759 | 1 | Negative | 12
+ExhaustionPersistence | TrueRangeRelativeToPrevious | t-2 | -0.3528 | 1 | Negative | 13
+ExhaustionPersistence | BranchEntropy | t-5 | 0.3474 | 1 | Positive | 14
+ExhaustionPersistence | EfficiencyRatio | t-3 | -0.3039 | 1 | Negative | 15
+ExhaustionPersistence | RangeRelativeToPrevious | t-2 | -0.2687 | 1 | Negative | 16
+ExhaustionPersistence | CloseLocation | t-1 | 0.2571 | 1 | Positive | 17
+ExhaustionPersistence | RangeRelativeToPrevious | t-3 | -0.2499 | 0 | Negative | 18
+ExhaustionPersistence | TrueRangeRelativeToPrevious | t-3 | -0.2283 | 0 | Negative | 19
+ExhaustionPersistence | CloseLocation | t-5 | -0.2188 | 0 | Negative | 20
+ExhaustionPersistence | MemoryStrength | t-2 | 0.1994 | 0 | Positive | 21
+ExhaustionPersistence | BranchEntropy | t-2 | -0.1994 | 0 | Negative | 22
+ExhaustionPersistence | VolumeRelativeToPrevious | t-2 | -0.1907 | 0 | Negative | 23
+ExhaustionPersistence | CloseLocation | t-2 | -0.1742 | 0 | Negative | 24
+ExhaustionPersistence | PolarityFlipFlag | t-2 | 0.1472 | 0 | Positive | 25
+ExhaustionPersistence | VolumeRelativeToPrevious | t-5 | -0.1464 | 0 | Negative | 26
+ExhaustionPersistence | VolumeRelativeToSessionMean | t-2 | -0.1420 | 0 | Negative | 27
+ExhaustionPersistence | RangeRelativeToPrevious | t-5 | -0.1373 | 0 | Negative | 28
+ExhaustionPersistence | VolumeRelativeToSessionMean | t-3 | -0.1056 | 0 | Negative | 29
+ExhaustionPersistence | VolumeRelativeToRollingMean | t-5 | 0.1012 | 0 | Positive | 30
+ExhaustionPersistence | PolarityFlipFlag | t-3 | 0.0726 | 0 | Positive | 31
+ExhaustionPersistence | TrueRangeRelativeToPrevious | t-5 | -0.0677 | 0 | Negative | 32
+ExhaustionPersistence | EfficiencyRatio | t-5 | 0.0597 | 0 | Positive | 33
+ExhaustionPersistence | VolumeRelativeToRollingMean | t-2 | -0.0572 | 0 | Negative | 34
+ExhaustionPersistence | VolumeRelativeToRollingMean | t-3 | -0.0524 | 0 | Negative | 35
+ExhaustionPersistence | PolarityFlipFlag | t-5 | 0.0523 | 0 | Positive | 36
+ExhaustionPersistence | BranchEntropy | t-3 | -0.0436 | 0 | Negative | 37
+ExhaustionPersistence | MemoryStrength | t-3 | 0.0255 | 0 | Positive | 38
+ExhaustionPersistence | CloseLocation | t-3 | -0.0185 | 0 | Negative | 39
+ExhaustionPersistence | VolumeRelativeToSessionMean | t-5 | -0.0113 | 0 | Negative | 40
+ExhaustionPersistence | PolarityFlipFlag | t-1 | -0.0102 | 0 | Negative | 41
+ExhaustionPersistence | BodyRelativeToPrevious | t-5 | 0.0015 | 0 | Positive | 42
+ExhaustionPersistence | MemoryStrength | t-1 | 0.0000 | 0 | Flat | 43
+ExhaustionPersistence | BranchEntropy | t-1 | 0.0000 | 0 | Flat | 44
+MixedStructure | VolumeRelativeToRollingMean | t-3 | 0.4268 | 1 | Positive | 1
+MixedStructure | VolumeRelativeToRollingMean | t-2 | 0.3345 | 1 | Positive | 2
+MixedStructure | RangeRelativeToPrevious | t-3 | 0.2930 | 1 | Positive | 3
+MixedStructure | TrueRangeRelativeToPrevious | t-3 | 0.2671 | 1 | Positive | 4
+MixedStructure | VolumeRelativeToPrevious | t-1 | -0.2633 | 1 | Negative | 5
+MixedStructure | VolumeRelativeToSessionMean | t-3 | 0.2547 | 1 | Positive | 6
+MixedStructure | BodyRelativeToPrevious | t-1 | -0.2509 | 1 | Negative | 7
+MixedStructure | VolumeRelativeToRollingMean | t-1 | -0.2338 | 0 | Negative | 8
+MixedStructure | VolumeRelativeToRollingMean | t-5 | 0.2074 | 0 | Positive | 9
+MixedStructure | RangeRelativeToPrevious | t-1 | -0.2001 | 0 | Negative | 10
+MixedStructure | BodyRelativeToPrevious | t-2 | 0.1981 | 0 | Positive | 11
+MixedStructure | VolumeRelativeToSessionMean | t-2 | 0.1889 | 0 | Positive | 12
+MixedStructure | VolumeRelativeToSessionMean | t-1 | -0.1707 | 0 | Negative | 13
+MixedStructure | TrueRangeRelativeToPrevious | t-1 | -0.1634 | 0 | Negative | 14
+MixedStructure | VolumeRelativeToPrevious | t-3 | 0.1530 | 0 | Positive | 15
+MixedStructure | CloseLocation | t-2 | 0.1497 | 0 | Positive | 16
+MixedStructure | VolumeRelativeToPrevious | t-5 | 0.1448 | 0 | Positive | 17
+MixedStructure | BodyRelativeToPrevious | t-3 | 0.1232 | 0 | Positive | 18
+MixedStructure | RangeRelativeToPrevious | t-5 | 0.1218 | 0 | Positive | 19
+MixedStructure | PolarityFlipFlag | t-1 | -0.1154 | 0 | Negative | 20
+MixedStructure | TrueRangeRelativeToPrevious | t-5 | 0.0999 | 0 | Positive | 21
+MixedStructure | VolumeRelativeToSessionMean | t-5 | 0.0995 | 0 | Positive | 22
+MixedStructure | EfficiencyRatio | t-2 | 0.0986 | 0 | Positive | 23
+MixedStructure | MemoryStrength | t-2 | -0.0846 | 0 | Negative | 24
+MixedStructure | BranchEntropy | t-2 | 0.0846 | 0 | Positive | 25
+MixedStructure | CloseLocation | t-1 | -0.0789 | 0 | Negative | 26
+MixedStructure | EfficiencyRatio | t-5 | -0.0769 | 0 | Negative | 27
+MixedStructure | CloseLocation | t-3 | 0.0647 | 0 | Positive | 28
+MixedStructure | PolarityFlipFlag | t-5 | 0.0603 | 0 | Positive | 29
+MixedStructure | EfficiencyRatio | t-1 | -0.0594 | 0 | Negative | 30
+MixedStructure | RangeRelativeToPrevious | t-2 | 0.0574 | 0 | Positive | 31
+MixedStructure | TrueRangeRelativeToPrevious | t-2 | 0.0448 | 0 | Positive | 32
+MixedStructure | MemoryStrength | t-5 | 0.0414 | 0 | Positive | 33
+MixedStructure | PolarityFlipFlag | t-2 | 0.0402 | 0 | Positive | 34
+MixedStructure | PolarityFlipFlag | t-3 | -0.0344 | 0 | Negative | 35
+MixedStructure | CloseLocation | t-5 | -0.0272 | 0 | Negative | 36
+MixedStructure | BodyRelativeToPrevious | t-5 | 0.0232 | 0 | Positive | 37
+MixedStructure | BranchEntropy | t-5 | -0.0130 | 0 | Negative | 38
+MixedStructure | BranchEntropy | t-3 | 0.0124 | 0 | Positive | 39
+MixedStructure | VolumeRelativeToPrevious | t-2 | -0.0042 | 0 | Negative | 40
+MixedStructure | MemoryStrength | t-3 | -0.0040 | 0 | Negative | 41
+MixedStructure | EfficiencyRatio | t-3 | 0.0039 | 0 | Positive | 42
+MixedStructure | MemoryStrength | t-1 | 0.0000 | 0 | Flat | 43
+MixedStructure | BranchEntropy | t-1 | 0.0000 | 0 | Flat | 44
+ReassertionProcessing | VolumeRelativeToRollingMean | t-1 | -0.8182 | 1 | Negative | 1
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-1 | -0.5906 | 1 | Negative | 2
+ReassertionProcessing | RangeRelativeToPrevious | t-1 | -0.5614 | 1 | Negative | 3
+ReassertionProcessing | VolumeRelativeToRollingMean | t-2 | -0.5454 | 1 | Negative | 4
+ReassertionProcessing | VolumeRelativeToRollingMean | t-3 | -0.5274 | 1 | Negative | 5
+ReassertionProcessing | VolumeRelativeToSessionMean | t-1 | -0.4857 | 1 | Negative | 6
+ReassertionProcessing | BodyRelativeToPrevious | t-1 | -0.4040 | 1 | Negative | 7
+ReassertionProcessing | VolumeRelativeToRollingMean | t-5 | -0.3656 | 1 | Negative | 8
+ReassertionProcessing | VolumeRelativeToSessionMean | t-3 | -0.2259 | 0 | Negative | 9
+ReassertionProcessing | VolumeRelativeToSessionMean | t-2 | -0.2045 | 0 | Negative | 10
+ReassertionProcessing | CloseLocation | t-2 | -0.1742 | 0 | Negative | 11
+ReassertionProcessing | VolumeRelativeToPrevious | t-1 | -0.1600 | 0 | Negative | 12
+ReassertionProcessing | VolumeRelativeToPrevious | t-5 | -0.1490 | 0 | Negative | 13
+ReassertionProcessing | BranchEntropy | t-5 | -0.1281 | 0 | Negative | 14
+ReassertionProcessing | EfficiencyRatio | t-2 | 0.1216 | 0 | Positive | 15
+ReassertionProcessing | VolumeRelativeToSessionMean | t-5 | -0.1214 | 0 | Negative | 16
+ReassertionProcessing | MemoryStrength | t-5 | 0.1196 | 0 | Positive | 17
+ReassertionProcessing | RangeRelativeToPrevious | t-3 | -0.1174 | 0 | Negative | 18
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-3 | -0.1070 | 0 | Negative | 19
+ReassertionProcessing | EfficiencyRatio | t-3 | 0.1053 | 0 | Positive | 20
+ReassertionProcessing | PolarityFlipFlag | t-1 | 0.1018 | 0 | Positive | 21
+ReassertionProcessing | PolarityFlipFlag | t-2 | -0.0830 | 0 | Negative | 22
+ReassertionProcessing | PolarityFlipFlag | t-3 | 0.0728 | 0 | Positive | 23
+ReassertionProcessing | PolarityFlipFlag | t-5 | -0.0721 | 0 | Negative | 24
+ReassertionProcessing | RangeRelativeToPrevious | t-5 | -0.0666 | 0 | Negative | 25
+ReassertionProcessing | MemoryStrength | t-3 | -0.0630 | 0 | Negative | 26
+ReassertionProcessing | BranchEntropy | t-3 | 0.0620 | 0 | Positive | 27
+ReassertionProcessing | CloseLocation | t-3 | -0.0611 | 0 | Negative | 28
+ReassertionProcessing | EfficiencyRatio | t-1 | -0.0524 | 0 | Negative | 29
+ReassertionProcessing | BodyRelativeToPrevious | t-5 | 0.0503 | 0 | Positive | 30
+ReassertionProcessing | VolumeRelativeToPrevious | t-3 | -0.0465 | 0 | Negative | 31
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-5 | -0.0438 | 0 | Negative | 32
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-2 | 0.0426 | 0 | Positive | 33
+ReassertionProcessing | BranchEntropy | t-2 | 0.0413 | 0 | Positive | 34
+ReassertionProcessing | MemoryStrength | t-2 | -0.0413 | 0 | Negative | 35
+ReassertionProcessing | RangeRelativeToPrevious | t-2 | 0.0394 | 0 | Positive | 36
+ReassertionProcessing | CloseLocation | t-5 | 0.0386 | 0 | Positive | 37
+ReassertionProcessing | VolumeRelativeToPrevious | t-2 | -0.0312 | 0 | Negative | 38
+ReassertionProcessing | CloseLocation | t-1 | -0.0241 | 0 | Negative | 39
+ReassertionProcessing | EfficiencyRatio | t-5 | -0.0239 | 0 | Negative | 40
+ReassertionProcessing | BodyRelativeToPrevious | t-3 | 0.0029 | 0 | Positive | 41
+ReassertionProcessing | BodyRelativeToPrevious | t-2 | 0.0022 | 0 | Positive | 42
+ReassertionProcessing | MemoryStrength | t-1 | 0.0000 | 0 | Flat | 43
+ReassertionProcessing | BranchEntropy | t-1 | 0.0000 | 0 | Flat | 44
+RecoveryResolution | RangeRelativeToPrevious | t-1 | 1.6958 | 1 | Positive | 1
+RecoveryResolution | TrueRangeRelativeToPrevious | t-1 | 1.6858 | 1 | Positive | 2
+RecoveryResolution | BodyRelativeToPrevious | t-1 | 1.2115 | 1 | Positive | 3
+RecoveryResolution | VolumeRelativeToRollingMean | t-1 | 1.1776 | 1 | Positive | 4
+RecoveryResolution | EfficiencyRatio | t-1 | 0.7658 | 1 | Positive | 5
+RecoveryResolution | MemoryStrength | t-3 | 0.5969 | 1 | Positive | 6
+RecoveryResolution | BranchEntropy | t-5 | 0.5762 | 1 | Positive | 7
+RecoveryResolution | BranchEntropy | t-3 | -0.5741 | 1 | Negative | 8
+RecoveryResolution | VolumeRelativeToSessionMean | t-1 | 0.5327 | 1 | Positive | 9
+RecoveryResolution | VolumeRelativeToPrevious | t-1 | 0.5284 | 1 | Positive | 10
+RecoveryResolution | RangeRelativeToPrevious | t-2 | -0.4542 | 1 | Negative | 11
+RecoveryResolution | TrueRangeRelativeToPrevious | t-2 | -0.4252 | 1 | Negative | 12
+RecoveryResolution | BodyRelativeToPrevious | t-2 | -0.4243 | 1 | Negative | 13
+RecoveryResolution | TrueRangeRelativeToPrevious | t-5 | -0.3032 | 1 | Negative | 14
+RecoveryResolution | BranchEntropy | t-2 | -0.2891 | 1 | Negative | 15
+RecoveryResolution | MemoryStrength | t-2 | 0.2891 | 1 | Positive | 16
+RecoveryResolution | CloseLocation | t-2 | 0.2860 | 1 | Positive | 17
+RecoveryResolution | RangeRelativeToPrevious | t-5 | -0.2790 | 1 | Negative | 18
+RecoveryResolution | MemoryStrength | t-5 | -0.2721 | 1 | Negative | 19
+RecoveryResolution | EfficiencyRatio | t-3 | -0.2583 | 1 | Negative | 20
+RecoveryResolution | VolumeRelativeToSessionMean | t-2 | -0.2409 | 0 | Negative | 21
+RecoveryResolution | VolumeRelativeToSessionMean | t-3 | -0.2238 | 0 | Negative | 22
+RecoveryResolution | EfficiencyRatio | t-5 | 0.2189 | 0 | Positive | 23
+RecoveryResolution | EfficiencyRatio | t-2 | -0.1949 | 0 | Negative | 24
+RecoveryResolution | VolumeRelativeToSessionMean | t-5 | -0.1948 | 0 | Negative | 25
+RecoveryResolution | PolarityFlipFlag | t-1 | -0.1941 | 0 | Negative | 26
+RecoveryResolution | VolumeRelativeToRollingMean | t-3 | -0.1749 | 0 | Negative | 27
+RecoveryResolution | PolarityFlipFlag | t-2 | -0.1277 | 0 | Negative | 28
+RecoveryResolution | VolumeRelativeToPrevious | t-3 | -0.1165 | 0 | Negative | 29
+RecoveryResolution | CloseLocation | t-5 | 0.1145 | 0 | Positive | 30
+RecoveryResolution | RangeRelativeToPrevious | t-3 | -0.1081 | 0 | Negative | 31
+RecoveryResolution | TrueRangeRelativeToPrevious | t-3 | -0.0996 | 0 | Negative | 32
+RecoveryResolution | VolumeRelativeToPrevious | t-2 | 0.0818 | 0 | Positive | 33
+RecoveryResolution | VolumeRelativeToRollingMean | t-2 | -0.0680 | 0 | Negative | 34
+RecoveryResolution | VolumeRelativeToPrevious | t-5 | 0.0630 | 0 | Positive | 35
+RecoveryResolution | CloseLocation | t-3 | 0.0595 | 0 | Positive | 36
+RecoveryResolution | BodyRelativeToPrevious | t-3 | 0.0574 | 0 | Positive | 37
+RecoveryResolution | PolarityFlipFlag | t-5 | -0.0313 | 0 | Negative | 38
+RecoveryResolution | CloseLocation | t-1 | -0.0167 | 0 | Negative | 39
+RecoveryResolution | VolumeRelativeToRollingMean | t-5 | -0.0077 | 0 | Negative | 40
+RecoveryResolution | PolarityFlipFlag | t-3 | 0.0034 | 0 | Positive | 41
+RecoveryResolution | BodyRelativeToPrevious | t-5 | -0.0025 | 0 | Negative | 42
+RecoveryResolution | MemoryStrength | t-1 | 0.0000 | 0 | Flat | 43
+RecoveryResolution | BranchEntropy | t-1 | 0.0000 | 0 | Flat | 44
+
+2. Sample Sufficiency Table
+DestinationFamily | Count | Count_6E | Count_CL | Count_NQ | MinInstrumentCount | MaxInstrumentShare | EffectiveInstrumentCount | SampleClass
+CompressionProcessing | 134 | 134 | 0 | 0 | 134 | 100.00% | 1 | SparseSample
+MixedStructure | 278 | 278 | 0 | 0 | 278 | 100.00% | 1 | SparseSample
+ReassertionProcessing | 263 | 263 | 0 | 0 | 263 | 100.00% | 1 | SparseSample
+RecoveryResolution | 23 | 23 | 0 | 0 | 23 | 100.00% | 1 | SparseSample
+ExhaustionPersistence | 41 | 41 | 0 | 0 | 41 | 100.00% | 1 | SparseSample
+ConstructiveEmergence | 8 | 8 | 0 | 0 | 8 | 100.00% | 1 | SparseSample
+DestructiveRotation | 0 | 0 | 0 | 0 | 0 | 0.00% | 0 | SparseSample
+DecayToNeutral | 0 | 0 | 0 | 0 | 0 | 0.00% | 0 | SparseSample
+
+3. Leave-One-Instrument-Out Table
+DestinationFamily | Signal | Horizon | FullEffect | EffectWithout6E | EffectWithoutCL | EffectWithoutNQ | DirectionStable | MaterialStable
+RecoveryResolution | RangeRelativeToPrevious | t-1 | 1.6958 | 0.0000 | 0.0000 | 0.0000 | true | false
+RecoveryResolution | TrueRangeRelativeToPrevious | t-1 | 1.6858 | 0.0000 | 0.0000 | 0.0000 | true | false
+RecoveryResolution | VolumeRelativeToRollingMean | t-1 | 1.1776 | 0.0000 | 0.0000 | 0.0000 | true | false
+RecoveryResolution | BodyRelativeToPrevious | t-1 | 1.2115 | 0.0000 | 0.0000 | 0.0000 | true | false
+RecoveryResolution | EfficiencyRatio | t-1 | 0.7658 | 0.0000 | 0.0000 | 0.0000 | true | false
+ExhaustionPersistence | TrueRangeRelativeToPrevious | t-1 | 1.5864 | 0.0000 | 0.0000 | 0.0000 | true | false
+ExhaustionPersistence | RangeRelativeToPrevious | t-1 | 1.4769 | 0.0000 | 0.0000 | 0.0000 | true | false
+ExhaustionPersistence | VolumeRelativeToRollingMean | t-1 | 1.3756 | 0.0000 | 0.0000 | 0.0000 | true | false
+ExhaustionPersistence | BodyRelativeToPrevious | t-1 | 1.3160 | 0.0000 | 0.0000 | 0.0000 | true | false
+ExhaustionPersistence | EfficiencyRatio | t-1 | 0.6954 | 0.0000 | 0.0000 | 0.0000 | true | false
+ReassertionProcessing | VolumeRelativeToRollingMean | t-1 | -0.8182 | 0.0000 | 0.0000 | 0.0000 | true | false
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-1 | -0.5906 | 0.0000 | 0.0000 | 0.0000 | true | false
+ReassertionProcessing | RangeRelativeToPrevious | t-1 | -0.5614 | 0.0000 | 0.0000 | 0.0000 | true | false
+MixedStructure | VolumeRelativeToRollingMean | t-3 | 0.4268 | 0.0000 | 0.0000 | 0.0000 | true | false
+MixedStructure | RangeRelativeToPrevious | t-3 | 0.2930 | 0.0000 | 0.0000 | 0.0000 | true | false
+MixedStructure | TrueRangeRelativeToPrevious | t-3 | 0.2671 | 0.0000 | 0.0000 | 0.0000 | true | false
+CompressionProcessing | VolumeRelativeToRollingMean | t-1 | 0.4371 | 0.0000 | 0.0000 | 0.0000 | true | false
+
+4. Instrument Pair Table
+DestinationFamily | Signal | Horizon | Effect_6E_CL | Effect_6E_NQ | Effect_CL_NQ | DirectionAgreement | MaterialAgreement
+RecoveryResolution | RangeRelativeToPrevious | t-1 | 1.6958 | 1.6958 | 0.0000 | true | true
+RecoveryResolution | TrueRangeRelativeToPrevious | t-1 | 1.6858 | 1.6858 | 0.0000 | true | true
+RecoveryResolution | VolumeRelativeToRollingMean | t-1 | 1.1776 | 1.1776 | 0.0000 | true | true
+RecoveryResolution | BodyRelativeToPrevious | t-1 | 1.2115 | 1.2115 | 0.0000 | true | true
+RecoveryResolution | EfficiencyRatio | t-1 | 0.7658 | 0.7658 | 0.0000 | true | true
+ExhaustionPersistence | TrueRangeRelativeToPrevious | t-1 | 1.5864 | 1.5864 | 0.0000 | true | true
+ExhaustionPersistence | RangeRelativeToPrevious | t-1 | 1.4769 | 1.4769 | 0.0000 | true | true
+ExhaustionPersistence | VolumeRelativeToRollingMean | t-1 | 1.3756 | 1.3756 | 0.0000 | true | true
+ExhaustionPersistence | BodyRelativeToPrevious | t-1 | 1.3160 | 1.3160 | 0.0000 | true | true
+ExhaustionPersistence | EfficiencyRatio | t-1 | 0.6954 | 0.6954 | 0.0000 | true | true
+ReassertionProcessing | VolumeRelativeToRollingMean | t-1 | -0.8182 | -0.8182 | 0.0000 | true | true
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-1 | -0.5906 | -0.5906 | 0.0000 | true | true
+ReassertionProcessing | RangeRelativeToPrevious | t-1 | -0.5614 | -0.5614 | 0.0000 | true | true
+MixedStructure | VolumeRelativeToRollingMean | t-3 | 0.4268 | 0.4268 | 0.0000 | true | true
+MixedStructure | RangeRelativeToPrevious | t-3 | 0.2930 | 0.2930 | 0.0000 | true | true
+MixedStructure | TrueRangeRelativeToPrevious | t-3 | 0.2671 | 0.2671 | 0.0000 | true | true
+CompressionProcessing | VolumeRelativeToRollingMean | t-1 | 0.4371 | 0.4371 | 0.0000 | true | true
+
+5. Bootstrap Stability Table
+DestinationFamily | Signal | Horizon | MeanEffect | MedianEffect | StdDevEffect | Lower5 | Upper95 | SignStabilityPercent | MaterialStabilityPercent
+RecoveryResolution | RangeRelativeToPrevious | t-1 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.00% | 0.00%
+RecoveryResolution | TrueRangeRelativeToPrevious | t-1 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.00% | 0.00%
+RecoveryResolution | VolumeRelativeToRollingMean | t-1 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.00% | 0.00%
+RecoveryResolution | BodyRelativeToPrevious | t-1 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.00% | 0.00%
+RecoveryResolution | EfficiencyRatio | t-1 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.00% | 0.00%
+ExhaustionPersistence | TrueRangeRelativeToPrevious | t-1 | 1.6218 | 1.6152 | 0.1480 | 1.3696 | 1.8457 | 100.00% | 100.00%
+ExhaustionPersistence | RangeRelativeToPrevious | t-1 | 1.4869 | 1.4852 | 0.1474 | 1.2216 | 1.7387 | 100.00% | 100.00%
+ExhaustionPersistence | VolumeRelativeToRollingMean | t-1 | 1.3929 | 1.3871 | 0.1335 | 1.1768 | 1.6268 | 100.00% | 100.00%
+ExhaustionPersistence | BodyRelativeToPrevious | t-1 | 1.3760 | 1.3574 | 0.1901 | 1.0880 | 1.7089 | 100.00% | 100.00%
+ExhaustionPersistence | EfficiencyRatio | t-1 | 0.7028 | 0.6876 | 0.1475 | 0.4919 | 0.9474 | 100.00% | 100.00%
+ReassertionProcessing | VolumeRelativeToRollingMean | t-1 | -0.8191 | -0.8203 | 0.0444 | -0.8934 | -0.7463 | 100.00% | 100.00%
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-1 | -0.5927 | -0.5946 | 0.0499 | -0.6694 | -0.5088 | 100.00% | 100.00%
+ReassertionProcessing | RangeRelativeToPrevious | t-1 | -0.5610 | -0.5569 | 0.0458 | -0.6499 | -0.4935 | 100.00% | 100.00%
+MixedStructure | VolumeRelativeToRollingMean | t-3 | 0.4342 | 0.4321 | 0.0487 | 0.3601 | 0.5188 | 100.00% | 100.00%
+MixedStructure | RangeRelativeToPrevious | t-3 | 0.2975 | 0.3048 | 0.0611 | 0.1984 | 0.3897 | 100.00% | 77.50%
+MixedStructure | TrueRangeRelativeToPrevious | t-3 | 0.2649 | 0.2668 | 0.0610 | 0.1641 | 0.3559 | 100.00% | 62.50%
+CompressionProcessing | VolumeRelativeToRollingMean | t-1 | 0.4428 | 0.4421 | 0.0716 | 0.3367 | 0.5752 | 100.00% | 99.50%
+
+6. Downsample Stability Table
+DestinationFamily | Signal | Horizon | DownsampleN | MeanEffect | StdDevEffect | SignStabilityPercent | MaterialStabilityPercent
+ReassertionProcessing | VolumeRelativeToRollingMean | t-1 | 25 | -0.8118 | 0.1283 | 100.00% | 100.00%
+ReassertionProcessing | VolumeRelativeToRollingMean | t-1 | 50 | -0.8230 | 0.0861 | 100.00% | 100.00%
+ReassertionProcessing | VolumeRelativeToRollingMean | t-1 | 100 | -0.8237 | 0.0570 | 100.00% | 100.00%
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-1 | 25 | -0.6350 | 0.1523 | 100.00% | 99.00%
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-1 | 50 | -0.5952 | 0.1066 | 100.00% | 100.00%
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-1 | 100 | -0.6015 | 0.0672 | 100.00% | 100.00%
+ReassertionProcessing | RangeRelativeToPrevious | t-1 | 25 | -0.5647 | 0.1599 | 100.00% | 97.00%
+ReassertionProcessing | RangeRelativeToPrevious | t-1 | 50 | -0.5865 | 0.1009 | 100.00% | 100.00%
+ReassertionProcessing | RangeRelativeToPrevious | t-1 | 100 | -0.5647 | 0.0636 | 100.00% | 100.00%
+MixedStructure | VolumeRelativeToRollingMean | t-3 | 25 | 0.4884 | 0.1562 | 100.00% | 93.00%
+MixedStructure | VolumeRelativeToRollingMean | t-3 | 50 | 0.4533 | 0.1086 | 100.00% | 98.00%
+MixedStructure | VolumeRelativeToRollingMean | t-3 | 100 | 0.4438 | 0.0659 | 100.00% | 100.00%
+MixedStructure | RangeRelativeToPrevious | t-3 | 25 | 0.2763 | 0.1908 | 91.00% | 57.00%
+MixedStructure | RangeRelativeToPrevious | t-3 | 50 | 0.2893 | 0.1088 | 100.00% | 64.00%
+MixedStructure | RangeRelativeToPrevious | t-3 | 100 | 0.2839 | 0.0683 | 100.00% | 72.00%
+MixedStructure | TrueRangeRelativeToPrevious | t-3 | 25 | 0.2281 | 0.2269 | 83.00% | 53.00%
+MixedStructure | TrueRangeRelativeToPrevious | t-3 | 50 | 0.2597 | 0.1451 | 94.00% | 58.00%
+MixedStructure | TrueRangeRelativeToPrevious | t-3 | 100 | 0.2588 | 0.0733 | 100.00% | 57.00%
+CompressionProcessing | VolumeRelativeToRollingMean | t-1 | 25 | 0.4669 | 0.1429 | 100.00% | 94.00%
+CompressionProcessing | VolumeRelativeToRollingMean | t-1 | 50 | 0.4319 | 0.0861 | 100.00% | 99.00%
+CompressionProcessing | VolumeRelativeToRollingMean | t-1 | 100 | 0.4330 | 0.0415 | 100.00% | 100.00%
+
+7. Jackknife Table
+DestinationFamily | Signal | Horizon | MeanEffect | MinEffect | MaxEffect | SignStabilityPercent | MaterialStabilityPercent
+RecoveryResolution | RangeRelativeToPrevious | t-1 | 1.6977 | 1.6432 | 1.8462 | 100.00% | 100.00%
+RecoveryResolution | TrueRangeRelativeToPrevious | t-1 | 1.6876 | 1.6346 | 1.8398 | 100.00% | 100.00%
+RecoveryResolution | VolumeRelativeToRollingMean | t-1 | 1.1857 | 1.1213 | 1.4301 | 100.00% | 100.00%
+RecoveryResolution | BodyRelativeToPrevious | t-1 | 1.2155 | 1.1424 | 1.3005 | 100.00% | 100.00%
+RecoveryResolution | EfficiencyRatio | t-1 | 0.7665 | 0.7222 | 0.8758 | 100.00% | 100.00%
+ExhaustionPersistence | TrueRangeRelativeToPrevious | t-1 | 1.5871 | 1.5573 | 1.6727 | 100.00% | 100.00%
+ExhaustionPersistence | RangeRelativeToPrevious | t-1 | 1.4774 | 1.4479 | 1.5528 | 100.00% | 100.00%
+ExhaustionPersistence | VolumeRelativeToRollingMean | t-1 | 1.3764 | 1.3425 | 1.4232 | 100.00% | 100.00%
+ExhaustionPersistence | BodyRelativeToPrevious | t-1 | 1.3181 | 1.2777 | 1.4545 | 100.00% | 100.00%
+ExhaustionPersistence | EfficiencyRatio | t-1 | 0.6956 | 0.6694 | 0.7584 | 100.00% | 100.00%
+
+8. Outlier Sensitivity Table
+DestinationFamily | Signal | Horizon | OriginalEffect | TrimmedEffect | EffectChange | DirectionStable
+RecoveryResolution | RangeRelativeToPrevious | t-1 | 1.6958 | 2.2089 | 0.5130 | true
+RecoveryResolution | TrueRangeRelativeToPrevious | t-1 | 1.6858 | 2.1772 | 0.4914 | true
+RecoveryResolution | VolumeRelativeToRollingMean | t-1 | 1.1776 | 2.1768 | 0.9992 | true
+RecoveryResolution | BodyRelativeToPrevious | t-1 | 1.2115 | 1.5810 | 0.3695 | true
+RecoveryResolution | EfficiencyRatio | t-1 | 0.7658 | 0.8871 | 0.1213 | true
+ExhaustionPersistence | TrueRangeRelativeToPrevious | t-1 | 1.5864 | 2.2259 | 0.6395 | true
+ExhaustionPersistence | RangeRelativeToPrevious | t-1 | 1.4769 | 2.0647 | 0.5878 | true
+ExhaustionPersistence | VolumeRelativeToRollingMean | t-1 | 1.3756 | 1.7877 | 0.4121 | true
+ExhaustionPersistence | BodyRelativeToPrevious | t-1 | 1.3160 | 1.9028 | 0.5869 | true
+ExhaustionPersistence | EfficiencyRatio | t-1 | 0.6954 | 0.8177 | 0.1223 | true
+ReassertionProcessing | VolumeRelativeToRollingMean | t-1 | -0.8182 | -1.1888 | -0.3706 | true
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-1 | -0.5906 | -0.7342 | -0.1437 | true
+ReassertionProcessing | RangeRelativeToPrevious | t-1 | -0.5614 | -0.6973 | -0.1358 | true
+MixedStructure | VolumeRelativeToRollingMean | t-3 | 0.4268 | 0.6359 | 0.2091 | true
+MixedStructure | RangeRelativeToPrevious | t-3 | 0.2930 | 0.3268 | 0.0337 | true
+MixedStructure | TrueRangeRelativeToPrevious | t-3 | 0.2671 | 0.3020 | 0.0349 | true
+CompressionProcessing | VolumeRelativeToRollingMean | t-1 | 0.4371 | 0.7867 | 0.3496 | true
+
+9. Horizon Stability Table
+DestinationFamily | Signal | Effect_t1 | Effect_t2 | Effect_t3 | Effect_t5 | TemporalCoherence
+CompressionProcessing | VolumeRelativeToRollingMean | 0.4371 | 0.2135 | 0.0753 | 0.0403 | true
+ExhaustionPersistence | BodyRelativeToPrevious | 1.3160 | -0.3949 | -0.4258 | 0.0015 | true
+ExhaustionPersistence | EfficiencyRatio | 0.6954 | -0.4971 | -0.3039 | 0.0597 | true
+ExhaustionPersistence | RangeRelativeToPrevious | 1.4769 | -0.2687 | -0.2499 | -0.1373 | true
+ExhaustionPersistence | TrueRangeRelativeToPrevious | 1.5864 | -0.3528 | -0.2283 | -0.0677 | true
+ExhaustionPersistence | VolumeRelativeToRollingMean | 1.3756 | -0.0572 | -0.0524 | 0.1012 | true
+MixedStructure | RangeRelativeToPrevious | -0.2001 | 0.0574 | 0.2930 | 0.1218 | true
+MixedStructure | TrueRangeRelativeToPrevious | -0.1634 | 0.0448 | 0.2671 | 0.0999 | true
+MixedStructure | VolumeRelativeToRollingMean | -0.2338 | 0.3345 | 0.4268 | 0.2074 | true
+ReassertionProcessing | RangeRelativeToPrevious | -0.5614 | 0.0394 | -0.1174 | -0.0666 | true
+ReassertionProcessing | TrueRangeRelativeToPrevious | -0.5906 | 0.0426 | -0.1070 | -0.0438 | true
+ReassertionProcessing | VolumeRelativeToRollingMean | -0.8182 | -0.5454 | -0.5274 | -0.3656 | true
+RecoveryResolution | BodyRelativeToPrevious | 1.2115 | -0.4243 | 0.0574 | -0.0025 | false
+RecoveryResolution | EfficiencyRatio | 0.7658 | -0.1949 | -0.2583 | 0.2189 | true
+RecoveryResolution | RangeRelativeToPrevious | 1.6958 | -0.4542 | -0.1081 | -0.2790 | true
+RecoveryResolution | TrueRangeRelativeToPrevious | 1.6858 | -0.4252 | -0.0996 | -0.3032 | true
+RecoveryResolution | VolumeRelativeToRollingMean | 1.1776 | -0.0680 | -0.1749 | -0.0077 | true
+
+10. Signal Family Stability Table
+DestinationFamily | SignalFamily | FamilyMeanEffect | FamilySignAgreement | FamilyMaterialCount
+CompressionProcessing | RangeFamily | 0.1000 | 75.00% | 1
+CompressionProcessing | VolumeFamily | 0.1245 | 66.67% | 1
+CompressionProcessing | EfficiencyFamily | 0.0707 | 62.50% | 0
+CompressionProcessing | GraphFamily | 0.0372 | 37.50% | 0
+MixedStructure | RangeFamily | 0.1536 | 75.00% | 3
+MixedStructure | VolumeFamily | 0.2068 | 66.67% | 4
+MixedStructure | EfficiencyFamily | 0.0699 | 50.00% | 0
+MixedStructure | GraphFamily | 0.0300 | 37.50% | 0
+ReassertionProcessing | RangeFamily | 0.1690 | 58.33% | 3
+ReassertionProcessing | VolumeFamily | 0.3067 | 100.00% | 5
+ReassertionProcessing | EfficiencyFamily | 0.0752 | 62.50% | 0
+ReassertionProcessing | GraphFamily | 0.0569 | 37.50% | 0
+RecoveryResolution | RangeFamily | 0.5622 | 66.67% | 8
+RecoveryResolution | VolumeFamily | 0.2842 | 58.33% | 3
+RecoveryResolution | EfficiencyFamily | 0.2393 | 62.50% | 3
+RecoveryResolution | GraphFamily | 0.3247 | 37.50% | 6
+ExhaustionPersistence | RangeFamily | 0.5422 | 66.67% | 7
+ExhaustionPersistence | VolumeFamily | 0.3727 | 66.67% | 4
+ExhaustionPersistence | EfficiencyFamily | 0.2781 | 62.50% | 4
+ExhaustionPersistence | GraphFamily | 0.1592 | 37.50% | 2
+ConstructiveEmergence | RangeFamily | 0.2788 | 75.00% | 7
+ConstructiveEmergence | VolumeFamily | 0.4222 | 75.00% | 9
+ConstructiveEmergence | EfficiencyFamily | 0.2990 | 50.00% | 5
+ConstructiveEmergence | GraphFamily | 0.2864 | 37.50% | 6
+DestructiveRotation | RangeFamily | 0.0000 | 0.00% | 0
+DestructiveRotation | VolumeFamily | 0.0000 | 0.00% | 0
+DestructiveRotation | EfficiencyFamily | 0.0000 | 0.00% | 0
+DestructiveRotation | GraphFamily | 0.0000 | 0.00% | 0
+DecayToNeutral | RangeFamily | 0.0000 | 0.00% | 0
+DecayToNeutral | VolumeFamily | 0.0000 | 0.00% | 0
+DecayToNeutral | EfficiencyFamily | 0.0000 | 0.00% | 0
+DecayToNeutral | GraphFamily | 0.0000 | 0.00% | 0
+
+11. Robust Signature Table
+DestinationFamily | Signal | Horizon | Classification | Reason
+RecoveryResolution | RangeRelativeToPrevious | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=0.00%, bootstrap material=0.00%, trim direction=True, replication=1
+RecoveryResolution | TrueRangeRelativeToPrevious | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=0.00%, bootstrap material=0.00%, trim direction=True, replication=1
+RecoveryResolution | VolumeRelativeToRollingMean | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=0.00%, bootstrap material=0.00%, trim direction=True, replication=1
+RecoveryResolution | BodyRelativeToPrevious | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=0.00%, bootstrap material=0.00%, trim direction=True, replication=1
+RecoveryResolution | EfficiencyRatio | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=0.00%, bootstrap material=0.00%, trim direction=True, replication=1
+ExhaustionPersistence | TrueRangeRelativeToPrevious | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=100.00%, trim direction=True, replication=1
+ExhaustionPersistence | RangeRelativeToPrevious | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=100.00%, trim direction=True, replication=1
+ExhaustionPersistence | VolumeRelativeToRollingMean | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=100.00%, trim direction=True, replication=1
+ExhaustionPersistence | BodyRelativeToPrevious | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=100.00%, trim direction=True, replication=1
+ExhaustionPersistence | EfficiencyRatio | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=100.00%, trim direction=True, replication=1
+ReassertionProcessing | VolumeRelativeToRollingMean | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=100.00%, trim direction=True, replication=1
+ReassertionProcessing | TrueRangeRelativeToPrevious | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=100.00%, trim direction=True, replication=1
+ReassertionProcessing | RangeRelativeToPrevious | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=100.00%, trim direction=True, replication=1
+MixedStructure | VolumeRelativeToRollingMean | t-3 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=100.00%, trim direction=True, replication=1
+MixedStructure | RangeRelativeToPrevious | t-3 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=77.50%, trim direction=True, replication=1
+MixedStructure | TrueRangeRelativeToPrevious | t-3 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=62.50%, trim direction=True, replication=1
+CompressionProcessing | VolumeRelativeToRollingMean | t-1 | FragileSignature | LOO direction=True, material=False, bootstrap sign=100.00%, bootstrap material=99.50%, trim direction=True, replication=1
+
+12. Destination Robustness Table
+DestinationFamily | RobustnessScore | Classification | RobustSignatureCount | FragileSignatureCount | RejectedSignatureCount
+ReassertionProcessing | 0.8333 | MarginalDestination | 0 | 3 | 0
+ExhaustionPersistence | 0.8333 | MarginalDestination | 0 | 5 | 0
+CompressionProcessing | 0.8325 | MarginalDestination | 0 | 1 | 0
+MixedStructure | 0.8000 | MarginalDestination | 0 | 3 | 0
+RecoveryResolution | 0.5000 | MarginalDestination | 0 | 5 | 0
+ConstructiveEmergence | 0.1667 | UnvalidatedDestination | 0 | 0 | 0
+DestructiveRotation | 0.1667 | UnvalidatedDestination | 0 | 0 | 0
+DecayToNeutral | 0.1667 | UnvalidatedDestination | 0 | 0 | 0
+
+13. Study 76 Reassessment Table
+DestinationFamily | Study76PredictabilityScore | Study77RobustnessScore | Reassessment
+RecoveryResolution | 0.0000 | 0.5000 | Weakened
+ExhaustionPersistence | 0.0000 | 0.8333 | Weakened
+ReassertionProcessing | 0.0000 | 0.8333 | Weakened
+MixedStructure | 0.0000 | 0.8000 | Weakened
+CompressionProcessing | 0.0000 | 0.8325 | Weakened
+ConstructiveEmergence | 0.0000 | 0.1667 | Rejected
+
+14. Outcome Diagnostics Table
+DestinationFamily | Signature | DRFwd1 | DRFwd3 | DRFwd5 | DRFwd10 | ContinuationRate5 | FailureRate5 | FlatRate5
+
+15. Recommendation
+Classification: Study76Weakened
+ConfirmedDestinations: None
+WeakenedDestinations: RecoveryResolution, ExhaustionPersistence, ReassertionProcessing, MixedStructure, CompressionProcessing
+RejectedDestinations: ConstructiveEmergence
+RecommendedNextStep: CollectMoreData
+Reason: Robust destinations: None. Classification uses fixed sample, instrument, bootstrap, jackknife, and outlier checks.
+
+16. Low-DoF Audit
+Uses only existing APVA states and OHLCV-derived variables.
+No new APVA states.
+No new APVA families.
+No context.
+No arbitration.
+No persistence.
+No phase.
+No optimization.
+No fitting.
+No machine learning.
+No trading logic.
+No forward returns used in robustness scoring.
+
+RANKINGS
+1. Most robust destination signatures: 
+2. Most fragile destination signatures: RecoveryResolution:RangeRelativeToPrevious@t-1; RecoveryResolution:TrueRangeRelativeToPrevious@t-1; RecoveryResolution:VolumeRelativeToRollingMean@t-1; RecoveryResolution:BodyRelativeToPrevious@t-1; RecoveryResolution:EfficiencyRatio@t-1; ExhaustionPersistence:TrueRangeRelativeToPrevious@t-1; ExhaustionPersistence:RangeRelativeToPrevious@t-1; ExhaustionPersistence:VolumeRelativeToRollingMean@t-1
+3. Most robust destinations: ReassertionProcessing=0.8333; ExhaustionPersistence=0.8333; CompressionProcessing=0.8325; MixedStructure=0.8000; RecoveryResolution=0.5000; ConstructiveEmergence=0.1667; DestructiveRotation=0.1667; DecayToNeutral=0.1667
+4. Most weakened destinations: RecoveryResolution:Weakened; ExhaustionPersistence:Weakened; ReassertionProcessing:Weakened; MixedStructure:Weakened; CompressionProcessing:Weakened; ConstructiveEmergence:Rejected
+5. Most outlier-sensitive signatures: RecoveryResolution:VolumeRelativeToRollingMean@t-1=0.9992; ExhaustionPersistence:TrueRangeRelativeToPrevious@t-1=0.6395; ExhaustionPersistence:RangeRelativeToPrevious@t-1=0.5878; ExhaustionPersistence:BodyRelativeToPrevious@t-1=0.5869; RecoveryResolution:RangeRelativeToPrevious@t-1=0.5130; RecoveryResolution:TrueRangeRelativeToPrevious@t-1=0.4914; ExhaustionPersistence:VolumeRelativeToRollingMean@t-1=0.4121; ReassertionProcessing:VolumeRelativeToRollingMean@t-1=-0.3706
+6. Most instrument-stable signatures: 
+7. Most bootstrap-stable signatures: ExhaustionPersistence:TrueRangeRelativeToPrevious@t-1=100.00%; ExhaustionPersistence:RangeRelativeToPrevious@t-1=100.00%; ExhaustionPersistence:VolumeRelativeToRollingMean@t-1=100.00%; ExhaustionPersistence:BodyRelativeToPrevious@t-1=100.00%; ExhaustionPersistence:EfficiencyRatio@t-1=100.00%; ReassertionProcessing:VolumeRelativeToRollingMean@t-1=100.00%; ReassertionProcessing:TrueRangeRelativeToPrevious@t-1=100.00%; ReassertionProcessing:RangeRelativeToPrevious@t-1=100.00%
+8. Strongest signal-family signatures: ConstructiveEmergence:VolumeFamily=0.4222; RecoveryResolution:RangeFamily=0.5622; ExhaustionPersistence:RangeFamily=0.5422; ConstructiveEmergence:RangeFamily=0.2788; RecoveryResolution:GraphFamily=0.3247; ConstructiveEmergence:GraphFamily=0.2864; ReassertionProcessing:VolumeFamily=0.3067; ConstructiveEmergence:EfficiencyFamily=0.2990
+9. Recommended validated destination model: Study76Weakened
+10. Recommended next research branch: CollectMoreData
+
+RESEARCH NOTES
+Mechanical only.
+Questions: Did Study 76 overstate destination predictability? Which signatures are reliable? Can APVA proceed to excursion lifecycle studies?

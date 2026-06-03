@@ -1,0 +1,154 @@
+APVA Real-Time State Machine Study v0.1 - CL
+================================================================================================
+Instrument: CL
+Input path(s): .\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv
+Rows with offline reference labels: 1772
+Purpose: Test whether APVA loop phases can be assigned causally in real time.
+
+1. Reference Phase Inventory
+LoopPhase | Count | Percent
+NeutralFormation | 332 | 18.74%
+NeutralMaturation | 212 | 11.96%
+LateNeutral | 238 | 13.43%
+NeutralFailure | 166 | 9.37%
+DestinationSelection | 166 | 9.37%
+Excursion | 579 | 32.67%
+ReturnToNeutral | 79 | 4.46%
+
+2. Real-Time Rule Table
+AssignedPhase | DeterministicRule
+NeutralFormation | Current StructuralState is NeutralProcessing and AgeBucket is 1.
+NeutralMaturation | Current StructuralState is NeutralProcessing and AgeBucket is 2, 3, or 4 unless the causal failure signal fires.
+LateNeutral | Current StructuralState is NeutralProcessing and AgeBucket is 5, 6-10, 11-20, or 21+ unless the causal failure signal fires.
+NeutralFailure | Current bar is NeutralProcessing and shows causal failure pressure: range expansion, body expansion, or volume expansion while in Age4+ or after LateNeutral.
+DestinationSelection | Current StructuralState is non-neutral and prior real-time phase was NeutralFailure or LateNeutral.
+Excursion | Current StructuralState is non-neutral after a destination has already appeared.
+ReturnToNeutral | Current StructuralState is non-neutral and current StateAgeNode is DecayToNeutral or the next real-time transition is expected to reset from excursion context.
+
+3. Agreement Table
+Scope | Count | Top1Agreement | Top2Agreement
+Top1/Top2 | 1772 | 66.48% | 87.02%
+
+4. Confusion Matrix
+ReferencePhase | RealTimePhase | Count
+Excursion | Excursion | 357
+NeutralFormation | NeutralFormation | 332
+NeutralMaturation | NeutralMaturation | 194
+DestinationSelection | DestinationSelection | 166
+Excursion | DestinationSelection | 113
+LateNeutral | NeutralFormation | 113
+Excursion | ReturnToNeutral | 109
+NeutralFailure | NeutralMaturation | 99
+LateNeutral | LateNeutral | 85
+ReturnToNeutral | Excursion | 62
+NeutralFailure | LateNeutral | 40
+LateNeutral | NeutralFailure | 40
+NeutralFailure | NeutralFailure | 27
+NeutralMaturation | NeutralFailure | 18
+ReturnToNeutral | ReturnToNeutral | 17
+
+Per-Phase Precision / Recall
+Phase | Precision | Recall | Support
+NeutralFormation | 74.61% | 100.00% | 332
+NeutralMaturation | 66.21% | 91.51% | 212
+LateNeutral | 68.00% | 35.71% | 238
+NeutralFailure | 31.76% | 16.27% | 166
+DestinationSelection | 59.50% | 100.00% | 166
+Excursion | 85.20% | 61.66% | 579
+ReturnToNeutral | 13.49% | 21.52% | 79
+
+5. Transition Table
+FromRealTimePhase | ToRealTimePhase | Count | Probability | ReplicationCount
+NeutralFormation | NeutralMaturation | 166 | 59.50% | 1
+DestinationSelection | Excursion | 140 | 50.18% | 1
+DestinationSelection | NeutralFormation | 124 | 44.44% | 1
+NeutralFormation | DestinationSelection | 113 | 40.50% | 1
+Excursion | NeutralFormation | 113 | 80.71% | 1
+NeutralMaturation | DestinationSelection | 99 | 59.64% | 1
+NeutralMaturation | NeutralFailure | 50 | 30.12% | 1
+NeutralFailure | LateNeutral | 48 | 64.00% | 1
+ReturnToNeutral | NeutralFormation | 42 | 100.00% | 1
+LateNeutral | DestinationSelection | 40 | 61.54% | 1
+Excursion | ReturnToNeutral | 27 | 19.29% | 1
+NeutralFailure | DestinationSelection | 27 | 36.00% | 1
+LateNeutral | NeutralFailure | 25 | 38.46% | 1
+NeutralMaturation | LateNeutral | 17 | 10.24% | 1
+DestinationSelection | ReturnToNeutral | 15 | 5.38% | 1
+
+6. Failure Detection Table
+Scope | ReferenceFailures | RealTimeFailures | Detected | DetectionRate | EarlyDetectionRate | LateDetectionRate | FalsePositiveRate
+CL | 166 | 85 | 48 | 28.92% | 15.06% | 13.86% | 2.05%
+
+7. Destination Detection Table
+Metric | Value
+DestinationAccuracy | 100.00%
+ReferenceDestination | RealTimeDestination | Count
+MixedStructure | MixedStructure | 76
+ReassertionProcessing | ReassertionProcessing | 55
+CompressionProcessing | CompressionProcessing | 27
+ExhaustionPersistence | ExhaustionPersistence | 5
+DestructiveRotation | DestructiveRotation | 2
+ConstructiveEmergence | ConstructiveEmergence | 1
+Destination | Precision | Recall | Support
+CompressionProcessing | 100.00% | 100.00% | 27
+MixedStructure | 100.00% | 100.00% | 76
+ReassertionProcessing | 100.00% | 100.00% | 55
+RecoveryResolution | 0.00% | 0.00% | 0
+ExhaustionPersistence | 100.00% | 100.00% | 5
+ConstructiveEmergence | 100.00% | 100.00% | 1
+DestructiveRotation | 100.00% | 100.00% | 2
+DecayToNeutral | 0.00% | 0.00% | 0
+
+8. Minimal Signal Comparison
+SignalSet | Agreement | ConfusionEntropy | PhasesObserved
+Study81MinimalSignals | 66.48% | 0.8764 | 7
+PracticalRealTimeSet | 70.65% | 0.8418 | 7
+
+9. Cross-Instrument Replication
+Instrument | Agreement | FailureDetection | DestinationAccuracy | TopConfusion | ReplicationAssessment
+CL | 66.48% | 28.92% | 100.00% | Excursion->Excursion | Partial
+
+10. Final State Machine Spec
+States | NeutralFormation, NeutralMaturation, LateNeutral, NeutralFailure, DestinationSelection, Excursion, ReturnToNeutral
+Inputs | Current StructuralState, Current StateAgeNode, Current AgeBucket, Previous StructuralState, Previous StateAgeNode, prior LoopPhase, real OHLCV-derived relative metrics, EfficiencyRatio, CloseLocation, VolumePolarity
+Transitions | NeutralFormation -> NeutralMaturation -> LateNeutral -> NeutralFailure -> DestinationSelection -> Excursion -> ReturnToNeutral -> NeutralFormation
+Entry conditions | NeutralFormation enters on NeutralProcessing_Age1; DestinationSelection enters on first non-neutral bar after neutral context.
+Exit conditions | Neutral phases exit through causal failure pressure or observed non-neutral state; excursions exit through DecayToNeutral or NeutralProcessing_Age1 reset.
+Failure conditions | Mature Neutral with range/body/volume expansion pressure using current and past-bar metrics only.
+NinjaTrader portability | Rules are deterministic, causal, and require only current/past bar APVA state plus OHLCV-derived metrics.
+
+11. Outcome Diagnostics
+RealTimePhase | Count | DRFwd1 | DRFwd3 | DRFwd5 | DRFwd10 | ContinuationRate5 | FailureRate5 | FlatRate5
+NeutralFormation | 430 | 0.0446 | 0.0607 | 0.0650 | 0.0714 | 51.16% | 48.14% | 0.70%
+NeutralMaturation | 284 | 0.0071 | 0.0232 | 0.0069 | 0.0260 | 48.59% | 50.70% | 0.70%
+LateNeutral | 120 | 0.0085 | -0.0478 | -0.0844 | 0.0396 | 42.50% | 57.50% | 0.00%
+NeutralFailure | 85 | 0.0332 | -0.0374 | -0.0026 | -0.0908 | 55.29% | 43.53% | 1.18%
+DestinationSelection | 279 | -0.0259 | 0.0023 | -0.0132 | 0.0164 | 47.31% | 52.69% | 0.00%
+Excursion | 408 | -0.0078 | -0.0850 | -0.0962 | -0.1786 | 43.63% | 54.66% | 1.72%
+ReturnToNeutral | 125 | -0.0506 | 0.0986 | 0.1097 | 0.2059 | 56.00% | 44.00% | 0.00%
+
+12. Recommendation
+Classification | RecommendedNextStep | ReliablePhases | AmbiguousPhases | Reason
+PracticalRealTimeMachine | ProceedToTradeTimingAudit | NeutralFormation, Excursion | NeutralMaturation, LateNeutral, NeutralFailure, DestinationSelection, ReturnToNeutral | Top1 causal agreement is 66.48%, destination accuracy is 100.00%, and failure detection is 28.92%.
+
+13. Low-DoF Audit
+No future data used in real-time classification.
+No NextNode as predictor.
+No completed-loop hindsight as predictor.
+No optimization.
+No fitting.
+No machine learning.
+No trading rules.
+No forward returns used in phase assignment.
+
+RESEARCH NOTES
+Main question: Can APVA move from retrospective study framework to causal real-time engine?
+Mechanical answer: PracticalRealTimeMachine
+No lookahead, no future NextNode predictor, no completed-loop hindsight, and no forward returns were used in phase assignment.
+
+RANKINGS
+1. Most reliable phases: NeutralFormation=P74.61%/R100.00%; DestinationSelection=P59.50%/R100.00%; NeutralMaturation=P66.21%/R91.51%; Excursion=P85.20%/R61.66%; LateNeutral=P68.00%/R35.71%
+2. Most ambiguous phases: ReturnToNeutral=P13.49%/R21.52%; NeutralFailure=P31.76%/R16.27%; LateNeutral=P68.00%/R35.71%; Excursion=P85.20%/R61.66%; NeutralMaturation=P66.21%/R91.51%
+3. Strongest transitions: NeutralFormation->NeutralMaturation=166; DestinationSelection->Excursion=140; DestinationSelection->NeutralFormation=124; NeutralFormation->DestinationSelection=113; Excursion->NeutralFormation=113
+4. Destination recall leaders: CompressionProcessing=100.00%; MixedStructure=100.00%; ReassertionProcessing=100.00%; ExhaustionPersistence=100.00%; ConstructiveEmergence=100.00%
+5. Minimal signal comparison: Study81MinimalSignals=66.48%; PracticalRealTimeSet=70.65%

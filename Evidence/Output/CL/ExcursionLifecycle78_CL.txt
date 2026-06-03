@@ -1,0 +1,322 @@
+APVA Excursion Lifecycle Study v0.1 - CL
+================================================================================================
+Instrument: CL
+Input path(s): .\Evidence\CL\CL_JUL26_5_Minute_Nymex_Energy_RTH_20260401_20260529_apva_bar_evidence_v01.csv
+Excursion count: 64
+
+1. Lifecycle Inventory
+DestinationFamily | Count | Count_6E | Count_CL | Count_NQ | MeanLength | MedianLength | MaxLength | ReturnToNeutralRate | ReplicationCount
+CompressionProcessing | 7 | 0 | 7 | 0 | 2.7143 | 2.0000 | 9 | 100.00% | 1
+MixedStructure | 20 | 0 | 20 | 0 | 4.5500 | 4.0000 | 13 | 100.00% | 1
+ReassertionProcessing | 31 | 0 | 31 | 0 | 3.4839 | 2.0000 | 10 | 100.00% | 1
+RecoveryResolution | 1 | 0 | 1 | 0 | 10.0000 | 10.0000 | 10 | 100.00% | 1
+ExhaustionPersistence | 4 | 0 | 4 | 0 | 2.7500 | 2.0000 | 6 | 100.00% | 1
+ConstructiveEmergence | 1 | 0 | 1 | 0 | 1.0000 | 1.0000 | 1 | 100.00% | 1
+DestructiveRotation | 0 | 0 | 0 | 0 | 0.0000 | 0.0000 | 0 | 0.00% | 0
+DecayToNeutral | 0 | 0 | 0 | 0 | 0.0000 | 0.0000 | 0 | 0.00% | 0
+
+2. Common Path Table
+DestinationFamily | Path | Count | Probability | ReplicationCount
+CompressionProcessing | CompressionProcessing_Age1 | 3 | 42.86% | 1
+CompressionProcessing | CompressionProcessing_Age1 -> CompressionProcessing_Age2 | 2 | 28.57% | 1
+CompressionProcessing | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 | 1 | 14.29% | 1
+CompressionProcessing | CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 | 1 | 14.29% | 1
+MixedStructure | MixedStructure_Age1 -> DecayToNeutral_Age1 | 3 | 15.00% | 1
+MixedStructure | MixedStructure_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 | 2 | 10.00% | 1
+MixedStructure | MixedStructure_Age1 -> DecayToNeutral_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 | 2 | 10.00% | 1
+MixedStructure | MixedStructure_Age1 | 2 | 10.00% | 1
+MixedStructure | MixedStructure_Age1 -> ConstructiveEmergence_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 -> MixedStructure_Age1 | 1 | 5.00% | 1
+MixedStructure | MixedStructure_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 1 | 5.00% | 1
+MixedStructure | MixedStructure_Age1 -> ExhaustionPersistence_Age1 | 1 | 5.00% | 1
+MixedStructure | MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> RecoveryResolution_Age1 -> RecoveryResolution_Age2 -> RecoveryResolution_Age3 | 1 | 5.00% | 1
+MixedStructure | MixedStructure_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 | 1 | 5.00% | 1
+MixedStructure | MixedStructure_Age1 -> DecayToNeutral_Age1 -> MixedStructure_Age1 -> ReassertionProcessing_Age1 -> DestructiveRotation_Age1 | 1 | 5.00% | 1
+MixedStructure | MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 -> ExhaustionPersistence_Age3 -> ExhaustionPersistence_Age4 | 1 | 5.00% | 1
+MixedStructure | MixedStructure_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 1 | 5.00% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 | 11 | 35.48% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 -> MixedStructure_Age1 | 5 | 16.13% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 -> MixedStructure_Age1 -> MixedStructure_Age2 -> DecayToNeutral_Age1 | 2 | 6.45% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 | 2 | 6.45% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 -> MixedStructure_Age1 -> ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 | 2 | 6.45% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> DecayToNeutral_Age1 | 2 | 6.45% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 -> MixedStructure_Age1 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 | 2 | 6.45% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 -> DecayToNeutral_Age1 -> DestructiveRotation_Age1 | 1 | 3.23% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 -> MixedStructure_Age1 -> ReassertionProcessing_Age1 -> MixedStructure_Age1 -> ExhaustionPersistence_Age1 | 1 | 3.23% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> ExhaustionPersistence_Age1 -> ExhaustionPersistence_Age2 | 1 | 3.23% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 -> ReassertionProcessing_Age2 -> DestructiveRotation_Age1 -> RecoveryResolution_Age1 -> CompressionProcessing_Age1 | 1 | 3.23% | 1
+ReassertionProcessing | ReassertionProcessing_Age1 -> MixedStructure_Age1 -> DecayToNeutral_Age1 -> MixedStructure_Age1 -> RecoveryResolution_Age1 | 1 | 3.23% | 1
+RecoveryResolution | RecoveryResolution_Age1 -> CompressionProcessing_Age1 -> CompressionProcessing_Age2 -> CompressionProcessing_Age3 -> CompressionProcessing_Age4 | 1 | 100.00% | 1
+ExhaustionPersistence | ExhaustionPersistence_Age1 | 2 | 50.00% | 1
+ExhaustionPersistence | ExhaustionPersistence_Age1 -> RecoveryResolution_Age1 -> RecoveryResolution_Age2 | 1 | 25.00% | 1
+ExhaustionPersistence | ExhaustionPersistence_Age1 -> RecoveryResolution_Age1 -> RecoveryResolution_Age2 -> RecoveryResolution_Age3 -> ExhaustionPersistence_Age1 | 1 | 25.00% | 1
+ConstructiveEmergence | ConstructiveEmergence_Age1 | 1 | 100.00% | 1
+
+3. Return Timing Table
+DestinationFamily | ReturnWithin1 | ReturnWithin2 | ReturnWithin3 | ReturnWithin5 | ReturnWithin10 | ReturnWithin20
+CompressionProcessing | 42.86% | 71.43% | 85.71% | 85.71% | 100.00% | 100.00%
+MixedStructure | 10.00% | 35.00% | 40.00% | 65.00% | 95.00% | 100.00%
+ReassertionProcessing | 35.48% | 51.61% | 58.06% | 77.42% | 100.00% | 100.00%
+RecoveryResolution | 0.00% | 0.00% | 0.00% | 0.00% | 100.00% | 100.00%
+ExhaustionPersistence | 50.00% | 50.00% | 75.00% | 75.00% | 100.00% | 100.00%
+ConstructiveEmergence | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 100.00%
+DestructiveRotation | 0.00% | 0.00% | 0.00% | 0.00% | 0.00% | 0.00%
+DecayToNeutral | 0.00% | 0.00% | 0.00% | 0.00% | 0.00% | 0.00%
+
+4. State Evolution Table
+DestinationFamily | Horizon | TopState | TopStateProbability | TopNode | TopNodeProbability
+CompressionProcessing | t+1 | CompressionProcessing | 100.00% | CompressionProcessing_Age2 | 100.00%
+CompressionProcessing | t+2 | CompressionProcessing | 100.00% | CompressionProcessing_Age3 | 100.00%
+CompressionProcessing | t+3 | ExhaustionPersistence | 100.00% | ExhaustionPersistence_Age1 | 100.00%
+CompressionProcessing | t+5 | ExhaustionPersistence | 100.00% | ExhaustionPersistence_Age3 | 100.00%
+CompressionProcessing | t+10 | N/A | 0.00% | N/A | 0.00%
+MixedStructure | t+1 | DecayToNeutral | 33.33% | DecayToNeutral_Age1 | 33.33%
+MixedStructure | t+2 | CompressionProcessing | 46.15% | CompressionProcessing_Age1 | 38.46%
+MixedStructure | t+3 | CompressionProcessing | 33.33% | CompressionProcessing_Age2 | 25.00%
+MixedStructure | t+5 | ExhaustionPersistence | 42.86% | ExhaustionPersistence_Age1 | 28.57%
+MixedStructure | t+10 | CompressionProcessing | 100.00% | CompressionProcessing_Age2 | 100.00%
+ReassertionProcessing | t+1 | MixedStructure | 70.00% | MixedStructure_Age1 | 70.00%
+ReassertionProcessing | t+2 | DestructiveRotation | 40.00% | DestructiveRotation_Age1 | 40.00%
+ReassertionProcessing | t+3 | DecayToNeutral | 38.46% | DecayToNeutral_Age1 | 38.46%
+ReassertionProcessing | t+5 | CompressionProcessing | 42.86% | DecayToNeutral_Age1 | 28.57%
+ReassertionProcessing | t+10 | N/A | 0.00% | N/A | 0.00%
+RecoveryResolution | t+1 | CompressionProcessing | 100.00% | CompressionProcessing_Age1 | 100.00%
+RecoveryResolution | t+2 | CompressionProcessing | 100.00% | CompressionProcessing_Age2 | 100.00%
+RecoveryResolution | t+3 | CompressionProcessing | 100.00% | CompressionProcessing_Age3 | 100.00%
+RecoveryResolution | t+5 | ExhaustionPersistence | 100.00% | ExhaustionPersistence_Age1 | 100.00%
+RecoveryResolution | t+10 | N/A | 0.00% | N/A | 0.00%
+ExhaustionPersistence | t+1 | RecoveryResolution | 100.00% | RecoveryResolution_Age1 | 100.00%
+ExhaustionPersistence | t+2 | RecoveryResolution | 100.00% | RecoveryResolution_Age2 | 100.00%
+ExhaustionPersistence | t+3 | RecoveryResolution | 100.00% | RecoveryResolution_Age3 | 100.00%
+ExhaustionPersistence | t+5 | CompressionProcessing | 100.00% | CompressionProcessing_Age1 | 100.00%
+ExhaustionPersistence | t+10 | N/A | 0.00% | N/A | 0.00%
+ConstructiveEmergence | t+1 | N/A | 0.00% | N/A | 0.00%
+ConstructiveEmergence | t+2 | N/A | 0.00% | N/A | 0.00%
+ConstructiveEmergence | t+3 | N/A | 0.00% | N/A | 0.00%
+ConstructiveEmergence | t+5 | N/A | 0.00% | N/A | 0.00%
+ConstructiveEmergence | t+10 | N/A | 0.00% | N/A | 0.00%
+DestructiveRotation | t+1 | N/A | 0.00% | N/A | 0.00%
+DestructiveRotation | t+2 | N/A | 0.00% | N/A | 0.00%
+DestructiveRotation | t+3 | N/A | 0.00% | N/A | 0.00%
+DestructiveRotation | t+5 | N/A | 0.00% | N/A | 0.00%
+DestructiveRotation | t+10 | N/A | 0.00% | N/A | 0.00%
+DecayToNeutral | t+1 | N/A | 0.00% | N/A | 0.00%
+DecayToNeutral | t+2 | N/A | 0.00% | N/A | 0.00%
+DecayToNeutral | t+3 | N/A | 0.00% | N/A | 0.00%
+DecayToNeutral | t+5 | N/A | 0.00% | N/A | 0.00%
+DecayToNeutral | t+10 | N/A | 0.00% | N/A | 0.00%
+
+5. Market Evolution Table
+DestinationFamily | Horizon | RangeRelativeToPrevious | TrueRangeRelativeToPrevious | BodyRelativeToPrevious | VolumeRelativeToRollingMean | VolumeRelativeToPrevious | EfficiencyRatio | CloseLocation
+CompressionProcessing | t+1 | 1.0786 | 1.0786 | 1.9934 | 1.0947 | 0.8127 | 0.5753 | 0.5677
+CompressionProcessing | t+2 | 1.3068 | 1.3068 | 0.9386 | 0.9866 | 1.1862 | 0.4508 | 0.4436
+CompressionProcessing | t+3 | 0.7524 | 0.7524 | 0.9233 | 1.0398 | 0.9786 | 0.3393 | 0.4222
+CompressionProcessing | t+5 | 1.3863 | 1.3747 | 2.7528 | 1.2008 | 1.2122 | 0.3665 | 0.5646
+CompressionProcessing | t+10 | 1.1100 | 1.1202 | 1.3552 | 0.6819 | 0.8533 | 0.3922 | 0.4429
+MixedStructure | t+1 | 0.8449 | 0.8451 | 0.8526 | 1.1765 | 0.9033 | 0.4548 | 0.5658
+MixedStructure | t+2 | 0.9729 | 0.9724 | 1.9024 | 1.1450 | 0.9931 | 0.4908 | 0.4857
+MixedStructure | t+3 | 0.9728 | 0.9728 | 2.2121 | 0.9273 | 0.9297 | 0.3765 | 0.4446
+MixedStructure | t+5 | 1.4055 | 1.4039 | 4.0766 | 1.2438 | 1.2417 | 0.5253 | 0.5445
+MixedStructure | t+10 | 1.0029 | 1.0047 | 1.8052 | 1.0016 | 1.0451 | 0.4379 | 0.3934
+ReassertionProcessing | t+1 | 0.9145 | 0.9162 | 0.9053 | 0.7881 | 1.1884 | 0.4671 | 0.5332
+ReassertionProcessing | t+2 | 1.1477 | 1.1454 | 3.2619 | 0.8771 | 1.1597 | 0.5297 | 0.4600
+ReassertionProcessing | t+3 | 1.0735 | 1.0773 | 1.4501 | 1.1346 | 1.2432 | 0.3873 | 0.4429
+ReassertionProcessing | t+5 | 1.2946 | 1.2907 | 1.8217 | 1.0067 | 1.3069 | 0.4349 | 0.5576
+ReassertionProcessing | t+10 | 1.2141 | 1.2153 | 2.6054 | 1.0095 | 1.2256 | 0.4896 | 0.5612
+RecoveryResolution | t+1 | 0.4737 | 0.4737 | 1.3333 | 1.4283 | 1.0276 | 0.6667 | 0.1111
+RecoveryResolution | t+2 | 1.3333 | 1.3333 | 0.2500 | 0.8703 | 0.6127 | 0.1250 | 0.0833
+RecoveryResolution | t+3 | 0.7083 | 0.7083 | 1.6667 | 1.0908 | 1.1874 | 0.2941 | 0.2353
+RecoveryResolution | t+5 | 0.4138 | 0.4138 | 0.4000 | 2.1661 | 0.8795 | 0.6667 | 0.1667
+RecoveryResolution | t+10 | 1.2105 | 1.2105 | 0.1250 | 0.0000 | 0.9162 | 0.0435 | 0.3478
+ExhaustionPersistence | t+1 | 0.5614 | 0.5614 | 0.4351 | 1.5501 | 0.7182 | 0.4737 | 0.2807
+ExhaustionPersistence | t+2 | 0.8007 | 0.8007 | 0.8204 | 0.8858 | 0.7250 | 0.4737 | 0.3863
+ExhaustionPersistence | t+3 | 1.4260 | 1.4335 | 1.9636 | 1.1779 | 1.3029 | 0.5838 | 0.7987
+ExhaustionPersistence | t+5 | 1.0715 | 1.0517 | 1.8070 | 0.7901 | 0.8974 | 0.5180 | 0.5842
+ExhaustionPersistence | t+10 | 1.0044 | 1.0163 | 8.9832 | 0.6045 | 0.8154 | 0.6566 | 0.4605
+ConstructiveEmergence | t+1 | 1.0937 | 1.0937 | 1.2222 | 0.0000 | 0.9881 | 0.6286 | 0.7143
+ConstructiveEmergence | t+2 | 0.6714 | 0.6714 | 0.5227 | 0.6354 | 0.7252 | 0.4894 | 0.1277
+ConstructiveEmergence | t+3 | 1.4894 | 1.4894 | 2.1739 | 1.0106 | 1.4939 | 0.7143 | 0.8143
+ConstructiveEmergence | t+5 | 1.3684 | 1.3684 | 2.5000 | 0.5294 | 1.1754 | 0.1923 | 0.8462
+ConstructiveEmergence | t+10 | 1.2353 | 1.2353 | 1.8750 | 1.5157 | 1.6079 | 0.2381 | 0.1746
+DestructiveRotation | t+1 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+DestructiveRotation | t+2 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+DestructiveRotation | t+3 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+DestructiveRotation | t+5 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+DestructiveRotation | t+10 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+DecayToNeutral | t+1 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+DecayToNeutral | t+2 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+DecayToNeutral | t+3 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+DecayToNeutral | t+5 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+DecayToNeutral | t+10 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+
+6. Participation Trajectory Table
+DestinationFamily | Vol_t0 | Vol_t1 | Vol_t2 | Vol_t3 | Vol_t5 | ParticipationClass
+CompressionProcessing | 1.3727 | 1.0947 | 0.9866 | 1.0398 | 1.2008 | ParticipationContinuation
+MixedStructure | 1.5666 | 1.1765 | 1.1450 | 0.9273 | 1.2438 | ParticipationContinuation
+ReassertionProcessing | 0.6807 | 0.7881 | 0.8771 | 1.1346 | 1.0067 | ParticipationContinuation
+RecoveryResolution | 1.4371 | 1.4283 | 0.8703 | 1.0908 | 2.1661 | ParticipationContinuation
+ExhaustionPersistence | 3.5366 | 1.5501 | 0.8858 | 1.1779 | 0.7901 | ParticipationContinuation
+ConstructiveEmergence | 0.0000 | 0.0000 | 0.6354 | 1.0106 | 0.5294 | ParticipationDecay
+DestructiveRotation | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | ParticipationDecay
+DecayToNeutral | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | ParticipationDecay
+
+7. Range Trajectory Table
+DestinationFamily | Range_t0 | Range_t1 | Range_t2 | Range_t3 | Range_t5 | RangeClass
+CompressionProcessing | 1.6646 | 1.0786 | 1.3068 | 0.7524 | 1.3863 | RangeContinuation
+MixedStructure | 2.0236 | 0.8449 | 0.9729 | 0.9728 | 1.4055 | RangeContinuation
+ReassertionProcessing | 1.5776 | 0.9145 | 1.1477 | 1.0735 | 1.2946 | RangeContinuation
+RecoveryResolution | 0.9048 | 0.4737 | 1.3333 | 0.7083 | 0.4138 | RangeMixed
+ExhaustionPersistence | 1.4505 | 0.5614 | 0.8007 | 1.4260 | 1.0715 | RangeContinuation
+ConstructiveEmergence | 0.7901 | 1.0937 | 0.6714 | 1.4894 | 1.3684 | RangeContinuation
+DestructiveRotation | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | RangeCollapse
+DecayToNeutral | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | RangeCollapse
+
+8. Efficiency Trajectory Table
+DestinationFamily | Eff_t0 | Eff_t1 | Eff_t2 | Eff_t3 | Eff_t5
+CompressionProcessing | 0.3815 | 0.5753 | 0.4508 | 0.3393 | 0.3665
+MixedStructure | 0.6235 | 0.4548 | 0.4908 | 0.3765 | 0.5253
+ReassertionProcessing | 0.6487 | 0.4671 | 0.5297 | 0.3873 | 0.4349
+RecoveryResolution | 0.2368 | 0.6667 | 0.1250 | 0.2941 | 0.6667
+ExhaustionPersistence | 0.5840 | 0.4737 | 0.4737 | 0.5838 | 0.5180
+ConstructiveEmergence | 0.5625 | 0.6286 | 0.4894 | 0.7143 | 0.1923
+DestructiveRotation | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+DecayToNeutral | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000
+
+9. Recovery vs Exhaustion Table
+Metric | RecoveryResolution | ExhaustionPersistence | Difference
+ReturnToNeutralRate | 1.0000 | 1.0000 | 0.0000
+MeanLength | 10.0000 | 2.7500 | 7.2500
+Range_t2 | 1.3333 | 0.8007 | 0.5326
+Volume_t2 | 0.8703 | 0.8858 | -0.0154
+Efficiency_t2 | 0.1250 | 0.4737 | -0.3487
+TopState_t3 | CompressionProcessing | RecoveryResolution | Different
+
+10. Reassertion Lifecycle Table
+Metric | Value | Interpretation
+Count | 31 | Sample size.
+MeanLength | 3.4839 | Average non-neutral lifecycle length.
+ReturnWithin3 | 58.06% | Fast return pressure.
+VolumeClass | ParticipationContinuation | Participation continuation or decay.
+RangeClass | RangeContinuation | Range continuation or collapse.
+EfficiencyClass | EfficiencyHigh | Directional efficiency trajectory.
+TopNonNeutralTransition | MixedStructure 45.16% | Most common non-neutral continuation.
+
+11. MixedStructure Lifecycle Table
+Metric | Value | Interpretation
+Count | 20 | Sample size.
+MeanLength | 4.5500 | Average non-neutral lifecycle length.
+ReturnWithin3 | 40.00% | Fast return pressure.
+VolumeClass | ParticipationContinuation | Participation continuation or decay.
+RangeClass | RangeContinuation | Range continuation or collapse.
+EfficiencyClass | EfficiencyDecay | Directional efficiency trajectory.
+TopNonNeutralTransition | DecayToNeutral 40.00% | Most common non-neutral continuation.
+
+12. Compression Lifecycle Table
+Metric | Value | Interpretation
+Count | 7 | Sample size.
+MeanLength | 2.7143 | Average non-neutral lifecycle length.
+ReturnWithin3 | 85.71% | Fast return pressure.
+VolumeClass | ParticipationContinuation | Participation continuation or decay.
+RangeClass | RangeContinuation | Range continuation or collapse.
+EfficiencyClass | EfficiencyDecay | Directional efficiency trajectory.
+TopNonNeutralTransition | ExhaustionPersistence 14.29% | Most common non-neutral continuation.
+
+13. Sparse Destination Audit
+DestinationFamily | Count | ReplicationCount | Classification
+ConstructiveEmergence | 1 | 1 | SparseUnresolved
+DestructiveRotation | 0 | 0 | SparseUnresolved
+DecayToNeutral | 0 | 0 | SparseUnresolved
+
+14. Lifecycle Stability Table
+DestinationFamily | PathEntropy | ReturnEntropy | MarketTrajectoryVariance | LifecycleStability
+CompressionProcessing | 0.9821 | 0.0000 | 0.5139 | DiffuseLifecycle
+MixedStructure | 0.9152 | 0.0000 | 0.7417 | DiffuseLifecycle
+ReassertionProcessing | 0.8595 | 0.0000 | 0.6316 | DiffuseLifecycle
+RecoveryResolution | 0.0000 | 0.0000 | 0.5544 | DiffuseLifecycle
+ExhaustionPersistence | 1.0000 | 0.0000 | 1.6305 | DiffuseLifecycle
+ConstructiveEmergence | 0.0000 | 0.0000 | 0.6021 | DiffuseLifecycle
+DestructiveRotation | 0.0000 | 0.0000 | 0.0000 | DiffuseLifecycle
+DecayToNeutral | 0.0000 | 0.0000 | 0.0000 | DiffuseLifecycle
+
+15. Outcome Diagnostics Table
+DestinationFamily | DRFwd1 | DRFwd3 | DRFwd5 | DRFwd10 | DRFwd20 | ContinuationRate5 | ContinuationRate10 | FailureRate5 | FlatRate5
+CompressionProcessing | -0.1600 | -0.0700 | -0.1357 | -0.3529 | -0.2200 | 42.86% | 14.29% | 57.14% | 0.00%
+MixedStructure | -0.0100 | -0.2910 | -0.1070 | -0.3820 | -0.1035 | 35.00% | 30.00% | 65.00% | 0.00%
+ReassertionProcessing | -0.0135 | -0.1332 | -0.0629 | -0.1377 | -0.0784 | 41.94% | 45.16% | 58.06% | 0.00%
+RecoveryResolution | -0.1100 | -0.1700 | -0.7500 | 1.3400 | 1.2800 | 0.00% | 100.00% | 100.00% | 0.00%
+ExhaustionPersistence | -0.1825 | 0.2550 | 0.1625 | 0.0550 | 1.6025 | 75.00% | 50.00% | 25.00% | 0.00%
+ConstructiveEmergence | -0.4700 | -0.7500 | -0.7300 | -0.3100 | -0.4500 | 0.00% | 0.00% | 100.00% | 0.00%
+DestructiveRotation | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+DecayToNeutral | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.00% | 0.00% | 0.00% | 0.00%
+
+16. Lifecycle Classification Table
+DestinationFamily | LifecycleClassification | Reason
+CompressionProcessing | SparseUnresolved | Sample insufficient.
+MixedStructure | SparseUnresolved | Sample insufficient.
+ReassertionProcessing | SparseUnresolved | Sample insufficient.
+RecoveryResolution | SparseUnresolved | Sample insufficient.
+ExhaustionPersistence | SparseUnresolved | Sample insufficient.
+ConstructiveEmergence | SparseUnresolved | Sample insufficient.
+DestructiveRotation | SparseUnresolved | Sample insufficient.
+DecayToNeutral | SparseUnresolved | Sample insufficient.
+
+17. Cross-Instrument Replication Table
+DestinationFamily | Class_6E | Class_CL | Class_NQ | ReplicationCount
+CompressionProcessing | N/A | N/A | N/A | 0
+MixedStructure | N/A | N/A | N/A | 0
+ReassertionProcessing | N/A | N/A | N/A | 0
+RecoveryResolution | N/A | N/A | N/A | 0
+ExhaustionPersistence | N/A | N/A | N/A | 0
+ConstructiveEmergence | N/A | N/A | N/A | 0
+DestructiveRotation | N/A | N/A | N/A | 0
+DecayToNeutral | N/A | N/A | N/A | 0
+
+18. Study77 Comparison Table
+DestinationFamily | Study77Signature | Study78LifecycleFinding | Assessment
+CompressionProcessing | Robust volume expansion signature | SparseUnresolved | Study77Confirmed
+MixedStructure | Robust mixed range/volume signature | SparseUnresolved | Study77Confirmed
+ReassertionProcessing | Robust low-participation signature | SparseUnresolved | Study77Weakened
+RecoveryResolution | Robust expansion/efficiency signature | SparseUnresolved | Study77Confirmed
+ExhaustionPersistence | Robust expansion/efficiency signature | SparseUnresolved | Study77Confirmed
+ConstructiveEmergence | Unvalidated sparse signature | SparseUnresolved | Study77Confirmed
+DestructiveRotation | Unvalidated sparse signature | SparseUnresolved | Study77Confirmed
+DecayToNeutral | Unvalidated sparse signature | SparseUnresolved | Study77Confirmed
+
+19. Recommendation
+Classification: NoDistinctLifecycle
+DistinctLifecycleFamilies: None
+DiffuseLifecycleFamilies: None
+TransientFamilies: None
+PersistentFamilies: None
+TransitionBasins: None
+RecommendedNextStep: CollectMoreData
+Reason: Classification uses fixed return, length, trajectory, transition, sample, and replication thresholds.
+
+20. Low-DoF Audit
+Uses only existing APVA states and OHLCV-derived variables.
+No new APVA states.
+No new APVA families.
+No context.
+No arbitration.
+No persistence.
+No phase.
+No optimization.
+No fitting.
+No machine learning.
+No trading logic.
+No forward returns used in lifecycle construction.
+
+RANKINGS
+1. Longest destination lifecycles: RecoveryResolution=10.0000; MixedStructure=4.5500; ReassertionProcessing=3.4839; ExhaustionPersistence=2.7500; CompressionProcessing=2.7143; ConstructiveEmergence=1.0000; DestructiveRotation=0.0000; DecayToNeutral=0.0000
+2. Shortest destination lifecycles: ConstructiveEmergence=1.0000; CompressionProcessing=2.7143; ExhaustionPersistence=2.7500; ReassertionProcessing=3.4839; MixedStructure=4.5500; RecoveryResolution=10.0000
+3. Fastest return-to-neutral destinations: ConstructiveEmergence=100.00%; CompressionProcessing=85.71%; ExhaustionPersistence=75.00%; ReassertionProcessing=58.06%; MixedStructure=40.00%; RecoveryResolution=0.00%; DestructiveRotation=0.00%; DecayToNeutral=0.00%
+4. Slowest return-to-neutral destinations: DestructiveRotation=0.00%; DecayToNeutral=0.00%; CompressionProcessing=100.00%; MixedStructure=100.00%; ReassertionProcessing=100.00%; RecoveryResolution=100.00%; ExhaustionPersistence=100.00%; ConstructiveEmergence=100.00%
+5. Most stable lifecycle families: RecoveryResolution=0.0000; ConstructiveEmergence=0.0000; DestructiveRotation=0.0000; DecayToNeutral=0.0000; ReassertionProcessing=0.8595; MixedStructure=0.9152; CompressionProcessing=0.9821; ExhaustionPersistence=1.0000
+6. Most diffuse lifecycle families: ExhaustionPersistence=1.0000; CompressionProcessing=0.9821; MixedStructure=0.9152; ReassertionProcessing=0.8595; RecoveryResolution=0.0000; ConstructiveEmergence=0.0000; DestructiveRotation=0.0000; DecayToNeutral=0.0000
+7. Strongest participation continuation: MixedStructure=1.1450; CompressionProcessing=0.9866; ExhaustionPersistence=0.8858; ReassertionProcessing=0.8771; RecoveryResolution=0.8703; ConstructiveEmergence=0.6354; DestructiveRotation=0.0000; DecayToNeutral=0.0000
+8. Strongest participation decay: DestructiveRotation=0.0000; DecayToNeutral=0.0000; ConstructiveEmergence=0.6354; RecoveryResolution=0.8703; ReassertionProcessing=0.8771; ExhaustionPersistence=0.8858; CompressionProcessing=0.9866; MixedStructure=1.1450
+9. Strongest range continuation: RecoveryResolution=1.3333; CompressionProcessing=1.3068; ReassertionProcessing=1.1477; MixedStructure=0.9729; ExhaustionPersistence=0.8007; ConstructiveEmergence=0.6714; DestructiveRotation=0.0000; DecayToNeutral=0.0000
+10. Recommended APVA lifecycle model: NoDistinctLifecycle
+
+RESEARCH NOTES
+Mechanical only.
+Questions: Once a destination forms, what happens next? Do Recovery and Exhaustion diverge? Is Mixed a destination or transition basin? Can APVA represent Neutral -> Destination -> Lifecycle -> ReturnToNeutral?

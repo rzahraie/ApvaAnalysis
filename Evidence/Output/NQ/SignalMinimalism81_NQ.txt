@@ -1,0 +1,259 @@
+APVA Signal Minimalism Study v0.1 - NQ
+================================================================================================
+Instrument: NQ
+Input path(s): .\Evidence\NQ\NQ_5 Minute_apva_bar_evidence_v01.csv
+Observation count: 1260
+
+1. Baseline Loop Phase Model
+Model | Top1Accuracy | Top2Accuracy | BrierScore | Entropy
+MinimalLoopPhase | 65.71% | 87.14% | 0.0655 | 0.6871
+
+2. Candidate Signal Inventory
+Signal | AvailableCount | MissingCount | PercentAvailable
+LoopPhase | 1260 | 0 | 100.00%
+NeutralAgeBucket | 1260 | 0 | 100.00%
+DestinationFamily | 1260 | 0 | 100.00%
+ReturnFamily | 1260 | 0 | 100.00%
+FormationSourceFamily | 1260 | 0 | 100.00%
+FailureNode | 1260 | 0 | 100.00%
+MaxNeutralAgeReached | 1260 | 0 | 100.00%
+RangeRelativeToPrevious | 1245 | 15 | 98.81%
+TrueRangeRelativeToPrevious | 1245 | 15 | 98.81%
+BodyRelativeToPrevious | 1239 | 21 | 98.33%
+VolumeRelativeToRollingMean | 1191 | 69 | 94.52%
+VolumeRelativeToPrevious | 1245 | 15 | 98.81%
+VolumeRelativeToSessionMean | 1260 | 0 | 100.00%
+EfficiencyRatio | 1260 | 0 | 100.00%
+CloseLocation | 1260 | 0 | 100.00%
+MemoryStrength | 1260 | 0 | 100.00%
+BranchEntropy | 1260 | 0 | 100.00%
+
+3. Single Signal Prediction Table
+Signal | Top1Accuracy | Top2Accuracy | BrierScore | Entropy
+LoopPhase | 65.71% | 87.14% | 0.0655 | 0.6871
+NeutralAgeBucket | 56.90% | 81.27% | 0.0818 | 0.8245
+BranchEntropy | 40.40% | 57.30% | 0.1065 | 0.8735
+FailureNode | 38.65% | 56.67% | 0.1093 | 0.8696
+MaxNeutralAgeReached | 38.65% | 56.67% | 0.1093 | 0.8696
+MemoryStrength | 37.38% | 56.90% | 0.1102 | 0.8698
+VolumeRelativeToRollingMean | 35.79% | 53.65% | 0.1084 | 0.8647
+ReturnFamily | 34.60% | 54.60% | 0.1125 | 0.8930
+FormationSourceFamily | 34.60% | 54.60% | 0.1125 | 0.8930
+DestinationFamily | 33.65% | 53.41% | 0.1140 | 0.9063
+RangeRelativeToPrevious | 33.65% | 53.17% | 0.1128 | 0.8894
+TrueRangeRelativeToPrevious | 33.65% | 53.17% | 0.1128 | 0.8896
+BodyRelativeToPrevious | 33.65% | 53.17% | 0.1138 | 0.9001
+VolumeRelativeToPrevious | 33.65% | 53.17% | 0.1137 | 0.9020
+VolumeRelativeToSessionMean | 33.65% | 53.33% | 0.1124 | 0.8940
+EfficiencyRatio | 33.65% | 53.17% | 0.1130 | 0.8948
+CloseLocation | 33.65% | 53.17% | 0.1137 | 0.9021
+
+4. Signal Family Prediction Table
+SignalFamily | Top1Accuracy | Top2Accuracy | BrierScore | Entropy
+StateFamily | 83.73% | 98.17% | 0.0321 | 0.4360
+GraphFamily | 45.79% | 63.25% | 0.1018 | 0.8281
+VolumeFamily | 36.11% | 55.00% | 0.1066 | 0.8642
+RangeFamily | 35.24% | 54.76% | 0.1113 | 0.8767
+EfficiencyFamily | 33.97% | 53.97% | 0.1122 | 0.8855
+
+5. Signal Ablation Table
+RemovedSignal | DeltaTop1 | DeltaTop2 | DeltaBrier | DeltaEntropy
+LoopPhase | 1.90% | 0.24% | 0.0028 | 0.0358
+CloseLocation | 1.11% | 0.00% | 0.0018 | 0.0260
+VolumeRelativeToPrevious | 0.87% | 0.00% | 0.0014 | 0.0198
+EfficiencyRatio | 0.87% | 0.00% | 0.0014 | 0.0191
+VolumeRelativeToRollingMean | 0.63% | 0.00% | 0.0009 | 0.0127
+DestinationFamily | 0.56% | 0.00% | 0.0008 | 0.0111
+VolumeRelativeToSessionMean | 0.16% | 0.00% | 0.0002 | 0.0032
+MemoryStrength | 0.16% | 0.00% | 0.0002 | 0.0032
+NeutralAgeBucket | 0.08% | 0.00% | 0.0001 | 0.0016
+BodyRelativeToPrevious | 0.08% | 0.00% | 0.0002 | 0.0028
+ReturnFamily | 0.00% | 0.00% | 0.0000 | 0.0000
+FormationSourceFamily | 0.00% | 0.00% | 0.0000 | 0.0000
+FailureNode | 0.00% | 0.00% | 0.0000 | 0.0000
+MaxNeutralAgeReached | 0.00% | 0.00% | 0.0000 | 0.0000
+RangeRelativeToPrevious | 0.00% | 0.00% | 0.0000 | 0.0000
+TrueRangeRelativeToPrevious | 0.00% | 0.00% | 0.0000 | 0.0000
+BranchEntropy | 0.00% | 0.00% | 0.0000 | 0.0000
+
+6. Family Ablation Table
+RemovedFamily | DeltaTop1 | DeltaTop2 | DeltaBrier | DeltaEntropy
+StateFamily | 13.97% | 3.65% | 0.0223 | 0.2690
+EfficiencyFamily | 2.78% | 0.00% | 0.0044 | 0.0633
+VolumeFamily | 2.46% | 0.00% | 0.0041 | 0.0595
+RangeFamily | 1.19% | 0.00% | 0.0019 | 0.0260
+GraphFamily | 0.16% | 0.00% | 0.0002 | 0.0032
+
+7. Greedy Compression Table
+Step | AddedSignal | Top1Accuracy | Top2Accuracy | BrierScore | Entropy | Improvement
+1 | LoopPhase | 65.71% | 87.14% | 0.0655 | 0.6871 | 65.71%
+2 | FailureNode | 73.10% | 94.29% | 0.0532 | 0.6315 | 7.38%
+3 | NeutralAgeBucket | 78.97% | 95.87% | 0.0418 | 0.5206 | 5.87%
+4 | ReturnFamily | 82.06% | 97.54% | 0.0353 | 0.4757 | 3.10%
+5 | BodyRelativeToPrevious | 85.24% | 98.41% | 0.0282 | 0.3850 | 3.17%
+6 | CloseLocation | 88.89% | 99.21% | 0.0205 | 0.2882 | 3.65%
+7 | VolumeRelativeToPrevious | 92.06% | 99.52% | 0.0132 | 0.1835 | 3.17%
+8 | EfficiencyRatio | 95.16% | 99.76% | 0.0078 | 0.1091 | 3.10%
+9 | VolumeRelativeToRollingMean | 96.75% | 99.92% | 0.0050 | 0.0695 | 1.59%
+10 | DestinationFamily | 97.78% | 99.92% | 0.0034 | 0.0472 | 1.03%
+
+8. Minimal Signal Set Evaluation
+SignalSet | Signals | Top1Accuracy | Top2Accuracy | BrierScore | Entropy | InformationRetained
+FullStateAge | StateAgeNode | 57.06% | 82.54% | 0.0787 | 0.8117 | 86.84%
+MinimalLoopPhase | LoopPhase | 65.71% | 87.14% | 0.0655 | 0.6871 | 100.00%
+FullCandidateSignalSet | LoopPhase, NeutralAgeBucket, DestinationFamily, ReturnFamily, FormationSourceFamily, FailureNode, MaxNeutralAgeReached, RangeRelativeToPrevious, TrueRangeRelativeToPrevious, BodyRelativeToPrevious, VolumeRelativeToRollingMean, VolumeRelativeToPrevious, VolumeRelativeToSessionMean, EfficiencyRatio, CloseLocation, MemoryStrength, BranchEntropy | 98.73% | 99.92% | 0.0020 | 0.0270 | 150.24%
+GreedyMinimalSet | LoopPhase, FailureNode, NeutralAgeBucket, ReturnFamily, BodyRelativeToPrevious, CloseLocation, VolumeRelativeToPrevious, EfficiencyRatio, VolumeRelativeToRollingMean, DestinationFamily | 97.78% | 99.92% | 0.0034 | 0.0472 | 148.79%
+LowDoFSignalSet | LoopPhase, NeutralAgeBucket, DestinationFamily, RangeRelativeToPrevious, VolumeRelativeToRollingMean | 77.70% | 94.68% | 0.0418 | 0.5150 | 118.24%
+MarketOnly | RangeRelativeToPrevious, TrueRangeRelativeToPrevious, BodyRelativeToPrevious, VolumeRelativeToRollingMean, EfficiencyRatio | 41.43% | 61.83% | 0.0999 | 0.8417 | 63.04%
+StateOnly | LoopPhase, NeutralAgeBucket, DestinationFamily, ReturnFamily, FailureNode, MaxNeutralAgeReached | 83.73% | 98.17% | 0.0321 | 0.4360 | 127.42%
+GraphOnly | MemoryStrength, BranchEntropy | 45.79% | 63.25% | 0.1018 | 0.8281 | 69.69%
+StateMarketHybrid | LoopPhase, NeutralAgeBucket, DestinationFamily, RangeRelativeToPrevious, TrueRangeRelativeToPrevious, VolumeRelativeToRollingMean, EfficiencyRatio | 81.51% | 96.43% | 0.0336 | 0.4300 | 124.03%
+
+9. Low-DoF Signal Set Table
+SignalSet | Top1Accuracy | Top2Accuracy | BrierScore | Entropy
+LowDoFSignalSet | 77.70% | 94.68% | 0.0418 | 0.5150
+
+10. Market-Only Table
+SignalSet | Top1Accuracy | Top2Accuracy | BrierScore | Entropy
+MarketOnly | 41.43% | 61.83% | 0.0999 | 0.8417
+
+11. State-Only Table
+SignalSet | Top1Accuracy | Top2Accuracy | BrierScore | Entropy
+StateOnly | 83.73% | 98.17% | 0.0321 | 0.4360
+
+12. Graph-Only Table
+SignalSet | Top1Accuracy | Top2Accuracy | BrierScore | Entropy
+GraphOnly | 45.79% | 63.25% | 0.1018 | 0.8281
+
+13. State + Market Hybrid Table
+SignalSet | Top1Accuracy | Top2Accuracy | BrierScore | Entropy
+StateMarketHybrid | 81.51% | 96.43% | 0.0336 | 0.4300
+
+14. Cross-Instrument Replication Table
+SignalSet | Top1_6E | Top1_CL | Top1_NQ | Variance | ReplicationAssessment
+
+15. Signal Necessity Table
+Signal | NecessityClass | Reason
+LoopPhase | SupportSignal | Removal causes 0.5% to 2% Top1 loss.
+NeutralAgeBucket | RedundantSignal | Removal causes <0.5% Top1 loss.
+DestinationFamily | SupportSignal | Removal causes 0.5% to 2% Top1 loss.
+ReturnFamily | RedundantSignal | Removal causes <0.5% Top1 loss.
+FormationSourceFamily | RedundantSignal | Removal causes <0.5% Top1 loss.
+FailureNode | RedundantSignal | Removal causes <0.5% Top1 loss.
+MaxNeutralAgeReached | RedundantSignal | Removal causes <0.5% Top1 loss.
+RangeRelativeToPrevious | RedundantSignal | Removal causes <0.5% Top1 loss.
+TrueRangeRelativeToPrevious | RedundantSignal | Removal causes <0.5% Top1 loss.
+BodyRelativeToPrevious | RedundantSignal | Removal causes <0.5% Top1 loss.
+VolumeRelativeToRollingMean | SupportSignal | Removal causes 0.5% to 2% Top1 loss.
+VolumeRelativeToPrevious | SupportSignal | Removal causes 0.5% to 2% Top1 loss.
+VolumeRelativeToSessionMean | RedundantSignal | Removal causes <0.5% Top1 loss.
+EfficiencyRatio | SupportSignal | Removal causes 0.5% to 2% Top1 loss.
+CloseLocation | SupportSignal | Removal causes 0.5% to 2% Top1 loss.
+MemoryStrength | RedundantSignal | Removal causes <0.5% Top1 loss.
+BranchEntropy | RedundantSignal | Removal causes <0.5% Top1 loss.
+
+16. Interpretability Table
+Signal | MechanicalRole
+LoopPhase | Where the current bar sits in the closed APVA loop.
+NeutralAgeBucket | Neutral maturity and deterioration level.
+DestinationFamily | Excursion type after Neutral failure.
+ReturnFamily | Family that routes the loop back toward Neutral.
+FormationSourceFamily | Source family immediately before Neutral_Age1 formation.
+FailureNode | Last Neutral node before excursion.
+MaxNeutralAgeReached | Maximum Neutral maturity reached inside the loop.
+RangeRelativeToPrevious | Price range expansion or collapse.
+TrueRangeRelativeToPrevious | Gap-aware range expansion or collapse.
+BodyRelativeToPrevious | Directional body expansion or collapse.
+VolumeRelativeToRollingMean | Participation versus recent activity.
+VolumeRelativeToPrevious | Immediate participation expansion or contraction.
+VolumeRelativeToSessionMean | Participation versus session baseline.
+EfficiencyRatio | Directional efficiency within the bar.
+CloseLocation | Close position inside the bar range.
+MemoryStrength | State persistence inherited from information decay logic.
+BranchEntropy | Structural uncertainty of the current node.
+
+17. Outcome Diagnostics Table
+SignalSet | LoopPhase | DRFwd1 | DRFwd3 | DRFwd5 | DRFwd10 | ContinuationRate5 | FailureRate5 | FlatRate5
+FullCandidateSignalSet | NeutralFormation | -2.9358 | -4.0332 | -7.0177 | 2.9292 | 52.21% | 47.79% | 0.00%
+FullCandidateSignalSet | NeutralMaturation | -3.0254 | -1.3249 | 0.0762 | -0.8356 | 52.94% | 47.06% | 0.00%
+FullCandidateSignalSet | LateNeutral | -0.9006 | -1.8432 | 2.8689 | -4.1127 | 51.64% | 48.36% | 0.00%
+FullCandidateSignalSet | NeutralFailure | 10.2905 | 4.7635 | 3.5203 | 6.5968 | 49.55% | 50.45% | 0.00%
+FullCandidateSignalSet | DestinationSelection | -3.0642 | -6.3894 | -5.1659 | -3.1062 | 44.25% | 55.75% | 0.00%
+FullCandidateSignalSet | Excursion | -0.1392 | -0.8267 | -2.2459 | -1.0637 | 49.53% | 50.00% | 0.47%
+FullCandidateSignalSet | ReturnToNeutral | -1.5664 | -11.1133 | -19.5508 | -18.1953 | 35.94% | 64.06% | 0.00%
+LowDoFSignalSet | NeutralFormation | -2.9358 | -4.0332 | -7.0177 | 2.9292 | 52.21% | 47.79% | 0.00%
+LowDoFSignalSet | NeutralMaturation | -3.0254 | -1.3249 | 0.0762 | -0.8356 | 52.94% | 47.06% | 0.00%
+LowDoFSignalSet | LateNeutral | -0.9006 | -1.8432 | 2.8689 | -4.1127 | 51.64% | 48.36% | 0.00%
+LowDoFSignalSet | NeutralFailure | 10.2905 | 4.7635 | 3.5203 | 6.5968 | 49.55% | 50.45% | 0.00%
+LowDoFSignalSet | DestinationSelection | -3.0642 | -6.3894 | -5.1659 | -3.1062 | 44.25% | 55.75% | 0.00%
+LowDoFSignalSet | Excursion | -0.1392 | -0.8267 | -2.2459 | -1.0637 | 49.53% | 50.00% | 0.47%
+LowDoFSignalSet | ReturnToNeutral | -1.5664 | -11.1133 | -19.5508 | -18.1953 | 35.94% | 64.06% | 0.00%
+MinimalLoopPhase | NeutralFormation | -2.9358 | -4.0332 | -7.0177 | 2.9292 | 52.21% | 47.79% | 0.00%
+MinimalLoopPhase | NeutralMaturation | -3.0254 | -1.3249 | 0.0762 | -0.8356 | 52.94% | 47.06% | 0.00%
+MinimalLoopPhase | LateNeutral | -0.9006 | -1.8432 | 2.8689 | -4.1127 | 51.64% | 48.36% | 0.00%
+MinimalLoopPhase | NeutralFailure | 10.2905 | 4.7635 | 3.5203 | 6.5968 | 49.55% | 50.45% | 0.00%
+MinimalLoopPhase | DestinationSelection | -3.0642 | -6.3894 | -5.1659 | -3.1062 | 44.25% | 55.75% | 0.00%
+MinimalLoopPhase | Excursion | -0.1392 | -0.8267 | -2.2459 | -1.0637 | 49.53% | 50.00% | 0.47%
+MinimalLoopPhase | ReturnToNeutral | -1.5664 | -11.1133 | -19.5508 | -18.1953 | 35.94% | 64.06% | 0.00%
+FullStateAge | NeutralFormation | -2.9358 | -4.0332 | -7.0177 | 2.9292 | 52.21% | 47.79% | 0.00%
+FullStateAge | NeutralMaturation | -3.0254 | -1.3249 | 0.0762 | -0.8356 | 52.94% | 47.06% | 0.00%
+FullStateAge | LateNeutral | -0.9006 | -1.8432 | 2.8689 | -4.1127 | 51.64% | 48.36% | 0.00%
+FullStateAge | NeutralFailure | 10.2905 | 4.7635 | 3.5203 | 6.5968 | 49.55% | 50.45% | 0.00%
+FullStateAge | DestinationSelection | -3.0642 | -6.3894 | -5.1659 | -3.1062 | 44.25% | 55.75% | 0.00%
+FullStateAge | Excursion | -0.1392 | -0.8267 | -2.2459 | -1.0637 | 49.53% | 50.00% | 0.47%
+FullStateAge | ReturnToNeutral | -1.5664 | -11.1133 | -19.5508 | -18.1953 | 35.94% | 64.06% | 0.00%
+MarketOnly | NeutralFormation | -2.9358 | -4.0332 | -7.0177 | 2.9292 | 52.21% | 47.79% | 0.00%
+MarketOnly | NeutralMaturation | -3.0254 | -1.3249 | 0.0762 | -0.8356 | 52.94% | 47.06% | 0.00%
+MarketOnly | LateNeutral | -0.9006 | -1.8432 | 2.8689 | -4.1127 | 51.64% | 48.36% | 0.00%
+MarketOnly | NeutralFailure | 10.2905 | 4.7635 | 3.5203 | 6.5968 | 49.55% | 50.45% | 0.00%
+MarketOnly | DestinationSelection | -3.0642 | -6.3894 | -5.1659 | -3.1062 | 44.25% | 55.75% | 0.00%
+MarketOnly | Excursion | -0.1392 | -0.8267 | -2.2459 | -1.0637 | 49.53% | 50.00% | 0.47%
+MarketOnly | ReturnToNeutral | -1.5664 | -11.1133 | -19.5508 | -18.1953 | 35.94% | 64.06% | 0.00%
+GreedyMinimalSet | NeutralFormation | -2.9358 | -4.0332 | -7.0177 | 2.9292 | 52.21% | 47.79% | 0.00%
+GreedyMinimalSet | NeutralMaturation | -3.0254 | -1.3249 | 0.0762 | -0.8356 | 52.94% | 47.06% | 0.00%
+GreedyMinimalSet | LateNeutral | -0.9006 | -1.8432 | 2.8689 | -4.1127 | 51.64% | 48.36% | 0.00%
+GreedyMinimalSet | NeutralFailure | 10.2905 | 4.7635 | 3.5203 | 6.5968 | 49.55% | 50.45% | 0.00%
+GreedyMinimalSet | DestinationSelection | -3.0642 | -6.3894 | -5.1659 | -3.1062 | 44.25% | 55.75% | 0.00%
+GreedyMinimalSet | Excursion | -0.1392 | -0.8267 | -2.2459 | -1.0637 | 49.53% | 50.00% | 0.47%
+GreedyMinimalSet | ReturnToNeutral | -1.5664 | -11.1133 | -19.5508 | -18.1953 | 35.94% | 64.06% | 0.00%
+
+18. Recommendation
+Classification: PracticalMinimalSet
+MinimalSignalSet: LoopPhase, FailureNode, NeutralAgeBucket, ReturnFamily, BodyRelativeToPrevious, CloseLocation, VolumeRelativeToPrevious, EfficiencyRatio, VolumeRelativeToRollingMean, DestinationFamily
+RemovedSignals: FormationSourceFamily, MaxNeutralAgeReached, RangeRelativeToPrevious, TrueRangeRelativeToPrevious, VolumeRelativeToSessionMean, MemoryStrength, BranchEntropy
+CoreSignals: None
+SupportSignals: LoopPhase, DestinationFamily, VolumeRelativeToRollingMean, VolumeRelativeToPrevious, EfficiencyRatio, CloseLocation
+RedundantSignals: NeutralAgeBucket, ReturnFamily, FormationSourceFamily, FailureNode, MaxNeutralAgeReached, RangeRelativeToPrevious, TrueRangeRelativeToPrevious, BodyRelativeToPrevious, VolumeRelativeToSessionMean, MemoryStrength, BranchEntropy
+HarmfulSignals: None
+RecommendedNextStep: ProceedToRealTimeStateMachine
+Reason: Greedy minimal Top1 retained 148.79% of the MinimalLoopPhase baseline.
+
+19. Low-DoF Audit
+Uses only existing APVA states and OHLCV-derived variables.
+No new APVA states.
+No new APVA families.
+No context.
+No arbitration.
+No persistence.
+No discretionary phase.
+No optimization.
+No fitting.
+No machine learning.
+No trading logic.
+No forward returns used in signal selection.
+
+RANKINGS
+1. Best single signals: LoopPhase=65.71%; NeutralAgeBucket=56.90%; BranchEntropy=40.40%; FailureNode=38.65%; MaxNeutralAgeReached=38.65%; MemoryStrength=37.38%; VolumeRelativeToRollingMean=35.79%; ReturnFamily=34.60%
+2. Best signal families: StateFamily=83.73%; GraphFamily=45.79%; VolumeFamily=36.11%; RangeFamily=35.24%; EfficiencyFamily=33.97%
+3. Most necessary signals: 
+4. Most redundant signals: NeutralAgeBucket; ReturnFamily; FormationSourceFamily; FailureNode; MaxNeutralAgeReached; RangeRelativeToPrevious; TrueRangeRelativeToPrevious; BodyRelativeToPrevious
+5. Harmful signals: 
+6. Best minimal signal sets: FullCandidateSignalSet=98.73%; GreedyMinimalSet=97.78%; StateOnly=83.73%; StateMarketHybrid=81.51%; LowDoFSignalSet=77.70%; MinimalLoopPhase=65.71%
+7. Best cross-instrument replicated sets: 
+8. Best market-only representation: 41.43%
+9. Best state-market hybrid representation: 81.51%
+10. Recommended APVA minimal signal set: LoopPhase, FailureNode, NeutralAgeBucket, ReturnFamily, BodyRelativeToPrevious, CloseLocation, VolumeRelativeToPrevious, EfficiencyRatio, VolumeRelativeToRollingMean, DestinationFamily
+
+RESEARCH NOTES
+Mechanical only.
+Questions: What is the smallest APVA representation? Can StateAge be replaced by LoopPhase? Are graph signals necessary? Are range and volume enough for market behavior?
