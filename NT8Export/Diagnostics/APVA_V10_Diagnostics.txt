@@ -17,66 +17,67 @@ Rejected Missing StructuralState | 0
 SECTION 2 - LoopPhase Frequency
 LoopPhase | Count | Percent
 - | - | -
-NeutralFormation | 169 | 8.36%
-NeutralMaturation | 276 | 13.66%
-LateNeutral | 130 | 6.43%
-DestinationSelection | 168 | 8.31%
-Excursion | 1218 | 60.27%
-ReturnToNeutral | 60 | 2.97%
+NeutralFormation | 367 | 18.16%
+NeutralMaturation | 635 | 31.42%
+LateNeutral | 321 | 15.88%
+DestinationSelection | 366 | 18.11%
+Excursion | 319 | 15.78%
+ReturnToNeutral | 13 | 0.64%
 Absent states: None
 Extremely rare states: None
 
 SECTION 3 - StructuralState Frequency
 StructuralState | Count | Percent
 - | - | -
-NeutralProcessing | 575 | 28.45%
-MixedStructure | 571 | 28.25%
-ExhaustionPersistence | 378 | 18.70%
-CompressionProcessing | 373 | 18.46%
-DecayToNeutral | 60 | 2.97%
-RecoveryResolution | 60 | 2.97%
-ReassertionProcessing | 4 | 0.20%
+NeutralProcessing | 1323 | 65.46%
+MixedStructure | 355 | 17.57%
+ExhaustionPersistence | 285 | 14.10%
+RecoveryResolution | 37 | 1.83%
+DecayToNeutral | 14 | 0.69%
+CompressionProcessing | 7 | 0.35%
+ReassertionProcessing | 0 | 0.00%
 
 SECTION 4 - Transition Matrix
 FromLoopPhase | ToLoopPhase | Count | Probability
 - | - | - | -
-DestinationSelection | Excursion | 142 | 84.52%
-DestinationSelection | NeutralFormation | 26 | 15.48%
-Excursion | Excursion | 1069 | 87.77%
-Excursion | NeutralFormation | 135 | 11.08%
-Excursion | ReturnToNeutral | 14 | 1.15%
-LateNeutral | DestinationSelection | 41 | 31.78%
-LateNeutral | LateNeutral | 88 | 68.22%
-NeutralFormation | DestinationSelection | 43 | 25.44%
-NeutralFormation | NeutralMaturation | 126 | 74.56%
-NeutralMaturation | DestinationSelection | 84 | 30.43%
-NeutralMaturation | LateNeutral | 42 | 15.22%
-NeutralMaturation | NeutralMaturation | 150 | 54.35%
-ReturnToNeutral | Excursion | 7 | 11.67%
-ReturnToNeutral | NeutralFormation | 7 | 11.67%
-ReturnToNeutral | ReturnToNeutral | 46 | 76.67%
+DestinationSelection | Excursion | 162 | 44.26%
+DestinationSelection | NeutralFormation | 201 | 54.92%
+DestinationSelection | ReturnToNeutral | 3 | 0.82%
+Excursion | Excursion | 156 | 48.90%
+Excursion | NeutralFormation | 160 | 50.16%
+Excursion | ReturnToNeutral | 3 | 0.94%
+LateNeutral | DestinationSelection | 102 | 31.87%
+LateNeutral | LateNeutral | 218 | 68.12%
+NeutralFormation | DestinationSelection | 85 | 23.16%
+NeutralFormation | NeutralMaturation | 282 | 76.84%
+NeutralMaturation | DestinationSelection | 179 | 28.19%
+NeutralMaturation | LateNeutral | 103 | 16.22%
+NeutralMaturation | NeutralMaturation | 353 | 55.59%
+ReturnToNeutral | Excursion | 1 | 7.69%
+ReturnToNeutral | NeutralFormation | 5 | 38.46%
+ReturnToNeutral | ReturnToNeutral | 7 | 53.85%
 Illegal transition count: 0
 
 SECTION 5 - State Duration
 LoopPhase | Occurrences | MeanDurationBars | MedianDurationBars | MaxDurationBars
 - | - | - | - | -
-NeutralFormation | 169 | 1.00 | 1.00 | 1
-NeutralMaturation | 126 | 2.19 | 3.00 | 3
-LateNeutral | 42 | 3.10 | 2.00 | 13
-DestinationSelection | 168 | 1.00 | 1.00 | 1
-Excursion | 149 | 8.17 | 6.00 | 46
-ReturnToNeutral | 14 | 4.29 | 4.00 | 8
-Longest phases: Excursion, ReturnToNeutral, LateNeutral
-Shortest phases: DestinationSelection, NeutralFormation, NeutralMaturation
+NeutralFormation | 367 | 1.00 | 1.00 | 1
+NeutralMaturation | 282 | 2.25 | 3.00 | 3
+LateNeutral | 103 | 3.12 | 2.00 | 13
+DestinationSelection | 366 | 1.00 | 1.00 | 1
+Excursion | 163 | 1.96 | 2.00 | 7
+ReturnToNeutral | 6 | 2.17 | 2.00 | 4
+Longest phases: LateNeutral, NeutralMaturation, ReturnToNeutral
+Shortest phases: DestinationSelection, NeutralFormation, Excursion
 
 SECTION 6 - Destination Analysis
 DestinationFamily | Count | Percent
 - | - | -
-CompressionProcessing | 2 | 1.19%
-MixedStructure | 70 | 41.67%
-RecoveryResolution | 12 | 7.14%
+CompressionProcessing | 0 | 0.00%
+MixedStructure | 149 | 40.71%
+RecoveryResolution | 21 | 5.74%
 ReassertionProcessing | 0 | 0.00%
-ExhaustionPersistence | 84 | 50.00%
+ExhaustionPersistence | 196 | 53.55%
 Dominance warning: None
 
 SECTION 7 - FailureWarningScore Distribution
@@ -95,38 +96,38 @@ MedianScore: 3.00
 SECTION 8 - Failure Pressure Analysis
 LoopPhase | PressureCount | TotalCount | PressurePercent
 - | - | - | -
-NeutralFormation | 0 | 169 | 0.00%
-NeutralMaturation | 150 | 276 | 54.35%
-LateNeutral | 66 | 130 | 50.77%
-DestinationSelection | 167 | 168 | 99.40%
-Excursion | 761 | 1218 | 62.48%
-ReturnToNeutral | 46 | 60 | 76.67%
+NeutralFormation | 0 | 367 | 0.00%
+NeutralMaturation | 335 | 635 | 52.76%
+LateNeutral | 157 | 321 | 48.91%
+DestinationSelection | 366 | 366 | 100.00%
+Excursion | 319 | 319 | 100.00%
+ReturnToNeutral | 13 | 13 | 100.00%
 
 SECTION 9 - Phase Consistency Checks
 Check | Count
 - | -
-DestinationSelection directly after NeutralFormation | 43
-DestinationSelection directly after Age1 Neutral | 43
+DestinationSelection directly after NeutralFormation | 85
+DestinationSelection directly after Age1 Neutral | 85
 
 SECTION 10 - Cross-Day Stability
 DaysDetected: 23
 LoopPhase daily variation
 LoopPhase | MeanDailyPercent | StdDevDailyPercent | MinDailyPercent | MaxDailyPercent
 - | - | - | - | -
-NeutralFormation | 8.33% | 2.20% | 3.33% | 12.22%
-NeutralMaturation | 13.73% | 4.59% | 5.56% | 24.44%
-LateNeutral | 6.40% | 4.80% | 0.00% | 17.78%
-DestinationSelection | 8.28% | 1.99% | 3.33% | 11.11%
-Excursion | 60.36% | 9.05% | 32.22% | 73.33%
-ReturnToNeutral | 2.90% | 4.21% | 0.00% | 13.33%
+NeutralFormation | 18.23% | 3.01% | 12.22% | 23.33%
+NeutralMaturation | 31.52% | 4.27% | 25.56% | 42.22%
+LateNeutral | 15.74% | 6.98% | 4.44% | 28.89%
+DestinationSelection | 18.13% | 3.01% | 12.22% | 23.33%
+Excursion | 15.75% | 5.60% | 6.67% | 26.67%
+ReturnToNeutral | 0.63% | 1.10% | 0.00% | 3.33%
 Destination daily variation
 DestinationFamily | MeanDailyPercent | StdDevDailyPercent | MinDailyPercent | MaxDailyPercent
 - | - | - | - | -
-CompressionProcessing | 0.72% | 2.41% | 0.00% | 11.11%
-MixedStructure | 30.72% | 20.26% | 0.00% | 58.89%
-RecoveryResolution | 4.93% | 9.27% | 0.00% | 38.89%
+CompressionProcessing | 0.00% | 0.00% | 0.00% | 0.00%
+MixedStructure | 16.66% | 5.79% | 4.44% | 27.78%
+RecoveryResolution | 1.84% | 2.32% | 0.00% | 10.00%
 ReassertionProcessing | 0.00% | 0.00% | 0.00% | 0.00%
-ExhaustionPersistence | 35.17% | 22.61% | 2.22% | 80.00%
+ExhaustionPersistence | 16.01% | 4.90% | 6.67% | 24.44%
 WarningScore daily variation
 Score | MeanDailyPercent | StdDevDailyPercent | MinDailyPercent | MaxDailyPercent
 - | - | - | - | -
