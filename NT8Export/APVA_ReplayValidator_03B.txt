@@ -1,0 +1,71 @@
+APVA Replay Validator 03B - Prior Neutral Persistence
+==============================================================================
+
+Purpose
+Validate completed NeutralProcessing age before DestinationSelection.
+Research only. No trading system. No optimization. No fitting. No ML.
+
+Input
+------------------------------------------------------------------------------
+Files: 1
+  C:\Users\rz0\Documents\ApvaAnalysis\NT8Export\APVA_V10_StateMachine_NQ_JUN26_5_Minute_20260603.csv
+Rows read: 2021
+Usable DestinationSelection events: 366
+PriorNeutralPersistenceBars column present: True
+
+PriorNeutralPersistenceBars Diagnostics
+------------------------------------------------------------------------------
+Min PriorNeutralPersistenceBars: 1
+Max PriorNeutralPersistenceBars: 17
+Mean PriorNeutralPersistenceBars: 3.5820
+Median PriorNeutralPersistenceBars: 3.0000
+
+Distribution table
+PriorNeutralPersistenceBars | Count
+----------------------------+------
+1                           | 85   
+2                           | 84   
+3                           | 43   
+4                           | 52   
+5                           | 32   
+6                           | 20   
+7                           | 23   
+8                           | 11   
+9                           | 2    
+10                          | 3    
+11                          | 3    
+12                          | 3    
+13                          | 2    
+15                          | 1    
+17                          | 2    
+
+Prior Neutral Persistence Quality
+------------------------------------------------------------------------------
+PriorNeutralPersistenceGroup | Count | AvgDR5  | AvgDR10 | WinRate5 | WinRate10 | AvgMFE5 | AvgMAE5  | MfeMaeRatio5
+-----------------------------+-------+---------+---------+----------+-----------+---------+----------+-------------
+1-2                          | 169   | -3.9216 | 11.3195 | 0.4615   | 0.5621    | 27.7160 | -30.8950 | 0.8971      
+3-4                          | 95    | -3.5000 | -6.2500 | 0.4842   | 0.5053    | 24.5789 | -30.2500 | 0.8125      
+5-6                          | 52    | 0.0625  | -4.7404 | 0.5000   | 0.4808    | 23.2260 | -24.0144 | 0.9672      
+7-10                         | 39    | 4.7564  | 7.2821  | 0.6410   | 0.5385    | 36.0897 | -27.2179 | 1.3260      
+11+                          | 11    | -0.9545 | 3.0227  | 0.7273   | 0.6364    | 24.4773 | -45.6591 | 0.5361      
+
+Consistency Check
+------------------------------------------------------------------------------
+LateNeutral -> DestinationSelection events with PriorNeutralPersistenceBars < 5: 0
+
+Summary
+------------------------------------------------------------------------------
+Completed neutral persistence has multiple buckets: true
+Warnings: None
+If all events remain in 1-2 or Unknown after a fresh NT8 export, capture logic is still wrong.
+
+Low-DoF / Research Audit
+------------------------------------------------------------------------------
+No optimization.
+No fitting.
+No machine learning.
+No trading rules.
+No entries.
+No exits.
+No profit model.
+Behavioral validation only.
