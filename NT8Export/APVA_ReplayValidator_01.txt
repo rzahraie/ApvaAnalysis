@@ -1,0 +1,97 @@
+APVA Replay Validator v0.1
+========================================================================
+
+Purpose
+Validate APVA v1.0 destination events against subsequent close-price behavior.
+Research only. No trading system. No optimization. No fitting. No ML.
+
+SECTION 1 - Destination Event Extraction
+------------------------------------------------------------------------
+Input files: 1
+  C:\Users\rz0\Documents\ApvaAnalysis\NT8Export\APVA_V10_StateMachine_NQ_JUN26_5_Minute_20260603.csv
+Rows read: 2021
+Instruments: NQ JUN26
+Date range: 2026-05-04 06:35:00 to 2026-06-03 13:55:00
+DestinationSelection events: 366
+
+Destination event counts
+  ExhaustionPersistence: 151
+  RecoveryResolution: 110
+  MixedStructure: 89
+  ReassertionProcessing: 10
+  CompressionProcessing: 6
+
+SECTION 2 - Forward Excursion
+------------------------------------------------------------------------
+Metrics use Close prices only. MFE/MAE are signed close changes from the event close.
+Horizon 1: AvgNet=0.0055 AvgMFE=0.0055 AvgMAE=0.0055
+Horizon 2: AvgNet=0.4249 AvgMFE=10.3299 AvgMAE=-9.8996
+Horizon 3: AvgNet=2.8333 AvgMFE=18.5772 AvgMAE=-16.0656
+Horizon 5: AvgNet=4.0915 AvgMFE=30.3866 AvgMAE=-26.4740
+Horizon 10: AvgNet=8.4167 AvgMFE=50.5423 AvgMAE=-44.4652
+
+SECTION 3 - Destination Family Behavior
+------------------------------------------------------------------------
+DestinationFamily     | Count | Average3BarMove | Average5BarMove | Average10BarMove | AverageMFE5 | AverageMAE5
+----------------------+-------+-----------------+-----------------+------------------+-------------+------------
+CompressionProcessing | 6     | -10.7917        | 7.0833          | -37.7500         | 31.6667     | -42.9167   
+ReassertionProcessing | 10    | -5.5250         | -4.7000         | 39.6000          | 22.4000     | -35.7500   
+RecoveryResolution    | 110   | 1.8773          | 5.3932          | 3.0000           | 29.9250     | -25.1568   
+MixedStructure        | 89    | -2.1067         | -7.1433         | 9.9663           | 23.0646     | -33.3876   
+ExhaustionPersistence | 151   | 7.5364          | 10.2285         | 11.2185          | 35.5166     | -22.0911   
+
+SECTION 4 - Failure Score Behavior
+------------------------------------------------------------------------
+FailureWarningScore | Count | Average1BarMove | Average2BarMove | Average3BarMove | Average5BarMove | Average10BarMove | AverageMFE5 | AverageMAE5
+--------------------+-------+-----------------+-----------------+-----------------+-----------------+------------------+-------------+------------
+0                   | 0     | N/A             | N/A             | N/A             | N/A             | N/A              | N/A         | N/A        
+1                   | 0     | N/A             | N/A             | N/A             | N/A             | N/A              | N/A         | N/A        
+2                   | 0     | N/A             | N/A             | N/A             | N/A             | N/A              | N/A         | N/A        
+3                   | 25    | -14.5200        | -11.0200        | -14.3500        | -4.6900         | 14.6000          | 18.3900     | -40.4400   
+4                   | 35    | 0.3643          | 4.1643          | 8.0714          | 4.9786          | 28.8786          | 31.5929     | -19.2857   
+5                   | 195   | 1.7064          | 1.2231          | 3.3923          | 9.3128          | 7.6064           | 32.9987     | -24.4385   
+6                   | 111   | 0.1757          | 0.4212          | 4.0698          | -3.3829         | 1.9955           | 28.1194     | -29.1712   
+
+SECTION 5 - LateNeutral Analysis
+------------------------------------------------------------------------
+LateNeutral rows: 321
+LateNeutral rows with later DestinationSelection: 313
+Mean bars until DestinationSelection: 3.0767
+Median bars until DestinationSelection: 2.0000
+Maximum bars until DestinationSelection: 13
+
+SECTION 6 - Transition Analysis
+------------------------------------------------------------------------
+PreviousLoopPhase | DestinationSelectionCount | Average3BarMove | Average5BarMove | Average10BarMove | AverageMFE5 | AverageMAE5
+------------------+---------------------------+-----------------+-----------------+------------------+-------------+------------
+LateNeutral       | 102                       | 7.6275          | 9.4142          | 19.4142          | 33.5368     | -22.3162   
+NeutralMaturation | 179                       | 0.4665          | -0.0196         | 2.3310           | 26.6718     | -27.6006   
+NeutralFormation  | 85                        | 2.0647          | 6.3618          | 8.0353           | 34.4294     | -29.0912   
+
+SECTION 7 - Destination Stability
+------------------------------------------------------------------------
+DestinationFamily     | Count | MeanBarsToNeutralOrReturn | MedianBarsToNeutralOrReturn | MaxBarsToNeutralOrReturn
+----------------------+-------+---------------------------+-----------------------------+-------------------------
+CompressionProcessing | 6     | 1.6667                    | 2.0000                      | 2                       
+ReassertionProcessing | 10    | 1.6000                    | 1.5000                      | 3                       
+RecoveryResolution    | 110   | 1.9091                    | 1.0000                      | 8                       
+MixedStructure        | 89    | 2.3258                    | 2                           | 8                       
+ExhaustionPersistence | 151   | 1.5960                    | 1                           | 8                       
+
+SECTION 8 - Summary
+------------------------------------------------------------------------
+Largest average absolute 5-bar destination movement: ExhaustionPersistence
+Least useful by absolute 5-bar movement: ReassertionProcessing
+FailureWarningScore behavior: Insufficient low/high score comparison.
+LateNeutral matter: Yes, it precedes DestinationSelection in this sample.
+APVA predictive appearance: behavioral differences are present if destination/score groups show distinct forward movement and stability profiles. This report does not create trading rules.
+
+Low-DoF / Research Audit
+------------------------------------------------------------------------
+No optimization.
+No machine learning.
+No fitting.
+No trading strategy.
+No Sharpe ratio.
+No profit metrics.
+Close-price replay behavior only.
