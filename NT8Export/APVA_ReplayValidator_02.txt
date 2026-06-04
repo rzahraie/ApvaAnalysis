@@ -1,0 +1,126 @@
+APVA Replay Validator 02 - Directional Behavior
+==============================================================================
+
+Purpose
+Test whether DestinationSelection movement aligns with VolumePolarity-implied direction.
+Research only. No trading system. No optimization. No fitting. No ML.
+
+Input
+------------------------------------------------------------------------------
+Files: 1
+  C:\Users\rz0\Documents\ApvaAnalysis\NT8Export\APVA_V10_StateMachine_NQ_JUN26_5_Minute_20260603.csv
+Rows read: 2021
+Instruments: NQ JUN26
+Date range: 2026-05-04 06:35:00 to 2026-06-03 13:55:00
+
+SECTION 1 - Event Extraction
+------------------------------------------------------------------------------
+EventsFound: 366
+EventsUsable: 366
+SkippedMissingFuture: 0
+SkippedMissingPolarity: 0
+
+SECTION 2 - Directional Returns
+------------------------------------------------------------------------------
+Horizon 1: AvgDR=0.4208 MedianDR=2.0000 WinRate=54.10% AvgRaw=0.0055 AvgMFE=0.4208 AvgMAE=0.4208
+Horizon 2: AvgDR=-1.4781 MedianDR=-0.3750 WinRate=48.91% AvgRaw=0.4249 AvgMFE=9.5861 AvgMAE=-10.6434
+Horizon 3: AvgDR=-1.9467 MedianDR=0.3750 WinRate=50.27% AvgRaw=2.8333 AvgMFE=16.1270 AvgMAE=-18.5157
+Horizon 5: AvgDR=-2.2322 MedianDR=-0.2500 WinRate=50.00% AvgRaw=4.0915 AvgMFE=27.0587 AvgMAE=-29.8019
+Horizon 10: AvgDR=3.7978 MedianDR=8.5000 WinRate=53.55% AvgRaw=8.4167 AvgMFE=47.7746 AvgMAE=-47.2329
+
+SECTION 3 - Destination Family Directional Behavior
+------------------------------------------------------------------------------
+DestinationFamily     | Count | AvgDR1  | AvgDR2  | AvgDR3  | AvgDR5  | AvgDR10 | WinRate3 | WinRate5 | WinRate10 | AvgMFE5 | AvgMAE5 
+----------------------+-------+---------+---------+---------+---------+---------+----------+----------+-----------+---------+---------
+CompressionProcessing | 6     | 28.7917 | 4.3333  | 11.0417 | -7.4167 | 37.2500 | 0.5000   | 0.3333   | 0.3333    | 47.2083 | -27.3750
+ReassertionProcessing | 10    | 7.1250  | 13.7750 | 9.4250  | 2.7500  | 49.0500 | 0.7000   | 0.6000   | 0.7000    | 34.8250 | -23.3250
+RecoveryResolution    | 110   | 1.0341  | 3.5977  | 2.7409  | 0.4614  | 1.9318  | 0.5636   | 0.4818   | 0.5636    | 29.2182 | -25.8636
+MixedStructure        | 89    | 1.4860  | -5.9298 | -5.6910 | -6.0309 | -8.6180 | 0.4607   | 0.5618   | 0.5393    | 24.4551 | -31.9972
+ExhaustionPersistence | 151   | -2.2252 | -3.7930 | -4.4238 | -2.0795 | 8.1490  | 0.4702   | 0.4768   | 0.5099    | 25.7053 | -31.9023
+
+SECTION 4 - Failure Score Directional Behavior
+------------------------------------------------------------------------------
+FailureWarningScore | Count | AvgDR3  | AvgDR5  | AvgDR10  | WinRate3 | WinRate5 | WinRate10 | AvgMFE5 | AvgMAE5 
+--------------------+-------+---------+---------+----------+----------+----------+-----------+---------+---------
+0                   | 0     | N/A     | N/A     | N/A      | N/A      | N/A      | N/A       | N/A     | N/A     
+1                   | 0     | N/A     | N/A     | N/A      | N/A      | N/A      | N/A       | N/A     | N/A     
+2                   | 0     | N/A     | N/A     | N/A      | N/A      | N/A      | N/A       | N/A     | N/A     
+3                   | 25    | 5.1500  | 1.3300  | 41.8800  | 0.5200   | 0.5600   | 0.6400    | 33.4100 | -25.4200
+4                   | 35    | -4.2000 | 4.1357  | -12.0214 | 0.4857   | 0.6286   | 0.5714    | 21.9643 | -28.9143
+5                   | 195   | -3.3154 | -5.0821 | 0.7731   | 0.4923   | 0.4769   | 0.5128    | 26.9423 | -30.4949
+6                   | 111   | -0.4302 | -0.0360 | 5.5225   | 0.5225   | 0.4865   | 0.5405    | 27.4392 | -29.8514
+
+SECTION 5 - Previous Phase Directional Behavior
+------------------------------------------------------------------------------
+PreviousLoopPhase | Count | AvgDR3  | AvgDR5  | AvgDR10 | WinRate3 | WinRate5 | WinRate10
+------------------+-------+---------+---------+---------+----------+----------+----------
+NeutralFormation  | 85    | 4.2118  | 1.0500  | 10.1412 | 0.4706   | 0.5176   | 0.5765   
+NeutralMaturation | 179   | -4.6788 | -6.0587 | 2.5545  | 0.5028   | 0.4469   | 0.5251   
+LateNeutral       | 102   | -2.2843 | 1.7475  | 0.6936  | 0.5294   | 0.5784   | 0.5196   
+ReturnToNeutral   | 0     | N/A     | N/A     | N/A     | N/A      | N/A      | N/A      
+Excursion         | 0     | N/A     | N/A     | N/A     | N/A      | N/A      | N/A      
+
+SECTION 6 - Destination x PreviousPhase Interaction
+------------------------------------------------------------------------------
+PreviousLoopPhase | DestinationFamily     | Count | AvgDR5   | AvgDR10  | WinRate5 | WinRate10 | SampleClass  
+------------------+-----------------------+-------+----------+----------+----------+-----------+--------------
+LateNeutral       | CompressionProcessing | 3     | -2.8333  | -39.4167 | 0.3333   | 0.0000    | LowSample    
+LateNeutral       | ExhaustionPersistence | 39    | 1.8462   | 2.9423   | 0.5385   | 0.4359    | Interpretable
+LateNeutral       | MixedStructure        | 29    | 0.3362   | -2.3362  | 0.6897   | 0.6207    | Interpretable
+LateNeutral       | ReassertionProcessing | 4     | 23.2500  | 62.2500  | 0.7500   | 0.7500    | LowSample    
+LateNeutral       | RecoveryResolution    | 27    | 0.4444   | -3.9630  | 0.5185   | 0.5556    | Interpretable
+NeutralFormation  | ExhaustionPersistence | 43    | -4.0698  | 4.0174   | 0.4884   | 0.5814    | Interpretable
+NeutralFormation  | MixedStructure        | 14    | 5.6786   | 12.0893  | 0.5714   | 0.5714    | Interpretable
+NeutralFormation  | RecoveryResolution    | 28    | 6.5982   | 18.5714  | 0.5357   | 0.5714    | Interpretable
+NeutralMaturation | CompressionProcessing | 3     | -12.0000 | 113.9167 | 0.3333   | 0.6667    | LowSample    
+NeutralMaturation | ExhaustionPersistence | 69    | -3.0580  | 13.6667  | 0.4348   | 0.5072    | Interpretable
+NeutralMaturation | MixedStructure        | 46    | -13.6087 | -18.8804 | 0.4783   | 0.4783    | Interpretable
+NeutralMaturation | ReassertionProcessing | 6     | -10.9167 | 40.2500  | 0.5000   | 0.6667    | LowSample    
+NeutralMaturation | RecoveryResolution    | 55    | -2.6545  | -3.6455  | 0.4364   | 0.5636    | Interpretable
+
+SECTION 7 - Polarity Split
+------------------------------------------------------------------------------
+VolumePolarity | Count | AvgDR5  | AvgDR10 | WinRate5 | WinRate10
+---------------+-------+---------+---------+----------+----------
+Black          | 198   | 1.7184  | 11.2891 | 0.5354   | 0.5859   
+Red            | 168   | -6.8884 | -5.0312 | 0.4583   | 0.4762   
+
+SECTION 8 - Best / Worst Event Classes
+------------------------------------------------------------------------------
+Destination rankings
+Metric                 | BestClass             | BestValue | WorstClass            | WorstValue
+-----------------------+-----------------------+-----------+-----------------------+-----------
+AvgDR5                 | ReassertionProcessing | 2.7500    | MixedStructure        | -6.0309   
+AvgDR10                | ReassertionProcessing | 49.0500   | MixedStructure        | -8.6180   
+WinRate5               | ReassertionProcessing | 0.6000    | ExhaustionPersistence | 0.4768    
+WinRate10              | ReassertionProcessing | 0.7000    | ExhaustionPersistence | 0.5099    
+AvgMFE5 / abs(AvgMAE5) | ReassertionProcessing | 1.4930    | MixedStructure        | 0.7643    
+
+Interaction rankings
+Metric    | BestClass                              | BestValue | WorstClass                                 | WorstValue
+----------+----------------------------------------+-----------+--------------------------------------------+-----------
+AvgDR5    | NeutralFormation -> RecoveryResolution | 6.5982    | NeutralMaturation -> MixedStructure        | -13.6087  
+AvgDR10   | NeutralFormation -> RecoveryResolution | 18.5714   | NeutralMaturation -> MixedStructure        | -18.8804  
+WinRate5  | LateNeutral -> MixedStructure          | 0.6897    | NeutralMaturation -> ExhaustionPersistence | 0.4348    
+WinRate10 | LateNeutral -> MixedStructure          | 0.6207    | LateNeutral -> ExhaustionPersistence       | 0.4359    
+
+SECTION 9 - Summary
+------------------------------------------------------------------------------
+Directional separation classification: ModerateDirectionalSeparation
+Recommended next step: ReplayValidator03_EventQuality
+Directionally strongest destination by AvgDR5: ReassertionProcessing
+Directionally weakest destination by AvgDR5: MixedStructure
+LateNeutral after directional normalization: AvgDR5=1.7475, WinRate5=57.84%
+FailureWarningScore directional behavior: see score table; higher score helps only if DR/win rate rises by score.
+Black/Red symmetry: Black AvgDR5=1.7184, Red AvgDR5=-6.8884
+
+Low-DoF / Research Audit
+------------------------------------------------------------------------------
+No optimization.
+No fitting.
+No machine learning.
+No trading rules.
+No entries.
+No exits.
+No profit model.
+Behavioral validation only.
